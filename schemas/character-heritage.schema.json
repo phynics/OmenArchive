@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-heritage.schema.json",
+  "title": "Character Heritage",
+  "description": "Schema for a character heritage in the game",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the heritage"
+    },
+    "source": {
+      "$ref": "utility-types/content-source.schema.json"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description text of the heritage"
+    },
+    "rarity": {
+      "$ref": "utility-types/rarity.schema.json"
+    },
+    "ancestry": {
+      "oneOf": [
+        {
+          "type": "string",
+          "const": "versatile",
+          "description": "A versatile heritage that can be taken by any ancestry"
+        },
+        {
+          "type": "string",
+          "description": "The specific ancestry this heritage belongs to"
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "source",
+    "description",
+    "rarity",
+    "ancestry"
+  ]
+} 

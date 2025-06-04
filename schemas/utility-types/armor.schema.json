@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/armor.schema.json",
+    "title": "Armor",
+    "description": "PF2RPG Armor",
+    "oneOf": [
+        {
+            "type": "string",
+            "enum": [
+                "unarmored",
+                "light",
+                "medium",
+                "heavy"
+            ]
+        },
+        {
+            "type": "object",
+            "properties": {
+                "other": {
+                    "type": "string"
+                }
+            },
+            "required": ["other"]
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-class.schema.json",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "$ref": "utility-types/content-source.schema.json"
+    },
+    "rarity": {
+      "$ref": "utility-types/rarity.schema.json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "keyAttribute": {
+      "oneOf": [
+        {
+          "$ref": "utility-types/attribute.schema.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "utility-types/attribute.schema.json"
+          }
+        }
+      ]
+    },
+    "hitPoints": {
+      "type": "integer",
+      "minimum": 6,
+      "maximum": 12
+    },
+    "gainsFeatAtFirstLevel": {
+      "type": "boolean",  
+      "default": true
+    },
+    "armorProficiency": {
+      "$ref": "utility-types/proficiency-block.schema.json"
+    },
+    "weaponProficiency": {
+      "$ref": "utility-types/proficiency-block.schema.json"
+    },
+    "savingThrowProficiency": {
+      "$ref": "utility-types/saving-throw-proficiency.schema.json"
+    },
+    "additionalSkillCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "grantedSkills": {
+      "type": "array",
+      "items": {
+        "$ref": "utility-types/skill.schema.json"
+      },
+      "default": []
+    },
+    "electiveSkills": {
+      "type": "object",
+      "properties": {
+        "choose": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "from": {
+          "type": "array",
+          "items": {
+            "$ref": "utility-types/skill.schema.json"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "source",
+    "description",
+    "keyAttribute",
+    "hitPoints",
+    "armorProficiency",
+    "weaponProficiency",
+    "savingThrowProficiency",
+    "additionalSkillCount"
+  ]
+}

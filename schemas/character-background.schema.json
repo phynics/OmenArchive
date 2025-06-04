@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-background.schema.json",
+  "title": "Character Background",
+  "description": "Schema for a character background in the game",
+  "type": "object",
+  "$defs": {
+    "backgroundVariant": {
+      "type": "object",
+      "description": "A variant of a character background",
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "description": "Attribute modifications available for this background variant",
+          "properties": {
+            "freeBoosts": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2,
+              "default": 0,
+              "description": "Number of free attribute boosts available"
+            },
+            "chooseFrom": {
+              "type": "array",
+              "description": "Attributes that can be chosen for modification",
+              "items": {
+                "$ref": "utility-types/attribute.schema.json"
+              },
+              "minItems": 1
+            }
+          },
+          "required": ["chooseFrom"]
+        },
+        "skillOption": {
+          "oneOf": [
+            {
+              "$ref": "utility-types/skill.schema.json",
+              "description": "A single skill option"
+            },
+            {
+              "type": "array",
+              "description": "Multiple skills to choose from",
+              "items": {
+                "$ref": "utility-types/skill.schema.json"
+              },
+              "minItems": 1
+            }
+          ],
+          "description": "Either a single skill or a list of skills to choose from"
+        },
+        "loreSkill": {
+          "type": "string",
+          "description": "The specific lore skill granted by this background variant"
+        },
+        "skillFeat": {
+          "type": "string",
+          "description": "The skill feat granted by this background variant"
+        }
+      },
+      "required": [
+        "attributes",
+        "skillOption",
+        "loreSkill",
+        "skillFeat"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the background"
+        },
+        "source": {
+          "$ref": "utility-types/content-source.schema.json"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description text of the background"
+        },
+        "rarity": {
+          "$ref": "utility-types/rarity.schema.json"
+        }
+      },
+      "required": [
+        "name",
+        "source",
+        "description",
+        "rarity"
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "variants": {
+              "type": "array",
+              "description": "Different variants of this background",
+              "items": {
+                "$ref": "#/$defs/backgroundVariant"
+              },
+              "minItems": 1
+            }
+          },
+          "required": ["variants"]
+        },
+        {
+          "$ref": "#/$defs/backgroundVariant"
+        }
+      ]
+    }
+  ]
+} 

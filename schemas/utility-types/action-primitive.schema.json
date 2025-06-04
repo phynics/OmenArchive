@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/action-primitive.schema.json",
+    "title": "Action Primitive",
+    "description": "Schema for defining an action in the game",
+    "type": "object",
+    "properties": {
+        "count": {
+            "type": "string",
+            "enum": [
+                "one_action",
+                "two_actions",
+                "three_actions",
+                "one_to_two_actions",
+                "one_to_three_actions",
+                "reaction",
+                "free_action",
+                "other"
+            ],
+            "description": "Number of actions"
+        },
+        "requirements": {
+            "type": "string"
+        },
+        "trigger": {
+            "type": "string"
+        },
+        "frequency": {
+            "type": "string"
+        },
+        "criticalSuccess": {
+            "type": "string",
+            "description": "Result when the action is critically successful"
+        },
+        "success": {
+            "type": "string",
+            "description": "Result when the action is successful"
+        },
+        "failure": {
+            "type": "string",
+            "description": "Result when the action fails"
+        },
+        "criticalFailure": {
+            "type": "string",
+            "description": "Result when the action critically fails"
+        }
+    }
+}

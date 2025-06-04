@@ -1,0 +1,44 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/skill.schema.json",
+    "title": "Skill",
+    "description": "PF2RPG Skill",
+    "oneOf": [
+        {
+            "type": "string",
+            "enum": [
+                "acrobatics",
+                "arcana",
+                "athletics",
+                "crafting",
+                "deception",
+                "diplomacy",
+                "intimidation",
+                "medicine",
+                "nature",
+                "occultism",
+                "performance",
+                "religion",
+                "society",
+                "stealth",
+                "survival",
+                "thievery"
+            ]
+        },
+        {
+            "type": "object",
+            "properties": {
+                "lore": {
+                    "type": "string"
+                },
+                "custom": {
+                    "type": "string"
+                }
+            },
+            "minProperties": 1,
+            "maxProperties": 1,
+            "additionalProperties": false
+        }
+    ]
+}
+  

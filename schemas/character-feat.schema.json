@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-feat.schema.json",
+  "title": "Character Feat",
+  "description": "Schema for a character feat in the game",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the feat"
+    },
+    "source": {
+      "$ref": "utility-types/content-source.schema.json"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": ["general"]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ancestry": {
+              "type": "string"
+            },
+            "class": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1
+                }
+              ]
+            }
+          },
+          "minProperties": 1,
+          "maxProperties": 1,
+          "additionalProperties": false
+        }
+      ]
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "alternateLevels": {
+      "type": "object",
+      "patternProperties": {
+        "^.*$": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        }
+      },
+      "additionalProperties": false
+    },
+    "rarity": {
+      "$ref": "utility-types/rarity.schema.json"
+    },
+    "traits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "description": {
+      "type": "string"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "relatedArchetype": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "specialText": {
+      "type": "string"
+    },
+    "action": {
+      "$ref": "utility-types/action-primitive.schema.json"
+    }
+  },
+  "required": [
+    "name",
+    "source",
+    "type",
+    "level",
+    "rarity",
+    "description"
+  ]
+} 

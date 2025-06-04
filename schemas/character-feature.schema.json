@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-feature.schema.json",
+  "title": "Character Feature",
+  "description": "Schema for a character feature in the game",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the character feature"
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "description": "Level of the character feature"
+    },
+    "traits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of traits associated with this feature",
+      "default": []
+    },
+    "action": {
+      "$ref": "utility-types/action-primitive.schema.json"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the character feature"
+    }
+  },
+  "required": ["name", "description"]
+} 

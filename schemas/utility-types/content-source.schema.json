@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/content-source.schema.json",
+    "title": "Content Source",
+    "description": "Source of the content",
+    "type": "object",
+    "properties": {
+        "publisher": {
+            "type": "string",
+            "default": "paizo",
+            "description": "Type of the content source"
+        },
+        "book": {
+            "type": "string",
+            "description": "The book or publication name"
+        },
+        "page": {
+            "type": "integer",
+            "description": "Page number where the content can be found"
+        },
+        "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL where the content can be found (for third-party content)"
+        }
+    },
+    "required": ["book"],
+    "additionalProperties": false
+}
+  

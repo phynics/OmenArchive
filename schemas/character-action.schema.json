@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-action.schema.json",
+  "title": "Character Action",
+  "description": "Schema for a character action in the game",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the action"
+        },
+        "source": {
+          "$ref": "utility-types/content-source.schema.json"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description text of the action"
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of traits associated with this action",
+          "default": []
+        }
+      },
+      "required": [
+        "name",
+        "source",
+        "description",
+        "traits"
+      ]
+    },
+    {
+      "$ref": "utility-types/action-primitive.schema.json"
+    }
+  ]
+} 

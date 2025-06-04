@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-ancestry.schema.json",
+  "title": "Character Ancestry",
+  "description": "Schema for a character ancestry in the game",
+  "type": "object",
+  "$defs": {
+    "attributeModification": {
+      "type": "string",
+      "enum": ["boost", "flaw", "neutral"],
+      "default": "neutral"
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the ancestry"
+    },
+    "source": {
+      "$ref": "utility-types/content-source.schema.json"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description text of the ancestry"
+    },
+    "rarity": {
+      "$ref": "utility-types/rarity.schema.json"
+    },
+    "hitPoints": {
+      "type": "integer",
+      "minimum": 6,
+      "maximum": 12,
+      "description": "Base hit points granted by this ancestry"
+    },
+    "traits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of traits associated with this ancestry"
+    },
+    "attributes": {
+      "type": "object",
+      "description": "Attribute modifications available for this ancestry",
+      "properties": {
+        "freeBoosts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3,
+          "default": 0,
+          "description": "Number of free attribute boosts available"
+        },
+        "strength": {
+          "$ref": "#/$defs/attributeModification"
+        },
+        "dexterity": {
+          "$ref": "#/$defs/attributeModification"
+        },
+        "constitution": {
+          "$ref": "#/$defs/attributeModification"
+        },
+        "intelligence": {
+          "$ref": "#/$defs/attributeModification"
+        },
+        "wisdom": {
+          "$ref": "#/$defs/attributeModification"
+        },
+        "charisma": {
+          "$ref": "#/$defs/attributeModification"
+        }
+      },
+      "minProperties": 1
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Languages automatically known by this ancestry",
+      "default": []
+    },
+    "languageAccess": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Languages that can be chosen as additional languages",
+      "default": []
+    },
+    "additionalLanguages": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Number of additional languages that can be chosen"
+    },
+    "speed": {
+      "type": "integer",
+      "minimum": 15,
+      "maximum": 40,
+      "description": "Base speed in feet"
+    },
+    "vision": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "low-light",
+        "darkvision"
+      ],
+      "description": "Type of vision possessed by this ancestry"
+    },
+    "size": {
+      "type": "string",
+      "enum": [
+        "tiny",
+        "small",
+        "medium",
+        "large",
+        "huge",
+        "gargantuan"
+      ],
+      "description": "Size category of this ancestry"
+    }
+  },
+  "required": [
+    "name",
+    "source",
+    "description",
+    "rarity",
+    "hitPoints",
+    "traits",
+    "attributes",
+    "speed",
+    "vision",
+    "size"
+  ]
+}
