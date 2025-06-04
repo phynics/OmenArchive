@@ -20,17 +20,8 @@
       "$ref": "utility-types/rarity.schema.json"
     },
     "ancestry": {
-      "oneOf": [
-        {
-          "type": "string",
-          "const": "versatile",
-          "description": "A versatile heritage that can be taken by any ancestry"
-        },
-        {
-          "type": "string",
-          "description": "The specific ancestry this heritage belongs to"
-        }
-      ]
+      "type": "string",
+      "description": "The specific ancestry this heritage belongs to, or `versatile` for versatile heritage."
     }
   },
   "required": [
@@ -40,4 +31,4 @@
     "rarity",
     "ancestry"
   ]
-} 
+}
