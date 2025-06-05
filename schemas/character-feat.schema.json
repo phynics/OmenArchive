@@ -12,39 +12,6 @@
     "source": {
       "$ref": "utility-types/content-source.schema.json"
     },
-    "type": {
-      "oneOf": [
-        {
-          "type": "string",
-          "enum": ["general"]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "ancestry": {
-              "type": "string"
-            },
-            "class": {
-              "oneOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "minItems": 1
-                }
-              ]
-            }
-          },
-          "minProperties": 1,
-          "maxProperties": 1,
-          "additionalProperties": false
-        }
-      ]
-    },
     "level": {
       "type": "integer",
       "minimum": 1,
@@ -110,4 +77,4 @@
     "rarity",
     "description"
   ]
-} 
+}
