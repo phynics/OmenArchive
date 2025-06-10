@@ -9,6 +9,9 @@
       "type": "string",
       "description": "Name of the character feature"
     },
+    "source": {
+      "$ref": "utility-types/content-source.schema.json"
+    },
     "level": {
       "type": "integer",
       "minimum": 1,
@@ -31,5 +34,5 @@
       "description": "Description of the character feature"
     }
   },
-  "required": ["name", "description"]
+  "required": ["name", "source", "description"]
 } 
