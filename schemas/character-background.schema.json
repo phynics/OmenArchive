@@ -80,14 +80,14 @@
           "description": "Description text of the background"
         },
         "rarity": {
-          "$ref": "utility-types/rarity.schema.json"
+          "$ref": "utility-types/rarity.schema.json",
+          "default": "common"
         }
       },
       "required": [
         "name",
         "source",
-        "description",
-        "rarity"
+        "description"
       ]
     },
     {
