@@ -32,6 +32,13 @@
     "description": {
       "type": "string",
       "description": "Description of the character feature"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "utility-types/rules.schema.json#/$defs/rule"
+      },
+      "default": []
     }
   },
   "required": ["name", "source", "description"]

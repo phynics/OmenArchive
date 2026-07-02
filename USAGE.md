@@ -103,6 +103,38 @@ description: |
 
 Keep rules text readable for humans. Avoid injecting Foundry-specific JSON/rule elements into descriptions unless they are actual user-facing text.
 
+### Rules
+
+Use `rules` on feats, features, and heritages when the entry needs to grant or modify game state.
+Leave the key out when there are no rules; do not add empty arrays to unchanged files.
+
+```yaml
+rules:
+  - id: 11111111-1111-1111-1111-111111111111
+    effectTemplate:
+      kind: addLanguage
+      inputRecipes:
+        - inputName: languageName
+          expectedValue:
+            parameterType: string
+            valueFromSource:
+              literal:
+                string: Draconic
+    startLevel: 1
+    prerequisites:
+      - hasClassTrait: true
+```
+
+Rules follow the same field names used by OmenCore's effect engine:
+
+- `id` is a stable UUID for the rule instance.
+- `effectTemplate.kind` must match a supported OmenCore effect name, such as `addLanguage` or `addFeat`.
+- `effectTemplate.inputRecipes` carries the effect inputs in order.
+- `startLevel` is the level at which the rule becomes active.
+- `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
+
+Prefer literal values in `inputRecipes` when writing by hand. If a rule needs a new literal shape or prerequisite form, update the shared rule schema first so the archive, loader, and import paths stay in sync.
+
 ### Traits and enums
 
 Use lowercase enum/string values:
