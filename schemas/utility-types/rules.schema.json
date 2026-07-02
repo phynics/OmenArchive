@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenSchema/refs/heads/main/utility-types/rules.schema.json",
+  "title": "Character Rules",
+  "description": "Schema for archive-authored character rules and effect templates",
+  "$defs": {
+    "rule": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "effectTemplate": {
+          "$ref": "#/$defs/effectTemplate"
+        },
+        "startLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/prerequisite"
+          },
+          "default": []
+        }
+      },
+      "required": [
+        "id",
+        "effectTemplate",
+        "startLevel"
+      ],
+      "additionalProperties": false
+    },
+    "effectTemplate": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "addArmorProficiency",
+            "addArmorGroupProficiency",
+            "addAction",
+            "addFeat",
+            "addFeature",
+            "addLanguage",
+            "addPlaceholder",
+            "addSavingThrow",
+            "addSkillIncrease",
+            "addLoreSkillIncrease",
+            "addWeaponProficiency",
+            "addWeaponGroupProficiency",
+            "addRollModifier",
+            "addWeaponCriticalSpecialization",
+            "addLookupEntryEffect",
+            "addSpellcastingEntry",
+            "addSpellSlot",
+            "addSpellcastingProficiency"
+          ]
+        },
+        "inputRecipes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/inputRecipe"
+          },
+          "default": []
+        }
+      },
+      "required": ["kind"],
+      "additionalProperties": false
+    },
+    "inputRecipe": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string"
+        },
+        "expectedValue": {
+          "$ref": "#/$defs/expectedValue"
+        }
+      },
+      "required": ["inputName", "expectedValue"],
+      "additionalProperties": false
+    },
+    "expectedValue": {
+      "type": "object",
+      "properties": {
+        "parameterType": {
+          "type": "string",
+          "enum": [
+            "uuid",
+            "string",
+            "int",
+            "bool",
+            "featId",
+            "actionId",
+            "proficiencyRank"
+          ]
+        },
+        "valueFromSource": {
+          "$ref": "#/$defs/source"
+        }
+      },
+      "required": ["parameterType", "valueFromSource"],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "literal": {
+          "$ref": "#/$defs/literalValue"
+        }
+      },
+      "required": ["literal"],
+      "additionalProperties": false
+    },
+    "literalValue": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "required": ["uuid"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "string": {
+              "type": "string"
+            }
+          },
+          "required": ["string"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "int": {
+              "type": "integer"
+            }
+          },
+          "required": ["int"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "bool": {
+              "type": "boolean"
+            }
+          },
+          "required": ["bool"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "featId": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "required": ["featId"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "actionId": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "required": ["actionId"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "proficiencyRank": {
+              "$ref": "proficiency-rank.schema.json"
+            }
+          },
+          "required": ["proficiencyRank"],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "prerequisite": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "hasClassTrait": {
+              "type": "boolean",
+              "const": true
+            }
+          },
+          "required": ["hasClassTrait"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasFeatWithName": {
+              "type": "string"
+            }
+          },
+          "required": ["hasFeatWithName"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasFeatureWithName": {
+              "type": "string"
+            }
+          },
+          "required": ["hasFeatureWithName"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasAttribute": {
+              "type": "object",
+              "properties": {
+                "attribute": {
+                  "$ref": "attribute.schema.json"
+                },
+                "score": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 30
+                }
+              },
+              "required": ["attribute", "score"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["hasAttribute"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSkillProficiency": {
+              "type": "object",
+              "properties": {
+                "skill": {
+                  "$ref": "skill.schema.json"
+                },
+                "proficiency": {
+                  "$ref": "proficiency-rank.schema.json"
+                }
+              },
+              "required": ["skill", "proficiency"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["hasSkillProficiency"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

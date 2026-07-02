@@ -67,6 +67,13 @@
     },
     "action": {
       "$ref": "utility-types/action-primitive.schema.json"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "utility-types/rules.schema.json#/$defs/rule"
+      },
+      "default": []
     }
   },
   "required": [
