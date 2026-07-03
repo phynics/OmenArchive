@@ -499,6 +499,18 @@ Rules:
 
 ## Validation checklist before import
 
+Primary command:
+
+```sh
+./scripts/validate.sh
+```
+
+Optional local hook:
+
+```sh
+./scripts/install-pre-commit.sh
+```
+
 Run these checks before importing into OmenDatabase:
 
 - All YAML files are UTF-8.

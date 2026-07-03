@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/other-item.schema.json",
+  "title": "Other Item",
+  "description": "Schema for curated archive items that do not yet have a dedicated runtime schema.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "$ref": "utility-types/content-source.schema.json"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "source",
+    "description"
+  ]
+}
