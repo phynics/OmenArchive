@@ -12,6 +12,11 @@
     "source": {
       "$ref": "utility-types/content-source.schema.json"
     },
+    "type": {
+      "type": "string",
+      "enum": ["general", "ancestry", "class", "skill", "archetype", "other"],
+      "description": "Feat category/type, such as general, ancestry, class, or skill"
+    },
     "level": {
       "type": "integer",
       "minimum": 1,
@@ -64,6 +69,54 @@
     },
     "specialText": {
       "type": "string"
+    },
+    "repeatPolicy": {
+      "type": "object",
+      "properties": {
+        "maxCount": {
+          "type": ["integer", "null"],
+          "minimum": 2
+        },
+        "instanceLevelGates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "instanceNumber": {
+                "type": "integer",
+                "minimum": 2
+              },
+              "minimumLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 20
+              }
+            },
+            "required": ["instanceNumber", "minimumLevel"],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "duplicateSelectionRules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lookupName": {
+                "type": "string"
+              },
+              "payloadType": {
+                "type": "string"
+              }
+            },
+            "required": ["lookupName", "payloadType"],
+            "additionalProperties": false
+          },
+          "default": []
+        }
+      },
+      "required": ["instanceLevelGates", "duplicateSelectionRules"],
+      "additionalProperties": false
     },
     "action": {
       "$ref": "utility-types/action-primitive.schema.json"

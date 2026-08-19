@@ -1,0 +1,17 @@
+name: power attack
+source:
+  publisher: paizo
+  book: Test Book
+type: class
+level: 1
+rarity: common
+description: |
+  A feat fixture exercising the reconciled type enum and repeatPolicy.
+repeatPolicy:
+  maxCount: null
+  instanceLevelGates:
+    - instanceNumber: 2
+      minimumLevel: 6
+  duplicateSelectionRules:
+    - lookupName: power attack
+      payloadType: effect

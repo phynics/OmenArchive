@@ -36,6 +36,20 @@ class ValidatorTest < Minitest::Test
     assert_includes stdout, "Validated 1 file(s)"
   end
 
+  def test_valid_feat_fixture_passes
+    stdout, stderr, status = run_fixture("valid-feat")
+
+    assert status.success?, "expected success, got #{stderr}"
+    assert_includes stdout, "Validated 1 file(s)"
+  end
+
+  def test_invalid_feat_type_fails
+    _stdout, stderr, status = run_fixture("invalid-feat-type")
+
+    refute status.success?, "expected failure"
+    assert_includes stderr, "type"
+  end
+
   def test_missing_source_book_fails
     _stdout, stderr, status = run_fixture("invalid-missing-book")
 
