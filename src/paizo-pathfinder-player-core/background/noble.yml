@@ -7,7 +7,8 @@ description: |
   Choose two attribute boosts. One must be to Intelligence or Charisma, and one is a free attribute boost.
   You're trained in the Society skill and the Genealogy Lore or Heraldry Lore skill. You gain the Courtly Graces skill feat.
 variants:
-  - attributes:
+  - key: genealogy-lore
+    attributes:
       freeBoosts: 1
       chooseFrom:
       - charisma
@@ -16,7 +17,8 @@ variants:
     - society
     loreSkill: genealogy 
     skillFeat: courtly graces
-  - attributes:
+  - key: heraldry-lore
+    attributes:
       freeBoosts: 1
       chooseFrom:
       - charisma

@@ -68,9 +68,11 @@
           "type": "array",
           "items": {
             "$ref": "utility-types/skill.schema.json"
-          }
+          },
+          "minItems": 1
         }
-      }
+      },
+      "required": ["choose", "from"]
     }
   },
   "required": [

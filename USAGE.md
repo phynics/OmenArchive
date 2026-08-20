@@ -22,6 +22,7 @@ schemas/
 
 src/
   {publication}/
+    publication.yml           # publication identity and release ordering
     action/
     ancestry/
     background/
@@ -35,6 +36,16 @@ src/
 
 ```text
 src/paizo-pathfinder-player-core/
+```
+
+Each publication has a `publication.yml` manifest. Its `id` must match the folder name;
+`published` is an ISO-8601 calendar date used to order unscoped OmenPath matches:
+
+```yaml
+id: paizo-pathfinder-player-core
+publisher: Paizo
+title: Pathfinder Player Core
+published: "2023-11-15"
 ```
 
 ## General resource rules
@@ -134,6 +145,27 @@ Rules follow the same field names used by OmenCore's effect engine:
 - `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
 
 Prefer literal values in `inputRecipes` when writing by hand. If a rule needs a new literal shape or prerequisite form, update the shared rule schema first so the archive, loader, and import paths stay in sync.
+
+### Resource references
+
+Use a plain `omen://` URI when a rule input refers to another curated resource:
+
+```yaml
+parameterType: resourceReference
+valueFromSource:
+  literal:
+    resourceReference: omen://feat/group-impression?source=paizo-pathfinder-player-core
+```
+
+The URI path uses the resource's canonical encoded `name`, not its filename. For example,
+`name: armor expertise` is referenced as `omen://class/fighter/features/armor-expertise`,
+even when the storage filename contains a level prefix such as `7-armor-expertise.yml`.
+
+An explicit `source` query limits resolution to one publication. Without `source`, all matching
+publication versions are candidates; consumers that require one value use the newest publication
+date, with the publication ID as a deterministic tie-breaker. Malformed or dangling references
+must be fixed before Archive-to-OmenDB export. Existing UUID-based `featId` and `actionId` literal
+forms remain valid for runtime data that has not yet migrated to OmenPath references.
 
 ### Traits and enums
 

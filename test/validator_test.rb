@@ -15,6 +15,13 @@ class ValidatorTest < Minitest::Test
     assert_includes stdout, "Validated 1 file(s)"
   end
 
+  def test_duplicate_background_variant_keys_fail
+    _stdout, stderr, status = run_fixture("invalid-duplicate-background-variant-key")
+
+    refute status.success?, "expected failure"
+    assert_includes stderr, "background variant key \"arcana\" is duplicated"
+  end
+
   def test_valid_other_item_fixture_passes
     stdout, stderr, status = run_fixture("valid-other-item")
 

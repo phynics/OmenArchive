@@ -96,6 +96,7 @@
             "bool",
             "featId",
             "actionId",
+            "resourceReference",
             "proficiencyRank"
           ]
         },
@@ -184,6 +185,16 @@
         {
           "type": "object",
           "properties": {
+            "resourceReference": {
+              "$ref": "#/$defs/resourceReference"
+            }
+          },
+          "required": ["resourceReference"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
             "proficiencyRank": {
               "$ref": "proficiency-rank.schema.json"
             }
@@ -192,6 +203,11 @@
           "additionalProperties": false
         }
       ]
+    },
+    "resourceReference": {
+      "type": "string",
+      "pattern": "^omen://\\S+$",
+      "description": "A canonical OmenPath URI, optionally qualified with ?source=<publication-id>."
     },
     "prerequisite": {
       "oneOf": [

@@ -15,3 +15,15 @@ repeatPolicy:
   duplicateSelectionRules:
     - lookupName: power attack
       payloadType: effect
+rules:
+  - id: 00000000-0000-4000-8000-000000000001
+    effectTemplate:
+      kind: addFeat
+      inputRecipes:
+        - inputName: target
+          expectedValue:
+            parameterType: resourceReference
+            valueFromSource:
+              literal:
+                resourceReference: omen://feat/power-attack
+    startLevel: 1

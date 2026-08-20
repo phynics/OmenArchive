@@ -316,9 +316,12 @@ module OmenArchive
       path_info = classify_path(relative_path, errors)
       return errors unless path_info
 
-      validate_source_book(resource, errors, relative_path)
-      validate_filename(resource, path_info, errors, relative_path)
-      validate_ancestry(resource, path_info, errors, relative_path)
+      unless path_info[:manifest]
+        validate_source_book(resource, errors, relative_path)
+        validate_filename(resource, path_info, errors, relative_path)
+        validate_ancestry(resource, path_info, errors, relative_path)
+        validate_background_variants(resource, path_info, errors, relative_path)
+      end
 
       schema, schema_file = @schema_store.load_entry(path_info.fetch(:schema))
       schema_errors = @json_schema_validator.validate(resource, schema, schema_file)
@@ -355,6 +358,16 @@ module OmenArchive
     def classify_path(relative_path, errors)
       parts = relative_path.each_filename.to_a
       unless parts.first == "src" && parts.length >= 4
+        if parts.length == 3 && parts[0] == "src" && parts[2] == "publication.yml"
+          return {
+            publication: parts[1],
+            category: nil,
+            basename: "publication",
+            parts: parts,
+            schema: "publication.schema.json",
+            manifest: true
+          }
+        end
         errors << "#{relative_path}: path must live under src/{publication}/{category}/..."
         return
       end
@@ -424,6 +437,21 @@ module OmenArchive
       return if actual == expected
 
       errors << "#{relative_path}: heritage ancestry #{actual.inspect} does not match directory #{expected.inspect}"
+    end
+
+    def validate_background_variants(resource, path_info, errors, relative_path)
+      return unless path_info[:category] == "background"
+
+      variants = resource["variants"]
+      return unless variants.is_a?(Array)
+
+      keys = variants.each_with_object([]) do |variant, result|
+        result << variant["key"] if variant.is_a?(Hash) && variant.key?("key")
+      end
+      counts = keys.each_with_object(Hash.new(0)) { |key, result| result[key] += 1 }
+      counts.each do |key, count|
+        errors << "#{relative_path}: background variant key #{key.inspect} is duplicated" if count > 1
+      end
     end
 
     def utf16_bom?(bytes)

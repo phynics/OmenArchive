@@ -7,7 +7,8 @@ description: |
   Choose two attribute boosts. One must be to Strength or Charisma, and one is a free attribute boost.
   You're trained in the Intimidation skill and the Legal Lore or Warfare Lore skill. You gain the Quick Coercion skill feat.
 variants:
-  - attributes:
+  - key: legal-lore
+    attributes:
       freeBoosts: 1
       chooseFrom:
       - charisma
@@ -16,7 +17,8 @@ variants:
     - intimidation
     loreSkill: legal 
     skillFeat: quick coercion
-  - attributes:
+  - key: warfare-lore
+    attributes:
       freeBoosts: 1
       chooseFrom:
       - charisma

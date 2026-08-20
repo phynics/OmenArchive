@@ -9,6 +9,11 @@
       "type": "object",
       "description": "A variant of a character background",
       "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "Stable identity for this background variant"
+        },
         "attributes": {
           "type": "object",
           "description": "Attribute modifications available for this background variant",
@@ -98,7 +103,10 @@
               "type": "array",
               "description": "Different variants of this background",
               "items": {
-                "$ref": "#/$defs/backgroundVariant"
+                "allOf": [
+                  { "$ref": "#/$defs/backgroundVariant" },
+                  { "required": ["key"] }
+                ]
               },
               "minItems": 1
             }
@@ -111,4 +119,4 @@
       ]
     }
   ]
-} 
+}
