@@ -10,7 +10,7 @@ cat >"$hook_path" <<EOF
 #!/usr/bin/env bash
 set -euo pipefail
 
-"$repo_root/scripts/validate.sh"
+"$repo_root/scripts/validate-shadow.sh"
 EOF
 
 chmod +x "$hook_path"
