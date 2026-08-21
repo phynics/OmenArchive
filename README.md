@@ -12,8 +12,9 @@ Validation:
   verification gate for this migration.
 - Run `./scripts/install-pre-commit.sh` to install the repo-local pre-commit hook.
 
-The archive layout contract is recorded in `schemas/archive-format.json`. The
-Swift `OmenArchiveKit` package is being introduced as the single executable
-interpretation of that manifest; the Ruby validator remains a parity oracle
-until OmenScribe adopts the package. Linux verification is intentionally
-deferred.
+The archive layout contract is recorded in `schemas/archive-format.json`.
+Owner-scoped bundle custom groups are declared there alongside their schemas;
+the open `other-items` family remains global and data-driven. The Swift
+`OmenArchiveKit` package interprets this manifest, while the Ruby validator
+remains a parity oracle during the staged CI cutover. Linux verification is
+intentionally deferred.
