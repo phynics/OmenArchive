@@ -1,0 +1,27 @@
+name: "shroud of night"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "cE7PRAX8Up7fmYef"
+rank: 0
+category: "cantrip"
+traditions: []
+rarity: "uncommon"
+traits: ["cantrip", "darkness", "hex", "manipulate", "witch"]
+description: |
+  Your patron blankets the target's eyes in darkness. If you cast this hex on a willing ally (for instance, one with light blindness), the ally can choose which result it gets without rolling.
+  
+  Success The target is unaffected.
+  
+  Failure The target is shrouded in murky darkness. It treats bright light as dim light, and unless it has greater darkvision, all creatures are Concealed to it.
+time: "1"
+action:
+  count: "one_action"
+defense:
+  save: "will"
+  basic: false
+  counteraction: false
+range: "30 feet"
+target: "1 creature"
+duration: "1 minute"
+diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]

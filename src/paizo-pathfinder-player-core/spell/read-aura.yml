@@ -1,0 +1,29 @@
+name: "read aura"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "OhD2Z6rIGGD5ocZA"
+rank: 0
+category: "cantrip"
+traditions: ["arcane", "divine", "occult", "primal"]
+rarity: "common"
+traits: ["cantrip", "concentrate", "detection", "manipulate"]
+description: |
+  You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical. You or anyone you advise about the aura gains a +2 circumstance bonus to Identify Magic on the item. If the object is illusory, you detect this only if the effect's rank is lower than the rank of your read aura spell.
+  
+  Spell Effect: Read Aura
+  
+  Heightened (3rd) You can target up to 10 objects.
+  
+  Heightened (6th) You can target any number of objects.
+time: "1 minute"
+heightening:
+  type: "fixed"
+  levels:
+    "3":
+      target: "10 objects"
+    "6":
+      target: "any number of objects"
+range: "30 feet"
+target: "1 object"
+diagnostics: ["Foundry casting time retained without normalized action count: 1 minute"]

@@ -1,0 +1,43 @@
+name: "curse of death"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "nQS4vPm5zprqkzFZ"
+rank: 5
+category: "focus"
+traditions: []
+rarity: "uncommon"
+traits: ["concentrate", "curse", "death", "focus", "hex", "manipulate", "void", "witch"]
+description: |
+  Your patron wraps a hand around your target's heart. The target must attempt a Fortitude saving throw. Regardless of the result, the target is temporarily immune to all curses of death for 1 day.
+  
+  Critical Success The target is unaffected.
+  
+  Success The target is afflicted with the curse of death at stage 1, and the stage of the curse can't increase beyond stage 1.
+  
+  Failure The target is afflicted with the curse of death at stage 1.
+  
+  Critical Failure The target is afflicted with the curse of death at stage 2
+  
+  Curse of Death (curse, death, void) This curse ends when the spell ends
+  
+  Stage 1 (max(4,(spell rank)-1))d6[void] damage and Fatigued (1 round)
+  
+  Stage 2 (max(8,spell rank+3))d6[void] damage and fatigued (1 round)
+  
+  Stage 3 (max(12,spell rank+7))d6[void] damage and fatigued (1 round)
+  
+  Stage 4 death
+  
+  Heightened (+1) Increase the void damage taken on a success and during the first three stages of the curse by 1d6.
+time: "2"
+action:
+  count: "two_actions"
+defense:
+  save: "fortitude"
+  basic: false
+  counteraction: false
+range: "30 feet"
+target: "1 creature"
+duration: "1 minute"
+diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]

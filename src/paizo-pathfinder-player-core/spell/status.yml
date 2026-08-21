@@ -1,0 +1,26 @@
+name: "status"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "HTou8cG05yuSkesj"
+rank: 2
+category: "spell"
+traditions: ["divine", "occult", "primal"]
+rarity: "common"
+traits: ["concentrate", "detection", "manipulate"]
+description: |
+  As long as you and the target are on the same plane of existence and both alive, you remain aware of its present state. You know the target's direction from you, distance from you, and any conditions affecting it.
+  
+  Heightened (4th) The spell's range increases to 30 feet, and you can target up to 10 creatures.
+time: "2"
+action:
+  count: "two_actions"
+heightening:
+  type: "fixed"
+  levels:
+    "4":
+      range: "30 feet"
+      target: "10 willing living creatures"
+range: "touch"
+target: "1 willing living creature"
+duration: "until the next time you make your daily preparations"

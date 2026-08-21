@@ -1,0 +1,33 @@
+name: "hurtling stone"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "pRKaEXnjGJXbPHPC"
+rank: 1
+category: "focus"
+traditions: []
+rarity: "uncommon"
+traits: ["attack", "cleric", "earth", "focus", "manipulate"]
+description: |
+  You evoke a magical stone and throw it, with divine guide to your aim. The stone deals 2d6 bludgeoning damage depending on your spell attack roll against the target's AC.
+  
+  Critical Success The target takes double damage and you can push it up to 10 feet.
+  
+  Success The target takes full damage and you can push it up to 5 feet.
+  
+  Heightened (+1) The stone's damage increases by 1d6.
+time: "1"
+action:
+  count: "one_action"
+damage:
+  "0":
+    formula: "2d6"
+    type: "bludgeoning"
+    kinds: ["damage"]
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "1d6"
+range: "60 feet"
+target: "1 creature"

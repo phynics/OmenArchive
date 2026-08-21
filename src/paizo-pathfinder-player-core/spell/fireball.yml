@@ -1,0 +1,34 @@
+name: "fireball"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "sxQZ6yqTn0czJxVd"
+rank: 3
+category: "spell"
+traditions: ["arcane", "primal"]
+rarity: "common"
+traits: ["concentrate", "fire", "manipulate"]
+description: |
+  A roaring blast of fire detonates at a spot you designate, dealing 6d6 fire damage.
+  
+  Heightened (+1) The damage increases by 2d6.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "6d6"
+    type: "fire"
+    kinds: ["damage"]
+defense:
+  save: "reflex"
+  basic: true
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "2d6"
+range: "500 feet"
+area: "20"
+diagnostics: ["Foundry area type is not represented when area details are absent"]

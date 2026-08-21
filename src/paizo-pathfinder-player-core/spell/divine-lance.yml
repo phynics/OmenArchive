@@ -1,0 +1,29 @@
+name: "divine lance"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "qwZBXN6zBoB9BHXE"
+rank: 0
+category: "cantrip"
+traditions: ["divine"]
+rarity: "common"
+traits: ["attack", "cantrip", "concentrate", "manipulate", "sanctified", "spirit"]
+description: |
+  You unleash a beam of divine energy. Make a ranged spell attack against the target's AC. On a hit, the target takes 2d4 spirit damage (double damage on a critical hit).
+  
+  Heightened (+1) The damage increases by 1d4.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "2d4"
+    type: "spirit"
+    kinds: ["damage"]
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "1d4"
+range: "60 feet"
+target: "1 creature"

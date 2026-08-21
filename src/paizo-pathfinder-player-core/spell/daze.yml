@@ -1,0 +1,34 @@
+name: "daze"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "4gBIw4IDrSfFHik4"
+rank: 0
+category: "cantrip"
+traditions: ["arcane", "divine", "occult"]
+rarity: "common"
+traits: ["cantrip", "concentrate", "manipulate", "mental", "nonlethal"]
+description: |
+  You push into the target's mind and daze it with a mental jolt. The jolt deals 1d6 mental damage, with a basic Will save. If the target critically fails the save, it is also Stunned 1.
+  
+  Heightened (+2) The damage increases by 1d6.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "1d6"
+    type: "mental"
+    kinds: ["damage"]
+defense:
+  save: "will"
+  basic: true
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 2
+  damage:
+    "0": "1d6"
+range: "60 feet"
+target: "1 creature"
+duration: "1 round"

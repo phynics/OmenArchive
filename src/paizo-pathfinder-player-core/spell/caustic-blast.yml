@@ -1,0 +1,34 @@
+name: "caustic blast"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "thAHF1zxNplLCJPO"
+rank: 0
+category: "cantrip"
+traditions: ["arcane", "primal"]
+rarity: "common"
+traits: ["acid", "cantrip", "concentrate", "manipulate"]
+description: |
+  You fling a large glob of acid that immediately detonates, spraying nearby creatures. Creatures in the area take 1d8 acid damage with a basic Reflex save; on a critical failure, the creature also takes (1+floor((spell rank -1)/2))[persistent,acid] damage.
+  
+  Heightened (+2) The initial damage increases by 1d8, and the persistent damage on a critical failure increases by 1.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  yI4fzrhnbFxup4Ep:
+    formula: "1d8"
+    type: "acid"
+    kinds: ["damage"]
+defense:
+  save: "reflex"
+  basic: true
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 2
+  damage:
+    yI4fzrhnbFxup4Ep: "1d8"
+range: "30 feet"
+area: "5"
+diagnostics: ["Foundry area type is not represented when area details are absent"]

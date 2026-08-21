@@ -1,0 +1,33 @@
+name: "desiccate"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "M0jQlpQYUr0pp2Sv"
+rank: 8
+category: "spell"
+traditions: ["arcane", "primal"]
+rarity: "common"
+traits: ["concentrate", "manipulate", "void"]
+description: |
+  You pull the moisture from the targets' bodies, dealing 10d10 void damage. Creatures made of water (such as water elementals) and plant creatures use the outcome for one degree of success worse than the result of their saving throw. Creatures whose bodies contain no significant moisture (such as earth elementals) are immune to desiccate.
+  
+  Heightened (+1) The damage increases by 1d10.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "10d10"
+    type: "void"
+    kinds: ["damage"]
+defense:
+  save: "fortitude"
+  basic: true
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "1d10"
+range: "500 feet"
+target: "any number of living creatures"

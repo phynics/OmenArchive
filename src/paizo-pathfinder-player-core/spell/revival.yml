@@ -1,0 +1,28 @@
+name: "revival"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "HpIJTVqgXorH9X0L"
+rank: 10
+category: "spell"
+traditions: ["divine", "primal"]
+rarity: "common"
+traits: ["concentrate", "healing", "manipulate", "vitality"]
+description: |
+  A burst of healing energy soothes living creatures and temporarily rouses those recently slain. All living targets regain 10d8+40 Hit Points.
+  
+  In addition, you return any number of dead targets to life temporarily, with the same effects and limitations as Raise Dead. The raised creatures have a number of temporary Hit Points equal to the Hit Points you gave living creatures, but no normal Hit Points. The raised creatures can't regain Hit Points or gain temporary Hit Points in other ways, and once revival's duration ends, they lose all temporary Hit Points and die.
+  
+  Revival can't resurrect creatures killed by Disintegrate or a death effect. It has no effect on undead.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "10d8+40"
+    type: "untyped"
+    kinds: ["healing"]
+range: "30 feet"
+target: "dead creatures and living creatures of your choice within range"
+duration: "1 minute"
+diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]

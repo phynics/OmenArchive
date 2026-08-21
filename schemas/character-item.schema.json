@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-item.schema.json",
+  "title": "Character Item",
+  "description": "Canonical equipment record. The type discriminator selects one subtype payload while physical fields stay shared.",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "source": { "$ref": "utility-types/content-source.schema.json" },
+    "sourceID": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["equipment", "weapon", "armor", "shield", "consumable", "container", "treasure", "kit"]
+    },
+    "level": { "type": "integer", "minimum": 0, "maximum": 30 },
+    "rarity": { "$ref": "utility-types/rarity.schema.json" },
+    "traits": { "type": "array", "items": { "type": "string" } },
+    "description": { "type": "string" },
+    "physical": {
+      "type": "object",
+      "properties": {
+        "bulk": { "type": "string" },
+        "price": { "type": "string" },
+        "quantity": { "type": "integer", "minimum": 0 },
+        "hardness": { "type": "integer", "minimum": 0 },
+        "hitPoints": { "type": "integer", "minimum": 0 },
+        "usage": { "type": "string" },
+        "size": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "details": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": { "equipment": {
+            "type": "object",
+            "properties": { "category": { "type": "string" } },
+            "additionalProperties": false
+          } },
+          "required": ["equipment"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": { "weapon": {
+            "type": "object",
+            "properties": {
+              "category": { "type": "string" },
+              "group": { "type": "string" },
+              "damage": { "type": "string" },
+              "range": { "type": "integer", "minimum": 0 },
+              "reload": { "type": "string" }
+            },
+            "additionalProperties": false
+          } },
+          "required": ["weapon"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": { "armor": {
+            "type": "object",
+            "properties": {
+              "category": { "type": "string" },
+              "acBonus": { "type": "integer" },
+              "dexterityCap": { "type": "integer", "minimum": 0 },
+              "checkPenalty": { "type": "integer" },
+              "speedPenalty": { "type": "integer" },
+              "strength": { "type": "integer", "minimum": 0 }
+            },
+            "additionalProperties": false
+          } },
+          "required": ["armor"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": { "shield": {
+            "type": "object",
+            "properties": {
+              "acBonus": { "type": "integer" },
+              "hardness": { "type": "integer", "minimum": 0 },
+              "hitPoints": { "type": "integer", "minimum": 0 },
+              "speedPenalty": { "type": "integer" }
+            },
+            "additionalProperties": false
+          } },
+          "required": ["shield"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": { "consumable": {
+            "type": "object",
+            "properties": {
+              "category": { "type": "string" },
+              "activation": { "type": "string" },
+              "uses": { "type": "integer", "minimum": 0 }
+            },
+            "additionalProperties": false
+          } },
+          "required": ["consumable"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": { "container": {
+            "type": "object",
+            "properties": {
+              "capacity": { "type": "string" },
+              "bulkReduction": { "type": "string" }
+            },
+            "additionalProperties": false
+          } },
+          "required": ["container"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": { "treasure": {
+            "type": "object",
+            "properties": {
+              "category": { "type": "string" },
+              "value": { "type": "string" }
+            },
+            "additionalProperties": false
+          } },
+          "required": ["treasure"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": { "kit": {
+            "type": "object",
+            "properties": {
+              "contents": { "type": "array", "items": { "type": "string" } }
+            },
+            "required": ["contents"],
+            "additionalProperties": false
+          } },
+          "required": ["kit"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "required": ["name", "source", "type", "level", "rarity", "traits", "description", "physical", "details"],
+  "additionalProperties": false
+}

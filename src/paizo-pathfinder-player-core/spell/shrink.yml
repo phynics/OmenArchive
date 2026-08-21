@@ -1,0 +1,27 @@
+name: "shrink"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "PjhUmyKnq6K5uDby"
+rank: 2
+category: "spell"
+traditions: ["arcane", "primal"]
+rarity: "common"
+traits: ["concentrate", "manipulate", "polymorph"]
+description: |
+  You warp space to make a creature smaller. The target shrinks to become Tiny in size. Its equipment shrinks with it but returns to its original size if removed. The creature's reach changes to 0 feet. This spell has no effect on a Tiny creature.
+  
+  Spell Effect: Shrink
+  
+  Heightened (6th) The spell can target up to 10 creatures.
+time: "2"
+action:
+  count: "two_actions"
+heightening:
+  type: "fixed"
+  levels:
+    "6":
+      target: "10 willing creatures"
+range: "30 feet"
+target: "1 willing creature"
+duration: "5 minutes"

@@ -1,0 +1,42 @@
+name: "divine immolation"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "A16eFTRh82xIjMu8"
+rank: 5
+category: "spell"
+traditions: ["divine"]
+rarity: "common"
+traits: ["concentrate", "fire", "manipulate", "sanctified", "spirit"]
+description: |
+  Divine flames scour creatures within the area. Creatures take 6d6 fire damage and (spell rank -3)d6[persistent,fire] damage. The divine power within the flames scorches the spirit as well; a creature takes spirit damage instead of fire damage from divine immolation if that would be more detrimental to the creature (as determined by the GM).
+  
+  Critical Success The creature is unaffected.
+  
+  Success The creature takes half damage and no persistent damage.
+  
+  Failure The creature takes full damage and persistent damage.
+  
+  Critical Failure The creature takes double damage and double persistent damage.
+  
+  Heightened (+1) The damage increases by 1d6 and persistent damage increases by 1d6.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  b9dAiWfV57lyCWpP:
+    formula: "6d6"
+    type: "fire"
+    kinds: ["damage"]
+defense:
+  save: "reflex"
+  basic: true
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    b9dAiWfV57lyCWpP: "1d6"
+range: "120 feet"
+area: "20"
+diagnostics: ["Foundry area type is not represented when area details are absent"]

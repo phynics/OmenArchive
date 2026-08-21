@@ -1,0 +1,38 @@
+name: "thunderstrike"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "zDJS8E66UI0himqV"
+rank: 1
+category: "spell"
+traditions: ["arcane", "primal"]
+rarity: "common"
+traits: ["concentrate", "electricity", "manipulate", "sonic"]
+description: |
+  You call down a tendril of lightning that cracks with thunder, dealing 1d12 electricity damage and 1d4 sonic damage to the target with a basic Reflex save. A target wearing metal armor or made of metal takes a –1 circumstance bonus to its save, and if damaged by the spell is Clumsy 1 for 1 round.
+  
+  Heightened (+1) The damage increases by 1d12 electricity and 1d4 sonic.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "6aFqAhfOSz7ukuwr":
+    formula: "1d12"
+    type: "electricity"
+    kinds: ["damage"]
+  K00cW8XZuHvutOhE:
+    formula: "1d4"
+    type: "sonic"
+    kinds: ["damage"]
+defense:
+  save: "reflex"
+  basic: true
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "6aFqAhfOSz7ukuwr": "1d12"
+    K00cW8XZuHvutOhE: "1d4"
+range: "120 feet"
+target: "1 creature"

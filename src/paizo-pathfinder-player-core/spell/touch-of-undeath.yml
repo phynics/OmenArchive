@@ -1,0 +1,41 @@
+name: "touch of undeath"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "GYI4xloAgkm6tTrT"
+rank: 1
+category: "focus"
+traditions: []
+rarity: "uncommon"
+traits: ["cleric", "focus", "manipulate", "void"]
+description: |
+  You attack the target's life force with undeath, dealing 1d6 void damage. The target must attempt a Fortitude save.
+  
+  Critical Success The target is unaffected.
+  
+  Success The target takes half damage.
+  
+  Failure The target takes full damage, and vitality effects heal it only half as much as normal for 1 round.
+  
+  Critical Failure The target takes double damage, and vitality effects heal it only half as much as normal for 1 minute.
+  
+  Heightened (+1) The damage increases by 1d6.
+time: "1"
+action:
+  count: "one_action"
+damage:
+  "0":
+    formula: "1d6"
+    type: "void"
+    kinds: ["damage"]
+defense:
+  save: "fortitude"
+  basic: false
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "1d6"
+range: "touch"
+target: "1 living creature"

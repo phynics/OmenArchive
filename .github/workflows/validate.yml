@@ -16,3 +16,7 @@ jobs:
         run: ./scripts/validate.sh
       - name: Run validator fixtures
         run: ruby -Itest test/validator_test.rb
+      - name: Run Player Core import manifest checks
+        run: ruby -Itest test/player_core_spell_import_test.rb
+      - name: Run Swift validator on supported macOS workspaces
+        run: ./scripts/validate-swift.sh

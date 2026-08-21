@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "publication": {
+    "path": "src/{publication}/publication.yml",
+    "schema": "publication.schema.json"
+  },
+  "families": [
+    { "id": "action", "directory": "action", "layout": "flat", "schema": "character-action.schema.json" },
+    { "id": "spell", "directory": "spell", "layout": "flat", "schema": "character-spell.schema.json" },
+    { "id": "item", "directory": "item", "layout": "flat", "schema": "character-item.schema.json" },
+    { "id": "background", "directory": "background", "layout": "flat", "schema": "character-background.schema.json" },
+    { "id": "feat", "directory": "feat", "layout": "flat", "schema": "character-feat.schema.json" },
+    {
+      "id": "ancestry",
+      "directory": "ancestry",
+      "layout": "bundle",
+      "schema": "character-ancestry.schema.json",
+      "children": [
+        { "directory": "features", "layout": "flat", "schema": "character-feature.schema.json" }
+      ]
+    },
+    {
+      "id": "class",
+      "directory": "class",
+      "layout": "bundle",
+      "schema": "character-class.schema.json",
+      "children": [
+        { "directory": "features", "layout": "flat", "schema": "character-feature.schema.json" },
+        { "directory": "schools", "layout": "flat", "schema": "character-feature.schema.json" },
+        { "directory": "basic-lessons", "layout": "flat", "schema": "character-feature.schema.json" },
+        { "directory": "greater-lessons", "layout": "flat", "schema": "character-feature.schema.json" },
+        { "directory": "major-lessons", "layout": "flat", "schema": "character-feature.schema.json" }
+      ],
+      "allowsCustomChildren": true,
+      "customChildSchema": "character-feature.schema.json"
+    },
+    { "id": "heritage", "directory": "heritage", "layout": "grouped", "schema": "character-heritage.schema.json" },
+    { "id": "other-items", "directory": "other-items", "layout": "open-custom-group", "schema": "other-item.schema.json" }
+  ]
+}

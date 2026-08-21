@@ -1,0 +1,42 @@
+name: "divine wrath"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "hVU9msO9yGkxKZ3J"
+rank: 4
+category: "spell"
+traditions: ["divine"]
+rarity: "common"
+traits: ["concentrate", "manipulate", "sanctified", "spirit"]
+description: |
+  You channel the fury of divinity against your foes. You deal 4d10 spirit damage to enemies in the area, depending on their Fortitude save.
+  
+  Critical Success The creature is unaffected.
+  
+  Success The creature takes half damage.
+  
+  Failure The creature takes full damage and is Sickened 1.
+  
+  Critical Failure The creature takes full damage and is Sickened 2; while it's sickened, it's also Slowed 1.
+  
+  Heightened (+1) The damage increases by 1d10.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "4d10"
+    type: "spirit"
+    kinds: ["damage"]
+defense:
+  save: "fortitude"
+  basic: false
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "1d10"
+range: "120 feet"
+area: "20"
+diagnostics: ["Foundry area type is not represented when area details are absent"]

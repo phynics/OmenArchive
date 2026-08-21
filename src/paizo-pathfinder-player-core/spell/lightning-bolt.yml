@@ -1,0 +1,33 @@
+name: "lightning bolt"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "9AAkVUCwF6WVNNY2"
+rank: 3
+category: "spell"
+traditions: ["arcane", "primal"]
+rarity: "common"
+traits: ["concentrate", "electricity", "manipulate"]
+description: |
+  A bolt of lightning strikes outward from your hand, dealing 4d12 electricity damage.
+  
+  Heightened (+1) The damage increases by 1d12.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "4d12"
+    type: "electricity"
+    kinds: ["damage"]
+defense:
+  save: "reflex"
+  basic: true
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "1d12"
+area: "120"
+diagnostics: ["Foundry area type is not represented when area details are absent"]

@@ -1,0 +1,37 @@
+name: "slow"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "WsUwpfmhKrKwoIe3"
+rank: 3
+category: "spell"
+traditions: ["arcane", "occult", "primal"]
+rarity: "common"
+traits: ["concentrate", "manipulate"]
+description: |
+  You dilate the flow of time around the target, slowing its actions.
+  
+  Critical Success The target is unaffected.
+  
+  Success The target is Slowed 1 for 1 round.
+  
+  Failure The target is Slowed 1 for 1 minute.
+  
+  Critical Failure The target is Slowed 2 for 1 minute.
+  
+  Heightened (6th) You can target up to 10 creatures.
+time: "2"
+action:
+  count: "two_actions"
+defense:
+  save: "fortitude"
+  basic: false
+  counteraction: false
+heightening:
+  type: "fixed"
+  levels:
+    "6":
+      target: "10 creatures"
+range: "30 feet"
+target: "1 creature"
+duration: "1 minute"

@@ -1,0 +1,31 @@
+name: "wilding word"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "GdN5YQE47gd79k7X"
+rank: 0
+category: "cantrip"
+traditions: []
+rarity: "uncommon"
+traits: ["cantrip", "hex", "mental", "witch"]
+description: |
+  Your patron's majesty—or their displeasure—comes in a growl from your throat, making other creatures reluctant to harm you. The target must attempt a Will save; if the creature is an animal, fungus, or plant, it takes a –1 circumstance penalty to its save.
+  
+  Critical Success The target is unaffected.
+  
+  Success When the target attempts an attack roll or skill check that would harm you, it takes a -2 status penalty to its roll.
+  
+  Failure As success, but the target also becomes Sickened 1 each time it damages you.
+  
+  Critical Failure As failure, but the sickened value is 2.
+time: "1"
+action:
+  count: "one_action"
+defense:
+  save: "will"
+  basic: false
+  counteraction: false
+range: "30 feet"
+target: "1 creature"
+duration: "1 minute"
+diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]

@@ -1,0 +1,31 @@
+name: "veil of dreams"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "NNoKWiWKqJkdD2ln"
+rank: 1
+category: "focus"
+traditions: []
+rarity: "uncommon"
+traits: ["focus", "hex", "manipulate", "mental", "witch"]
+description: |
+  Your patron draws the target into a drowsy state, causing daydreams and sluggishness. The target must attempt a Will save.
+  
+  Critical Success The target is unaffected.
+  
+  Success The target takes a -1 status penalty to Perception, attack rolls, and Will saves. This penalty increases to -2 for Will saves against sleep effects.
+  
+  Failure As success, and any time the target uses a concentrate action, it must succeed at a flat|dc:5 or the action is disrupted.
+  
+  Spell Effect: Veil of Dreams
+time: "1"
+action:
+  count: "one_action"
+defense:
+  save: "will"
+  basic: false
+  counteraction: false
+range: "30 feet"
+target: "1 creature"
+duration: "1 minute"
+diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]

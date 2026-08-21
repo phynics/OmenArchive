@@ -1,0 +1,35 @@
+name: "canticle of everlasting grief"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "qlxM7Ik3uUeUIOcv"
+rank: 8
+category: "spell"
+traditions: ["divine", "occult"]
+rarity: "common"
+traits: ["auditory", "concentrate", "curse", "emotion", "fear", "manipulate", "mental"]
+description: |
+  You create a melody distilled from pure grief, conveying the inevitable loss of everything your target cherishes, audible to only them. The target takes 10d6 mental damage depending on its Will save. A creature cursed by this spell can't benefit from circumstance or status bonuses, for the duration noted in the degree of success.
+  
+  Critical Success The target is unaffected.
+  
+  Success The target takes half damage, is Frightened 1, and is cursed for 1 round.
+  
+  Failure The target takes full damage, is Frightened 3, and is cursed for 1 week.
+  
+  Critical Failure The target takes double damage, is Frightened 4, and is cursed for an unlimited duration. While the curse remains, the target's allies are also affected by the curse while within 15 feet of the creature.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  XBFtljOdUx24bHoA:
+    formula: "10d6"
+    type: "mental"
+    kinds: ["damage"]
+defense:
+  save: "will"
+  basic: true
+  counteraction: false
+range: "120 feet"
+target: "1 creature"
+duration: "varies"

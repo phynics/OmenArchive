@@ -382,6 +382,10 @@ module OmenArchive
       case category
       when "action"
         return info.merge(schema: "character-action.schema.json") if parts.length == 4
+      when "spell"
+        return info.merge(schema: "character-spell.schema.json") if parts.length == 4
+      when "item"
+        return info.merge(schema: "character-item.schema.json") if parts.length == 4
       when "background"
         return info.merge(schema: "character-background.schema.json") if parts.length == 4
       when "feat"

@@ -1,0 +1,61 @@
+name: "cataclysm"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "wLIvH0AT1u7oa64N"
+rank: 10
+category: "spell"
+traditions: ["arcane", "primal"]
+rarity: "common"
+traits: ["acid", "air", "cold", "concentrate", "earth", "electricity", "fire", "manipulate", "water"]
+description: |
+  You call upon the unimaginable power of world-ending cataclysms, ripping a small piece of each cataclysm and combining them together into one horrifically powerful attack. The following effects come down upon all creatures in the area. Treat the resistances of creatures in the area as if they were 10 lower for the purpose of determining the cataclysm's damage. Each creature attempts one basic Reflex save that applies to all five types of damage.
+  
+  Flesh-dissolving acid rain deals 3d10 acid damage.
+  
+  A roaring earthquake shakes and bludgeons creatures on the ground, dealing 3d10 bludgeoning damage.
+  
+  A blast of freezing wind deals 3d10 cold damage.
+  
+  Incredible lightning lashes the area, dealing 3d10 electricity damage.
+  
+  Beating winds churn across the sky, dealing 3d10 bludgeoning damage to creatures flying in the area.
+  
+  An instant tsunami sweeps over creatures in the area, dealing 3d10 bludgeoning damage with the water trait (doubled for creatures swimming in the area).
+  
+  A massive wildfire burns in a sudden inferno, dealing 3d10 fire damage.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "3d10"
+    type: "acid"
+    kinds: ["damage"]
+  "1":
+    formula: "3d10"
+    type: "bludgeoning"
+    kinds: ["damage"]
+  "2":
+    formula: "3d10"
+    type: "cold"
+    kinds: ["damage"]
+  "3":
+    formula: "3d10"
+    type: "electricity"
+    kinds: ["damage"]
+  "4":
+    formula: "3d10"
+    type: "bludgeoning"
+    kinds: ["damage"]
+  "5":
+    formula: "3d10"
+    type: "fire"
+    kinds: ["damage"]
+defense:
+  save: "reflex"
+  basic: true
+  counteraction: false
+range: "1,000 feet"
+area: "60"
+diagnostics: ["Foundry area type is not represented when area details are absent"]

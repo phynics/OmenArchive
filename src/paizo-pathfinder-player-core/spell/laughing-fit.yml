@@ -1,0 +1,30 @@
+name: "laughing fit"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "tlSE7Ly8vi1Dgddv"
+rank: 2
+category: "spell"
+traditions: ["arcane", "occult"]
+rarity: "common"
+traits: ["concentrate", "emotion", "manipulate", "mental"]
+description: |
+  The target is overtaken with uncontrollable laughter. It must attempt a Will save.
+  
+  Critical Success The target is unaffected.
+  
+  Success The target is plagued with uncontrollable laughter. It can't use reactions.
+  
+  Failure The target is Slowed 1 and can't use reactions.
+  
+  Critical Failure The target falls Prone and can't use actions or reactions for 1 round. It then takes the effects of a failure.
+time: "2"
+action:
+  count: "two_actions"
+defense:
+  save: "will"
+  basic: false
+  counteraction: false
+range: "30 feet"
+target: "1 living creature"
+diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]

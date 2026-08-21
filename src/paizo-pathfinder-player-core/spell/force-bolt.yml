@@ -1,0 +1,29 @@
+name: "force bolt"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "Hu38hoAUSYeFpkVa"
+rank: 1
+category: "focus"
+traditions: []
+rarity: "uncommon"
+traits: ["focus", "force", "manipulate", "wizard"]
+description: |
+  You fire an arrow-shaped bolt of force, one of the most common and reliable forms of battle magic. It automatically hits and deals 1d4+1 force damage to the target.
+  
+  Heightened (+2) The damage increases by 1d4+1.
+time: "1"
+action:
+  count: "one_action"
+damage:
+  "0":
+    formula: "1d4+1"
+    type: "force"
+    kinds: ["damage"]
+heightening:
+  type: "interval"
+  interval: 2
+  damage:
+    "0": "1d4+1"
+range: "30 feet"
+target: "1 creature"

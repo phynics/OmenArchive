@@ -1,0 +1,42 @@
+name: "noise blast"
+source:
+  publisher: "paizo"
+  book: "Pathfinder Player Core"
+sourceID: "wzLkNU3AAqOSKFPR"
+rank: 2
+category: "spell"
+traditions: ["arcane", "divine", "occult"]
+rarity: "common"
+traits: ["concentrate", "manipulate", "sonic"]
+description: |
+  A cacophonous noise blasts out, dealing 2d10 sonic damage. Each creature must attempt a Fortitude save.
+  
+  Critical Success The creature is unaffected.
+  
+  Success The creature takes half damage.
+  
+  Failure The creature takes full damage and is Deafened for 1 round.
+  
+  Critical Failure The creature takes double damage, is deafened for 1 minute, and is Stunned 1.
+  
+  Heightened (+1) The damage increases by 1d10.
+time: "2"
+action:
+  count: "two_actions"
+damage:
+  "0":
+    formula: "2d10"
+    type: "sonic"
+    kinds: ["damage"]
+defense:
+  save: "fortitude"
+  basic: false
+  counteraction: false
+heightening:
+  type: "interval"
+  interval: 1
+  damage:
+    "0": "1d10"
+range: "30 feet"
+area: "10"
+diagnostics: ["Foundry area type is not represented when area details are absent"]

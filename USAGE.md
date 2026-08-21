@@ -24,11 +24,13 @@ src/
   {publication}/
     publication.yml           # publication identity and release ordering
     action/
+    spell/
     ancestry/
     background/
     class/
     feat/
     heritage/
+    item/                  # Canonical equipment records (all subtypes)
     other-items/
 ```
 
@@ -49,6 +51,21 @@ published: "2023-11-15"
 ```
 
 ## General resource rules
+
+### Equipment taxonomy
+
+Equipment uses one canonical `item/` resource family and one `omen://item/<name>` identity.
+Each record declares `type` as `equipment`, `weapon`, `armor`, `shield`, `consumable`,
+`container`, `treasure`, or `kit`; subtype-only fields live under the matching `details`
+key. Shared physical values (`bulk`, `price`, `quantity`, hardness, hit points, usage, and
+size) stay under `physical`, which keeps filtering and imports consistent across subtypes.
+
+Inventory ownership, invested/equipped state, and bulk accounting are character-state data
+and are intentionally outside the authored item record.
+
+When an item originates in Foundry, `sourceID` retains its stable source-record ID alongside
+the human-readable `source` block. This keeps repeated source-aware imports deterministic;
+hand-authored items may omit it.
 
 ### Encoding
 
@@ -233,6 +250,22 @@ Action-specific fields come from `schemas/utility-types/action-primitive.schema.
 - `success`
 - `failure`
 - `criticalFailure`
+
+### Spells
+
+Spells live in `src/{publication}/spell/{slug}.yml` and use
+`schemas/character-spell.schema.json`. `rank` is 0 for cantrips and 1–10 for ranked spells;
+`category` explicitly distinguishes `spell`, `cantrip`, `focus`, and `ritual`. Keep the four
+traditions in `traditions`, ordinary Foundry traits in `traits`, and use `defense` and
+`heightening` only for the supported structured fields. Foundry rule elements and UUID markup do
+not belong in archive YAML; preserve unsupported effects as reviewed prose in `description` and
+record a diagnostic during staging.
+
+The checked-in Player Core import is accounted by
+`docs/player-core-spell-import-manifest.json`: 488 source records produce 465 YAML files and 23
+reviewed skips. Each generated payload retains Foundry's stable `sourceID` for source-aware
+rebuilds. Re-run `python3 tools/player_core_spell_import.py --check` from the workspace root to
+verify source IDs, hashes, deterministic slugs, and the generated-file set.
 
 ### Ancestries
 
