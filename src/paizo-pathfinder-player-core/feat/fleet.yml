@@ -1,0 +1,26 @@
+---
+name: fleet
+source:
+  publisher: paizo
+  book: Pathfinder Player Core
+type: general
+level: 1
+rarity: common
+traits:
+- general
+description: You move more quickly on foot. Your Speed increases by 5 feet.
+prerequisites: []
+action: {}
+rules:
+- id: 539232B3-59A3-5F75-B0D0-57E24F7E0BF3
+  effectTemplate:
+    kind: addSpeedModifier
+    inputRecipes:
+    - inputName: amount
+      expectedValue:
+        parameterType: int
+        valueFromSource:
+          literal:
+            int: 5
+  startLevel: 1
+mechanicsScope: builder

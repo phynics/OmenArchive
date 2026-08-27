@@ -1,3 +1,4 @@
+---
 name: hunt prey
 source:
   publisher: paizo
@@ -6,5 +7,18 @@ level: 1
 traits:
 - ranger
 action: {}
-description: |
-  When you focus your attention on a single foe, you become unstoppable in your pursuit. You gain the Hunt Prey action.
+description: When you focus your attention on a single foe, you become unstoppable
+  in your pursuit. You gain the Hunt Prey action.
+rules:
+- id: 69DCAC03-D6B6-5F85-AB61-0B201A03CEDB
+  effectTemplate:
+    kind: addAction
+    inputRecipes:
+    - inputName: actionId
+      expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: 82AC6F94-330A-5E69-90F1-573C0FA3AC5D
+  startLevel: 1
+mechanicsScope: mixed

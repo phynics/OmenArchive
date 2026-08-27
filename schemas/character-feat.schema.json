@@ -127,6 +127,14 @@
         "$ref": "utility-types/rules.schema.json#/$defs/rule"
       },
       "default": []
+    },
+    "mechanicsScope": {
+      "type": "string",
+      "enum": ["builder", "encounter", "mixed"]
+    },
+    "unsupportedReason": {
+      "type": "string",
+      "minLength": 1
     }
   },
   "required": [

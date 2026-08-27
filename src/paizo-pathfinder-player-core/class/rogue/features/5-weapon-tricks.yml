@@ -1,3 +1,4 @@
+---
 name: weapon tricks
 source:
   publisher: paizo
@@ -6,5 +7,95 @@ level: 5
 traits:
 - rogue
 action: {}
-description: |
-  You gain expert proficiency in simple weapons, martial weapons, and unarmed attacks. When you critically succeed at an attack roll against an Off-Guard creature while using an agile or finesse weapon or an agile or finesse unarmed attack, you apply the critical specialization effect for that weapon or unarmed attack.
+description: You gain expert proficiency in simple weapons, martial weapons, and unarmed
+  attacks. When you critically succeed at an attack roll against an Off-Guard creature
+  while using an agile or finesse weapon or an agile or finesse unarmed attack, you
+  apply the critical specialization effect for that weapon or unarmed attack.
+rules:
+- id: 0A1E87D7-8B4B-5978-97CA-7343036A7D65
+  effectTemplate:
+    kind: addWeaponProficiency
+    inputRecipes:
+    - inputName: weaponDesignation
+      expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:martial;group:any
+    - inputName: proficiencyRank
+      expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+    - inputName: selfScaling
+      expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+  startLevel: 1
+- id: 377C9E32-C0F1-5AF6-986F-7B4C943228AB
+  effectTemplate:
+    kind: addWeaponProficiency
+    inputRecipes:
+    - inputName: weaponDesignation
+      expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:simple;group:any
+    - inputName: proficiencyRank
+      expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+    - inputName: selfScaling
+      expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+  startLevel: 1
+- id: 422C366D-3F88-55FE-BA7D-BDD1C733DCA8
+  effectTemplate:
+    kind: addWeaponProficiency
+    inputRecipes:
+    - inputName: weaponDesignation
+      expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:unarmed;group:any
+    - inputName: proficiencyRank
+      expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+    - inputName: selfScaling
+      expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+  startLevel: 1
+- id: ABFA4055-11C5-57DD-B4F9-2F237F89FCF0
+  effectTemplate:
+    kind: addWeaponCriticalSpecialization
+    inputRecipes:
+    - inputName: uuid
+      expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 3323A693-D688-59C5-B780-B5409F524C34
+    - inputName: weaponGroup
+      expectedValue:
+        parameterType: weaponGroup
+        valueFromSource:
+          literal:
+            weaponGroup: any
+  startLevel: 1
+mechanicsScope: mixed

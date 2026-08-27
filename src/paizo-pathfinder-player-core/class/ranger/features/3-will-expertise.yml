@@ -1,10 +1,32 @@
+---
 name: will expertise
 source:
   publisher: paizo
-  book: Pathfinder Player Core
+  book: Pathfinder Rage of Elements
 level: 3
 traits:
+- alchemist
+- kineticist
 - ranger
 action: {}
-description: |
-  Your mental defenses grow stronger. Your proficiency rank for Will saves increases to expert.
+description: Your mental defenses grow stronger. Your proficiency rank for Will saves
+  increases to expert.
+rules:
+- id: 43F2CE3C-8BEC-5771-8E78-6DB718E005D8
+  effectTemplate:
+    kind: addSavingThrow
+    inputRecipes:
+    - inputName: savingThrow
+      expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: will
+    - inputName: proficiencyRank
+      expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+  startLevel: 1
+mechanicsScope: builder

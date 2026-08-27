@@ -1,3 +1,4 @@
+---
 name: reactive strike
 source:
   publisher: paizo
@@ -6,5 +7,18 @@ level: 1
 traits:
 - fighter
 action: {}
-description: |
-  Ever watchful for weaknesses, you can quickly attack foes that leave an opening in their defenses. You gain the Reactive Strike reaction.
+description: Ever watchful for weaknesses, you can quickly attack foes that leave
+  an opening in their defenses. You gain the Reactive Strike reaction.
+rules:
+- id: E48528BF-6EE8-58FA-8DB2-FCD4CFDDB7F7
+  effectTemplate:
+    kind: addAction
+    inputRecipes:
+    - inputName: actionId
+      expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: CC779B41-4561-57AD-91A9-797F5BEE8D81
+  startLevel: 1
+mechanicsScope: builder

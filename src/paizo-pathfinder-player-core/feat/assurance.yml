@@ -1,0 +1,52 @@
+---
+name: assurance
+source:
+  publisher: paizo
+  book: Pathfinder Player Core
+type: skill
+level: 1
+rarity: common
+traits:
+- fortune
+- general
+- skill
+description: Even in the worst circumstances, you can perform basic tasks. Choose
+  a skill you're trained in. You can forgo rolling a skill check for that skill to
+  instead receive a result of 10 + your proficiency bonus (do not apply any other
+  bonuses, penalties, or modifiers).
+prerequisites:
+- trained in at least one skill
+specialText: You can select this feat multiple times. Each time, choose a different
+  skill and gain the benefits for that skill.
+action: {}
+rules:
+- id: 94C764F5-2F26-59A6-A1F4-49F2544A07EE
+  effectTemplate:
+    kind: addAssurance
+    inputRecipes:
+    - inputName: skill
+      expectedValue:
+        parameterType: skill
+        valueFromSource:
+          selection:
+            id: C45DFF95-58CF-5F2E-A37A-FFFA04BDECA6
+            lookupName: assurance-skill
+            options:
+            - skill: acrobatics
+            - skill: arcana
+            - skill: athletics
+            - skill: crafting
+            - skill: deception
+            - skill: diplomacy
+            - skill: intimidation
+            - skill: medicine
+            - skill: nature
+            - skill: occultism
+            - skill: performance
+            - skill: religion
+            - skill: society
+            - skill: stealth
+            - skill: survival
+            - skill: thievery
+  startLevel: 1
+mechanicsScope: mixed

@@ -1,3 +1,4 @@
+---
 name: fighter weapon mastery
 source:
   publisher: paizo
@@ -6,5 +7,99 @@ level: 5
 traits:
 - fighter
 action: {}
-description: |
-  Hours spent training with your preferred weapons, learning and developing new combat techniques, have made you particularly effective with your weapons of choice. Choose one weapon group. Your proficiency rank increases to master with the simple weapons, martial weapons, and unarmed attacks in that group, and to expert with the advanced weapons in that group. You gain access to the critical specialization effects of all weapons and unarmed attacks for which you have master proficiency.
+description: Hours spent training with your preferred weapons, learning and developing
+  new combat techniques, have made you particularly effective with your weapons of
+  choice. Choose one weapon group. Your proficiency rank increases to master with
+  the simple weapons, martial weapons, and unarmed attacks in that group, and to expert
+  with the advanced weapons in that group. You gain access to the critical specialization
+  effects of all weapons and unarmed attacks for which you have master proficiency.
+rules:
+- id: B5DC0DD5-7D18-5617-98A0-20D44487F886
+  effectTemplate:
+    kind: addWeaponGroupProficiency
+    inputRecipes:
+    - inputName: weaponGroup
+      expectedValue:
+        parameterType: weaponGroup
+        valueFromSource:
+          selection:
+            id: 076B25EE-8912-579F-AD92-097A4D68D344
+            lookupName: fighter-weapon-mastery-group
+            options:
+            - weaponGroup: sword
+            - weaponGroup: brawling
+            - weaponGroup: flail
+            - weaponGroup: knife
+            - weaponGroup: club
+            - weaponGroup: dart
+            - weaponGroup: spear
+            - weaponGroup: axe
+            - weaponGroup: polearm
+            - weaponGroup: hammer
+            - weaponGroup: pick
+            - weaponGroup: shield
+            - weaponGroup: bow
+    - inputName: proficiencyRank
+      expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+    - inputName: includeAdvanced
+      expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+    - inputName: selfScaling
+      expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+  startLevel: 1
+- id: A26EF16A-42A0-5A49-8961-49D74CDD28B5
+  effectTemplate:
+    kind: addWeaponGroupProficiency
+    inputRecipes:
+    - inputName: weaponGroup
+      expectedValue:
+        parameterType: weaponGroup
+        valueFromSource:
+          lookupByName: fighter-weapon-mastery-group
+    - inputName: proficiencyRank
+      expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+    - inputName: includeAdvanced
+      expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: true
+    - inputName: selfScaling
+      expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+  startLevel: 1
+- id: 63111F69-E9E7-5408-9AA6-368D7561D4D4
+  effectTemplate:
+    kind: addWeaponCriticalSpecialization
+    inputRecipes:
+    - inputName: uuid
+      expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 9BD759CA-3A4B-5E34-96FA-7E35ACA82E34
+    - inputName: weaponGroup
+      expectedValue:
+        parameterType: weaponGroup
+        valueFromSource:
+          lookupByName: fighter-weapon-mastery-group
+  startLevel: 1
+mechanicsScope: builder
