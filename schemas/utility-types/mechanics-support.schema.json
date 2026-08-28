@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/mechanics-support.schema.json",
+  "title": "Mechanics Support",
+  "description": "Optional classification for canonical builder and encounter mechanics.",
+  "type": "object",
+  "properties": {
+    "mechanicsScope": {
+      "type": "string",
+      "enum": ["builder", "encounter", "mixed"]
+    },
+    "unsupportedReason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["unsupportedReason"]
+      },
+      "then": {
+        "required": ["mechanicsScope"],
+        "properties": {
+          "rules": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["mechanicsScope"],
+        "properties": {
+          "mechanicsScope": {
+            "const": "builder"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": ["unsupportedReason"]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["mechanicsScope"],
+        "properties": {
+          "mechanicsScope": {
+            "const": "encounter"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "rules": {
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

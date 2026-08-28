@@ -75,8 +75,15 @@
     "area": { "type": "string" },
     "duration": { "type": "string" },
     "cost": { "type": "string" },
-    "requirements": { "type": "string" }
+    "requirements": { "type": "string" },
+    "mechanicsScope": { "type": "string", "enum": ["builder", "encounter", "mixed"] },
+    "unsupportedReason": { "type": "string", "minLength": 1 }
   },
   "required": ["name", "source", "rank", "category", "traditions", "rarity", "traits", "description"],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
+  ]
 }

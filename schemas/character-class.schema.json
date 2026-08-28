@@ -73,6 +73,14 @@
         }
       },
       "required": ["choose", "from"]
+    },
+    "mechanicsScope": {
+      "type": "string",
+      "enum": ["builder", "encounter", "mixed"]
+    },
+    "unsupportedReason": {
+      "type": "string",
+      "minLength": 1
     }
   },
   "required": [
@@ -85,5 +93,10 @@
     "weaponProficiency",
     "savingThrowProficiency",
     "additionalSkillCount"
+  ],
+  "allOf": [
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
   ]
 }

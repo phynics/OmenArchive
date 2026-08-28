@@ -49,5 +49,10 @@
       "minLength": 1
     }
   },
-  "required": ["name", "source", "description"]
+  "required": ["name", "source", "description"],
+  "allOf": [
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
+  ]
 } 

@@ -143,8 +143,21 @@
           "additionalProperties": false
         }
       ]
+    },
+    "mechanicsScope": {
+      "type": "string",
+      "enum": ["builder", "encounter", "mixed"]
+    },
+    "unsupportedReason": {
+      "type": "string",
+      "minLength": 1
     }
   },
   "required": ["name", "source", "type", "level", "rarity", "traits", "description", "physical", "details"],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
+  ]
 }
