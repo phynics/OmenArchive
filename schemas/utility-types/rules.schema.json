@@ -331,6 +331,42 @@
         {
           "type": "object",
           "properties": {
+            "hasLevel": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            }
+          },
+          "required": ["hasLevel"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasAncestryWithName": { "type": "string", "minLength": 1 }
+          },
+          "required": ["hasAncestryWithName"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasClassWithName": { "type": "string", "minLength": 1 }
+          },
+          "required": ["hasClassWithName"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasTrait": { "type": "string", "minLength": 1 }
+          },
+          "required": ["hasTrait"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
             "hasFeatWithName": {
               "type": "string"
             }
@@ -346,6 +382,14 @@
             }
           },
           "required": ["hasFeatureWithName"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasResourceWithName": { "type": "string", "minLength": 1 }
+          },
+          "required": ["hasResourceWithName"],
           "additionalProperties": false
         },
         {
@@ -373,6 +417,22 @@
         {
           "type": "object",
           "properties": {
+            "hasAttributeModifier": {
+              "type": "object",
+              "properties": {
+                "attribute": { "$ref": "attribute.schema.json" },
+                "modifier": { "type": "integer", "minimum": -5, "maximum": 20 }
+              },
+              "required": ["attribute", "modifier"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["hasAttributeModifier"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
             "hasSkillProficiency": {
               "type": "object",
               "properties": {
@@ -388,6 +448,70 @@
             }
           },
           "required": ["hasSkillProficiency"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSavingThrowProficiency": {
+              "type": "object",
+              "properties": {
+                "savingThrow": { "$ref": "saving-throw.schema.json" },
+                "proficiency": { "$ref": "proficiency-rank.schema.json" }
+              },
+              "required": ["savingThrow", "proficiency"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["hasSavingThrowProficiency"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSpellcasting": { "type": "boolean", "const": true }
+          },
+          "required": ["hasSpellcasting"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasAccess": { "type": "string", "minLength": 1 }
+          },
+          "required": ["hasAccess"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "allOf": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/prerequisite" },
+              "minItems": 1
+            }
+          },
+          "required": ["allOf"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "anyOf": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/prerequisite" },
+              "minItems": 1
+            }
+          },
+          "required": ["anyOf"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "unsupported": { "type": "string", "minLength": 1 }
+          },
+          "required": ["unsupported"],
           "additionalProperties": false
         }
       ]

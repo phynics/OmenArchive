@@ -5,6 +5,11 @@
   "description": "Schema for a character feat in the game",
   "type": "object",
   "properties": {
+    "sourceID": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable source-system identifier retained for import diagnostics"
+    },
     "name": {
       "type": "string",
       "description": "Name of the feat"
@@ -50,6 +55,21 @@
       "type": "array",
       "items": {
         "type": "string"
+      },
+      "default": []
+    },
+    "typedPrerequisites": {
+      "type": "array",
+      "items": {
+        "$ref": "utility-types/rules.schema.json#/$defs/prerequisite"
+      },
+      "default": []
+    },
+    "prerequisiteDiagnostics": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
       },
       "default": []
     },
