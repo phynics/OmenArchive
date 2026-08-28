@@ -60,7 +60,12 @@
             "addSpellcastingProficiency",
             "addSpeedModifier",
             "addAssurance",
-            "addTerrainStalker"
+            "addTerrainStalker",
+            "addBaseSpeed",
+            "addSense",
+            "addResistance",
+            "addActorTrait",
+            "addCraftingAbility"
           ]
         },
         "inputRecipes": {
@@ -399,7 +404,8 @@
               "type": "object",
               "properties": {
                 "attribute": {
-                  "$ref": "attribute.schema.json"
+                  "type": "string",
+                  "enum": ["str", "dex", "con", "int", "wis", "cha"]
                 },
                 "score": {
                   "type": "integer",
@@ -420,7 +426,10 @@
             "hasAttributeModifier": {
               "type": "object",
               "properties": {
-                "attribute": { "$ref": "attribute.schema.json" },
+                "attribute": {
+                  "type": "string",
+                  "enum": ["str", "dex", "con", "int", "wis", "cha"]
+                },
                 "modifier": { "type": "integer", "minimum": -5, "maximum": 20 }
               },
               "required": ["attribute", "modifier"],
