@@ -1,0 +1,43 @@
+---
+action: {}
+description: 'Your muse is a jack of all trades, flitting between skills and pursuits.
+  Some bards are constantly moved by new muses or draw their inspiration from an idealized
+  being, whether it''s based on a real person or purely philosophical. If your muse
+  is a single creature, it might be an eclectic creature like a fey or one who''s
+  learned a lot over a long lifespan; if a deity, it might be Desna or Calistria.
+  Art inspired by a polymath muse is restless, with each composition exhibiting new
+  techniques and an ever-evolving style.
+
+  As a bard with a polymath muse, you are interested in a wide array of topics but
+  rarely dedicated to any one, and you rarely make up your mind—you want to try everything.
+
+  Muse Feat Versatile Performance
+
+  Muse Spell Phantasmal Minion'
+level: 1
+mechanicsScope: builder
+name: polymath
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 50E057FC-EFEA-5668-BD73-73E20B0D8E7E
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 9B497376-D682-5BA0-965A-AFB96B462F9D
+      inputName: featId
+    kind: addFeat
+  id: 1DC70FF2-468B-58B0-9B1E-6194F3C08691
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: y0jGimYdMGDJWrEq
+traits:
+- bard

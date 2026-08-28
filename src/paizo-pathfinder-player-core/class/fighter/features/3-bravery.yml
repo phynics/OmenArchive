@@ -1,33 +1,34 @@
 ---
-name: bravery
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 3
-traits:
-- fighter
 action: {}
 description: Having faced countless foes and the chaos of battle, you have learned
   how to stand strong in the face of fear. Your proficiency rank for Will saves increases
   to expert. When you roll a success at a Will save against a fear effect, you get
   a critical success instead. In addition, anytime you gain the Frightened condition,
   reduce its value by 1.
+level: 3
+mechanicsScope: builder
+name: bravery
 rules:
-- id: 3C3FD796-A00E-537F-B724-035BB8520ED0
-  effectTemplate:
-    kind: addSavingThrow
+- effectTemplate:
     inputRecipes:
-    - inputName: savingThrow
-      expectedValue:
+    - expectedValue:
         parameterType: savingThrow
         valueFromSource:
           literal:
             savingThrow: will
-    - inputName: proficiencyRank
-      expectedValue:
+      inputName: savingThrow
+    - expectedValue:
         parameterType: proficiencyRank
         valueFromSource:
           literal:
             proficiencyRank: expert
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 3C3FD796-A00E-537F-B724-035BB8520ED0
   startLevel: 1
-mechanicsScope: mixed
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: GJKJafDGuX4BeAeN
+traits:
+- fighter

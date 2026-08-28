@@ -1,11 +1,4 @@
 ---
-name: rogue's racket
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 1
-traits:
-- rogue
 action: {}
 description: 'You''ve begun to develop your techniques and approach to a job, while
   building your reputation in rogues'' circles. Choose a rogue''s racket from the
@@ -20,148 +13,15 @@ description: 'You''ve begun to develop your techniques and approach to a job, wh
   Scoundrel
 
   Thief'
-rules:
-- id: 79658870-919B-580E-9441-613E2B6FF8CE
-  effectTemplate:
-    kind: addFeature
-    inputRecipes:
-    - inputName: feature
-      expectedValue:
-        parameterType: characterFeature
-        valueFromSource:
-          selection:
-            id: 473EC216-E115-5F62-BEF3-ED32031BE357
-            lookupName: rogues-racket
-            options:
-            - characterFeature:
-                id: 2862DD3C-F751-55AF-876F-52EE61F32721
-                parent: omen://class/rogue/rackets?source=paizo-pathfinder-player-core
-                name: mastermind
-                publisher: paizo
-                book: Pathfinder Player Core
-                level: 1
-                traits:
-                - rogue
-                description: 'You rely on your intellect to craft intricate schemes,
-                  planning 10 steps ahead where others might plan three. You might
-                  be a driven detective, a spymaster in the service of a powerful
-                  house, or an aspiring crime lord or information broker.
-
-                  If you successfully identify a creature using Recall Knowledge,
-                  that creature is Off-Guard against your attacks until the start
-                  of your next turn; if you critically succeed, it''s off-guard against
-                  your attacks for 1 minute.
-
-                  You''re trained in Society and one of the following skills of your
-                  choice: Arcana, Nature, Occultism, or Religion. You can choose Intelligence
-                  as your key attribute.'
-                rules: []
-            - characterFeature:
-                id: E0D1FEE9-D17D-5392-A3B1-4B88FE1DE554
-                parent: omen://class/rogue/rackets?source=paizo-pathfinder-player-core
-                name: ruffian
-                publisher: paizo
-                book: Pathfinder Player Core
-                level: 1
-                traits:
-                - rogue
-                description: 'You prefer the direct approach: strong-arming or intimidation.
-                  You might be an enforcer for organized crime, a highway bandit,
-                  or a noble who bullies others with threats of your family''s power.
-
-                  You use whatever tools you have to get the job done. You can deal
-                  sneak attack damage with any weapon, not just the weapons listed
-                  in the sneak attack class feature. This benefit doesn''t apply to
-                  a simple weapon with a damage die greater than d8 or a martial or
-                  advanced weapon with a damage die greater than d6. (Apply any abilities
-                  that alter the damage die size first.) Critical hits you make with
-                  these weapons gain the weapon''s critical specialization benefit
-                  if the target is Off-Guard to you.
-
-                  You''re trained in Intimidation and medium armor. You can choose
-                  Strength as your key attribute. When you gain light armor expertise,
-                  you also gain expert proficiency in medium armor, and when you gain
-                  light armor mastery, you also gain master proficiency in medium
-                  armor.'
-                rules:
-                - id: 8BC3D51F-ADA2-5DC6-807C-1A055E30BBE7
-                  effectTemplate:
-                    kind: addWeaponCriticalSpecialization
-                    inputRecipes:
-                    - inputName: uuid
-                      expectedValue:
-                        parameterType: uuid
-                        valueFromSource:
-                          literal:
-                            uuid: C8B40953-D2B3-5F8F-AABB-03C038F5416E
-                    - inputName: weaponGroup
-                      expectedValue:
-                        parameterType: weaponGroup
-                        valueFromSource:
-                          literal:
-                            weaponGroup: any
-                  startLevel: 1
-                - id: C6D69DE1-41CB-5F13-A64C-11DB4B8B64FD
-                  effectTemplate:
-                    kind: addWeaponCriticalSpecialization
-                    inputRecipes:
-                    - inputName: uuid
-                      expectedValue:
-                        parameterType: uuid
-                        valueFromSource:
-                          literal:
-                            uuid: BA18C43A-11A8-520D-BFB5-74A686002ECE
-                    - inputName: weaponGroup
-                      expectedValue:
-                        parameterType: weaponGroup
-                        valueFromSource:
-                          literal:
-                            weaponGroup: any
-                  startLevel: 1
-            - characterFeature:
-                id: 99DD9B64-8360-5E45-A2D6-F16805E3849B
-                parent: omen://class/rogue/rackets?source=paizo-pathfinder-player-core
-                name: scoundrel
-                publisher: paizo
-                book: Pathfinder Player Core
-                level: 1
-                traits:
-                - rogue
-                description: 'You use fast-talking, flattery, and a silver tongue
-                  to avoid danger and escape tricky situations. You might be a grifter
-                  or con artist, or you might use your skills in certain reputable
-                  professions, like a barrister or diplomat.
-
-                  When you successfully Feint, the target is Off-Guard against your
-                  melee attacks until the end of your next turn. On a critical success,
-                  the target is off-guard against all melee attacks until the end
-                  of your next turn, not just yours.
-
-                  If you Feint while wielding an agile or finesse melee weapon, you
-                  can step immediately after the Feint as a free action. You''re trained
-                  in Deception and Diplomacy. You can choose Charisma as your key
-                  attribute.'
-                rules: []
-            - characterFeature:
-                id: 01FFE457-9EF5-536D-9276-DA776286B963
-                parent: omen://class/rogue/rackets?source=paizo-pathfinder-player-core
-                name: thief
-                publisher: paizo
-                book: Pathfinder Player Core
-                level: 1
-                traits:
-                - rogue
-                description: 'Nothing beats the thrill of taking something that belongs
-                  to someone else. You might be a pickpocket working the streets,
-                  a cat burglar sneaking through windows, or even a consultant, testing
-                  your clients'' vaults for openings.
-
-                  When a fight breaks out, you prefer swift, lightweight weapons,
-                  and you strike where it hurts. When you attack with a finesse melee
-                  weapon or finesse melee unarmed attack, you can add your Dexterity
-                  modifier to damage rolls instead of your Strength modifier.
-
-                  You are trained in Thievery.'
-                rules: []
-  startLevel: 1
-mechanicsScope: builder
+level: 1
+mechanicsScope: mixed
+name: rogue's racket
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: uGuCGQvUmioFV2Bd
+traits:
+- rogue
+unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
+  omen://class/rogue/features/rogues-racket?source=paizo-pathfinder-player-core. Foundry
+  keys: [ChoiceSet, GrantItem].'

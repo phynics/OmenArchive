@@ -1,0 +1,37 @@
+---
+action:
+  count: two_actions
+description: You transcend the limitations of form. Once per day you can cast Nature
+  Incarnate, even if you don't have it prepared, to transform into a kaiju. If you
+  have Plant Shape, you can choose to transform into a green man instead. You also
+  gain the True Shapeshift activity.
+level: 20
+mechanicsScope: builder
+name: true shapeshifter
+prerequisites:
+- Dragon Shape
+- Untamed Form
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: 53C270F7-81EB-5052-A068-B3BF93A1C6BA
+      inputName: actionId
+    kind: addAction
+  id: 680B8D67-B3A5-5899-B989-3CAB902983EE
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: mGzPR7M9H733j2wN
+traits:
+- concentrate
+- druid
+type: class
+typedPrerequisites:
+- hasResourceWithName: dragon shape
+- hasResourceWithName: untamed form

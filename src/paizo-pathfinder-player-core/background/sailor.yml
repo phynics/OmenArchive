@@ -1,17 +1,24 @@
-name: sailor
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  You heard the call of the sea from a young age. Perhaps you signed onto a merchant's vessel, joined the navy, or even fell in with a crew of pirates and scalawags.
-  Choose two attribute boosts. One must be to Strength or Dexterity, and one is a free attribute boost.
-  You're trained in the Athletics skill and the Sailing Lore skill. You gain the Underwater Marauder skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - dexterity
   - strength
-skillOption:
-- athletics
-loreSkill: sailing
+  freeBoosts: 1
+description: 'You heard the call of the sea from a young age. Perhaps you signed onto
+  a merchant''s vessel, joined the navy, or even fell in with a crew of pirates and
+  scalawags.
+
+  Choose two attribute boosts. One must be to Strength or Dexterity, and one is a
+  free attribute boost.
+
+  You''re trained in the Athletics skill and the Sailing Lore skill. You gain the
+  Underwater Marauder skill feat.'
+loreSkill: sailing lore
+mechanicsScope: builder
+name: sailor
+rarity: common
 skillFeat: underwater marauder
+skillOption: athletics
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

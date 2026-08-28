@@ -1,10 +1,32 @@
-name: wild willpower
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: Your primal will, like that of the greatest beast, can't be tamed. Your
+  proficiency rank for Will saves increases to master. When you roll a success at
+  a Will save, you get a critical success instead.
 level: 11
+mechanicsScope: builder
+name: wild willpower
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: will
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 1889D6EB-6413-57C2-AE72-F42871A60DB7
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: yqaRnXFjRnFWsWvY
 traits:
 - druid
-action: {}
-description: |
-  Your primal will, like that of the greatest beast, can't be tamed. Your proficiency rank for Will saves increases to master. When you roll a success at a Will save, you get a critical success instead.

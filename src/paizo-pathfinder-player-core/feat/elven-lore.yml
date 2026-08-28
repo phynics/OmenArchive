@@ -1,0 +1,72 @@
+---
+action: {}
+description: 'You''ve studied traditional elven arts, learning about arcane magic
+  and the world around you. You gain the trained proficiency rank in Arcana and Nature.
+  If you would automatically become trained in one of those skills (from your background
+  or class, for example), you instead become trained in a skill of your choice.
+
+  You also gain the Additional Lore general feat for Elf Lore.'
+level: 1
+mechanicsScope: builder
+name: elven lore
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: arcana
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 51BA6915-A593-5D56-B5BE-37AB2015EFB8
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: nature
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 2E0D5308-6717-5F82-9F9A-2F2D39D80322
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: D7A11EC3-5B18-5608-8C1F-658ACB05B63F
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
+      inputName: featId
+    kind: addFeat
+  id: F81E2D7C-6872-55EB-AEF7-B6D3C0553191
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: zki5qdM5IQcAiscM
+traits:
+- elf
+type: ancestry

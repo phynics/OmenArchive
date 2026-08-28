@@ -1,10 +1,28 @@
-name: arcane bond
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: You place some of your magical power in a bonded item. Each day when
+  you prepare your spells, you can designate a single item you own as your bonded
+  item. This is typically an item associated with spellcasting, such as a wand, ring,
+  or staff, but you are free to designate a weapon or other item. You gain the Drain
+  Bonded Item free action.
 level: 1
+mechanicsScope: builder
+name: arcane bond
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: F3ABCBD5-F46D-51CC-9BE9-685DB7BBC528
+      inputName: actionId
+    kind: addAction
+  id: 52823958-3706-5A27-9358-3D3B4492370E
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: au0lwQ1nAcNQwcGh
 traits:
 - wizard
-action: {}
-description: |
-  You place some of your magical power in a bonded item. Each day when you prepare your spells, you can designate a single item you own as your bonded item. This is typically an item associated with spellcasting, such as a wand, ring, or staff, but you are free to designate a weapon or other item. You gain the Drain Bonded Item free action.

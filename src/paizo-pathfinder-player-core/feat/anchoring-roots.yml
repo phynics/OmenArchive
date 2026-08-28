@@ -1,0 +1,46 @@
+---
+action: {}
+description: Small roots sprout from your feet, steadying you as you move. You gain
+  the Steady Balance skill feat, even if you aren't trained in Acrobatics, and you
+  can use the Anchor action.
+level: 5
+mechanicsScope: builder
+name: anchoring roots
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 5D24D35C-02AC-5631-9A16-E86E8D6EF0DF
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: A5F5AFA7-91CB-514B-AB1B-62259EDEDE12
+      inputName: featId
+    kind: addFeat
+  id: 327302F5-8E67-5D6C-A555-7EAFE0012194
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: E456ECF4-3C8A-5CA8-82FE-834AC9EB5BEF
+      inputName: actionId
+    kind: addAction
+  id: 30999921-CFE9-586C-9A69-61145A789EE7
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 1miLVRtvsnZU6TTk
+traits:
+- leshy
+type: ancestry

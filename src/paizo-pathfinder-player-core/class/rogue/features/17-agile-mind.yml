@@ -1,10 +1,32 @@
-name: agile mind
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: You play mental games and employ cognitive tricks to throw off mind-altering
+  effects. Your proficiency rank for Will saves increases to master. When you roll
+  a success at a Will save, you get a critical success instead.
 level: 17
+mechanicsScope: builder
+name: agile mind
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: will
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 93F05571-40DA-5DFE-A189-DEFF2DBFB0D7
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: xmZ7oeTDcQVXegUP
 traits:
 - rogue
-action: {}
-description: |
-  You play mental games and employ cognitive tricks to throw off mind-altering effects. Your proficiency rank for Will saves increases to master. When you roll a success at a Will save, you get a critical success instead.

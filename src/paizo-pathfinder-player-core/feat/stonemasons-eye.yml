@@ -1,0 +1,56 @@
+---
+action: {}
+description: 'You also gain a +2 circumstance bonus to Perception checks to notice
+  unusual stonework. This bonus applies to checks to discover mechanical traps made
+  of stone or Hidden within stone.
+
+  If you aren''t using the Seek action or searching, the GM automatically rolls a
+  secret check for you to notice unusual stonework anyway. This check doesn''t gain
+  your normal circumstance bonus.'
+level: 1
+mechanicsScope: mixed
+name: stonemason's eye
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 87F0C1E5-C39B-5543-8AAF-C8ED5B7DD7D5
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 900C66C1-D245-582B-A9F9-569B7E7B6C99
+      inputName: featId
+    kind: addFeat
+  id: A54FB4CF-0DE3-5617-805C-A6C59D75C483
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: crafting
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 3858F5F2-1719-5630-82A4-F0E233D2E1E7
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: HOUHs5rahwIsQoBf
+traits:
+- dwarf
+type: ancestry

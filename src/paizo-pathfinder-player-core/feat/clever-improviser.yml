@@ -1,0 +1,35 @@
+---
+action: {}
+description: You've learned how to handle situations when you're out of your depth.
+  You gain the Untrained Improvisation general feat. In addition, you can attempt
+  skill actions that normally require you to be trained, even if you are untrained.
+level: 5
+mechanicsScope: builder
+name: clever improviser
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 707D6EC8-3581-51CD-A04E-C56DA285ACDF
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: D9CCA3F5-9469-5146-8CAF-C6279EBC7740
+      inputName: featId
+    kind: addFeat
+  id: BE90FD1A-138F-549F-8CAE-D01C73F566EC
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: KcbSxOPYC5CUqbZQ
+traits:
+- human
+type: ancestry

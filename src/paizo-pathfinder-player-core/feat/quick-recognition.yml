@@ -1,0 +1,35 @@
+---
+action:
+  count: free_action
+description: You Recognize Spells swiftly. Once per round, you can Recognize a Spell
+  using a skill in which you're a master as a free action.
+level: 7
+mechanicsScope: encounter
+name: quick recognition
+prerequisites:
+- Master in Arcana, Nature, Occultism or Religion
+- Recognize Spell
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 2rSyTfPgAmNAo01r
+traits:
+- general
+- skill
+type: skill
+typedPrerequisites:
+- anyOf:
+  - hasSkillProficiency:
+      proficiency: master
+      skill: arcana
+  - hasSkillProficiency:
+      proficiency: master
+      skill: nature
+  - hasSkillProficiency:
+      proficiency: master
+      skill: occultism
+  - hasSkillProficiency:
+      proficiency: master
+      skill: religion
+- hasResourceWithName: recognize spell

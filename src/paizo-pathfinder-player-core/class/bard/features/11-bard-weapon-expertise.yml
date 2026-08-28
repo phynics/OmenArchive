@@ -1,10 +1,103 @@
-name: bard weapon expertise
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: You have become thoroughly adept with bardic weapons. Your proficiency
+  rank for martial weapons, simple weapons, and unarmed attacks increases to expert.
+  When you critically succeed at an attack roll using one of these weapons or an unarmed
+  attack while one of your compositions is active, you apply the critical specialization
+  effect for that weapon or unarmed attack.
 level: 11
+mechanicsScope: mixed
+name: bard weapon expertise
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: EA792747-7BA7-5F12-9EE2-92F99B080FEB
+      inputName: uuid
+    - expectedValue:
+        parameterType: weaponGroup
+        valueFromSource:
+          literal:
+            weaponGroup: any
+      inputName: weaponGroup
+    kind: addWeaponCriticalSpecialization
+  id: 70F80BFF-A142-5505-9F0A-4DCF4924438B
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:martial;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 5148FB45-F3F5-550A-80F3-B528D57F8707
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:simple;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 75BC2891-1CA2-563C-942D-D3E79B728361
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:unarmed;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: D3BF7A8E-1F33-53D2-885F-4614075A7BD7
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 4lp8oG9A3zuqhPBS
 traits:
 - bard
-action: {}
-description: |
-  You have become thoroughly adept with bardic weapons. Your proficiency rank for martial weapons, simple weapons, and unarmed attacks increases to expert. When you critically succeed at an attack roll using one of these weapons or an unarmed attack while one of your compositions is active, you apply the critical specialization effect for that weapon or unarmed attack.

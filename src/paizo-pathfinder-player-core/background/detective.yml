@@ -1,17 +1,24 @@
-name: detective
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  You solved crimes as a police inspector or took jobs for wealthy clients as a private investigator. You might have become an adventurer as part of your next big mystery, but likely it was due to the consequences or aftermath of a prior case.
-  Choose two attribute boosts. One must be to Intelligence or Wisdom, and one is a free attribute boost.
-  You're trained in the Society skill and the Underworld Lore skill. You gain the Streetwise skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - intelligence
   - wisdom
-skillOption:
-- society
-loreSkill: underworld
+  freeBoosts: 1
+description: 'You solved crimes as a police inspector or took jobs for wealthy clients
+  as a private investigator. You might have become an adventurer as part of your next
+  big mystery, but likely it was due to the consequences or aftermath of a prior case.
+
+  Choose two attribute boosts. One must be to Intelligence or Wisdom, and one is a
+  free attribute boost.
+
+  You''re trained in the Society skill and the Underworld Lore skill. You gain the
+  Streetwise skill feat.'
+loreSkill: underworld lore
+mechanicsScope: builder
+name: detective
+rarity: common
 skillFeat: streetwise
+skillOption: society
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

@@ -1,10 +1,108 @@
-name: versatile legend
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: You are nigh-unmatched with any weapon. Your proficiency ranks for simple
+  weapons, martial weapons, and unarmed attacks increase to legendary, and your proficiency
+  rank for advanced weapons increases to master. Your proficiency rank for your fighter
+  class DC increases to master.
 level: 19
+mechanicsScope: builder
+name: versatile legend
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:advanced;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 4B9F9BD1-98EF-5393-883C-F950A6B623F1
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:martial;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: legendary
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 2A44DC5D-362F-5302-9DE6-E18F655FA5CC
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:simple;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: legendary
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: F5D49605-1FB8-5E06-BA34-2DC898AA55BD
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:unarmed;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: legendary
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 81E619E9-E1D6-57D4-A304-394C6454A0AF
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 0H2LxtiZTJ275pSD
 traits:
 - fighter
-action: {}
-description: |
-  You are nigh-unmatched with any weapon. Your proficiency ranks for simple weapons, martial weapons, and unarmed attacks increase to legendary, and your proficiency rank for advanced weapons increases to master. Your proficiency rank for your fighter class DC increases to master.

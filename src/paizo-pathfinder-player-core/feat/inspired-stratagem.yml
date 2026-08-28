@@ -1,0 +1,29 @@
+---
+action: {}
+description: During your daily preparations, you can review stratagems for the day's
+  adventures with up to five allies. Later, you can quickly advise them on your schemes
+  using the Inspired Stratagem reaction.
+level: 8
+mechanicsScope: builder
+name: inspired stratagem
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: 54B95F68-C039-5AFE-BA04-14FD3568FEE6
+      inputName: actionId
+    kind: addAction
+  id: 1AE48EDB-CCCF-5EDD-9E93-DA25096D1864
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 9pTQrhbeF348bYky
+traits:
+- rogue
+type: class

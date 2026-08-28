@@ -1,17 +1,28 @@
-name: farmhand
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  With a strong back and an understanding of seasonal cycles, you tilled the land and tended crops. Your farm could have been razed by invaders, you could have lost the family tying you to the land, or you might have simply tired of the drudgery, but at some point, you became an adventurer.
-  Choose two attribute boosts. One must be to Constitution or Wisdom, and one is a free attribute boost.
-  You're trained in the Athletics skill and the Farming Lore skill. You gain the Assurance skill feat with Athletics.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - constitution
   - wisdom
-skillOption:
-- athletics
-loreSkill: farming
-skillFeat: assurance(athletics)
+  freeBoosts: 1
+description: 'With a strong back and an understanding of seasonal cycles, you tilled
+  the land and tended crops. Your farm could have been razed by invaders, you could
+  have lost the family tying you to the land, or you might have simply tired of the
+  drudgery, but at some point, you became an adventurer.
+
+  Choose two attribute boosts. One must be to Constitution or Wisdom, and one is a
+  free attribute boost.
+
+  You''re trained in the Athletics skill and the Farming Lore skill. You gain the
+  Assurance skill feat with Athletics.'
+loreSkill: farming lore
+mechanicsScope: mixed
+name: farmhand
+rarity: common
+skillFeat: assurance
+skillOption: athletics
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+unsupportedReason: 'No deterministic builder translator exists for background rules
+  at omen://background/farmhand?source=paizo-pathfinder-player-core. Foundry keys:
+  [GrantItem].'

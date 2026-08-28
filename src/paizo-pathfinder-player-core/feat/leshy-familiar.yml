@@ -1,0 +1,41 @@
+---
+action: {}
+description: You call a minor spirit of nature into a plant body, creating a leshy
+  companion to aid you in your spellcasting. You gain a familiar, which has your choice
+  of either the plant or fungus familiar ability; this doesn't count against your
+  usual limit of familiar abilities (typically 2). The spirit you call has a more
+  tenuous connection to its plant body than fully independent leshies, so it is Tiny
+  in size like other familiars.
+level: 1
+mechanicsScope: builder
+name: leshy familiar
+prerequisites:
+- leaf order
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: E579A75B-B1E1-549B-A638-00904D89972A
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 654BC7F0-2100-5E7D-929E-D44D2E61F8ED
+      inputName: featId
+    kind: addFeat
+  id: 8E3ED695-98E1-57E0-8850-D2565C6B1FA6
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 7y1BCJLrdk9mKXlc
+traits:
+- druid
+type: class
+typedPrerequisites:
+- hasResourceWithName: leaf order

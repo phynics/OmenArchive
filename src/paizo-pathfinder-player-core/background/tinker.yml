@@ -1,19 +1,22 @@
-name: tinker
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  Creating all sorts of minor inventions scratches your itch for problem-solving. 
-  Your engineering skills take a particularly creative bent, and no one know what you'll come up with next. 
-  It might be a genius device with tremendous potential or it might explode.
-  Choose two attribute boosts. One must be to Dexterity or Intelligence, and one is a free attribute boost.
-  You're trained in the Crafting skill, and the Engineering Lore skill. You gain the Specialty Crafting skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - dexterity
   - intelligence
-skillOption:
-- crafting
-loreSkill: engineering
+  freeBoosts: 1
+description: 'Creating all sorts of minor inventions scratches your itch for problem-solving.
+  Your engineering skills take a particularly creative bent, and no one know what
+  you''ll come up with next. It might be a genius device with tremendous potential
+  or it might explode.
+
+  Choose two attribute boosts. One must be to Dexterity or Intelligence, and one is
+  a free attribute boost.'
+loreSkill: engineering lore
+mechanicsScope: builder
+name: tinker
+rarity: common
 skillFeat: specialty crafting
+skillOption: crafting
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

@@ -1,0 +1,53 @@
+---
+action: {}
+description: You somehow manage to have just the thing for the situation. You gain
+  the Prescient Planner and Prescient Consumable feats. When using Prescient Planner,
+  you can draw the item from your backpack (or a similar container) as a 2-action
+  activity, instead of taking 1 minute to do so.
+level: 8
+mechanicsScope: builder
+name: predictive purchase (rogue)
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 4A4EC5B9-BD87-59D2-8D67-4A95FBA79717
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: D6645579-A5BC-5811-BD15-1F096C61E804
+      inputName: featId
+    kind: addFeat
+  id: F6ABA10B-8AD4-5310-A449-32BA946CF9E0
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 3AA6A641-AD76-5587-8E8B-BE763CBAB051
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: D2D61C4B-C9C5-5D89-BBBD-4B101DC38FBC
+      inputName: featId
+    kind: addFeat
+  id: 331C3AFD-9A56-51E9-AF38-8A3C32C6E7C0
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Yw0qVCDu94Y5TgxQ
+traits:
+- rogue
+type: class

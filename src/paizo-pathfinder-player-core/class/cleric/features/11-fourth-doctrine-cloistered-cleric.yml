@@ -1,0 +1,79 @@
+---
+action: {}
+description: You gain expert proficiency with your deity's favored weapon, simple
+  weapons, and unarmed attacks. When you critically succeed at an attack roll using
+  your deity's favored weapon, you apply the weapon's critical specialization effect;
+  you can use your spell DC in place of your class DC.
+level: 11
+mechanicsScope: mixed
+name: fourth doctrine (cloistered cleric)
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 1FA39FDF-9691-5EB5-ACCC-81E381F31365
+      inputName: uuid
+    - expectedValue:
+        parameterType: weaponGroup
+        valueFromSource:
+          literal:
+            weaponGroup: any
+      inputName: weaponGroup
+    kind: addWeaponCriticalSpecialization
+  id: 186153C0-77EB-5C0B-B91F-2180FB0B0431
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:simple;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 52EF3CB3-57C7-5682-B4C5-5C60EE528A5C
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:unarmed;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: CEC9A72B-6885-57D2-ABC5-C2D19D289A77
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: vxOf4LXZcqUG3P7a
+traits:
+- cleric

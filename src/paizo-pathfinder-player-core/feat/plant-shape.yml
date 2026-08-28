@@ -1,0 +1,29 @@
+---
+action: {}
+description: 'You can take the shape of a plant creature. If you don''t have untamed
+  form, you can cast Plant Form once per day, heightened to the same rank as your
+  highest-rank druid spell slot.
+
+  If you do have Untamed Form, add the shapes listed in Plant Form to your Untamed
+  Form list, and whenever you''re polymorphed into another shape using untamed form,
+  you gain resistance 5 to poison.'
+level: 10
+mechanicsScope: mixed
+name: plant shape
+prerequisites:
+- leaf order or Untamed Form
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: I9rSWQyueWHQyNxe
+traits:
+- druid
+type: class
+typedPrerequisites:
+- anyOf:
+  - hasResourceWithName: leaf order
+  - hasResourceWithName: untamed form
+unsupportedReason: 'Resistance at position 0 has an unsupported conditional predicate.
+  Resource: omen://feat/plant-shape?source=paizo-pathfinder-player-core. Foundry keys:
+  [Resistance, ActiveEffectLike, ActiveEffectLike, ActiveEffectLike].'

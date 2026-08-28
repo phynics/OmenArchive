@@ -1,0 +1,27 @@
+---
+action: {}
+description: You focus on your hunted prey, perceiving angles, air resistance, and
+  every variable that would affect your ranged attack. If you have master proficiency
+  with your ranged weapon, you can ignore the penalty for attacking up to five range
+  increments away when attacking your hunted prey.
+level: 20
+mechanicsScope: encounter
+name: legendary shot
+prerequisites:
+- masterful hunter
+- legendary in Perception
+- Far Shot
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: B3Fz46wzUIzrxWsA
+traits:
+- ranger
+type: class
+typedPrerequisites:
+- hasResourceWithName: masterful hunter
+- hasSavingThrowProficiency:
+    proficiency: legendary
+    savingThrow: perception
+- hasResourceWithName: far shot

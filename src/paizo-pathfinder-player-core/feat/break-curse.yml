@@ -1,0 +1,31 @@
+---
+action: {}
+description: You spend 8 hours praying or performing occult rites over the target,
+  weakening a curse's power over them. Attempt to counteract the curse, using Occultism
+  or Religion for your counteract check and half your level rounded up for the counteract
+  rank. Break Curse only takes 10 minutes of prayer and rites if you are legendary
+  in Occultism or Religion.
+level: 7
+mechanicsScope: encounter
+name: break curse
+prerequisites:
+- master in Occultism or Religion
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: zGrUu3dUtqHrqGuo
+traits:
+- concentrate
+- exploration
+- healing
+- skill
+type: skill
+typedPrerequisites:
+- anyOf:
+  - hasSkillProficiency:
+      proficiency: master
+      skill: occultism
+  - hasSkillProficiency:
+      proficiency: master
+      skill: religion

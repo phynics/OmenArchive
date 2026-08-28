@@ -1,0 +1,24 @@
+---
+action: {}
+description: As you explore your deity's aspects, you move beyond restrictions on
+  healing or harming. You can prepare either Harm or Heal in the spell slots gained
+  from the harmful font or healing font.
+level: 2
+mechanicsScope: encounter
+name: versatile font
+prerequisites:
+- harmful font or healing font
+- deity that allows clerics to have both fonts
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: yZ7EcM9CLddZz8Hl
+traits:
+- cleric
+type: class
+typedPrerequisites:
+- anyOf:
+  - hasResourceWithName: harmful font
+  - hasResourceWithName: healing font
+- hasResourceWithName: deity that allows clerics to have both fonts

@@ -1,0 +1,40 @@
+---
+action: {}
+description: 'You have a knack for breaking and dismantling things. Putting them back
+  together is the boring part, so you largely don''t bother with that. You become
+  trained in Thievery. If you would automatically become trained in Thievery (from
+  your background or class, for example), you instead become trained in a skill of
+  your choice.
+
+  In addition, whenever you hit with a Strike against a trap or an unattended object,
+  you ignore the first 5 points of the object''s Hardness.'
+level: 5
+mechanicsScope: builder
+name: vandal
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: thievery
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: A2D747FA-8AB4-5443-BE0C-9FA7D7FF4C22
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 7ZwXUlnqjj9zEYbO
+traits:
+- goblin
+type: ancestry

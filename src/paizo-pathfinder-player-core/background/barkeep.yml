@@ -1,17 +1,24 @@
-name: barkeep
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  You have five specialties: hefting barrels, drinking, polishing steins, drinking, and drinking. You worked in a bar, where you learned how to hold your liquor and rowdily socialize.
-  Choose two attribute boosts. One must be to Constitution or Charisma, and one is a free attribute boost.
-  You're trained in the Diplomacy skill and the Alcohol Lore skill. You gain the Hobnobber skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - charisma
   - constitution
-skillOption:
-- diplomacy
-loreSkill: alcohol 
+  freeBoosts: 1
+description: 'You have five specialties: hefting barrels, drinking, polishing steins,
+  drinking, and drinking. You worked in a bar, where you learned how to hold your
+  liquor and rowdily socialize.
+
+  Choose two attribute boosts. One must be to Constitution or Charisma, and one is
+  a free attribute boost.
+
+  You''re trained in the Diplomacy skill and the Alcohol Lore skill. You gain the
+  Hobnobber skill feat.'
+loreSkill: alcohol lore
+mechanicsScope: builder
+name: barkeep
+rarity: common
 skillFeat: hobnobber
+skillOption: diplomacy
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

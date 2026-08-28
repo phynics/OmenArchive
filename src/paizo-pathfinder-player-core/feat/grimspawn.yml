@@ -1,0 +1,37 @@
+---
+action: {}
+description: Your lineage traces back to a daemon, one of the manifestations of horrific
+  forms of death that devour souls within their foul home of Abaddon. As a result,
+  you cling tenaciously to the last shreds of your own life force. You gain the Diehard
+  general feat.
+level: 1
+mechanicsScope: builder
+name: grimspawn
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 89A20236-43A7-5EC5-9004-28ADFE12E726
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 01D8AD2C-685F-57EB-94F9-94DAF701CCAF
+      inputName: featId
+    kind: addFeat
+  id: 17ADB527-2991-5299-8FA1-29283A13F983
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: nyhQ9xB0rkoAoNbf
+traits:
+- lineage
+- nephilim
+type: ancestry

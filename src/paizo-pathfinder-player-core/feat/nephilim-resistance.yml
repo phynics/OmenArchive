@@ -1,0 +1,52 @@
+---
+action: {}
+description: 'You resist energy like your extraplanar predecessors. Choose one of
+  the following energy damage types: acid, cold, electricity, fire, or sonic. You
+  gain resistance 5 to that damage type.
+
+  The damage type typically matches an extraplanar entity associated with your bloodline.
+  For instance, an Angelkin might choose resistance to cold, while a Hellspawn might
+  choose resistance to fire.'
+level: 5
+mechanicsScope: builder
+name: nephilim resistance
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: string
+        valueFromSource:
+          selection:
+            id: 9B527629-1865-52BC-9008-E01BD3D4E763
+            lookupName: featCelestialResistance
+            options:
+            - string: fire
+            - string: acid
+            - string: cold
+            - string: sonic
+            - string: electricity
+      inputName: type
+    - expectedValue:
+        parameterType: int
+        valueFromSource:
+          literal:
+            int: 5
+      inputName: value
+    - expectedValue:
+        parameterType: string
+        valueFromSource:
+          literal:
+            string: ''
+      inputName: exceptions
+    kind: addResistance
+  id: 19A41923-D992-5E15-8597-133C4B2D700D
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 8CSewrCVEmL8sjnk
+traits:
+- nephilim
+type: ancestry

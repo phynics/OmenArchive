@@ -1,10 +1,83 @@
-name: master tricks
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: You've mastered a rogue's fighting moves. Your proficiency ranks increase
+  to master for all simple weapons, martial weapons, and unarmed attacks.
 level: 13
+mechanicsScope: builder
+name: master tricks
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:martial;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 36A3D21C-81F2-59A4-A958-464BC58D6E23
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:simple;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 0CFCFEF6-1CA9-58BB-9570-488B9C2A1DE3
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:unarmed;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: B681F976-9E57-5DD9-9EFF-D16AFD214524
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: myvcir1LEkaVxOlE
 traits:
 - rogue
-action: {}
-description: |
-  You've mastered a rogue's fighting moves. Your proficiency ranks increase to master for all simple weapons, martial weapons, and unarmed attacks.

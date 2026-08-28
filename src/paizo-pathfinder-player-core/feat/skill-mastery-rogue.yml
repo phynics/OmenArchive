@@ -1,0 +1,26 @@
+---
+action: {}
+description: Increase your proficiency rank in one of your skills from expert to master
+  and in another of your skills from trained to expert. You gain a skill feat associated
+  with one of the skills you chose; you must meet all its prerequisites.
+level: 8
+mechanicsScope: mixed
+name: skill mastery (rogue)
+prerequisites:
+- Rogue Dedication
+- trained in at least one skill and expert in at least one skill
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: c9rhGmKft1BVT4JO
+specialText: You can select this feat up to five times.
+traits:
+- archetype
+type: archetype
+typedPrerequisites:
+- hasResourceWithName: rogue dedication
+- hasResourceWithName: trained in at least one skill and expert in at least one skill
+unsupportedReason: 'ChoiceSet at position 4 has no supported typed options. Resource:
+  omen://feat/skill-mastery-rogue?source=paizo-pathfinder-player-core. Foundry keys:
+  [ChoiceSet, ChoiceSet, ActiveEffectLike, ActiveEffectLike, ChoiceSet, GrantItem].'

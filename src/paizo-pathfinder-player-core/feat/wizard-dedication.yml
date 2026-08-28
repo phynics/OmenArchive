@@ -1,0 +1,49 @@
+---
+action: {}
+description: 'You cast spells like a wizard, gaining a spellbook with four common
+  arcane cantrips of your choice. You gain the Cast a Spell activity. You can prepare
+  two cantrips each day from your spellbook. You''re trained in the spell attack modifier
+  and spell DC statistics. Your key spellcasting attribute for wizard archetype spells
+  is Intelligence, and they are arcane wizard spells. You become trained in Arcana;
+  if you were already trained in Arcana, you instead become trained in a skill of
+  your choice. Select a school; you don''t gain any abilities from your choice of
+  school, but qualify for feats as a member.
+
+  Wizard'
+level: 2
+mechanicsScope: builder
+name: wizard dedication
+prerequisites:
+- Intelligence +2
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: arcana
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 72622E67-8651-5AC8-AB5C-A68A9AD7F1BF
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: oQ6EZRFXbHWCx08C
+traits:
+- archetype
+- dedication
+- multiclass
+type: archetype
+typedPrerequisites:
+- hasAttributeModifier:
+    attribute: int
+    modifier: 2

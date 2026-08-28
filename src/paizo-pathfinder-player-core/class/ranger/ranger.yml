@@ -1,31 +1,41 @@
-name: ranger
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-rarity: common
-description: |
-  Some rangers believe civilization wears down the soul, but still needs to be protected from wild creatures. Others say nature needs to be protected from the greedy, who wish to tame its beauty and plunder its treasures. You could champion either goal, or both. You might be a scout, tracker, or hunter of fugitives or beasts, haunting the edge of civilization or exploring the wilds. You know how to live off the land and are skilled at spotting and taking down both opportune prey and hated enemies.
+---
+additionalSkillCount: 4
+armorProficiency:
+  heavy: untrained
+  light: trained
+  medium: trained
+  unarmored: trained
+description: 'Some rangers believe civilization wears down the soul, but still needs
+  to be protected from wild creatures. Others say nature needs to be protected from
+  the greedy, who wish to tame its beauty and plunder its treasures. You could champion
+  either goal, or both. You might be a scout, tracker, or hunter of fugitives or beasts,
+  haunting the edge of civilization or exploring the wilds. You know how to live off
+  the land and are skilled at spotting and taking down both opportune prey and hated
+  enemies.
+
+  Ranger'
+gainsFeatAtFirstLevel: true
+grantedSkills:
+- survival
+hitPoints: 10
 keyAttribute:
 - dexterity
 - strength
-hitPoints: 10
-gainsFeatAtFirstLevel: true
-armorProficiency:
-  heavy: untrained
-  unarmored: trained
-  medium: trained
-  light: trained
-weaponProficiency:
-  simple: trained
-  unarmored: trained
-  advanced: untrained
-  martial: trained
+mechanicsScope: mixed
+name: ranger
+rarity: common
 savingThrowProficiency:
   fortitude: expert
+  perception: expert
   reflex: expert
   will: trained
-  perception: expert
-additionalSkillCount: 4
-grantedSkills:
-- nature
-- survival
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+unsupportedReason: 'No deterministic builder translator exists for class rules at
+  omen://class/ranger?source=paizo-pathfinder-player-core. Foundry keys: [ActiveEffectLike].'
+weaponProficiency:
+  advanced: untrained
+  martial: trained
+  simple: trained
+  unarmed: trained

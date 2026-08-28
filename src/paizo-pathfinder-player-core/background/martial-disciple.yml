@@ -1,27 +1,30 @@
+---
+attributes:
+  chooseFrom:
+  - dexterity
+  - strength
+  freeBoosts: 1
+description: 'You dedicated yourself to intense training and rigorous study to become
+  a great warrior. The school you attended might have been a traditionalist monastery,
+  an elite military academy, or the local branch of a prestigious mercenary organization.
+
+  Choose two attribute boosts. One must be to Strength or Dexterity, and one is a
+  free attribute boost.
+
+  You''re trained in your choice of the Acrobatics or Athletics skill. You gain a
+  skill feat: Cat Fall if you chose Acrobatics or Quick Jump if you chose Athletics.
+  You''re also trained in the Warfare Lore skill.'
+loreSkill: warfare lore
+mechanicsScope: mixed
 name: martial disciple
+rarity: common
+skillFeat: cat fall
+skillOption:
+- acrobatics
+- athletics
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: |
-  You dedicated yourself to intense training and rigorous study to become a great warrior. The school you attended might have been a traditionalist monastery, an elite military academy, or the local branch of a prestigious mercenary organization.
-  Choose two attribute boosts. One must be to Strength or Dexterity, and one is a free attribute boost.
-  You're trained in your choice of either the Acrobatics or Athletics skill, as well as the Warfare Lore skill. You gain a skill feat: Cat Fall if you chose Acrobatics or Quick Jump if you chose Athletics.
-variants:
-  - key: athletics
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-      - dexterity
-      - strength
-    skillOption: athletics
-    loreSkill: warfare
-    skillFeat: quick jump
-  - key: acrobatics
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-        - dexterity
-        - strength
-    skillOption: acrobatics
-    loreSkill: warfare
-    skillFeat: cat fall
+  publisher: paizo
+unsupportedReason: 'No deterministic builder translator exists for background rules
+  at omen://background/martial-disciple?source=paizo-pathfinder-player-core. Foundry
+  keys: [ChoiceSet, ActiveEffectLike, GrantItem, GrantItem].'

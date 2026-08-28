@@ -1,10 +1,32 @@
-name: resolute faith
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: Belief provides a bulwark against insidious thoughts. Your proficiency
+  rank for Will saves increases to master. When you roll a success at a Will save,
+  you get a critical success instead.
 level: 9
+mechanicsScope: builder
+name: resolute faith
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: will
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 7FB9E8A1-1C80-5135-A1B0-0B0EA5AA10B0
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 0TjNGzs0FuD7JBf4
 traits:
 - cleric
-action: {}
-description: |
-  Belief provides a bulwark against insidious thoughts. Your proficiency rank for Will saves increases to master. When you roll a success at a Will save, you get a critical success instead.

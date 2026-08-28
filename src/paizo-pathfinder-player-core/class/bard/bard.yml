@@ -1,29 +1,37 @@
-name: bard
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-rarity: common
-description: |
-  You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics. You might use your powers to become a charismatic leader, or perhaps you might instead be a counselor, manipulator, scholar, scoundrel, or virtuoso. While your versatility leads some to consider you a beguiling ne'er-do-well and a jack-of-all-trades, it's dangerous to dismiss you as a master of none.
-keyAttribute: charisma
-hitPoints: 8
-gainsFeatAtFirstLevel: true
+---
+additionalSkillCount: 4
 armorProficiency:
   heavy: untrained
-  unarmored: trained
-  medium: untrained
   light: trained
-weaponProficiency:
-  simple: trained
+  medium: untrained
   unarmored: trained
-  advanced: untrained
-  martial: trained
-savingThrowProficiency:
-  fortitude: trained
-  reflex: trained
-  will: expert
-  perception: expert
-additionalSkillCount: 4
+description: 'You are a master of artistry, a scholar of hidden secrets, and a captivating
+  persuader. Using powerful performances, you influence minds and elevate souls to
+  new levels of heroics. You might use your powers to become a charismatic leader,
+  or perhaps you might instead be a counselor, manipulator, scholar, scoundrel, or
+  virtuoso. While your versatility leads some to consider you a beguiling ne''er-do-well
+  and a jack-of-all-trades, it''s dangerous to dismiss you as a master of none.
+
+  Bard'
+gainsFeatAtFirstLevel: true
 grantedSkills:
 - occultism
 - performance
+hitPoints: 8
+keyAttribute: charisma
+mechanicsScope: builder
+name: bard
+rarity: common
+savingThrowProficiency:
+  fortitude: trained
+  perception: expert
+  reflex: trained
+  will: expert
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+weaponProficiency:
+  advanced: untrained
+  martial: trained
+  simple: trained
+  unarmed: trained

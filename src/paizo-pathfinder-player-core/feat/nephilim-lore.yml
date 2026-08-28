@@ -1,0 +1,77 @@
+---
+action: {}
+description: 'You know the secrets of the Multiverse. You gain the trained proficiency
+  rank in either Diplomacy or Intimidation, and Religion. If you would automatically
+  become trained in one of those skills (from your background or class, for example),
+  you instead become trained in a skill of your choice.
+
+  You also gain the Additional Lore general feat for a Lore subcategory of a plane
+  to which you trace your lineage.'
+level: 1
+mechanicsScope: builder
+name: nephilim lore
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: religion
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: DD952403-6D75-5AEE-8FD4-5954560C3A85
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          selection:
+            id: 3A691986-0BA9-54FD-9C49-490E13B7520B
+            lookupName: skill
+            options:
+            - skill: diplomacy
+            - skill: intimidation
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 7C859296-24D0-5764-A6A3-9F83FBA8BB3F
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 9D457E0F-528E-5847-8998-C61A828EE5B7
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
+      inputName: featId
+    kind: addFeat
+  id: A194F1C4-55B9-5728-9C9B-B9E57ECAB6F3
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: sKDCoxMz2yKWLGRJ
+traits:
+- nephilim
+type: ancestry

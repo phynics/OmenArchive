@@ -1,10 +1,37 @@
-name: magical fortitude
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 5
-traits:
-- wizard
+---
 action: {}
-description: |
-  Magical power has improved your body's resiliency. Your proficiency rank for Fortitude saves increases to expert.
+description: 'Oracle, Sorcerer, Wizard Magical power has improved your body''s resiliency.
+  Your proficiency rank for Fortitude saves increases to expert.
+
+  Witch Your patron''s power boosts your physical resiliency. Your proficiency rank
+  for Fortitude saves increases to expert.'
+level: 5
+mechanicsScope: builder
+name: magical fortitude
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: fortitude
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 6E3676FE-7AB2-5F1D-AACE-0A16223D2DED
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 70jqXP2eS4tRZ0Ok
+traits:
+- oracle
+- sorcerer
+- witch
+- wizard

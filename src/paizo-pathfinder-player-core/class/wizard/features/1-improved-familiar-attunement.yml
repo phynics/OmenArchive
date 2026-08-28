@@ -1,0 +1,52 @@
+---
+action: {}
+description: 'You''ve long held that fine-tuning the magic that bonds a wizard and
+  their familiar can improve the mystic connection and yield greater results, compared
+  to the safe yet generic bond most wizards currently use. You''ve formed such a pact
+  with your familiar, gaining more advantages from it than most wizards. You gain
+  the Familiar wizard feat. Your familiar gains an extra ability, and it gains an
+  additional extra ability when you reach 6th, 12th, and 18th levels.
+
+  Your connection with your familiar alters your arcane bond class feature so that
+  you store your magical energy in your familiar, rather than an item you own; you
+  also gain the Drain Familiar free action instead of Drain Bonded Item. Drain Familiar
+  can be used any time an ability would allow you to use Drain Bonded Item and functions
+  identically, except that you draw magic from your familiar instead of an item.'
+level: 1
+mechanicsScope: mixed
+name: improved familiar attunement
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: D87EC061-E4E2-5A23-967E-AF3C66C99EA5
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 48428829-C126-51E9-B1CC-0C5F0B67B527
+      inputName: featId
+    kind: addFeat
+  id: A0659116-55EC-5AA3-B926-168AF4A6D503
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: 37A83D37-2F65-523E-9AA1-82EEF3697B44
+      inputName: actionId
+    kind: addAction
+  id: 623FE6C5-CEFA-5F67-9B19-38EA84621E7A
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: SNZ46g3u7U6x0XJj
+traits:
+- wizard

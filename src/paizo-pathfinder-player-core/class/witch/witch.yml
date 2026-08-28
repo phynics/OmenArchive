@@ -1,27 +1,36 @@
-name: witch
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-rarity: common
-description: |
-  You command powerful magic, not through study or devotion, but as an agent for an otherworldly patron that even you don't entirely understand. This entity might be a covert divinity, a powerful fey, an ancient spirit, or any other mighty supernatural being—but its nature is likely as much a mystery to you as it is to others. Through a special familiar, your patron grants you versatile spells and powerful hexes to use as you see fit, though you're never certain if you're merely serving your patron's larger plan.
-keyAttribute: intelligence
-hitPoints: 6
-gainsFeatAtFirstLevel: true
+---
+additionalSkillCount: 3
 armorProficiency:
-  medium: untrained
   heavy: untrained
   light: untrained
+  medium: untrained
   unarmored: trained
-weaponProficiency:
-  unarmored: trained
-  simple: trained
-  advanced: untrained
-  martial: untrained
+description: 'You command powerful magic, not through study or devotion, but as an
+  agent for an otherworldly patron that even you don''t entirely understand. This
+  entity might be a covert divinity, a powerful fey, an ancient spirit, or any other
+  mighty supernatural being—but its nature is likely as much a mystery to you as it
+  is to others. Through a special familiar, your patron grants you versatile spells
+  and powerful hexes to use as you see fit, though you''re never certain if you''re
+  merely serving your patron''s larger plan.
+
+  Witch'
+gainsFeatAtFirstLevel: true
+grantedSkills: []
+hitPoints: 6
+keyAttribute: intelligence
+mechanicsScope: builder
+name: witch
+rarity: common
 savingThrowProficiency:
   fortitude: trained
+  perception: trained
   reflex: trained
   will: expert
-  perception: trained
-additionalSkillCount: 3
-grantedSkills: []
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+weaponProficiency:
+  advanced: untrained
+  martial: untrained
+  simple: trained
+  unarmed: trained

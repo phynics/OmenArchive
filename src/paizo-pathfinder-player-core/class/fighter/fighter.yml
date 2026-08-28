@@ -1,34 +1,40 @@
-name: fighter
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-rarity: common
-description: |
-  Fighting for honor, greed, loyalty, or simply the thrill of battle, you are an undisputed master of weaponry and combat techniques. You combine your actions through clever combinations of opening moves, finishing strikes, and counterattacks whenever your foes are unwise enough to drop their guard. Whether you are a knight, mercenary, sharpshooter, or blade master, you have honed your martial skills into an art form and perform devastating critical attacks on your enemies. 
+---
+additionalSkillCount: 3
+armorProficiency:
+  heavy: trained
+  light: trained
+  medium: trained
+  unarmored: trained
+description: 'Fighting for honor, greed, loyalty, or simply the thrill of battle,
+  you are an undisputed master of weaponry and combat techniques. You combine your
+  actions through clever combinations of opening moves, finishing strikes, and counterattacks
+  whenever your foes are unwise enough to drop their guard. Whether you are a knight,
+  mercenary, sharpshooter, or blade master, you have honed your martial skills into
+  an art form and perform devastating critical attacks on your enemies.
+
+  Fighter'
+gainsFeatAtFirstLevel: true
+grantedSkills: []
+hitPoints: 10
 keyAttribute:
 - dexterity
 - strength
-hitPoints: 10
-gainsFeatAtFirstLevel: true
-armorProficiency:
-  heavy: trained
-  unarmored: trained
-  light: trained
-  medium: trained
-weaponProficiency:
-  advanced: trained
-  unarmored: expert
-  martial: expert
-  simple: expert
+mechanicsScope: mixed
+name: fighter
+rarity: common
 savingThrowProficiency:
   fortitude: expert
+  perception: expert
   reflex: expert
   will: trained
-  perception: expert
-additionalSkillCount: 3
-grantedSkills: []
-electiveSkills:
-  choose: 1
-  from:
-    - acrobatics
-    - athletics
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+unsupportedReason: 'No deterministic builder translator exists for class rules at
+  omen://class/fighter?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet,
+  ActiveEffectLike].'
+weaponProficiency:
+  advanced: trained
+  martial: expert
+  simple: expert
+  unarmed: expert

@@ -1,0 +1,55 @@
+---
+action: {}
+description: You descend from an angel, a winged messenger from Nirvana or one of
+  the other celestial realms. You gain the trained proficiency rank in Society. If
+  you would automatically become trained in Society (from your background or class,
+  for example), you instead become trained in a skill of your choice. You know the
+  Empyrean language, and you gain the Multilingual skill feat.
+level: 1
+mechanicsScope: builder
+name: angelkin
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: society
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 7679D647-11E9-54A0-8B68-7193EC4D7839
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: E417C8FF-283F-50E7-B1C5-95B2CA6B5C19
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: BE44EDA3-4821-5C8A-9F5F-FC9AB4F6A7CE
+      inputName: featId
+    kind: addFeat
+  id: 366CF77F-08F5-5211-B581-82A7BFACD790
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: ydgCsYsgqSkFWEDK
+traits:
+- lineage
+- nephilim
+type: ancestry

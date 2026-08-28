@@ -1,17 +1,25 @@
-name: warrior
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  In your younger days, you waded into battle as a mercenary, a warrior defending a nomadic people, or a member of a militia or army. You might have wanted to break away from the regimented structure of these forces, or you could have always been as independent a warrior as you are now.
-  Choose two attribute boosts. One must be to Strength or Constitution, and one is a free attribute boost.
-  You're trained in the Intimidation skill and the Warfare Lore skill. You gain the Intimidating Glare skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - constitution
   - strength
-skillOption:
-- intimidation
-loreSkill: warfare
+  freeBoosts: 1
+description: 'In your younger days, you waded into battle as a mercenary, a warrior
+  defending a nomadic people, or a member of a militia or army. You might have wanted
+  to break away from the regimented structure of these forces, or you could have always
+  been as independent a warrior as you are now.
+
+  Choose two attribute boosts. One must be to Strength or Constitution, and one is
+  a free attribute boost.
+
+  You''re trained in the Intimidation skill and the Warfare Lore skill. You gain the
+  Intimidating Glare skill feat.'
+loreSkill: warfare lore
+mechanicsScope: builder
+name: warrior
+rarity: common
 skillFeat: intimidating glare
+skillOption: intimidation
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

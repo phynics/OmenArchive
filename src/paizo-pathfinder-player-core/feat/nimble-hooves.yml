@@ -1,0 +1,30 @@
+---
+action: {}
+description: You possess hooves, ankle wings, or some other feature that hastens your
+  movement. Your Speed increases by 5 feet.
+level: 1
+mechanicsScope: builder
+name: nimble hooves
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: int
+        valueFromSource:
+          literal:
+            int: 5
+      inputName: amount
+    kind: addSpeedModifier
+  id: 169B93CB-E6D7-5623-BAA6-BBDF2B42BA7F
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Ffi8L4EDO5OH5tpA
+specialText: The Speed increase from this feat isn't cumulative with any Speed increase
+  from other ancestry feats.
+traits:
+- nephilim
+type: ancestry

@@ -1,10 +1,35 @@
-name: shield block
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 1
-traits:
-- druid
+---
 action: {}
-description: |
-  You gain the Shield Block general feat, a reaction that lets you reduce damage with your shield.
+description: You gain the Shield Block general feat, a reaction that lets you reduce
+  damage with your shield.
+level: 1
+mechanicsScope: builder
+name: shield block
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: E14FC5E4-7506-532A-BBAD-8B966CC185EE
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: DE198D21-0C96-5755-82E2-EB084FE61D7C
+      inputName: featId
+    kind: addFeat
+  id: 90EFE4F8-472D-5CC6-A08C-D9EF8E24EDBD
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: eZNCckLzbH3GyncH
+traits:
+- champion
+- druid
+- exemplar
+- fighter
+- inventor

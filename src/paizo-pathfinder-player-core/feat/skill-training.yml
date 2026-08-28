@@ -1,0 +1,59 @@
+---
+action: {}
+description: You become trained in the skill of your choice.
+level: 1
+mechanicsScope: builder
+name: skill training
+prerequisites:
+- Intelligence +1
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          selection:
+            id: 4AE28685-0649-5E32-AC87-29EF8A9CB5E3
+            lookupName: skill
+            options:
+            - skill: acrobatics
+            - skill: arcana
+            - skill: athletics
+            - skill: crafting
+            - skill: deception
+            - skill: diplomacy
+            - skill: intimidation
+            - skill: medicine
+            - skill: nature
+            - skill: occultism
+            - skill: performance
+            - skill: religion
+            - skill: society
+            - skill: stealth
+            - skill: survival
+            - skill: thievery
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: E7FEE549-73F4-58CA-A96C-3729EA0795C7
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: P6icK2DbRoZ3H6kc
+specialText: You can select this feat multiple times, choosing a new skill to become
+  trained in each time.
+traits:
+- general
+- skill
+type: skill
+typedPrerequisites:
+- hasAttributeModifier:
+    attribute: int
+    modifier: 1

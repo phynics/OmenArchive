@@ -1,17 +1,23 @@
-name: emissary
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  As a diplomat or messenger, you traveled to lands far and wide. Communicating with new people and forming alliances were your stock and trade.
-  Choose two attribute boosts. One must be to Intelligence or Charisma, and one is a free attribute boost.
-  You're trained in the Society skill and a Lore skill related to one city you've visited often. You gain the Multilingual skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - charisma
   - intelligence
-skillOption:
-- society
-loreSkill: ''
+  freeBoosts: 1
+description: 'As a diplomat or messenger, you traveled to lands far and wide. Communicating
+  with new people and forming alliances were your stock and trade.
+
+  Choose two attribute boosts. One must be to Intelligence or Charisma, and one is
+  a free attribute boost.
+
+  You''re trained in the Society skill and a Lore skill related to one city you''ve
+  visited often. You gain the Multilingual skill feat.'
+loreSkill: <city> lore
+mechanicsScope: builder
+name: emissary
+rarity: common
 skillFeat: multilingual
+skillOption: society
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

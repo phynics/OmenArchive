@@ -1,13 +1,33 @@
-name: greater natural reflexes
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 15
-traits:
-- ranger
+---
 action: {}
-description: |
-  You avoid explosions with reflexes a cat would envy. Your proficiency
+description: You avoid explosions with reflexes a cat would envy. Your proficiency
   rank for Reflex saves increases to legendary. When you roll a critical failure on
   a Reflex save, you get a failure instead. When you fail a Reflex save against an
   effect that deals damage, you halve the damage you take.
+level: 15
+mechanicsScope: builder
+name: greater natural reflexes
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: reflex
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: legendary
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 01BB5940-8D37-5683-8883-3369879C9F4C
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: rpLPCkTXCZlQ51SR
+traits:
+- ranger

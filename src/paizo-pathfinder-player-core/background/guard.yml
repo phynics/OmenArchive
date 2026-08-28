@@ -1,29 +1,24 @@
+---
+attributes:
+  chooseFrom:
+  - charisma
+  - strength
+  freeBoosts: 1
+description: 'You served in the guard, out of either patriotism or the need for coin.
+  Either way, you know how to get a difficult suspect to talk. However you left the
+  guard, you might think of adventuring as a way to use your skills on a wider stage.
+
+  Choose two attribute boosts. One must be to Strength or Charisma, and one is a free
+  attribute boost.
+
+  You''re trained in the Intimidation skill and the Legal Lore or Warfare Lore skill.
+  You gain the Quick Coercion skill feat.'
+loreSkill: <legal or warfare> lore
+mechanicsScope: builder
 name: guard
+rarity: common
+skillFeat: quick coercion
+skillOption: intimidation
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: |
-  You served in the guard, out of either patriotism or the need for coin. Either way, you know how to get a difficult suspect to talk. However you left the guard, you might think of adventuring as a way to use your skills on a wider stage.
-  Choose two attribute boosts. One must be to Strength or Charisma, and one is a free attribute boost.
-  You're trained in the Intimidation skill and the Legal Lore or Warfare Lore skill. You gain the Quick Coercion skill feat.
-variants:
-  - key: legal-lore
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-      - charisma
-      - strength
-    skillOption:
-    - intimidation
-    loreSkill: legal 
-    skillFeat: quick coercion
-  - key: warfare-lore
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-      - charisma
-      - strength
-    skillOption:
-    - intimidation
-    loreSkill: warfare
-    skillFeat: quick coercion
+  publisher: paizo

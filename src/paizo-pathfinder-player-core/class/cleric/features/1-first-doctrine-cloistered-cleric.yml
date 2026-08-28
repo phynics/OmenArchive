@@ -1,0 +1,30 @@
+---
+action: {}
+description: You gain the Domain Initiate cleric feat.
+level: 1
+mechanicsScope: builder
+name: first doctrine (cloistered cleric)
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 61C63FF2-B86A-5AF9-B802-FD53D0AEE1D0
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 051E5CAB-B849-5789-A276-90F8B78CC289
+      inputName: featId
+    kind: addFeat
+  id: 3DB90690-ADC7-5DA9-A71F-76FEADFB3956
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: aiwxBj5MjnafCMyn
+traits:
+- cleric

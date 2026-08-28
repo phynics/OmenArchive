@@ -1,0 +1,53 @@
+---
+action: {}
+description: You might have a flighty nature, but when a topic captures your attention,
+  you dive into it headfirst. You gain the Additional Lore feat and the Assurance
+  feat for the chosen Lore. As gnome obsessions can come and go quickly, you can retrain
+  Gnome Obsession to a different Lore subcategory in 1 day of downtime.
+level: 1
+mechanicsScope: builder
+name: gnome obsession
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: E3911CDC-2CF4-5DF6-994B-AEEB52538932
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
+      inputName: featId
+    kind: addFeat
+  id: E742EEFD-4BCD-5455-963A-8B94D272AC73
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 2182BF09-E03B-5B49-9A3F-87C447B4F42B
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 1F53B5E0-164A-5BFE-8380-E480D8A1F009
+      inputName: featId
+    kind: addFeat
+  id: D794A0E3-7139-5242-9271-BFF626EA90FA
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: mxhGH4FVYXJwb0BC
+traits:
+- gnome
+type: ancestry

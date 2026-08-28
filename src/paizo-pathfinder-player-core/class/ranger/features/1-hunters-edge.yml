@@ -1,73 +1,17 @@
 ---
-name: hunter's edge
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 1
-traits:
-- ranger
 action: {}
 description: "You have trained to become a skilled hunter and tracker, gaining an
   extra benefit when you Hunt Prey depending on the focus of your training. Choose
   a hunter's edge.\n\t•\tFlurry\n\t•\tOutwit\n\t•\tPrecision"
-rules:
-- id: B64D87E7-0BB8-5E39-8EF2-C7A607C5B285
-  effectTemplate:
-    kind: addFeature
-    inputRecipes:
-    - inputName: feature
-      expectedValue:
-        parameterType: characterFeature
-        valueFromSource:
-          selection:
-            id: 4D258EC4-267D-5048-9B70-CAF6E941852D
-            lookupName: hunters-edge
-            options:
-            - characterFeature:
-                id: 1A29D53F-E2C8-500D-A993-CEC7EDACBE7C
-                parent: omen://class/ranger/hunters-edge?source=paizo-pathfinder-player-core
-                name: flurry
-                publisher: paizo
-                book: Pathfinder Player Core
-                level: 1
-                traits:
-                - ranger
-                description: You have trained to unleash a devastating flurry of attacks
-                  upon your prey. Your multiple attack penalty for attacks against
-                  your hunted prey is –3 (–2 with an agile attack) on your second
-                  attack of the turn instead of –5, and –6 (–4 with an agile attack)
-                  on your third or subsequent attack of the turn, instead of –10.
-                rules: []
-            - characterFeature:
-                id: 31264B02-147A-57A6-9853-92019B1F454F
-                parent: omen://class/ranger/hunters-edge?source=paizo-pathfinder-player-core
-                name: outwit
-                publisher: paizo
-                book: Pathfinder Player Core
-                level: 1
-                traits:
-                - ranger
-                description: You are talented at outwitting your prey. You gain a
-                  +1 circumstance bonus to AC against your prey's attacks and a +2
-                  circumstance bonus to Deception checks, Intimidation checks, Stealth
-                  checks, and any checks to Recall Knowledge about the prey.
-                rules: []
-            - characterFeature:
-                id: 14F8BE0B-B55A-5D29-949D-141A817AD25A
-                parent: omen://class/ranger/hunters-edge?source=paizo-pathfinder-player-core
-                name: precision
-                publisher: paizo
-                book: Pathfinder Player Core
-                level: 1
-                traits:
-                - ranger
-                description: You have trained to aim for your prey's weak points.
-                  The first time you hit your hunted prey in a round, you also deal
-                  1d8 additional precision damage. (Precision damage increases the
-                  damage you already deal, using the same type, but is ineffective
-                  against creatures that lack vital organs or weak points.) At 11th
-                  level, the extra damage increases to 2d8 precision damage, and at
-                  19th level, the extra damage increases to 3d8 precision damage.
-                rules: []
-  startLevel: 1
-mechanicsScope: builder
+level: 1
+mechanicsScope: mixed
+name: hunter's edge
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: mzkkj9LEWjJPBhaq
+traits:
+- ranger
+unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
+  omen://class/ranger/features/hunters-edge?source=paizo-pathfinder-player-core. Foundry
+  keys: [ChoiceSet, GrantItem].'

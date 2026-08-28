@@ -1,0 +1,31 @@
+---
+action: {}
+description: Your proficiency rank for Fortitude saves increases to master. When you
+  roll a success at a Fortitude save, you get a critical success instead.
+level: 15
+mechanicsScope: builder
+name: fifth doctrine (warpriest)
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: fortitude
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: F672CA35-2ACD-580D-BB0A-B84EDF358B3E
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: kmimy4VOaoEOgOiQ
+traits:
+- cleric

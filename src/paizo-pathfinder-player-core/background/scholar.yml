@@ -1,45 +1,33 @@
+---
+attributes:
+  chooseFrom:
+  - intelligence
+  - wisdom
+  freeBoosts: 1
+description: 'You have a knack for learning and sequestered yourself from the outside
+  world to learn all you could. You read about so many wondrous places and things
+  in your books, always dreaming about one day seeing the real things. Eventually,
+  that curiosity led you to leave your studies and become an adventurer.
+
+  Choose two attribute boosts. One must be to Intelligence or Wisdom, and one is a
+  free attribute boost.
+
+  You''re trained in your choice of the Arcana, Nature, Occultism, or Religion skill,
+  and gain the Assurance skill feat in your chosen skill. You''re also trained in
+  the Academia Lore skill.'
+loreSkill: academia lore
+mechanicsScope: mixed
 name: scholar
+rarity: common
+skillFeat: assurance
+skillOption:
+- arcana
+- nature
+- occultism
+- religion
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: |
-  You have a knack for learning and sequestered yourself from the outside world to learn all you could. You read about so many wondrous places and things in your books, always dreaming about one day seeing the real things. Eventually, that curiosity led you to leave your studies and become an adventurer.
-  Choose two attribute boosts. One must be to Intelligence or Wisdom, and one is a free attribute boost.
-  You're trained in your choice of the Arcana, Nature, Occultism, or Religion skill, and gain the Assurance skill feat in your chosen skill. You're also trained in the Academia Lore skill.
-variants:
-  - key: arcana
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-      - intelligence
-      - wisdom
-    skillOption: arcana
-    loreSkill: academia
-    skillFeat: assurance(arcana)
-  - key: nature
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-      - intelligence
-      - wisdom
-    skillOption: nature
-    loreSkill: academia
-    skillFeat: assurance(nature)
-  - key: occultism
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-      - intelligence
-      - wisdom
-    skillOption: occultism
-    loreSkill: academia
-    skillFeat: assurance(occultism)
-  - key: religion
-    attributes:
-      freeBoosts: 1
-      chooseFrom:
-      - intelligence
-      - wisdom
-    skillOption: religion
-    loreSkill: academia
-    skillFeat: assurance(religion)
+  publisher: paizo
+unsupportedReason: 'No deterministic builder translator exists for background rules
+  at omen://background/scholar?source=paizo-pathfinder-player-core. Foundry keys:
+  [ChoiceSet, ActiveEffectLike, GrantItem].'

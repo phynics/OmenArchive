@@ -1,0 +1,30 @@
+---
+action: {}
+description: You gain the Reactive Strike reaction.
+level: 4
+mechanicsScope: mixed
+name: reactive striker
+prerequisites:
+- Fighter Dedication
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: CC779B41-4561-57AD-91A9-797F5BEE8D81
+      inputName: actionId
+    kind: addAction
+  id: 50573E2D-ED4B-5BBF-A491-DED556EDF229
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: OqU6QXkMrZqToEEi
+traits:
+- archetype
+type: archetype
+typedPrerequisites:
+- hasResourceWithName: fighter dedication

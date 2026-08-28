@@ -1,0 +1,39 @@
+---
+action: {}
+description: Your muse whispers knowledge to you at all the right times. You gain
+  the benefits of the Automatic Knowledge skill feat with any skill you can use to
+  Recall Knowledge. As per the special clause in the Automatic Knowledge feat, you
+  can still only use Automatic Knowledge once per round.
+level: 12
+mechanicsScope: builder
+name: enigma's knowledge
+prerequisites:
+- Assured Knowledge
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: F3B57B29-F397-5DFB-A8ED-CC7697EEFD3C
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: B554DF07-FBB5-5310-876A-FE47F3FA4541
+      inputName: featId
+    kind: addFeat
+  id: 713DC20D-B65F-5592-8A44-A40E135171FA
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 8cbSVw8RnVzy5USe
+traits:
+- bard
+type: class
+typedPrerequisites:
+- hasResourceWithName: assured knowledge

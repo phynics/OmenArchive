@@ -1,0 +1,72 @@
+---
+action: {}
+description: 'You''ve picked up skills and tales from your goblin community. You gain
+  the trained proficiency rank in Nature and Stealth. If you would automatically become
+  trained in one of those skills (from your background or class, for example), you
+  instead become trained in a skill of your choice.
+
+  You also gain the Additional Lore general feat for Goblin Lore.'
+level: 1
+mechanicsScope: builder
+name: goblin lore
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: nature
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 991E31E9-3922-5B04-BF03-2ED9EEA06052
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: stealth
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: CE461AE1-A3D9-588C-8C6E-AAF687836AB4
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: D73B5643-B9B9-5270-9369-A002C1D9AF3C
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
+      inputName: featId
+    kind: addFeat
+  id: D0191FD3-E38E-5B4F-8AD9-CD1467F269D5
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: sm6Y3fTcltxE8N0p
+traits:
+- goblin
+type: ancestry

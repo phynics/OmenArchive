@@ -1,17 +1,24 @@
-name: herbalist
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. You're adept at collecting the right natural cures in all sorts of environments and preparing them properly.
-  Choose two attribute boosts. One must be to Constitution or Wisdom, and one is a free attribute boost.
-  You're trained in the Nature skill and the Herbalism Lore skill. You gain the Natural Medicine skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - constitution
   - wisdom
-skillOption:
-- nature
-loreSkill: herbalism
+  freeBoosts: 1
+description: 'As a formally trained apothecary or a rural practitioner of folk medicine,
+  you learned the healing properties of various herbs. You''re adept at collecting
+  the right natural cures in all sorts of environments and preparing them properly.
+
+  Choose two attribute boosts. One must be to Constitution or Wisdom, and one is a
+  free attribute boost.
+
+  You''re trained in the Nature skill and the Herbalism Lore skill. You gain the Natural
+  Medicine skill feat.'
+loreSkill: herbalism lore
+mechanicsScope: builder
+name: herbalist
+rarity: common
 skillFeat: natural medicine
+skillOption: nature
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

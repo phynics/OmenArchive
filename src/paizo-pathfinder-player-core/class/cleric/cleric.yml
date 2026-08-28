@@ -1,29 +1,38 @@
-name: cleric
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-rarity: common
-description: |
-  Deities work their will upon the world in infinite ways, and you serve as one of their most stalwart mortal servants. Blessed with divine magic, you live the ideals of your faith, adorn yourself with the symbols of your church, and train diligently to wield your deity's favored weapon. Your spells might protect and heal your allies, or they might punish foes and enemies of your faith, as your deity wills. Yours is a life of devotion, spreading the teachings of your faith through both word and deed.
-keyAttribute: wisdom
-hitPoints: 8
-gainsFeatAtFirstLevel: true
+---
+additionalSkillCount: 2
 armorProficiency:
   heavy: untrained
-  unarmored: trained
   light: untrained
   medium: untrained
-weaponProficiency:
-  advanced: untrained
-  Deity's favored weapon: trained
   unarmored: trained
-  martial: untrained
-  simple: trained
-savingThrowProficiency:
-  fortitude: trained
-  reflex: trained
-  will: expert
-  perception: trained
-additionalSkillCount: 2
+description: 'Deities work their will upon the world in infinite ways, and you serve
+  as one of their most stalwart mortal servants. Blessed with divine magic, you live
+  the ideals of your faith, adorn yourself with the symbols of your church, and train
+  diligently to wield your deity''s favored weapon. Your spells might protect and
+  heal your allies, or they might punish foes and enemies of your faith, as your deity
+  wills. Yours is a life of devotion, spreading the teachings of your faith through
+  both word and deed.
+
+  Cleric'
+gainsFeatAtFirstLevel: true
 grantedSkills:
 - religion
+hitPoints: 8
+keyAttribute: wisdom
+mechanicsScope: builder
+name: cleric
+rarity: common
+savingThrowProficiency:
+  fortitude: trained
+  perception: trained
+  reflex: trained
+  will: expert
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+weaponProficiency:
+  Deity's favored weapon: trained
+  advanced: untrained
+  martial: untrained
+  simple: trained
+  unarmed: trained

@@ -1,20 +1,22 @@
-name: artisan
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  As an apprentice, you practiced a particular form of building or crafting, 
-  developing a specialized skill. You might have been a blacksmith's apprentice toiling 
-  over the forge for countless hours, a young tailor sewing garments of all kinds, 
-  or a shipwright shaping the hulls of ships.
-  Choose two attribute boosts. One must be to Strength or Intelligence, and one is 
-  a free attribute boost.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - intelligence
   - strength
-skillOption:
-- crafting
-loreSkill: guild
+  freeBoosts: 1
+description: 'As an apprentice, you practiced a particular form of building or crafting,
+  developing a specialized skill. You might have been a blacksmith''s apprentice toiling
+  over the forge for countless hours, a young tailor sewing garments of all kinds,
+  or a shipwright shaping the hulls of ships.
+
+  Choose two attribute boosts. One must be to Strength or Intelligence, and one is
+  a free attribute boost.'
+loreSkill: guild lore
+mechanicsScope: builder
+name: artisan
+rarity: common
 skillFeat: specialty crafting
+skillOption: crafting
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

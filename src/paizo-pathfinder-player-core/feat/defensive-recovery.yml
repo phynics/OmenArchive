@@ -1,0 +1,28 @@
+---
+action:
+  count: one_action
+description: 'Your faith provides temporary protection in addition to healing. If
+  the next action you use is to cast Harm or Heal on a single target and the target
+  regains Hit Points from the spell, it also gains a +2 status bonus to AC and saving
+  throws for 1 round.
+
+  Effect: Defensive Recovery'
+level: 12
+mechanicsScope: encounter
+name: defensive recovery
+prerequisites:
+- harmful font or healing font
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: d1ktdX1Fk37dG5ms
+traits:
+- cleric
+- concentrate
+- spellshape
+type: class
+typedPrerequisites:
+- anyOf:
+  - hasResourceWithName: harmful font
+  - hasResourceWithName: healing font

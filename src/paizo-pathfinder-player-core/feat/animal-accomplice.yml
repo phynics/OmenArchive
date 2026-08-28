@@ -1,0 +1,35 @@
+---
+action: {}
+description: You build a rapport with an animal, which becomes magically bonded to
+  you. You gain a familiar. The type of animal is up to you, but most gnomes choose
+  animals with a burrow Speed.
+level: 1
+mechanicsScope: builder
+name: animal accomplice
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: EFC844D0-FC22-508B-9532-E2266923C8DA
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 654BC7F0-2100-5E7D-929E-D44D2E61F8ED
+      inputName: featId
+    kind: addFeat
+  id: F0713B4A-F4E4-50E4-AB21-44D84FF0180E
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: ED58GzldWb82yc2q
+traits:
+- gnome
+type: ancestry

@@ -1,0 +1,36 @@
+---
+action:
+  count: one_action
+  criticalFailure: The target is unaffected.
+  criticalSuccess: The target must attempt a fortitude|against:intimidation save against
+    your Intimidation DC. On a critical failure, it dies. On any other result, it
+    becomes Frightened 2 and is Fleeing for 1 round. The critical failure effect has
+    the death trait.
+  failure: The target becomes Frightened 1.
+  success: The target becomes frightened 2.
+description: You can frighten foes so much, they might die. Attempt an intimidation|defense:will
+  check against the Will DC of a living creature within 30 feet of you that you sense
+  or observe and who can sense or observe you. If the target can't hear you or doesn't
+  understand the language you are speaking, you take a –4 circumstance penalty. The
+  creature is temporarily immune for 1 minute.
+level: 15
+mechanicsScope: mixed
+name: scare to death
+prerequisites:
+- legendary in Intimidation
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: mZttsiWl1ql5NvrH
+traits:
+- emotion
+- fear
+- general
+- incapacitation
+- skill
+type: skill
+typedPrerequisites:
+- hasSkillProficiency:
+    proficiency: legendary
+    skill: intimidation

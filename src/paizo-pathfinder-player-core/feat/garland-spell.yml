@@ -1,0 +1,33 @@
+---
+action:
+  count: one_action
+description: 'If your next action is to Cast a Spell with the fungus or plant trait,
+  a garland of plants grows in a burst in the spell''s range. The plants are difficult
+  terrain and hazardous terrain, covered in your choice of thorns or poisonous vines.
+  Any creature that moves into one of these squares or ends its turn in one takes
+  2d6 damage ((ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]|options:area-damage
+  damage for thorns or (ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]|options:area-damage
+  for vines). A creature can take this damage only once per turn. You and your familiar
+  are immune to this damage.
+
+  The plants last for 1 minute or until you cast another Garland Spell, whichever
+  comes first.
+
+  The damage increases to 3d6 at 16th level and 4d6 at 20th level.'
+level: 12
+mechanicsScope: encounter
+name: garland spell
+prerequisites:
+- leaf order
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: qUoAthRX9cNVHT9s
+traits:
+- druid
+- manipulate
+- spellshape
+type: class
+typedPrerequisites:
+- hasResourceWithName: leaf order

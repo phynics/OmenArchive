@@ -1,0 +1,26 @@
+---
+action: {}
+description: When Climbing, you move 5 more feet on a success and 10 more feet on
+  a critical success, up to your Speed. If you're legendary in Athletics, you gain
+  a climb Speed equal to your Speed.
+level: 7
+mechanicsScope: mixed
+name: quick climb
+prerequisites:
+- master in Athletics
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: P04Hw8E6WAWARKHP
+traits:
+- general
+- skill
+type: skill
+typedPrerequisites:
+- hasSkillProficiency:
+    proficiency: master
+    skill: athletics
+unsupportedReason: 'BaseSpeed at position 0 is not a fixed builder value. Resource:
+  omen://feat/quick-climb?source=paizo-pathfinder-player-core. Foundry keys: [BaseSpeed,
+  Note].'

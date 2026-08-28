@@ -1,21 +1,24 @@
-name: field medic
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  In the chaotic rush of battle, you learned to adapt to rapidly changing
-  conditions as you administered to battle casualties. You patched up soldiers, guards,
-  or other combatants, and learned a fair amount about the logistics of war.
-  Choose two attribute boosts. One must be to Constitution or Wisdom, and one is a
-  free attribute boost.
-  You're trained in the Medicine skill and the Warfare Lore skill. You gain the Battle
-  Medicine skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - constitution
   - wisdom
-skillOption:
-- medicine
-loreSkill: warfare
+  freeBoosts: 1
+description: 'In the chaotic rush of battle, you learned to adapt to rapidly changing
+  conditions as you administered to battle casualties. You patched up soldiers, guards,
+  or other combatants, and learned a fair amount about the logistics of war.
+
+  Choose two attribute boosts. One must be to Constitution or Wisdom, and one is a
+  free attribute boost.
+
+  You''re trained in the Medicine skill and the Warfare Lore skill. You gain the Battle
+  Medicine skill feat.'
+loreSkill: warfare lore
+mechanicsScope: builder
+name: field medic
+rarity: common
 skillFeat: battle medicine
+skillOption: medicine
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

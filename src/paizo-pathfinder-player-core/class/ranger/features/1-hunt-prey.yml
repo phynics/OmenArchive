@@ -1,24 +1,25 @@
 ---
-name: hunt prey
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 1
-traits:
-- ranger
 action: {}
 description: When you focus your attention on a single foe, you become unstoppable
   in your pursuit. You gain the Hunt Prey action.
+level: 1
+mechanicsScope: mixed
+name: hunt prey
 rules:
-- id: 69DCAC03-D6B6-5F85-AB61-0B201A03CEDB
-  effectTemplate:
-    kind: addAction
+- effectTemplate:
     inputRecipes:
-    - inputName: actionId
-      expectedValue:
+    - expectedValue:
         parameterType: actionId
         valueFromSource:
           literal:
             actionId: 82AC6F94-330A-5E69-90F1-573C0FA3AC5D
+      inputName: actionId
+    kind: addAction
+  id: 69DCAC03-D6B6-5F85-AB61-0B201A03CEDB
   startLevel: 1
-mechanicsScope: mixed
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 0nIOGpHQNHsKSFKT
+traits:
+- ranger

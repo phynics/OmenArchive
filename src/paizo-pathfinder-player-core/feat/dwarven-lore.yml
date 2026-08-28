@@ -1,0 +1,73 @@
+---
+action: {}
+description: 'You eagerly absorbed the old stories and traditions of your ancestors,
+  your gods, and your people, studying subjects and techniques passed down for generation
+  upon generation. You gain the trained proficiency rank in Crafting and Religion.
+  If you would automatically become trained in one of those skills (from your background
+  or class, for example), you instead become trained in a skill of your choice.
+
+  You also gain the Additional Lore general feat for Dwarf Lore.'
+level: 1
+mechanicsScope: builder
+name: dwarven lore
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: crafting
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: A469D3E4-C36C-58CC-9AFB-A117744FCEA0
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: religion
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 580ED93A-B72B-5AAF-9449-C1C29AA6A2A4
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 9C0F3D5B-31AD-517B-8515-7535C6BED777
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
+      inputName: featId
+    kind: addFeat
+  id: 5208E770-6FFF-5D68-A48F-A9F767FBEBE3
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 9bnkx6VgcO5mOk5b
+traits:
+- dwarf
+type: ancestry

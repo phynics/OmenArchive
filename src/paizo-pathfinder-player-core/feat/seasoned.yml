@@ -1,0 +1,33 @@
+---
+action: {}
+description: You've mastered the preparation of many types of food and drink. You
+  gain a +1 circumstance bonus to checks to Craft food and drink, including elixirs
+  if you have Alchemical Crafting and potions if you have Magical Crafting. If you
+  are a master in one of the prerequisite skills, this bonus increases to +2.
+level: 1
+mechanicsScope: encounter
+name: seasoned
+prerequisites:
+- trained in Alcohol Lore, Cooking Lore, or Crafting
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 1Eceqc6zbMj2x0q9
+traits:
+- general
+- skill
+type: skill
+typedPrerequisites:
+- anyOf:
+  - hasSkillProficiency:
+      proficiency: trained
+      skill:
+        lore: alcohol
+  - hasSkillProficiency:
+      proficiency: trained
+      skill:
+        lore: cooking
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: crafting

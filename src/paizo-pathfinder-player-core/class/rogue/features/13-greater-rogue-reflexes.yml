@@ -1,10 +1,33 @@
-name: greater rogue reflexes
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: You elude danger to a degree that few can match. Your proficiency rank
+  for Reflex saves increases to legendary. When you roll a critical failure on a Reflex
+  save, you get a failure instead. When you roll a failure on a Reflex save against
+  a damaging effect, you take half damage.
 level: 13
+mechanicsScope: builder
+name: greater rogue reflexes
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: reflex
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: legendary
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 6097C2A6-B788-533B-8D61-06BD3F9C1EA2
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: BTpL6XvMk4jvVYYJ
 traits:
 - rogue
-action: {}
-description: |
-  You elude danger to a degree that few can match. Your proficiency rank for Reflex saves increases to legendary. When you roll a critical failure on a Reflex save, you get a failure instead. When you roll a failure on a Reflex save against a damaging effect, you take half damage.

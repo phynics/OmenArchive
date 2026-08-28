@@ -1,0 +1,29 @@
+---
+action: {}
+description: 'Your experience in navigating a certain type of terrain makes you supremely
+  confident while doing so. You gain a +1 circumstance bonus to Survival checks in
+  one of the following types of terrain, chosen when you select this feat: aquatic,
+  arctic, desert, forest, mountain, plains, sky, swamp, or underground.'
+level: 1
+mechanicsScope: mixed
+name: terrain expertise
+prerequisites:
+- trained in Survival
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 4tTkRyOQ0VuRBac3
+specialText: You can select this feat more than once, choosing a different type of
+  terrain each time.
+traits:
+- general
+- skill
+type: skill
+typedPrerequisites:
+- hasSkillProficiency:
+    proficiency: trained
+    skill: survival
+unsupportedReason: 'ChoiceSet terrain is not paired with a deterministic builder effect.
+  Resource: omen://feat/terrain-expertise?source=paizo-pathfinder-player-core. Foundry
+  keys: [ChoiceSet, FlatModifier].'

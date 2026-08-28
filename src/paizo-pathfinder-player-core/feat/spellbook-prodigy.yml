@@ -1,0 +1,41 @@
+---
+action: {}
+description: You are particularly adept at learning spells to add to your spellbook.
+  You gain the Magical Shorthand skill feat without needing to meet its prerequisites.
+  Further, when you roll a critical failure on your check to Learn a Spell, you get
+  a failure instead.
+level: 1
+mechanicsScope: mixed
+name: spellbook prodigy
+prerequisites:
+- trained in Arcana
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 51C0FCFE-146F-5CAF-9286-FBCF23FB98B4
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 1F1EC909-AF03-5432-AE1F-45E2C6280824
+      inputName: featId
+    kind: addFeat
+  id: 001ADDC8-E6AA-5495-98FF-E0C5479EE97F
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: FCzfh8QHMo7QJpAM
+traits:
+- wizard
+type: class
+typedPrerequisites:
+- hasSkillProficiency:
+    proficiency: trained
+    skill: arcana

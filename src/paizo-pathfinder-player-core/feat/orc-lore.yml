@@ -1,0 +1,74 @@
+---
+action: {}
+description: 'The hold elders taught you your people''s histories, told tales of great
+  athletic feats, and shared with you the hardships your ancestors endured so that
+  you can pass this wisdom down to future generations. You become trained in Athletics
+  and Survival. If you would automatically become trained in one of those skills (from
+  your background or class, for example), you instead become trained in a skill of
+  your choice.
+
+  You also gain the Additional Lore general feat for Orc Lore.'
+level: 1
+mechanicsScope: builder
+name: orc lore
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: athletics
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: D6BC6500-74EE-5F6D-81D9-F9EC701BE679
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: survival
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 7685350F-B992-5EAB-8A24-C122A7C96E41
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: D4876E48-6E7E-51F5-828A-EFC3589ADE76
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
+      inputName: featId
+    kind: addFeat
+  id: 43E87335-0489-5071-A6F3-A07B5748CB79
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 254C4rqrE8APDfCf
+traits:
+- orc
+type: ancestry

@@ -1,0 +1,38 @@
+---
+action: {}
+description: You are among the most common of changelings—those born to sweet hags—and
+  a vibrant green eye signifies that parentage. Your mother's manipulative nature
+  and versatile voice gives you an edge when deceiving others. You gain the Charming
+  Liar skill feat. If you roll Deception for initiative, foes in that combat encounter
+  that haven't acted yet are Off-Guard against you.
+level: 1
+mechanicsScope: mixed
+name: callow may
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: A6E2C6AF-E9A1-53B5-8F7D-04860A48F047
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 155D1F05-C016-5596-828B-37F0AB571FD9
+      inputName: featId
+    kind: addFeat
+  id: 444B18D3-E176-5BC7-9A4D-362678475100
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: IFvjnLMw3ht8f84U
+traits:
+- changeling
+- lineage
+type: ancestry

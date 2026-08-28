@@ -1,0 +1,86 @@
+---
+action: {}
+description: You fully understand your weapons. Your proficiency ranks for simple
+  weapons, martial weapons, and unarmed attacks increase to master.
+level: 13
+mechanicsScope: builder
+name: martial weapon mastery
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:martial;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 626727A2-EDFD-535C-A275-C4198E1944CD
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:simple;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: C1A36CD5-89E9-5BB3-B7A6-4736E9594639
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:unarmed;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: master
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: ADFC8A90-5E4C-57A0-973C-AC6A46A78B39
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: i6563IU7x4L9oRgC
+traits:
+- champion
+- investigator
+- ranger
+- swashbuckler

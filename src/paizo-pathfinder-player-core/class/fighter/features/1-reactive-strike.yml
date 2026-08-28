@@ -1,24 +1,25 @@
 ---
-name: reactive strike
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 1
-traits:
-- fighter
 action: {}
 description: Ever watchful for weaknesses, you can quickly attack foes that leave
   an opening in their defenses. You gain the Reactive Strike reaction.
+level: 1
+mechanicsScope: builder
+name: reactive strike
 rules:
-- id: E48528BF-6EE8-58FA-8DB2-FCD4CFDDB7F7
-  effectTemplate:
-    kind: addAction
+- effectTemplate:
     inputRecipes:
-    - inputName: actionId
-      expectedValue:
+    - expectedValue:
         parameterType: actionId
         valueFromSource:
           literal:
             actionId: CC779B41-4561-57AD-91A9-797F5BEE8D81
+      inputName: actionId
+    kind: addAction
+  id: E48528BF-6EE8-58FA-8DB2-FCD4CFDDB7F7
   startLevel: 1
-mechanicsScope: builder
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: hmShTfPOcTaKgbf4
+traits:
+- fighter

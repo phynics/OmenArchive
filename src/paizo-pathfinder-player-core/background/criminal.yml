@@ -1,17 +1,24 @@
-name: criminal
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  As an unscrupulous independent or as a member of an underworld organization, you lived a life of crime. You might have become an adventurer to seek redemption, to escape the law, or simply to get access to bigger and better loot.
-  Choose two attribute boosts. One must be to Dexterity or Intelligence, and one is a free attribute boost.
-  You're trained in the Stealth skill and the Underworld Lore skill. You gain the Experienced Smuggler skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - dexterity
   - intelligence
-skillOption:
-- stealth
-loreSkill: underworld
+  freeBoosts: 1
+description: 'As an unscrupulous independent or as a member of an underworld organization,
+  you lived a life of crime. You might have become an adventurer to seek redemption,
+  to escape the law, or simply to get access to bigger and better loot.
+
+  Choose two attribute boosts. One must be to Dexterity or Intelligence, and one is
+  a free attribute boost.
+
+  You''re trained in the Stealth skill and the Underworld Lore skill. You gain the
+  Experienced Smuggler skill feat.'
+loreSkill: underworld lore
+mechanicsScope: builder
+name: criminal
+rarity: common
 skillFeat: experienced smuggler
+skillOption: stealth
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

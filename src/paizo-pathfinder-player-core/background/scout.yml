@@ -1,23 +1,24 @@
-name: scout
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  You called the wilderness home as you found trails and guided travelers. 
-  Your wanderlust could have called you to the adventuring life, or perhaps you served 
-  as a scout for soldiers and found you liked battle.
-
-  Choose two attribute boosts. One must be to Dexterity or Wisdom, and one is a free 
-  attribute boost.
-
-  You're trained in the Survival skill and a Lore skill related to one terrain you 
-  scouted in (such as Forest Lore or Cavern Lore). You gain the Forager skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - dexterity
   - wisdom
-skillOption:
-- survival
-loreSkill: ''
+  freeBoosts: 1
+description: 'You called the wilderness home as you found trails and guided travelers.
+  Your wanderlust could have called you to the adventuring life, or perhaps you served
+  as a scout for soldiers and found you liked battle.
+
+  Choose two attribute boosts. One must be to Dexterity or Wisdom, and one is a free
+  attribute boost.
+
+  You''re trained in the Survival skill and a Lore skill related to one terrain you
+  scouted in (such as Forest Lore or Cavern Lore). You gain the Forager skill feat.'
+loreSkill: <terrain> lore
+mechanicsScope: builder
+name: scout
+rarity: common
 skillFeat: forager
+skillOption: survival
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

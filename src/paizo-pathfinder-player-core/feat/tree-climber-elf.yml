@@ -1,0 +1,34 @@
+---
+action: {}
+description: You've spent much of your life among the treetops and have become an
+  expert at quickly and safely climbing them. You gain a Climb Speed of 10 feet.
+level: 9
+mechanicsScope: builder
+name: tree climber (elf)
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: string
+        valueFromSource:
+          literal:
+            string: climb
+      inputName: selector
+    - expectedValue:
+        parameterType: int
+        valueFromSource:
+          literal:
+            int: 10
+      inputName: value
+    kind: addBaseSpeed
+  id: 5B3233FC-3F22-50EB-B9C0-04976FE6A78E
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: qS2VcFLez4PLOpIS
+traits:
+- elf
+type: ancestry

@@ -1,0 +1,72 @@
+---
+action: {}
+description: 'All too aware of your true nature, you''ve studied hags and their powers.
+  You gain the trained proficiency rank in Deception and Occultism. If you would automatically
+  become trained in one of those skills (from your background or class, for example),
+  you instead become trained in a skill of your choice.
+
+  You also gain the Additional Lore general feat for Hag Lore.'
+level: 1
+mechanicsScope: builder
+name: changeling lore
+prerequisites: []
+rarity: common
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: deception
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: F4B65F6F-1B2A-50B9-83E9-B30DA59D4948
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: skill
+        valueFromSource:
+          literal:
+            skill: occultism
+      inputName: skill
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: trained
+      inputName: proficiencyCap
+    kind: addSkillIncrease
+  id: 1A42E487-F0FA-5882-8CD8-B3FA5EAC10CE
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: uuid
+        valueFromSource:
+          literal:
+            uuid: 76EB13C7-0FD1-5C5B-BBB6-033941F7DD9A
+      inputName: selectionId
+    - expectedValue:
+        parameterType: featId
+        valueFromSource:
+          literal:
+            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
+      inputName: featId
+    kind: addFeat
+  id: B7E7A0D3-5E6F-55CC-B505-B8C1E13C9918
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 4mLlHpD41101H0Iy
+traits:
+- changeling
+type: ancestry

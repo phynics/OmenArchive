@@ -1,26 +1,27 @@
 ---
-name: nimble elf
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-type: ancestry
-level: 1
-rarity: common
-traits:
-- elf
-description: Your muscles are tightly honed. Your Speed increases by 5 feet.
-prerequisites: []
 action: {}
+description: Your muscles are tightly honed. Your Speed increases by 5 feet.
+level: 1
+mechanicsScope: builder
+name: nimble elf
+prerequisites: []
+rarity: common
 rules:
-- id: 02A669A3-F384-540D-99D9-A9B334D3D7D3
-  effectTemplate:
-    kind: addSpeedModifier
+- effectTemplate:
     inputRecipes:
-    - inputName: amount
-      expectedValue:
+    - expectedValue:
         parameterType: int
         valueFromSource:
           literal:
             int: 5
+      inputName: amount
+    kind: addSpeedModifier
+  id: 02A669A3-F384-540D-99D9-A9B334D3D7D3
   startLevel: 1
-mechanicsScope: builder
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: kCO4r8NOm8E2T3eH
+traits:
+- elf
+type: ancestry

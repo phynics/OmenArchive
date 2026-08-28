@@ -1,17 +1,25 @@
-name: cook
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  You grew up in the kitchens of a tavern or other dining establishment and excelled there, becoming an exceptional cook. Baking, cooking, a little brewing on the side—you've spent lots of time out of sight. It's about time you went out into the world to catch some sights for yourself.
-  Choose two attribute boosts. One must be to Constitution or Intelligence, and one is a free attribute boost.
-  You're trained in the Survival skill and the Cooking Lore skill. You gain the Seasoned skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - constitution
   - intelligence
-skillOption:
-- survival
-loreSkill: cooking
+  freeBoosts: 1
+description: 'You grew up in the kitchens of a tavern or other dining establishment
+  and excelled there, becoming an exceptional cook. Baking, cooking, a little brewing
+  on the side—you''ve spent lots of time out of sight. It''s about time you went out
+  into the world to catch some sights for yourself.
+
+  Choose two attribute boosts. One must be to Constitution or Intelligence, and one
+  is a free attribute boost.
+
+  You''re trained in the Survival skill and the Cooking Lore skill. You gain the Seasoned
+  skill feat.'
+loreSkill: cooking lore
+mechanicsScope: builder
+name: cook
+rarity: common
 skillFeat: seasoned
+skillOption: survival
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

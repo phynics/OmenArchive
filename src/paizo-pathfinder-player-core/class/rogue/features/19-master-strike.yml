@@ -1,10 +1,26 @@
-name: master strike
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
+---
+action: {}
+description: You can incapacitate an unwary foe with a single strike. Your proficiency
+  rank for your rogue class DC increases to master. You gain the Master Strike free
+  action.
 level: 19
+mechanicsScope: builder
+name: master strike
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: actionId
+        valueFromSource:
+          literal:
+            actionId: 907714ED-C1A6-51D7-877B-2DE0317F408A
+      inputName: actionId
+    kind: addAction
+  id: 7866AFEF-EE03-57CF-B7F9-08C672768EC0
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: SUUdWG0t33VKa5q4
 traits:
 - rogue
-action: {}
-description: |
-  You can incapacitate an unwary foe with a single strike. Your proficiency rank for your rogue class DC increases to master. You gain the Master Strike free action.

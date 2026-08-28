@@ -1,101 +1,102 @@
 ---
-name: ranger weapon expertise
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-level: 5
-traits:
-- ranger
 action: {}
 description: You gain every advantage from your weapons. Your proficiency rank for
   martial weapons, simple weapons, and unarmed attacks increases to expert. You gain
   access to the critical specialization effects of all such weapons and unarmed attacks
   when attacking your hunted prey.
+level: 5
+mechanicsScope: mixed
+name: ranger weapon expertise
 rules:
-- id: 2DE3BF68-B996-5187-80D1-A7898A45B989
-  effectTemplate:
-    kind: addWeaponProficiency
+- effectTemplate:
     inputRecipes:
-    - inputName: weaponDesignation
-      expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: kind:martial;group:any
-    - inputName: proficiencyRank
-      expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-    - inputName: selfScaling
-      expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-  startLevel: 1
-- id: 8DF16D51-B5A4-5614-996D-BD9BC1D9BB5A
-  effectTemplate:
-    kind: addWeaponProficiency
-    inputRecipes:
-    - inputName: weaponDesignation
-      expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: kind:simple;group:any
-    - inputName: proficiencyRank
-      expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-    - inputName: selfScaling
-      expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-  startLevel: 1
-- id: 683BA965-3ABD-5389-A512-47E514A31080
-  effectTemplate:
-    kind: addWeaponProficiency
-    inputRecipes:
-    - inputName: weaponDesignation
-      expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: kind:unarmed;group:any
-    - inputName: proficiencyRank
-      expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-    - inputName: selfScaling
-      expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-  startLevel: 1
-- id: 21AB3DD9-EDA3-571A-B866-32139E9F2AEE
-  effectTemplate:
-    kind: addWeaponCriticalSpecialization
-    inputRecipes:
-    - inputName: uuid
-      expectedValue:
+    - expectedValue:
         parameterType: uuid
         valueFromSource:
           literal:
             uuid: 952B3FCE-86D6-5CAE-AB3B-C7D17142B978
-    - inputName: weaponGroup
-      expectedValue:
+      inputName: uuid
+    - expectedValue:
         parameterType: weaponGroup
         valueFromSource:
           literal:
             weaponGroup: any
+      inputName: weaponGroup
+    kind: addWeaponCriticalSpecialization
+  id: 21AB3DD9-EDA3-571A-B866-32139E9F2AEE
   startLevel: 1
-mechanicsScope: mixed
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:martial;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 2DE3BF68-B996-5187-80D1-A7898A45B989
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:simple;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 8DF16D51-B5A4-5614-996D-BD9BC1D9BB5A
+  startLevel: 1
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: weaponDesignation
+        valueFromSource:
+          literal:
+            weaponDesignation: kind:unarmed;group:any
+      inputName: weaponDesignation
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: expert
+      inputName: proficiencyRank
+    - expectedValue:
+        parameterType: bool
+        valueFromSource:
+          literal:
+            bool: false
+      inputName: selfScaling
+    kind: addWeaponProficiency
+  id: 683BA965-3ABD-5389-A512-47E514A31080
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: QhoW8ivPvYmWzyEZ
+traits:
+- ranger

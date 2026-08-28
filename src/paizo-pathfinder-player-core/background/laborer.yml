@@ -1,17 +1,24 @@
-name: laborer
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  You've spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else's command.
-  Choose two attribute boosts. One must be to Strength or Constitution, and one is a free attribute boost.
-  You're trained in the Athletics skill and the Labor Lore skill. You gain the Hefty Hauler skill feat.
+---
 attributes:
-  freeBoosts: 1
   chooseFrom:
   - constitution
   - strength
-skillOption:
-- athletics
-loreSkill: labor
+  freeBoosts: 1
+description: 'You''ve spent years performing arduous physical labor. It was a difficult
+  life, but you somehow survived. You may have embraced adventuring as an easier method
+  to make your way in the world, or you might adventure under someone else''s command.
+
+  Choose two attribute boosts. One must be to Strength or Constitution, and one is
+  a free attribute boost.
+
+  You''re trained in the Athletics skill and the Labor Lore skill. You gain the Hefty
+  Hauler skill feat.'
+loreSkill: labor lore
+mechanicsScope: builder
+name: laborer
+rarity: common
 skillFeat: hefty hauler
+skillOption: athletics
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

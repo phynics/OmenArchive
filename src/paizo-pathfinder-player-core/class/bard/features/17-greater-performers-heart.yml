@@ -1,0 +1,34 @@
+---
+action: {}
+description: Your performances warp the mind and cause emotions to flower, and understanding
+  how to do this also forges an incomparable understanding of your own mind. Your
+  proficiency rank for Will saves increases to legendary. When you roll a critical
+  failure on a Will save, you get a failure instead. When you fail a Will save against
+  an effect that deals damage, you take half damage.
+level: 17
+mechanicsScope: builder
+name: greater performer's heart
+rules:
+- effectTemplate:
+    inputRecipes:
+    - expectedValue:
+        parameterType: savingThrow
+        valueFromSource:
+          literal:
+            savingThrow: will
+      inputName: savingThrow
+    - expectedValue:
+        parameterType: proficiencyRank
+        valueFromSource:
+          literal:
+            proficiencyRank: legendary
+      inputName: proficiencyRank
+    kind: addSavingThrow
+  id: 6D6BE2BC-1D03-507C-BEE6-18D6FF35DAEB
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: mRobjNNsABQdUUZq
+traits:
+- bard
