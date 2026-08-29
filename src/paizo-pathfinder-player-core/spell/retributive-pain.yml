@@ -1,23 +1,31 @@
-name: "retributive pain"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "SSsUC7rZo0CwayPn"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "focus", "manipulate", "mental", "nonlethal"]
-description: |
-  Trigger A creature in range damages you.
-  
-  You vengefully reflect your pain upon your tormentor. The target takes mental damage equal to half the triggering damage.
-time: "reaction"
+---
 action:
-  count: "reaction"
+  count: reaction
+category: focus
 defense:
-  save: "fortitude"
   basic: true
   counteraction: false
-range: "30 feet"
-target: "the triggering creature"
+  save: fortitude
+description: 'Trigger A creature in range damages you.
+
+
+  You vengefully reflect your pain upon your tormentor. The target takes mental damage
+  equal to half the triggering damage.'
+mechanicsScope: encounter
+name: retributive pain
+range: 30 feet
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: SSsUC7rZo0CwayPn
+target: the triggering creature
+time: reaction
+traditions: []
+traits:
+- cleric
+- focus
+- manipulate
+- mental
+- nonlethal

@@ -1,24 +1,36 @@
-name: "healer's blessing"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "rhJyqB9g3ziImQgM"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "focus"]
-description: |
-  Your words bless a creature with an enhanced connection to vital energy. When the target regains Hit Points from a healing vitality spell, it regains 2 additional Hit Points.
-  
-  The target regains additional Hit Points from healer's blessing only the first time it regains HP from a given healing spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once, when they are first healed.
-  
-  Spell Effect: Healer's Blessing
-  
-  Heightened (+1) The additional healing increases by 2 HP.
-time: "1"
+---
 action:
-  count: "one_action"
-range: "30 feet"
-target: "1 willing living creature"
-duration: "1 minute"
+  count: one_action
+category: focus
+description: 'Your words bless a creature with an enhanced connection to vital energy.
+  When the target regains Hit Points from a healing vitality spell, it regains 2 additional
+  Hit Points.
+
+
+  The target regains additional Hit Points from healer''s blessing only the first
+  time it regains HP from a given healing spell, so a spell that heals the creature
+  repeatedly over a duration would restore additional Hit Points only once, when they
+  are first healed.
+
+
+  Spell Effect: Healer''s Blessing
+
+
+  Heightened (+1) The additional healing increases by 2 HP.'
+duration: 1 minute
+mechanicsScope: encounter
+name: healer's blessing
+range: 30 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: rhJyqB9g3ziImQgM
+target: 1 willing living creature
+time: '1'
+traditions: []
+traits:
+- cleric
+- concentrate
+- focus

@@ -1,41 +1,57 @@
-name: "savor the sting"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "xn0V2HDrmDWNzPEt"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "focus", "manipulate", "mental", "nonlethal"]
-description: |
-  You inflict pain upon the target and revel in their anguish. This deals 1d4 mental damage and (spell rank)d4[persistent,mental] damage; the target must attempt a Will save. As long as the target is taking persistent damage from this spell, you gain a +1 status bonus to attack rolls and skill checks against the target.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target takes half damage and no persistent damage.
-  
-  Failure The target takes full initial and persistent damage.
-  
-  Critical Failure The target takes double initial and persistent damage.
-  
-  Heightened (+1) The initial damage increases by 1d4 and the persistent damage increases by 1d4.
-time: "1"
+---
 action:
-  count: "one_action"
+  count: one_action
+category: focus
 damage:
-  "0":
-    formula: "1d4"
-    type: "mental"
-    kinds: ["damage"]
+  0:
+    formula: 1d4
+    kinds:
+    - damage
+    type: mental
 defense:
-  save: "will"
   basic: false
   counteraction: false
+  save: will
+description: 'You inflict pain upon the target and revel in their anguish. This deals
+  1d4 mental damage and (spell rank)d4[persistent,mental] damage; the target must
+  attempt a Will save. As long as the target is taking persistent damage from this
+  spell, you gain a +1 status bonus to attack rolls and skill checks against the target.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target takes half damage and no persistent damage.
+
+
+  Failure The target takes full initial and persistent damage.
+
+
+  Critical Failure The target takes double initial and persistent damage.
+
+
+  Heightened (+1) The initial damage increases by 1d4 and the persistent damage increases
+  by 1d4.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "1d4"
-range: "touch"
-target: "1 creature"
+    0: 1d4
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: savor the sting
+range: touch
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: xn0V2HDrmDWNzPEt
+target: 1 creature
+time: '1'
+traditions: []
+traits:
+- cleric
+- focus
+- manipulate
+- mental
+- nonlethal

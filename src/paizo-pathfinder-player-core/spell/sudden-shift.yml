@@ -1,18 +1,23 @@
-name: "sudden shift"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "P9bqJsF3WkxGAJKJ"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "focus", "manipulate"]
-description: |
-  Trigger An enemy misses you with a melee attack.
-  
-  You swiftly move from a dangerous spot and veil yourself. You Step and become Concealed.
-time: "reaction"
+---
 action:
-  count: "reaction"
-duration: "until the end of your next turn"
+  count: reaction
+category: focus
+description: 'Trigger An enemy misses you with a melee attack.
+
+
+  You swiftly move from a dangerous spot and veil yourself. You Step and become Concealed.'
+duration: until the end of your next turn
+mechanicsScope: encounter
+name: sudden shift
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: P9bqJsF3WkxGAJKJ
+time: reaction
+traditions: []
+traits:
+- cleric
+- focus
+- manipulate

@@ -1,33 +1,46 @@
-name: "hydraulic push"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "jfVCuOpzC6mUrf6f"
-rank: 1
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["attack", "concentrate", "manipulate", "water"]
-description: |
-  You call forth a powerful blast of pressurized water that bludgeons the target and knocks it back. Make a ranged spell attack roll.
-  
-  Critical Success The target takes 6d6 bludgeoning damage and is knocked back 10 feet.
-  
-  Success The target takes 3d6 bludgeoning damage and is knocked back 5 feet.
-  
-  Heightened (+1) The bludgeoning damage increases by 2d6.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
-  "0":
-    formula: "3d6"
-    type: "bludgeoning"
-    kinds: ["damage"]
+  0:
+    formula: 3d6
+    kinds:
+    - damage
+    type: bludgeoning
+description: 'You call forth a powerful blast of pressurized water that bludgeons
+  the target and knocks it back. Make a ranged spell attack roll.
+
+
+  Critical Success The target takes 6d6 bludgeoning damage and is knocked back 10
+  feet.
+
+
+  Success The target takes 3d6 bludgeoning damage and is knocked back 5 feet.
+
+
+  Heightened (+1) The bludgeoning damage increases by 2d6.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "2d6"
-range: "60 feet"
-target: "1 creature or unattended object"
+    0: 2d6
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: hydraulic push
+range: 60 feet
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: jfVCuOpzC6mUrf6f
+target: 1 creature or unattended object
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- attack
+- concentrate
+- manipulate
+- water

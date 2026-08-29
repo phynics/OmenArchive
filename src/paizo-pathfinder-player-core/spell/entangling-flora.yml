@@ -1,24 +1,37 @@
-name: "entangling flora"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "J6vNvrUT3b1hx2iA"
-rank: 2
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "plant", "wood"]
-description: |
-  Plants and fungi burst out or quickly grow, entangling creatures. All surfaces in the area are difficult terrain. Each round that a creature starts its turn in the area, it must attempt a Reflex save. On a failure, it takes a –10-foot circumstance penalty to its Speeds until it leaves the area, and on a critical failure, it's also Immobilized for 1 round. Creatures can attempt to Escape to remove these effects.
-  
-  Spell Effect: Entangling Flora
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: all squares in a 20-foot-radius burst that contain plants
+category: spell
 defense:
-  save: "reflex"
   basic: false
   counteraction: false
-range: "120 feet"
-area: "all squares in a 20-foot-radius burst that contain plants"
-duration: "1 minute"
+  save: reflex
+description: 'Plants and fungi burst out or quickly grow, entangling creatures. All
+  surfaces in the area are difficult terrain. Each round that a creature starts its
+  turn in the area, it must attempt a Reflex save. On a failure, it takes a –10-foot
+  circumstance penalty to its Speeds until it leaves the area, and on a critical failure,
+  it''s also Immobilized for 1 round. Creatures can attempt to Escape to remove these
+  effects.
+
+
+  Spell Effect: Entangling Flora'
+duration: 1 minute
+mechanicsScope: encounter
+name: entangling flora
+range: 120 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: J6vNvrUT3b1hx2iA
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- manipulate
+- plant
+- wood

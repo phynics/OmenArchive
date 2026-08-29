@@ -1,18 +1,28 @@
-name: "dirge of doom"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "1xLVcA8Y1onw7toT"
-rank: 0
-category: "cantrip"
-traditions: []
-rarity: "uncommon"
-traits: ["bard", "cantrip", "composition", "concentrate", "emotion", "fear", "mental"]
-description: |
-  Enemies within the area are Frightened 1. They can't reduce their frightened value below 1 while they remain in the area.
-time: "1"
+---
 action:
-  count: "one_action"
-area: "30"
-duration: "1 round"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  count: one_action
+area: '30'
+category: cantrip
+description: Enemies within the area are Frightened 1. They can't reduce their frightened
+  value below 1 while they remain in the area.
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 round
+mechanicsScope: encounter
+name: dirge of doom
+rank: 0
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 1xLVcA8Y1onw7toT
+time: '1'
+traditions: []
+traits:
+- bard
+- cantrip
+- composition
+- concentrate
+- emotion
+- fear
+- mental

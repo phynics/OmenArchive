@@ -1,30 +1,47 @@
-name: "uncontrollable dance"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "Jvyy6oVIQsD34MHB"
-rank: 8
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "incapacitation", "manipulate", "mental"]
-description: |
-  The target is overcome with an all-consuming urge to dance. For the duration of the spell, the target is Off-Guard and can't use reactions. While affected, the creature can't use move actions except to dance, using the Stride action to move up to half its Speed.
-  
-  Critical Success The target is unaffected.
-  
-  Success The spell's duration is 3 rounds, and the target must spend at least 1 action each turn dancing.
-  
-  Failure The spell's duration is 1 minute, and the target must spend at least 2 actions each turn dancing.
-  
-  Critical Failure The spell's duration is 1 minute, and the target must spend all its actions each turn dancing.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "touch"
-target: "1 creature"
-duration: "varies"
+  save: will
+description: 'The target is overcome with an all-consuming urge to dance. For the
+  duration of the spell, the target is Off-Guard and can''t use reactions. While affected,
+  the creature can''t use move actions except to dance, using the Stride action to
+  move up to half its Speed.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The spell''s duration is 3 rounds, and the target must spend at least 1
+  action each turn dancing.
+
+
+  Failure The spell''s duration is 1 minute, and the target must spend at least 2
+  actions each turn dancing.
+
+
+  Critical Failure The spell''s duration is 1 minute, and the target must spend all
+  its actions each turn dancing.'
+duration: varies
+mechanicsScope: encounter
+name: uncontrollable dance
+range: touch
+rank: 8
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Jvyy6oVIQsD34MHB
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- incapacitation
+- manipulate
+- mental

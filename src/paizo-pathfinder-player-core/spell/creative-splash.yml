@@ -1,63 +1,94 @@
-name: "creative splash"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "xTpp8dHZsNMDm75B"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "focus", "illusion", "manipulate", "visual"]
-description: |
-  A deluge of paint or colorful illusions descend on the area, reflecting your personal creative specialty. Roll 1d4 to determine the color of the illusion. Each creature in the area must succeed at a Will save or take the effect listed on the table for the color.
-  
-  1d4
-  
-  Color
-  
-  Failure
-  
-  Critical Failure
-  
-  1
-  
-  White
-  
-  Dazzled for 1 round
-  
-  Dazzled for 1 minute
-  
-  2
-  
-  Red
-  
-  Enfeebled 1 for 1 round
-  
-  Enfeebled 2 for 1 round
-  
-  3
-  
-  Yellow
-  
-  Frightened 1
-  
-  Frightened 2
-  
-  4
-  
-  Blue
-  
-  Clumsy 1 for 1 round
-  
-  Clumsy 2 for 1 round
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '5'
+category: focus
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "30 feet"
-area: "5"
-duration: "varies"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: will
+description: 'A deluge of paint or colorful illusions descend on the area, reflecting
+  your personal creative specialty. Roll 1d4 to determine the color of the illusion.
+  Each creature in the area must succeed at a Will save or take the effect listed
+  on the table for the color.
+
+
+  1d4
+
+
+  Color
+
+
+  Failure
+
+
+  Critical Failure
+
+
+  1
+
+
+  White
+
+
+  Dazzled for 1 round
+
+
+  Dazzled for 1 minute
+
+
+  2
+
+
+  Red
+
+
+  Enfeebled 1 for 1 round
+
+
+  Enfeebled 2 for 1 round
+
+
+  3
+
+
+  Yellow
+
+
+  Frightened 1
+
+
+  Frightened 2
+
+
+  4
+
+
+  Blue
+
+
+  Clumsy 1 for 1 round
+
+
+  Clumsy 2 for 1 round'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: varies
+mechanicsScope: encounter
+name: creative splash
+range: 30 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: xTpp8dHZsNMDm75B
+time: '2'
+traditions: []
+traits:
+- cleric
+- concentrate
+- focus
+- illusion
+- manipulate
+- visual

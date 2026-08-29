@@ -1,23 +1,35 @@
-name: "weapon surge"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "W37iBXLsY2trJ1rS"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "focus", "manipulate", "sanctified"]
-description: |
-  Holding your weapon aloft, you fill it with divine energy. On your next Strike with that weapon before the start of your next turn, you gain a +1 status bonus to the attack roll and the weapon deals an additional 1d6 spirit damage, and the Strike gains the sanctified trait. Weapon surge ends once you complete this Strike or the weapon leaves your possession.
-  
-  Heightened (5th) The attack deals 2d6 additional spirit damage.
-  
-  Heightened (9th) The attack deals 3d6 additional spirit damage.
-  
-  Spell Effect: Weapon Surge
-time: "1"
+---
 action:
-  count: "one_action"
-range: "touch"
-target: "1 weapon you're wielding"
+  count: one_action
+category: focus
+description: 'Holding your weapon aloft, you fill it with divine energy. On your next
+  Strike with that weapon before the start of your next turn, you gain a +1 status
+  bonus to the attack roll and the weapon deals an additional 1d6 spirit damage, and
+  the Strike gains the sanctified trait. Weapon surge ends once you complete this
+  Strike or the weapon leaves your possession.
+
+
+  Heightened (5th) The attack deals 2d6 additional spirit damage.
+
+
+  Heightened (9th) The attack deals 3d6 additional spirit damage.
+
+
+  Spell Effect: Weapon Surge'
+mechanicsScope: encounter
+name: weapon surge
+range: touch
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: W37iBXLsY2trJ1rS
+target: 1 weapon you're wielding
+time: '1'
+traditions: []
+traits:
+- cleric
+- focus
+- manipulate
+- sanctified

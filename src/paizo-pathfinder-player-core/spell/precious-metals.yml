@@ -1,24 +1,43 @@
-name: "precious metals"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "APTMURAW1N0Wpk4w"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "focus", "manipulate", "metal"]
-description: |
-  Your deity blesses base metals to transform them into precious materials. The metal in the target transforms from its normal metal into cold iron, copper, gold, iron, silver, or steel. If the spell's rank is 8th or higher, add adamantine and dawnsilver to the options. If you transform an object into copper, gold, or silver, its Hardness is reduced to 1. Otherwise, its Hardness is increased to 10 if it was lower. An item transmuted in this way deals damage according to its new material. For example, a steel sword transmuted to cold iron would deal additional damage to a creature with a weakness to cold iron. It can have other effects of the new material at the GM's discretion.
-  
-  This change is clearly magical and temporary, so the item's monetary value doesn't change; you couldn't transmute copper coins to gold and use them to purchase something.
-  
-  Spell Effect: Precious Metals
-  
-  Heightened (+1) If you increase the Hardness of the object, the new Hardness is 2 higher.
-time: "1"
+---
 action:
-  count: "one_action"
-range: "touch"
-target: "1 metal shield or weapon, 1 suit of metal armor, or up to 1 Bulk of metal material (such as coins or metal-tipped ammunition)"
-duration: "1 minute"
+  count: one_action
+category: focus
+description: 'Your deity blesses base metals to transform them into precious materials.
+  The metal in the target transforms from its normal metal into cold iron, copper,
+  gold, iron, silver, or steel. If the spell''s rank is 8th or higher, add adamantine
+  and dawnsilver to the options. If you transform an object into copper, gold, or
+  silver, its Hardness is reduced to 1. Otherwise, its Hardness is increased to 10
+  if it was lower. An item transmuted in this way deals damage according to its new
+  material. For example, a steel sword transmuted to cold iron would deal additional
+  damage to a creature with a weakness to cold iron. It can have other effects of
+  the new material at the GM''s discretion.
+
+
+  This change is clearly magical and temporary, so the item''s monetary value doesn''t
+  change; you couldn''t transmute copper coins to gold and use them to purchase something.
+
+
+  Spell Effect: Precious Metals
+
+
+  Heightened (+1) If you increase the Hardness of the object, the new Hardness is
+  2 higher.'
+duration: 1 minute
+mechanicsScope: encounter
+name: precious metals
+range: touch
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: APTMURAW1N0Wpk4w
+target: 1 metal shield or weapon, 1 suit of metal armor, or up to 1 Bulk of metal
+  material (such as coins or metal-tipped ammunition)
+time: '1'
+traditions: []
+traits:
+- cleric
+- focus
+- manipulate
+- metal

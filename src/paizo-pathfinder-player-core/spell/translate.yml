@@ -1,27 +1,40 @@
-name: "translate"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "vTQvfYu2llKQedmY"
-rank: 2
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  The target can understand the meaning of a single language it is hearing or reading when you cast the spell. This doesn't let it understand codes, language couched in metaphor, and the like (subject to GM discretion). If the target can hear multiple languages and knows that, it can choose which language to understand; otherwise, choose one of the languages randomly.
-  
-  Heightened (3rd) The target can also speak the language.
-  
-  Heightened (4th) You can target up to 10 creatures, and targets can also speak the language.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
+description: 'The target can understand the meaning of a single language it is hearing
+  or reading when you cast the spell. This doesn''t let it understand codes, language
+  couched in metaphor, and the like (subject to GM discretion). If the target can
+  hear multiple languages and knows that, it can choose which language to understand;
+  otherwise, choose one of the languages randomly.
+
+
+  Heightened (3rd) The target can also speak the language.
+
+
+  Heightened (4th) You can target up to 10 creatures, and targets can also speak the
+  language.'
+duration: 1 hour
 heightening:
-  type: "fixed"
   levels:
-    "4":
-      target: "10 creatures"
-range: "30 feet"
-target: "1 creature"
-duration: "1 hour"
+    4:
+      target: 10 creatures
+  type: fixed
+mechanicsScope: encounter
+name: translate
+range: 30 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: vTQvfYu2llKQedmY
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- manipulate

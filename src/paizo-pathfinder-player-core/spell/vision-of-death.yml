@@ -1,41 +1,59 @@
-name: "vision of death"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "Jmxru8zMdYMRuO5n"
-rank: 4
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "death", "emotion", "fear", "manipulate", "mental"]
-description: |
-  You force the target to see a vision of its own death. It takes 8d6 mental damage with a Will save. If the target is reduced to 0 HP by this spell, its vision becomes reality and kills it instantly.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target takes half damage and is Frightened 1.
-  
-  Failure The target takes full damage and is Frightened 2.
-  
-  Critical Failure The target takes double damage, is Frightened 4 and is Fleeing for as long as it's frightened.
-  
-  Heightened (+1) The damage increases by 2d6.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
-  "0":
-    formula: "8d6"
-    type: "mental"
-    kinds: ["damage"]
+  0:
+    formula: 8d6
+    kinds:
+    - damage
+    type: mental
 defense:
-  save: "will"
   basic: false
   counteraction: false
+  save: will
+description: 'You force the target to see a vision of its own death. It takes 8d6
+  mental damage with a Will save. If the target is reduced to 0 HP by this spell,
+  its vision becomes reality and kills it instantly.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target takes half damage and is Frightened 1.
+
+
+  Failure The target takes full damage and is Frightened 2.
+
+
+  Critical Failure The target takes double damage, is Frightened 4 and is Fleeing
+  for as long as it''s frightened.
+
+
+  Heightened (+1) The damage increases by 2d6.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "2d6"
-range: "120 feet"
-target: "1 living creature"
+    0: 2d6
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: vision of death
+range: 120 feet
+rank: 4
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Jmxru8zMdYMRuO5n
+target: 1 living creature
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- death
+- emotion
+- fear
+- manipulate
+- mental

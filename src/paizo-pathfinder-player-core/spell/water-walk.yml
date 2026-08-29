@@ -1,26 +1,37 @@
-name: "water walk"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "Seaah9amXg70RKw2"
-rank: 2
-category: "spell"
-traditions: ["arcane", "divine", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "water"]
-description: |
-  The target can walk on the surface of water and other liquids without falling through. It can go underwater if it wishes, but in that case it must Swim normally. This spell doesn't grant the ability to breathe underwater.
-  
-  Heightened (4th) The spell's range increases to 30 feet, the duration increases to 1 hour, and you can target up to 10 creatures.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
+description: 'The target can walk on the surface of water and other liquids without
+  falling through. It can go underwater if it wishes, but in that case it must Swim
+  normally. This spell doesn''t grant the ability to breathe underwater.
+
+
+  Heightened (4th) The spell''s range increases to 30 feet, the duration increases
+  to 1 hour, and you can target up to 10 creatures.'
+duration: 10 minutes
 heightening:
-  type: "fixed"
   levels:
-    "4":
-      range: "30 feet"
-      target: "10 creatures"
-range: "touch"
-target: "1 creature"
-duration: "10 minutes"
+    4:
+      range: 30 feet
+      target: 10 creatures
+  type: fixed
+mechanicsScope: encounter
+name: water walk
+range: touch
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Seaah9amXg70RKw2
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- divine
+- primal
+traits:
+- concentrate
+- manipulate
+- water

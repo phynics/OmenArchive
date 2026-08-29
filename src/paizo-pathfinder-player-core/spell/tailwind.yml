@@ -1,22 +1,32 @@
-name: "tailwind"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "KcLVELhCUcKXxiKE"
-rank: 1
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["air", "concentrate", "manipulate"]
-description: |
-  The wind at your back pushes you to find new horizons. You gain a +10-foot status bonus to your Speed.
-  
-  Spell Effect: Tailwind
-  
-  Heightened (2nd) The duration increases to 8 hours.
-  
-  Spell Effect: Tailwind (8 hours)
-time: "2"
+---
 action:
-  count: "two_actions"
-duration: "1 hour"
+  count: two_actions
+category: spell
+description: 'The wind at your back pushes you to find new horizons. You gain a +10-foot
+  status bonus to your Speed.
+
+
+  Spell Effect: Tailwind
+
+
+  Heightened (2nd) The duration increases to 8 hours.
+
+
+  Spell Effect: Tailwind (8 hours)'
+duration: 1 hour
+mechanicsScope: encounter
+name: tailwind
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: KcLVELhCUcKXxiKE
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- air
+- concentrate
+- manipulate

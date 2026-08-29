@@ -1,19 +1,31 @@
-name: "peaceful bubble"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "onjZCEHs3JJJRTD0"
+---
+area: '100'
+category: spell
+description: 'An opaque shell of drifting, iridescent runes covers the area, creating
+  a bubble. You can choose to make the burst smaller, in 10-foot increments. The runes
+  don''t block travel, but those inside the bubble can''t perceive those outside it
+  and vice versa. Detection and scrying effects are likewise blocked.
+
+
+  Creatures sleeping within the bubble are immune to dreams sent by spells. Those
+  sleeping 8 hours reduce their Doomed condition by 2 instead of 1.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- 'Foundry casting time retained without normalized action count: 10 minutes'
+duration: 24 hours
+mechanicsScope: encounter
+name: peaceful bubble
+range: touch
 rank: 4
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "uncommon"
-traits: ["concentrate", "manipulate"]
-description: |
-  An opaque shell of drifting, iridescent runes covers the area, creating a bubble. You can choose to make the burst smaller, in 10-foot increments. The runes don't block travel, but those inside the bubble can't perceive those outside it and vice versa. Detection and scrying effects are likewise blocked.
-  
-  Creatures sleeping within the bubble are immune to dreams sent by spells. Those sleeping 8 hours reduce their Doomed condition by 2 instead of 1.
-time: "10 minutes"
-range: "touch"
-area: "100"
-duration: "24 hours"
-diagnostics: ["Foundry area type is not represented when area details are absent", "Foundry casting time retained without normalized action count: 10 minutes"]
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: onjZCEHs3JJJRTD0
+time: 10 minutes
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- manipulate

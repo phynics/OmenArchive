@@ -1,37 +1,52 @@
-name: "soothing ballad"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "0JigNJDRwevZOyjI"
-rank: 7
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["bard", "composition", "concentrate", "emotion", "focus", "healing", "manipulate", "mental"]
-description: |
-  You draw upon your muse to soothe your allies. Choose one of the following three effects:
-  
-  The spell attempts to counteract fear effects on the targets.
-  
-  The spell attempts to counteract effects imposing paralysis on the targets.
-  
-  The spell restores 7d8 Hit Points to the targets.
-  
-  Heightened (+1) When used to heal, soothing ballad restores 1d8 more Hit Points.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: focus
 damage:
-  "0":
-    formula: "7d8"
-    type: "untyped"
-    kinds: ["healing"]
+  0:
+    formula: 7d8
+    kinds:
+    - healing
+    type: untyped
 defense:
   counteraction: true
+description: 'You draw upon your muse to soothe your allies. Choose one of the following
+  three effects:
+
+
+  The spell attempts to counteract fear effects on the targets.
+
+
+  The spell attempts to counteract effects imposing paralysis on the targets.
+
+
+  The spell restores 7d8 Hit Points to the targets.
+
+
+  Heightened (+1) When used to heal, soothing ballad restores 1d8 more Hit Points.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "1d8"
-range: "30 feet"
-target: "you and up to 9 allies"
+    0: 1d8
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: soothing ballad
+range: 30 feet
+rank: 7
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 0JigNJDRwevZOyjI
+target: you and up to 9 allies
+time: '2'
+traditions: []
+traits:
+- bard
+- composition
+- concentrate
+- emotion
+- focus
+- healing
+- manipulate
+- mental

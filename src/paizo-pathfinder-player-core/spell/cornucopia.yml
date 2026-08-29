@@ -1,25 +1,42 @@
-name: "cornucopia"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "vQuwLqtFFYt0K15N"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["concentrate", "druid", "focus", "healing", "manipulate", "plant", "vitality"]
-description: |
-  Vines twine into a wicker horn in your hands, and out spills a single fruit, nut, or similar small bit of produce. A creature who eats the produce with an Interact action regains 1d6+4 HP. The cornucopia, as well as any unconsumed pieces of fruit, wither away at the end of the duration.
-  
-  Heightened (+1) The cornucopia produces an additional piece of food. A creature can consume any amount of food from the same casting with a single Interact action. Eating six pieces of produce from the cornucopia gives as much nourishment as one square meal for a typical human.
-  
-  Consume all produce
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: focus
 damage:
-  "0":
-    formula: "1d6+4"
-    type: "vitality"
-    kinds: ["healing"]
-duration: "10 minutes"
+  0:
+    formula: 1d6+4
+    kinds:
+    - healing
+    type: vitality
+description: 'Vines twine into a wicker horn in your hands, and out spills a single
+  fruit, nut, or similar small bit of produce. A creature who eats the produce with
+  an Interact action regains 1d6+4 HP. The cornucopia, as well as any unconsumed pieces
+  of fruit, wither away at the end of the duration.
+
+
+  Heightened (+1) The cornucopia produces an additional piece of food. A creature
+  can consume any amount of food from the same casting with a single Interact action.
+  Eating six pieces of produce from the cornucopia gives as much nourishment as one
+  square meal for a typical human.
+
+
+  Consume all produce'
+duration: 10 minutes
+mechanicsScope: encounter
+name: cornucopia
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: vQuwLqtFFYt0K15N
+time: '2'
+traditions: []
+traits:
+- concentrate
+- druid
+- focus
+- healing
+- manipulate
+- plant
+- vitality

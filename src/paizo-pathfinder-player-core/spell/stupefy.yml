@@ -1,30 +1,40 @@
-name: "stupefy"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "CQb8HtQ1BPeZmu9h"
-rank: 2
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "mental"]
-description: |
-  You dull the target's mind, depending on its Will save.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target is Stupefied 1 until the start of your next turn.
-  
-  Failure The target is Stupefied 2 for 1 minute.
-  
-  Critical Failure The target is Stupefied 3 for 1 minute.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "30 feet"
-target: "1 creature"
-duration: "varies"
+  save: will
+description: 'You dull the target''s mind, depending on its Will save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target is Stupefied 1 until the start of your next turn.
+
+
+  Failure The target is Stupefied 2 for 1 minute.
+
+
+  Critical Failure The target is Stupefied 3 for 1 minute.'
+duration: varies
+mechanicsScope: encounter
+name: stupefy
+range: 30 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: CQb8HtQ1BPeZmu9h
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- manipulate
+- mental

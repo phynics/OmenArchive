@@ -1,19 +1,30 @@
-name: "cleanse cuisine"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "qXTB7Ec9yYh5JPPV"
-rank: 1
-category: "spell"
-traditions: ["divine", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  You transform all food and beverages in the area into delicious fare, changing water into wine or another fine beverage, or enhancing the food's taste and ingredients to make it a gourmet treat. You can also choose to remove all toxins and contaminations from the food. This spell doesn't prevent future contamination, natural decay, or spoilage, nor does it make the food any more nutritious.
-  
-  Heightened (+2) Add another cubic foot to the area, which must be contiguous with the rest.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "10 feet"
-target: "1 cubic foot"
+  count: two_actions
+category: spell
+description: 'You transform all food and beverages in the area into delicious fare,
+  changing water into wine or another fine beverage, or enhancing the food''s taste
+  and ingredients to make it a gourmet treat. You can also choose to remove all toxins
+  and contaminations from the food. This spell doesn''t prevent future contamination,
+  natural decay, or spoilage, nor does it make the food any more nutritious.
+
+
+  Heightened (+2) Add another cubic foot to the area, which must be contiguous with
+  the rest.'
+mechanicsScope: encounter
+name: cleanse cuisine
+range: 10 feet
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: qXTB7Ec9yYh5JPPV
+target: 1 cubic foot
+time: '2'
+traditions:
+- divine
+- primal
+traits:
+- concentrate
+- manipulate

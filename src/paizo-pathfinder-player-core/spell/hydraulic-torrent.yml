@@ -1,33 +1,45 @@
-name: "hydraulic torrent"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "Y3G6Y6EDgCY0s3fq"
-rank: 4
-category: "spell"
-traditions: ["primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "water"]
-description: |
-  A swirling torrent of water manifests along a straight line, battering creatures and unattended objects in its path and possibly pushing them away from you. The torrent deals 8d6 bludgeoning damage. Each creature in the area must attempt a basic Fortitude save; unattended objects automatically fail. Creatures and objects that fail are also knocked back 5 feet (10 feet on a critical failure).
-  
-  Heightened (+1) The damage increases by 2d6.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '60'
+category: spell
 damage:
-  "0":
-    formula: "8d6"
-    type: "bludgeoning"
-    kinds: ["damage"]
+  0:
+    formula: 8d6
+    kinds:
+    - damage
+    type: bludgeoning
 defense:
-  save: "fortitude"
   basic: true
   counteraction: false
+  save: fortitude
+description: 'A swirling torrent of water manifests along a straight line, battering
+  creatures and unattended objects in its path and possibly pushing them away from
+  you. The torrent deals 8d6 bludgeoning damage. Each creature in the area must attempt
+  a basic Fortitude save; unattended objects automatically fail. Creatures and objects
+  that fail are also knocked back 5 feet (10 feet on a critical failure).
+
+
+  Heightened (+1) The damage increases by 2d6.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "2d6"
-area: "60"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+    0: 2d6
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: hydraulic torrent
+rank: 4
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Y3G6Y6EDgCY0s3fq
+time: '2'
+traditions:
+- primal
+traits:
+- concentrate
+- manipulate
+- water

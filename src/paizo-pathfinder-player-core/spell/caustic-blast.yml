@@ -1,34 +1,48 @@
-name: "caustic blast"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "thAHF1zxNplLCJPO"
-rank: 0
-category: "cantrip"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["acid", "cantrip", "concentrate", "manipulate"]
-description: |
-  You fling a large glob of acid that immediately detonates, spraying nearby creatures. Creatures in the area take 1d8 acid damage with a basic Reflex save; on a critical failure, the creature also takes (1+floor((spell rank -1)/2))[persistent,acid] damage.
-  
-  Heightened (+2) The initial damage increases by 1d8, and the persistent damage on a critical failure increases by 1.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '5'
+category: cantrip
 damage:
   yI4fzrhnbFxup4Ep:
-    formula: "1d8"
-    type: "acid"
-    kinds: ["damage"]
+    formula: 1d8
+    kinds:
+    - damage
+    type: acid
 defense:
-  save: "reflex"
   basic: true
   counteraction: false
+  save: reflex
+description: 'You fling a large glob of acid that immediately detonates, spraying
+  nearby creatures. Creatures in the area take 1d8 acid damage with a basic Reflex
+  save; on a critical failure, the creature also takes (1+floor((spell rank -1)/2))[persistent,acid]
+  damage.
+
+
+  Heightened (+2) The initial damage increases by 1d8, and the persistent damage on
+  a critical failure increases by 1.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
 heightening:
-  type: "interval"
-  interval: 2
   damage:
-    yI4fzrhnbFxup4Ep: "1d8"
-range: "30 feet"
-area: "5"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+    yI4fzrhnbFxup4Ep: 1d8
+  interval: 2
+  type: interval
+mechanicsScope: encounter
+name: caustic blast
+range: 30 feet
+rank: 0
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: thAHF1zxNplLCJPO
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- acid
+- cantrip
+- concentrate
+- manipulate

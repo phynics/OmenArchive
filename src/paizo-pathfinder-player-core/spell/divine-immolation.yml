@@ -1,42 +1,60 @@
-name: "divine immolation"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "A16eFTRh82xIjMu8"
-rank: 5
-category: "spell"
-traditions: ["divine"]
-rarity: "common"
-traits: ["concentrate", "fire", "manipulate", "sanctified", "spirit"]
-description: |
-  Divine flames scour creatures within the area. Creatures take 6d6 fire damage and (spell rank -3)d6[persistent,fire] damage. The divine power within the flames scorches the spirit as well; a creature takes spirit damage instead of fire damage from divine immolation if that would be more detrimental to the creature (as determined by the GM).
-  
-  Critical Success The creature is unaffected.
-  
-  Success The creature takes half damage and no persistent damage.
-  
-  Failure The creature takes full damage and persistent damage.
-  
-  Critical Failure The creature takes double damage and double persistent damage.
-  
-  Heightened (+1) The damage increases by 1d6 and persistent damage increases by 1d6.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '20'
+category: spell
 damage:
   b9dAiWfV57lyCWpP:
-    formula: "6d6"
-    type: "fire"
-    kinds: ["damage"]
+    formula: 6d6
+    kinds:
+    - damage
+    type: fire
 defense:
-  save: "reflex"
   basic: true
   counteraction: false
+  save: reflex
+description: 'Divine flames scour creatures within the area. Creatures take 6d6 fire
+  damage and (spell rank -3)d6[persistent,fire] damage. The divine power within the
+  flames scorches the spirit as well; a creature takes spirit damage instead of fire
+  damage from divine immolation if that would be more detrimental to the creature
+  (as determined by the GM).
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage and no persistent damage.
+
+
+  Failure The creature takes full damage and persistent damage.
+
+
+  Critical Failure The creature takes double damage and double persistent damage.
+
+
+  Heightened (+1) The damage increases by 1d6 and persistent damage increases by 1d6.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    b9dAiWfV57lyCWpP: "1d6"
-range: "120 feet"
-area: "20"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+    b9dAiWfV57lyCWpP: 1d6
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: divine immolation
+range: 120 feet
+rank: 5
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: A16eFTRh82xIjMu8
+time: '2'
+traditions:
+- divine
+traits:
+- concentrate
+- fire
+- manipulate
+- sanctified
+- spirit

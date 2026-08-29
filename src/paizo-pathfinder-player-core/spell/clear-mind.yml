@@ -1,25 +1,42 @@
-name: "clear mind"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "EfFMLVbmkBWmzoLF"
-rank: 2
-category: "spell"
-traditions: ["divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "healing", "manipulate", "mental"]
-description: |
-  You drive mental contamination from the target's mind. Attempt to counteract an effect of your choice imposing one of these conditions on the target: Fleeing, Frightened, and Stupefied. If you failed to counteract the effect but you would have if its counteract rank were 2 lower, instead suppress the effect until the beginning of your next turn. The effect's duration doesn't elapse while it's suppressed. This spell can't counteract or suppress conditions that are part of curses, diseases, or a natural state of the target.
-  
-  Heightened (4th) Add Confused, Controlled, and Slowed to the list of conditions.
-  
-  Heightened (6th) Add Doomed to the list of conditions.
-  
-  Heightened (8th) Add Stunned to the list of conditions.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
   counteraction: true
-range: "touch"
-target: "1 willing creature"
+description: 'You drive mental contamination from the target''s mind. Attempt to counteract
+  an effect of your choice imposing one of these conditions on the target: Fleeing,
+  Frightened, and Stupefied. If you failed to counteract the effect but you would
+  have if its counteract rank were 2 lower, instead suppress the effect until the
+  beginning of your next turn. The effect''s duration doesn''t elapse while it''s
+  suppressed. This spell can''t counteract or suppress conditions that are part of
+  curses, diseases, or a natural state of the target.
+
+
+  Heightened (4th) Add Confused, Controlled, and Slowed to the list of conditions.
+
+
+  Heightened (6th) Add Doomed to the list of conditions.
+
+
+  Heightened (8th) Add Stunned to the list of conditions.'
+mechanicsScope: encounter
+name: clear mind
+range: touch
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: EfFMLVbmkBWmzoLF
+target: 1 willing creature
+time: '2'
+traditions:
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- healing
+- manipulate
+- mental

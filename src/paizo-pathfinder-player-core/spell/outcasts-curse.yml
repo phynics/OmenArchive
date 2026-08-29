@@ -1,29 +1,47 @@
-name: "outcast's curse"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "KSAEhNfZyXMO7Z7V"
-rank: 4
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "curse", "manipulate", "mental", "misfortune"]
-description: |
-  You afflict the target with a curse that makes its presence abrasive and off-putting. The target must attempt a Will save.
-  
-  Critical Success The target is unaffected.
-  
-  Success For 10 minutes, the target must roll twice and use the worse result whenever attempting a Deception, Diplomacy, Intimidation, or Performance check, and creatures they encounter have an initial attitude toward them of one step worse (for instance, Unfriendly instead of Indifferent).
-  
-  Failure As success, but the effect is permanent.
-  
-  Critical Failure As failure, and creatures that the target encounters have an initial attitude toward them of two steps worse.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "touch"
-target: "1 creature"
+  save: will
+description: 'You afflict the target with a curse that makes its presence abrasive
+  and off-putting. The target must attempt a Will save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success For 10 minutes, the target must roll twice and use the worse result whenever
+  attempting a Deception, Diplomacy, Intimidation, or Performance check, and creatures
+  they encounter have an initial attitude toward them of one step worse (for instance,
+  Unfriendly instead of Indifferent).
+
+
+  Failure As success, but the effect is permanent.
+
+
+  Critical Failure As failure, and creatures that the target encounters have an initial
+  attitude toward them of two steps worse.'
+mechanicsScope: encounter
+name: outcast's curse
+range: touch
+rank: 4
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: KSAEhNfZyXMO7Z7V
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- curse
+- manipulate
+- mental
+- misfortune

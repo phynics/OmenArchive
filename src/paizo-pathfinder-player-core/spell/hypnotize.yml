@@ -1,29 +1,47 @@
-name: "hypnotize"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "K2WpC3FFoHrqX9Q5"
-rank: 3
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["illusion", "manipulate", "subtle", "visual"]
-description: |
-  You create a cloud of mesmerizing patterns and colors that hovers in the air. Creatures are Dazzled while inside the cloud. In addition, a creature must attempt a Will saving throw if it is inside the cloud when you cast it, when it enters the cloud, when it ends its turn within the cloud, or if it uses a Seek or Interact action on the cloud. A creature currently Fascinated by hypnotize doesn't attempt new saves.
-  
-  Success The target is unaffected.
-  
-  Failure The target is fascinated by the cloud.
-  
-  Critical Failure The target is fascinated by the cloud. While it remains fascinated, it can't use reactions.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '10'
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "120 feet"
-area: "10"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent", "Foundry sustained duration flag is not represented by CharacterSpell"]
+  save: will
+description: 'You create a cloud of mesmerizing patterns and colors that hovers in
+  the air. Creatures are Dazzled while inside the cloud. In addition, a creature must
+  attempt a Will saving throw if it is inside the cloud when you cast it, when it
+  enters the cloud, when it ends its turn within the cloud, or if it uses a Seek or
+  Interact action on the cloud. A creature currently Fascinated by hypnotize doesn''t
+  attempt new saves.
+
+
+  Success The target is unaffected.
+
+
+  Failure The target is fascinated by the cloud.
+
+
+  Critical Failure The target is fascinated by the cloud. While it remains fascinated,
+  it can''t use reactions.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: hypnotize
+range: 120 feet
+rank: 3
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: K2WpC3FFoHrqX9Q5
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- illusion
+- manipulate
+- subtle
+- visual

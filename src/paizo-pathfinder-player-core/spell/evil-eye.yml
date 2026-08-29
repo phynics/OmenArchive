@@ -1,23 +1,33 @@
-name: "evil eye"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "f45JpY7Ph2cAJGW2"
-rank: 0
-category: "cantrip"
-traditions: []
-rarity: "uncommon"
-traits: ["cantrip", "curse", "hex", "manipulate", "witch"]
-description: |
-  Your patron's resentment manifests in a baleful, envious gaze. The target becomes Sickened 1 if it fails a Will save (or sickened 2 on a critical failure). This condition value can't be reduced below 1 while the spell is active and you can see the target.
-time: "1"
+---
 action:
-  count: "one_action"
+  count: one_action
+category: cantrip
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "30 feet"
-target: "1 creature"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  save: will
+description: Your patron's resentment manifests in a baleful, envious gaze. The target
+  becomes Sickened 1 if it fails a Will save (or sickened 2 on a critical failure).
+  This condition value can't be reduced below 1 while the spell is active and you
+  can see the target.
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: evil eye
+range: 30 feet
+rank: 0
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: f45JpY7Ph2cAJGW2
+target: 1 creature
+time: '1'
+traditions: []
+traits:
+- cantrip
+- curse
+- hex
+- manipulate
+- witch

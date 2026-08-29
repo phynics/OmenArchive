@@ -1,18 +1,30 @@
-name: "truesight"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "uqlxMQQeSGWEVjki"
-rank: 6
-category: "spell"
-traditions: ["arcane", "divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "revelation"]
-description: |
-  You see things within 60 feet as they actually are. The GM rolls a secret counteract check against any illusion, morph or polymorph effect in the area, but only for the purpose of determining whether you see through it (for instance, if the check succeeds against a polymorph spell, you can see the creature's true form, but you don't end the polymorph spell).
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
   counteraction: true
-duration: "10 minutes"
+description: You see things within 60 feet as they actually are. The GM rolls a secret
+  counteract check against any illusion, morph or polymorph effect in the area, but
+  only for the purpose of determining whether you see through it (for instance, if
+  the check succeeds against a polymorph spell, you can see the creature's true form,
+  but you don't end the polymorph spell).
+duration: 10 minutes
+mechanicsScope: encounter
+name: truesight
+rank: 6
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: uqlxMQQeSGWEVjki
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- manipulate
+- revelation

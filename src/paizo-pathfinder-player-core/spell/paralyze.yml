@@ -1,37 +1,52 @@
-name: "paralyze"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "DCQHaLrYXMI37dvW"
-rank: 3
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "incapacitation", "manipulate", "mental"]
-description: |
-  You block the target's motor impulses before they can leave its mind, threatening to freeze the target in place. The target must attempt a Will save.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target is Stunned 1.
-  
-  Failure The target is Paralyzed for 1 round.
-  
-  Critical Failure The target is Paralyzed for 4 rounds. At the end of each of its turns, it can attempt a new Will save to reduce the remaining duration by 1 round, or end it entirely on a critical success.
-  
-  Heightened (7th) You can target up to 10 creatures.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
+  save: will
+description: 'You block the target''s motor impulses before they can leave its mind,
+  threatening to freeze the target in place. The target must attempt a Will save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target is Stunned 1.
+
+
+  Failure The target is Paralyzed for 1 round.
+
+
+  Critical Failure The target is Paralyzed for 4 rounds. At the end of each of its
+  turns, it can attempt a new Will save to reduce the remaining duration by 1 round,
+  or end it entirely on a critical success.
+
+
+  Heightened (7th) You can target up to 10 creatures.'
+duration: varies
 heightening:
-  type: "fixed"
   levels:
-    "7":
-      target: "10 creatures"
-range: "30 feet"
-target: "1 creature"
-duration: "varies"
+    7:
+      target: 10 creatures
+  type: fixed
+mechanicsScope: encounter
+name: paralyze
+range: 30 feet
+rank: 3
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: DCQHaLrYXMI37dvW
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- incapacitation
+- manipulate
+- mental

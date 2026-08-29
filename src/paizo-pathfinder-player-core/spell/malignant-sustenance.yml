@@ -1,22 +1,31 @@
-name: "malignant sustenance"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "qzsQmpiQodHBBWYI"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "focus", "manipulate", "void"]
-description: |
-  You embed a seed of void energy in an undead creature, restoring its unnatural vigor. The target gains fast healing 7.
-  
-  Spell Effect: Malignant Sustenance
-  
-  Heightened (+1) The fast healing increases by 2.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 willing undead creature"
-duration: "1 minute"
+  count: two_actions
+category: focus
+description: 'You embed a seed of void energy in an undead creature, restoring its
+  unnatural vigor. The target gains fast healing 7.
+
+
+  Spell Effect: Malignant Sustenance
+
+
+  Heightened (+1) The fast healing increases by 2.'
+duration: 1 minute
+mechanicsScope: encounter
+name: malignant sustenance
+range: touch
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: qzsQmpiQodHBBWYI
+target: 1 willing undead creature
+time: '2'
+traditions: []
+traits:
+- cleric
+- concentrate
+- focus
+- manipulate
+- void

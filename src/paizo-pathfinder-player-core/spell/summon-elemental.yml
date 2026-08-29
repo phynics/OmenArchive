@@ -1,20 +1,29 @@
-name: "summon elemental"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "lpT6LotUaQPfinjj"
-rank: 2
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "summon"]
-description: |
-  You summon a creature that has the elemental trait and whose level is 1 or lower to fight for you.
-  
-  Heightened As listed in the summon trait.
-time: "3"
+---
 action:
-  count: "three_actions"
-range: "30 feet"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: three_actions
+category: spell
+description: 'You summon a creature that has the elemental trait and whose level is
+  1 or lower to fight for you.
+
+
+  Heightened As listed in the summon trait.'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: summon elemental
+range: 30 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: lpT6LotUaQPfinjj
+time: '3'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- manipulate
+- summon

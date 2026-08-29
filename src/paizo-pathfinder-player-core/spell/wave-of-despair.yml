@@ -1,37 +1,53 @@
-name: "wave of despair"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "GaRQlC9Yw1BGKHfN"
-rank: 5
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "emotion", "manipulate", "mental"]
-description: |
-  You inflict despair on creatures in the area. The effects for each creature are determined by its Will save.
-  
-  Critical Success The creature is unaffected.
-  
-  Success For 1 round, the creature can't use reactions and must attempt another save at the start of its turn; on a failure, it is Slowed 1 for that turn as it sobs uncontrollably.
-  
-  Failure As success, but the duration is 1 minute.
-  
-  Critical Failure As failure, and the creature is automatically slowed 1 for 1 minute.
-  
-  Heightened (7th) The area increases to a 60-foot cone.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '30'
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
+  save: will
+description: 'You inflict despair on creatures in the area. The effects for each creature
+  are determined by its Will save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success For 1 round, the creature can''t use reactions and must attempt another
+  save at the start of its turn; on a failure, it is Slowed 1 for that turn as it
+  sobs uncontrollably.
+
+
+  Failure As success, but the duration is 1 minute.
+
+
+  Critical Failure As failure, and the creature is automatically slowed 1 for 1 minute.
+
+
+  Heightened (7th) The area increases to a 60-foot cone.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 or more rounds
 heightening:
-  type: "fixed"
   levels:
-    "7":
-      area: "60"
-area: "30"
-duration: "1 or more rounds"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+    7:
+      area: '60'
+  type: fixed
+mechanicsScope: encounter
+name: wave of despair
+rank: 5
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: GaRQlC9Yw1BGKHfN
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- emotion
+- manipulate
+- mental

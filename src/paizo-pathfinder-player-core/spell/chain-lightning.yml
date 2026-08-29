@@ -1,33 +1,48 @@
-name: "chain lightning"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "TDNlDWbYb58Y55Da"
-rank: 6
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["concentrate", "electricity", "manipulate"]
-description: |
-  You discharge a powerful bolt of lightning at the target, dealing 8d12 electricity damage. The target must attempt a basic Reflex save. The electricity arcs to another creature within 30 feet of the first target, jumps to another creature within 30 feet of that target, and so on. You can end the chain at any point. You can't target the same creature more than once, and you must have line of effect to all targets. Roll the damage only once, and apply it to each target (halving or doubling as appropriate for its saving throw outcome). The chain ends if any one of the targets critically succeeds at its save.
-  
-  Heightened (+1) The damage increases by 1d12.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
-  "0":
-    formula: "8d12"
-    type: "electricity"
-    kinds: ["damage"]
+  0:
+    formula: 8d12
+    kinds:
+    - damage
+    type: electricity
 defense:
-  save: "reflex"
   basic: true
   counteraction: false
+  save: reflex
+description: 'You discharge a powerful bolt of lightning at the target, dealing 8d12
+  electricity damage. The target must attempt a basic Reflex save. The electricity
+  arcs to another creature within 30 feet of the first target, jumps to another creature
+  within 30 feet of that target, and so on. You can end the chain at any point. You
+  can''t target the same creature more than once, and you must have line of effect
+  to all targets. Roll the damage only once, and apply it to each target (halving
+  or doubling as appropriate for its saving throw outcome). The chain ends if any
+  one of the targets critically succeeds at its save.
+
+
+  Heightened (+1) The damage increases by 1d12.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "1d12"
-range: "500 feet"
-target: "1 creature, plus any number of additional creatures"
+    0: 1d12
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: chain lightning
+range: 500 feet
+rank: 6
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: TDNlDWbYb58Y55Da
+target: 1 creature, plus any number of additional creatures
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- electricity
+- manipulate

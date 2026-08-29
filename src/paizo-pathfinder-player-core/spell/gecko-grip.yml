@@ -1,22 +1,30 @@
-name: "gecko grip"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "5KobTMrZeZxuXMgl"
-rank: 2
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  Tiny clinging hairs sprout across the creature's hands and feet, offering purchase on nearly any surface. The target gains a climb Speed equal to its Speed.
-  
-  Heightened (5th) The duration increases to 1 hour.
-  
-  Spell Effect: Gecko Grip
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 creature"
-duration: "10 minutes"
+  count: two_actions
+category: spell
+description: 'Tiny clinging hairs sprout across the creature''s hands and feet, offering
+  purchase on nearly any surface. The target gains a climb Speed equal to its Speed.
+
+
+  Heightened (5th) The duration increases to 1 hour.
+
+
+  Spell Effect: Gecko Grip'
+duration: 10 minutes
+mechanicsScope: encounter
+name: gecko grip
+range: touch
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 5KobTMrZeZxuXMgl
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- manipulate

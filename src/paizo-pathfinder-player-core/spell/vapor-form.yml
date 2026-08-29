@@ -1,20 +1,34 @@
-name: "vapor form"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "V8wXOsoejQhe6CyG"
-rank: 4
-category: "spell"
-traditions: ["arcane", "occult", "primal"]
-rarity: "common"
-traits: ["air", "concentrate", "manipulate", "polymorph"]
-description: |
-  The target transforms into a vaporous state. In this state, the target is amorphous. It loses any item bonus to AC and all other effects and bonuses from armor, and it uses its proficiency modifier for unarmored defense. It gains resistance 8 to physical damage and is immune to precision damage. It can't cast spells, activate items, or use actions that have the attack or manipulate trait. It gains a fly Speed of 10 feet and can slip through tiny cracks. The target can Dismiss the spell.
-  
-  Spell Effect: Vapor Form
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 willing creature"
-duration: "5 minutes"
+  count: two_actions
+category: spell
+description: 'The target transforms into a vaporous state. In this state, the target
+  is amorphous. It loses any item bonus to AC and all other effects and bonuses from
+  armor, and it uses its proficiency modifier for unarmored defense. It gains resistance
+  8 to physical damage and is immune to precision damage. It can''t cast spells, activate
+  items, or use actions that have the attack or manipulate trait. It gains a fly Speed
+  of 10 feet and can slip through tiny cracks. The target can Dismiss the spell.
+
+
+  Spell Effect: Vapor Form'
+duration: 5 minutes
+mechanicsScope: encounter
+name: vapor form
+range: touch
+rank: 4
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: V8wXOsoejQhe6CyG
+target: 1 willing creature
+time: '2'
+traditions:
+- arcane
+- occult
+- primal
+traits:
+- air
+- concentrate
+- manipulate
+- polymorph

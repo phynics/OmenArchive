@@ -1,41 +1,60 @@
-name: "arctic rift"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "C2GYCH3TtUFqPfdX"
-rank: 8
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["cold", "concentrate", "manipulate"]
-description: |
-  A jagged crack opens in the air, dealing 12d8 cold damage as it draws away warmth. Each creature along the rift must attempt a Fortitude save.
-  
-  Critical Success The creature is unaffected.
-  
-  Success The creature takes half damage.
-  
-  Failure The creature takes full damage and is Slowed 1 until the start of your next turn.
-  
-  Critical Failure The creature takes double damage, is Immobilized by a layer of ice, and is slowed 1 as long as it's immobilized. The ice is an object with 60 Hit Points, Hardness 5, immunity to cold damage, and vulnerability 10 to fire. It has object immunities and is destroyed if the target Escapes.
-  
-  Heightened (+1) The damage increases by 1d8 and the ice's Hit Points increase by 5.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '120'
+category: spell
 damage:
   dFAvAi8vt0k4MIyH:
-    formula: "12d8"
-    type: "cold"
-    kinds: ["damage"]
+    formula: 12d8
+    kinds:
+    - damage
+    type: cold
 defense:
-  save: "fortitude"
   basic: false
   counteraction: false
+  save: fortitude
+description: 'A jagged crack opens in the air, dealing 12d8 cold damage as it draws
+  away warmth. Each creature along the rift must attempt a Fortitude save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage.
+
+
+  Failure The creature takes full damage and is Slowed 1 until the start of your next
+  turn.
+
+
+  Critical Failure The creature takes double damage, is Immobilized by a layer of
+  ice, and is slowed 1 as long as it''s immobilized. The ice is an object with 60
+  Hit Points, Hardness 5, immunity to cold damage, and vulnerability 10 to fire. It
+  has object immunities and is destroyed if the target Escapes.
+
+
+  Heightened (+1) The damage increases by 1d8 and the ice''s Hit Points increase by
+  5.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    dFAvAi8vt0k4MIyH: "1d8"
-area: "120"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+    dFAvAi8vt0k4MIyH: 1d8
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: arctic rift
+rank: 8
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: C2GYCH3TtUFqPfdX
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- cold
+- concentrate
+- manipulate

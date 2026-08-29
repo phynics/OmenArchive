@@ -1,21 +1,35 @@
-name: "competitive edge"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "NOB92Wpn7jXvtyVW"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "emotion", "focus", "mental"]
-description: |
-  Your competitiveness drives you to prove yourself against the opposition. You gain a +1 status bonus to attack rolls and skill checks. If an enemy within 20 feet critically succeeds at an attack roll or skill check, your status bonus increases to +3 for attack rolls or that specific skill check (whichever the foe critically succeeded at) for 1 round.
-  
-  Spell Effect: Competitive Edge
-  
-  Heightened (7th) Increase the base bonus to +2 and the increased bonus after an enemy critically succeeds to +4.
-time: "1"
+---
 action:
-  count: "one_action"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: one_action
+category: focus
+description: 'Your competitiveness drives you to prove yourself against the opposition.
+  You gain a +1 status bonus to attack rolls and skill checks. If an enemy within
+  20 feet critically succeeds at an attack roll or skill check, your status bonus
+  increases to +3 for attack rolls or that specific skill check (whichever the foe
+  critically succeeded at) for 1 round.
+
+
+  Spell Effect: Competitive Edge
+
+
+  Heightened (7th) Increase the base bonus to +2 and the increased bonus after an
+  enemy critically succeeds to +4.'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: competitive edge
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: NOB92Wpn7jXvtyVW
+time: '1'
+traditions: []
+traits:
+- cleric
+- concentrate
+- emotion
+- focus
+- mental

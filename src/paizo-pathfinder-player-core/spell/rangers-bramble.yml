@@ -1,25 +1,36 @@
-name: "ranger's bramble"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "KktHf7zIAWOr499h"
-rank: 3
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["concentrate", "focus", "manipulate", "plant", "ranger"]
-description: |
-  You cause plants in the area to entangle your foes, with the effects of Entangling Flora. A creature that critically fails the save takes (max(0,spell rank -1))d4[bleed] damage in addition to being Immobilized. Escaping your bramble doesn't end the bleed damage.
-  
-  Heightened (+1) The bleed damage on a critical failure increases by 1d4.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '5'
+category: focus
 defense:
-  save: "reflex"
   basic: false
   counteraction: false
-range: "100 feet"
-area: "5"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: reflex
+description: 'You cause plants in the area to entangle your foes, with the effects
+  of Entangling Flora. A creature that critically fails the save takes (max(0,spell
+  rank -1))d4[bleed] damage in addition to being Immobilized. Escaping your bramble
+  doesn''t end the bleed damage.
+
+
+  Heightened (+1) The bleed damage on a critical failure increases by 1d4.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 minute
+mechanicsScope: encounter
+name: ranger's bramble
+range: 100 feet
+rank: 3
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: KktHf7zIAWOr499h
+time: '2'
+traditions: []
+traits:
+- concentrate
+- focus
+- manipulate
+- plant
+- ranger

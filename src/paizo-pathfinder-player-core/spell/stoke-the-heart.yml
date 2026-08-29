@@ -1,23 +1,33 @@
-name: "stoke the heart"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "GeUbPvwdZ4B4l0up"
-rank: 0
-category: "cantrip"
-traditions: []
-rarity: "uncommon"
-traits: ["cantrip", "concentrate", "emotion", "hex", "witch"]
-description: |
-  Your patron fills a creature with fervor, empowering their blows. The target gains a +2 status bonus to damage rolls.
-  
-  Heightened (+2) The status bonus to damage increases by 1.
-  
-  Spell Effect: Stoke the Heart
-time: "1"
+---
 action:
-  count: "one_action"
-range: "30 feet"
-target: "1 creature"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: one_action
+category: cantrip
+description: 'Your patron fills a creature with fervor, empowering their blows. The
+  target gains a +2 status bonus to damage rolls.
+
+
+  Heightened (+2) The status bonus to damage increases by 1.
+
+
+  Spell Effect: Stoke the Heart'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: stoke the heart
+range: 30 feet
+rank: 0
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: GeUbPvwdZ4B4l0up
+target: 1 creature
+time: '1'
+traditions: []
+traits:
+- cantrip
+- concentrate
+- emotion
+- hex
+- witch

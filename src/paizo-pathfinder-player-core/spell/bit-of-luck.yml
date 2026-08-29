@@ -1,20 +1,31 @@
-name: "bit of luck"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "Fr2CGvWcgSyLcUi7"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "focus", "fortune", "manipulate"]
-description: |
-  You tilt the scales of luck slightly to protect a creature from disaster. When the target would attempt a saving throw, it can roll twice and use the better result. Once it does this, the spell ends.
-  
-  If you cast bit of luck again, any previous bit of luck you cast that's still in effect ends. After a creature has been targeted with bit of luck, it becomes temporarily immune for 24 hours.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "30 feet"
-target: "1 willing creature"
-duration: "1 minute"
+  count: two_actions
+category: focus
+description: 'You tilt the scales of luck slightly to protect a creature from disaster.
+  When the target would attempt a saving throw, it can roll twice and use the better
+  result. Once it does this, the spell ends.
+
+
+  If you cast bit of luck again, any previous bit of luck you cast that''s still in
+  effect ends. After a creature has been targeted with bit of luck, it becomes temporarily
+  immune for 24 hours.'
+duration: 1 minute
+mechanicsScope: encounter
+name: bit of luck
+range: 30 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Fr2CGvWcgSyLcUi7
+target: 1 willing creature
+time: '2'
+traditions: []
+traits:
+- cleric
+- concentrate
+- focus
+- fortune
+- manipulate

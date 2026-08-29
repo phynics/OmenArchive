@@ -1,34 +1,49 @@
-name: "wails of the damned"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "FEsuyf203wTNE2et"
-rank: 9
-category: "spell"
-traditions: ["divine", "occult"]
-rarity: "common"
-traits: ["auditory", "concentrate", "death", "manipulate", "void"]
-description: |
-  You howl a lament of damned souls. Each living enemy in the area takes 8d10 void damage and must attempt a Fortitude save.
-  
-  Critical Success The creature is unaffected.
-  
-  Success The creature takes full damage.
-  
-  Failure The creature takes full damage and is Drained 1d4.
-  
-  Critical Failure The creature takes double damage and is Drained 4.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '40'
+category: spell
 damage:
-  "0":
-    formula: "8d10"
-    type: "void"
-    kinds: ["damage"]
+  0:
+    formula: 8d10
+    kinds:
+    - damage
+    type: void
 defense:
-  save: "fortitude"
   basic: false
   counteraction: false
-area: "40"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: fortitude
+description: 'You howl a lament of damned souls. Each living enemy in the area takes
+  8d10 void damage and must attempt a Fortitude save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes full damage.
+
+
+  Failure The creature takes full damage and is Drained 1d4.
+
+
+  Critical Failure The creature takes double damage and is Drained 4.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+mechanicsScope: encounter
+name: wails of the damned
+rank: 9
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: FEsuyf203wTNE2et
+time: '2'
+traditions:
+- divine
+- occult
+traits:
+- auditory
+- concentrate
+- death
+- manipulate
+- void

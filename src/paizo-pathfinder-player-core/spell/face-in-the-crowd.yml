@@ -1,26 +1,37 @@
-name: "face in the crowd"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "yH13KXUK2x093NUv"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "focus", "manipulate", "visual"]
-description: |
-  While in a crowd of roughly similar creatures, your appearance becomes bland and nondescript. You gain a +2 status bonus to Deception and Stealth checks to go incognito among the crowd, and you ignore difficult terrain caused by the crowd. This counts as setting up a disguise for the Impersonate use of Deception and you add your level even if you're untrained.
-  
-  Spell Effect: Face in the Crowd
-  
-  Heightened (3rd) The spell gains a range of 10 feet and can target up to 10 creatures.
-time: "1"
+---
 action:
-  count: "one_action"
+  count: one_action
+category: focus
+description: 'While in a crowd of roughly similar creatures, your appearance becomes
+  bland and nondescript. You gain a +2 status bonus to Deception and Stealth checks
+  to go incognito among the crowd, and you ignore difficult terrain caused by the
+  crowd. This counts as setting up a disguise for the Impersonate use of Deception
+  and you add your level even if you''re untrained.
+
+
+  Spell Effect: Face in the Crowd
+
+
+  Heightened (3rd) The spell gains a range of 10 feet and can target up to 10 creatures.'
+duration: 1 minute
 heightening:
-  type: "fixed"
   levels:
-    "3":
-      range: "10 feet"
-      target: "10 creatures"
-duration: "1 minute"
+    3:
+      range: 10 feet
+      target: 10 creatures
+  type: fixed
+mechanicsScope: encounter
+name: face in the crowd
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: yH13KXUK2x093NUv
+time: '1'
+traditions: []
+traits:
+- cleric
+- focus
+- manipulate
+- visual

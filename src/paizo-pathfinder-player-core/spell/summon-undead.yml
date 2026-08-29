@@ -1,20 +1,30 @@
-name: "summon undead"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "9WGeBwIIbbUuWKq0"
-rank: 1
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "summon"]
-description: |
-  You summon a creature that has the undead trait and whose level is -1 to fight for you.
-  
-  Heightened As listed in the summon trait.
-time: "3"
+---
 action:
-  count: "three_actions"
-range: "30 feet"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: three_actions
+category: spell
+description: 'You summon a creature that has the undead trait and whose level is -1
+  to fight for you.
+
+
+  Heightened As listed in the summon trait.'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: summon undead
+range: 30 feet
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 9WGeBwIIbbUuWKq0
+time: '3'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- manipulate
+- summon

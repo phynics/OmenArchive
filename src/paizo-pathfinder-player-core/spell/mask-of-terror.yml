@@ -1,32 +1,54 @@
-name: "mask of terror"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "O6VQC1Bs4aSYDa6R"
-rank: 7
-category: "spell"
-traditions: ["arcane", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "emotion", "fear", "illusion", "manipulate", "mental", "visual"]
-description: |
-  The target appears to be a gruesome and terrifying creature. The effect is unique to each observer, so a human viewing the target might see a demon with bloody fangs, but a demon observing the target might see a glowing angelic visage.
-  
-  When any creature attempts a hostile action against the target, the creature must attempt a Will save. It is then temporarily immune until the end of its next turn.
-  
-  Success The creature is unaffected.
-  
-  Failure The creature becomes Frightened 2 before using its action.
-  
-  Critical Failure The creature becomes Frightened 2, and its action fails and is wasted.
-  
-  Heightened (8th) You can target up to 5 creatures. If a creature uses a hostile action or reaction that affects multiple targets simultaneously, it needs to attempt only one save against mask of terror.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "30 feet"
-target: "1 creature"
-duration: "1 minute"
+  save: will
+description: 'The target appears to be a gruesome and terrifying creature. The effect
+  is unique to each observer, so a human viewing the target might see a demon with
+  bloody fangs, but a demon observing the target might see a glowing angelic visage.
+
+
+  When any creature attempts a hostile action against the target, the creature must
+  attempt a Will save. It is then temporarily immune until the end of its next turn.
+
+
+  Success The creature is unaffected.
+
+
+  Failure The creature becomes Frightened 2 before using its action.
+
+
+  Critical Failure The creature becomes Frightened 2, and its action fails and is
+  wasted.
+
+
+  Heightened (8th) You can target up to 5 creatures. If a creature uses a hostile
+  action or reaction that affects multiple targets simultaneously, it needs to attempt
+  only one save against mask of terror.'
+duration: 1 minute
+mechanicsScope: encounter
+name: mask of terror
+range: 30 feet
+rank: 7
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: O6VQC1Bs4aSYDa6R
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- occult
+- primal
+traits:
+- concentrate
+- emotion
+- fear
+- illusion
+- manipulate
+- mental
+- visual

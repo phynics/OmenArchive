@@ -1,19 +1,29 @@
-name: "detect poison"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "QqxwHeYEVylkYjsO"
-rank: 1
-category: "spell"
-traditions: ["divine", "primal"]
-rarity: "uncommon"
-traits: ["concentrate", "detection", "manipulate"]
-description: |
-  You detect whether a creature is venomous or poisonous, or if an object is poison or has been poisoned. You do not ascertain whether the target is poisonous in multiple ways, nor do you learn the type or types of poison. Certain substances, like lead and alcohol, are poisons and so mask other poisons.
-  
-  Heightened (2nd) You learn the number and types of poison.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "30 feet"
-target: "1 object or creature"
+  count: two_actions
+category: spell
+description: 'You detect whether a creature is venomous or poisonous, or if an object
+  is poison or has been poisoned. You do not ascertain whether the target is poisonous
+  in multiple ways, nor do you learn the type or types of poison. Certain substances,
+  like lead and alcohol, are poisons and so mask other poisons.
+
+
+  Heightened (2nd) You learn the number and types of poison.'
+mechanicsScope: encounter
+name: detect poison
+range: 30 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: QqxwHeYEVylkYjsO
+target: 1 object or creature
+time: '2'
+traditions:
+- divine
+- primal
+traits:
+- concentrate
+- detection
+- manipulate

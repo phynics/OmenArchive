@@ -1,30 +1,47 @@
-name: "delusional pride"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "J8pL8yTshga8QOk8"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "emotion", "focus", "manipulate", "mental"]
-description: |
-  You make the target overconfident, leading it to ascribe failure to external factors. The target attempts a Will save to determine the spell's duration and is temporarily immune for 24 hours regardless of the save's result.
-  
-  Critical Success The target is unaffected.
-  
-  Success The duration is 1 round. If the target fails at an attack roll or skill check, it takes a –1 status penalty to attack rolls and skill checks until the end of its turn (or the end of its next turn, if it attempted the roll outside its turn). If the creature fails a second time while taking this penalty, the penalty increases to –2.
-  
-  Failure As success, but the duration is 10 minutes.
-  
-  Critical Failure As success, but the duration is 24 hours.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: focus
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "30 feet"
-target: "1 creature"
-duration: "varies"
+  save: will
+description: 'You make the target overconfident, leading it to ascribe failure to
+  external factors. The target attempts a Will save to determine the spell''s duration
+  and is temporarily immune for 24 hours regardless of the save''s result.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The duration is 1 round. If the target fails at an attack roll or skill
+  check, it takes a –1 status penalty to attack rolls and skill checks until the end
+  of its turn (or the end of its next turn, if it attempted the roll outside its turn).
+  If the creature fails a second time while taking this penalty, the penalty increases
+  to –2.
+
+
+  Failure As success, but the duration is 10 minutes.
+
+
+  Critical Failure As success, but the duration is 24 hours.'
+duration: varies
+mechanicsScope: encounter
+name: delusional pride
+range: 30 feet
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: J8pL8yTshga8QOk8
+target: 1 creature
+time: '2'
+traditions: []
+traits:
+- cleric
+- concentrate
+- emotion
+- focus
+- manipulate
+- mental

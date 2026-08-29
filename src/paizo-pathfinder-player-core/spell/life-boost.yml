@@ -1,22 +1,33 @@
-name: "life boost"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "fAlzXtQAASaJx0mY"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["focus", "healing", "hex", "manipulate", "vitality", "witch"]
-description: |
-  Life force from your patron floods into the target, ensuring they can continue doing your patron's will for just a little longer. The target gains fast healing 2.
-  
-  Spell Effect: Life Boost
-  
-  Heightened (+1) The fast healing increases by 2.
-time: "1"
+---
 action:
-  count: "one_action"
-range: "30 feet"
-target: "1 creature"
-duration: "4 rounds"
+  count: one_action
+category: focus
+description: 'Life force from your patron floods into the target, ensuring they can
+  continue doing your patron''s will for just a little longer. The target gains fast
+  healing 2.
+
+
+  Spell Effect: Life Boost
+
+
+  Heightened (+1) The fast healing increases by 2.'
+duration: 4 rounds
+mechanicsScope: encounter
+name: life boost
+range: 30 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: fAlzXtQAASaJx0mY
+target: 1 creature
+time: '1'
+traditions: []
+traits:
+- focus
+- healing
+- hex
+- manipulate
+- vitality
+- witch

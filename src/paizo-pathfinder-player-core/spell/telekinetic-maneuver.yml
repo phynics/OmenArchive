@@ -1,17 +1,26 @@
-name: "telekinetic maneuver"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "mrDi3v933gsmnw25"
-rank: 2
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["attack", "concentrate", "force", "manipulate"]
-description: |
-  With a rush of telekinetic power, you move a foe or something they carry. You can attempt to Disarm, Shove, Reposition, or Trip the target using a spell attack roll instead of an Athletics check.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "60 feet"
-target: "1 creature"
+  count: two_actions
+category: spell
+description: With a rush of telekinetic power, you move a foe or something they carry.
+  You can attempt to Disarm, Shove, Reposition, or Trip the target using a spell attack
+  roll instead of an Athletics check.
+mechanicsScope: encounter
+name: telekinetic maneuver
+range: 60 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: mrDi3v933gsmnw25
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- attack
+- concentrate
+- force
+- manipulate

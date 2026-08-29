@@ -1,42 +1,59 @@
-name: "phantom pain"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "R8bqnYiThB6MYTxD"
-rank: 1
-category: "spell"
-traditions: ["occult"]
-rarity: "common"
-traits: ["concentrate", "illusion", "manipulate", "mental", "nonlethal"]
-description: |
-  Illusory pain wracks the target, dealing 2d4 mental damage and (spell rank)d4[persistent,mental] damage. The target must attempt a Will save.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target takes full initial damage but no persistent damage, and the spell ends immediately.
-  
-  Failure The target takes full initial and persistent damage, and the target is Sickened 1. If the target recovers from being Sickened, the persistent damage ends and the spell ends.
-  
-  Critical Failure As failure, but the target is Sickened 2.
-  
-  Heightened (+1) The damage increases by 2d4 and the persistent damage by 1d4.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
-  "0":
-    formula: "2d4"
-    type: "mental"
-    kinds: ["damage"]
+  0:
+    formula: 2d4
+    kinds:
+    - damage
+    type: mental
 defense:
-  save: "will"
   basic: false
   counteraction: false
+  save: will
+description: 'Illusory pain wracks the target, dealing 2d4 mental damage and (spell
+  rank)d4[persistent,mental] damage. The target must attempt a Will save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target takes full initial damage but no persistent damage, and the spell
+  ends immediately.
+
+
+  Failure The target takes full initial and persistent damage, and the target is Sickened
+  1. If the target recovers from being Sickened, the persistent damage ends and the
+  spell ends.
+
+
+  Critical Failure As failure, but the target is Sickened 2.
+
+
+  Heightened (+1) The damage increases by 2d4 and the persistent damage by 1d4.'
+duration: 1 minute
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "2d4"
-range: "30 feet"
-target: "1 creature"
-duration: "1 minute"
+    0: 2d4
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: phantom pain
+range: 30 feet
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: R8bqnYiThB6MYTxD
+target: 1 creature
+time: '2'
+traditions:
+- occult
+traits:
+- concentrate
+- illusion
+- manipulate
+- mental
+- nonlethal

@@ -1,32 +1,53 @@
-name: "captivating adoration"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "jJphHQlENHFlSElH"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["aura", "cleric", "concentrate", "emotion", "focus", "manipulate", "mental", "visual"]
-description: |
-  You become intensely entrancing, and creatures are distracted by you as long as they remain within the area. You can exclude any creatures you choose from the effects. If a creature is in the aura when you Cast the Spell or when a creature enters the area for the first time, it must attempt a Will saving throw. If a creature leaves and reenters, it uses the results of its original save.
-  
-  Critical Success The creature is unaffected and temporarily immune for 1 hour.
-  
-  Success The creature is Fascinated with you for its next action, then is temporarily immune for 1 hour.
-  
-  Failure The creature is Fascinated with you.
-  
-  Critical Failure The creature is Fascinated with you, and its attitude toward you improves by one step.
-  
-  Heightened (+1) Increase the size of the emanation by 15 feet.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '15'
+category: focus
 defense:
-  save: "will"
   basic: false
   counteraction: false
-area: "15"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: will
+description: 'You become intensely entrancing, and creatures are distracted by you
+  as long as they remain within the area. You can exclude any creatures you choose
+  from the effects. If a creature is in the aura when you Cast the Spell or when a
+  creature enters the area for the first time, it must attempt a Will saving throw.
+  If a creature leaves and reenters, it uses the results of its original save.
+
+
+  Critical Success The creature is unaffected and temporarily immune for 1 hour.
+
+
+  Success The creature is Fascinated with you for its next action, then is temporarily
+  immune for 1 hour.
+
+
+  Failure The creature is Fascinated with you.
+
+
+  Critical Failure The creature is Fascinated with you, and its attitude toward you
+  improves by one step.
+
+
+  Heightened (+1) Increase the size of the emanation by 15 feet.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 minute
+mechanicsScope: encounter
+name: captivating adoration
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: jJphHQlENHFlSElH
+time: '2'
+traditions: []
+traits:
+- aura
+- cleric
+- concentrate
+- emotion
+- focus
+- manipulate
+- mental
+- visual

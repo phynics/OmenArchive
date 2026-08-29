@@ -1,30 +1,43 @@
-name: "ill omen"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "6ZIKB0151LUR19Rw"
-rank: 1
-category: "spell"
-traditions: ["occult"]
-rarity: "common"
-traits: ["concentrate", "curse", "manipulate", "misfortune"]
-description: |
-  The target is struck with misfortune, which throws it off balance. The target must attempt a Will save.
-  
-  Success The target is unaffected.
-  
-  Failure The first time during the duration that the target attempts an attack roll or skill check, it must roll twice and use the worse result.
-  
-  Critical Failure Every time during the duration that the target attempts an attack roll or skill check, it must roll twice and use the worse result.
-  
-  Spell Effect: Ill Omen
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "30 feet"
-target: "1 creature"
-duration: "1 round"
+  save: will
+description: 'The target is struck with misfortune, which throws it off balance. The
+  target must attempt a Will save.
+
+
+  Success The target is unaffected.
+
+
+  Failure The first time during the duration that the target attempts an attack roll
+  or skill check, it must roll twice and use the worse result.
+
+
+  Critical Failure Every time during the duration that the target attempts an attack
+  roll or skill check, it must roll twice and use the worse result.
+
+
+  Spell Effect: Ill Omen'
+duration: 1 round
+mechanicsScope: encounter
+name: ill omen
+range: 30 feet
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 6ZIKB0151LUR19Rw
+target: 1 creature
+time: '2'
+traditions:
+- occult
+traits:
+- concentrate
+- curse
+- manipulate
+- misfortune

@@ -1,18 +1,29 @@
-name: "disappearance"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "wfleiawxsfhpRRwf"
-rank: 8
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["illusion", "manipulate", "subtle"]
-description: |
-  You shroud a creature from others' senses. The target becomes Undetected, not just to sight but to all senses, allowing the target to count as Invisible no matter what precise and imprecise senses an observer might have. It's still possible for a creature to find the target by Seeking, looking for disturbed dust, hearing gaps in the sound spectrum, or finding some other way to discover the presence of an otherwise-undetectable creature.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 creature"
-duration: "10 minutes"
+  count: two_actions
+category: spell
+description: You shroud a creature from others' senses. The target becomes Undetected,
+  not just to sight but to all senses, allowing the target to count as Invisible no
+  matter what precise and imprecise senses an observer might have. It's still possible
+  for a creature to find the target by Seeking, looking for disturbed dust, hearing
+  gaps in the sound spectrum, or finding some other way to discover the presence of
+  an otherwise-undetectable creature.
+duration: 10 minutes
+mechanicsScope: encounter
+name: disappearance
+range: touch
+rank: 8
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: wfleiawxsfhpRRwf
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- illusion
+- manipulate
+- subtle

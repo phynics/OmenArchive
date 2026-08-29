@@ -1,30 +1,44 @@
-name: "dizzying colors"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "UKsIOWmMx4hSpafl"
-rank: 1
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "illusion", "incapacitation", "manipulate", "visual"]
-description: |
-  You unleash a swirling multitude of colors that overwhelms creatures based on their Will saves.
-  
-  Critical Success The creature is unaffected.
-  
-  Success The creature is Dazzled for 1 round.
-  
-  Failure The creature is Stunned 1, Blinded for 1 round, and dazzled for 1 minute.
-  
-  Critical Failure The creature is stunned for 1 round and blinded for 1 minute.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '15'
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-area: "15"
-duration: "1 or more rounds (see below)"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: will
+description: 'You unleash a swirling multitude of colors that overwhelms creatures
+  based on their Will saves.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature is Dazzled for 1 round.
+
+
+  Failure The creature is Stunned 1, Blinded for 1 round, and dazzled for 1 minute.
+
+
+  Critical Failure The creature is stunned for 1 round and blinded for 1 minute.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 or more rounds (see below)
+mechanicsScope: encounter
+name: dizzying colors
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: UKsIOWmMx4hSpafl
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- illusion
+- incapacitation
+- manipulate
+- visual

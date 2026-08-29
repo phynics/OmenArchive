@@ -1,17 +1,25 @@
-name: "mindlink"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "D442XMADp01qJ7Cs"
-rank: 1
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "mental"]
-description: |
-  You link your mind to the target's mind and mentally impart to that target an amount of information in an instant that could otherwise be communicated in 10 minutes.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 willing creature"
+  count: two_actions
+category: spell
+description: You link your mind to the target's mind and mentally impart to that target
+  an amount of information in an instant that could otherwise be communicated in 10
+  minutes.
+mechanicsScope: encounter
+name: mindlink
+range: touch
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: D442XMADp01qJ7Cs
+target: 1 willing creature
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- manipulate
+- mental

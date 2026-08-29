@@ -1,23 +1,35 @@
-name: "blood ward"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "dFejDNEmVj3CwYLL"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["focus", "hex", "manipulate", "witch"]
-description: |
-  Your patron's aegis descends to shield a target from harm. Designate one of the following creature traits: aberration, animal, beast, celestial, construct, dragon, elemental, fey, fiend, fungus, monitor, ooze, plant, or undead. The target gains a +1 status bonus to its saving throws and AC against creatures with that trait.
-  
-  Heightened (5th) The status bonus increases to +2.
-  
-  Spell Effect: Blood Ward
-time: "1"
+---
 action:
-  count: "one_action"
-range: "30 feet"
-target: "1 creature"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: one_action
+category: focus
+description: 'Your patron''s aegis descends to shield a target from harm. Designate
+  one of the following creature traits: aberration, animal, beast, celestial, construct,
+  dragon, elemental, fey, fiend, fungus, monitor, ooze, plant, or undead. The target
+  gains a +1 status bonus to its saving throws and AC against creatures with that
+  trait.
+
+
+  Heightened (5th) The status bonus increases to +2.
+
+
+  Spell Effect: Blood Ward'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: blood ward
+range: 30 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: dFejDNEmVj3CwYLL
+target: 1 creature
+time: '1'
+traditions: []
+traits:
+- focus
+- hex
+- manipulate
+- witch

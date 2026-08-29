@@ -1,20 +1,31 @@
-name: "flicker"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "zR67Rt3UMHKC5evy"
-rank: 4
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "teleportation"]
-description: |
-  You flicker quickly between your current plane and another. You gain resistance 5 to all damage, except force. At the end of each of your turns, you automatically teleport 10 feet in a random direction, as determined by the GM. You can Sustain the spell to teleport in this way.
-  
-  Spell Effect: Flicker
-  
-  Heightened (+2) The resistance increases by 3.
-time: "2"
+---
 action:
-  count: "two_actions"
-duration: "1 minute"
+  count: two_actions
+category: spell
+description: 'You flicker quickly between your current plane and another. You gain
+  resistance 5 to all damage, except force. At the end of each of your turns, you
+  automatically teleport 10 feet in a random direction, as determined by the GM. You
+  can Sustain the spell to teleport in this way.
+
+
+  Spell Effect: Flicker
+
+
+  Heightened (+2) The resistance increases by 3.'
+duration: 1 minute
+mechanicsScope: encounter
+name: flicker
+rank: 4
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: zR67Rt3UMHKC5evy
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- manipulate
+- teleportation

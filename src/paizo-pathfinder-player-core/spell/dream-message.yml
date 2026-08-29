@@ -1,24 +1,38 @@
-name: "dream message"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "yM3KTTSAIHhyuP14"
-rank: 3
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "mental"]
-description: |
-  You send a message to your target's dream. The message is one-way, up to 1 minute of speech (roughly 150 words). If the target is asleep, they receive the message instantly. If not, they receive it the next time they sleep. As soon as they receive it, the spell ends, and you know the message was sent.
-  
-  Heightened (4th) You can target up to 10 creatures you know by name and have met in person. You must send the same message to all of them; the spell ends for each creature individually
-time: "10 minutes"
+---
+category: spell
+description: 'You send a message to your target''s dream. The message is one-way,
+  up to 1 minute of speech (roughly 150 words). If the target is asleep, they receive
+  the message instantly. If not, they receive it the next time they sleep. As soon
+  as they receive it, the spell ends, and you know the message was sent.
+
+
+  Heightened (4th) You can target up to 10 creatures you know by name and have met
+  in person. You must send the same message to all of them; the spell ends for each
+  creature individually'
+diagnostics:
+- 'Foundry casting time retained without normalized action count: 10 minutes'
+duration: until your next daily preparations
 heightening:
-  type: "fixed"
   levels:
-    "4":
-      target: "10 creatures you know by name and have met in person"
-range: "planetary"
-target: "1 creature you know by name and have met in person"
-duration: "until your next daily preparations"
-diagnostics: ["Foundry casting time retained without normalized action count: 10 minutes"]
+    4:
+      target: 10 creatures you know by name and have met in person
+  type: fixed
+mechanicsScope: encounter
+name: dream message
+range: planetary
+rank: 3
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: yM3KTTSAIHhyuP14
+target: 1 creature you know by name and have met in person
+time: 10 minutes
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- manipulate
+- mental

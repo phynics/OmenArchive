@@ -1,29 +1,41 @@
-name: "overstuff"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "mFHQ2u4LWiejqKQG"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "focus", "manipulate"]
-description: |
-  Huge amounts of food and drink fill the target. It receives a full meal's worth of nourishment and must attempt a Fortitude save. A target Sickened by this spell takes a -10-foot status penalty to its Speed until it's no longer Sickened.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target is Sickened 1, but if it spends an action to end the condition, it succeeds automatically.
-  
-  Failure The target is Sickened 1.
-  
-  Critical Failure The target is Sickened 2.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: focus
 defense:
-  save: "fortitude"
   basic: false
   counteraction: false
-range: "30 feet"
-target: "1 living creature"
+  save: fortitude
+description: 'Huge amounts of food and drink fill the target. It receives a full meal''s
+  worth of nourishment and must attempt a Fortitude save. A target Sickened by this
+  spell takes a -10-foot status penalty to its Speed until it''s no longer Sickened.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target is Sickened 1, but if it spends an action to end the condition,
+  it succeeds automatically.
+
+
+  Failure The target is Sickened 1.
+
+
+  Critical Failure The target is Sickened 2.'
+mechanicsScope: encounter
+name: overstuff
+range: 30 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: mFHQ2u4LWiejqKQG
+target: 1 living creature
+time: '2'
+traditions: []
+traits:
+- cleric
+- concentrate
+- focus
+- manipulate

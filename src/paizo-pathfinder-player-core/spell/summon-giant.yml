@@ -1,20 +1,28 @@
-name: "summon giant"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "e9UJoVYUd5kJWUpi"
-rank: 5
-category: "spell"
-traditions: ["primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "summon"]
-description: |
-  You summon a creature that has the giant trait and whose level is 5 or lower to fight for you.
-  
-  Heightened As listed in the summon trait.
-time: "3"
+---
 action:
-  count: "three_actions"
-range: "30 feet"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: three_actions
+category: spell
+description: 'You summon a creature that has the giant trait and whose level is 5
+  or lower to fight for you.
+
+
+  Heightened As listed in the summon trait.'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: summon giant
+range: 30 feet
+rank: 5
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: e9UJoVYUd5kJWUpi
+time: '3'
+traditions:
+- primal
+traits:
+- concentrate
+- manipulate
+- summon

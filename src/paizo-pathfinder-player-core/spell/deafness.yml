@@ -1,29 +1,41 @@
-name: "deafness"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "fZPCv2VHuM2yPbC8"
-rank: 2
-category: "spell"
-traditions: ["arcane", "divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  The target loses hearing; it must attempt a Fortitude save. The target is then temporarily immune for 1 minute.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target is Deafened for 1 round.
-  
-  Failure The target is Deafened for 10 minutes.
-  
-  Critical Failure The target is Deafened permanently.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "fortitude"
   basic: false
   counteraction: false
-range: "30 feet"
-target: "1 creature"
+  save: fortitude
+description: 'The target loses hearing; it must attempt a Fortitude save. The target
+  is then temporarily immune for 1 minute.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target is Deafened for 1 round.
+
+
+  Failure The target is Deafened for 10 minutes.
+
+
+  Critical Failure The target is Deafened permanently.'
+mechanicsScope: encounter
+name: deafness
+range: 30 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: fZPCv2VHuM2yPbC8
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- manipulate

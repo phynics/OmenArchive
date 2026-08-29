@@ -1,20 +1,33 @@
-name: "true target"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "AlbpWWN87yGegoAF"
-rank: 7
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["concentrate", "fortune", "prediction"]
-description: |
-  You delve into the possible futures of the next few seconds to understand all the ways your foe might avoid harm, then cast out a vision of that future to those around you. Designate a creature. The first time each target makes an attack roll against that creature during true target's duration, the attacker rolls twice and uses the better result. The attacker also ignores circumstance penalties to the attack roll and any flat check required due to the designated creature being Concealed or Hidden.
-  
-  Spell Effect: True Target
-time: "1"
+---
 action:
-  count: "one_action"
-range: "60 feet"
-target: "4 creatures"
-duration: "until the start of your next turn"
+  count: one_action
+category: spell
+description: 'You delve into the possible futures of the next few seconds to understand
+  all the ways your foe might avoid harm, then cast out a vision of that future to
+  those around you. Designate a creature. The first time each target makes an attack
+  roll against that creature during true target''s duration, the attacker rolls twice
+  and uses the better result. The attacker also ignores circumstance penalties to
+  the attack roll and any flat check required due to the designated creature being
+  Concealed or Hidden.
+
+
+  Spell Effect: True Target'
+duration: until the start of your next turn
+mechanicsScope: encounter
+name: true target
+range: 60 feet
+rank: 7
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: AlbpWWN87yGegoAF
+target: 4 creatures
+time: '1'
+traditions:
+- arcane
+- occult
+traits:
+- concentrate
+- fortune
+- prediction

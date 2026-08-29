@@ -65,7 +65,8 @@
             "addSense",
             "addResistance",
             "addActorTrait",
-            "addCraftingAbility"
+            "addCraftingAbility",
+            "addItem"
           ]
         },
         "inputRecipes": {
@@ -292,6 +293,22 @@
             "characterFeature": { "$ref": "#/$defs/characterFeatureLiteral" }
           },
           "required": ["characterFeature"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "placeholder": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string", "format": "uuid" },
+                "name": { "type": "string", "minLength": 1 }
+              },
+              "required": ["id", "name"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["placeholder"],
           "additionalProperties": false
         }
       ]

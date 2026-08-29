@@ -1,20 +1,30 @@
-name: "truespeech"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "SwUiVavHKMWG7t5K"
-rank: 5
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "uncommon"
-traits: ["concentrate", "manipulate"]
-description: |
-  The target can understand all words regardless of language and also speak the languages of other creatures. When in a mixed group of creatures, each time the target speaks, it can choose a creature and speak in a language that creature understands, even if the target doesn't know what language that is.
-  
-  Heightened (7th) The duration is 8 hours.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 creature"
-duration: "1 hour"
+  count: two_actions
+category: spell
+description: 'The target can understand all words regardless of language and also
+  speak the languages of other creatures. When in a mixed group of creatures, each
+  time the target speaks, it can choose a creature and speak in a language that creature
+  understands, even if the target doesn''t know what language that is.
+
+
+  Heightened (7th) The duration is 8 hours.'
+duration: 1 hour
+mechanicsScope: encounter
+name: truespeech
+range: touch
+rank: 5
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: SwUiVavHKMWG7t5K
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- manipulate

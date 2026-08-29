@@ -1,19 +1,31 @@
-name: "veil of privacy"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "EoKBlgf6Smt8opaU"
-rank: 3
-category: "spell"
-traditions: ["arcane", "occult", "primal"]
-rarity: "uncommon"
-traits: ["concentrate", "manipulate"]
-description: |
-  You erect protective wards that make the target difficult to detect via magic. Veil of privacy attempts to counteract all detection, revelation, and scrying effects used against the target or the target's gear throughout the duration, counting cantrips as 1st-rank spells for this purpose. Successfully counteracting a spell that targets an area or multiple targets negates the effects for only veil of privacy's target.
-time: "10 minutes"
+---
+category: spell
 defense:
   counteraction: true
-range: "touch"
-target: "1 creature or object"
-duration: "8 hours"
-diagnostics: ["Foundry casting time retained without normalized action count: 10 minutes"]
+description: You erect protective wards that make the target difficult to detect via
+  magic. Veil of privacy attempts to counteract all detection, revelation, and scrying
+  effects used against the target or the target's gear throughout the duration, counting
+  cantrips as 1st-rank spells for this purpose. Successfully counteracting a spell
+  that targets an area or multiple targets negates the effects for only veil of privacy's
+  target.
+diagnostics:
+- 'Foundry casting time retained without normalized action count: 10 minutes'
+duration: 8 hours
+mechanicsScope: encounter
+name: veil of privacy
+range: touch
+rank: 3
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: EoKBlgf6Smt8opaU
+target: 1 creature or object
+time: 10 minutes
+traditions:
+- arcane
+- occult
+- primal
+traits:
+- concentrate
+- manipulate

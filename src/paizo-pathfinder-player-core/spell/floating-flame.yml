@@ -1,35 +1,51 @@
-name: "floating flame"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "2ZdHjnpEQJuqOYSG"
-rank: 2
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["concentrate", "fire", "manipulate"]
-description: |
-  You create a fire that burns without fuel and moves to your commands. The flame deals 3d6 fire damage to each creature in the square in which it appears, with a basic Reflex save. When you Sustain this spell, you can levitate the flame up to 10 feet. It then deals damage to each creature whose space it shared at any point during its flight. This uses the same damage and save, and you roll the damage once each time you Sustain. A given creature can take damage from floating flame only once per round.
-  
-  Heightened (+1) The damage increases by 1d6.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '5'
+category: spell
 damage:
-  "0":
-    formula: "3d6"
-    type: "fire"
-    kinds: ["damage"]
+  0:
+    formula: 3d6
+    kinds:
+    - damage
+    type: fire
 defense:
-  save: "reflex"
   basic: true
   counteraction: false
+  save: reflex
+description: 'You create a fire that burns without fuel and moves to your commands.
+  The flame deals 3d6 fire damage to each creature in the square in which it appears,
+  with a basic Reflex save. When you Sustain this spell, you can levitate the flame
+  up to 10 feet. It then deals damage to each creature whose space it shared at any
+  point during its flight. This uses the same damage and save, and you roll the damage
+  once each time you Sustain. A given creature can take damage from floating flame
+  only once per round.
+
+
+  Heightened (+1) The damage increases by 1d6.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "1d6"
-range: "30 feet"
-area: "5"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent", "Foundry sustained duration flag is not represented by CharacterSpell"]
+    0: 1d6
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: floating flame
+range: 30 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 2ZdHjnpEQJuqOYSG
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- fire
+- manipulate

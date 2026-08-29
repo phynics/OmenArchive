@@ -1,20 +1,36 @@
-name: "foresight"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "qsNeG9KZpODSACMq"
-rank: 9
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "mental", "prediction"]
-description: |
-  You gain a sixth sense that warns you of danger that might befall the target of the spell. If you choose a creature other than yourself as the target, you create a psychic link through which you can inform the target of danger. This link is a mental effect. Due to the amount of information this spell requires you to process, you can't have more than one foresight spell in effect at a time. Casting foresight again ends the previous foresight. While foresight is in effect, the target gains a +2 status bonus to initiative rolls and isn't Off-Guard against Undetected creatures or when flanked. In addition, you gain the following reaction: Foresight
-  
-  Spell Effect: Foresight
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 creature"
-duration: "1 hour"
+  count: two_actions
+category: spell
+description: 'You gain a sixth sense that warns you of danger that might befall the
+  target of the spell. If you choose a creature other than yourself as the target,
+  you create a psychic link through which you can inform the target of danger. This
+  link is a mental effect. Due to the amount of information this spell requires you
+  to process, you can''t have more than one foresight spell in effect at a time. Casting
+  foresight again ends the previous foresight. While foresight is in effect, the target
+  gains a +2 status bonus to initiative rolls and isn''t Off-Guard against Undetected
+  creatures or when flanked. In addition, you gain the following reaction: Foresight
+
+
+  Spell Effect: Foresight'
+duration: 1 hour
+mechanicsScope: encounter
+name: foresight
+range: touch
+rank: 9
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: qsNeG9KZpODSACMq
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- manipulate
+- mental
+- prediction

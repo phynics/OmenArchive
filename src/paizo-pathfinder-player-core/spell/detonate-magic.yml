@@ -1,28 +1,41 @@
-name: "detonate magic"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "kUSShxXzY1sPtJA0"
-rank: 9
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "uncommon"
-traits: ["concentrate", "manipulate"]
-description: |
-  You cause the magic within the target to dissipate in a destructive explosion. You attempt to counteract the target. If the attempt succeeds, an explosion of magical force deals 8d6 force damage with a basic Reflex save. If you successfully counteract the magic of an item, it's deactivated for 1 week (or destroyed on a critical success) and the explosion is a 5-foot emanation from the item. If you successfully counteract a spell, the effect ends and the explosion affects either all creatures in the spell's area or the target of the spell and all creatures in a 5-foot emanation around it.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '5'
+category: spell
 damage:
   UteO1cYHknNfsDxQ:
-    formula: "8d6"
-    type: "force"
-    kinds: ["damage"]
+    formula: 8d6
+    kinds:
+    - damage
+    type: force
 defense:
-  save: "reflex"
   basic: true
   counteraction: false
-range: "120 feet"
-target: "1 magic item or spell effect"
-area: "5"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: reflex
+description: You cause the magic within the target to dissipate in a destructive explosion.
+  You attempt to counteract the target. If the attempt succeeds, an explosion of magical
+  force deals 8d6 force damage with a basic Reflex save. If you successfully counteract
+  the magic of an item, it's deactivated for 1 week (or destroyed on a critical success)
+  and the explosion is a 5-foot emanation from the item. If you successfully counteract
+  a spell, the effect ends and the explosion affects either all creatures in the spell's
+  area or the target of the spell and all creatures in a 5-foot emanation around it.
+diagnostics:
+- Foundry area type is not represented when area details are absent
+mechanicsScope: encounter
+name: detonate magic
+range: 120 feet
+rank: 9
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: kUSShxXzY1sPtJA0
+target: 1 magic item or spell effect
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- manipulate

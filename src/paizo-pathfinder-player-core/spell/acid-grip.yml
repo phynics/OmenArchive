@@ -1,41 +1,60 @@
-name: "acid grip"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "9h9YCncqah6VNsKf"
-rank: 2
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["acid", "concentrate", "manipulate"]
-description: |
-  An ephemeral, taloned hand grips the target, burning it with magical acid. The target takes 2d8 acid damage plus floor(spell rank/2)d6[persistent,acid] damage depending on its Reflex save. A creature taking persistent damage from this spell takes a –10-foot status penalty to its Speeds. Spell Effect: Acid Grip
-  
-  Critical Success The creature is unaffected.
-  
-  Success The creature takes half damage and no persistent damage, and the claw moves it up to 5 feet in a direction of your choice.
-  
-  Failure The creature takes full damage and persistent damage, and the claw moves it up to 10 feet in a direction of your choice.
-  
-  Critical Failure The creature takes double damage and full persistent damage, and the claw moves it up to 20 feet in a direction of your choice.
-  
-  Heightened (+2) The initial damage increases by 2d8, and the persistent acid damage increases by 1d6.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
   YBeTuItHduzXElD5:
-    formula: "2d8"
-    type: "acid"
-    kinds: ["damage"]
+    formula: 2d8
+    kinds:
+    - damage
+    type: acid
 defense:
-  save: "reflex"
   basic: true
   counteraction: false
+  save: reflex
+description: 'An ephemeral, taloned hand grips the target, burning it with magical
+  acid. The target takes 2d8 acid damage plus floor(spell rank/2)d6[persistent,acid]
+  damage depending on its Reflex save. A creature taking persistent damage from this
+  spell takes a –10-foot status penalty to its Speeds. Spell Effect: Acid Grip
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage and no persistent damage, and the claw moves
+  it up to 5 feet in a direction of your choice.
+
+
+  Failure The creature takes full damage and persistent damage, and the claw moves
+  it up to 10 feet in a direction of your choice.
+
+
+  Critical Failure The creature takes double damage and full persistent damage, and
+  the claw moves it up to 20 feet in a direction of your choice.
+
+
+  Heightened (+2) The initial damage increases by 2d8, and the persistent acid damage
+  increases by 1d6.'
 heightening:
-  type: "interval"
-  interval: 2
   damage:
-    YBeTuItHduzXElD5: "2d8"
-range: "120 feet"
-target: "1 creature"
+    YBeTuItHduzXElD5: 2d8
+  interval: 2
+  type: interval
+mechanicsScope: encounter
+name: acid grip
+range: 120 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 9h9YCncqah6VNsKf
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- acid
+- concentrate
+- manipulate

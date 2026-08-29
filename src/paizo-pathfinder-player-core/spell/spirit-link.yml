@@ -1,32 +1,52 @@
-name: "spirit link"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "yHujiDQPdtXW797e"
-rank: 1
-category: "spell"
-traditions: ["divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "healing", "manipulate", "spirit"]
-description: |
-  You form a spiritual link with another creature, taking in its pain. When you Cast this Spell and at the start of each of your turns, if the target is below maximum Hit Points, it regains 2 Hit Points (or the difference between its current and maximum Hit Points, if that's lower). You lose as many Hit Points as the target regained.
-  
-  This is a spiritual transfer, so no effects apply that would increase the Hit Points the target regains or decrease the Hit Points you lose. This transfer also ignores any temporary Hit Points you or the target have. Since this effect doesn't involve vitality or void energy, spirit link works even if you or the target is undead. While the duration persists, you gain no benefit from regeneration or fast healing. You can Dismiss this spell, and if you're ever at 0 Hit Points, spirit link ends automatically.
-  
-  Heightened (+1) The number of Hit Points transferred each time increases by 2.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
-  "9k8ayqgvgultdghx":
-    formula: "2"
-    type: "untyped"
-    kinds: ["healing"]
+  9k8ayqgvgultdghx:
+    formula: '2'
+    kinds:
+    - healing
+    type: untyped
+description: 'You form a spiritual link with another creature, taking in its pain.
+  When you Cast this Spell and at the start of each of your turns, if the target is
+  below maximum Hit Points, it regains 2 Hit Points (or the difference between its
+  current and maximum Hit Points, if that''s lower). You lose as many Hit Points as
+  the target regained.
+
+
+  This is a spiritual transfer, so no effects apply that would increase the Hit Points
+  the target regains or decrease the Hit Points you lose. This transfer also ignores
+  any temporary Hit Points you or the target have. Since this effect doesn''t involve
+  vitality or void energy, spirit link works even if you or the target is undead.
+  While the duration persists, you gain no benefit from regeneration or fast healing.
+  You can Dismiss this spell, and if you''re ever at 0 Hit Points, spirit link ends
+  automatically.
+
+
+  Heightened (+1) The number of Hit Points transferred each time increases by 2.'
+duration: 10 minutes
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "9k8ayqgvgultdghx": "2"
-range: "30 feet"
-target: "1 willing creature"
-duration: "10 minutes"
+    9k8ayqgvgultdghx: '2'
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: spirit link
+range: 30 feet
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: yHujiDQPdtXW797e
+target: 1 willing creature
+time: '2'
+traditions:
+- divine
+- occult
+traits:
+- concentrate
+- healing
+- manipulate
+- spirit

@@ -1,20 +1,31 @@
-name: "summon fiend"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "29ytKctjg7qSW2ff"
-rank: 5
-category: "spell"
-traditions: ["divine"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "summon", "unholy"]
-description: |
-  You summon a creature that has the fiend trait and whose level is 5 or lower to fight for you. The GM might determine your deity restricts the specific types of fiends you can summon in certain cases. For instance, archdevils typically allow their followers to summon devils, but not other fiends.
-  
-  Heightened As listed in the summon trait.
-time: "3"
+---
 action:
-  count: "three_actions"
-range: "30 feet"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: three_actions
+category: spell
+description: 'You summon a creature that has the fiend trait and whose level is 5
+  or lower to fight for you. The GM might determine your deity restricts the specific
+  types of fiends you can summon in certain cases. For instance, archdevils typically
+  allow their followers to summon devils, but not other fiends.
+
+
+  Heightened As listed in the summon trait.'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: summon fiend
+range: 30 feet
+rank: 5
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 29ytKctjg7qSW2ff
+time: '3'
+traditions:
+- divine
+traits:
+- concentrate
+- manipulate
+- summon
+- unholy

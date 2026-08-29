@@ -1,33 +1,46 @@
-name: "vampiric feast"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "N1Z1oLPdBxaSgrEE"
-rank: 3
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "death", "manipulate", "void"]
-description: |
-  Your touch leeches the lifeblood out of a target to empower yourself. You deal 6d6 void damage to the target. You gain temporary Hit Points equal to half the void damage the target takes (after applying resistances and the like). You lose any remaining temporary Hit Points after 1 minute.
-  
-  Heightened (+1) The damage increases by 2d6.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
-  "0":
-    formula: "6d6"
-    type: "void"
-    kinds: ["damage"]
+  0:
+    formula: 6d6
+    kinds:
+    - damage
+    type: void
 defense:
-  save: "fortitude"
   basic: true
   counteraction: false
+  save: fortitude
+description: 'Your touch leeches the lifeblood out of a target to empower yourself.
+  You deal 6d6 void damage to the target. You gain temporary Hit Points equal to half
+  the void damage the target takes (after applying resistances and the like). You
+  lose any remaining temporary Hit Points after 1 minute.
+
+
+  Heightened (+1) The damage increases by 2d6.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "2d6"
-range: "touch"
-target: "1 living creature"
+    0: 2d6
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: vampiric feast
+range: touch
+rank: 3
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: N1Z1oLPdBxaSgrEE
+target: 1 living creature
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- death
+- manipulate
+- void

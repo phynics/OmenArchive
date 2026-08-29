@@ -1,17 +1,25 @@
-name: "sending"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "R9xqCBblkS5KE4y7"
-rank: 5
-category: "spell"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "mental"]
-description: |
-  You send the creature a mental message of 25 words or fewer, and it can respond immediately with its own message of 25 words or fewer.
-time: "3"
+---
 action:
-  count: "three_actions"
-range: "planetary"
-target: "1 creature you know well"
+  count: three_actions
+category: spell
+description: You send the creature a mental message of 25 words or fewer, and it can
+  respond immediately with its own message of 25 words or fewer.
+mechanicsScope: encounter
+name: sending
+range: planetary
+rank: 5
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: R9xqCBblkS5KE4y7
+target: 1 creature you know well
+time: '3'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- concentrate
+- manipulate
+- mental

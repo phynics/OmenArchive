@@ -1,30 +1,43 @@
-name: "darkvision"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "pZTqGY1MLRjgKasV"
-rank: 2
-category: "spell"
-traditions: ["arcane", "divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  You grant yourself supernatural sight in areas of darkness. You gain Darkvision.
-  
-  Spell Effect: Darkvision
-  
-  Spell Effect: Darkvision (24 hours)
-  
-  Heightened (3rd) The spell's range is touch and it targets 1 willing creature.
-  
-  Heightened (5th) The spell's range is touch and it targets 1 willing creature. The duration is until the next time you make your daily preparations.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
+description: 'You grant yourself supernatural sight in areas of darkness. You gain
+  Darkvision.
+
+
+  Spell Effect: Darkvision
+
+
+  Spell Effect: Darkvision (24 hours)
+
+
+  Heightened (3rd) The spell''s range is touch and it targets 1 willing creature.
+
+
+  Heightened (5th) The spell''s range is touch and it targets 1 willing creature.
+  The duration is until the next time you make your daily preparations.'
+duration: 1 hour
 heightening:
-  type: "fixed"
   levels:
-    "3":
-      range: "touch"
-      target: "1 willing creature"
-duration: "1 hour"
+    3:
+      range: touch
+      target: 1 willing creature
+  type: fixed
+mechanicsScope: encounter
+name: darkvision
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: pZTqGY1MLRjgKasV
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- manipulate

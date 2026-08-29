@@ -1,29 +1,39 @@
-name: "shatter"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "1xbFBQDRs0hT5xZ9"
-rank: 2
-category: "spell"
-traditions: ["occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "sonic"]
-description: |
-  A high-frequency sonic attack shatters a nearby object. You deal 2d10 sonic damage to the object, ignoring the object's Hardness if it is 4 or lower.
-  
-  Heightened (+1) The damage increases by 1d10, and the Hardness the spell ignores increases by 2.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 damage:
-  "0":
-    formula: "2d10"
-    type: "sonic"
-    kinds: ["damage"]
+  0:
+    formula: 2d10
+    kinds:
+    - damage
+    type: sonic
+description: 'A high-frequency sonic attack shatters a nearby object. You deal 2d10
+  sonic damage to the object, ignoring the object''s Hardness if it is 4 or lower.
+
+
+  Heightened (+1) The damage increases by 1d10, and the Hardness the spell ignores
+  increases by 2.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "1d10"
-range: "30 feet"
-target: "1 unattended object"
+    0: 1d10
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: shatter
+range: 30 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 1xbFBQDRs0hT5xZ9
+target: 1 unattended object
+time: '2'
+traditions:
+- occult
+- primal
+traits:
+- concentrate
+- manipulate
+- sonic

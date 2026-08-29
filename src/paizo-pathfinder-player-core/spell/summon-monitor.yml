@@ -1,20 +1,30 @@
-name: "summon monitor"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "ZbEHglw5tkJ3grQZ"
-rank: 5
-category: "spell"
-traditions: ["divine"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "summon"]
-description: |
-  You summon a creature that has the monitor trait and whose level is 5 or lower to fight for you. The GM might determine your deity restricts the specific types of monitors you can summon in certain cases. For instance, Urgathoa typically doesn't allow her followers to summon psychopomps.
-  
-  Heightened As listed in the summon trait.
-time: "3"
+---
 action:
-  count: "three_actions"
-range: "30 feet"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+  count: three_actions
+category: spell
+description: 'You summon a creature that has the monitor trait and whose level is
+  5 or lower to fight for you. The GM might determine your deity restricts the specific
+  types of monitors you can summon in certain cases. For instance, Urgathoa typically
+  doesn''t allow her followers to summon psychopomps.
+
+
+  Heightened As listed in the summon trait.'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: summon monitor
+range: 30 feet
+rank: 5
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: ZbEHglw5tkJ3grQZ
+time: '3'
+traditions:
+- divine
+traits:
+- concentrate
+- manipulate
+- summon

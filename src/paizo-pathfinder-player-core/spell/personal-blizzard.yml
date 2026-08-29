@@ -1,49 +1,67 @@
-name: "personal blizzard"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "g4MAIQodRDVfNp1B"
-rank: 3
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cold", "focus", "hex", "witch"]
-description: |
-  Your patron's breath becomes blizzard of obscuring, scouring ice that follows your target. The target attempts a Fortitude save.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target takes 1d6[cold] damage, and the spell ends.
-  
-  Failure The target takes 1d6[cold] damage and 1d6[persistent,cold] damage. The persistent damage automatically ends when the spell ends. It is Concealed to other creatures, and other creatures are concealed to it.
-  
-  Critical Failure As failure, but both the cold damage and the persistent cold damage increase to 2d6.
-  
-  Heightened (+1) The cold damage and persistent cold damage increase by 1 (2 on a critical failure).
-time: "1"
+---
 action:
-  count: "one_action"
+  count: one_action
+category: focus
 damage:
-  "0":
-    formula: "1d6"
-    type: "cold"
-    kinds: ["damage"]
-  "1":
-    formula: "1d6"
-    type: "cold"
-    category: "persistent"
-    kinds: ["damage"]
+  0:
+    formula: 1d6
+    kinds:
+    - damage
+    type: cold
+  1:
+    category: persistent
+    formula: 1d6
+    kinds:
+    - damage
+    type: cold
 defense:
-  save: "fortitude"
   basic: false
   counteraction: false
+  save: fortitude
+description: 'Your patron''s breath becomes blizzard of obscuring, scouring ice that
+  follows your target. The target attempts a Fortitude save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target takes 1d6[cold] damage, and the spell ends.
+
+
+  Failure The target takes 1d6[cold] damage and 1d6[persistent,cold] damage. The persistent
+  damage automatically ends when the spell ends. It is Concealed to other creatures,
+  and other creatures are concealed to it.
+
+
+  Critical Failure As failure, but both the cold damage and the persistent cold damage
+  increase to 2d6.
+
+
+  Heightened (+1) The cold damage and persistent cold damage increase by 1 (2 on a
+  critical failure).'
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "0": "1"
-    "1": "1"
-range: "30 feet"
-target: "1 creature"
-duration: "1 minute"
-diagnostics: ["Foundry sustained duration flag is not represented by CharacterSpell"]
+    0: '1'
+    1: '1'
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: personal blizzard
+range: 30 feet
+rank: 3
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: g4MAIQodRDVfNp1B
+target: 1 creature
+time: '1'
+traditions: []
+traits:
+- cold
+- focus
+- hex
+- witch

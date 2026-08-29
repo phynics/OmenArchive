@@ -1,26 +1,39 @@
-name: "mountain resilience"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "2BV2yYPfVJ5zirZt"
-rank: 4
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["concentrate", "earth", "manipulate"]
-description: |
-  The target's skin hardens like the stone of a mountain face. It gains resistance 5 to physical damage, except adamantine. Each time the target is hit by a bludgeoning, piercing, or slashing attack, mountain resilience's duration decreases by 1 minute.
-  
-  Spell Effect: Mountain Resilience
-  
-  Heightened (6th) The resistance increases to 10.
-  
-  Heightened (8th) The resistance increases to 15.
-  
-  Heightened (10th) The resistance increases to 20.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "touch"
-target: "1 creature"
-duration: "20 minutes"
+  count: two_actions
+category: spell
+description: 'The target''s skin hardens like the stone of a mountain face. It gains
+  resistance 5 to physical damage, except adamantine. Each time the target is hit
+  by a bludgeoning, piercing, or slashing attack, mountain resilience''s duration
+  decreases by 1 minute.
+
+
+  Spell Effect: Mountain Resilience
+
+
+  Heightened (6th) The resistance increases to 10.
+
+
+  Heightened (8th) The resistance increases to 15.
+
+
+  Heightened (10th) The resistance increases to 20.'
+duration: 20 minutes
+mechanicsScope: encounter
+name: mountain resilience
+range: touch
+rank: 4
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 2BV2yYPfVJ5zirZt
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- earth
+- manipulate

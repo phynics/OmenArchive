@@ -1,17 +1,25 @@
-name: "patron's puppet"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "aq1yonHeYpbaj3XI"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["focus", "hex", "witch"]
-description: |
-  Trigger Your turn begins.
-  
-  At your unspoken plea, your patron temporarily assumes control over your familiar. You Command your familiar, allowing it to take its normal actions this turn. Your Command does not have the auditory or concentrate traits; your patron simply moves its agent directly.
-time: "Free"
+---
 action:
-  count: "free_action"
+  count: free_action
+category: focus
+description: 'Trigger Your turn begins.
+
+
+  At your unspoken plea, your patron temporarily assumes control over your familiar.
+  You Command your familiar, allowing it to take its normal actions this turn. Your
+  Command does not have the auditory or concentrate traits; your patron simply moves
+  its agent directly.'
+mechanicsScope: encounter
+name: patron's puppet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: aq1yonHeYpbaj3XI
+time: Free
+traditions: []
+traits:
+- focus
+- hex
+- witch

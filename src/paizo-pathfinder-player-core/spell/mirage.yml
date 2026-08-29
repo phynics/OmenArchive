@@ -1,21 +1,36 @@
-name: "mirage"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "HBJPsonQnWcC3qdX"
+---
+area: '50'
+category: spell
+description: 'You create an illusion that causes natural terrain to look, sound, feel,
+  and smell like a different kind of terrain. This doesn''t disguise any structures
+  or creatures in the area.
+
+
+  Any creature that touches the illusion or uses the Seek action to examine it can
+  attempt to disbelieve your illusion.
+
+
+  Heightened (5th) Your image can also disguise structures or create illusory structures
+  (but still doesn''t disguise creatures).'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- 'Foundry casting time retained without normalized action count: 10 minutes'
+duration: until your next daily preparations
+mechanicsScope: encounter
+name: mirage
+range: 500 feet
 rank: 4
-category: "spell"
-traditions: ["arcane", "occult", "primal"]
-rarity: "uncommon"
-traits: ["concentrate", "illusion", "manipulate"]
-description: |
-  You create an illusion that causes natural terrain to look, sound, feel, and smell like a different kind of terrain. This doesn't disguise any structures or creatures in the area.
-  
-  Any creature that touches the illusion or uses the Seek action to examine it can attempt to disbelieve your illusion.
-  
-  Heightened (5th) Your image can also disguise structures or create illusory structures (but still doesn't disguise creatures).
-time: "10 minutes"
-range: "500 feet"
-area: "50"
-duration: "until your next daily preparations"
-diagnostics: ["Foundry area type is not represented when area details are absent", "Foundry casting time retained without normalized action count: 10 minutes"]
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: HBJPsonQnWcC3qdX
+time: 10 minutes
+traditions:
+- arcane
+- occult
+- primal
+traits:
+- concentrate
+- illusion
+- manipulate

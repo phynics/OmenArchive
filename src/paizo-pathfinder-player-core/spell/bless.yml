@@ -1,25 +1,38 @@
-name: "bless"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "XSujb7EsSwKl19Uu"
-rank: 1
-category: "spell"
-traditions: ["divine", "occult"]
-rarity: "common"
-traits: ["aura", "concentrate", "manipulate", "mental"]
-description: |
-  Blessings from beyond help your companions strike true. You and your allies gain a +1 status bonus to attack rolls while within the emanation. Once per round on subsequent turns, you can Sustain the spell to increase the emanation's radius by 10 feet.
-  
-  Bless can counteract Bane.
-  
-  Aura: Bless
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '15'
+category: spell
 defense:
   counteraction: true
-target: "you and allies in the area"
-area: "15"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+description: 'Blessings from beyond help your companions strike true. You and your
+  allies gain a +1 status bonus to attack rolls while within the emanation. Once per
+  round on subsequent turns, you can Sustain the spell to increase the emanation''s
+  radius by 10 feet.
+
+
+  Bless can counteract Bane.
+
+
+  Aura: Bless'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 minute
+mechanicsScope: encounter
+name: bless
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: XSujb7EsSwKl19Uu
+target: you and allies in the area
+time: '2'
+traditions:
+- divine
+- occult
+traits:
+- aura
+- concentrate
+- manipulate
+- mental

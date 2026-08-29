@@ -1,26 +1,43 @@
-name: "mystic armor"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "aAbfKn8maGjJjk2W"
-rank: 1
-category: "spell"
-traditions: ["arcane", "divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  You ward yourself with shimmering magical energy, gaining a +1 item bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor, you use your unarmored proficiency to calculate your AC.
-  
-  Spell Effect: Mystic Armor
-  
-  Heightened (4th) You gain a +1 item bonus to saving throws.
-  
-  Heightened (6th) The item bonus to AC increases to +2, and you gain a +1 item bonus to saving throws.
-  
-  Heightened (8th) The item bonus to AC increases to +2, and you gain a +2 item bonus to saving throws.
-  
-  Heightened (10th) The item bonus to AC increases to +3, and you gain a +3 item bonus to saving throws.
-time: "2"
+---
 action:
-  count: "two_actions"
-duration: "until your next daily preparations"
+  count: two_actions
+category: spell
+description: 'You ward yourself with shimmering magical energy, gaining a +1 item
+  bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor,
+  you use your unarmored proficiency to calculate your AC.
+
+
+  Spell Effect: Mystic Armor
+
+
+  Heightened (4th) You gain a +1 item bonus to saving throws.
+
+
+  Heightened (6th) The item bonus to AC increases to +2, and you gain a +1 item bonus
+  to saving throws.
+
+
+  Heightened (8th) The item bonus to AC increases to +2, and you gain a +2 item bonus
+  to saving throws.
+
+
+  Heightened (10th) The item bonus to AC increases to +3, and you gain a +3 item bonus
+  to saving throws.'
+duration: until your next daily preparations
+mechanicsScope: encounter
+name: mystic armor
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: aAbfKn8maGjJjk2W
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- manipulate

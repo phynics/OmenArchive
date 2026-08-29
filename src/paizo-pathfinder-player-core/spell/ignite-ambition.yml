@@ -1,31 +1,50 @@
-name: "ignite ambition"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "Dj44lViYKvOJ8a53"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "emotion", "focus", "mental", "subtle"]
-description: |
-  Trigger You or an ally in range attempt to use a mental effect to convince a creature to do something (such as a Coerce, Request, or a Suggestion spell).
-  
-  You strengthen a target's ambition, increase its resentment of allies, and make its allegiances more susceptible to change. The target must attempt a Will save.
-  
-  Critical Success The target is unaffected and realized you attempted to influence its reaction with magic.
-  
-  Success The target takes a -1 status penalty to its defenses against the triggering effect. This penalty is -2 if the target is being encouraged to advance its own ambitions.The target doesn't realize you Cast the Spell on it.
-  
-  Failure As success, but the penalty is -4 if the target is being encouraged to advance its own ambitions.
-  
-  Critical Failure As success, but the creature automatically follows a suggestion that advances its own ambitions.
-time: "reaction"
+---
 action:
-  count: "reaction"
+  count: reaction
+category: focus
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "60 feet"
-target: "one creature being influenced"
+  save: will
+description: 'Trigger You or an ally in range attempt to use a mental effect to convince
+  a creature to do something (such as a Coerce, Request, or a Suggestion spell).
+
+
+  You strengthen a target''s ambition, increase its resentment of allies, and make
+  its allegiances more susceptible to change. The target must attempt a Will save.
+
+
+  Critical Success The target is unaffected and realized you attempted to influence
+  its reaction with magic.
+
+
+  Success The target takes a -1 status penalty to its defenses against the triggering
+  effect. This penalty is -2 if the target is being encouraged to advance its own
+  ambitions.The target doesn''t realize you Cast the Spell on it.
+
+
+  Failure As success, but the penalty is -4 if the target is being encouraged to advance
+  its own ambitions.
+
+
+  Critical Failure As success, but the creature automatically follows a suggestion
+  that advances its own ambitions.'
+mechanicsScope: encounter
+name: ignite ambition
+range: 60 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Dj44lViYKvOJ8a53
+target: one creature being influenced
+time: reaction
+traditions: []
+traits:
+- cleric
+- concentrate
+- emotion
+- focus
+- mental
+- subtle

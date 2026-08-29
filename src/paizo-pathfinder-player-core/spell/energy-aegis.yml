@@ -1,21 +1,33 @@
-name: "energy aegis"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "m2xFMNyQiUKQDRaj"
-rank: 7
-category: "spell"
-traditions: ["arcane", "divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  You protect the target with a powerful, long-lasting energy barrier. The target gains resistance 5 to acid, cold, electricity, fire, force, sonic, vitality, and void damage.
-  
+---
+category: spell
+description: 'You protect the target with a powerful, long-lasting energy barrier.
+  The target gains resistance 5 to acid, cold, electricity, fire, force, sonic, vitality,
+  and void damage.
+
+
   Spell Effect: Energy Aegis
-  
-  Heightened (9th) The resistances increase to 10.
-time: "1 minute"
-range: "touch"
-target: "1 creature"
-duration: "until your next daily preparations"
-diagnostics: ["Foundry casting time retained without normalized action count: 1 minute"]
+
+
+  Heightened (9th) The resistances increase to 10.'
+diagnostics:
+- 'Foundry casting time retained without normalized action count: 1 minute'
+duration: until your next daily preparations
+mechanicsScope: encounter
+name: energy aegis
+range: touch
+rank: 7
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: m2xFMNyQiUKQDRaj
+target: 1 creature
+time: 1 minute
+traditions:
+- arcane
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- manipulate

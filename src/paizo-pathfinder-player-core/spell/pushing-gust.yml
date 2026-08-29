@@ -1,29 +1,40 @@
-name: "pushing gust"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "myC2EIrsjmB8xosi"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["air", "cleric", "concentrate", "focus", "manipulate"]
-description: |
-  Giving the air a push, you buffet the target with a powerful gust of wind; it must attempt a Fortitude save.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target is pushed 5 feet away from you.
-  
-  Failure The target is pushed 10 feet away from you.
-  
-  Critical Failure The target is pushed 10 feet away from you and knocked Prone.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: focus
 defense:
-  save: "fortitude"
   basic: false
   counteraction: false
-range: "500 feet"
-target: "1 creature"
+  save: fortitude
+description: 'Giving the air a push, you buffet the target with a powerful gust of
+  wind; it must attempt a Fortitude save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target is pushed 5 feet away from you.
+
+
+  Failure The target is pushed 10 feet away from you.
+
+
+  Critical Failure The target is pushed 10 feet away from you and knocked Prone.'
+mechanicsScope: encounter
+name: pushing gust
+range: 500 feet
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: myC2EIrsjmB8xosi
+target: 1 creature
+time: '2'
+traditions: []
+traits:
+- air
+- cleric
+- concentrate
+- focus
+- manipulate

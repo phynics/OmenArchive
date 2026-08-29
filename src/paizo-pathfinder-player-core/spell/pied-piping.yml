@@ -1,28 +1,48 @@
-name: "pied piping"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "Um0aaJotqMKGmAlR"
-rank: 10
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["bard", "composition", "concentrate", "focus", "incapacitation", "mental", "sonic"]
-description: |
-  Your performance enraptures listeners, compelling them to follow you. Each creature within the emanation must attempt a Will save when you Cast the Spell or the first time they enter the area, after which they become temporarily immune for 1 day. Once per turn, you can Sustain the composition to increase the emanation's radius by 5 feet. You can Dismiss the spell.
-  
-  Critical Success The creature is unaffected.
-  
-  Success The creature is Fascinated with you.
-  
-  Failure The creature is fascinated by you and uses all its actions to move toward you and compliment your performance. This effect ends if a hostile action is used against the affected creature.
-  
-  Critical Failure The target gains the minion trait and is controlled by you. This effect ends if a hostile action is used against the affected creature, or if you direct the creature to use any action that causes it harm.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: focus
 defense:
-  save: "will"
   basic: false
   counteraction: false
-duration: "1 minute"
+  save: will
+description: 'Your performance enraptures listeners, compelling them to follow you.
+  Each creature within the emanation must attempt a Will save when you Cast the Spell
+  or the first time they enter the area, after which they become temporarily immune
+  for 1 day. Once per turn, you can Sustain the composition to increase the emanation''s
+  radius by 5 feet. You can Dismiss the spell.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature is Fascinated with you.
+
+
+  Failure The creature is fascinated by you and uses all its actions to move toward
+  you and compliment your performance. This effect ends if a hostile action is used
+  against the affected creature.
+
+
+  Critical Failure The target gains the minion trait and is controlled by you. This
+  effect ends if a hostile action is used against the affected creature, or if you
+  direct the creature to use any action that causes it harm.'
+duration: 1 minute
+mechanicsScope: encounter
+name: pied piping
+rank: 10
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Um0aaJotqMKGmAlR
+time: '2'
+traditions: []
+traits:
+- bard
+- composition
+- concentrate
+- focus
+- incapacitation
+- mental
+- sonic

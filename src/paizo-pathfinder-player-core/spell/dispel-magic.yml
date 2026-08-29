@@ -1,19 +1,30 @@
-name: "dispel magic"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "9HpwDN4MYQJnW0LG"
-rank: 2
-category: "spell"
-traditions: ["arcane", "divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
   counteraction: true
-range: "120 feet"
-target: "1 spell effect or unattended magic item"
+description: You unravel the magic behind a spell or effect. Attempt a counteract
+  check against the target. If you successfully counteract a magic item, the item
+  becomes a mundane item of its type for 10 minutes. This doesn't change the item's
+  non-magical properties. If the target is an artifact or similar item, you automatically
+  fail.
+mechanicsScope: encounter
+name: dispel magic
+range: 120 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 9HpwDN4MYQJnW0LG
+target: 1 spell effect or unattended magic item
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- manipulate

@@ -1,29 +1,48 @@
-name: "vibrant pattern"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "RQjSQVZRG497cJhX"
-rank: 6
-category: "spell"
-traditions: ["arcane", "occult"]
-rarity: "common"
-traits: ["illusion", "incapacitation", "manipulate", "subtle", "visual"]
-description: |
-  You create a pattern of lights that pulses with intensity. Creatures are Dazzled while inside the pattern. In addition, a creature must attempt a Will saving throw if it's inside the pattern when you cast it, enters the pattern, ends its turn within the pattern, or uses a Seek or Interact action on the pattern. A creature currently Blinded by the pattern doesn't need to attempt new saving throws.
-  
-  Success The creature is unaffected.
-  
-  Failure The creature is Blinded by the pattern. If it exits the pattern, it can attempt a new save to recover from the Blinded condition at the end of each of its turns, to a maximum duration of 1 minute.
-  
-  Critical Failure The creature is Blinded for 1 minute.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '10'
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: false
-range: "120 feet"
-area: "10"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent", "Foundry sustained duration flag is not represented by CharacterSpell"]
+  save: will
+description: 'You create a pattern of lights that pulses with intensity. Creatures
+  are Dazzled while inside the pattern. In addition, a creature must attempt a Will
+  saving throw if it''s inside the pattern when you cast it, enters the pattern, ends
+  its turn within the pattern, or uses a Seek or Interact action on the pattern. A
+  creature currently Blinded by the pattern doesn''t need to attempt new saving throws.
+
+
+  Success The creature is unaffected.
+
+
+  Failure The creature is Blinded by the pattern. If it exits the pattern, it can
+  attempt a new save to recover from the Blinded condition at the end of each of its
+  turns, to a maximum duration of 1 minute.
+
+
+  Critical Failure The creature is Blinded for 1 minute.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+mechanicsScope: encounter
+name: vibrant pattern
+range: 120 feet
+rank: 6
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: RQjSQVZRG497cJhX
+time: '2'
+traditions:
+- arcane
+- occult
+traits:
+- illusion
+- incapacitation
+- manipulate
+- subtle
+- visual

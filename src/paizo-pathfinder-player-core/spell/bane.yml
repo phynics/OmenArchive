@@ -1,27 +1,41 @@
-name: "bane"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "7ZinJNzxq0XF0oMx"
-rank: 1
-category: "spell"
-traditions: ["divine", "occult"]
-rarity: "common"
-traits: ["aura", "concentrate", "manipulate", "mental"]
-description: |
-  You fill the minds of your enemies with doubt. Enemies in the area must succeed at a Will save or take a –1 status penalty to attack rolls as long as they are in the area. Once per round on subsequent turns, you can Sustain the spell to increase the emanation's radius by 10 feet and force enemies in the area that weren't yet affected to attempt another saving throw.
-  
-  Bane can counteract Bless.
-  
-  Spell Effect: Bane
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '10'
+category: spell
 defense:
-  save: "will"
   basic: false
   counteraction: true
-target: "enemies in the area"
-area: "10"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: will
+description: 'You fill the minds of your enemies with doubt. Enemies in the area must
+  succeed at a Will save or take a –1 status penalty to attack rolls as long as they
+  are in the area. Once per round on subsequent turns, you can Sustain the spell to
+  increase the emanation''s radius by 10 feet and force enemies in the area that weren''t
+  yet affected to attempt another saving throw.
+
+
+  Bane can counteract Bless.
+
+
+  Spell Effect: Bane'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 minute
+mechanicsScope: encounter
+name: bane
+rank: 1
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 7ZinJNzxq0XF0oMx
+target: enemies in the area
+time: '2'
+traditions:
+- divine
+- occult
+traits:
+- aura
+- concentrate
+- manipulate
+- mental

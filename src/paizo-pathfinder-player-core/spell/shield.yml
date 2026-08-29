@@ -1,24 +1,40 @@
-name: "shield"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "TVKNbcgTee19PXZR"
-rank: 0
-category: "cantrip"
-traditions: ["arcane", "divine", "occult"]
-rarity: "common"
-traits: ["cantrip", "concentrate", "force"]
-description: |
-  You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.
-  
-  While the spell is in effect, you can use the Shield Block reaction with your magic shield. The shield has Hardness 5. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes.
-  
-  Spell Effect: Shield
-  
-  Effect: Shield Immunity
-  
-  Heightened (+2) The shield's Hardness increases by 5.
-time: "1"
+---
 action:
-  count: "one_action"
-duration: "until the start of your next turn"
+  count: one_action
+category: cantrip
+description: 'You raise a magical shield of force. This counts as using the Raise
+  a Shield action, giving you a +1 circumstance bonus to AC until the start of your
+  next turn, but it doesn''t require a hand to use.
+
+
+  While the spell is in effect, you can use the Shield Block reaction with your magic
+  shield. The shield has Hardness 5. You can use the spell''s reaction to reduce damage
+  from any spell or magical effect, even if it doesn''t deal physical damage. After
+  you use Shield Block, the spell ends and you can''t cast it again for 10 minutes.
+
+
+  Spell Effect: Shield
+
+
+  Effect: Shield Immunity
+
+
+  Heightened (+2) The shield''s Hardness increases by 5.'
+duration: until the start of your next turn
+mechanicsScope: encounter
+name: shield
+rank: 0
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: TVKNbcgTee19PXZR
+time: '1'
+traditions:
+- arcane
+- divine
+- occult
+traits:
+- cantrip
+- concentrate
+- force

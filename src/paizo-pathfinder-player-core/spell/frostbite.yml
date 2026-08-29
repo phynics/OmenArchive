@@ -1,35 +1,48 @@
-name: "frostbite"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "IxhGEKl63R4QBvkj"
-rank: 0
-category: "cantrip"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["cantrip", "cold", "concentrate", "manipulate"]
-description: |
-  An orb of biting cold coalesces around your target, freezing its body. The target takes 2d4 cold damage with a basic Fortitude save. On a critical failure, the target also gains weakness 1 to bludgeoning until the start of your next turn.
-  
-  Spell Effect: Frostbite
-  
-  Heightened (+1) The damage increases by 1d4 and the weakness on a critical failure increases by 1.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: cantrip
 damage:
-  "3bsJUDEgedKhPx6T":
-    formula: "2d4"
-    type: "cold"
-    kinds: ["damage"]
+  3bsJUDEgedKhPx6T:
+    formula: 2d4
+    kinds:
+    - damage
+    type: cold
 defense:
-  save: "fortitude"
   basic: true
   counteraction: false
+  save: fortitude
+description: 'An orb of biting cold coalesces around your target, freezing its body.
+  The target takes 2d4 cold damage with a basic Fortitude save. On a critical failure,
+  the target also gains weakness 1 to bludgeoning until the start of your next turn.
+
+
+  Spell Effect: Frostbite
+
+
+  Heightened (+1) The damage increases by 1d4 and the weakness on a critical failure
+  increases by 1.'
 heightening:
-  type: "interval"
-  interval: 1
   damage:
-    "3bsJUDEgedKhPx6T": "1d4"
-range: "60 feet"
-target: "1 creature"
+    3bsJUDEgedKhPx6T: 1d4
+  interval: 1
+  type: interval
+mechanicsScope: encounter
+name: frostbite
+range: 60 feet
+rank: 0
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: IxhGEKl63R4QBvkj
+target: 1 creature
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- cantrip
+- cold
+- concentrate
+- manipulate

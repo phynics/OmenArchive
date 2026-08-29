@@ -1,23 +1,38 @@
-name: "fatal aria"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "lyJDBD9OFW11vLyT"
-rank: 10
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["bard", "composition", "concentrate", "death", "emotion", "focus", "mental"]
-description: |
-  You perform music so perfect that the target may die of joy or sorrow. Once targeted, the creature becomes temporarily immune for 1 minute. The effect of the spell depends on the target's level and current Hit Points.
-  
-  16th or Lower The target dies instantly.
-  
-  17th If the target has 50 Hit Points or fewer, it dies instantly; otherwise, it drops to 0 Hit Points and becomes Dying 1.
-  
-  18th or Higher The target takes 50[untyped] damage. If this brings it to 0 Hit Points, it dies instantly.
-time: "1"
+---
 action:
-  count: "one_action"
-range: "30 feet"
-target: "1 creature"
+  count: one_action
+category: focus
+description: 'You perform music so perfect that the target may die of joy or sorrow.
+  Once targeted, the creature becomes temporarily immune for 1 minute. The effect
+  of the spell depends on the target''s level and current Hit Points.
+
+
+  16th or Lower The target dies instantly.
+
+
+  17th If the target has 50 Hit Points or fewer, it dies instantly; otherwise, it
+  drops to 0 Hit Points and becomes Dying 1.
+
+
+  18th or Higher The target takes 50[untyped] damage. If this brings it to 0 Hit Points,
+  it dies instantly.'
+mechanicsScope: encounter
+name: fatal aria
+range: 30 feet
+rank: 10
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: lyJDBD9OFW11vLyT
+target: 1 creature
+time: '1'
+traditions: []
+traits:
+- bard
+- composition
+- concentrate
+- death
+- emotion
+- focus
+- mental

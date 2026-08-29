@@ -1,21 +1,38 @@
-name: "contingency"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "WG91Z5TiR6oO5FOw"
-rank: 7
-category: "spell"
-traditions: ["arcane"]
-rarity: "common"
-traits: ["concentrate", "manipulate"]
-description: |
-  You prepare a spell that will trigger later. While casting contingency, you also cast another spell of 4th rank or lower with a casting time of no more than 3 actions. This companion spell must be one that can affect you. You must make any decisions for the spell when you cast contingency, such as choosing a damage type for resist energy. During the casting, choose a trigger under which the spell will be cast, using the same restrictions as for the trigger of a Ready action. Once contingency is cast, you can cause the companion spell to come into effect as a reaction with that trigger. It affects only you, even if it would affect more creatures. If you define complicated conditions, as determined by the GM, the trigger might fail. If you cast contingency again, the newer casting supersedes the older.
-  
+---
+category: spell
+description: 'You prepare a spell that will trigger later. While casting contingency,
+  you also cast another spell of 4th rank or lower with a casting time of no more
+  than 3 actions. This companion spell must be one that can affect you. You must make
+  any decisions for the spell when you cast contingency, such as choosing a damage
+  type for resist energy. During the casting, choose a trigger under which the spell
+  will be cast, using the same restrictions as for the trigger of a Ready action.
+  Once contingency is cast, you can cause the companion spell to come into effect
+  as a reaction with that trigger. It affects only you, even if it would affect more
+  creatures. If you define complicated conditions, as determined by the GM, the trigger
+  might fail. If you cast contingency again, the newer casting supersedes the older.
+
+
   Heightened (8th) You can choose a spell of 5th rank or lower.
-  
+
+
   Heightened (9th) You can choose a spell of 6th rank or lower.
-  
-  Heightened (10th) You can choose a spell of 7th rank or lower.
-time: "10 minutes"
-duration: "until the next time you make your daily preparations"
-diagnostics: ["Foundry casting time retained without normalized action count: 10 minutes"]
+
+
+  Heightened (10th) You can choose a spell of 7th rank or lower.'
+diagnostics:
+- 'Foundry casting time retained without normalized action count: 10 minutes'
+duration: until the next time you make your daily preparations
+mechanicsScope: encounter
+name: contingency
+rank: 7
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: WG91Z5TiR6oO5FOw
+time: 10 minutes
+traditions:
+- arcane
+traits:
+- concentrate
+- manipulate

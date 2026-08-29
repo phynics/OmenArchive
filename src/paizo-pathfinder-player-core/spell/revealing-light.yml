@@ -1,31 +1,48 @@
-name: "revealing light"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "0qaqksrGGDj74HXE"
-rank: 2
-category: "spell"
-traditions: ["arcane", "divine", "occult", "primal"]
-rarity: "common"
-traits: ["concentrate", "light", "manipulate"]
-description: |
-  A wave of magical light washes over the area. You choose the appearance of the light, such as colorful, heatless flames or sparkling motes. A creature affected by revealing light is Dazzled. If the creature was Invisible, it becomes Concealed instead. If the creature was already concealed for any other reason, it is no longer concealed.
-  
-  Critical Success The target is unaffected.
-  
-  Success The light affects the creature for 2 rounds.
-  
-  Failure The light affects the creature for 1 minute.
-  
-  Critical Failure The light affects the creature for 10 minutes.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+area: '10'
+category: spell
 defense:
-  save: "reflex"
   basic: false
   counteraction: false
-range: "120 feet"
-area: "10"
-duration: "varies"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  save: reflex
+description: 'A wave of magical light washes over the area. You choose the appearance
+  of the light, such as colorful, heatless flames or sparkling motes. A creature affected
+  by revealing light is Dazzled. If the creature was Invisible, it becomes Concealed
+  instead. If the creature was already concealed for any other reason, it is no longer
+  concealed.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The light affects the creature for 2 rounds.
+
+
+  Failure The light affects the creature for 1 minute.
+
+
+  Critical Failure The light affects the creature for 10 minutes.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: varies
+mechanicsScope: encounter
+name: revealing light
+range: 120 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 0qaqksrGGDj74HXE
+time: '2'
+traditions:
+- arcane
+- divine
+- occult
+- primal
+traits:
+- concentrate
+- light
+- manipulate

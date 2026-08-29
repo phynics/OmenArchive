@@ -1,19 +1,29 @@
-name: "zeal for battle"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "I8CPe9Pp7GABqOyB"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "emotion", "focus", "fortune", "mental"]
-description: |
-  Trigger You and at least 1 ally are about to roll initiative.
-  
-  You stoke the righteous anger within yourself and an ally. You and the target ally each roll a d20 and use the higher result for both your initiative rolls. You each still use your own Perception modifier or other statistic to determine your results.
-time: "reaction"
+---
 action:
-  count: "reaction"
-range: "10 feet"
-target: "you and the triggering ally"
+  count: reaction
+category: focus
+description: 'Trigger You and at least 1 ally are about to roll initiative.
+
+
+  You stoke the righteous anger within yourself and an ally. You and the target ally
+  each roll a d20 and use the higher result for both your initiative rolls. You each
+  still use your own Perception modifier or other statistic to determine your results.'
+mechanicsScope: encounter
+name: zeal for battle
+range: 10 feet
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: I8CPe9Pp7GABqOyB
+target: you and the triggering ally
+time: reaction
+traditions: []
+traits:
+- cleric
+- concentrate
+- emotion
+- focus
+- fortune
+- mental

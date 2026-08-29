@@ -1,19 +1,34 @@
-name: "counter performance"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "WILXkjU5Yq3yw10r"
-rank: 1
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["bard", "composition", "concentrate", "focus", "fortune", "manipulate", "mental"]
-description: |
-  Trigger You or an ally within 60 feet rolls a saving throw against an auditory or visual effect.
-  
-  Your performance protects you and your allies. Roll a performance check for a type you know—it must be an auditory performance if the trigger was auditory or a visual one for a visual trigger, and this action gains the traits for the type of performance. You and allies in the area can use the better result between your Performance check and the saving throw.
-time: "reaction"
+---
 action:
-  count: "reaction"
-area: "60"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  count: reaction
+area: '60'
+category: focus
+description: 'Trigger You or an ally within 60 feet rolls a saving throw against an
+  auditory or visual effect.
+
+
+  Your performance protects you and your allies. Roll a performance check for a type
+  you know—it must be an auditory performance if the trigger was auditory or a visual
+  one for a visual trigger, and this action gains the traits for the type of performance.
+  You and allies in the area can use the better result between your Performance check
+  and the saving throw.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+mechanicsScope: encounter
+name: counter performance
+rank: 1
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: WILXkjU5Yq3yw10r
+time: reaction
+traditions: []
+traits:
+- bard
+- composition
+- concentrate
+- focus
+- fortune
+- manipulate
+- mental

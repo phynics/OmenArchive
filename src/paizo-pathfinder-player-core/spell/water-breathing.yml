@@ -1,21 +1,31 @@
-name: "water breathing"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "MZGkMsPBztFN0pUO"
-rank: 2
-category: "spell"
-traditions: ["arcane", "divine", "primal"]
-rarity: "common"
-traits: ["concentrate", "manipulate", "water"]
-description: |
-  The targets can breathe underwater.
-  
+---
+category: spell
+description: 'The targets can breathe underwater.
+
+
   Heightened (3rd) The duration increases to 8 hours.
-  
-  Heightened (4th) The duration increases to until your next daily preparations.
-time: "1 minute"
-range: "30 feet"
-target: "up to 5 creatures"
-duration: "1 hour"
-diagnostics: ["Foundry casting time retained without normalized action count: 1 minute"]
+
+
+  Heightened (4th) The duration increases to until your next daily preparations.'
+diagnostics:
+- 'Foundry casting time retained without normalized action count: 1 minute'
+duration: 1 hour
+mechanicsScope: encounter
+name: water breathing
+range: 30 feet
+rank: 2
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: MZGkMsPBztFN0pUO
+target: up to 5 creatures
+time: 1 minute
+traditions:
+- arcane
+- divine
+- primal
+traits:
+- concentrate
+- manipulate
+- water

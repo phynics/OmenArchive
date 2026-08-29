@@ -1,23 +1,35 @@
-name: "downpour"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "K4LXpaBWrGy6jIER"
-rank: 4
-category: "focus"
-traditions: []
-rarity: "uncommon"
-traits: ["cleric", "concentrate", "focus", "manipulate", "water"]
-description: |
-  You call forth a torrential downpour, which extinguishes non-magical flames. Creatures in the area are Concealed and gain fire resistance 10. Creatures outside the area are Concealed to those inside the area. If a creature with weakness to water ends its turn in the area, the downpour triggers its weakness.
-  
-  Spell Effect: Downpour
-  
-  Heightened (+1) The fire resistance increases by 2.
-time: "2"
+---
 action:
-  count: "two_actions"
-range: "120 feet"
-area: "30"
-duration: "1 minute"
-diagnostics: ["Foundry area type is not represented when area details are absent"]
+  count: two_actions
+area: '30'
+category: focus
+description: 'You call forth a torrential downpour, which extinguishes non-magical
+  flames. Creatures in the area are Concealed and gain fire resistance 10. Creatures
+  outside the area are Concealed to those inside the area. If a creature with weakness
+  to water ends its turn in the area, the downpour triggers its weakness.
+
+
+  Spell Effect: Downpour
+
+
+  Heightened (+1) The fire resistance increases by 2.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+duration: 1 minute
+mechanicsScope: encounter
+name: downpour
+range: 120 feet
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: K4LXpaBWrGy6jIER
+time: '2'
+traditions: []
+traits:
+- cleric
+- concentrate
+- focus
+- manipulate
+- water

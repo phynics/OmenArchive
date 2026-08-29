@@ -1,30 +1,48 @@
-name: "petrify"
-source:
-  publisher: "paizo"
-  book: "Pathfinder Player Core"
-sourceID: "znv4ECL7ZtuiagtA"
-rank: 6
-category: "spell"
-traditions: ["arcane", "primal"]
-rarity: "common"
-traits: ["concentrate", "earth", "manipulate"]
-description: |
-  The target's body slowly turns into a stone statue. The target must attempt a Fortitude save.
-  
-  Critical Success The target is unaffected.
-  
-  Success The target is Slowed 1 for 1 round as stone begins to form on their body.
-  
-  Failure The target is slowed 1 and must attempt a Fortitude save at the end of each of its turns; this ongoing save has the incapacitation trait. On a failed save, the slowed condition increases by 1 (or 2 on a critical failure) as stone growths creep across their body. A successful save reduces the slowed condition by 1. When a creature becomes fully unable to act due to the slowed condition from petrify, the spell then ends in a flash of gray light, leaving the target Petrified permanently as they become a statue. The spell also ends if the slowed condition is removed, which causes the stone to break off harmlessly.
-  
-  Critical Failure As failure, but the target is initially Slowed 2.
-time: "2"
+---
 action:
-  count: "two_actions"
+  count: two_actions
+category: spell
 defense:
-  save: "fortitude"
   basic: false
   counteraction: false
-range: "120 feet"
-target: "1 creature made of organic material"
-duration: "varies"
+  save: fortitude
+description: 'The target''s body slowly turns into a stone statue. The target must
+  attempt a Fortitude save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target is Slowed 1 for 1 round as stone begins to form on their body.
+
+
+  Failure The target is slowed 1 and must attempt a Fortitude save at the end of each
+  of its turns; this ongoing save has the incapacitation trait. On a failed save,
+  the slowed condition increases by 1 (or 2 on a critical failure) as stone growths
+  creep across their body. A successful save reduces the slowed condition by 1. When
+  a creature becomes fully unable to act due to the slowed condition from petrify,
+  the spell then ends in a flash of gray light, leaving the target Petrified permanently
+  as they become a statue. The spell also ends if the slowed condition is removed,
+  which causes the stone to break off harmlessly.
+
+
+  Critical Failure As failure, but the target is initially Slowed 2.'
+duration: varies
+mechanicsScope: encounter
+name: petrify
+range: 120 feet
+rank: 6
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: znv4ECL7ZtuiagtA
+target: 1 creature made of organic material
+time: '2'
+traditions:
+- arcane
+- primal
+traits:
+- concentrate
+- earth
+- manipulate
