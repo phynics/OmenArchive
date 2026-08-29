@@ -189,7 +189,7 @@ module OmenArchive
       pattern_properties.each do |pattern, subschema|
         regex = Regexp.new(pattern)
         value.each do |key, child_value|
-          next unless key.match?(regex)
+          next unless key.to_s.match?(regex)
 
           matched_pattern_keys[key] = true
           errors.concat(validate_schema(child_value, subschema, schema_file, join_path(data_path, key)))
