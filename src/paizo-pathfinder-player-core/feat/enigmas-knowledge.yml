@@ -11,22 +11,29 @@ prerequisites:
 - Assured Knowledge
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: F3B57B29-F397-5DFB-A8ED-CC7697EEFD3C
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: B554DF07-FBB5-5310-876A-FE47F3FA4541
-      inputName: featId
-    kind: addFeat
-  id: 713DC20D-B65F-5592-8A44-A40E135171FA
+- id: 713dc20d-b65f-5592-8a44-a40e135171fa
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: f3b57b29-f397-5dfb-a8ed-cc7697eefd3c
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: b554df07-fbb5-5310-876a-fe47f3fa4541
   startLevel: 1
 source:
   book: Pathfinder Player Core

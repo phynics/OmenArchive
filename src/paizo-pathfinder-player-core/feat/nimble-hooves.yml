@@ -8,16 +8,20 @@ name: nimble hooves
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: int
-        valueFromSource:
-          literal:
-            int: 5
-      inputName: amount
-    kind: addSpeedModifier
-  id: 169B93CB-E6D7-5623-BAA6-BBDF2B42BA7F
+- id: 169b93cb-e6d7-5623-baa6-bbdf2b42ba7f
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-speed-modifier
+    revision: 1
+  inputRecipes:
+  - inputName: amount
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/int
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/int
+          revision: 1
+          payload: 5
   startLevel: 1
 source:
   book: Pathfinder Player Core

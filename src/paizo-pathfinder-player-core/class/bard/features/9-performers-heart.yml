@@ -7,22 +7,29 @@ level: 9
 mechanicsScope: builder
 name: performer's heart
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: savingThrow
-        valueFromSource:
-          literal:
-            savingThrow: will
-      inputName: savingThrow
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: master
-      inputName: proficiencyRank
-    kind: addSavingThrow
-  id: 4562DB63-9DE6-5DDB-BDC2-61144BE5BE7D
+- id: 4562db63-9de6-5ddb-bdc2-61144be5be7d
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-saving-throw
+    revision: 1
+  inputRecipes:
+  - inputName: savingThrow
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/saving-throw
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/saving-throw
+          revision: 1
+          payload: will
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 6
   startLevel: 1
 source:
   book: Pathfinder Player Core

@@ -7,143 +7,216 @@ level: 11
 mechanicsScope: builder
 name: wizard weapon expertise
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: specific:club
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 7E51E384-5C43-5699-BF96-EFBAA3D50767
+- id: 7e51e384-5c43-5699-bf96-efbaa3d50767
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: specific
+            name: club
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: specific:crossbow
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 544D2FAE-ABA2-5AE2-A045-4D179DFAE39F
+- id: 544d2fae-aba2-5ae2-a045-4d179dfae39f
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: specific
+            name: crossbow
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: specific:dagger
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 7D2E4DF4-7C6D-526E-BAFF-24DF79E749CE
+- id: 7d2e4df4-7c6d-526e-baff-24df79e749ce
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: specific
+            name: dagger
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: specific:heavy-crossbow
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: EAF4F070-D3AB-5598-8498-624981835202
+- id: eaf4f070-d3ab-5598-8498-624981835202
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: specific
+            name: heavy-crossbow
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: specific:staff
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 00229F51-0DAB-56B0-9D35-412860BFA8DC
+- id: '00229f51-0dab-56b0-9d35-412860bfa8dc'
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: specific
+            name: staff
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: kind:unarmed;group:any
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 8831D105-D83B-5DF1-A328-B3888DA6A6EE
+- id: 8831d105-d83b-5df1-a328-b3888da6a6ee
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: unarmed
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
 source:
   book: Pathfinder Player Core

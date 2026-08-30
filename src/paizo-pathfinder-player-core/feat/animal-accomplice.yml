@@ -9,22 +9,29 @@ name: animal accomplice
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: EFC844D0-FC22-508B-9532-E2266923C8DA
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 654BC7F0-2100-5E7D-929E-D44D2E61F8ED
-      inputName: featId
-    kind: addFeat
-  id: F0713B4A-F4E4-50E4-AB21-44D84FF0180E
+- id: f0713b4a-f4e4-50e4-ab21-44d84ff0180e
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: efc844d0-fc22-508b-9532-e2266923c8da
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 654bc7f0-2100-5e7d-929e-d44d2e61f8ed
   startLevel: 1
 source:
   book: Pathfinder Player Core

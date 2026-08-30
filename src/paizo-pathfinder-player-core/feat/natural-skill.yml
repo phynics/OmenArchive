@@ -8,75 +8,187 @@ name: natural skill
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          selection:
-            id: F97EA341-1FFC-515D-ACC2-DA935AF86D1E
-            lookupName: skillOne
-            options:
-            - skill: acrobatics
-            - skill: arcana
-            - skill: athletics
-            - skill: crafting
-            - skill: deception
-            - skill: diplomacy
-            - skill: intimidation
-            - skill: medicine
-            - skill: nature
-            - skill: occultism
-            - skill: performance
-            - skill: religion
-            - skill: society
-            - skill: stealth
-            - skill: survival
-            - skill: thievery
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: FEBD46E5-784E-5A47-A8A9-D2D6A5BB3BB3
+- id: febd46e5-784e-5a47-a8a9-d2d6a5bb3bb3
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: selection
+        selection:
+          id: f97ea341-1ffc-515d-acc2-da935af86d1e
+          lookupName: skillOne
+          valueTypeID: org.openomen.pf2e.core/value/skill
+          options:
+            kind: explicit
+            values:
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: acrobatics
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: arcana
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: athletics
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: crafting
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: deception
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: diplomacy
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: intimidation
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: medicine
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: nature
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: occultism
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: performance
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: religion
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: society
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: stealth
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: survival
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: thievery
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          selection:
-            id: DF73966B-C230-52B2-9AE2-32623CFF149E
-            lookupName: skillTwo
-            options:
-            - skill: acrobatics
-            - skill: arcana
-            - skill: athletics
-            - skill: crafting
-            - skill: deception
-            - skill: diplomacy
-            - skill: intimidation
-            - skill: medicine
-            - skill: nature
-            - skill: occultism
-            - skill: performance
-            - skill: religion
-            - skill: society
-            - skill: stealth
-            - skill: survival
-            - skill: thievery
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: 6A0A295E-BF25-5AB1-A05C-A3A652465B44
+- id: 6a0a295e-bf25-5ab1-a05c-a3a652465b44
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: selection
+        selection:
+          id: df73966b-c230-52b2-9ae2-32623cff149e
+          lookupName: skillTwo
+          valueTypeID: org.openomen.pf2e.core/value/skill
+          options:
+            kind: explicit
+            values:
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: acrobatics
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: arcana
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: athletics
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: crafting
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: deception
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: diplomacy
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: intimidation
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: medicine
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: nature
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: occultism
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: performance
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: religion
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: society
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: stealth
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: survival
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: thievery
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
 source:
   book: Pathfinder Player Core

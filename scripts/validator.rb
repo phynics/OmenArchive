@@ -399,6 +399,7 @@ module OmenArchive
     def validate(paths = [])
       files = resolve_files(paths)
       errors = files.flat_map { |file| validate_file(file) }
+      errors.concat(resolve_mechanics_descriptors.flat_map { |file| validate_mechanics_descriptor(file) }) if paths.empty?
       [files, errors]
     end
 
@@ -412,6 +413,23 @@ module OmenArchive
       end
 
       entries.map { |entry| Pathname.new(entry).expand_path }.uniq.sort
+    end
+
+    def resolve_mechanics_descriptors
+      Dir.glob(@root.join("mechanics/*.json").to_s).map { |path| Pathname.new(path).expand_path }.sort
+    end
+
+    def validate_mechanics_descriptor(file_path)
+      relative_path = relative_to_root(file_path)
+      begin
+        resource = JSON.parse(read_utf8(file_path, [], relative_path))
+      rescue JSON::ParserError => e
+        return ["#{relative_path}: JSON parse failed: #{e.message}"]
+      end
+      schema, schema_file = @schema_store.load_entry("mechanics-module.schema.json")
+      @json_schema_validator.validate(resource, schema, schema_file).map do |message|
+        "#{relative_path}: #{message}"
+      end
     end
 
     def expand_path_argument(path)

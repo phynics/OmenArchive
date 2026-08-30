@@ -1,51 +1,63 @@
 ---
 action: {}
-description: 'You''ve dutifully learned how to keep your balance and how to stick
-  to the shadows where it''s safe, important skills passed down through generations
-  of halfling tradition. You gain the trained proficiency rank in Acrobatics and Stealth.
-  If you would automatically become trained in one of those skills (from your background
-  or class, for example), you instead become trained in a skill of your choice.
-
-  You also gain the Additional Lore general feat for Halfling Lore.'
+description: |-
+  You've dutifully learned how to keep your balance and how to stick to the shadows where it's safe, important skills passed down through generations of halfling tradition. You gain the trained proficiency rank in Acrobatics and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.
+  You also gain the Additional Lore general feat for Halfling Lore.
 level: 1
 mechanicsScope: builder
 name: halfling lore
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: acrobatics
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: EE50668E-B62B-52D5-AD5C-446A3C30F0D6
+- id: ee50668e-b62b-52d5-ad5c-446a3c30f0d6
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: acrobatics
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: stealth
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: D5EC37A1-7A96-5663-8EAB-C2E7A6DA25FD
+- id: d5ec37a1-7a96-5663-8eab-c2e7a6da25fd
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: stealth
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
 source:
   book: Pathfinder Player Core

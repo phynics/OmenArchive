@@ -1,40 +1,38 @@
 ---
 action: {}
-description: 'Barbarian Your instinct heightens each of your senses further. Your
-  proficiency rank for Perception increases to master.
-
-  Bard, Gunslinger, Rogue You''ve developed keen awareness and attention to detail.
-  Your proficiency rank for Perception increases to master.
-
-  Exemplar Through your adventures, you''ve developed keen awareness and attention
-  to detail, the better to watch over your wards and keep an eye out for monsters
-  and other threats. Your proficiency rank for Perception increases to master.
-
-  Ranger You have highly developed acuity and attention to detail. Your proficiency
-  rank for Perception increases to master.
-
-  Swashbuckler Through your adventures, you''ve developed keen awareness and attention
-  to detail. Your proficiency rank for Perception increases to master.'
+description: |-
+  Barbarian Your instinct heightens each of your senses further. Your proficiency rank for Perception increases to master.
+  Bard, Gunslinger, Rogue You've developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master.
+  Exemplar Through your adventures, you've developed keen awareness and attention to detail, the better to watch over your wards and keep an eye out for monsters and other threats. Your proficiency rank for Perception increases to master.
+  Ranger You have highly developed acuity and attention to detail. Your proficiency rank for Perception increases to master.
+  Swashbuckler Through your adventures, you've developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master.
 level: 7
 mechanicsScope: builder
 name: perception mastery
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: savingThrow
-        valueFromSource:
-          literal:
-            savingThrow: perception
-      inputName: savingThrow
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: master
-      inputName: proficiencyRank
-    kind: addSavingThrow
-  id: 0C4B914C-3986-5F8C-B494-ABB018FB3DE0
+- id: 0c4b914c-3986-5f8c-b494-abb018fb3de0
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-saving-throw
+    revision: 1
+  inputRecipes:
+  - inputName: savingThrow
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/saving-throw
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/saving-throw
+          revision: 1
+          payload: perception
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 6
   startLevel: 1
 source:
   book: Pathfinder Player Core

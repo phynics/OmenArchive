@@ -8,91 +8,137 @@ level: 5
 mechanicsScope: mixed
 name: ranger weapon expertise
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 952B3FCE-86D6-5CAE-AB3B-C7D17142B978
-      inputName: uuid
-    - expectedValue:
-        parameterType: weaponGroup
-        valueFromSource:
-          literal:
+- id: 21ab3dd9-eda3-571a-b866-32139e9f2aee
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-critical-specialization
+    revision: 1
+  inputRecipes:
+  - inputName: uuid
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 952b3fce-86d6-5cae-ab3b-c7d17142b978
+  - inputName: weaponGroup
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-group
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-group
+          revision: 1
+          payload: any
+  startLevel: 1
+- id: 2de3bf68-b996-5187-80d1-a7898a45b989
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: martial
             weaponGroup: any
-      inputName: weaponGroup
-    kind: addWeaponCriticalSpecialization
-  id: 21AB3DD9-EDA3-571A-B866-32139E9F2AEE
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: kind:martial;group:any
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 2DE3BF68-B996-5187-80D1-A7898A45B989
+- id: 8df16d51-b5a4-5614-996d-bd9bc1d9bb5a
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: simple
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: kind:simple;group:any
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 8DF16D51-B5A4-5614-996D-BD9BC1D9BB5A
-  startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: weaponDesignation
-        valueFromSource:
-          literal:
-            weaponDesignation: kind:unarmed;group:any
-      inputName: weaponDesignation
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: expert
-      inputName: proficiencyRank
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: false
-      inputName: selfScaling
-    kind: addWeaponProficiency
-  id: 683BA965-3ABD-5389-A512-47E514A31080
+- id: 683ba965-3abd-5389-a512-47e514a31080
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: unarmed
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: false
   startLevel: 1
 source:
   book: Pathfinder Player Core

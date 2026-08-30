@@ -9,33 +9,44 @@ name: anchoring roots
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 5D24D35C-02AC-5631-9A16-E86E8D6EF0DF
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: A5F5AFA7-91CB-514B-AB1B-62259EDEDE12
-      inputName: featId
-    kind: addFeat
-  id: 327302F5-8E67-5D6C-A555-7EAFE0012194
+- id: 327302f5-8e67-5d6c-a555-7eafe0012194
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 5d24d35c-02ac-5631-9a16-e86e8d6ef0df
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: a5f5afa7-91cb-514b-ab1b-62259edede12
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: E456ECF4-3C8A-5CA8-82FE-834AC9EB5BEF
-      inputName: actionId
-    kind: addAction
-  id: 30999921-CFE9-586C-9A69-61145A789EE7
+- id: 30999921-cfe9-586c-9a69-61145a789ee7
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: e456ecf4-3c8a-5ca8-82fe-834ac9eb5bef
   startLevel: 1
 source:
   book: Pathfinder Player Core

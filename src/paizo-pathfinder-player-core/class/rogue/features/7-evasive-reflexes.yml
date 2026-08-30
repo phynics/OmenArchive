@@ -7,22 +7,29 @@ level: 7
 mechanicsScope: builder
 name: evasive reflexes
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: savingThrow
-        valueFromSource:
-          literal:
-            savingThrow: reflex
-      inputName: savingThrow
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: master
-      inputName: proficiencyRank
-    kind: addSavingThrow
-  id: F4025DB8-3162-573B-BFA8-928CE3305072
+- id: f4025db8-3162-573b-bfa8-928ce3305072
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-saving-throw
+    revision: 1
+  inputRecipes:
+  - inputName: savingThrow
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/saving-throw
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/saving-throw
+          revision: 1
+          payload: reflex
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 6
   startLevel: 1
 source:
   book: Pathfinder Player Core

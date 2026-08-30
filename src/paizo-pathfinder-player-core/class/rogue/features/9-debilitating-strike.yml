@@ -6,16 +6,20 @@ level: 9
 mechanicsScope: mixed
 name: debilitating strike
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: 955B798D-939D-550D-AF26-5A3A427AE6E4
-      inputName: actionId
-    kind: addAction
-  id: 7903C686-2E03-5835-9154-BE7901DD0BA7
+- id: 7903c686-2e03-5835-9154-be7901dd0ba7
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: 955b798d-939d-550d-af26-5a3a427ae6e4
   startLevel: 1
 source:
   book: Pathfinder Player Core

@@ -71,4 +71,60 @@ class PlayerCoreCorpusTest < Minitest::Test
     assert feature_files.all? { |path| YAML.safe_load(File.read(path), aliases: true).fetch("sourceID") },
            "every generated feature must retain source provenance"
   end
+
+  def test_core_mechanics_descriptor_is_deterministic_and_well_formed
+    path = File.join(ROOT, "mechanics", "org.openomen.pf2e.core.json")
+    descriptor = JSON.parse(File.read(path))
+
+    assert_equal "org.openomen.pf2e.core", descriptor.fetch("moduleID")
+    assert_equal 1, descriptor.fetch("revision")
+    assert_equal [], descriptor.fetch("dependencies")
+    assert_equal 24, descriptor.fetch("valueTypes").length
+    assert_equal 27, descriptor.fetch("effects").length
+    assert_equal 0, descriptor.fetch("stateKeys").length
+    assert_equal File.read(path), JSON.generate(descriptor, quirks_mode: true) + "\n",
+                 "descriptor must use canonical sorted-key JSON"
+  end
+
+  def test_publication_declares_exact_mechanics_modules
+    publication_path = File.join(ARCHIVE_ROOT, "publication.yml")
+    publication = YAML.safe_load(File.read(publication_path), aliases: true)
+
+    assert_equal [
+      { "moduleID" => "org.openomen.pf2e.core", "revision" => 1 }
+    ], publication.fetch("mechanicsModules")
+    refute publication.key?("mechanicsDependencies")
+  end
+
+  def test_all_rule_files_use_registry_wire_shape
+    paths = Dir[File.join(ARCHIVE_ROOT, "**", "*.yml")]
+    rule_files = paths.select do |path|
+      YAML.safe_load(File.read(path), aliases: true).is_a?(Hash) &&
+        YAML.safe_load(File.read(path), aliases: true).key?("rules")
+    end
+    assert_equal 98, rule_files.length
+    literal_payloads = []
+    rule_files.each do |path|
+      rules = YAML.safe_load(File.read(path), aliases: true).fetch("rules")
+      rules.each do |rule|
+        refute rule.key?("effectTemplate"), path
+        assert_match(%r{\A[a-z0-9.-]+/effect/[a-z0-9-]+\z}, rule.fetch("effectReference").fetch("kindID"), path)
+        rule.fetch("inputRecipes").each do |recipe|
+          expected = recipe.fetch("expectedValue")
+          assert_match(%r{\A[a-z0-9.-]+/value/[a-z0-9-]+\z}, expected.fetch("valueTypeID"), path)
+          source = expected.fetch("source")
+          assert source.key?("kind"), path
+          literal_payloads << [expected.fetch("valueTypeID"), source.fetch("value").fetch("payload")] if source["kind"] == "literal"
+        end
+      end
+    end
+
+    value_prefix = "org.openomen.pf2e.core/value/"
+    assert_includes literal_payloads, [value_prefix + "skill", { "kind" => "religion" }]
+    assert_includes literal_payloads, [value_prefix + "weapon-group", "any"]
+    assert_includes literal_payloads, [value_prefix + "weapon-designation", {
+      "kind" => "filter", "weaponKind" => "advanced", "weaponGroup" => "any"
+    }]
+    assert_includes literal_payloads, [value_prefix + "weapon-designation", { "kind" => "specific", "name" => "club" }]
+  end
 end

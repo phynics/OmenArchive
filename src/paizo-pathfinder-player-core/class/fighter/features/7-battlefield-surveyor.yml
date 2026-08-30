@@ -8,22 +8,29 @@ level: 7
 mechanicsScope: builder
 name: battlefield surveyor
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: savingThrow
-        valueFromSource:
-          literal:
-            savingThrow: perception
-      inputName: savingThrow
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: master
-      inputName: proficiencyRank
-    kind: addSavingThrow
-  id: F7569776-8931-5778-AE79-B5754085D390
+- id: f7569776-8931-5778-ae79-b5754085d390
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-saving-throw
+    revision: 1
+  inputRecipes:
+  - inputName: savingThrow
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/saving-throw
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/saving-throw
+          revision: 1
+          payload: perception
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 6
   startLevel: 1
 source:
   book: Pathfinder Player Core

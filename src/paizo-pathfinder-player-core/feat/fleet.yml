@@ -7,16 +7,20 @@ name: fleet
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: int
-        valueFromSource:
-          literal:
-            int: 5
-      inputName: amount
-    kind: addSpeedModifier
-  id: 539232B3-59A3-5F75-B0D0-57E24F7E0BF3
+- id: 539232b3-59a3-5f75-b0d0-57e24f7e0bf3
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-speed-modifier
+    revision: 1
+  inputRecipes:
+  - inputName: amount
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/int
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/int
+          revision: 1
+          payload: 5
   startLevel: 1
 source:
   book: Pathfinder Player Core

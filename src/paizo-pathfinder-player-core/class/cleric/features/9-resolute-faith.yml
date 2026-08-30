@@ -7,22 +7,29 @@ level: 9
 mechanicsScope: builder
 name: resolute faith
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: savingThrow
-        valueFromSource:
-          literal:
-            savingThrow: will
-      inputName: savingThrow
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: master
-      inputName: proficiencyRank
-    kind: addSavingThrow
-  id: 7FB9E8A1-1C80-5135-A1B0-0B0EA5AA10B0
+- id: 7fb9e8a1-1c80-5135-a1b0-0b0ea5aa10b0
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-saving-throw
+    revision: 1
+  inputRecipes:
+  - inputName: savingThrow
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/saving-throw
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/saving-throw
+          revision: 1
+          payload: will
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 6
   startLevel: 1
 source:
   book: Pathfinder Player Core

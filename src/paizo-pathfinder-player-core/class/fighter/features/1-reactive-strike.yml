@@ -6,16 +6,20 @@ level: 1
 mechanicsScope: builder
 name: reactive strike
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: CC779B41-4561-57AD-91A9-797F5BEE8D81
-      inputName: actionId
-    kind: addAction
-  id: E48528BF-6EE8-58FA-8DB2-FCD4CFDDB7F7
+- id: e48528bf-6ee8-58fa-8db2-fcd4cfddb7f7
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: cc779b41-4561-57ad-91a9-797f5bee8d81
   startLevel: 1
 source:
   book: Pathfinder Player Core

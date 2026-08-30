@@ -1,67 +1,87 @@
 ---
 action: {}
-description: 'All too aware of your true nature, you''ve studied hags and their powers.
-  You gain the trained proficiency rank in Deception and Occultism. If you would automatically
-  become trained in one of those skills (from your background or class, for example),
-  you instead become trained in a skill of your choice.
-
-  You also gain the Additional Lore general feat for Hag Lore.'
+description: |-
+  All too aware of your true nature, you've studied hags and their powers. You gain the trained proficiency rank in Deception and Occultism. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.
+  You also gain the Additional Lore general feat for Hag Lore.
 level: 1
 mechanicsScope: builder
 name: changeling lore
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: deception
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: F4B65F6F-1B2A-50B9-83E9-B30DA59D4948
+- id: f4b65f6f-1b2a-50b9-83e9-b30da59d4948
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: deception
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: occultism
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: 1A42E487-F0FA-5882-8CD8-B3FA5EAC10CE
+- id: 1a42e487-f0fa-5882-8cd8-b3fa5eac10ce
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: occultism
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 76EB13C7-0FD1-5C5B-BBB6-033941F7DD9A
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
-      inputName: featId
-    kind: addFeat
-  id: B7E7A0D3-5E6F-55CC-B505-B8C1E13C9918
+- id: b7e7a0d3-5e6f-55cc-b505-b8c1e13c9918
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 76eb13c7-0fd1-5c5b-bbb6-033941f7dd9a
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
   startLevel: 1
 source:
   book: Pathfinder Player Core

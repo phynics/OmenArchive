@@ -11,22 +11,29 @@ prerequisites:
 - trained in Arcana
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 51C0FCFE-146F-5CAF-9286-FBCF23FB98B4
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 1F1EC909-AF03-5432-AE1F-45E2C6280824
-      inputName: featId
-    kind: addFeat
-  id: 001ADDC8-E6AA-5495-98FF-E0C5479EE97F
+- id: 001addc8-e6aa-5495-98ff-e0c5479ee97f
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 51c0fcfe-146f-5caf-9286-fbcf23fb98b4
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 1f1ec909-af03-5432-ae1f-45e2c6280824
   startLevel: 1
 source:
   book: Pathfinder Player Core

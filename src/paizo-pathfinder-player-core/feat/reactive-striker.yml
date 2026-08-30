@@ -8,16 +8,20 @@ prerequisites:
 - Fighter Dedication
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: CC779B41-4561-57AD-91A9-797F5BEE8D81
-      inputName: actionId
-    kind: addAction
-  id: 50573E2D-ED4B-5BBF-A491-DED556EDF229
+- id: 50573e2d-ed4b-5bbf-a491-ded556edf229
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: cc779b41-4561-57ad-91a9-797f5bee8d81
   startLevel: 1
 source:
   book: Pathfinder Player Core

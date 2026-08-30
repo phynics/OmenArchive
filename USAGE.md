@@ -141,25 +141,29 @@ Leave the key out when there are no rules; do not add empty arrays to unchanged 
 ```yaml
 rules:
   - id: 11111111-1111-1111-1111-111111111111
-    effectTemplate:
-      kind: addLanguage
-      inputRecipes:
-        - inputName: languageName
-          expectedValue:
-            parameterType: string
-            valueFromSource:
-              literal:
-                string: Draconic
+    effectReference:
+      kindID: org.openomen.pf2e.core/effect/add-feat
+      revision: 1
+    inputRecipes:
+      - inputName: target
+        expectedValue:
+          valueTypeID: org.openomen.pf2e.core/value/feat-id
+          source:
+            kind: literal
+            value:
+              typeID: org.openomen.pf2e.core/value/feat-id
+              revision: 1
+              payload: 22222222-2222-2222-2222-222222222222
     startLevel: 1
     prerequisites:
       - hasClassTrait: true
 ```
 
-Rules follow the same field names used by OmenCore's effect engine:
+Rules use the namespaced mechanics registry wire shape:
 
 - `id` is a stable UUID for the rule instance.
-- `effectTemplate.kind` must match a supported OmenCore effect name, such as `addLanguage` or `addFeat`.
-- `effectTemplate.inputRecipes` carries the effect inputs in order.
+- `effectReference.kindID` and `revision` identify the executable effect definition.
+- `inputRecipes` carries typed effect inputs in order; each value includes its namespaced type ID and revision.
 - `startLevel` is the level at which the rule becomes active.
 - `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
 
@@ -170,10 +174,10 @@ Prefer literal values in `inputRecipes` when writing by hand. If a rule needs a 
 Use a plain `omen://` URI when a rule input refers to another curated resource:
 
 ```yaml
-parameterType: resourceReference
-valueFromSource:
-  literal:
-    resourceReference: omen://feat/group-impression?source=paizo-pathfinder-player-core
+valueTypeID: org.openomen.pf2e.core/value/feat-id
+source:
+  kind: lookupByID
+  id: omen://feat/group-impression?source=paizo-pathfinder-player-core
 ```
 
 The URI path uses the resource's canonical encoded `name`, not its filename. For example,
@@ -183,8 +187,8 @@ even when the storage filename contains a level prefix such as `7-armor-expertis
 An explicit `source` query limits resolution to one publication. Without `source`, all matching
 publication versions are candidates; consumers that require one value use the newest publication
 date, with the publication ID as a deterministic tie-breaker. Malformed or dangling references
-must be fixed before Archive-to-OmenDB export. Existing UUID-based `featId` and `actionId` literal
-forms remain valid for runtime data that has not yet migrated to OmenPath references.
+must be fixed before Archive-to-OmenDB export. Registered UUID payloads remain valid for executable
+runtime inputs; use a lookup source when a rule should resolve a curated resource by OmenPath.
 
 ### Traits and enums
 

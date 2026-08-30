@@ -8,22 +8,29 @@ name: tree climber (elf)
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: string
-        valueFromSource:
-          literal:
-            string: climb
-      inputName: selector
-    - expectedValue:
-        parameterType: int
-        valueFromSource:
-          literal:
-            int: 10
-      inputName: value
-    kind: addBaseSpeed
-  id: 5B3233FC-3F22-50EB-B9C0-04976FE6A78E
+- id: 5b3233fc-3f22-50eb-b9c0-04976fe6a78e
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-base-speed
+    revision: 1
+  inputRecipes:
+  - inputName: selector
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/string
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/string
+          revision: 1
+          payload: climb
+  - inputName: value
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/int
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/int
+          revision: 1
+          payload: 10
   startLevel: 1
 source:
   book: Pathfinder Player Core

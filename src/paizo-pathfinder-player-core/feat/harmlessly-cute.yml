@@ -9,22 +9,29 @@ name: harmlessly cute
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 09712BB5-0694-57C8-A514-CA6055D2CDC8
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 836E23D6-ED7D-5527-A365-3792C77E31D0
-      inputName: featId
-    kind: addFeat
-  id: 3272B36C-573E-58A4-8AF2-91E590F9FAFE
+- id: 3272b36c-573e-58a4-8af2-91e590f9fafe
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: '09712bb5-0694-57c8-a514-ca6055d2cdc8'
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 836e23d6-ed7d-5527-a365-3792c77e31d0
   startLevel: 1
 source:
   book: Pathfinder Player Core

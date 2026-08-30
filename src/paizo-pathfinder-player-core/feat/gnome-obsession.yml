@@ -10,39 +10,53 @@ name: gnome obsession
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: E3911CDC-2CF4-5DF6-994B-AEEB52538932
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
-      inputName: featId
-    kind: addFeat
-  id: E742EEFD-4BCD-5455-963A-8B94D272AC73
+- id: e742eefd-4bcd-5455-963a-8b94d272ac73
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: e3911cdc-2cf4-5df6-994b-aeeb52538932
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 2182BF09-E03B-5B49-9A3F-87C447B4F42B
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 1F53B5E0-164A-5BFE-8380-E480D8A1F009
-      inputName: featId
-    kind: addFeat
-  id: D794A0E3-7139-5242-9271-BFF626EA90FA
+- id: d794a0e3-7139-5242-9271-bff626ea90fa
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 2182bf09-e03b-5b49-9a3f-87c447b4f42b
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 1f53b5e0-164a-5bfe-8380-e480d8a1f009
   startLevel: 1
 source:
   book: Pathfinder Player Core

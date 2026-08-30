@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/resource-filter.schema.json",
+  "title": "Resource Filter",
+  "description": "Portable resource-filter options for a generalized mechanics selection.",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "const": "single" },
+        "value": { "$ref": "#/$defs/component" }
+      },
+      "required": ["kind", "value"],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "const": "union" },
+        "values": { "type": "array", "minItems": 1, "items": { "$ref": "#" } }
+      },
+      "required": ["kind", "values"],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "kind": { "const": "intersection" },
+        "values": { "type": "array", "minItems": 1, "items": { "$ref": "#" } }
+      },
+      "required": ["kind", "values"],
+      "additionalProperties": false
+    }
+  ],
+  "$defs": {
+    "component": {
+      "oneOf": [
+        { "type": "object", "properties": { "kind": { "const": "any" } }, "required": ["kind"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "hasID" }, "id": { "type": "string", "minLength": 1 } }, "required": ["kind", "id"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "excludesIDs" }, "ids": { "type": "array", "items": { "type": "string", "minLength": 1 } } }, "required": ["kind", "ids"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "hasName" }, "name": { "type": "string", "minLength": 1 } }, "required": ["kind", "name"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "hasTrait" }, "trait": { "type": "string", "minLength": 1 } }, "required": ["kind", "trait"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "hasType" }, "type": { "type": "string", "minLength": 1 } }, "required": ["kind", "type"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "hasExactLevel" }, "level": { "type": "integer" } }, "required": ["kind", "level"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "hasMaxLevel" }, "level": { "type": "integer" } }, "required": ["kind", "level"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "hasPathPrefix" }, "path": { "type": "string", "minLength": 1 } }, "required": ["kind", "path"], "additionalProperties": false }
+      ]
+    }
+  }
+}

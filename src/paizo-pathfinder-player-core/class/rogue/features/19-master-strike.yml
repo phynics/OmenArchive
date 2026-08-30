@@ -7,16 +7,20 @@ level: 19
 mechanicsScope: builder
 name: master strike
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: 907714ED-C1A6-51D7-877B-2DE0317F408A
-      inputName: actionId
-    kind: addAction
-  id: 7866AFEF-EE03-57CF-B7F9-08C672768EC0
+- id: 7866afef-ee03-57cf-b7f9-08c672768ec0
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: 907714ed-c1a6-51d7-877b-2de0317f408a
   startLevel: 1
 source:
   book: Pathfinder Player Core

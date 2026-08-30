@@ -9,22 +9,29 @@ name: clever improviser
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 707D6EC8-3581-51CD-A04E-C56DA285ACDF
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: D9CCA3F5-9469-5146-8CAF-C6279EBC7740
-      inputName: featId
-    kind: addFeat
-  id: BE90FD1A-138F-549F-8CAE-D01C73F566EC
+- id: be90fd1a-138f-549f-8cae-d01c73f566ec
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 707d6ec8-3581-51cd-a04e-c56da285acdf
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: d9cca3f5-9469-5146-8caf-c6279ebc7740
   startLevel: 1
 source:
   book: Pathfinder Player Core

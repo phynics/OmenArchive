@@ -1,38 +1,37 @@
 ---
 action: {}
-description: 'Your muse constantly inspires you to greater heights of artistic prowess.
-  For many bards, a teacher or rival fills this role, although some set their sights
-  higher and attempt to surpass great composers of the past or blaze a new trail entirely.
-  If your muse is a supernatural creature, it might be one who loves to perform, such
-  as a choral angel or a lyrakien azata; if a deity, it might be Shelyn. Art inspired
-  by a maestro muse is precise and inventive, a formalist achievement.
-
-  As a bard with a maestro muse, you are an inspiration to your allies and confident
-  of your musical and oratorical abilities.
-
+description: |-
+  Your muse constantly inspires you to greater heights of artistic prowess. For many bards, a teacher or rival fills this role, although some set their sights higher and attempt to surpass great composers of the past or blaze a new trail entirely. If your muse is a supernatural creature, it might be one who loves to perform, such as a choral angel or a lyrakien azata; if a deity, it might be Shelyn. Art inspired by a maestro muse is precise and inventive, a formalist achievement.
+  As a bard with a maestro muse, you are an inspiration to your allies and confident of your musical and oratorical abilities.
   Muse Feat Lingering Composition
-
-  Muse Spell Soothe'
+  Muse Spell Soothe
 level: 1
 mechanicsScope: builder
 name: maestro
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 0ADAB70E-0EA1-504E-851E-50BF0281D618
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: AD78AEC6-11F5-509E-9173-B6363416C3F7
-      inputName: featId
-    kind: addFeat
-  id: DE37FABC-175A-59CE-8538-BAA6DA21F6B0
+- id: de37fabc-175a-59ce-8538-baa6da21f6b0
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 0adab70e-0ea1-504e-851e-50bf0281d618
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: ad78aec6-11f5-509e-9173-b6363416c3f7
   startLevel: 1
 source:
   book: Pathfinder Player Core

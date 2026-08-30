@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/mechanics-module.schema.json",
+  "title": "Mechanics Module Descriptor",
+  "description": "Deterministic archive contract exported by an executable mechanics module.",
+  "type": "object",
+  "properties": {
+    "moduleID": { "type": "string", "pattern": "^[a-z0-9.-]+$" },
+    "revision": { "type": "integer", "minimum": 1 },
+    "dependencies": { "type": "array", "items": { "$ref": "#/$defs/dependency" } },
+    "valueTypes": { "type": "array", "items": { "$ref": "#/$defs/valueType" } },
+    "effects": { "type": "array", "items": { "$ref": "#/$defs/effect" } },
+    "stateKeys": { "type": "array", "items": { "$ref": "#/$defs/stateKey" } }
+  },
+  "required": ["moduleID", "revision", "dependencies", "valueTypes", "effects", "stateKeys"],
+  "additionalProperties": false,
+  "$defs": {
+    "dependency": {
+      "type": "object",
+      "properties": {
+        "moduleID": { "type": "string", "pattern": "^[a-z0-9.-]+$" },
+        "revision": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["moduleID", "revision"],
+      "additionalProperties": false
+    },
+    "valueType": {
+      "type": "object",
+      "properties": {
+        "typeID": { "type": "string", "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$" },
+        "revision": { "type": "integer", "minimum": 1 },
+        "schema": { "type": "object" }
+      },
+      "required": ["typeID", "revision", "schema"],
+      "additionalProperties": false
+    },
+    "effect": {
+      "type": "object",
+      "properties": {
+        "reference": { "$ref": "#/$defs/effectReference" },
+        "inputDescriptors": { "type": "array", "items": { "$ref": "#/$defs/inputDescriptor" } },
+        "inputRecipes": { "type": "array" }
+      },
+      "required": ["reference", "inputDescriptors", "inputRecipes"],
+      "additionalProperties": false
+    },
+    "effectReference": {
+      "type": "object",
+      "properties": {
+        "kindID": { "type": "string", "pattern": "^[a-z0-9.-]+/effect/[a-z0-9-]+$" },
+        "revision": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["kindID", "revision"],
+      "additionalProperties": false
+    },
+    "inputDescriptor": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "valueTypeID": { "type": "string", "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$" }
+      },
+      "required": ["name", "valueTypeID"],
+      "additionalProperties": false
+    },
+    "stateKey": {
+      "type": "object",
+      "properties": {
+        "keyID": { "type": "string", "pattern": "^[a-z0-9.-]+/state/[a-z0-9-]+$" },
+        "revision": { "type": "integer", "minimum": 1 },
+        "valueTypeID": { "type": "string", "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$" }
+      },
+      "required": ["keyID", "revision", "valueTypeID"],
+      "additionalProperties": false
+    }
+  }
+}

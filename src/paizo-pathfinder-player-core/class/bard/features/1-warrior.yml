@@ -1,40 +1,37 @@
 ---
 action: {}
-description: 'The battlefield is your stage, the clang of steel, your song. Your muse
-  has seen countless battles, whether reveling in combat or resigned to its necessity.
-  An individual soldier or general might inspire you, but so might a battlefield or
-  weapon with a particularly profound history. If your muse is a creature, it might
-  be an otherworldly soldier, such as an archon or devil soldier. If it''s a deity,
-  it might be Gorum. Art inspired by a warrior muse is triumphant and strident, often
-  detailing epic battles.
-
-  As a bard with a warrior muse, you train for battle in addition to performance,
-  and you prepare your allies for the dangers of combat. You might even wade into
-  the thick of things with them.
-
+description: |-
+  The battlefield is your stage, the clang of steel, your song. Your muse has seen countless battles, whether reveling in combat or resigned to its necessity. An individual soldier or general might inspire you, but so might a battlefield or weapon with a particularly profound history. If your muse is a creature, it might be an otherworldly soldier, such as an archon or devil soldier. If it's a deity, it might be Gorum. Art inspired by a warrior muse is triumphant and strident, often detailing epic battles.
+  As a bard with a warrior muse, you train for battle in addition to performance, and you prepare your allies for the dangers of combat. You might even wade into the thick of things with them.
   Muse Feat Martial Performance
-
-  Muse Spell Fear'
+  Muse Spell Fear
 level: 1
 mechanicsScope: builder
 name: warrior
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: E5D06BF0-0446-5547-AEBC-A7437C5F8D02
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 381B323B-DA61-5FD5-9F0F-5099B242B1DF
-      inputName: featId
-    kind: addFeat
-  id: E930C758-094A-54EA-B6DA-D353AA46213F
+- id: e930c758-094a-54ea-b6da-d353aa46213f
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: e5d06bf0-0446-5547-aebc-a7437c5f8d02
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 381b323b-da61-5fd5-9f0f-5099b242b1df
   startLevel: 1
 source:
   book: Pathfinder Player Core

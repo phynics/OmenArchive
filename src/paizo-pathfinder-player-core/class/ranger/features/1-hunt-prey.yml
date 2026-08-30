@@ -6,16 +6,20 @@ level: 1
 mechanicsScope: mixed
 name: hunt prey
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: 82AC6F94-330A-5E69-90F1-573C0FA3AC5D
-      inputName: actionId
-    kind: addAction
-  id: 69DCAC03-D6B6-5F85-AB61-0B201A03CEDB
+- id: 69dcac03-d6b6-5f85-ab61-0b201a03cedb
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: 82ac6f94-330a-5e69-90f1-573c0fa3ac5d
   startLevel: 1
 source:
   book: Pathfinder Player Core

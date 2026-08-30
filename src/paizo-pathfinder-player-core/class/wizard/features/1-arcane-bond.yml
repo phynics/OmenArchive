@@ -9,16 +9,20 @@ level: 1
 mechanicsScope: builder
 name: arcane bond
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: F3ABCBD5-F46D-51CC-9BE9-685DB7BBC528
-      inputName: actionId
-    kind: addAction
-  id: 52823958-3706-5A27-9358-3D3B4492370E
+- id: 52823958-3706-5a27-9358-3d3b4492370e
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: f3abcbd5-f46d-51cc-9be9-685db7bbc528
   startLevel: 1
 source:
   book: Pathfinder Player Core

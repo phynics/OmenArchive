@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/rules.schema.json",
   "title": "Character Rules",
-  "description": "Schema for archive-authored character rules and effect templates",
+  "description": "Schema for archive-authored character rules and mechanics registry inputs",
   "$defs": {
     "rule": {
       "type": "object",
@@ -11,8 +11,17 @@
           "type": "string",
           "format": "uuid"
         },
-        "effectTemplate": {
-          "$ref": "#/$defs/effectTemplate"
+        "effectReference": {
+          "$ref": "#/$defs/effectReference"
+        },
+        "inputRecipes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/inputRecipe"
+          },
+          "default": [
+
+          ]
         },
         "startLevel": {
           "type": "integer",
@@ -24,128 +33,116 @@
           "items": {
             "$ref": "#/$defs/prerequisite"
           },
-          "default": []
+          "default": [
+
+          ]
         }
       },
       "required": [
         "id",
-        "effectTemplate",
+        "effectReference",
+        "inputRecipes",
         "startLevel"
       ],
-      "additionalProperties": false
-    },
-    "effectTemplate": {
-      "type": "object",
-      "properties": {
-        "kind": {
-          "type": "string",
-          "enum": [
-            "addArmorProficiency",
-            "addArmorGroupProficiency",
-            "addAction",
-            "addFeat",
-            "addFeature",
-            "addLanguage",
-            "addPlaceholder",
-            "addSavingThrow",
-            "addSkillIncrease",
-            "addLoreSkillIncrease",
-            "addWeaponProficiency",
-            "addWeaponGroupProficiency",
-            "addRollModifier",
-            "addWeaponCriticalSpecialization",
-            "addLookupEntryEffect",
-            "addSpellcastingEntry",
-            "addSpellSlot",
-            "addSpellcastingProficiency",
-            "addSpeedModifier",
-            "addAssurance",
-            "addTerrainStalker",
-            "addBaseSpeed",
-            "addSense",
-            "addResistance",
-            "addActorTrait",
-            "addCraftingAbility",
-            "addItem"
-          ]
-        },
-        "inputRecipes": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/inputRecipe"
-          },
-          "default": []
-        }
-      },
-      "required": ["kind"],
       "additionalProperties": false
     },
     "inputRecipe": {
       "type": "object",
       "properties": {
         "inputName": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "expectedValue": {
           "$ref": "#/$defs/expectedValue"
         }
       },
-      "required": ["inputName", "expectedValue"],
+      "required": [
+        "inputName",
+        "expectedValue"
+      ],
       "additionalProperties": false
     },
     "expectedValue": {
       "type": "object",
       "properties": {
-        "parameterType": {
+        "valueTypeID": {
           "type": "string",
-          "enum": [
-            "uuid",
-            "string",
-            "int",
-            "bool",
-            "featId",
-            "actionId",
-            "resourceReference",
-            "proficiencyRank",
-            "savingThrow",
-            "skill",
-            "weaponGroup",
-            "weaponDesignation",
-            "characterFeature"
-          ]
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
         },
-        "valueFromSource": {
+        "source": {
           "$ref": "#/$defs/source"
         }
       },
-      "required": ["parameterType", "valueFromSource"],
+      "required": [
+        "valueTypeID",
+        "source"
+      ],
       "additionalProperties": false
     },
     "source": {
       "type": "object",
       "oneOf": [
         {
-          "type": "object",
           "properties": {
-            "literal": { "$ref": "#/$defs/literalValue" }
+            "kind": {
+              "const": "literal"
+            },
+            "value": {
+              "$ref": "#/$defs/registeredValue"
+            }
           },
-          "required": ["literal"],
+          "required": [
+            "kind",
+            "value"
+          ],
           "additionalProperties": false
         },
         {
-          "type": "object",
           "properties": {
-            "lookupByName": { "type": "string", "minLength": 1 }
+            "kind": {
+              "const": "lookupByID"
+            },
+            "id": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["lookupByName"],
+          "required": [
+            "kind",
+            "id"
+          ],
           "additionalProperties": false
         },
         {
-          "type": "object",
           "properties": {
-            "selection": { "$ref": "#/$defs/selection" }
+            "kind": {
+              "const": "lookupByName"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["selection"],
+          "required": [
+            "kind",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "selection"
+            },
+            "selection": {
+              "$ref": "#/$defs/selection"
+            }
+          },
+          "required": [
+            "kind",
+            "selection"
+          ],
           "additionalProperties": false
         }
       ]
@@ -153,183 +150,28 @@
     "selection": {
       "type": "object",
       "properties": {
-        "id": { "type": "string", "format": "uuid" },
-        "lookupName": { "type": "string", "minLength": 1 },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "lookupName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "valueTypeID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        },
         "options": {
-          "type": "array",
-          "minItems": 1,
-          "items": { "$ref": "#/$defs/literalValue" }
+          "$ref": "#/$defs/selectionOptions"
         }
       },
-      "required": ["id", "lookupName", "options"],
-      "additionalProperties": false
-    },
-    "literalValue": {
-      "oneOf": [
-        {
-          "type": "object",
-          "properties": {
-            "uuid": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          "required": ["uuid"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "string": {
-              "type": "string"
-            }
-          },
-          "required": ["string"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "int": {
-              "type": "integer"
-            }
-          },
-          "required": ["int"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "bool": {
-              "type": "boolean"
-            }
-          },
-          "required": ["bool"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "featId": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          "required": ["featId"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "actionId": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          "required": ["actionId"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "resourceReference": {
-              "$ref": "#/$defs/resourceReference"
-            }
-          },
-          "required": ["resourceReference"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "proficiencyRank": {
-              "$ref": "proficiency-rank.schema.json"
-            }
-          },
-          "required": ["proficiencyRank"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "savingThrow": {
-              "type": "string",
-              "enum": ["fortitude", "reflex", "will", "perception"]
-            }
-          },
-          "required": ["savingThrow"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "skill": { "$ref": "skill.schema.json" }
-          },
-          "required": ["skill"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "weaponGroup": {
-              "type": "string",
-              "enum": ["any", "sword", "brawling", "flail", "knife", "club", "dart", "spear", "axe", "polearm", "hammer", "pick", "shield", "bow"]
-            }
-          },
-          "required": ["weaponGroup"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "weaponDesignation": { "type": "string", "minLength": 1 }
-          },
-          "required": ["weaponDesignation"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "characterFeature": { "$ref": "#/$defs/characterFeatureLiteral" }
-          },
-          "required": ["characterFeature"],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "placeholder": {
-              "type": "object",
-              "properties": {
-                "id": { "type": "string", "format": "uuid" },
-                "name": { "type": "string", "minLength": 1 }
-              },
-              "required": ["id", "name"],
-              "additionalProperties": false
-            }
-          },
-          "required": ["placeholder"],
-          "additionalProperties": false
-        }
-      ]
-    },
-    "characterFeatureLiteral": {
-      "type": "object",
-      "properties": {
-        "id": { "type": "string", "format": "uuid" },
-        "parent": { "$ref": "#/$defs/resourceReference" },
-        "name": { "type": "string", "minLength": 1 },
-        "publisher": { "type": "string", "minLength": 1 },
-        "book": { "type": "string", "minLength": 1 },
-        "level": { "type": "integer", "minimum": 1, "maximum": 20 },
-        "traits": { "type": "array", "items": { "type": "string" } },
-        "description": { "type": "string" },
-        "rules": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/rule" }
-        }
-      },
-      "required": ["id", "parent", "name", "publisher", "book", "level", "traits", "description", "rules"],
+      "required": [
+        "id",
+        "lookupName",
+        "valueTypeID",
+        "options"
+      ],
       "additionalProperties": false
     },
     "resourceReference": {
@@ -347,7 +189,9 @@
               "const": true
             }
           },
-          "required": ["hasClassTrait"],
+          "required": [
+            "hasClassTrait"
+          ],
           "additionalProperties": false
         },
         {
@@ -359,31 +203,48 @@
               "maximum": 20
             }
           },
-          "required": ["hasLevel"],
+          "required": [
+            "hasLevel"
+          ],
           "additionalProperties": false
         },
         {
           "type": "object",
           "properties": {
-            "hasAncestryWithName": { "type": "string", "minLength": 1 }
+            "hasAncestryWithName": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["hasAncestryWithName"],
+          "required": [
+            "hasAncestryWithName"
+          ],
           "additionalProperties": false
         },
         {
           "type": "object",
           "properties": {
-            "hasClassWithName": { "type": "string", "minLength": 1 }
+            "hasClassWithName": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["hasClassWithName"],
+          "required": [
+            "hasClassWithName"
+          ],
           "additionalProperties": false
         },
         {
           "type": "object",
           "properties": {
-            "hasTrait": { "type": "string", "minLength": 1 }
+            "hasTrait": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["hasTrait"],
+          "required": [
+            "hasTrait"
+          ],
           "additionalProperties": false
         },
         {
@@ -393,7 +254,9 @@
               "type": "string"
             }
           },
-          "required": ["hasFeatWithName"],
+          "required": [
+            "hasFeatWithName"
+          ],
           "additionalProperties": false
         },
         {
@@ -403,15 +266,22 @@
               "type": "string"
             }
           },
-          "required": ["hasFeatureWithName"],
+          "required": [
+            "hasFeatureWithName"
+          ],
           "additionalProperties": false
         },
         {
           "type": "object",
           "properties": {
-            "hasResourceWithName": { "type": "string", "minLength": 1 }
+            "hasResourceWithName": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["hasResourceWithName"],
+          "required": [
+            "hasResourceWithName"
+          ],
           "additionalProperties": false
         },
         {
@@ -422,7 +292,14 @@
               "properties": {
                 "attribute": {
                   "type": "string",
-                  "enum": ["str", "dex", "con", "int", "wis", "cha"]
+                  "enum": [
+                    "str",
+                    "dex",
+                    "con",
+                    "int",
+                    "wis",
+                    "cha"
+                  ]
                 },
                 "score": {
                   "type": "integer",
@@ -430,11 +307,16 @@
                   "maximum": 30
                 }
               },
-              "required": ["attribute", "score"],
+              "required": [
+                "attribute",
+                "score"
+              ],
               "additionalProperties": false
             }
           },
-          "required": ["hasAttribute"],
+          "required": [
+            "hasAttribute"
+          ],
           "additionalProperties": false
         },
         {
@@ -445,15 +327,31 @@
               "properties": {
                 "attribute": {
                   "type": "string",
-                  "enum": ["str", "dex", "con", "int", "wis", "cha"]
+                  "enum": [
+                    "str",
+                    "dex",
+                    "con",
+                    "int",
+                    "wis",
+                    "cha"
+                  ]
                 },
-                "modifier": { "type": "integer", "minimum": -5, "maximum": 20 }
+                "modifier": {
+                  "type": "integer",
+                  "minimum": -5,
+                  "maximum": 20
+                }
               },
-              "required": ["attribute", "modifier"],
+              "required": [
+                "attribute",
+                "modifier"
+              ],
               "additionalProperties": false
             }
           },
-          "required": ["hasAttributeModifier"],
+          "required": [
+            "hasAttributeModifier"
+          ],
           "additionalProperties": false
         },
         {
@@ -469,11 +367,16 @@
                   "$ref": "proficiency-rank.schema.json"
                 }
               },
-              "required": ["skill", "proficiency"],
+              "required": [
+                "skill",
+                "proficiency"
+              ],
               "additionalProperties": false
             }
           },
-          "required": ["hasSkillProficiency"],
+          "required": [
+            "hasSkillProficiency"
+          ],
           "additionalProperties": false
         },
         {
@@ -482,30 +385,49 @@
             "hasSavingThrowProficiency": {
               "type": "object",
               "properties": {
-                "savingThrow": { "$ref": "saving-throw.schema.json" },
-                "proficiency": { "$ref": "proficiency-rank.schema.json" }
+                "savingThrow": {
+                  "$ref": "saving-throw.schema.json"
+                },
+                "proficiency": {
+                  "$ref": "proficiency-rank.schema.json"
+                }
               },
-              "required": ["savingThrow", "proficiency"],
+              "required": [
+                "savingThrow",
+                "proficiency"
+              ],
               "additionalProperties": false
             }
           },
-          "required": ["hasSavingThrowProficiency"],
+          "required": [
+            "hasSavingThrowProficiency"
+          ],
           "additionalProperties": false
         },
         {
           "type": "object",
           "properties": {
-            "hasSpellcasting": { "type": "boolean", "const": true }
+            "hasSpellcasting": {
+              "type": "boolean",
+              "const": true
+            }
           },
-          "required": ["hasSpellcasting"],
+          "required": [
+            "hasSpellcasting"
+          ],
           "additionalProperties": false
         },
         {
           "type": "object",
           "properties": {
-            "hasAccess": { "type": "string", "minLength": 1 }
+            "hasAccess": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["hasAccess"],
+          "required": [
+            "hasAccess"
+          ],
           "additionalProperties": false
         },
         {
@@ -513,11 +435,15 @@
           "properties": {
             "allOf": {
               "type": "array",
-              "items": { "$ref": "#/$defs/prerequisite" },
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              },
               "minItems": 1
             }
           },
-          "required": ["allOf"],
+          "required": [
+            "allOf"
+          ],
           "additionalProperties": false
         },
         {
@@ -525,19 +451,119 @@
           "properties": {
             "anyOf": {
               "type": "array",
-              "items": { "$ref": "#/$defs/prerequisite" },
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              },
               "minItems": 1
             }
           },
-          "required": ["anyOf"],
+          "required": [
+            "anyOf"
+          ],
           "additionalProperties": false
         },
         {
           "type": "object",
           "properties": {
-            "unsupported": { "type": "string", "minLength": 1 }
+            "unsupported": {
+              "type": "string",
+              "minLength": 1
+            }
           },
-          "required": ["unsupported"],
+          "required": [
+            "unsupported"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "effectReference": {
+      "type": "object",
+      "properties": {
+        "kindID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/effect/[a-z0-9-]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "kindID",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "registeredValue": {
+      "type": "object",
+      "properties": {
+        "typeID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "payload": {
+        }
+      },
+      "required": [
+        "typeID",
+        "revision",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "selectionOptions": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "unrestricted"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "explicit"
+            },
+            "values": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/registeredValue"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "values"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "resourceFiltered"
+            },
+            "filter": {
+              "$ref": "resource-filter.schema.json"
+            }
+          },
+          "required": [
+            "kind",
+            "filter"
+          ],
           "additionalProperties": false
         }
       ]

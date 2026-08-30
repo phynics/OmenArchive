@@ -11,22 +11,29 @@ name: callow may
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: A6E2C6AF-E9A1-53B5-8F7D-04860A48F047
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 155D1F05-C016-5596-828B-37F0AB571FD9
-      inputName: featId
-    kind: addFeat
-  id: 444B18D3-E176-5BC7-9A4D-362678475100
+- id: 444b18d3-e176-5bc7-9a4d-362678475100
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: a6e2c6af-e9a1-53b5-8f7d-04860a48f047
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 155d1f05-c016-5596-828b-37f0ab571fd9
   startLevel: 1
 source:
   book: Pathfinder Player Core

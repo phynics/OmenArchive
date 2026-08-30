@@ -1,53 +1,62 @@
 ---
 action: {}
-description: 'You use fast-talking, flattery, and a silver tongue to avoid danger
-  and escape tricky situations. You might be a grifter or con artist, or you might
-  use your skills in certain reputable professions, like a barrister or diplomat.
-
-  When you successfully Feint, the target is Off-Guard against your melee attacks
-  until the end of your next turn. On a critical success, the target is off-guard
-  against all melee attacks until the end of your next turn, not just yours.
-
-  If you Feint while wielding an agile or finesse melee weapon, you can step immediately
-  after the Feint as a free action. You''re trained in Deception and Diplomacy. You
-  can choose Charisma as your key attribute.'
+description: |-
+  You use fast-talking, flattery, and a silver tongue to avoid danger and escape tricky situations. You might be a grifter or con artist, or you might use your skills in certain reputable professions, like a barrister or diplomat.
+  When you successfully Feint, the target is Off-Guard against your melee attacks until the end of your next turn. On a critical success, the target is off-guard against all melee attacks until the end of your next turn, not just yours.
+  If you Feint while wielding an agile or finesse melee weapon, you can step immediately after the Feint as a free action. You're trained in Deception and Diplomacy. You can choose Charisma as your key attribute.
 level: 1
 mechanicsScope: mixed
 name: scoundrel
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: diplomacy
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: 4B75669C-93B2-554A-B597-E2C7EB6BB30F
+- id: 4b75669c-93b2-554a-b597-e2c7eb6bb30f
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: diplomacy
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: deception
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: CAB0EAA1-E65C-520A-83C0-CF2990CB225C
+- id: cab0eaa1-e65c-520a-83c0-cf2990cb225c
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: deception
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
 source:
   book: Pathfinder Player Core

@@ -1,53 +1,62 @@
 ---
 action: {}
-description: 'Elves often struggle with underestimating aiuvarins, and you are experienced
-  at telling stories of your accomplishments to gain their respect. You are trained
-  in Performance. If you would automatically become trained in Performance (from your
-  background or class, for example), you instead become trained in a skill of your
-  choice.
-
-  You gain the Impressive Performance feat. When you attempt a Performance check to
-  Make an Impression on an elf, if you roll a critical failure, you get a failure
-  instead.'
+description: |-
+  Elves often struggle with underestimating aiuvarins, and you are experienced at telling stories of your accomplishments to gain their respect. You are trained in Performance. If you would automatically become trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice.
+  You gain the Impressive Performance feat. When you attempt a Performance check to Make an Impression on an elf, if you roll a critical failure, you get a failure instead.
 level: 1
 mechanicsScope: mixed
 name: earned glory
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 5B7CEB21-BCAE-59A9-A8B4-31313A007553
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 5509614D-B9A1-521D-9B57-718F498CDA18
-      inputName: featId
-    kind: addFeat
-  id: BBA6DF5E-10E2-547B-8E6A-54D43DB558AA
+- id: bba6df5e-10e2-547b-8e6a-54d43db558aa
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 5b7ceb21-bcae-59a9-a8b4-31313a007553
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 5509614d-b9a1-521d-9b57-718f498cda18
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: performance
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: FDE73A3B-BD44-52C6-8FDD-3C45D92E7433
+- id: fde73a3b-bd44-52c6-8fdd-3c45d92e7433
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: performance
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
 source:
   book: Pathfinder Player Core

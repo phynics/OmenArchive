@@ -9,16 +9,20 @@ name: inspired stratagem
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: actionId
-        valueFromSource:
-          literal:
-            actionId: 54B95F68-C039-5AFE-BA04-14FD3568FEE6
-      inputName: actionId
-    kind: addAction
-  id: 1AE48EDB-CCCF-5EDD-9E93-DA25096D1864
+- id: 1ae48edb-cccf-5edd-9e93-da25096d1864
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  inputRecipes:
+  - inputName: actionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/action-id
+          revision: 1
+          payload: 54b95f68-c039-5afe-ba04-14fd3568fee6
   startLevel: 1
 source:
   book: Pathfinder Player Core

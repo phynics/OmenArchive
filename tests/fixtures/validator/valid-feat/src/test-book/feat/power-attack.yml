@@ -14,16 +14,20 @@ repeatPolicy:
       minimumLevel: 6
   duplicateSelectionRules:
     - lookupName: power attack
-      payloadType: effect
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
 rules:
   - id: 00000000-0000-4000-8000-000000000001
-    effectTemplate:
-      kind: addFeat
-      inputRecipes:
-        - inputName: target
-          expectedValue:
-            parameterType: resourceReference
-            valueFromSource:
-              literal:
-                resourceReference: omen://feat/power-attack
+    effectReference:
+      kindID: org.openomen.pf2e.core/effect/add-feat
+      revision: 1
+    inputRecipes:
+      - inputName: target
+        expectedValue:
+          valueTypeID: org.openomen.pf2e.core/value/feat-id
+          source:
+            kind: literal
+            value:
+              typeID: org.openomen.pf2e.core/value/feat-id
+              revision: 1
+              payload: 00000000-0000-4000-8000-000000000001
     startLevel: 1

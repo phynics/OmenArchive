@@ -1,72 +1,97 @@
 ---
 action: {}
-description: 'You know the secrets of the Multiverse. You gain the trained proficiency
-  rank in either Diplomacy or Intimidation, and Religion. If you would automatically
-  become trained in one of those skills (from your background or class, for example),
-  you instead become trained in a skill of your choice.
-
-  You also gain the Additional Lore general feat for a Lore subcategory of a plane
-  to which you trace your lineage.'
+description: |-
+  You know the secrets of the Multiverse. You gain the trained proficiency rank in either Diplomacy or Intimidation, and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.
+  You also gain the Additional Lore general feat for a Lore subcategory of a plane to which you trace your lineage.
 level: 1
 mechanicsScope: builder
 name: nephilim lore
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          literal:
-            skill: religion
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: DD952403-6D75-5AEE-8FD4-5954560C3A85
+- id: dd952403-6d75-5aee-8fd4-5954560c3a85
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          payload:
+            kind: religion
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          selection:
-            id: 3A691986-0BA9-54FD-9C49-490E13B7520B
-            lookupName: skill
-            options:
-            - skill: diplomacy
-            - skill: intimidation
-      inputName: skill
-    - expectedValue:
-        parameterType: proficiencyRank
-        valueFromSource:
-          literal:
-            proficiencyRank: trained
-      inputName: proficiencyCap
-    kind: addSkillIncrease
-  id: 7C859296-24D0-5764-A6A3-9F83FBA8BB3F
+- id: 7c859296-24d0-5764-a6a3-9f83fba8bb3f
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: selection
+        selection:
+          id: 3a691986-0ba9-54fd-9c49-490e13b7520b
+          lookupName: skill
+          valueTypeID: org.openomen.pf2e.core/value/skill
+          options:
+            kind: explicit
+            values:
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: diplomacy
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: intimidation
+  - inputName: proficiencyCap
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          payload: 2
   startLevel: 1
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: uuid
-        valueFromSource:
-          literal:
-            uuid: 9D457E0F-528E-5847-8998-C61A828EE5B7
-      inputName: selectionId
-    - expectedValue:
-        parameterType: featId
-        valueFromSource:
-          literal:
-            featId: 3D88C622-5354-5DD3-99B6-ACFEDF3F6BBC
-      inputName: featId
-    kind: addFeat
-  id: A194F1C4-55B9-5728-9C9B-B9E57ECAB6F3
+- id: a194f1c4-55b9-5728-9c9b-b9e57ecab6f3
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  inputRecipes:
+  - inputName: selectionId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/uuid
+          revision: 1
+          payload: 9d457e0f-528e-5847-8998-c61a828ee5b7
+  - inputName: featId
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
   startLevel: 1
 source:
   book: Pathfinder Player Core

@@ -11,34 +11,87 @@ prerequisites:
 - trained in at least one skill
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: skill
-        valueFromSource:
-          selection:
-            id: C45DFF95-58CF-5F2E-A37A-FFFA04BDECA6
-            lookupName: assurance-skill
-            options:
-            - skill: acrobatics
-            - skill: arcana
-            - skill: athletics
-            - skill: crafting
-            - skill: deception
-            - skill: diplomacy
-            - skill: intimidation
-            - skill: medicine
-            - skill: nature
-            - skill: occultism
-            - skill: performance
-            - skill: religion
-            - skill: society
-            - skill: stealth
-            - skill: survival
-            - skill: thievery
-      inputName: skill
-    kind: addAssurance
-  id: 94C764F5-2F26-59A6-A1F4-49F2544A07EE
+- id: 94c764f5-2f26-59a6-a1f4-49f2544a07ee
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-assurance
+    revision: 1
+  inputRecipes:
+  - inputName: skill
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/skill
+      source:
+        kind: selection
+        selection:
+          id: c45dff95-58cf-5f2e-a37a-fffa04bdeca6
+          lookupName: assurance-skill
+          valueTypeID: org.openomen.pf2e.core/value/skill
+          options:
+            kind: explicit
+            values:
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: acrobatics
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: arcana
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: athletics
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: crafting
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: deception
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: diplomacy
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: intimidation
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: medicine
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: nature
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: occultism
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: performance
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: religion
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: society
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: stealth
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: survival
+            - typeID: org.openomen.pf2e.core/value/skill
+              revision: 1
+              payload:
+                kind: thievery
   startLevel: 1
 source:
   book: Pathfinder Player Core

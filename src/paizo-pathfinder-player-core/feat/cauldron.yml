@@ -1,62 +1,64 @@
 ---
 action: {}
-description: 'You can brew magic in your cauldron, creating useful magical concoctions.
-  You can use the Craft activity to create oils and potions. You immediately gain
-  the formulas for four common 1st-level oils or potions. At 4th level and every 2
-  levels beyond that, you gain the formula for a common oil or potion of that level
-  or lower (a 4th-level potion if you''re 4th level, a 6th-level potion if you''re
-  6th level, and so on). If you have a familiar, you can have your familiar learn
-  these formulas rather than storing them in a formula book. Your familiar can learn
-  new formulas in the same way it learns new spells, and these formulas are transferred
-  from a slain familiar to a new familiar in the same way spells are.
-
-  During your daily preparations, you can create one temporary oil or potion using
-  a formula you know. If you have master proficiency in spell DC, you can create a
-  batch of two temporary oils or potions during your daily preparations, and if you
-  have legendary proficiency, you can create a batch of three. Any items you create
-  this way become inert bottles of liquid the next time you make your daily preparations,
-  and any remaining effects of the temporary items end. A temporary oil or potion
-  has no value.'
+description: |-
+  You can brew magic in your cauldron, creating useful magical concoctions. You can use the Craft activity to create oils and potions. You immediately gain the formulas for four common 1st-level oils or potions. At 4th level and every 2 levels beyond that, you gain the formula for a common oil or potion of that level or lower (a 4th-level potion if you're 4th level, a 6th-level potion if you're 6th level, and so on). If you have a familiar, you can have your familiar learn these formulas rather than storing them in a formula book. Your familiar can learn new formulas in the same way it learns new spells, and these formulas are transferred from a slain familiar to a new familiar in the same way spells are.
+  During your daily preparations, you can create one temporary oil or potion using a formula you know. If you have master proficiency in spell DC, you can create a batch of two temporary oils or potions during your daily preparations, and if you have legendary proficiency, you can create a batch of three. Any items you create this way become inert bottles of liquid the next time you make your daily preparations, and any remaining effects of the temporary items end. A temporary oil or potion has no value.
 level: 1
 mechanicsScope: builder
 name: cauldron
 prerequisites: []
 rarity: common
 rules:
-- effectTemplate:
-    inputRecipes:
-    - expectedValue:
-        parameterType: string
-        valueFromSource:
-          literal:
-            string: cauldron
-      inputName: slug
-    - expectedValue:
-        parameterType: string
-        valueFromSource:
-          literal:
-            string: PF2E.SpecificRule.Witch.Cauldron.CraftingEntry
-      inputName: label
-    - expectedValue:
-        parameterType: string
-        valueFromSource:
-          literal:
-            string: ternary(eq(@actor.system.proficiencies.spellcasting.rank,4),3,ternary(eq(@actor.system.proficiencies.spellcasting.rank,3),2,1))
-      inputName: maxSlotsExpression
-    - expectedValue:
-        parameterType: bool
-        valueFromSource:
-          literal:
-            bool: true
-      inputName: isDailyPreparation
-    - expectedValue:
-        parameterType: string
-        valueFromSource:
-          literal:
-            string: or(item:trait:oil,item:trait:potion)
-      inputName: craftableItems
-    kind: addCraftingAbility
-  id: 2CDC9FA9-359D-5902-82E2-637747827F6C
+- id: 2cdc9fa9-359d-5902-82e2-637747827f6c
+  effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-crafting-ability
+    revision: 1
+  inputRecipes:
+  - inputName: slug
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/string
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/string
+          revision: 1
+          payload: cauldron
+  - inputName: label
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/string
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/string
+          revision: 1
+          payload: PF2E.SpecificRule.Witch.Cauldron.CraftingEntry
+  - inputName: maxSlotsExpression
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/string
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/string
+          revision: 1
+          payload: ternary(eq(@actor.system.proficiencies.spellcasting.rank,4),3,ternary(eq(@actor.system.proficiencies.spellcasting.rank,3),2,1))
+  - inputName: isDailyPreparation
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          payload: true
+  - inputName: craftableItems
+    expectedValue:
+      valueTypeID: org.openomen.pf2e.core/value/string
+      source:
+        kind: literal
+        value:
+          typeID: org.openomen.pf2e.core/value/string
+          revision: 1
+          payload: or(item:trait:oil,item:trait:potion)
   startLevel: 1
 source:
   book: Pathfinder Player Core

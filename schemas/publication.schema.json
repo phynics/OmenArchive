@@ -18,8 +18,27 @@
     "published": {
       "type": "string",
       "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "mechanicsModules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "moduleID": {
+            "type": "string",
+            "pattern": "^[a-z0-9.-]+$"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": ["moduleID", "revision"],
+        "additionalProperties": false
+      }
     }
   },
-  "required": ["id", "publisher", "title", "published"],
+  "required": ["id", "publisher", "title", "published", "mechanicsModules"],
   "additionalProperties": false
 }
