@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-archetype.schema.json",
+  "title": "OmenArchive Archetype",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "source": { "$ref": "utility-types/content-source.schema.json" },
+    "description": { "type": "string" },
+    "entryFeat": { "type": "string", "pattern": "^omen://archetype/[^/]+/feats/[^/?]+$" },
+    "progression": {
+      "type": "object",
+      "properties": {
+        "requires": { "type": "array", "items": { "type": "string" } },
+        "excludes": { "type": "array", "items": { "type": "string" } },
+        "countsFeatsFrom": { "type": "array", "items": { "type": "string" } },
+        "dedicationLockExceptions": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "selections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "type": { "type": "string" },
+              "required": { "type": "boolean" }
+            },
+            "required": ["id", "type"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["name", "source", "description", "entryFeat"],
+  "additionalProperties": false
+}

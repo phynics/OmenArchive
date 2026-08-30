@@ -22,11 +22,25 @@ class ValidatorTest < Minitest::Test
     assert_includes stderr, "background variant key \"arcana\" is duplicated"
   end
 
-  def test_valid_other_item_fixture_passes
-    stdout, stderr, status = run_fixture("valid-other-item")
+  def test_valid_domain_fixture_passes
+    stdout, stderr, status = run_fixture("valid-domain")
 
     assert status.success?, "expected success, got #{stderr}"
     assert_includes stdout, "Validated 1 file(s)"
+  end
+
+  def test_valid_companion_fixture_passes
+    stdout, stderr, status = run_fixture("valid-companion")
+
+    assert status.success?, "expected success, got #{stderr}"
+    assert_includes stdout, "Validated 1 file(s)"
+  end
+
+  def test_valid_archetype_bundle_fixture_passes
+    stdout, stderr, status = run_fixture("valid-archetype")
+
+    assert status.success?, "expected success, got #{stderr}"
+    assert_includes stdout, "Validated 2 file(s)"
   end
 
   def test_valid_class_fixture_passes

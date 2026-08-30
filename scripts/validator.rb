@@ -7,6 +7,124 @@ require "pathname"
 require "yaml"
 
 module OmenArchive
+  # The archive format manifest is required at every archive root. Both the
+  # Ruby validator and OmenArchiveKit use its family declarations for path
+  # classification; no directory-specific fallback is permitted.
+  class ArchiveManifest
+    attr_reader :path, :publication, :families, :custom_groups
+
+    def initialize(path, schema_root: nil)
+      @path = Pathname.new(path).expand_path
+      @schema_root = Pathname.new(schema_root || @path.dirname).expand_path
+      raise "Archive format manifest is missing: #{@path}" unless @path.file?
+
+      @document = JSON.parse(@path.read)
+      @publication = @document.fetch("publication")
+      @families = @document.fetch("families")
+      @custom_groups = @document.fetch("customGroups", [])
+      validate!
+    rescue JSON::ParserError, KeyError, TypeError, NoMethodError => e
+      raise "Archive format manifest is invalid at #{@path}: #{e.message}"
+    end
+
+    def classify(parts)
+      return publication_info(parts) if publication_path?(parts)
+      return unless parts.length >= 4
+      return unless parts.last.end_with?(".yml")
+
+      category = parts[2]
+      family = @families.find { |entry| entry["directory"] == category }
+      return unless family
+
+      relative_parts = parts.drop(3)
+      case family.fetch("layout")
+      when "flat"
+        return unless relative_parts.length == 1
+        info(family, parts, relative_parts)
+      when "bundle"
+        return unless relative_parts.length >= 2
+        bundle = relative_parts.first
+        filename = relative_parts.last
+        if relative_parts.length == 2 && File.basename(filename, ".yml") == bundle
+          return info(family, parts, relative_parts)
+        end
+        return unless relative_parts.length == 3
+
+        child_directory = relative_parts[1]
+        child = family.fetch("children", []).find { |entry| entry["directory"] == child_directory }
+        schema = child && child["schema"]
+        unless schema
+          owner_path = [bundle]
+          declaration = @custom_groups.find do |entry|
+            entry["familyID"] == family["id"] &&
+              entry["ownerPath"] == owner_path &&
+              entry["directory"] == child_directory
+          end
+          schema = declaration && declaration["schema"]
+        end
+        return unless schema
+
+        info(family, parts, relative_parts).merge(schema: schema, layout: "flat")
+      when "grouped", "open-custom-group"
+        return unless relative_parts.length == 2
+        info(family, parts, relative_parts)
+      end
+    end
+
+    private
+
+    def publication_path?(parts)
+      parts.length == 3 && parts[0] == "src" && parts[2] == "publication.yml"
+    end
+
+    def publication_info(parts)
+      {
+        publication: parts[1], category: nil, basename: "publication", parts: parts,
+        schema: @publication.fetch("schema"), manifest: true
+      }
+    end
+
+    def info(family, parts, relative_parts)
+      {
+        publication: parts[1], category: parts[2], basename: File.basename(parts.last, ".yml"),
+        parts: parts, schema: family.fetch("schema"), layout: family.fetch("layout"),
+        family_id: family.fetch("id"), resource_parts: relative_parts
+      }
+    end
+
+    def validate!
+      raise "version must be 1" unless @document["version"] == 1
+      raise "publication path must be src/{publication}/publication.yml" unless
+        @publication["path"] == "src/{publication}/publication.yml"
+      raise "families must not be empty" unless @families.is_a?(Array) && !@families.empty?
+
+      ids = {}
+      directories = {}
+      @families.each do |family|
+        id = family.fetch("id")
+        directory = family.fetch("directory")
+        raise "duplicate family id #{id}" if ids.key?(id)
+        raise "duplicate family directory #{directory}" if directories.key?(directory)
+        ids[id] = true
+        directories[directory] = true
+      end
+      @custom_groups.each do |group|
+        family = @families.find { |entry| entry["id"] == group["familyID"] }
+        raise "custom group references unknown family #{group["familyID"]}" unless family
+        raise "custom groups require a bundle family: #{group["familyID"]}" unless family["layout"] == "bundle"
+      end
+
+      schema_names = [@publication.fetch("schema")] + @families.flat_map do |family|
+        [family.fetch("schema")] + family.fetch("children", []).map { |child| child.fetch("schema") }
+      end + @custom_groups.map { |group| group.fetch("schema") }
+      schema_names.uniq.each do |schema_name|
+        raise "schema name is unsafe: #{schema_name}" unless schema_name.is_a?(String) &&
+          schema_name !~ %r{[/\\]} && !schema_name.empty?
+        raise "schema file is missing: #{schema_name}" unless @schema_root.join(schema_name).file?
+      end
+    end
+  end
+
   class SchemaStore
     def initialize(schema_root)
       @schema_root = Pathname.new(schema_root).expand_path
@@ -270,6 +388,10 @@ module OmenArchive
     def initialize(root:, schema_root:)
       @root = Pathname.new(root).expand_path
       @schema_root = Pathname.new(schema_root).expand_path
+      @manifest = ArchiveManifest.new(
+        @root.join("schemas", "archive-format.json"),
+        schema_root: @schema_root
+      )
       @schema_store = SchemaStore.new(@schema_root)
       @json_schema_validator = JsonSchemaValidator.new(@schema_store)
     end
@@ -357,58 +479,18 @@ module OmenArchive
 
     def classify_path(relative_path, errors)
       parts = relative_path.each_filename.to_a
-      unless parts.first == "src" && parts.length >= 4
-        if parts.length == 3 && parts[0] == "src" && parts[2] == "publication.yml"
-          return {
-            publication: parts[1],
-            category: nil,
-            basename: "publication",
-            parts: parts,
-            schema: "publication.schema.json",
-            manifest: true
-          }
-        end
+      unless parts.first == "src" && parts.length >= 3
         errors << "#{relative_path}: path must live under src/{publication}/{category}/..."
         return
       end
 
-      publication = parts[1]
-      category = parts[2]
-      filename = parts.last
-      basename = File.basename(filename, ".yml")
-
-      info = { publication: publication, category: category, basename: basename, parts: parts }
-
-      case category
-      when "action"
-        return info.merge(schema: "character-action.schema.json") if parts.length == 4
-      when "spell"
-        return info.merge(schema: "character-spell.schema.json") if parts.length == 4
-      when "item"
-        return info.merge(schema: "character-item.schema.json") if parts.length == 4
-      when "background"
-        return info.merge(schema: "character-background.schema.json") if parts.length == 4
-      when "feat"
-        return info.merge(schema: "character-feat.schema.json") if parts.length == 4
-      when "ancestry"
-        ancestry = parts[3]
-        if parts.length == 5 && basename == ancestry
-          return info.merge(schema: "character-ancestry.schema.json", ancestry_directory: ancestry)
+      if (info = @manifest.classify(parts))
+        if ["ancestry", "heritage"].include?(info[:category])
+          info[:ancestry_directory] = parts[3]
+        elsif info[:category] == "class"
+          info[:class_directory] = parts[3]
         end
-        if parts.length == 6 && parts[4] == "features"
-          return info.merge(schema: "character-feature.schema.json", ancestry_directory: ancestry)
-        end
-      when "heritage"
-        ancestry = parts[3]
-        return info.merge(schema: "character-heritage.schema.json", ancestry_directory: ancestry) if parts.length == 5
-      when "class"
-        class_name = parts[3]
-        if parts.length == 5 && basename == class_name
-          return info.merge(schema: "character-class.schema.json", class_directory: class_name)
-        end
-        return info.merge(schema: "character-feature.schema.json", class_directory: class_name) if parts.length == 6
-      when "other-items"
-        return info.merge(schema: "other-item.schema.json") if parts.length >= 5
+        return info
       end
 
       errors << "#{relative_path}: cannot determine schema from directory layout"
@@ -477,8 +559,8 @@ module OmenArchive
       case path_info[:category]
       when "class"
         expected.concat(class_slug_variants(expected, path_info))
-      when "other-items"
-        expected.concat(other_item_slug_variants(primary, path_info))
+      when "domain"
+        expected.concat(domain_slug_variants(primary))
       end
 
       expected.uniq.reject(&:empty?)
@@ -513,10 +595,8 @@ module OmenArchive
       variants
     end
 
-    def other_item_slug_variants(primary, path_info)
-      group = path_info[:parts][3]
-      singular_group = group.end_with?("s") ? group[0...-1] : group
-      suffix = "-#{singular_group}"
+    def domain_slug_variants(primary)
+      suffix = "-domain"
       return [] unless primary.end_with?(suffix)
 
       [primary.delete_suffix(suffix), simplify_slug(primary.delete_suffix(suffix))]
@@ -541,7 +621,7 @@ module OmenArchive
       errors.each { |error| warn error }
       warn "Validation failed for #{errors.length} issue(s) across #{files.length} file(s)"
       1
-    rescue OptionParser::InvalidOption, OptionParser::MissingArgument => e
+    rescue OptionParser::InvalidOption, OptionParser::MissingArgument, RuntimeError => e
       warn e.message
       2
     rescue Errno::ENOENT => e

@@ -31,7 +31,9 @@ src/
     feat/
     heritage/
     item/                  # Canonical equipment records (all subtypes)
-    other-items/
+    archetype/
+    companion/
+    domain/
 ```
 
 `{publication}` is a slug for a book/source package, for example:
@@ -544,12 +546,11 @@ Rules:
 
 ### Other items
 
-`other-items/` is for curated data not yet represented by a top-level resource schema, such as domains.
-
-Rules:
-
-- Prefer adding a schema when the item becomes part of OmenDatabase/runtime.
-- Do not let `other-items/` become a dumping ground for resources that already have a schema.
+Domains and companions are top-level resource families with their own flat
+directories. Archetypes are bundles whose owned feats live under `feats/`.
+The domain directory is singular for storage, but canonical OmenPath references
+remain plural: `omen://domains/<name>`. Migration tools must preserve that
+identity when they move a domain file.
 
 ## Schema conventions
 

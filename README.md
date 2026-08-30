@@ -14,8 +14,7 @@ Validation:
 - Run `./scripts/install-pre-commit.sh` to install the repo-local pre-commit hook.
 
 The archive layout contract is recorded in `schemas/archive-format.json`.
-Owner-scoped bundle custom groups are declared there alongside their schemas;
-the open `other-items` family remains global and data-driven. The Swift
-`OmenArchiveKit` package interprets this manifest, while the Ruby validator
-remains a parity oracle during the staged CI cutover. Linux verification is
-intentionally deferred.
+Owner-scoped bundle custom groups are declared there alongside their schemas.
+Archetypes are bundles with owned `feats`; domains and companions are flat
+families. The Swift `OmenArchiveKit` package and the Ruby validator interpret
+the same mandatory manifest.
