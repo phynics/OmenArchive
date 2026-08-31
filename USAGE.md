@@ -50,6 +50,11 @@ id: paizo-pathfinder-player-core
 publisher: Paizo
 title: Pathfinder Player Core
 published: "2023-11-15"
+mechanicsModules:
+  - moduleID: org.openomen.pf2e.core
+    revision: 1
+  - moduleID: org.openomen.pf2e.spellcasting
+    revision: 1
 ```
 
 ## General resource rules
@@ -142,18 +147,18 @@ Leave the key out when there are no rules; do not add empty arrays to unchanged 
 rules:
   - id: 11111111-1111-1111-1111-111111111111
     effectReference:
-      kindID: org.openomen.pf2e.core/effect/add-feat
+      kindID: org.openomen.pf2e.core/effect/add-language
       revision: 1
     inputRecipes:
-      - inputName: target
+      - inputName: languageName
         expectedValue:
-          valueTypeID: org.openomen.pf2e.core/value/feat-id
+          valueTypeID: org.openomen.pf2e.core/value/string
           source:
             kind: literal
             value:
-              typeID: org.openomen.pf2e.core/value/feat-id
+              typeID: org.openomen.pf2e.core/value/string
               revision: 1
-              payload: 22222222-2222-2222-2222-222222222222
+              payload: Draconic
     startLevel: 1
     prerequisites:
       - hasClassTrait: true
@@ -168,6 +173,11 @@ Rules use the namespaced mechanics registry wire shape:
 - `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
 
 Prefer literal values in `inputRecipes` when writing by hand. If a rule needs a new literal shape or prerequisite form, update the shared rule schema first so the archive, loader, and import paths stay in sync.
+
+Spellcasting rules use `org.openomen.pf2e.spellcasting`. Model an innate cantrip with
+`rankPolicy: {kind: cantrip}` and `castFrequency: {kind: atWill}`. Model a fixed-rank
+daily spell with `{kind: fixed, rank: N}` and `{kind: perDay, uses: N}`. Daily uses belong
+to each spell grant; do not represent ancestry-granted innate spells as spell slots.
 
 ### Resource references
 

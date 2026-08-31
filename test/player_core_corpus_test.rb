@@ -79,8 +79,24 @@ class PlayerCoreCorpusTest < Minitest::Test
     assert_equal "org.openomen.pf2e.core", descriptor.fetch("moduleID")
     assert_equal 1, descriptor.fetch("revision")
     assert_equal [], descriptor.fetch("dependencies")
-    assert_equal 24, descriptor.fetch("valueTypes").length
-    assert_equal 27, descriptor.fetch("effects").length
+    assert_equal 21, descriptor.fetch("valueTypes").length
+    assert_equal 24, descriptor.fetch("effects").length
+    assert_equal 0, descriptor.fetch("stateKeys").length
+    assert_equal File.read(path), JSON.generate(descriptor, quirks_mode: true) + "\n",
+                 "descriptor must use canonical sorted-key JSON"
+  end
+
+  def test_spellcasting_mechanics_descriptor_is_deterministic_and_well_formed
+    path = File.join(ROOT, "mechanics", "org.openomen.pf2e.spellcasting.json")
+    descriptor = JSON.parse(File.read(path))
+
+    assert_equal "org.openomen.pf2e.spellcasting", descriptor.fetch("moduleID")
+    assert_equal 1, descriptor.fetch("revision")
+    assert_equal [
+      { "moduleID" => "org.openomen.pf2e.core", "revision" => 1 }
+    ], descriptor.fetch("dependencies")
+    assert_equal 5, descriptor.fetch("valueTypes").length
+    assert_equal 5, descriptor.fetch("effects").length
     assert_equal 0, descriptor.fetch("stateKeys").length
     assert_equal File.read(path), JSON.generate(descriptor, quirks_mode: true) + "\n",
                  "descriptor must use canonical sorted-key JSON"
@@ -91,7 +107,8 @@ class PlayerCoreCorpusTest < Minitest::Test
     publication = YAML.safe_load(File.read(publication_path), aliases: true)
 
     assert_equal [
-      { "moduleID" => "org.openomen.pf2e.core", "revision" => 1 }
+      { "moduleID" => "org.openomen.pf2e.core", "revision" => 1 },
+      { "moduleID" => "org.openomen.pf2e.spellcasting", "revision" => 1 }
     ], publication.fetch("mechanicsModules")
     refute publication.key?("mechanicsDependencies")
   end
@@ -102,7 +119,7 @@ class PlayerCoreCorpusTest < Minitest::Test
       YAML.safe_load(File.read(path), aliases: true).is_a?(Hash) &&
         YAML.safe_load(File.read(path), aliases: true).key?("rules")
     end
-    assert_equal 98, rule_files.length
+    assert_equal 101, rule_files.length
     literal_payloads = []
     rule_files.each do |path|
       rules = YAML.safe_load(File.read(path), aliases: true).fetch("rules")
@@ -126,5 +143,10 @@ class PlayerCoreCorpusTest < Minitest::Test
       "kind" => "filter", "weaponKind" => "advanced", "weaponGroup" => "any"
     }]
     assert_includes literal_payloads, [value_prefix + "weapon-designation", { "kind" => "specific", "name" => "club" }]
+    spellcasting_prefix = "org.openomen.pf2e.spellcasting/value/"
+    assert_includes literal_payloads, [spellcasting_prefix + "rank-policy", { "kind" => "cantrip" }]
+    assert_includes literal_payloads, [spellcasting_prefix + "cast-frequency", { "kind" => "atWill" }]
+    assert_includes literal_payloads, [spellcasting_prefix + "rank-policy", { "kind" => "fixed", "rank" => 2 }]
+    assert_includes literal_payloads, [spellcasting_prefix + "cast-frequency", { "kind" => "perDay", "uses" => 1 }]
   end
 end
