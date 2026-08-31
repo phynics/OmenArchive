@@ -11,10 +11,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Compare Ruby and Swift archive validation outcomes
-        run: ./scripts/validate-shadow.sh
-      - name: Run validator fixtures
-        run: ruby -Itest test/validator_test.rb
+      - name: Check out OmenArchive
+        uses: actions/checkout@v4
+        with:
+          path: OmenArchive
+      - name: Check out OmenCore
+        uses: actions/checkout@v4
+        with:
+          repository: phynics/OmenCore
+          ref: c05666b4c3242068baecefb0a265062e0772dcbf
+          path: OmenCore
+          token: ${{ secrets.OMEN_CI_READ_TOKEN || github.token }}
+      - name: Check out ADUtilities
+        uses: actions/checkout@v4
+        with:
+          repository: phynics/ADUtilities
+          ref: 7c62e9711804366849fd8616842c590d3fb52034
+          path: ADUtilities
+          token: ${{ secrets.OMEN_CI_READ_TOKEN || github.token }}
+      - name: Install Swift 6
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: "6.0"
+      - name: Run Swift archive validator tests
+        run: swift test --package-path OmenArchive/OmenArchiveKit
+      - name: Validate the complete archive with Swift
+        run: swift run --package-path OmenArchive/OmenArchiveKit omen-archive validate OmenArchive
       - name: Run Player Core import manifest checks
+        working-directory: OmenArchive
         run: ruby -Itest test/player_core_spell_import_test.rb
+      - name: Run Player Core corpus assertions
+        working-directory: OmenArchive
+        run: ruby -Itest test/player_core_corpus_test.rb

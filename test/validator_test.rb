@@ -4,7 +4,7 @@ require "pathname"
 
 class ValidatorTest < Minitest::Test
   REPO_ROOT = Pathname.new(__dir__).join("..").expand_path
-  SCRIPT = REPO_ROOT.join("scripts/validate.sh")
+  SCRIPT = REPO_ROOT.join("scripts/validator.rb")
   SCHEMA_ROOT = REPO_ROOT.join("schemas")
   FIXTURES_ROOT = REPO_ROOT.join("tests/fixtures/validator")
 
@@ -105,7 +105,7 @@ class ValidatorTest < Minitest::Test
   def run_fixture(name)
     root = FIXTURES_ROOT.join(name)
     Open3.capture3(
-      SCRIPT.to_s,
+      "ruby", SCRIPT.to_s,
       "--root", root.to_s,
       "--schema-root", SCHEMA_ROOT.to_s
     )

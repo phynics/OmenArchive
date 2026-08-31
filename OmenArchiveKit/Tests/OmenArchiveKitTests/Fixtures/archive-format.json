@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "publication": {
+    "path": "src/{publication}/publication.yml",
+    "schema": "publication.schema.json"
+  },
+  "families": [
+    { "id": "spell", "directory": "spell", "layout": "flat", "schema": "character-spell.schema.json" },
+    {
+      "id": "ancestry",
+      "directory": "ancestry",
+      "layout": "bundle",
+      "schema": "character-ancestry.schema.json",
+      "children": [
+        { "directory": "features", "layout": "flat", "schema": "character-feature.schema.json" }
+      ]
+    },
+    {
+      "id": "class",
+      "directory": "class",
+      "layout": "bundle",
+      "schema": "character-class.schema.json",
+      "children": [
+        { "directory": "features", "layout": "flat", "schema": "character-feature.schema.json" }
+      ],
+      "allowsCustomChildren": true,
+      "customChildSchema": "character-feature.schema.json"
+    },
+    {
+      "id": "archetype",
+      "directory": "archetype",
+      "layout": "bundle",
+      "schema": "character-archetype.schema.json",
+      "children": [
+        { "directory": "feats", "layout": "flat", "schema": "character-feat.schema.json" }
+      ]
+    },
+    { "id": "domain", "directory": "domain", "layout": "flat", "schema": "character-domain.schema.json" },
+    { "id": "companion", "directory": "companion", "layout": "flat", "schema": "character-companion.schema.json" },
+    { "id": "heritage", "directory": "heritage", "layout": "grouped", "schema": "character-heritage.schema.json" }
+  ],
+  "customGroups": [
+    { "familyID": "class", "ownerPath": ["ranger"], "directory": "hunters-edge", "schema": "character-feature.schema.json" },
+    { "familyID": "class", "ownerPath": ["ranger"], "directory": "custom-group", "schema": "character-feature.schema.json" }
+  ]
+}
