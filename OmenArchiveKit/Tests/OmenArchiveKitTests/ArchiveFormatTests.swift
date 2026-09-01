@@ -271,8 +271,8 @@ struct ArchiveFormatTests {
         #expect(report.diagnostics.isEmpty)
     }
 
-    @Test("matches the committed validator fixture outcomes", .enabled(if: hasAuthoritativeArchive))
-    func matchesCommittedFixtureOutcomes() throws {
+    @Test("matches the package validator fixture outcomes", .enabled(if: hasAuthoritativeArchive))
+    func matchesPackageFixtureOutcomes() throws {
         let validFixtures = [
             "valid-background",
             "valid-domain",
@@ -329,8 +329,10 @@ struct ArchiveFormatTests {
         defer { try? fileManager.removeItem(at: fixtureRoot) }
 
         let archiveRoot = authoritativeArchiveRoot()
-        let sourceFixture = archiveRoot
-            .appendingPathComponent("tests/fixtures/validator")
+        let sourceFixture = URL(fileURLWithPath: #filePath)
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Fixtures/validator")
             .appendingPathComponent(name)
         try fileManager.createDirectory(at: fixtureRoot, withIntermediateDirectories: true)
         try fileManager.copyItem(

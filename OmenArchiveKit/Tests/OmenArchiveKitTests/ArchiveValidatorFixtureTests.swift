@@ -2,14 +2,14 @@ import Foundation
 import Testing
 @testable import OmenArchiveKit
 
-/// Keeps the Swift validator's diagnostics aligned with the committed fixture
-/// outcomes. The fixture roots are
-/// deliberately copied into a temporary archive so each case exercises the
+/// Keeps the Swift validator's diagnostics aligned with the package fixture
+/// outcomes. The fixture roots are deliberately copied into a temporary
+/// archive so each case exercises the
 /// same public `ArchiveFormat(archiveRoot:)` and `ArchiveValidator` seam that
 /// CI and OmenScribe will use.
-@Suite("Archive validator parity fixtures")
-struct ValidatorParityTests {
-    @Test("accepts the committed valid fixture set")
+@Suite("Archive validator fixtures")
+struct ArchiveValidatorFixtureTests {
+    @Test("accepts the package valid fixture set")
     func acceptsValidFixtures() throws {
         try validateFixture("valid-background", path: "src/test-book/background/scholar.yml")
         try validateFixture("valid-domain", path: "src/test-book/domain/air.yml")
@@ -288,11 +288,14 @@ struct ValidatorParityTests {
             at: archiveRoot.appendingPathComponent("mechanics", isDirectory: true),
             to: root.appendingPathComponent("mechanics", isDirectory: true)
         )
+        let sourceFixture = URL(fileURLWithPath: #filePath)
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Fixtures/validator", isDirectory: true)
+            .appendingPathComponent(fixture, isDirectory: true)
+            .appendingPathComponent("src", isDirectory: true)
         try fileManager.copyItem(
-            at: archiveRoot
-                .appendingPathComponent("tests/fixtures/validator", isDirectory: true)
-                .appendingPathComponent(fixture, isDirectory: true)
-                .appendingPathComponent("src", isDirectory: true),
+            at: sourceFixture,
             to: root.appendingPathComponent("src", isDirectory: true)
         )
         if fixture == "valid-feat" {

@@ -15,9 +15,8 @@ Domains and companions are flat top-level families.
 The package is deliberately independent of OmenTome, SwiftData, and SwiftUI. It
 depends only on shared mechanics and URI products plus Yams for YAML decoding.
 Schema validation, mechanics validation, and deterministic traversal run through
-this package locally and on Linux CI. The archive repository retains its former
-Ruby validator temporarily as a recovery tool, not as a second semantic
-authority. Ruby remains in CI only for corpus-specific data assertions.
+this package locally and on Linux CI. Ruby remains in CI only for corpus- and
+import-specific data assertions.
 
 Run the package contract tests with:
 

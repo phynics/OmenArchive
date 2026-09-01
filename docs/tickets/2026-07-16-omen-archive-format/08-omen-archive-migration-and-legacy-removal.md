@@ -14,7 +14,7 @@ Flag-day migrate all 423 archive resources to the approved human format, then de
 - Create a `publication.yml` for every publication directory. Current manifest requires `id`, `publisher`, `title`, and `published`.
 - Rewrite every resource to snake-case keys, title-cased display names, path-derived identity, inherited publication metadata, omitted defaults, and qualified OmenPaths.
 - Replace all schemas with CLI-generated schemas.
-- Replace the Ruby semantic validator with the pinned OmenTome CLI.
+- Keep the pinned OmenTome/Swift archive validator as the sole semantic authority; retain Ruby only for corpus and import assertions.
 - Remove legacy schemas, fixtures, parsing code, and temporary migration tooling before merge.
 
 ## Migration safeguards
@@ -30,7 +30,6 @@ Flag-day migrate all 423 archive resources to the approved human format, then de
 - Modify every resource below `src/`
 - Replace `schemas/**/*.json`
 - Replace `scripts/validate.sh`
-- Delete `scripts/validator.rb`
 - Temporarily create a migration/snapshot script, then delete it before merge
 - Update `README.md` and repository usage documentation
 

@@ -15,6 +15,5 @@ The archive layout contract is recorded in `schemas/archive-format.json`.
 Owner-scoped bundle custom groups are declared there alongside their schemas.
 Archetypes are bundles with owned `feats`; domains and companions are flat
 families. `OmenArchiveKit` is the single schema and mechanics-validation
-authority. Ruby tests remain for corpus-specific data assertions. The legacy
-Ruby validator is retained temporarily as a recovery tool, but neither the
-default validation command nor CI uses it as a semantic authority.
+authority. Ruby tests remain only for corpus and import-specific data
+assertions.

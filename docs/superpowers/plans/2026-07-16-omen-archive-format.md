@@ -258,7 +258,6 @@ rules:
 - Modify: every YAML resource below `src/`
 - Replace: `schemas/**/*.json`
 - Replace: `scripts/validate.sh`
-- Delete: `scripts/validator.rb`
 - Create: `scripts/migrate-legacy-archive.swift` (temporary; remove before merge)
 - Modify: `README.md`
 
@@ -271,7 +270,7 @@ rules:
 - [ ] Replace resource links with qualified OmenPaths; remove duplicate source blocks, default rarity, empty lore values, empty traits, and internal placeholders.
 - [ ] Generate and check in the portable schemas.
 - [ ] Change `scripts/validate.sh` to invoke the pinned OmenTome CLI for structural and semantic validation.
-- [ ] Delete the temporary migrator, Ruby validator, legacy schemas, and legacy-format fixtures before merge.
+- [ ] Delete the temporary migrator, legacy schemas, and legacy-format fixtures before merge.
 - [ ] Run `omenarchive format --check .`, `omenarchive validate .`, and semantic before/after comparison; commit.
 
 ### Task 9: Enforce archive-format CI and release compatibility
