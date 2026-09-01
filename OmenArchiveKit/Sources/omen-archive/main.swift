@@ -49,12 +49,8 @@ do {
         }
         let format = try ArchiveFormat(archiveRoot: URL(fileURLWithPath: arguments[1]))
         let report = try ArchiveValidator(format: format).validateAll()
-        for diagnostic in report.diagnostics {
-            let message = "\(diagnostic.relativePath): \(diagnostic.message)\n"
-            FileHandle.standardError.write(Data(message.utf8))
-        }
-        for diagnostic in report.mechanicsDiagnostics {
-            let message = "\(diagnostic.relativePath): mechanics [\(diagnostic.kind.rawValue)] \(diagnostic.message)\n"
+        if !report.isValid {
+            let message = ArchiveValidationDiagnosticFormatter.format(report) + "\n"
             FileHandle.standardError.write(Data(message.utf8))
         }
         guard report.isValid else { exit(1) }

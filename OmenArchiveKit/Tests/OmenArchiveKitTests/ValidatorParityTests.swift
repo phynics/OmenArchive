@@ -164,6 +164,30 @@ struct ValidatorParityTests {
         #expect(try JSONDecoder().decode(ArchiveValidationReport.self, from: encoded) == report)
     }
 
+    @Test("reports same-file structural and mechanics diagnostics")
+    func sameFileMixedDefectsAreReportedByFullValidator() throws {
+        let root = try makeArchiveRoot(fixture: "valid-feat")
+        defer { try? FileManager.default.removeItem(at: root) }
+
+        let path = "src/test-book/feat/power-attack.yml"
+        let file = root.appendingPathComponent(path)
+        let text = try String(contentsOf: file, encoding: .utf8)
+            .replacingOccurrences(of: "name: power attack", with: "name: Power Attack")
+            .replacingOccurrences(
+                of: "org.openomen.pf2e.core/effect/add-feat",
+                with: "org.example.missing/effect/not-registered"
+            )
+        try text.write(to: file, atomically: true, encoding: .utf8)
+
+        let report = try ArchiveValidator(format: try ArchiveFormat(archiveRoot: root)).validateAll()
+        #expect(report.diagnostics.contains { diagnostic in
+            diagnostic.relativePath == path && diagnostic.message.contains("must be lowercase")
+        })
+        #expect(report.mechanicsDiagnostics.contains { diagnostic in
+            diagnostic.relativePath == path && diagnostic.kind == .unknownEffect
+        })
+    }
+
     @Test("reports a wrong registered-value revision through the complete validator")
     func wrongValueRevisionIsReportedByFullValidator() throws {
         let root = try makeArchiveRoot(fixture: "valid-feat")

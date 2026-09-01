@@ -30,6 +30,31 @@ public struct ArchiveValidationReport: Codable, Equatable, Sendable {
     }
 }
 
+/// Renders the complete validation report for host-facing diagnostics.
+///
+/// Structural and mechanics diagnostics intentionally share one formatter so
+/// command-line, app, and other adapters cannot accidentally hide unresolved
+/// mechanics or drift in their presentation of archive failures.
+public enum ArchiveValidationDiagnosticFormatter {
+    /// Returns one stable, human-readable line for every diagnostic in the
+    /// report. Structural diagnostics precede mechanics diagnostics, matching
+    /// the report's two explicit categories.
+    public static func lines(for report: ArchiveValidationReport) -> [String] {
+        let structural = report.diagnostics.map { diagnostic in
+            "\(diagnostic.relativePath): \(diagnostic.message)"
+        }
+        let mechanics = report.mechanicsDiagnostics.map { diagnostic in
+            "\(diagnostic.relativePath): mechanics [\(diagnostic.kind.rawValue)] \(diagnostic.message)"
+        }
+        return structural + mechanics
+    }
+
+    /// Returns the report's diagnostics separated by newlines.
+    public static func format(_ report: ArchiveValidationReport) -> String {
+        lines(for: report).joined(separator: "\n")
+    }
+}
+
 public enum ArchiveValidationError: Error, Equatable, Sendable, CustomStringConvertible, LocalizedError {
     case invalidYAML(String)
     case invalidSchema(String)
@@ -75,14 +100,20 @@ public struct ArchiveValidator {
     }
 
     private func validate(text: String, relativePath: String, includeMechanics: Bool) throws {
+        let object = try parse(text: text, relativePath: relativePath)
+        try validate(
+            object: object,
+            relativePath: relativePath,
+            includeMechanics: includeMechanics
+        )
+    }
+
+    private func validate(
+        object: Any,
+        relativePath: String,
+        includeMechanics: Bool
+    ) throws {
         let classification = try format.classify(relativePath)
-        let parsed: Any?
-        do {
-            parsed = try Yams.load(yaml: text)
-        } catch {
-            throw ArchiveValidationError.invalidYAML(relativePath)
-        }
-        let object = try normalizedObject(parsed, path: relativePath)
         guard let schemaURL = format.schemaURL(for: classification) else {
             throw ArchiveValidationError.invalidSchema(classification.schema)
         }
@@ -140,20 +171,38 @@ public struct ArchiveValidator {
             ))
         }
         for file in files {
+            let text: String
             do {
-                let text = try format.readUTF8(file.relativePath)
-                try validate(text: text, relativePath: file.relativePath, includeMechanics: false)
-                if file.relativePath.hasSuffix(".yml") {
-                    if let object = try? Yams.load(yaml: text),
-                       let object = normalizedObjectForMechanics(object) {
-                        mechanicsDiagnostics.append(contentsOf: mechanicsCatalog.validateRules(
-                            in: object,
-                            relativePath: file.relativePath
-                        ))
-                    }
-                }
+                text = try format.readUTF8(file.relativePath)
             } catch {
                 diagnostics.append(.init(relativePath: file.relativePath, message: String(describing: error)))
+                continue
+            }
+
+            let object: Any
+            do {
+                object = try parse(text: text, relativePath: file.relativePath)
+            } catch {
+                diagnostics.append(.init(relativePath: file.relativePath, message: String(describing: error)))
+                continue
+            }
+
+            do {
+                try validate(
+                    object: object,
+                    relativePath: file.relativePath,
+                    includeMechanics: false
+                )
+            } catch {
+                diagnostics.append(.init(relativePath: file.relativePath, message: String(describing: error)))
+            }
+
+            if file.relativePath.hasSuffix(".yml"),
+               let normalized = normalizedObjectForMechanics(object) {
+                mechanicsDiagnostics.append(contentsOf: mechanicsCatalog.validateRules(
+                    in: normalized,
+                    relativePath: file.relativePath
+                ))
             }
         }
         return ArchiveValidationReport(
@@ -169,6 +218,16 @@ public struct ArchiveValidator {
                 return $0.message < $1.message
             }
         )
+    }
+
+    private func parse(text: String, relativePath: String) throws -> Any {
+        let parsed: Any?
+        do {
+            parsed = try Yams.load(yaml: text)
+        } catch {
+            throw ArchiveValidationError.invalidYAML(relativePath)
+        }
+        return try normalizedObject(parsed, path: relativePath)
     }
 
     private func normalizedObjectForMechanics(_ value: Any?) -> Any? {
