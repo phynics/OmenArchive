@@ -52,8 +52,3 @@ jobs:
       - name: Validate the complete archive with the omen-archive CLI
         working-directory: OmenArchiveKit
         run: swift run omen-archive validate "${{ github.workspace }}/OmenArchive"
-      - name: Run Ruby data tests
-        working-directory: OmenArchive
-        run: |
-          ruby test/player_core_corpus_test.rb
-          ruby test/player_core_spell_import_test.rb
