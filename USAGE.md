@@ -585,6 +585,16 @@ Primary command:
 ./scripts/validate.sh
 ```
 
+The script runs the released-validation path through
+[OmenArchiveKit](https://github.com/phynics/OmenArchiveKit), the reference
+implementation of the archive format. It resolves the Kit from
+`OMEN_ARCHIVE_KIT_ROOT` when set (use this for local Kit development),
+otherwise from a checkout at `../OmenArchiveKit`. The schemas stay in this
+repository; `schemas/archive-format.json`'s `version` field is the
+compatibility seam between the two — a Kit release declares the format
+versions it understands and fails with a distinct diagnostic outside that
+range.
+
 Optional local hook:
 
 ```sh
