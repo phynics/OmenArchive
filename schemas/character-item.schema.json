@@ -145,15 +145,18 @@
       ]
     },
     "rules": {
+      "x-omen-ownership": "archive",
       "type": "array",
       "items": { "$ref": "utility-types/rules.schema.json#/$defs/rule" },
       "default": []
     },
     "mechanicsScope": {
+      "x-omen-ownership": "archive",
       "type": "string",
       "enum": ["builder", "encounter", "mixed"]
     },
     "unsupportedReason": {
+      "x-omen-ownership": "archive",
       "type": "string",
       "minLength": 1
     }

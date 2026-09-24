@@ -57,6 +57,10 @@ mechanicsModules:
     revision: 1
 ```
 
+The manifest owns the publication qualifier. Its `id` must equal the canonical encoding of
+`publisher` and `title`, joined with a hyphen. The title may contain punctuation because the
+canonical OmenPath encoding removes punctuation consistently.
+
 ## General resource rules
 
 ### Equipment taxonomy
@@ -88,6 +92,12 @@ edits take precedence. If source identity changes or a field cannot be assigned 
 show the conflict for review before writing. A hand-authored file with no staged counterpart is
 an explicit removal candidate and must be reviewed before it can be deleted.
 
+The schemas declare this ownership. An archive-owned property carries
+`"x-omen-ownership": "archive"`, and a property without the annotation is generated. OmenScribe reads
+the annotation (through `ArchiveFormat.archiveOwnedFields(for:)`) to decide which fields a refresh
+keeps, so a new reviewed field must be annotated in its schema. The validator accepts the annotation
+only on a property schema, with the value `archive` or `generated`.
+
 ### Encoding
 
 All YAML files must be **UTF-8** text.
@@ -118,7 +128,11 @@ seer-elf.yml
 administer-first-aid.yml
 ```
 
-Prefer stable slugs over book typography. Apostrophes are currently present in a few files, but new files should avoid punctuation in filenames when a clean slug is possible.
+The filename stem must equal the canonical OmenPath encoding of `name`: lowercase letters and
+numbers, spaces converted to hyphens, and punctuation removed. Domain filenames omit the terminal
+`-domain` because it is not part of the domain OmenPath. A level-gated class or ancestry feature
+may prefix its canonical stem with its declared numeric level (for example, `1-reactive-strike`);
+the prefix does not change its OmenPath identity.
 
 ### Source field
 
@@ -136,6 +150,8 @@ Rules:
 
 - `book` is required by the schema.
 - `publisher` defaults to `paizo`, but include it explicitly for readability.
+- `publisher` and `book` preserve attribution on each resource and must match the publication
+  manifest's `publisher` and `title` after canonical OmenPath text normalization.
 - Use `page` when known.
 - Use `url` for online/third-party reference material.
 
@@ -290,6 +306,10 @@ traditions in `traditions`, ordinary Foundry traits in `traits`, and use `defens
 `heightening` only for the supported structured fields. Foundry rule elements and UUID markup do
 not belong in archive YAML; preserve unsupported effects as reviewed prose in `description` and
 record a diagnostic during staging.
+
+`diagnostics` is an optional list of human-readable import notes for source-specific spell rules
+that the source-independent spell model does not represent. Keep it distinct from `description`:
+the description is rules text for readers, while diagnostics explain conversion limits.
 
 The checked-in Player Core import is accounted by
 `docs/player-core-spell-import-manifest.json`: 488 source records produce 465 YAML files and 23
@@ -523,7 +543,7 @@ Rules:
 - Keep base class data in `{class}.yml`.
 - Put fixed class features in `features/`.
 - Prefix feature filenames with level when the feature is level-gated: `1-reactive-strike.yml`.
-- Class-specific choice sets can live in class subdirectories, e.g. `rackets/`, `schools/`, `theses/`, `lessons/`, until a more explicit schema exists.
+- Use custom class collection directories declared by `schemas/archive-format.json` (for example `rackets/`, `schools/`, `theses/`, and the lesson groups). Their path and resource schema are part of the archive format contract.
 
 ### Feats
 
@@ -562,15 +582,35 @@ Supported optional fields:
 
 - `alternateLevels`
 - `prerequisites`
+- `typedPrerequisites`
+- `prerequisiteDiagnostics`
 - `relatedArchetype`
 - `specialText`
 - `action`
+
+`typedPrerequisites` contains machine-readable prerequisite cases defined in
+`schemas/utility-types/rules.schema.json`. Keep the authored wording in
+`prerequisites` as well. When an importer cannot translate a source prerequisite,
+it records an `unsupported` typed case and explains the translation in
+`prerequisiteDiagnostics`; do not treat an unsupported condition as satisfied.
 
 Rules:
 
 - Keep prerequisites human-readable but consistent.
 - OmenScribe currently parses common prerequisite strings into typed runtime prerequisites.
 - Use `relatedArchetype` for archetype-associated feats.
+
+## Mechanics coverage
+
+Resource schemas share the optional `mechanicsScope` and `unsupportedReason`
+fields from `schemas/utility-types/mechanics-support.schema.json`.
+
+- `mechanicsScope` classifies mechanics coverage as `builder`, `encounter`, or `mixed`.
+- `unsupportedReason` is a non-empty explanation when canonical mechanics could not be represented. It requires `mechanicsScope`, and the record must not also contain `rules`.
+- `encounter` records cannot contain builder `rules`; `builder` records cannot set `unsupportedReason`.
+
+Use these fields to make support limits explicit. Preserve useful source rules text
+in `description`; do not add partial `rules` to avoid an unsupported classification.
 
 ### Other items
 
@@ -608,6 +648,13 @@ repository; `schemas/archive-format.json`'s `version` field is the
 compatibility seam between the two — a Kit release declares the format
 versions it understands and fails with a distinct diagnostic outside that
 range.
+
+Format version 2 also declares resource identity beside each layout: a family
+sets its OmenPath host and whether its layout owner is part of identity, and
+each bundle child or custom group names its owned collection. OmenArchiveKit
+continues to read version 1 manifests with the historical identity mapping.
+Grouped heritage identity omits its ancestry directory, so an inverse storage
+path lookup needs that directory as explicit context.
 
 Optional local hook:
 

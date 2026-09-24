@@ -24,6 +24,7 @@
       "description": "The specific ancestry this heritage belongs to, or `versatile` for versatile heritage."
     },
     "rules": {
+      "x-omen-ownership": "archive",
       "type": "array",
       "items": {
         "$ref": "utility-types/rules.schema.json#/$defs/rule"
@@ -31,10 +32,12 @@
       "default": []
     },
     "mechanicsScope": {
+      "x-omen-ownership": "archive",
       "type": "string",
       "enum": ["builder", "encounter", "mixed"]
     },
     "unsupportedReason": {
+      "x-omen-ownership": "archive",
       "type": "string",
       "minLength": 1
     }

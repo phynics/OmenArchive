@@ -1,0 +1,2266 @@
+{
+  "format": "openomen.omenpath-migration-map",
+  "version": "1.0.0",
+  "ticket": "0055",
+  "publication": {
+    "id": "paizo-pathfinder-player-core",
+    "title": "Pathfinder Player Core",
+    "path": "OmenArchive/src/paizo-pathfinder-player-core/publication.yml"
+  },
+  "identityContract": {
+    "paths": "All old/new OmenPaths are publication-qualified by source=paizo-pathfinder-player-core.",
+    "recordFamily": "Class-owned options remain OmenDB feature records. Archetype-owned entries remain OmenDB feat records even though their new OmenPath host is archetype.",
+    "classOptionSlugRule": "Strip leading numeric level plus hyphen from the existing class/features filename to identify its old leaf. For new paths remove the collection label from option names: *-order from Druid Order names, school-of- from Wizard School names, lesson-of- from Witch Lesson names; omit leading The from Witch patron and Wizard school leaves. Other option slugs retain the current normalized leaf.",
+    "archiveFileRule": "Old path is the current archive-relative YAML location. New class-option filename is the new OmenPath leaf under its declared collection, without the old level prefix. New archetype-feat filename retains the existing feat leaf under archetype/<owner>/feats."
+  },
+  "summary": {
+    "classOptions": 50,
+    "archetypeFeats": 57,
+    "totalMoves": 107,
+    "uniqueOldOmenPaths": 107,
+    "uniqueNewOmenPaths": 107,
+    "uniqueOldFiles": 107,
+    "uniqueNewFiles": 107,
+    "archetypeFeatRecordFamiliesPreserved": true
+  },
+  "bundleRootPrerequisites": [
+    {
+      "owner": "bard",
+      "expectedOmenPath": "omen://archetype/bard?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/bard.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    },
+    {
+      "owner": "cleric",
+      "expectedOmenPath": "omen://archetype/cleric?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/cleric.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/cleric/feats/cleric-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    },
+    {
+      "owner": "druid",
+      "expectedOmenPath": "omen://archetype/druid?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/druid.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/druid/feats/druid-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    },
+    {
+      "owner": "fighter",
+      "expectedOmenPath": "omen://archetype/fighter?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/fighter/fighter.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/fighter/feats/fighter-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    },
+    {
+      "owner": "ranger",
+      "expectedOmenPath": "omen://archetype/ranger?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/ranger/ranger.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/ranger/feats/ranger-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    },
+    {
+      "owner": "rogue",
+      "expectedOmenPath": "omen://archetype/rogue?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/rogue.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/rogue/feats/rogue-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    },
+    {
+      "owner": "witch",
+      "expectedOmenPath": "omen://archetype/witch?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/witch.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/witch/feats/witch-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    },
+    {
+      "owner": "wizard",
+      "expectedOmenPath": "omen://archetype/wizard?source=paizo-pathfinder-player-core",
+      "expectedArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/wizard.yml",
+      "requiredEntryFeatOmenPath": "omen://archetype/wizard/feats/wizard-dedication?source=paizo-pathfinder-player-core",
+      "requiredEntryFeatRecordFamily": "feat",
+      "entryFeatAlreadyInMoveSet": true,
+      "prerequisite": "Create and validate the archetype bundle root (name/source/description/entryFeat) before publishing its owned feat files."
+    }
+  ],
+  "ambiguities": [
+    {
+      "issue": "Archetype root resource payloads are absent from the current Player Core archive. Eight bundle directory names/owners are explicit in ticket 0055, but descriptions and any per-archetype progression/configuration payloads are not provided.",
+      "resolution": "Target root OmenPaths and conventional root filenames are recorded. Populate root YAML from authoritative source data before the bundle can validate; do not infer progression content from this map."
+    },
+    {
+      "issue": "Class option level prefixes are filenames, not identity segments. New target filenames omit those prefixes and the collection words per ADR 0003.",
+      "resolution": "Each target leaf is explicit in the move list, so runtime migration must use exact map rows rather than apply this descriptive rule."
+    },
+    {
+      "issue": "The published source qualifier is the publication id, not the human title.",
+      "resolution": "All paths use source=paizo-pathfinder-player-core as declared in publication.yml."
+    }
+  ],
+  "sourceReferences": [
+    "tickets/0055-declared-collections-and-archetype-bundles.md (inventory/counts and migration contract)",
+    "docs/adr/0003-owned-collections-and-archetypes.md (slug stripping and owner/family semantics)",
+    "docs/adr/0001-publication-identity.md (publication qualifier)",
+    "docs/adr/0002-archive-path-identity.md (manifest path identity)",
+    "OmenArchive/schemas/archive-format.json (current family/collection declarations)",
+    "OmenArchive/docs/player-core-corpus-manifest.json (authoritative source record names, canonical old paths, and archetype source owner grouping)",
+    "OmenArchive/src/paizo-pathfinder-player-core/publication.yml (publication id/title)",
+    "Current YAML paths under OmenArchive/src/paizo-pathfinder-player-core (old archive-relative paths)"
+  ],
+  "moves": [
+    {
+      "id": "class:bard:muses:enigma",
+      "name": "Enigma",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/bard/features/enigma?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/bard/muses/enigma?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/bard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "muses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/features/1-enigma.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/muses/enigma.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/enigma.json"
+    },
+    {
+      "id": "class:bard:muses:maestro",
+      "name": "Maestro",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/bard/features/maestro?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/bard/muses/maestro?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/bard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "muses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/features/1-maestro.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/muses/maestro.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/maestro.json"
+    },
+    {
+      "id": "class:bard:muses:polymath",
+      "name": "Polymath",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/bard/features/polymath?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/bard/muses/polymath?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/bard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "muses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/features/1-polymath.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/muses/polymath.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/polymath.json"
+    },
+    {
+      "id": "class:bard:muses:warrior",
+      "name": "Warrior",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/bard/features/warrior?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/bard/muses/warrior?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/bard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "muses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/features/1-warrior.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/bard/muses/warrior.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/warrior.json"
+    },
+    {
+      "id": "class:cleric:doctrines:cloistered-cleric",
+      "name": "Cloistered Cleric",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/cleric/features/cloistered-cleric?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/cleric/doctrines/cloistered-cleric?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/cleric?source=paizo-pathfinder-player-core",
+        "new": "omen://class/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "doctrines"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/cleric/features/1-cloistered-cleric.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/cleric/doctrines/cloistered-cleric.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/cloistered-cleric.json"
+    },
+    {
+      "id": "class:cleric:doctrines:warpriest",
+      "name": "Warpriest",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/cleric/features/warpriest?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/cleric/doctrines/warpriest?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/cleric?source=paizo-pathfinder-player-core",
+        "new": "omen://class/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "doctrines"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/cleric/features/1-warpriest.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/cleric/doctrines/warpriest.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/warpriest.json"
+    },
+    {
+      "id": "class:druid:orders:animal",
+      "name": "Animal Order",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/druid/features/animal-order?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/druid/orders/animal?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/druid?source=paizo-pathfinder-player-core",
+        "new": "omen://class/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "orders"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/features/1-animal-order.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/orders/animal.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/animal-order.json"
+    },
+    {
+      "id": "class:druid:orders:flame",
+      "name": "Flame Order",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/druid/features/flame-order?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/druid/orders/flame?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/druid?source=paizo-pathfinder-player-core",
+        "new": "omen://class/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "orders"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/features/1-flame-order.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/orders/flame.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/flame-order.json"
+    },
+    {
+      "id": "class:druid:orders:leaf",
+      "name": "Leaf Order",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/druid/features/leaf-order?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/druid/orders/leaf?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/druid?source=paizo-pathfinder-player-core",
+        "new": "omen://class/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "orders"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/features/1-leaf-order.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/orders/leaf.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/leaf-order.json"
+    },
+    {
+      "id": "class:druid:orders:stone",
+      "name": "Stone Order",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/druid/features/stone-order?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/druid/orders/stone?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/druid?source=paizo-pathfinder-player-core",
+        "new": "omen://class/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "orders"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/features/1-stone-order.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/orders/stone.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/stone-order.json"
+    },
+    {
+      "id": "class:druid:orders:storm",
+      "name": "Storm Order",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/druid/features/storm-order?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/druid/orders/storm?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/druid?source=paizo-pathfinder-player-core",
+        "new": "omen://class/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "orders"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/features/1-storm-order.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/orders/storm.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/storm-order.json"
+    },
+    {
+      "id": "class:druid:orders:untamed",
+      "name": "Untamed Order",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/druid/features/untamed-order?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/druid/orders/untamed?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/druid?source=paizo-pathfinder-player-core",
+        "new": "omen://class/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "orders"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/features/1-untamed-order.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/orders/untamed.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/untamed-order.json"
+    },
+    {
+      "id": "class:druid:orders:wave",
+      "name": "Wave Order",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/druid/features/wave-order?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/druid/orders/wave?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/druid?source=paizo-pathfinder-player-core",
+        "new": "omen://class/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "orders"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/features/1-wave-order.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/druid/orders/wave.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/wave-order.json"
+    },
+    {
+      "id": "class:ranger:hunters-edge:flurry",
+      "name": "Flurry",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/ranger/features/flurry?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/ranger/hunters-edge/flurry?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/ranger?source=paizo-pathfinder-player-core",
+        "new": "omen://class/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "hunters-edge"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/ranger/features/1-flurry.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/ranger/hunters-edge/flurry.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/flurry.json"
+    },
+    {
+      "id": "class:ranger:hunters-edge:outwit",
+      "name": "Outwit",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/ranger/features/outwit?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/ranger/hunters-edge/outwit?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/ranger?source=paizo-pathfinder-player-core",
+        "new": "omen://class/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "hunters-edge"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/ranger/features/1-outwit.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/ranger/hunters-edge/outwit.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/outwit.json"
+    },
+    {
+      "id": "class:ranger:hunters-edge:precision",
+      "name": "Precision",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/ranger/features/precision?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/ranger/hunters-edge/precision?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/ranger?source=paizo-pathfinder-player-core",
+        "new": "omen://class/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "hunters-edge"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/ranger/features/1-precision.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/ranger/hunters-edge/precision.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/precision.json"
+    },
+    {
+      "id": "class:rogue:rackets:mastermind",
+      "name": "Mastermind",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/rogue/features/mastermind?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/rogue/rackets/mastermind?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/rogue?source=paizo-pathfinder-player-core",
+        "new": "omen://class/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "rackets"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/features/1-mastermind.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/rackets/mastermind.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/mastermind.json"
+    },
+    {
+      "id": "class:rogue:rackets:ruffian",
+      "name": "Ruffian",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/rogue/features/ruffian?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/rogue/rackets/ruffian?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/rogue?source=paizo-pathfinder-player-core",
+        "new": "omen://class/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "rackets"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/features/1-ruffian.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/rackets/ruffian.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/ruffian.json"
+    },
+    {
+      "id": "class:rogue:rackets:scoundrel",
+      "name": "Scoundrel",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/rogue/features/scoundrel?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/rogue/rackets/scoundrel?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/rogue?source=paizo-pathfinder-player-core",
+        "new": "omen://class/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "rackets"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/features/1-scoundrel.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/rackets/scoundrel.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/scoundrel.json"
+    },
+    {
+      "id": "class:rogue:rackets:thief",
+      "name": "Thief",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/rogue/features/thief?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/rogue/rackets/thief?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/rogue?source=paizo-pathfinder-player-core",
+        "new": "omen://class/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "rackets"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/features/1-thief.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/rogue/rackets/thief.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/thief.json"
+    },
+    {
+      "id": "class:witch:basic-lessons:dreams",
+      "name": "Lesson of Dreams",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-dreams?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/basic-lessons/dreams?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "basic-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/2-lesson-of-dreams.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/basic-lessons/dreams.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-dreams.json"
+    },
+    {
+      "id": "class:witch:basic-lessons:elements",
+      "name": "Lesson of Elements",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-elements?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/basic-lessons/elements?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "basic-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/2-lesson-of-elements.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/basic-lessons/elements.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-elements.json"
+    },
+    {
+      "id": "class:witch:basic-lessons:life",
+      "name": "Lesson of Life",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-life?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/basic-lessons/life?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "basic-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/2-lesson-of-life.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/basic-lessons/life.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-life.json"
+    },
+    {
+      "id": "class:witch:basic-lessons:protection",
+      "name": "Lesson of Protection",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-protection?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/basic-lessons/protection?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "basic-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/2-lesson-of-protection.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/basic-lessons/protection.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-protection.json"
+    },
+    {
+      "id": "class:witch:basic-lessons:vengeance",
+      "name": "Lesson of Vengeance",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-vengeance?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/basic-lessons/vengeance?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "basic-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/2-lesson-of-vengeance.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/basic-lessons/vengeance.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-vengeance.json"
+    },
+    {
+      "id": "class:witch:greater-lessons:mischief",
+      "name": "Lesson of Mischief",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-mischief?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/greater-lessons/mischief?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "greater-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/6-lesson-of-mischief.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/greater-lessons/mischief.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-mischief.json"
+    },
+    {
+      "id": "class:witch:greater-lessons:shadow",
+      "name": "Lesson of Shadow",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-shadow?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/greater-lessons/shadow?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "greater-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/6-lesson-of-shadow.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/greater-lessons/shadow.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-shadow.json"
+    },
+    {
+      "id": "class:witch:greater-lessons:snow",
+      "name": "Lesson of Snow",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-snow?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/greater-lessons/snow?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "greater-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/6-lesson-of-snow.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/greater-lessons/snow.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-snow.json"
+    },
+    {
+      "id": "class:witch:major-lessons:death",
+      "name": "Lesson of Death",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-death?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/major-lessons/death?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "major-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/10-lesson-of-death.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/major-lessons/death.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-death.json"
+    },
+    {
+      "id": "class:witch:major-lessons:renewal",
+      "name": "Lesson of Renewal",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/lesson-of-renewal?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/major-lessons/renewal?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "major-lessons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/10-lesson-of-renewal.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/major-lessons/renewal.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/lesson-of-renewal.json"
+    },
+    {
+      "id": "class:witch:patrons:faiths-flamekeeper",
+      "name": "Faith's Flamekeeper",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/faiths-flamekeeper?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/faiths-flamekeeper?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-faiths-flamekeeper.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/faiths-flamekeeper.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/faiths-flamekeeper.json"
+    },
+    {
+      "id": "class:witch:patrons:familiar-witch",
+      "name": "Familiar (Witch)",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/familiar-witch?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/familiar-witch?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-familiar-witch.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/familiar-witch.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/familiar-witch.json"
+    },
+    {
+      "id": "class:witch:patrons:inscribed-one",
+      "name": "The Inscribed One",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/the-inscribed-one?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/inscribed-one?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-the-inscribed-one.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/inscribed-one.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/the-inscribed-one.json"
+    },
+    {
+      "id": "class:witch:patrons:resentment",
+      "name": "The Resentment",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/the-resentment?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/resentment?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-the-resentment.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/resentment.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/the-resentment.json"
+    },
+    {
+      "id": "class:witch:patrons:silence-in-snow",
+      "name": "Silence in Snow",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/silence-in-snow?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/silence-in-snow?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-silence-in-snow.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/silence-in-snow.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/silence-in-snow.json"
+    },
+    {
+      "id": "class:witch:patrons:spinner-of-threads",
+      "name": "Spinner of Threads",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/spinner-of-threads?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/spinner-of-threads?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-spinner-of-threads.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/spinner-of-threads.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/spinner-of-threads.json"
+    },
+    {
+      "id": "class:witch:patrons:starless-shadow",
+      "name": "Starless Shadow",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/starless-shadow?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/starless-shadow?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-starless-shadow.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/starless-shadow.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/starless-shadow.json"
+    },
+    {
+      "id": "class:witch:patrons:wilding-steward",
+      "name": "Wilding Steward",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/witch/features/wilding-steward?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/witch/patrons/wilding-steward?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/witch?source=paizo-pathfinder-player-core",
+        "new": "omen://class/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "patrons"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/features/1-wilding-steward.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/witch/patrons/wilding-steward.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/wilding-steward.json"
+    },
+    {
+      "id": "class:wizard:schools:ars-grammatica",
+      "name": "School of Ars Grammatica",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/school-of-ars-grammatica?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/schools/ars-grammatica?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "schools"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-school-of-ars-grammatica.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/schools/ars-grammatica.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/school-of-ars-grammatica.json"
+    },
+    {
+      "id": "class:wizard:schools:battle-magic",
+      "name": "School of Battle Magic",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/school-of-battle-magic?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/schools/battle-magic?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "schools"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-school-of-battle-magic.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/schools/battle-magic.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/school-of-battle-magic.json"
+    },
+    {
+      "id": "class:wizard:schools:boundary",
+      "name": "School of the Boundary",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/school-of-the-boundary?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/schools/boundary?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "schools"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-school-of-the-boundary.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/schools/boundary.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/school-of-the-boundary.json"
+    },
+    {
+      "id": "class:wizard:schools:civic-wizardry",
+      "name": "School of Civic Wizardry",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/school-of-civic-wizardry?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/schools/civic-wizardry?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "schools"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-school-of-civic-wizardry.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/schools/civic-wizardry.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/school-of-civic-wizardry.json"
+    },
+    {
+      "id": "class:wizard:schools:mentalism",
+      "name": "School of Mentalism",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/school-of-mentalism?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/schools/mentalism?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "schools"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-school-of-mentalism.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/schools/mentalism.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/school-of-mentalism.json"
+    },
+    {
+      "id": "class:wizard:schools:protean-form",
+      "name": "School of Protean Form",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/school-of-protean-form?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/schools/protean-form?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "schools"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-school-of-protean-form.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/schools/protean-form.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/school-of-protean-form.json"
+    },
+    {
+      "id": "class:wizard:schools:unified-magical-theory",
+      "name": "School of Unified Magical Theory",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/school-of-unified-magical-theory?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/schools/unified-magical-theory?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "schools"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-school-of-unified-magical-theory.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/schools/unified-magical-theory.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/school-of-unified-magical-theory.json"
+    },
+    {
+      "id": "class:wizard:theses:experimental-spellshaping",
+      "name": "Experimental Spellshaping",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/experimental-spellshaping?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/theses/experimental-spellshaping?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "theses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-experimental-spellshaping.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/theses/experimental-spellshaping.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/experimental-spellshaping.json"
+    },
+    {
+      "id": "class:wizard:theses:improved-familiar-attunement",
+      "name": "Improved Familiar Attunement",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/improved-familiar-attunement?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/theses/improved-familiar-attunement?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "theses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-improved-familiar-attunement.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/theses/improved-familiar-attunement.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/improved-familiar-attunement.json"
+    },
+    {
+      "id": "class:wizard:theses:spell-blending",
+      "name": "Spell Blending",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/spell-blending?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/theses/spell-blending?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "theses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-spell-blending.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/theses/spell-blending.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/spell-blending.json"
+    },
+    {
+      "id": "class:wizard:theses:spell-substitution",
+      "name": "Spell Substitution",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/spell-substitution?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/theses/spell-substitution?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "theses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-spell-substitution.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/theses/spell-substitution.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/spell-substitution.json"
+    },
+    {
+      "id": "class:wizard:theses:staff-nexus",
+      "name": "Staff Nexus",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://class/wizard/features/staff-nexus?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://class/wizard/theses/staff-nexus?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feature",
+      "newRecordFamily": "feature",
+      "owner": {
+        "old": "omen://class/wizard?source=paizo-pathfinder-player-core",
+        "new": "omen://class/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": "features",
+        "new": "theses"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/features/1-staff-nexus.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/class/wizard/theses/staff-nexus.yml",
+      "sourceReference": "corpus-manifest:packs/classfeatures/staff-nexus.json"
+    },
+    {
+      "id": "archetype:bard:advanced-muses-whispers",
+      "name": "Advanced Muse's Whispers",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-muses-whispers?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/advanced-muses-whispers?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-muses-whispers.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/advanced-muses-whispers.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/advanced-muses-whispers.json"
+    },
+    {
+      "id": "archetype:bard:anthemic-performance",
+      "name": "Anthemic Performance",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/anthemic-performance?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/anthemic-performance?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/anthemic-performance.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/anthemic-performance.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/anthemic-performance.json"
+    },
+    {
+      "id": "archetype:bard:bard-dedication",
+      "name": "Bard Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/bard-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/bard-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/bard-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/bard-dedication.json"
+    },
+    {
+      "id": "archetype:bard:basic-bard-spellcasting",
+      "name": "Basic Bard Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-bard-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/basic-bard-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-bard-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/basic-bard-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/basic-bard-spellcasting.json"
+    },
+    {
+      "id": "archetype:bard:basic-muses-whispers",
+      "name": "Basic Muse's Whispers",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-muses-whispers?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/basic-muses-whispers?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-muses-whispers.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/basic-muses-whispers.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/basic-muses-whispers.json"
+    },
+    {
+      "id": "archetype:bard:counter-perform",
+      "name": "Counter Perform",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/counter-perform?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/counter-perform?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/counter-perform.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/counter-perform.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/counter-perform.json"
+    },
+    {
+      "id": "archetype:bard:expert-bard-spellcasting",
+      "name": "Expert Bard Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/expert-bard-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/expert-bard-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/expert-bard-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/expert-bard-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/expert-bard-spellcasting.json"
+    },
+    {
+      "id": "archetype:bard:master-bard-spellcasting",
+      "name": "Master Bard Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/master-bard-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/master-bard-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/master-bard-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/master-bard-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/master-bard-spellcasting.json"
+    },
+    {
+      "id": "archetype:bard:occult-breadth",
+      "name": "Occult Breadth",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/occult-breadth?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/bard/feats/occult-breadth?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/bard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/occult-breadth.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/bard/feats/occult-breadth.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/bard/occult-breadth.json"
+    },
+    {
+      "id": "archetype:cleric:advanced-dogma",
+      "name": "Advanced Dogma",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-dogma?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/cleric/feats/advanced-dogma?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-dogma.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/feats/advanced-dogma.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/cleric/advanced-dogma.json"
+    },
+    {
+      "id": "archetype:cleric:basic-cleric-spellcasting",
+      "name": "Basic Cleric Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-cleric-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/cleric/feats/basic-cleric-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-cleric-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/feats/basic-cleric-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/cleric/basic-cleric-spellcasting.json"
+    },
+    {
+      "id": "archetype:cleric:basic-dogma",
+      "name": "Basic Dogma",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-dogma?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/cleric/feats/basic-dogma?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-dogma.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/feats/basic-dogma.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/cleric/basic-dogma.json"
+    },
+    {
+      "id": "archetype:cleric:cleric-dedication",
+      "name": "Cleric Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/cleric-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/cleric/feats/cleric-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/cleric-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/feats/cleric-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/cleric/cleric-dedication.json"
+    },
+    {
+      "id": "archetype:cleric:divine-breadth",
+      "name": "Divine Breadth",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/divine-breadth?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/cleric/feats/divine-breadth?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/divine-breadth.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/feats/divine-breadth.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/cleric/divine-breadth.json"
+    },
+    {
+      "id": "archetype:cleric:expert-cleric-spellcasting",
+      "name": "Expert Cleric Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/expert-cleric-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/cleric/feats/expert-cleric-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/expert-cleric-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/feats/expert-cleric-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/cleric/expert-cleric-spellcasting.json"
+    },
+    {
+      "id": "archetype:cleric:master-cleric-spellcasting",
+      "name": "Master Cleric Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/master-cleric-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/cleric/feats/master-cleric-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/cleric?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/master-cleric-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/cleric/feats/master-cleric-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/cleric/master-cleric-spellcasting.json"
+    },
+    {
+      "id": "archetype:druid:advanced-wilding",
+      "name": "Advanced Wilding",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-wilding?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/advanced-wilding?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-wilding.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/advanced-wilding.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/advanced-wilding.json"
+    },
+    {
+      "id": "archetype:druid:basic-druid-spellcasting",
+      "name": "Basic Druid Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-druid-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/basic-druid-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-druid-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/basic-druid-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/basic-druid-spellcasting.json"
+    },
+    {
+      "id": "archetype:druid:basic-wilding",
+      "name": "Basic Wilding",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-wilding?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/basic-wilding?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-wilding.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/basic-wilding.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/basic-wilding.json"
+    },
+    {
+      "id": "archetype:druid:druid-dedication",
+      "name": "Druid Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/druid-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/druid-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/druid-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/druid-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/druid-dedication.json"
+    },
+    {
+      "id": "archetype:druid:expert-druid-spellcasting",
+      "name": "Expert Druid Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/expert-druid-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/expert-druid-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/expert-druid-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/expert-druid-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/expert-druid-spellcasting.json"
+    },
+    {
+      "id": "archetype:druid:master-druid-spellcasting",
+      "name": "Master Druid Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/master-druid-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/master-druid-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/master-druid-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/master-druid-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/master-druid-spellcasting.json"
+    },
+    {
+      "id": "archetype:druid:order-spell",
+      "name": "Order Spell",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/order-spell?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/order-spell?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/order-spell.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/order-spell.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/order-spell.json"
+    },
+    {
+      "id": "archetype:druid:primal-breadth",
+      "name": "Primal Breadth",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/primal-breadth?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/druid/feats/primal-breadth?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/druid?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/primal-breadth.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/druid/feats/primal-breadth.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/druid/primal-breadth.json"
+    },
+    {
+      "id": "archetype:fighter:advanced-maneuver",
+      "name": "Advanced Maneuver",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-maneuver?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/fighter/feats/advanced-maneuver?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/fighter?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-maneuver.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/fighter/feats/advanced-maneuver.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/fighter/advanced-maneuver.json"
+    },
+    {
+      "id": "archetype:fighter:basic-maneuver",
+      "name": "Basic Maneuver",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-maneuver?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/fighter/feats/basic-maneuver?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/fighter?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-maneuver.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/fighter/feats/basic-maneuver.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/fighter/basic-maneuver.json"
+    },
+    {
+      "id": "archetype:fighter:diverse-weapon-expert",
+      "name": "Diverse Weapon Expert",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/diverse-weapon-expert?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/fighter/feats/diverse-weapon-expert?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/fighter?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/diverse-weapon-expert.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/fighter/feats/diverse-weapon-expert.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/fighter/diverse-weapon-expert.json"
+    },
+    {
+      "id": "archetype:fighter:fighter-dedication",
+      "name": "Fighter Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/fighter-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/fighter/feats/fighter-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/fighter?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/fighter-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/fighter/feats/fighter-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/fighter/fighter-dedication.json"
+    },
+    {
+      "id": "archetype:fighter:fighter-resiliency",
+      "name": "Fighter Resiliency",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/fighter-resiliency?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/fighter/feats/fighter-resiliency?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/fighter?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/fighter-resiliency.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/fighter/feats/fighter-resiliency.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/fighter/fighter-resiliency.json"
+    },
+    {
+      "id": "archetype:fighter:reactive-striker",
+      "name": "Reactive Striker",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/reactive-striker?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/fighter/feats/reactive-striker?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/fighter?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/reactive-striker.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/fighter/feats/reactive-striker.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/fighter/reactive-striker.json"
+    },
+    {
+      "id": "archetype:ranger:advanced-hunters-trick",
+      "name": "Advanced Hunter's Trick",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-hunters-trick?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/ranger/feats/advanced-hunters-trick?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-hunters-trick.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/ranger/feats/advanced-hunters-trick.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/ranger/advanced-hunters-trick.json"
+    },
+    {
+      "id": "archetype:ranger:basic-hunters-trick",
+      "name": "Basic Hunter's Trick",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-hunters-trick?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/ranger/feats/basic-hunters-trick?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-hunters-trick.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/ranger/feats/basic-hunters-trick.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/ranger/basic-hunters-trick.json"
+    },
+    {
+      "id": "archetype:ranger:master-spotter-ranger",
+      "name": "Master Spotter (Ranger)",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/master-spotter-ranger?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/ranger/feats/master-spotter-ranger?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/master-spotter-ranger.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/ranger/feats/master-spotter-ranger.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/ranger/master-spotter-ranger.json"
+    },
+    {
+      "id": "archetype:ranger:ranger-dedication",
+      "name": "Ranger Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/ranger-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/ranger/feats/ranger-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/ranger-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/ranger/feats/ranger-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/ranger/ranger-dedication.json"
+    },
+    {
+      "id": "archetype:ranger:ranger-resiliency",
+      "name": "Ranger Resiliency",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/ranger-resiliency?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/ranger/feats/ranger-resiliency?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/ranger?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/ranger-resiliency.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/ranger/feats/ranger-resiliency.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/ranger/ranger-resiliency.json"
+    },
+    {
+      "id": "archetype:rogue:advanced-trickery",
+      "name": "Advanced Trickery",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-trickery?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/rogue/feats/advanced-trickery?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-trickery.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/feats/advanced-trickery.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/rogue/advanced-trickery.json"
+    },
+    {
+      "id": "archetype:rogue:basic-trickery",
+      "name": "Basic Trickery",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-trickery?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/rogue/feats/basic-trickery?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-trickery.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/feats/basic-trickery.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/rogue/basic-trickery.json"
+    },
+    {
+      "id": "archetype:rogue:evasiveness-rogue",
+      "name": "Evasiveness (Rogue)",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/evasiveness-rogue?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/rogue/feats/evasiveness-rogue?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/evasiveness-rogue.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/feats/evasiveness-rogue.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/rogue/evasiveness-rogue.json"
+    },
+    {
+      "id": "archetype:rogue:rogue-dedication",
+      "name": "Rogue Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/rogue-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/rogue/feats/rogue-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/rogue-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/feats/rogue-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/rogue/rogue-dedication.json"
+    },
+    {
+      "id": "archetype:rogue:skill-mastery-rogue",
+      "name": "Skill Mastery (Rogue)",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/skill-mastery-rogue?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/rogue/feats/skill-mastery-rogue?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/skill-mastery-rogue.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/feats/skill-mastery-rogue.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/rogue/skill-mastery-rogue.json"
+    },
+    {
+      "id": "archetype:rogue:sneak-attacker",
+      "name": "Sneak Attacker",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/sneak-attacker?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/rogue/feats/sneak-attacker?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/sneak-attacker.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/feats/sneak-attacker.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/rogue/sneak-attacker.json"
+    },
+    {
+      "id": "archetype:rogue:uncanny-dodge",
+      "name": "Uncanny Dodge",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/uncanny-dodge?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/rogue/feats/uncanny-dodge?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/rogue?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/uncanny-dodge.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/rogue/feats/uncanny-dodge.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/rogue/uncanny-dodge.json"
+    },
+    {
+      "id": "archetype:witch:advanced-witchcraft",
+      "name": "Advanced Witchcraft",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-witchcraft?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/witch/feats/advanced-witchcraft?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-witchcraft.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/feats/advanced-witchcraft.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/witch/advanced-witchcraft.json"
+    },
+    {
+      "id": "archetype:witch:basic-witch-spellcasting",
+      "name": "Basic Witch Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-witch-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/witch/feats/basic-witch-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-witch-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/feats/basic-witch-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/witch/basic-witch-spellcasting.json"
+    },
+    {
+      "id": "archetype:witch:basic-witchcraft",
+      "name": "Basic Witchcraft",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-witchcraft?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/witch/feats/basic-witchcraft?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-witchcraft.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/feats/basic-witchcraft.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/witch/basic-witchcraft.json"
+    },
+    {
+      "id": "archetype:witch:expert-witch-spellcasting",
+      "name": "Expert Witch Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/expert-witch-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/witch/feats/expert-witch-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/expert-witch-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/feats/expert-witch-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/witch/expert-witch-spellcasting.json"
+    },
+    {
+      "id": "archetype:witch:master-witch-spellcasting",
+      "name": "Master Witch Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/master-witch-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/witch/feats/master-witch-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/master-witch-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/feats/master-witch-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/witch/master-witch-spellcasting.json"
+    },
+    {
+      "id": "archetype:witch:patrons-breadth",
+      "name": "Patron's Breadth",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/patrons-breadth?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/witch/feats/patrons-breadth?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/patrons-breadth.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/feats/patrons-breadth.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/witch/patrons-breadth.json"
+    },
+    {
+      "id": "archetype:witch:witch-dedication",
+      "name": "Witch Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/witch-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/witch/feats/witch-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/witch?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/witch-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/witch/feats/witch-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/witch/witch-dedication.json"
+    },
+    {
+      "id": "archetype:wizard:advanced-arcana",
+      "name": "Advanced Arcana",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/advanced-arcana?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/advanced-arcana?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/advanced-arcana.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/advanced-arcana.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/advanced-arcana.json"
+    },
+    {
+      "id": "archetype:wizard:arcane-breadth",
+      "name": "Arcane Breadth",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/arcane-breadth?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/arcane-breadth?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/arcane-breadth.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/arcane-breadth.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/arcane-breadth.json"
+    },
+    {
+      "id": "archetype:wizard:arcane-school-spell",
+      "name": "Arcane School Spell",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/arcane-school-spell?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/arcane-school-spell?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/arcane-school-spell.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/arcane-school-spell.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/arcane-school-spell.json"
+    },
+    {
+      "id": "archetype:wizard:basic-arcana",
+      "name": "Basic Arcana",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-arcana?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/basic-arcana?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-arcana.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/basic-arcana.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/basic-arcana.json"
+    },
+    {
+      "id": "archetype:wizard:basic-wizard-spellcasting",
+      "name": "Basic Wizard Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/basic-wizard-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/basic-wizard-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/basic-wizard-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/basic-wizard-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/basic-wizard-spellcasting.json"
+    },
+    {
+      "id": "archetype:wizard:expert-wizard-spellcasting",
+      "name": "Expert Wizard Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/expert-wizard-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/expert-wizard-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/expert-wizard-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/expert-wizard-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/expert-wizard-spellcasting.json"
+    },
+    {
+      "id": "archetype:wizard:master-wizard-spellcasting",
+      "name": "Master Wizard Spellcasting",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/master-wizard-spellcasting?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/master-wizard-spellcasting?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/master-wizard-spellcasting.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/master-wizard-spellcasting.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/master-wizard-spellcasting.json"
+    },
+    {
+      "id": "archetype:wizard:wizard-dedication",
+      "name": "Wizard Dedication",
+      "publication": "paizo-pathfinder-player-core",
+      "oldOmenPath": "omen://feat/wizard-dedication?source=paizo-pathfinder-player-core",
+      "newOmenPath": "omen://archetype/wizard/feats/wizard-dedication?source=paizo-pathfinder-player-core",
+      "oldRecordFamily": "feat",
+      "newRecordFamily": "feat",
+      "owner": {
+        "old": null,
+        "new": "omen://archetype/wizard?source=paizo-pathfinder-player-core"
+      },
+      "collection": {
+        "old": null,
+        "new": "feats"
+      },
+      "oldArchiveRelativePath": "src/paizo-pathfinder-player-core/feat/wizard-dedication.yml",
+      "newArchiveRelativePath": "src/paizo-pathfinder-player-core/archetype/wizard/feats/wizard-dedication.yml",
+      "sourceReference": "corpus-manifest:packs/feats/archetype/wizard/wizard-dedication.json"
+    }
+  ]
+}

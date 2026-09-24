@@ -59,6 +59,7 @@
       "default": []
     },
     "typedPrerequisites": {
+      "x-omen-ownership": "archive",
       "type": "array",
       "items": {
         "$ref": "utility-types/rules.schema.json#/$defs/prerequisite"
@@ -66,6 +67,7 @@
       "default": []
     },
     "prerequisiteDiagnostics": {
+      "x-omen-ownership": "archive",
       "type": "array",
       "items": {
         "type": "string",
@@ -143,6 +145,7 @@
       "$ref": "utility-types/action-primitive.schema.json"
     },
     "rules": {
+      "x-omen-ownership": "archive",
       "type": "array",
       "items": {
         "$ref": "utility-types/rules.schema.json#/$defs/rule"
@@ -150,10 +153,12 @@
       "default": []
     },
     "mechanicsScope": {
+      "x-omen-ownership": "archive",
       "type": "string",
       "enum": ["builder", "encounter", "mixed"]
     },
     "unsupportedReason": {
+      "x-omen-ownership": "archive",
       "type": "string",
       "minLength": 1
     }

@@ -76,8 +76,10 @@
     "duration": { "type": "string" },
     "cost": { "type": "string" },
     "requirements": { "type": "string" },
-    "mechanicsScope": { "type": "string", "enum": ["builder", "encounter", "mixed"] },
-    "unsupportedReason": { "type": "string", "minLength": 1 }
+    "mechanicsScope": {
+    "x-omen-ownership": "archive", "type": "string", "enum": ["builder", "encounter", "mixed"] },
+    "unsupportedReason": {
+  "x-omen-ownership": "archive", "type": "string", "minLength": 1 }
   },
   "required": ["name", "source", "rank", "category", "traditions", "rarity", "traits", "description"],
   "additionalProperties": false,
