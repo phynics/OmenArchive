@@ -27,11 +27,11 @@ src/
     spell/
     ancestry/
     background/
-    class/
+    class/                   # classes and their declared option collections
     feat/
     heritage/
     item/                  # Canonical equipment records (all subtypes)
-    archetype/
+    archetype/               # archetype bundles and owned feats
     companion/
     domain/
 ```
@@ -543,7 +543,7 @@ Rules:
 - Keep base class data in `{class}.yml`.
 - Put fixed class features in `features/`.
 - Prefix feature filenames with level when the feature is level-gated: `1-reactive-strike.yml`.
-- Use custom class collection directories declared by `schemas/archive-format.json` (for example `rackets/`, `schools/`, `theses/`, and the lesson groups). Their path and resource schema are part of the archive format contract.
+- Put class options in the owner-specific collection declared in `schemas/archive-format.json`. For example, bard options use `muses/`, rogue options use `rackets/`, wizard options use `schools/` or `theses/`, and witch options use `patrons/` or one of `basic-lessons/`, `greater-lessons/`, and `major-lessons/`. These collections use the `character-feature` schema and are part of the archive path contract.
 
 ### Feats
 
@@ -599,6 +599,36 @@ Rules:
 - Keep prerequisites human-readable but consistent.
 - OmenScribe currently parses common prerequisite strings into typed runtime prerequisites.
 - Use `relatedArchetype` for archetype-associated feats.
+
+### Archetypes
+
+Archetypes are bundles. Store the archetype root at
+`src/{publication}/archetype/{archetype}/{archetype}.yml` and its feats under
+`src/{publication}/archetype/{archetype}/feats/{slug}.yml`. The root uses
+`schemas/character-archetype.schema.json`; its owned feats remain `character-feat`
+records and keep their feat record family when their paths move into the bundle.
+
+The root's `entryFeat` is the publication-qualified OmenPath of its dedication feat:
+
+```yaml
+name: bard
+source:
+  publisher: paizo
+  book: Pathfinder Player Core
+description: |
+  A short source description of the archetype.
+entryFeat: omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-player-core
+```
+
+Use only source-backed root fields. Do not infer progression or configuration rules
+from feat names; add those fields only when the source provides them.
+
+Ticket 0055's exact path set is recorded in
+`docs/migrations/player-core-0055-v1.0.0.json`. From the `OmenArchive` directory,
+run `./scripts/player_core_0055_migration.py --apply` to move those records and
+create the eight source-backed roots, or `./scripts/player_core_0055_migration.py
+--check` to verify the completed migration. The script reads the corresponding
+class descriptions from the workspace's `pf2e/` source checkout.
 
 ## Mechanics coverage
 
