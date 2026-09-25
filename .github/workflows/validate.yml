@@ -8,31 +8,47 @@ on:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    # Apple platforms only; Swift 6.4 / Xcode 27 is the toolchain floor (ADR 0004 in the
+    # workspace repo). The tooling is checked out at the commits in
+    # .github/workspace.lock.json, which tools/workspace-lock.sh writes (ticket 0084).
+    runs-on: macos-26
 
     steps:
+      - name: Select Xcode 27
+        run: |
+          sudo xcode-select -s /Applications/Xcode_27.0.app
+          swift --version
       - name: Check out OmenArchive
         uses: actions/checkout@v4
         with:
           path: OmenArchive
+      - name: Read the workspace lock
+        id: lock
+        run: |
+          lock=OmenArchive/.github/workspace.lock.json
+          for name in OmenArchiveKit OmenCore ADUtilities; do
+            rev=$(sed -n "s/.*\"$name\".*\"rev\": \"\([0-9a-f]*\)\".*/\1/p" "$lock")
+            test -n "$rev" || { echo "::error::$name is missing from $lock"; exit 1; }
+            echo "$name=$rev" >> "$GITHUB_OUTPUT"
+          done
       - name: Check out OmenArchiveKit
         uses: actions/checkout@v4
         with:
           repository: phynics/OmenArchiveKit
-          ref: main
+          ref: ${{ steps.lock.outputs.OmenArchiveKit }}
           path: OmenArchiveKit
       - name: Check out OmenCore
         uses: actions/checkout@v4
         with:
           repository: phynics/OmenCore
-          ref: main
+          ref: ${{ steps.lock.outputs.OmenCore }}
           path: OmenCore
           token: ${{ secrets.OMEN_CI_READ_TOKEN || github.token }}
       - name: Check out ADUtilities
         uses: actions/checkout@v4
         with:
           repository: phynics/ADUtilities
-          ref: main
+          ref: ${{ steps.lock.outputs.ADUtilities }}
           path: ADUtilities
       - name: Check out the pinned pf2e corpus revision
         uses: actions/checkout@v4
@@ -40,10 +56,6 @@ jobs:
           repository: foundryvtt/pf2e
           ref: 4cbdaa37d6c33e9519561bae2c59a23e0288cbce
           path: pf2e
-      - name: Install Swift 6
-        uses: swift-actions/setup-swift@v2
-        with:
-          swift-version: "6.0"
       - name: Run OmenArchiveKit tests against this archive
         working-directory: OmenArchiveKit
         env:
