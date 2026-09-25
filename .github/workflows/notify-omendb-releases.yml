@@ -1,0 +1,23 @@
+name: Notify OmenDB-Releases
+
+# When an OmenArchive release is published, ask phynics/OmenDB-Releases to build and publish
+# OmenDB bundles for every supported app contract from that tag (OmenBuilder ticket 0099).
+# Needs the secret OMENDB_RELEASES_DISPATCH_TOKEN, which can send repository_dispatch events
+# to that repo.
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: macos-26
+    steps:
+      - name: Send archive-release
+        env:
+          GH_TOKEN: ${{ secrets.OMENDB_RELEASES_DISPATCH_TOKEN }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          gh api repos/phynics/OmenDB-Releases/dispatches \
+            -f event_type=archive-release \
+            -f "client_payload[archive_ref]=$TAG"
