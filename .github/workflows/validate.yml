@@ -16,7 +16,11 @@ jobs:
     steps:
       - name: Select Xcode 27
         run: |
-          sudo xcode-select -s /Applications/Xcode_27.0.app
+          xcode=$(ls -d /Applications/Xcode_27*.app 2>/dev/null | sort -V | tail -1)
+          if [ -z "$xcode" ]; then
+            echo "::error::No Xcode 27 on this runner. Installed:"; ls -d /Applications/Xcode*.app; exit 1
+          fi
+          sudo xcode-select -s "$xcode"
           swift --version
       - name: Check out OmenArchive
         uses: actions/checkout@v4
