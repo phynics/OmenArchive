@@ -1,0 +1,65 @@
+---
+description: 'When Forcing Open an object that doesn''t have an easy grip, a crowbar
+  makes it easier to gain the necessary leverage. Without a crowbar, prying something
+  open takes a -2 item penalty to the Athletics check to Force Open.
+
+  A levered crowbar grants you a +1 item bonus to Athletics checks to Force Open anything
+  that can be pried open.'
+details:
+  equipment: {}
+level: 3
+mechanicsScope: mixed
+name: crowbar (levered)
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 20 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 518c8b20-555d-554e-8a2f-cee0d9828a25
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 069917d7-5ce7-504c-af47-a344b6843ff9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  athletics: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Crowbar (Levered): +1 item bonus to Athletics checks (Force Open).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 4kz3vhkKPUuXBpxk
+traits: []
+type: equipment

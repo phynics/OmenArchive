@@ -1,0 +1,67 @@
+---
+description: This leather satchel contains empty vials, a pair of tweezers, a supply
+  of small linen cloths, a set of brass calipers and a knotted string for measuring
+  distances, several pieces of chalk, a pen, and a blank notebook for keeping notes.
+  Every component of a detective's kit is of exceeding quality, and thus a detective's
+  kit adds a +1 item bonus to checks to investigate a crime scene, a clue, or similar
+  details. Like other tool kits, a detective's kit uses one hand if wearing the kit
+  and two hands otherwise.
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: detective's kit
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 25 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 18f2e293-46e9-5a6d-894e-1ad3984e0fa9
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5b8418ce-849e-5367-a8bc-5a821c137d33
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - savingThrow:
+                _0: perception
+            - anySkill: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Detective''s Kit: +1 item bonus to Perception checks and skill
+            checks (Investigate).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: ItLZL9Bd6xwgfeB8
+traits: []
+type: equipment

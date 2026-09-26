@@ -1,0 +1,61 @@
+---
+description: A typical spyglass lets you see eight times farther than normal. A fine
+  spyglass adds a +1 item bonus to Perception checks to notice details at a distance.
+details:
+  equipment: {}
+level: 4
+mechanicsScope: builder
+name: spyglass (fine)
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 80 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 31aaaa3f-dd3c-5e00-9192-6485f4b97361
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: e68cc959-7311-50a6-b17b-0cb145346b21
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - savingThrow:
+                _0: perception
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Spyglass (Fine): +1 item bonus to Perception checks (Notice details
+            at distance).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: rV7MTDCseZmEZKDw
+traits: []
+type: equipment

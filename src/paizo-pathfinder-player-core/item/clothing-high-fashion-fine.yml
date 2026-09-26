@@ -1,0 +1,64 @@
+---
+description: Fine clothing, suitable for a noble or royal, is made with expensive
+  fabrics, precious metals, and intricate patterns. You gain a +1 item bonus to checks
+  to Make an Impression on nobility or other upper-class folk while wearing high-fashion
+  fine clothing.
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: clothing (high-fashion fine)
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 55 gp
+  quantity: 1
+  size: med
+  usage: worn
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 7cdf1302-d8cb-5ebe-84fa-544f89d997ce
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 76256025-37fd-582a-ab0e-98d9a3cd5a98
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  diplomacy: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Clothing (High-Fashion Fine): +1 item bonus to Diplomacy checks
+            (Make an Impression on nobility).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: rXZxM7SbqEnvXyal
+traits: []
+type: equipment

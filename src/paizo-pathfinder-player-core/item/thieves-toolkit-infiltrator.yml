@@ -1,0 +1,68 @@
+---
+description: 'You need a thieves'' toolkit to Pick Locks or Disable Devices (of some
+  types) using the Thievery skill. An infiltrator thieves'' toolkit add a +1 item
+  bonus to checks to Pick Locks and Disable Devices.
+
+  If your thieves'' toolkit is broken, you can repair it by replacing the lock picks
+  with Replacement Picks appropriate to your tools; this doesn''t require using the
+  Repair action. If you wear your thieves'' toolkit, you can draw and replace it as
+  part of the action that uses it.'
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: thieves' toolkit (infiltrator)
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 50 gp
+  quantity: 1
+  size: med
+  usage: other
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: f074b6db-6ca7-57e5-a518-95dd552eb1fc
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 34a85e14-cdc1-5f64-9da3-8c83c21b00ac
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  thievery: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Thieves'' Toolkit (Infiltrator): +1 item bonus to Thievery checks
+            (Disable a Device or Pick a Lock).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 6nrCxNQFycUVFOV2
+traits: []
+type: equipment

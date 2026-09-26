@@ -1,0 +1,60 @@
+---
+description: This quality handheld lens gives you a +1 item bonus to Perception checks
+  to notice minute details of documents, fabric, and the like.
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: magnifying glass
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 40 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 03441575-f809-5777-8a44-f7d54c3b1ba3
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 911bcec0-754f-584e-8e5e-f08b3da8630c
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - savingThrow:
+                _0: perception
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Magnifying Glass: +1 item bonus to Perception checks (minute details).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 5GbC7RTgyAeaOcAI
+traits: []
+type: equipment

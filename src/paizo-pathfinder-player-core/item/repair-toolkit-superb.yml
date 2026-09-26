@@ -1,0 +1,64 @@
+---
+description: A repair kit allows you to perform simple repairs while traveling. It
+  contains a portable anvil, tongs, woodworking tools, a whetstone, and oils for conditioning
+  leather and wood. You can use a repair kit to Repair items using the Crafting skill.
+  A superb repair kit gives you a +1 item bonus to the check. You can draw and replace
+  a worn repair toolkit as part of the action that uses it.
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: repair toolkit (superb)
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 25 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 58cc4260-2e18-53b5-95c6-4333a96c0477
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 67d24798-54f5-5dc8-bbeb-9436114af988
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  crafting: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Repair Toolkit (Superb): +1 item bonus to Crafting checks (Repair).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: aDsdYMPpVc8hOnM5
+traits: []
+type: equipment

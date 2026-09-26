@@ -1,0 +1,66 @@
+---
+description: 'You need these tools to create items from raw materials with the Craft
+  skill. Sterling artisan''s tools give you a +1 item bonus to the check.
+
+  Different sets are needed for different work, as determined by the GM; for example,
+  a blacksmith''s toolkit differs from a woodworker''s toolkit. If you wear your artisan''s
+  toolkit, you can draw and replace it as part of the action that uses it.'
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: artisan's toolkit (sterling)
+physical:
+  bulk: '2'
+  hardness: 0
+  hitPoints: 0
+  price: 50 gp
+  quantity: 1
+  size: med
+  usage: other
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 9779de8e-8bb9-5d69-80df-3e1b5ebed6af
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8183cbcd-70e3-5252-b850-89f0aeed7669
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  crafting: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Artisan''s Toolkit (Sterling): +1 item bonus to Crafting checks
+            (craft items).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 0QgniSjpzksm5riV
+traits: []
+type: equipment

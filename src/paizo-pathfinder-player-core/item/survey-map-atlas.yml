@@ -1,0 +1,107 @@
+---
+description: 'Maps are uncommon. Most maps you can find are simple and functional.
+  A survey map details a single location in excellent detail.
+
+  One of these maps gives you a +1 item bonus to Survival checks and any skill checks
+  to Recall Knowledge, provided the checks are related to the location detailed on
+  the map.
+
+  Maps sometimes come in atlases, containing a number of maps of the same quality,
+  often on similar topics. An atlas costs five times as much as a single map and requires
+  both hands to use.
+
+  The GM determines what maps are available in any location.'
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: survey map (atlas)
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 50 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+rarity: uncommon
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 03dd1bf6-0c57-5fa3-a6a2-022bfd95ba6c
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 20b47bee-0e8a-5284-a73c-5f539833a558
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  survival: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Survey Map (Atlas): +1 item bonus to Survival checks (mapped area).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 1dfdd7b4-9a41-5cda-ba51-3a962c917bed
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 750269ed-5e15-5b86-bbe5-8a8fa6e77d75
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - anySkill: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Survey Map (Atlas): +1 item bonus to skill checks (Recall knowledge
+            on mapped area).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 1M4SSDuTv2SwBltC
+traits: []
+type: equipment

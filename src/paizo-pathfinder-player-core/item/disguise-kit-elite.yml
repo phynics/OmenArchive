@@ -1,0 +1,66 @@
+---
+description: This small wooden box contains cosmetics, false facial hair, spirit gum,
+  and a few simple wigs. You usually need a disguise kit to set up a disguise in order
+  to Impersonate someone using the Deception skill. An elite disguise kit adds a +1
+  item bonus to relevant checks. If you've crafted a large number of disguises, you
+  can replenish your cosmetics supply with replacement cosmetics suitable for the
+  type of your disguise kit. You can draw and replace a worn disguise kit as part
+  of the action that uses it.
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: disguise kit (elite)
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 40 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 5dfd9019-9684-5e3b-8f6f-98bb749806bd
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 47aa8268-b8dd-5c67-8121-3cf6acef1e84
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  deception: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Disguise Kit (Elite): +1 item bonus to Deception checks (Impersonate).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: YhkomhtKBK3i9C7Q
+traits: []
+type: equipment

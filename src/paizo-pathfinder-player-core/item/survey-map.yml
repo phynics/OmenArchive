@@ -1,0 +1,100 @@
+---
+description: Maps are uncommon. Most maps you can find are simple and functional.
+  A survey map details a single location in excellent detail. One of these maps gives
+  you a +1 item bonus to Survival checks and any skill checks to Recall Knowledge,
+  provided the checks are related to the location detailed on the map. The GM determines
+  what maps are available in any location.
+details:
+  equipment: {}
+level: 3
+mechanicsScope: builder
+name: survey map
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 10 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+rarity: uncommon
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 9b33fb74-c82d-5e8d-b17a-08513332e1b2
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4167aac3-a761-5d6e-b3f6-277a89e8c0f2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  survival: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Survey Map: +1 item bonus to Survival checks (mapped area).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 126d92b7-ec70-5337-9bdc-83cbdb8f691f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b4739301-ecce-5225-930b-2877074b88c5
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - anySkill: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Survey Map: +1 item bonus to skill checks (Recall knowledge on
+            mapped area).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: UhcRWtnjU2WLSClx
+traits: []
+type: equipment
