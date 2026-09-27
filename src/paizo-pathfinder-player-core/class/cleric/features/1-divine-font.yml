@@ -98,8 +98,7 @@ rules:
       source:
         kind: selection
         selection:
-          id: fb62f6ab-4afe-524c-901c-452523a9336f
-          lookupName: divineFont
+          lookupName: divine-font
           options:
             kind: explicit
             values:
@@ -159,8 +158,8 @@ rules:
     inputName: grantId
   - expectedValue:
       source:
-        id: fb62f6ab-4afe-524c-901c-452523a9336f
-        kind: lookupByID
+        kind: lookupByName
+        name: divine-font
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:
@@ -210,8 +209,8 @@ rules:
     inputName: grantId
   - expectedValue:
       source:
-        id: fb62f6ab-4afe-524c-901c-452523a9336f
-        kind: lookupByID
+        kind: lookupByName
+        name: divine-font
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:

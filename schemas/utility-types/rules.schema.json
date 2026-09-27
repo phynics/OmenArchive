@@ -101,27 +101,10 @@
         {
           "properties": {
             "kind": {
-              "const": "lookupByID"
-            },
-            "id": {
-              "type": "string",
-              "minLength": 1
-            }
-          },
-          "required": [
-            "kind",
-            "id"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "properties": {
-            "kind": {
               "const": "lookupByName"
             },
             "name": {
-              "type": "string",
-              "minLength": 1
+              "$ref": "#/$defs/choiceName"
             }
           },
           "required": [
@@ -147,16 +130,16 @@
         }
       ]
     },
+    "choiceName": {
+      "description": "A selection's lookup name: kebab-case, like filenames. Rules read it with lookupByName and hasChoice, which look in their own resource first.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
     "selection": {
       "type": "object",
       "properties": {
-        "id": {
-          "type": "string",
-          "format": "uuid"
-        },
         "lookupName": {
-          "type": "string",
-          "minLength": 1
+          "$ref": "#/$defs/choiceName"
         },
         "valueTypeID": {
           "type": "string",
@@ -164,10 +147,14 @@
         },
         "options": {
           "$ref": "#/$defs/selectionOptions"
+        },
+        "distinctWithin": {
+          "description": "Selections with the same group key pick different values: each leaves out the values picked by those defined before it.",
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*(/[a-z0-9]+(-[a-z0-9]+)*)*$"
         }
       },
       "required": [
-        "id",
         "lookupName",
         "valueTypeID",
         "options"
@@ -472,6 +459,58 @@
           },
           "required": [
             "unsupported"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasChoice": {
+              "description": "A choice made in a rule's selection passes one test. Within one resource it must name a choice defined by an earlier rule.",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/$defs/choiceName"
+                },
+                "isSet": {
+                  "const": true
+                },
+                "equals": {
+                  "$ref": "#/$defs/registeredValue"
+                },
+                "oneOf": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/registeredValue"
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "oneOf": [
+                {
+                  "required": [
+                    "isSet"
+                  ]
+                },
+                {
+                  "required": [
+                    "equals"
+                  ]
+                },
+                {
+                  "required": [
+                    "oneOf"
+                  ]
+                }
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "hasChoice"
           ],
           "additionalProperties": false
         }
