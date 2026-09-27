@@ -5,104 +5,110 @@ description: You gain expert proficiency with your deity's favored weapon, simpl
   your deity's favored weapon, you apply the weapon's critical specialization effect;
   you can use your spell DC in place of your class DC.
 level: 11
-mechanicsScope: mixed
+mechanicsScope: builder
 name: fourth doctrine (cloistered cleric)
 rules:
-- id: 186153c0-77eb-5c0b-b91f-2180fb0b0431
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-critical-specialization
     revision: 1
+  id: 186153c0-77eb-5c0b-b91f-2180fb0b0431
   inputRecipes:
-  - inputName: uuid
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: 1fa39fdf-9691-5eb5-accc-81e381f31365
-  - inputName: weaponGroup
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-group
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-group
-          revision: 1
           payload: any
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-group
+      valueTypeID: org.openomen.pf2e.core/value/weapon-group
+    inputName: weaponGroup
+  prerequisites:
+  - hasFeatureWithName: cloistered cleric
   startLevel: 1
-- id: 52ef3cb3-57c7-5682-b4c5-5c60ee528a5c
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
     revision: 1
+  id: 52ef3cb3-57c7-5682-b4c5-5c60ee528a5c
   inputRecipes:
-  - inputName: weaponDesignation
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-designation
-          revision: 1
           payload:
             kind: filter
+            weaponGroup: any
             weaponKind: simple
-            weaponGroup: any
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
-  - inputName: selfScaling
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/bool
-          revision: 1
           payload: false
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/bool
+      valueTypeID: org.openomen.pf2e.core/value/bool
+    inputName: selfScaling
+  prerequisites:
+  - hasFeatureWithName: cloistered cleric
   startLevel: 1
-- id: cec9a72b-6885-57d2-abc5-c2d19d289a77
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
     revision: 1
+  id: cec9a72b-6885-57d2-abc5-c2d19d289a77
   inputRecipes:
-  - inputName: weaponDesignation
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-designation
-          revision: 1
           payload:
             kind: filter
-            weaponKind: unarmed
             weaponGroup: any
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+            weaponKind: unarmed
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
-  - inputName: selfScaling
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/bool
-          revision: 1
           payload: false
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/bool
+      valueTypeID: org.openomen.pf2e.core/value/bool
+    inputName: selfScaling
+  prerequisites:
+  - hasFeatureWithName: cloistered cleric
   startLevel: 1
 source:
   book: Pathfinder Player Core

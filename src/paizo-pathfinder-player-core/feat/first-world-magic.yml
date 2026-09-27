@@ -10,49 +10,45 @@ name: first world magic
 prerequisites: []
 rarity: common
 rules:
-- id: c1172df4-b063-5a4b-b40a-be1d8bad4953
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.spellcasting/effect/grant-innate-spell
     revision: 1
+  id: c1172df4-b063-5a4b-b40a-be1d8bad4953
   inputRecipes:
-  - inputName: sourceId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: f9fc550d-e6c9-5b90-9142-c5607ad4e3fd
-  - inputName: sourceName
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/string
-      source:
-        kind: literal
-        value:
-          typeID: org.openomen.pf2e.core/value/string
           revision: 1
-          payload: First World Magic
-  - inputName: grantId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
-      source:
-        kind: literal
-        value:
           typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: First World Magic
           revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
           payload: 6b02bd09-bb6c-5a7c-84dc-a161fc078c42
-  - inputName: spellId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
       source:
         kind: selection
         selection:
           id: 8c3f8c28-48a1-5801-9775-ebae14aafd7f
           lookupName: firstWorldMagicSpell
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
           options:
-            kind: resourceFiltered
             filter:
               kind: intersection
               values:
@@ -74,44 +70,48 @@ rules:
                   kind: hasMetadata
                   metadataKey: spell.tradition
                   metadataValue: primal
-  - inputName: tradition
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.spellcasting/value/tradition
-          revision: 1
           payload: primal
-  - inputName: attribute
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/attribute
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
+      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+    inputName: tradition
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/attribute
-          revision: 1
           payload: cha
-  - inputName: rankPolicy
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
+      valueTypeID: org.openomen.pf2e.core/value/attribute
+    inputName: attribute
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
-          revision: 1
           payload:
             kind: cantrip
-  - inputName: castFrequency
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-          revision: 1
           payload:
             kind: atWill
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
   startLevel: 1
 source:
   book: Pathfinder Player Core

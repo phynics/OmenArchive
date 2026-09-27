@@ -4,10 +4,30 @@
   "title": "OmenArchive Domain",
   "type": "object",
   "properties": {
-    "name": { "type": "string" },
-    "source": { "$ref": "utility-types/content-source.schema.json" },
-    "description": { "type": "string" }
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "$ref": "utility-types/content-source.schema.json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "domainSpell": {
+      "type": "string",
+      "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$",
+      "description": "The focus spell Domain Initiate grants for this domain."
+    },
+    "advancedDomainSpell": {
+      "type": "string",
+      "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$",
+      "description": "The focus spell Advanced Domain grants for this domain."
+    }
   },
-  "required": ["name", "source", "description"],
+  "required": [
+    "name",
+    "source",
+    "description"
+  ],
   "additionalProperties": false
 }

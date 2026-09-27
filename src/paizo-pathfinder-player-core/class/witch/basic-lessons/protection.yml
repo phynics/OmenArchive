@@ -1,9 +1,107 @@
 ---
 action: {}
 description: You gain the Blood Ward hex; your familiar learns Mystic Armor.
+grantedSpells:
+- grant: focus
+  spell: omen://spell/blood-ward?source=paizo-pathfinder-player-core
+- grant: known
+  spell: omen://spell/mystic-armor?source=paizo-pathfinder-player-core
 level: 2
-mechanicsScope: encounter
+mechanicsScope: builder
 name: lesson of protection
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    revision: 1
+  id: 95922dd4-da0f-58a6-ac1c-a80e1b8366cb
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9ee6b702-d66d-554a-ac1b-6f9e402e86a9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 74b07940-6b68-5fae-88b6-772154e6743b
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: cantrip
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    revision: 1
+  id: 7bcd3ee9-7296-57a5-b101-c5d8ce92f115
+  inputRecipes: []
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: ed937e3c-fc2a-573f-be55-f56cc4bf3b49
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: e6d530e8-ff55-543a-8c78-4c6dae7159e4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 27537b60-2933-5640-b593-d4d100316e28
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

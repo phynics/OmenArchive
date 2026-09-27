@@ -1,36 +1,80 @@
 ---
 action: {}
-description: |-
-  Your muse is a mystery, driving you to uncover the hidden secrets of life and the multiverse. These muses can be people you cannot fully grasp, texts layered deeply with symbolism, or emotional paradoxes that underline a lifetime's work. If your muse is an otherworldly creature, it might be a mysterious aeon or an occult dragon; if a deity, it might be Irori or Nethys. Art inspired by an enigma muse could be cryptic, eerie, or laden with speculation and conspiracy. As a bard with the enigma muse, you support your allies by providing knowledge alongside inspiration and occult support.
+description: 'Your muse is a mystery, driving you to uncover the hidden secrets of
+  life and the multiverse. These muses can be people you cannot fully grasp, texts
+  layered deeply with symbolism, or emotional paradoxes that underline a lifetime''s
+  work. If your muse is an otherworldly creature, it might be a mysterious aeon or
+  an occult dragon; if a deity, it might be Irori or Nethys. Art inspired by an enigma
+  muse could be cryptic, eerie, or laden with speculation and conspiracy. As a bard
+  with the enigma muse, you support your allies by providing knowledge alongside inspiration
+  and occult support.
+
   Muse Feat Bardic Lore
-  Muse Spell Sure Strike
+
+  Muse Spell Sure Strike'
+grantedSpells:
+- grant: known
+  spell: omen://spell/sure-strike?source=paizo-pathfinder-player-core
 level: 1
 mechanicsScope: builder
 name: enigma
 rules:
-- id: 92d56603-7399-5625-a1ff-cc4b52b86960
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: 92d56603-7399-5625-a1ff-cc4b52b86960
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: db26806e-3df1-5d0f-a503-04e927fb7b15
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: d74591ff-4b65-573b-9913-43e767592917
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 36f48ed7-34bc-5970-b561-5d150fa34762
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 35cacd1f-e3ff-5b72-b73b-cf2245faf897
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: bc28896d-73c0-5c43-8ee0-0cd092f755b3
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
   startLevel: 1
 source:
   book: Pathfinder Player Core

@@ -5,140 +5,148 @@ description: You gain expert proficiency with your deity's favored weapon, marti
   attack roll using your deity's favored weapon, you apply the weapon's critical specialization
   effect; you can use your spell DC in place of your class DC.
 level: 7
-mechanicsScope: mixed
+mechanicsScope: builder
 name: third doctrine (warpriest)
 rules:
-- id: d39c0784-9feb-506d-b26a-01d52d79b618
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-critical-specialization
     revision: 1
+  id: d39c0784-9feb-506d-b26a-01d52d79b618
   inputRecipes:
-  - inputName: uuid
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: c703bc45-6b23-58b9-8206-0c97dc501da6
-  - inputName: weaponGroup
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-group
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-group
-          revision: 1
           payload: any
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-group
+      valueTypeID: org.openomen.pf2e.core/value/weapon-group
+    inputName: weaponGroup
+  prerequisites:
+  - hasFeatureWithName: warpriest
   startLevel: 1
-- id: eceb18cf-fa22-5994-957c-a4a49e6d82e6
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
     revision: 1
+  id: eceb18cf-fa22-5994-957c-a4a49e6d82e6
   inputRecipes:
-  - inputName: weaponDesignation
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-designation
-          revision: 1
           payload:
             kind: filter
+            weaponGroup: any
             weaponKind: martial
-            weaponGroup: any
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
-  - inputName: selfScaling
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/bool
-          revision: 1
           payload: false
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/bool
+      valueTypeID: org.openomen.pf2e.core/value/bool
+    inputName: selfScaling
+  prerequisites:
+  - hasFeatureWithName: warpriest
   startLevel: 1
-- id: 3276d103-951b-5ce1-b4b7-a4e34c4596b3
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
     revision: 1
+  id: 3276d103-951b-5ce1-b4b7-a4e34c4596b3
   inputRecipes:
-  - inputName: weaponDesignation
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-designation
-          revision: 1
           payload:
             kind: filter
+            weaponGroup: any
             weaponKind: simple
-            weaponGroup: any
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
-  - inputName: selfScaling
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/bool
-          revision: 1
           payload: false
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/bool
+      valueTypeID: org.openomen.pf2e.core/value/bool
+    inputName: selfScaling
+  prerequisites:
+  - hasFeatureWithName: warpriest
   startLevel: 1
-- id: afb06242-948d-59f5-b354-5d0c3e6d1bf8
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
     revision: 1
+  id: afb06242-948d-59f5-b354-5d0c3e6d1bf8
   inputRecipes:
-  - inputName: weaponDesignation
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-designation
-          revision: 1
           payload:
             kind: filter
-            weaponKind: unarmed
             weaponGroup: any
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+            weaponKind: unarmed
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
-  - inputName: selfScaling
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/bool
-          revision: 1
           payload: false
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/bool
+      valueTypeID: org.openomen.pf2e.core/value/bool
+    inputName: selfScaling
+  prerequisites:
+  - hasFeatureWithName: warpriest
   startLevel: 1
 source:
   book: Pathfinder Player Core

@@ -13,20 +13,20 @@ prerequisites:
 - Untamed Form
 rarity: common
 rules:
-- id: 680b8d67-b3a5-5899-b989-3cab902983ee
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-action
     revision: 1
+  id: 680b8d67-b3a5-5899-b989-3cab902983ee
   inputRecipes:
-  - inputName: actionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/action-id
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/action-id
-          revision: 1
           payload: 53c270f7-81eb-5052-a068-b3bf93a1c6ba
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/action-id
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+    inputName: actionId
   startLevel: 1
 source:
   book: Pathfinder Player Core

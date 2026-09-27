@@ -1,39 +1,43 @@
 ---
 action: {}
-description: |-
-  Magus, Sorcerer An animal serves you and assists your spellcasting.
+description: 'Magus, Sorcerer An animal serves you and assists your spellcasting.
+
   Wizard You make a pact with a creature that serves you and assists your spellcasting.
-  Thaumaturge Whether by following occult rituals, piecing together scraps of arcane theory, or some other method, you've called forth a creature that now serves as your constant companion in your studies of the supernatural.
-  You gain a familiar.
+
+  Thaumaturge Whether by following occult rituals, piecing together scraps of arcane
+  theory, or some other method, you''ve called forth a creature that now serves as
+  your constant companion in your studies of the supernatural.
+
+  You gain a familiar.'
 level: 1
 mechanicsScope: builder
 name: familiar
 prerequisites: []
 rarity: common
 rules:
-- id: bd88c472-7157-5022-b6a9-396a0cb0cf17
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: bd88c472-7157-5022-b6a9-396a0cb0cf17
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: be4c97ce-70ab-539e-aa11-3557628b907b
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 654bc7f0-2100-5e7d-929e-d44d2e61f8ed
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

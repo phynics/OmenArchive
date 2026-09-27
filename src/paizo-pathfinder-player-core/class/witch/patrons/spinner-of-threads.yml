@@ -20,6 +20,11 @@ description: 'You met your patron in a memory of an encounter yet to come or a p
   a hex, one creature within 15 feet of your familiar gets your choice of either a
   +1 status bonus to its AC or a –1 status penalty to its AC until the start of your
   next turn.'
+grantedSpells:
+- grant: focus-cantrip
+  spell: omen://spell/nudge-fate?source=paizo-pathfinder-player-core
+- grant: known
+  spell: omen://spell/sure-strike?source=paizo-pathfinder-player-core
 level: 1
 mechanicsScope: builder
 name: spinner of threads
@@ -3924,6 +3929,215 @@ rules:
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
     inputName: spellId
   startLevel: 20
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    revision: 1
+  id: 17b00210-1487-5e58-90d8-609daa26a67d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: Witch Focus Spells
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
+      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+    inputName: castingKind
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: occult
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
+      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: int
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
+      valueTypeID: org.openomen.pf2e.core/value/attribute
+    inputName: attribute
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    revision: 1
+  id: 25aecdf7-f9c3-53f5-945c-9293483ec742
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4d7db65a-aa5c-51d2-92c3-5034d1935191
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2e3e67e1-c936-5a1e-8f32-f7e8f7c22879
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: cantrip
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: atWill
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 249e45d1-33b0-588a-ab08-d3dddef7eba7
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9738b524-f5e2-59e7-9dce-6580ae4b46da
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: bc28896d-73c0-5c43-8ee0-0cd092f755b3
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    revision: 1
+  id: 55f90c94-ff1d-508e-bfa4-4112271602ff
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6f44b94b-f734-503c-8c1d-834cfd16b7ff
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: f4e6bcb0-d227-52a8-8909-d0dbce8fd3b2
+          lookupName: firstHex
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 4b68f59e-140e-56c3-9e12-ce55049e5fea
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 363639ec-a868-505d-8d57-499f2a8fba0a
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: cantrip
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    revision: 1
+  id: 08bbcacb-6397-5571-8c89-e8f5835d8bd7
+  inputRecipes: []
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

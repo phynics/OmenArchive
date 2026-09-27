@@ -2,9 +2,107 @@
 action: {}
 description: You gain the Malicious Shadow hex, and your familiar learns Chilling
   Darkness.
+grantedSpells:
+- grant: focus
+  spell: omen://spell/malicious-shadow?source=paizo-pathfinder-player-core
+- grant: known
+  spell: omen://spell/chilling-darkness?source=paizo-pathfinder-player-core
 level: 6
-mechanicsScope: encounter
+mechanicsScope: builder
 name: lesson of shadow
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    revision: 1
+  id: c3092a5c-29bd-53a5-ac05-7aed00ef9b3d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: e0b95116-bb48-5932-a2a4-d2ee7e48e761
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 08f8e228-c4de-59f7-a595-6e3d07470156
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: cantrip
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    revision: 1
+  id: a851fa0f-7307-55cb-a49b-9749a26c5526
+  inputRecipes: []
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 94e39ed6-213f-5664-aee4-9a2209ecb33d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 45825dc2-02e3-55df-9293-4b53e0d0e7cc
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 350edb20-0756-51c9-b780-fabf0df817cb
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

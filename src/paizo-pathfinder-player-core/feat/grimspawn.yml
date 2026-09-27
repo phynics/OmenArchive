@@ -10,29 +10,29 @@ name: grimspawn
 prerequisites: []
 rarity: common
 rules:
-- id: 17adb527-2991-5299-8fa1-29283a13f983
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: 17adb527-2991-5299-8fa1-29283a13f983
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: 89a20236-43a7-5ec5-9004-28adfe12e726
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 01d8ad2c-685f-57eb-94f9-94daf701ccaf
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

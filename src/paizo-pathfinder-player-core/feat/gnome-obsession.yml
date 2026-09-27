@@ -10,53 +10,53 @@ name: gnome obsession
 prerequisites: []
 rarity: common
 rules:
-- id: e742eefd-4bcd-5455-963a-8b94d272ac73
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: e742eefd-4bcd-5455-963a-8b94d272ac73
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: e3911cdc-2cf4-5df6-994b-aeeb52538932
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
-- id: d794a0e3-7139-5242-9271-bff626ea90fa
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: d794a0e3-7139-5242-9271-bff626ea90fa
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: 2182bf09-e03b-5b49-9a3f-87c447b4f42b
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 1f53b5e0-164a-5bfe-8380-e480d8a1f009
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

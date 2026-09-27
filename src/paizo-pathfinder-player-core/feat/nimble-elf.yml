@@ -7,20 +7,20 @@ name: nimble elf
 prerequisites: []
 rarity: common
 rules:
-- id: 02a669a3-f384-540d-99d9-a9b334d3d7d3
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-speed-modifier
     revision: 1
+  id: 02a669a3-f384-540d-99d9-a9b334d3d7d3
   inputRecipes:
-  - inputName: amount
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/int
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/int
-          revision: 1
           payload: 5
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: amount
   startLevel: 1
 source:
   book: Pathfinder Player Core

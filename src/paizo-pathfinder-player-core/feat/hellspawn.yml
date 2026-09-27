@@ -11,54 +11,54 @@ name: hellspawn
 prerequisites: []
 rarity: common
 rules:
-- id: 8cc8a619-c900-5966-a654-778a55af70a4
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: 8cc8a619-c900-5966-a654-778a55af70a4
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: deception
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
-- id: 540e7974-b11a-51ff-a9a9-68ef1d8c0119
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: 540e7974-b11a-51ff-a9a9-68ef1d8c0119
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: be2fec5c-22f0-5c6c-a717-8be04829d2c2
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: e1f0e9fe-fd1d-53d2-9795-c06dd5ca7f15
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

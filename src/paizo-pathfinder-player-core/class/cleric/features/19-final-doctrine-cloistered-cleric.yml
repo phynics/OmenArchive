@@ -3,8 +3,35 @@ action: {}
 description: Your proficiency ranks for the spell attack modifier and spell DC statistics
   increase to legendary.
 level: 19
-mechanicsScope: encounter
+mechanicsScope: builder
 name: final doctrine (cloistered cleric)
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
+    revision: 1
+  id: fde65fe1-e9a4-5cb9-9a72-8092e9ac6061
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiency
+  prerequisites:
+  - hasFeatureWithName: cloistered cleric
+  startLevel: 19
 source:
   book: Pathfinder Player Core
   publisher: paizo

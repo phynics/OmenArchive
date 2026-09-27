@@ -1,87 +1,90 @@
 ---
 action: {}
-description: |-
-  You've picked up skills and tales from your goblin community. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.
-  You also gain the Additional Lore general feat for Goblin Lore.
+description: 'You''ve picked up skills and tales from your goblin community. You gain
+  the trained proficiency rank in Nature and Stealth. If you would automatically become
+  trained in one of those skills (from your background or class, for example), you
+  instead become trained in a skill of your choice.
+
+  You also gain the Additional Lore general feat for Goblin Lore.'
 level: 1
 mechanicsScope: builder
 name: goblin lore
 prerequisites: []
 rarity: common
 rules:
-- id: 991e31e9-3922-5b04-bf03-2ed9eea06052
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: 991e31e9-3922-5b04-bf03-2ed9eea06052
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: nature
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
-- id: ce461ae1-a3d9-588c-8c6e-aaf687836ab4
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: ce461ae1-a3d9-588c-8c6e-aaf687836ab4
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: stealth
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
-- id: d0191fd3-e38e-5b4f-8ad9-cd1467f269d5
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: d0191fd3-e38e-5b4f-8ad9-cd1467f269d5
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: d73b5643-b9b9-5270-9369-a002c1d9af3c
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

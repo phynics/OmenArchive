@@ -1,87 +1,92 @@
 ---
 action: {}
-description: |-
-  The hold elders taught you your people's histories, told tales of great athletic feats, and shared with you the hardships your ancestors endured so that you can pass this wisdom down to future generations. You become trained in Athletics and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice.
-  You also gain the Additional Lore general feat for Orc Lore.
+description: 'The hold elders taught you your people''s histories, told tales of great
+  athletic feats, and shared with you the hardships your ancestors endured so that
+  you can pass this wisdom down to future generations. You become trained in Athletics
+  and Survival. If you would automatically become trained in one of those skills (from
+  your background or class, for example), you instead become trained in a skill of
+  your choice.
+
+  You also gain the Additional Lore general feat for Orc Lore.'
 level: 1
 mechanicsScope: builder
 name: orc lore
 prerequisites: []
 rarity: common
 rules:
-- id: d6bc6500-74ee-5f6d-81d9-f9ec701be679
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: d6bc6500-74ee-5f6d-81d9-f9ec701be679
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: athletics
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
-- id: 7685350f-b992-5eab-8a24-c122a7c96e41
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: 7685350f-b992-5eab-8a24-c122a7c96e41
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: survival
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
-- id: 43e87335-0489-5071-a6f3-a07b5748cb79
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: 43e87335-0489-5071-a6f3-a07b5748cb79
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: d4876e48-6e7e-51f5-828a-efc3589ade76
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

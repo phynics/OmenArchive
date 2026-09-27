@@ -13,81 +13,169 @@ prerequisites:
 - at least one primal innate spell
 rarity: common
 rules:
-- id: a0c6e8e8-724d-5fdb-be65-07957cd67941
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.spellcasting/effect/grant-innate-spell
     revision: 1
+  id: a0c6e8e8-724d-5fdb-be65-07957cd67941
   inputRecipes:
-  - inputName: sourceId
-    expectedValue:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: f0cbda3b-2317-5d56-9406-6de65af13136
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
       valueTypeID: org.openomen.pf2e.core/value/uuid
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/uuid, revision: 1, payload: f0cbda3b-2317-5d56-9406-6de65af13136}}
-  - inputName: sourceName
-    expectedValue:
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: First World Adept
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
       valueTypeID: org.openomen.pf2e.core/value/string
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/string, revision: 1, payload: First World Adept}}
-  - inputName: grantId
-    expectedValue:
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 81c9e640-2a9c-503d-8bf1-9e38661cc911
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
       valueTypeID: org.openomen.pf2e.core/value/uuid
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/uuid, revision: 1, payload: 81c9e640-2a9c-503d-8bf1-9e38661cc911}}
-  - inputName: spellId
-    expectedValue:
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 90ecf007-9f8c-52ed-ad6c-1c4526df908e
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/spell-id, revision: 1, payload: 90ecf007-9f8c-52ed-ad6c-1c4526df908e}}
-  - inputName: tradition
-    expectedValue:
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: primal
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
       valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/tradition, revision: 1, payload: primal}}
-  - inputName: attribute
-    expectedValue:
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cha
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
       valueTypeID: org.openomen.pf2e.core/value/attribute
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/attribute, revision: 1, payload: cha}}
-  - inputName: rankPolicy
-    expectedValue:
+    inputName: attribute
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: fixed
+            rank: 2
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
       valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/rank-policy, revision: 1, payload: {kind: fixed, rank: 2}}}
-  - inputName: castFrequency
-    expectedValue:
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: perDay
+            uses: 1
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
       valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/cast-frequency, revision: 1, payload: {kind: perDay, uses: 1}}}
+    inputName: castFrequency
   startLevel: 1
-- id: a6bfac4f-0301-5bb2-a194-5bf59dc92e4d
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.spellcasting/effect/grant-innate-spell
     revision: 1
+  id: a6bfac4f-0301-5bb2-a194-5bf59dc92e4d
   inputRecipes:
-  - inputName: sourceId
-    expectedValue:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: f0cbda3b-2317-5d56-9406-6de65af13136
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
       valueTypeID: org.openomen.pf2e.core/value/uuid
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/uuid, revision: 1, payload: f0cbda3b-2317-5d56-9406-6de65af13136}}
-  - inputName: sourceName
-    expectedValue:
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: First World Adept
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
       valueTypeID: org.openomen.pf2e.core/value/string
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/string, revision: 1, payload: First World Adept}}
-  - inputName: grantId
-    expectedValue:
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 46c40d00-6614-52fe-8cb8-d74634fcb658
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
       valueTypeID: org.openomen.pf2e.core/value/uuid
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/uuid, revision: 1, payload: 46c40d00-6614-52fe-8cb8-d74634fcb658}}
-  - inputName: spellId
-    expectedValue:
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 44ddc22e-a307-5f2e-936e-6a25adf5fcdc
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/spell-id, revision: 1, payload: 44ddc22e-a307-5f2e-936e-6a25adf5fcdc}}
-  - inputName: tradition
-    expectedValue:
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: primal
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
       valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/tradition, revision: 1, payload: primal}}
-  - inputName: attribute
-    expectedValue:
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cha
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
       valueTypeID: org.openomen.pf2e.core/value/attribute
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.core/value/attribute, revision: 1, payload: cha}}
-  - inputName: rankPolicy
-    expectedValue:
+    inputName: attribute
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: fixed
+            rank: 2
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
       valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/rank-policy, revision: 1, payload: {kind: fixed, rank: 2}}}
-  - inputName: castFrequency
-    expectedValue:
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: perDay
+            uses: 1
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
       valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      source: {kind: literal, value: {typeID: org.openomen.pf2e.spellcasting/value/cast-frequency, revision: 1, payload: {kind: perDay, uses: 1}}}
+    inputName: castFrequency
   startLevel: 1
 source:
   book: Pathfinder Player Core

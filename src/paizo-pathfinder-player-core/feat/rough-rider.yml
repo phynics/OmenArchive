@@ -1,37 +1,41 @@
 ---
 action: {}
-description: |-
-  You are especially good at riding traditional goblin mounts. You gain the Ride feat, even if you don't meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to use Command an Animal on a goblin dog or wolf mount.
-  If you gain a wolf as an animal companion, it gains the mount special ability (and if you gain an ability that grants you an animal companion with the mount special ability, you can choose a wolf).
+description: 'You are especially good at riding traditional goblin mounts. You gain
+  the Ride feat, even if you don''t meet the prerequisites. You gain a +1 circumstance
+  bonus to Nature checks to use Command an Animal on a goblin dog or wolf mount.
+
+  If you gain a wolf as an animal companion, it gains the mount special ability (and
+  if you gain an ability that grants you an animal companion with the mount special
+  ability, you can choose a wolf).'
 level: 1
 mechanicsScope: mixed
 name: rough rider
 prerequisites: []
 rarity: common
 rules:
-- id: c6a83219-aab4-5057-89c0-37528a214358
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: c6a83219-aab4-5057-89c0-37528a214358
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: 2740620b-84a8-5021-9ec4-a8cda84a95aa
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 230b1976-d603-525a-a92e-16cee19d55f3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

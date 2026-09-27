@@ -1,64 +1,68 @@
 ---
 action: {}
-description: |-
-  You resist energy like your extraplanar predecessors. Choose one of the following energy damage types: acid, cold, electricity, fire, or sonic. You gain resistance 5 to that damage type.
-  The damage type typically matches an extraplanar entity associated with your bloodline. For instance, an Angelkin might choose resistance to cold, while a Hellspawn might choose resistance to fire.
+description: 'You resist energy like your extraplanar predecessors. Choose one of
+  the following energy damage types: acid, cold, electricity, fire, or sonic. You
+  gain resistance 5 to that damage type.
+
+  The damage type typically matches an extraplanar entity associated with your bloodline.
+  For instance, an Angelkin might choose resistance to cold, while a Hellspawn might
+  choose resistance to fire.'
 level: 5
 mechanicsScope: builder
 name: nephilim resistance
 prerequisites: []
 rarity: common
 rules:
-- id: 19a41923-d992-5e15-8597-133c4b2d700d
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-resistance
     revision: 1
+  id: 19a41923-d992-5e15-8597-133c4b2d700d
   inputRecipes:
-  - inputName: type
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/string
+  - expectedValue:
       source:
         kind: selection
         selection:
           id: 9b527629-1865-52bc-9008-e01bd3d4e763
           lookupName: featCelestialResistance
-          valueTypeID: org.openomen.pf2e.core/value/string
           options:
             kind: explicit
             values:
-            - typeID: org.openomen.pf2e.core/value/string
+            - payload: fire
               revision: 1
-              payload: fire
-            - typeID: org.openomen.pf2e.core/value/string
+              typeID: org.openomen.pf2e.core/value/string
+            - payload: acid
               revision: 1
-              payload: acid
-            - typeID: org.openomen.pf2e.core/value/string
+              typeID: org.openomen.pf2e.core/value/string
+            - payload: cold
               revision: 1
-              payload: cold
-            - typeID: org.openomen.pf2e.core/value/string
+              typeID: org.openomen.pf2e.core/value/string
+            - payload: sonic
               revision: 1
-              payload: sonic
-            - typeID: org.openomen.pf2e.core/value/string
+              typeID: org.openomen.pf2e.core/value/string
+            - payload: electricity
               revision: 1
-              payload: electricity
-  - inputName: value
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/int
-      source:
-        kind: literal
-        value:
-          typeID: org.openomen.pf2e.core/value/int
-          revision: 1
-          payload: 5
-  - inputName: exceptions
-    expectedValue:
+              typeID: org.openomen.pf2e.core/value/string
+          valueTypeID: org.openomen.pf2e.core/value/string
       valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: type
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/string
+          payload: 5
           revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: value
+  - expectedValue:
+      source:
+        kind: literal
+        value:
           payload: ''
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: exceptions
   startLevel: 1
 source:
   book: Pathfinder Player Core

@@ -37,6 +37,60 @@
       "type": "string",
       "description": "Description of the character feature"
     },
+    "grantedSpells": {
+      "description": "Spells this feature grants: focus spells and focus cantrips join the class's focus source; known spells join its repertoire or spellbook, and the known-choice spells are one choice between them.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "spell": {
+            "type": "string",
+            "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$"
+          },
+          "grant": {
+            "type": "string",
+            "enum": [
+              "focus",
+              "focus-cantrip",
+              "known",
+              "known-choice"
+            ]
+          }
+        },
+        "required": [
+          "spell",
+          "grant"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "curriculum": {
+      "description": "A wizard school's curriculum: the spells of each rank (0 for cantrips).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "spells": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "rank",
+          "spells"
+        ],
+        "additionalProperties": false
+      }
+    },
     "rules": {
       "x-omen-ownership": "archive",
       "type": "array",
@@ -48,7 +102,11 @@
     "mechanicsScope": {
       "x-omen-ownership": "archive",
       "type": "string",
-      "enum": ["builder", "encounter", "mixed"]
+      "enum": [
+        "builder",
+        "encounter",
+        "mixed"
+      ]
     },
     "unsupportedReason": {
       "x-omen-ownership": "archive",
@@ -56,10 +114,14 @@
       "minLength": 1
     }
   },
-  "required": ["name", "source", "description"],
+  "required": [
+    "name",
+    "source",
+    "description"
+  ],
   "allOf": [
     {
       "$ref": "utility-types/mechanics-support.schema.json"
     }
   ]
-} 
+}

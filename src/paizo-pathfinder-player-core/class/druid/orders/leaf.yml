@@ -13,15 +13,126 @@ description: 'You revere the bounty of nature, acting as both a gardener and war
 
   Anathema Commit wanton cruelty to plants or fungi or kill them unnecessarily. (This
   doesn''t prevent you from defending yourself or harvesting them for survival.)'
+grantedSpells:
+- grant: focus
+  spell: omen://spell/cornucopia?source=paizo-pathfinder-player-core
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: leaf order
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    revision: 1
+  id: 4cd87457-77a0-5a71-9ec8-717763e4e302
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: Druid Focus Spells
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
+      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+    inputName: castingKind
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: primal
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
+      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: wis
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
+      valueTypeID: org.openomen.pf2e.core/value/attribute
+    inputName: attribute
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    revision: 1
+  id: 2a0108df-dba2-5790-9613-a0ea74ff6611
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: f9df1045-e218-5c05-9703-89ac89bc89ec
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: eaf73718-2bce-5c62-aa35-3cf0f8110911
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: cantrip
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    revision: 1
+  id: 0630d503-20c7-5815-bae4-488461dcfb44
+  inputRecipes: []
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: u4nlOzPj2WHkIj9l
 traits:
 - druid
-unsupportedReason: 'ActiveEffectLike at position 0 has an unsupported conditional
-  builder payload. Resource: omen://class/druid/features/leaf-order?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, GrantItem].'

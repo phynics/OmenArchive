@@ -1,37 +1,81 @@
 ---
 action: {}
-description: |-
-  Your muse constantly inspires you to greater heights of artistic prowess. For many bards, a teacher or rival fills this role, although some set their sights higher and attempt to surpass great composers of the past or blaze a new trail entirely. If your muse is a supernatural creature, it might be one who loves to perform, such as a choral angel or a lyrakien azata; if a deity, it might be Shelyn. Art inspired by a maestro muse is precise and inventive, a formalist achievement.
-  As a bard with a maestro muse, you are an inspiration to your allies and confident of your musical and oratorical abilities.
+description: 'Your muse constantly inspires you to greater heights of artistic prowess.
+  For many bards, a teacher or rival fills this role, although some set their sights
+  higher and attempt to surpass great composers of the past or blaze a new trail entirely.
+  If your muse is a supernatural creature, it might be one who loves to perform, such
+  as a choral angel or a lyrakien azata; if a deity, it might be Shelyn. Art inspired
+  by a maestro muse is precise and inventive, a formalist achievement.
+
+  As a bard with a maestro muse, you are an inspiration to your allies and confident
+  of your musical and oratorical abilities.
+
   Muse Feat Lingering Composition
-  Muse Spell Soothe
+
+  Muse Spell Soothe'
+grantedSpells:
+- grant: known
+  spell: omen://spell/soothe?source=paizo-pathfinder-player-core
 level: 1
 mechanicsScope: builder
 name: maestro
 rules:
-- id: de37fabc-175a-59ce-8538-baa6da21f6b0
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: de37fabc-175a-59ce-8538-baa6da21f6b0
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: 0adab70e-0ea1-504e-851e-50bf0281d618
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: ad78aec6-11f5-509e-9173-b6363416c3f7
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: c2d0c676-90d6-5e73-b19b-c3edb731801a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 28811215-ea21-5e36-8e22-09abff1ea4a7
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 42cf7716-6e6c-5794-a494-6fc0fef30017
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
   startLevel: 1
 source:
   book: Pathfinder Player Core

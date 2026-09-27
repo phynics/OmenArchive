@@ -11,54 +11,54 @@ name: angelkin
 prerequisites: []
 rarity: common
 rules:
-- id: 7679d647-11e9-54a0-8b68-7193ec4d7839
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: 7679d647-11e9-54a0-8b68-7193ec4d7839
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: society
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
-- id: 366cf77f-08f5-5211-b581-82a7bfacd790
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: 366cf77f-08f5-5211-b581-82a7bfacd790
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: e417c8ff-283f-50e7-b1c5-95b2ca6b5c19
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: be44eda3-4821-5c8a-9f5f-fc9ab4f6a7ce
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
 source:
   book: Pathfinder Player Core

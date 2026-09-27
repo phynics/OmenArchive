@@ -3,10 +3,48 @@ action: {}
 description: Your patron grants you greater knowledge. Choose a greater or basic lesson.
   You gain its associated hex, and your familiar learns the associated spell.
 level: 6
-mechanicsScope: mixed
+mechanicsScope: builder
 name: greater lesson
 prerequisites: []
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: f03bff07-93d4-5378-bacf-395780ab4ba6
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9dd3955b-0036-5ac3-83e7-d71886f588eb
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 9dd3955b-0036-5ac3-83e7-d71886f588eb
+          lookupName: lesson
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  kind: hasPathPrefix
+                  path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
+              - kind: single
+                value:
+                  kind: hasPathPrefix
+                  path: omen://class/witch/greater-lessons?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -14,6 +52,3 @@ sourceID: qDfTqetM9UEpp8ty
 traits:
 - witch
 type: class
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/greater-lesson?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet,
-  GrantItem].'

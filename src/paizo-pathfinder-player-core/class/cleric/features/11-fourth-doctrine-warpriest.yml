@@ -3,8 +3,35 @@ action: {}
 description: Your proficiency ranks for the spell attack modifier and spell DC statistics
   increase to expert.
 level: 11
-mechanicsScope: encounter
+mechanicsScope: builder
 name: fourth doctrine (warpriest)
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
+    revision: 1
+  id: aa49a93a-d73d-53de-9fa0-ea3eb4fa38fc
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiency
+  prerequisites:
+  - hasFeatureWithName: warpriest
+  startLevel: 11
 source:
   book: Pathfinder Player Core
   publisher: paizo

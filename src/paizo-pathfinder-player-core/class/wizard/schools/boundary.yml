@@ -1,5 +1,46 @@
 ---
 action: {}
+curriculum:
+- rank: 0
+  spells:
+  - omen://spell/telekinetic-hand?source=paizo-pathfinder-player-core
+  - omen://spell/void-warp?source=paizo-pathfinder-player-core
+- rank: 1
+  spells:
+  - omen://spell/grim-tendrils?source=paizo-pathfinder-player-core
+  - omen://spell/phantasmal-minion?source=paizo-pathfinder-player-core
+  - omen://spell/summon-undead?source=paizo-pathfinder-player-core
+- rank: 2
+  spells:
+  - omen://spell/darkness?source=paizo-pathfinder-player-core
+  - omen://spell/see-the-unseen?source=paizo-pathfinder-player-core
+- rank: 3
+  spells:
+  - omen://spell/bind-undead?source=paizo-pathfinder-player-core
+  - omen://spell/ghostly-weapon?source=paizo-pathfinder-player-core
+- rank: 4
+  spells:
+  - omen://spell/flicker?source=paizo-pathfinder-player-core
+  - omen://spell/translocate?source=paizo-pathfinder-player-core
+- rank: 5
+  spells:
+  - omen://spell/banishment?source=paizo-pathfinder-player-core
+  - omen://spell/invoke-spirits?source=paizo-pathfinder-player-core
+- rank: 6
+  spells:
+  - omen://spell/teleport?source=paizo-pathfinder-player-core
+  - omen://spell/vampiric-exsanguination?source=paizo-pathfinder-player-core
+- rank: 7
+  spells:
+  - omen://spell/eclipse-burst?source=paizo-pathfinder-player-core
+  - omen://spell/interplanar-teleport?source=paizo-pathfinder-player-core
+- rank: 8
+  spells:
+  - omen://spell/quandary?source=paizo-pathfinder-player-core
+  - omen://spell/unrelenting-observation?source=paizo-pathfinder-player-core
+- rank: 9
+  spells:
+  - omen://spell/massacre?source=paizo-pathfinder-player-core
 description: "Why use your magic to affect something as pedestrian as the physical
   world? Whether you studied at the College of Dimensional Studies in Katapesh or
   an underground school in haunted Ustalav, you've turned your magic past the Universe
@@ -11,9 +52,963 @@ description: "Why use your magic to affect something as pedestrian as the physic
   Vampiric Exsanguination\n\t•\t7th: Eclipse Burst, Interplanar Teleport\n\t•\t8th:
   Quandary, Unrelenting Observation\n\t•\t9th: Massacre\nSchool Spells initial: Fortify
   Summoning; advanced: Spiral of Horrors"
+grantedSpells:
+- grant: focus
+  spell: omen://spell/fortify-summoning?source=paizo-pathfinder-player-core
 level: 1
-mechanicsScope: encounter
+mechanicsScope: builder
 name: school of the boundary
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    revision: 1
+  id: 9d985155-47c4-5a7a-9ca7-911aa4a1ca8e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: df20e95c-0996-52fa-acbb-6ba6afa79aaf
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: Wizard Focus Spells
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
+      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+    inputName: castingKind
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: arcane
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
+      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: int
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
+      valueTypeID: org.openomen.pf2e.core/value/attribute
+    inputName: attribute
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    revision: 1
+  id: c3f9d2ba-52fa-5035-a90d-6889b535b303
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: df20e95c-0996-52fa-acbb-6ba6afa79aaf
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 782743f5-fbbb-52e9-b9eb-092ee71961da
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1adfcfc1-59b6-5798-8400-2c26fdc8b3b9
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: cantrip
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    revision: 1
+  id: 48d666df-313b-5da2-b3a0-d38f6f12dc7a
+  inputRecipes: []
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: f350729c-32d0-536e-83a3-1fa1bd50fef4
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 7484d08b-b941-587f-b022-359199e84693
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 04930386-9fc7-52e7-a424-8a32012afab1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 43131bd8-15e7-5626-b4d5-387e0505b9ec
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 62454b54-31df-517d-8378-eb8c63a7ad67
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 86a48954-28cb-5ffd-b4a9-ebf627674202
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: c371669e-4c53-576a-9fad-fc6632de45af
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 5ebfe111-0a96-5a4c-ab54-ca3b26f2f25d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 27896957-7605-5855-892e-ef6dfce500f8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 6e7fe0b8-ef99-5fad-9339-f44aa6702442
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 139c36a2-254b-5597-9a6c-475e68a52506
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 16fbd17d-cb71-5b41-a7a4-d4c158b9ecac
+                  kind: hasID
+              - kind: single
+                value:
+                  id: f43bc8c5-bfc0-5516-b8b4-1822a661901f
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 609fbf6a-8508-5e40-adcb-dfa95cc21e52
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: af6886a5-d4c1-52ca-9165-ebf24ae2a88b
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 09ee2d92-290c-59d2-ae94-85b1d1f754bc
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 139c36a2-254b-5597-9a6c-475e68a52506
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 16fbd17d-cb71-5b41-a7a4-d4c158b9ecac
+                  kind: hasID
+              - kind: single
+                value:
+                  id: f43bc8c5-bfc0-5516-b8b4-1822a661901f
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: a5429340-82a0-5564-9845-5453e44f09a6
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 3
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 297e2263-1f7d-5ee4-bf16-6d908cf43535
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 12f860f3-29d3-5af3-8098-7d8508d949ab
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 58087e39-bce3-574f-b61c-71e2c36797f3
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 0da64e30-cd41-5565-ad4a-bc3396a8be82
+                  kind: hasID
+              - kind: single
+                value:
+                  id: b4cb2c3e-43d4-598c-929f-02aabec727bd
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 3
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 42580354-b464-5199-af61-701eb4cfbfcf
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 5
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 7af14f24-ec70-51b5-be47-77cd958fdebe
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: d5b753d9-3bfc-5c07-843c-bfba428c4361
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: f45381b8-21af-5489-b031-e7479f93cd7f
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 2d24c27e-513e-5b8b-8046-a822e9b39fe0
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 7f9fe58f-ae5c-5476-80af-d57cce7db70a
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 5
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: d0ecc1ad-83e6-5b15-82f2-30b6dc0dc798
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 7
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 670c971c-cdd4-5d04-a7b1-efac8f248e50
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b9015ba9-56f3-5472-9276-5d97937881b8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 7b47fb78-c616-50a3-9529-e29cf7ae6104
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: b92c720d-e31d-56cd-bd87-aba1275d7255
+                  kind: hasID
+              - kind: single
+                value:
+                  id: d5a5f6bf-7304-5210-82b3-45b810ed7379
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 7
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 38f3b913-3b3b-516b-88ff-c4e0fee2a1e2
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 9
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: fd3a200c-589f-587b-8d7f-91bb97dd7e59
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: a4f40f4e-1225-5ae8-8111-14d162196630
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 2e79222f-c671-577b-ac42-08c9a2585de2
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: ae308a3d-576f-517f-9286-e7e6677f1148
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 9073dc88-eba0-5a04-961b-8ac2e3cd7bef
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 9
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: c5843111-08ad-52cb-a75e-12e2256c54a5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 11
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 5459e099-8efd-512d-a779-fddfb55a37e9
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ba885b59-d05d-5b5b-9c19-5109835c1b79
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 7b908625-6c58-585f-b9ad-ef9ad9201a9f
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 55fbc73f-9821-5180-8902-caf62ed30be8
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 4942f05d-d616-5086-bb8e-bf534c6ce8f8
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 11
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: be73ff92-2aca-538e-bf3b-e05dfaf34c50
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 7
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 13
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 71bf50c3-9c0a-5988-b1fd-3e3136a5ce46
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 16b68cf9-7bc8-5dda-93be-8caa6facf521
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 48e53272-b514-545e-831f-58ec0ad10190
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: a3806e5a-72a3-5f1a-ae8c-bb0d9ed0e5d8
+                  kind: hasID
+              - kind: single
+                value:
+                  id: cd0cb4e2-5a43-5fd6-9e63-1a4ec32f6c62
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 13
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: aa4768aa-44fa-55a4-80c0-4419d79d3005
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 15
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: f7a82de1-9b24-54f2-8c6e-635be47a0701
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: a10d3fa3-9c8e-5838-adc1-833ddfeb6977
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 6af085b1-c2b6-5f9e-a3ce-80aefeed6e60
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 12953315-573e-57c2-b08a-9836aaccab6e
+                  kind: hasID
+              - kind: single
+                value:
+                  id: 4973da3e-e908-53fe-b30e-7db4ae41c87b
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 15
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 9bfaf9e8-25cb-521e-a8f7-7d9f7337a198
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 17
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 8ee0fe12-f4cc-556f-871f-baa4b49d349c
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2c7cbb56-8508-5e3e-898e-07a76a0086b3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 00a07b16-cad2-5532-92d6-a742ba72814f
+          lookupName: list:known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+          options:
+            filter:
+              kind: union
+              values:
+              - kind: single
+                value:
+                  id: 412f112c-b5bd-5367-9ed9-cb9173e7f40c
+                  kind: hasID
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 17
 source:
   book: Pathfinder Player Core
   publisher: paizo

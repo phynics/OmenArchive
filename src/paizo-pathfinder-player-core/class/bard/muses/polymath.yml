@@ -1,37 +1,82 @@
 ---
 action: {}
-description: |-
-  Your muse is a jack of all trades, flitting between skills and pursuits. Some bards are constantly moved by new muses or draw their inspiration from an idealized being, whether it's based on a real person or purely philosophical. If your muse is a single creature, it might be an eclectic creature like a fey or one who's learned a lot over a long lifespan; if a deity, it might be Desna or Calistria. Art inspired by a polymath muse is restless, with each composition exhibiting new techniques and an ever-evolving style.
-  As a bard with a polymath muse, you are interested in a wide array of topics but rarely dedicated to any one, and you rarely make up your mind—you want to try everything.
+description: 'Your muse is a jack of all trades, flitting between skills and pursuits.
+  Some bards are constantly moved by new muses or draw their inspiration from an idealized
+  being, whether it''s based on a real person or purely philosophical. If your muse
+  is a single creature, it might be an eclectic creature like a fey or one who''s
+  learned a lot over a long lifespan; if a deity, it might be Desna or Calistria.
+  Art inspired by a polymath muse is restless, with each composition exhibiting new
+  techniques and an ever-evolving style.
+
+  As a bard with a polymath muse, you are interested in a wide array of topics but
+  rarely dedicated to any one, and you rarely make up your mind—you want to try everything.
+
   Muse Feat Versatile Performance
-  Muse Spell Phantasmal Minion
+
+  Muse Spell Phantasmal Minion'
+grantedSpells:
+- grant: known
+  spell: omen://spell/phantasmal-minion?source=paizo-pathfinder-player-core
 level: 1
 mechanicsScope: builder
 name: polymath
 rules:
-- id: 1dc70ff2-468b-58b0-9b1e-6194f3c08691
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: 1dc70ff2-468b-58b0-9b1e-6194f3c08691
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: 50e057fc-efea-5668-bd73-73e20b0d8e7e
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 9b497376-d682-5ba0-965a-afb96b462f9d
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 035c0b87-64d9-5bbe-86a1-6bc98818315b
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 391accd6-b16f-5405-9256-7fc80fef11b9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 16fbd17d-cb71-5b41-a7a4-d4c158b9ecac
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
   startLevel: 1
 source:
   book: Pathfinder Player Core

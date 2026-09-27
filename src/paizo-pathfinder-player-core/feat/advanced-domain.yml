@@ -4,11 +4,144 @@ description: Your prayers have unlocked deeper secrets of your deity's domain. Y
   gain an advanced domain spell from one of your domains for which you have an initial
   domain spell.
 level: 8
-mechanicsScope: encounter
+mechanicsScope: builder
 name: advanced domain
 prerequisites:
 - Domain Initiate
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    revision: 1
+  id: 1003fc8e-6eb2-56e4-ad19-703747febb20
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b7e73ea3-1be8-5215-a0c7-055d23080c56
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: Cleric Focus Spells
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
+      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+    inputName: castingKind
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: divine
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
+      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: wis
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
+      valueTypeID: org.openomen.pf2e.core/value/attribute
+    inputName: attribute
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    revision: 1
+  id: 66d0436f-a6bd-5c8d-a3ff-33c1789632b1
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b7e73ea3-1be8-5215-a0c7-055d23080c56
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: efc56cbe-f2d6-5b97-bd51-c00f2252ab4d
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: grantId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 51ed7ffb-67bd-5f67-a3be-1bf52d8bb90d
+          lookupName: advancedDomainSpell
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: focus
+              - kind: single
+                value:
+                  kind: hasTrait
+                  trait: classTrait-cleric
+              - kind: single
+                value:
+                  kind: hasExactLevel
+                  level: 4
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: cantrip
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
+      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+    inputName: rankPolicy
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: focus
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+    inputName: castFrequency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    revision: 1
+  id: 0aa2d2a4-aeb6-5b9c-bb92-6375717fa92a
+  inputRecipes: []
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

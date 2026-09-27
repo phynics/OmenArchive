@@ -39,14 +39,43 @@ description: 'As a cleric, you are a mortal servitor of a deity you revere above
   all cleric spellcasting. These abilities can be regained only if you repent by conducting
   an atone ritual.'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: deity (cleric)
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: 4d35a879-0974-5345-a98b-97f4626507a1
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: d054afa6-df91-5ef0-b624-a10ddc75385b
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: d054afa6-df91-5ef0-b624-a10ddc75385b
+          lookupName: classOption
+          options:
+            filter:
+              kind: single
+              value:
+                kind: hasPathPrefix
+                path: omen://class/cleric/deities?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: DutW12WMFPHBoLTH
 traits:
 - cleric
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://class/cleric/features/deity-cleric?source=paizo-pathfinder-player-core. Foundry
-  keys: [ChoiceSet, GrantItem, ChoiceSet, ActorTraits, ActorTraits, Strike, ActiveEffectLike].'

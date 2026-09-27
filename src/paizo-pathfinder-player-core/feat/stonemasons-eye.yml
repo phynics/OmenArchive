@@ -1,62 +1,66 @@
 ---
 action: {}
-description: |-
-  You also gain a +2 circumstance bonus to Perception checks to notice unusual stonework. This bonus applies to checks to discover mechanical traps made of stone or Hidden within stone.
-  If you aren't using the Seek action or searching, the GM automatically rolls a secret check for you to notice unusual stonework anyway. This check doesn't gain your normal circumstance bonus.
+description: 'You also gain a +2 circumstance bonus to Perception checks to notice
+  unusual stonework. This bonus applies to checks to discover mechanical traps made
+  of stone or Hidden within stone.
+
+  If you aren''t using the Seek action or searching, the GM automatically rolls a
+  secret check for you to notice unusual stonework anyway. This check doesn''t gain
+  your normal circumstance bonus.'
 level: 1
 mechanicsScope: mixed
 name: stonemason's eye
 prerequisites: []
 rarity: common
 rules:
-- id: a54fb4cf-0de3-5617-805c-a6c59d75c483
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-feat
     revision: 1
+  id: a54fb4cf-0de3-5617-805c-a6c59d75c483
   inputRecipes:
-  - inputName: selectionId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
-          revision: 1
           payload: 87f0c1e5-c39b-5543-8aaf-c8ed5b7dd7d5
-  - inputName: featId
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
-          revision: 1
           payload: 900c66c1-d245-582b-a9f9-569b7e7b6c99
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
   startLevel: 1
-- id: 3858f5f2-1719-5630-82a4-f0e233d2e1e7
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: 3858f5f2-1719-5630-82a4-f0e233d2e1e7
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: crafting
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
 source:
   book: Pathfinder Player Core

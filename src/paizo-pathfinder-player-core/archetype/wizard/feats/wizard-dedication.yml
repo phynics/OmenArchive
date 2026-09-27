@@ -1,8 +1,15 @@
 ---
 action: {}
-description: |-
-  You cast spells like a wizard, gaining a spellbook with four common arcane cantrips of your choice. You gain the Cast a Spell activity. You can prepare two cantrips each day from your spellbook. You're trained in the spell attack modifier and spell DC statistics. Your key spellcasting attribute for wizard archetype spells is Intelligence, and they are arcane wizard spells. You become trained in Arcana; if you were already trained in Arcana, you instead become trained in a skill of your choice. Select a school; you don't gain any abilities from your choice of school, but qualify for feats as a member.
-  Wizard
+description: 'You cast spells like a wizard, gaining a spellbook with four common
+  arcane cantrips of your choice. You gain the Cast a Spell activity. You can prepare
+  two cantrips each day from your spellbook. You''re trained in the spell attack modifier
+  and spell DC statistics. Your key spellcasting attribute for wizard archetype spells
+  is Intelligence, and they are arcane wizard spells. You become trained in Arcana;
+  if you were already trained in Arcana, you instead become trained in a skill of
+  your choice. Select a school; you don''t gain any abilities from your choice of
+  school, but qualify for feats as a member.
+
+  Wizard'
 level: 2
 mechanicsScope: builder
 name: wizard dedication
@@ -10,30 +17,30 @@ prerequisites:
 - Intelligence +2
 rarity: common
 rules:
-- id: 72622e67-8651-5ac8-ab5c-a68a9ad7f1bf
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-skill-increase
     revision: 1
+  id: 72622e67-8651-5ac8-ab5c-a68a9ad7f1bf
   inputRecipes:
-  - inputName: skill
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
-          revision: 1
           payload:
             kind: arcana
-  - inputName: proficiencyCap
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
   startLevel: 1
 source:
   book: Pathfinder Player Core

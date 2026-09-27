@@ -4,10 +4,42 @@ description: Your patron grants you a special lesson, revealing a hidden facet o
   its nature. Choose a basic lesson. You gain its associated hex, and your familiar
   learns the associated spell.
 level: 2
-mechanicsScope: mixed
+mechanicsScope: builder
 name: basic lesson
 prerequisites: []
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: c8692669-590c-5977-8264-c04efbfcfbf4
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8a368d94-116e-5353-80a9-06bd062620db
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 8a368d94-116e-5353-80a9-06bd062620db
+          lookupName: lesson
+          options:
+            filter:
+              kind: single
+              value:
+                kind: hasPathPrefix
+                path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -15,6 +47,3 @@ sourceID: wsq8nncD25Q1fRn2
 traits:
 - witch
 type: class
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/basic-lesson?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet,
-  GrantItem].'
