@@ -1,12 +1,16 @@
+---
+count: two_actions
+description: Effect Your animal companion screeches and howls, empowered with natural
+  magic. All creatures in a cone take (floor(@actor.level/2))d6[sonic]|options:area-damage
+  damage for every 2 levels your companion has, with a fortitude|against:spell|basic|options:area-effect
+  save against your spell DC. Creatures that fail become Frightened 1, and creatures
+  that critically fail become Frightened 2. The fright is an emotion, fear, and mental
+  effect.
+frequency: once per hour
 name: primal howl
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: >
-  Effect Your familiar screeches and howls, empowered with natural magic.
-  All creatures in a cone distance:30 take d6 sonic damage for every 2 levels your companion has, with a fortitude against:spell basic save against your spell DC. Creatures that fail become Frightened 1, and creatures that critically fail become Frightened 2. The fright is an emotion, fear, and mental effect.
+  publisher: paizo
 traits:
 - primal
 - sonic
-count: two_actions
-frequency: once per hour

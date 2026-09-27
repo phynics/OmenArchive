@@ -1,15 +1,17 @@
+---
+count: free_action
+criticalFailure: The target is paralyzed for 4 rounds, knocked Unconscious for 2 hours,
+  or killed (your choice).
+criticalSuccess: The target is unaffected.
+description: The target attempts a fortitude|against:rogue save against your class
+  DC. It then becomes temporarily immune to your Master Strike for 1 day.
+failure: The target is Paralyzed for 4 rounds.
 name: master strike
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: |
-  The target attempts a fortitude against:rogue save against your class DC. It then becomes temporarily immune to your Master Strike for 1 day.
+  publisher: paizo
+success: The target is Enfeebled 2 until the end of your next turn.
 traits:
 - incapacitation
 - rogue
-count: free_action
 trigger: Your Strike hits an Off-Guard creature and deals damage.
-success: The target is Enfeebled 2 until the end of your next turn.
-criticalSuccess: The target is unaffected.
-failure: The target is Paralyzed for 4 rounds.
-criticalFailure: The target is paralyzed for 4 rounds, knocked Unconscious for 2 hours, or killed (your choice).

@@ -1,18 +1,15 @@
+---
+count: one_action
+criticalFailure: You lose your balance, fall, and land prone.
+criticalSuccess: The target falls, lands Prone, and takes 1d6[bludgeoning] damage.
+description: You try to knock a creature to the ground. Attempt an Athletics check
+  against the target's Reflex DC.
 name: trip
+requirements: You have at least one hand free. Your target can't be more than one
+  size larger than you.
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: |
-  You try to knock a creature to the ground. Attempt an Athletics check against the target's Reflex DC.
+  publisher: paizo
+success: The target falls and lands prone.
 traits:
 - attack
-- skill
-count: one_action
-requirements: |
-  You have at least one hand free. Your target can't be more than one size larger than you.
-success: |
-  The target falls and lands prone.
-criticalSuccess: |
-  The target falls, lands Prone, and takes 1d6 bludgeoning damage.
-criticalFailure: |
-  You lose your balance, fall, and land prone.

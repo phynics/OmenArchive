@@ -1,22 +1,23 @@
+---
+count: one_action
+criticalFailure: You fall. If you began the climb on stable ground, you fall and land
+  Prone.
+criticalSuccess: You move along the incline, increasing the maximum distance by 5
+  feet.
+description: "You attempt an Athletics check to move a maximum distance of 5 feet
+  up, down, or across an incline. You're Off-Guard while climbing unless you have
+  a climb Speed. The GM determines the DC based on the nature of the incline and environmental
+  circumstances; you might get an automatic critical success on an incline that's
+  trivial to climb. If your land Speed is 40 feet or higher, increase the maximum
+  distance by 5 feet for every 20 feet of Speed above 20 feet.\nSample Climb Tasks\n\t•\tUntrained
+  ladder, steep slope, low-branched tree\n\t•\tTrained rigging, rope, typical tree\n\t•\tExpert
+  wall with small handholds and footholds\n\t•\tMaster ceiling with handholds and
+  footholds, rock wall\n\t•\tLegendary smooth surface"
 name: climb
+requirements: You have both hands free
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: >
-  You attempt an Athletics check to move a maximum distance
-  of 5 feet up, down, or across an incline. You're Off-Guard while climbing unless you have a climb Speed. The GM determines the DC based on the nature of the incline and environmental circumstances; you might get an automatic critical success on an incline that's trivial to climb. If your land Speed is 40 feet or higher, increase the maximum distance by 5 feet for every 20 feet of Speed above 20 feet.
-
-  ## Sample Climb Tasks
-  • **Untrained** ladder, steep slope, low-branched tree
-  • **Trained** rigging, rope, typical tree
-  • **Expert** wall with small handholds and footholds
-  • **Master** ceiling with handholds and footholds, rock wall
-  • **Legendary** smooth surface
+  publisher: paizo
+success: You move along the incline.
 traits:
 - move
-- skill
-count: one_action
-requirements: You have both hands free
-success: You move along the incline.
-criticalSuccess: You move along the incline, increasing the maximum distance by 5 feet.
-criticalFailure: You fall. If you began the climb on stable ground, you fall and land Prone.

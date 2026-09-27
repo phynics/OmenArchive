@@ -1,15 +1,22 @@
+---
+count: two_actions
+criticalFailure: You break your tools. Fixing them requires using Crafting to Repair
+  them or else swapping in Replacement Picks.
+criticalSuccess: You unlock the lock, or you achieve two successes toward opening
+  a complex lock. You leave no trace of your tampering.
+description: Opening a lock without a key is very similar to Disable a Device, but
+  the DC of the Thievery check is determined by the complexity and construction of
+  the lock you are attempting to pick (locks and their DCs are found in their description).
+  Locks of higher qualities might require multiple successes to unlock, since otherwise
+  even an unskilled burglar could easily crack the lock by attempting the check until
+  they rolled a natural 20. If you lack the proper tools, the GM might let you used
+  improvised picks, which are treated as shoddy tools, depending on the specifics
+  of the lock.
 name: pick a lock
+requirements: You're wearing or holding Thieves' Tools
 source:
-  publisher: paizo
   book: Pathfinder Player Core
-description: |
-  Opening a lock without a key is very similar to Disable a Device, but the DC of the Thievery check is determined by the complexity and construction of the lock you are attempting to pick (locks and their DCs are found in their description).
-  Locks of higher qualities might require multiple successes to unlock, since otherwise even an unskilled burglar could easily crack the lock by attempting the check until they rolled a natural 20. If you lack the proper tools, the GM might let you used improvised picks, which are treated as shoddy tools, depending on the specifics of the lock.
+  publisher: paizo
+success: You open the lock, or you achieve one success toward opening a complex lock.
 traits:
 - manipulate
-- skill
-count: two_actions
-requirements: You're wearing or holding Thieves' Tools
-success: You open the lock, or you achieve one success toward opening a complex lock.
-criticalSuccess: You unlock the lock, or you achieve two successes toward opening a complex lock. You leave no trace of your tampering.
-criticalFailure: You break your tools. Fixing them requires using Crafting to Repair them or else swapping in Replacement Picks.

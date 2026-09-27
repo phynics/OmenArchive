@@ -1,27 +1,34 @@
-name: swim
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-description: |
-  You attempt an Athletics check to move a maximum distance of 10 feet through water. The GM determines the DC based on the turbulence or danger of the water; in most instances of calm water, you get an automatic critical success.
-  
-  If your land Speed is 40 feet or higher, increase the maximum possible distance
-  by 5 feet for every 20 feet of Speed above 20 feet.
+---
+count: one_action
+criticalFailure: You make no progress. If you're holding your breath, you lose 1 round
+  of air.
+criticalSuccess: You move through the water, increasing the maximum distance by 5
+  feet.
+description: 'You attempt an Athletics check to move a maximum distance of 10 feet
+  through water. The GM determines the DC based on the turbulence or danger of the
+  water; in most instances of calm water, you get an automatic critical success. If
+  your land Speed is 40 feet or higher, increase the maximum possible distance by
+  5 feet for every 20 feet of Speed above 20 feet.
 
-  If you end your turn in water and haven't succeeded at a Swim action that turn,
-  you sink 10 feet or get moved by the current, as determined by the GM. This doesn't
+  If you end your turn in water and haven''t succeeded at a Swim action that turn,
+  you sink 10 feet or get moved by the current, as determined by the GM. This doesn''t
   apply if your last action on your turn was to enter the water.
 
-  ## Sample Swim Tasks
+  Sample Swim Tasks
+
   Untrained lake or other still water
+
   Trained flowing water, like a river
+
   Expert swiftly flowing river
+
   Master stormy sea
-  Legendary maelstrom, waterfall
+
+  Legendary maelstrom, waterfall'
+name: swim
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+success: You move through the water.
 traits:
 - move
-- skill
-count: one_action
-success: You move through the water.
-criticalSuccess: You move through the water, increasing the maximum distance by 5 feet.
-criticalFailure: You make no progress. If you're holding your breath, you lose 1 round of air.
