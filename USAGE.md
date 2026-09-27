@@ -311,11 +311,13 @@ record a diagnostic during staging.
 that the source-independent spell model does not represent. Keep it distinct from `description`:
 the description is rules text for readers, while diagnostics explain conversion limits.
 
-The checked-in Player Core import is accounted by
-`docs/player-core-spell-import-manifest.json`: 488 source records produce 465 YAML files and 23
-reviewed skips. Each generated payload retains Foundry's stable `sourceID` for source-aware
-rebuilds. Re-run `python3 tools/player_core_spell_import.py --check` from the workspace root to
-verify source IDs, hashes, deterministic slugs, and the generated-file set.
+The Player Core corpus manifest (`docs/player-core-corpus-manifest.json`) accounts for the
+spells with every other Player Core record: all 488 source spells are archived. Each generated
+payload retains Foundry's stable `sourceID` for source-aware rebuilds. Spells are refreshed with
+the rest of the corpus, and `make player-core-check` in OmenBuilder verifies that a refresh
+reproduces them. `docs/player-core-spell-import-manifest.json` is the older spell-only accounting
+from the Python importer (0026). Nothing regenerates it; OmenScribe's Python-parity tests still
+read it.
 
 ### Ancestries
 
