@@ -1,0 +1,62 @@
+---
+action:
+  count: two_actions
+category: spell
+damage:
+  0:
+    formula: 5d6
+    kinds:
+    - damage
+    type: fire
+defense:
+  counteraction: true
+description: 'You shine a blazing ray of light tinged with holy energy. Make a ranged
+  spell attack. The ray deals 5d6 fire damage. If the target has the unholy trait,
+  you deal an extra 5d6 spirit damage.
+
+
+  Critical Success The target takes double damage.
+
+
+  Success The target takes full damage.
+
+
+  If the light passes through an area of magical darkness or targets a creature affected
+  by magical darkness, holy light attempts to counteract the darkness. If you need
+  to determine whether the light passes through an area of darkness, draw a line between
+  yourself and the spell''s target.
+
+
+  Heightened (+1) The fire damage increases by 2d6, and the spirit damage against
+  unholy creatures increases by 2d6.'
+diagnostics:
+- 'Foundry rule elements not imported: DamageDice'
+- 'Foundry spell rule elements are preserved for external review at omen://spell/holy-light?source=paizo-pathfinder-player-core.
+  Foundry keys: [DamageDice].'
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
+mechanicsScope: mixed
+name: holy light
+range: 120 feet
+rank: 3
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: DyiD239dNS7RIxZE
+target: 1 creature
+time: '2'
+traditions:
+- divine
+- primal
+traits:
+- attack
+- concentrate
+- fire
+- holy
+- light
+- manipulate
+unsupportedReason: non-empty Foundry rule elements are not represented by CharacterSpell

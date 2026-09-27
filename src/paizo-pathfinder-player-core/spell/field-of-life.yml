@@ -1,0 +1,48 @@
+---
+action:
+  count: two_actions
+area: '20'
+category: spell
+damage:
+  0:
+    formula: 1d8
+    kinds:
+    - damage
+    - healing
+    type: vitality
+description: 'A field of life energy fills the area, exuding warmth and rejuvenating
+  those within. Each living creature that starts its turn in the area regains 1d8
+  Hit Points, and any undead creature that starts its turn in the area takes 1d8 vitality
+  damage.
+
+
+  Heightened (8th) The healing and damage increase to 1d10.
+
+
+  Heightened (9th) The healing and damage increase to 1d12.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- Foundry sustained duration flag is not represented by CharacterSpell
+duration: 1 minute
+heightening:
+  type: fixed
+mechanicsScope: mixed
+name: field of life
+range: 30 feet
+rank: 6
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: x5rGOmhDRDVQPrnW
+time: '2'
+traditions:
+- divine
+- primal
+traits:
+- concentrate
+- healing
+- manipulate
+- vitality
+unsupportedReason: 'fixed heightening fields are not represented by CharacterSpell:
+  damage'

@@ -1,0 +1,44 @@
+---
+action:
+  count: one_to_three_actions
+area: '20'
+category: focus
+damage:
+  0:
+    formula: 3d6
+    kinds:
+    - healing
+    type: untyped
+description: 'You snatch creatures from the jaws of death, restoring them without
+  the straing of a typical close call. You can spend 1 to 3 actions Casting this Spell,
+  and you can target a number of creatures equal to the actions spent. Each target
+  regains 3d6 Hit Points. If the target had the Dying condition, coming back from
+  Dying due to this healing doesn''t increase its Wounded condition.
+
+
+  Heightened (+1) Increase the healing by 1d6.'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
+mechanicsScope: mixed
+name: rebuke death
+rank: 4
+rarity: uncommon
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 4nHYSMHito1GUXlm
+target: 1 living creature per action spent to Cast this Spell
+time: 1 to 3
+traditions: []
+traits:
+- cleric
+- focus
+- healing
+- manipulate
+- vitality
+unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell

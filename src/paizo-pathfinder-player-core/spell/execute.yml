@@ -1,0 +1,46 @@
+---
+action:
+  count: two_actions
+category: spell
+damage:
+  0:
+    formula: '70'
+    kinds:
+    - damage
+    type: void
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
+description: 'You point at a creature and invoke the demise of all things. The target
+  takes 70 void damage with a basic Fortitude save. If the target is undead or otherwise
+  has void healing, the spell loses the death and void traits and gains the vitality
+  trait, and the target takes 70 vitality damage with a basic Fortitude save.
+
+
+  Heightened (+1) The damage increases by 10.'
+heightening:
+  damage:
+    0: '10'
+  interval: 1
+  type: interval
+mechanicsScope: mixed
+name: execute
+range: 30 feet
+rank: 7
+rarity: common
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Z9OrRXKgAPv6Hn5l
+target: 1 creature
+time: '2'
+traditions:
+- divine
+- primal
+traits:
+- concentrate
+- death
+- manipulate
+- void
+unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell

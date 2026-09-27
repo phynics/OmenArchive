@@ -6,7 +6,7 @@
     "spell" : 298
   },
   "expected_count" : 488,
-  "generated_count" : 465,
+  "generated_count" : 488,
   "generator_version" : "2",
   "records" : [
     {
@@ -381,14 +381,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/blazing-bolt.yml",
       "category" : "spell",
       "name" : "blazing bolt",
       "rank" : 2,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/2nd-rank/blazing-bolt.json",
       "source_id" : "ZxHC7V7HtjUsB8zH",
       "source_sha256" : "37a2435e3a76a5c41ceba1d57cd6b08f53c385590d6935fd89170888afe34029",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/bless.yml",
@@ -686,14 +687,18 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/chilling-darkness.yml",
       "category" : "spell",
+      "conversion_diagnostics" : [
+        "Foundry rule elements not imported: DamageDice"
+      ],
       "name" : "chilling darkness",
       "rank" : 3,
-      "skip_reason" : "non-empty Foundry rule elements are not represented by CharacterSpell",
       "source_file" : "packs/spells/3rd-rank/chilling-darkness.json",
       "source_id" : "sRfSBHWHdbIa0aGc",
       "source_sha256" : "08bc6f7ef88fe33f470c0fe4221aa6957b3e953c3332956f0c75e3b6c53e582c",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry rule elements are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/clairaudience.yml",
@@ -1113,24 +1118,29 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/crisis-of-faith.yml",
       "category" : "spell",
       "name" : "crisis of faith",
       "rank" : 3,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/3rd-rank/crisis-of-faith.json",
       "source_id" : "3x6eUCm17n6ROzUa",
       "source_sha256" : "26939124b215dd7481edeb1f9e1cf06e3659690fbe557c4a7d90df8513fc47b8",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/cry-of-destruction.yml",
       "category" : "focus",
+      "conversion_diagnostics" : [
+        "Foundry area type is not represented when area details are absent"
+      ],
       "name" : "cry of destruction",
       "rank" : 1,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/focus/cry-of-destruction.json",
       "source_id" : "0H1ozccQGGFLUwFI",
       "source_sha256" : "887761ade4224d217cfb6d13b4161f9c436b85304547a6fba9487617d50cb73d",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/curse-of-death.yml",
@@ -2000,14 +2010,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/execute.yml",
       "category" : "spell",
       "name" : "execute",
       "rank" : 7,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/7th-rank/execute.json",
       "source_id" : "Z9OrRXKgAPv6Hn5l",
       "source_sha256" : "2cc799c79b825ab3dd1dd9d8f2a1c96214e2037e8633a2dd740f0d5d3cc0f0e1",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/fabricated-truth.yml",
@@ -2036,14 +2047,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/falling-stars.yml",
       "category" : "spell",
       "name" : "falling stars",
       "rank" : 9,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/9th-rank/falling-stars.json",
       "source_id" : "jrBa9deU2ULFWvSl",
       "source_sha256" : "d5ce665e946cc9b1698c2b5c5fe74bd4dd4205e8d8d62c238a4be67d0d31893a",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/false-vision.yml",
@@ -2116,14 +2128,19 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/field-of-life.yml",
       "category" : "spell",
+      "conversion_diagnostics" : [
+        "Foundry area type is not represented when area details are absent",
+        "Foundry sustained duration flag is not represented by CharacterSpell"
+      ],
       "name" : "field of life",
       "rank" : 6,
-      "skip_reason" : "fixed heightening fields are not represented by CharacterSpell: damage",
       "source_file" : "packs/spells/6th-rank/field-of-life.json",
       "source_id" : "x5rGOmhDRDVQPrnW",
       "source_sha256" : "349a7ef81ac394a17a9b91018dd54943170567ceb54fff9ec736fefa2cd45a68",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "fixed heightening fields are not represented by CharacterSpell: damage"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/fiery-body.yml",
@@ -2488,14 +2505,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/gouging-claw.yml",
       "category" : "cantrip",
       "name" : "gouging claw",
       "rank" : 0,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/cantrip/gouging-claw.json",
       "source_id" : "MPxbKoR54gkYkqLO",
       "source_sha256" : "cae76ad3af868246ef7b52de2d6e8c11dd953d236416334fec45919000731a36",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/gravity-weapon.yml",
@@ -2595,14 +2613,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/harm.yml",
       "category" : "spell",
       "name" : "harm",
       "rank" : 1,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/1st-rank/harm.json",
       "source_id" : "wdA52JJnsuQWeyqz",
       "source_sha256" : "3eff06f694f00fea49a7bf6959f9da86cc3a71c3ed8de3d1adf361aa3ac29cdb",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/haste.yml",
@@ -2618,34 +2637,37 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/heal.yml",
       "category" : "spell",
       "name" : "heal",
       "rank" : 1,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/1st-rank/heal.json",
       "source_id" : "rfZpqmj0AIIdkVIs",
       "source_sha256" : "05e9766b78a1109ceda9f1d758cdf724080777ee99a02a18364f798685cdc1b0",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/heal-animal.yml",
       "category" : "focus",
       "name" : "heal animal",
       "rank" : 1,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/focus/heal-animal.json",
       "source_id" : "Zmh4ynfnCtwKeAYl",
       "source_sha256" : "a919e633cc144ae8bbe1f3268a92d7e7e572f0d85a47b1a76ebef76e04dcb820",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/heal-companion.yml",
       "category" : "focus",
       "name" : "heal companion",
       "rank" : 1,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/focus/heal-companion.json",
       "source_id" : "KIV2LqzS5KtqOItV",
       "source_sha256" : "371f91204aace48b5ee0998c844611bc690321c8f2a8e83d66e7a1c601c44a52",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/healers-blessing.yml",
@@ -2674,14 +2696,18 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/holy-light.yml",
       "category" : "spell",
+      "conversion_diagnostics" : [
+        "Foundry rule elements not imported: DamageDice"
+      ],
       "name" : "holy light",
       "rank" : 3,
-      "skip_reason" : "non-empty Foundry rule elements are not represented by CharacterSpell",
       "source_file" : "packs/spells/3rd-rank/holy-light.json",
       "source_id" : "DyiD239dNS7RIxZE",
       "source_sha256" : "4cd8d392cf5e794dea16603969fb30500ace2ac6a0c27d371f723a61730160ba",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry rule elements are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/honeyed-words.yml",
@@ -2710,14 +2736,18 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/howling-blizzard.yml",
       "category" : "spell",
+      "conversion_diagnostics" : [
+        "Foundry area type is not represented when area details are absent"
+      ],
       "name" : "howling blizzard",
       "rank" : 5,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/5th-rank/howling-blizzard.json",
       "source_id" : "xxWhyl81w3ckslAU",
       "source_sha256" : "97de46ee2f5a2030ce11adb8e331e865da7e72529acedc5126445d46ef3230c4",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/humanoid-form.yml",
@@ -2860,14 +2890,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/ignition.yml",
       "category" : "cantrip",
       "name" : "ignition",
       "rank" : 0,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/cantrip/ignition.json",
       "source_id" : "6DfLZBl8wKIV03Iq",
       "source_sha256" : "26d4f6b29329650e61da029a68682aa278ffd23bb6ef32099e6b91bf4648314d",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/ill-omen.yml",
@@ -3402,14 +3433,19 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/malicious-shadow.yml",
       "category" : "focus",
+      "conversion_diagnostics" : [
+        "Foundry damage materials/applyMod metadata is not represented by CharacterSpell",
+        "Foundry sustained duration flag is not represented by CharacterSpell"
+      ],
       "name" : "malicious shadow",
       "rank" : 3,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/focus/malicious-shadow.json",
       "source_id" : "vhMCd15ZwNJn0zen",
       "source_sha256" : "faf30cc96321d7417d3f6a0eba75c07e944feb896679229460c49e4014719a36",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/malignant-sustenance.yml",
@@ -3481,14 +3517,18 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/massacre.yml",
       "category" : "spell",
+      "conversion_diagnostics" : [
+        "Foundry area type is not represented when area details are absent"
+      ],
       "name" : "massacre",
       "rank" : 9,
-      "skip_reason" : "fixed heightening fields are not represented by CharacterSpell: damage",
       "source_file" : "packs/spells/9th-rank/massacre.json",
       "source_id" : "10VcmSYNBrvBphu1",
       "source_sha256" : "08dcb3419e24ebd2b56c806f4da206f9350534a69acc593f423499c8e4c5f1ab",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "fixed heightening fields are not represented by CharacterSpell: damage"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/mending.yml",
@@ -4011,14 +4051,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/peaceful-rest.yml",
       "category" : "spell",
       "name" : "peaceful rest",
       "rank" : 2,
-      "skip_reason" : "fixed heightening fields are not represented by CharacterSpell: time, traits",
       "source_file" : "packs/spells/2nd-rank/peaceful-rest.json",
       "source_id" : "xRgU9rrhmGAgG4Rc",
       "source_sha256" : "889f1543d253ac33e9b5f874f170866a4c48c9bec7a7220b2e949916f9ca194b",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "fixed heightening fields are not represented by CharacterSpell: time, traits"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/perfected-body.yml",
@@ -4637,14 +4678,18 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/rebuke-death.yml",
       "category" : "focus",
+      "conversion_diagnostics" : [
+        "Foundry area type is not represented when area details are absent"
+      ],
       "name" : "rebuke death",
       "rank" : 4,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/focus/rebuke-death.json",
       "source_id" : "4nHYSMHito1GUXlm",
       "source_sha256" : "8a800ddce0323941ecba41da8f1d3a54f315a5a4e52f4c87d8cfddd717c2cc61",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/regenerate.yml",
@@ -5039,14 +5084,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/shadow-blast.yml",
       "category" : "spell",
       "name" : "shadow blast",
       "rank" : 5,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/5th-rank/shadow-blast.json",
       "source_id" : "IqJ9URobmJ9L9UBG",
       "source_sha256" : "1019485c4a97a57c1510600b5b770d3d78601612111c8d28a21f2a406e1bb8ff",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/shape-stone.yml",
@@ -5446,14 +5492,18 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/spiritual-armament.yml",
       "category" : "spell",
+      "conversion_diagnostics" : [
+        "Foundry sustained duration flag is not represented by CharacterSpell"
+      ],
       "name" : "spiritual armament",
       "rank" : 2,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/2nd-rank/spiritual-armament.json",
       "source_id" : "WPu3UE3kTXSLqO40",
       "source_sha256" : "7426e255e31e23ea9ed835540b6ac3357bc0bd5d9196e68788ba0c611de5950d",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/spiritual-guardian.yml",
@@ -6001,14 +6051,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/telekinetic-projectile.yml",
       "category" : "cantrip",
       "name" : "telekinetic projectile",
       "rank" : 0,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/cantrip/telekinetic-projectile.json",
       "source_id" : "60sgbuMWN0268dB7",
       "source_sha256" : "b6cc1baae35011dcf173b620be53fe854d2637ec8993b28b1efe035b25dc4f8a",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/telepathy.yml",
@@ -6801,14 +6852,15 @@
       "status" : "generated"
     },
     {
+      "archive_file" : "src/paizo-pathfinder-player-core/spell/weapon-storm.yml",
       "category" : "spell",
       "name" : "weapon storm",
       "rank" : 4,
-      "skip_reason" : "non-empty Foundry overlays are not represented by CharacterSpell",
       "source_file" : "packs/spells/4th-rank/weapon-storm.json",
       "source_id" : "8M03UxGXjYyDFAoy",
       "source_sha256" : "e10bc5d89db38e83f8d07c621e8f7e76d17a9e6cdef7e6af70ec75dba88a447f",
-      "status" : "reviewed-skip"
+      "status" : "generated",
+      "unsupported_reason" : "non-empty Foundry overlays are not represented by CharacterSpell"
     },
     {
       "archive_file" : "src/paizo-pathfinder-player-core/spell/weapon-surge.yml",
@@ -6946,7 +6998,7 @@
       "status" : "generated"
     }
   ],
-  "reviewed_skip_count" : 23,
+  "reviewed_skip_count" : 0,
   "source" : {
     "book" : "Pathfinder Player Core",
     "foundry_revision" : "4cbdaa37d6c33e9519561bae2c59a23e0288cbce",
