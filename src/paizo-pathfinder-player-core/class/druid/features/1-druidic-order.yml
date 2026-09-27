@@ -42,14 +42,43 @@ description: 'Upon becoming a druid, you align yourself with a druidic order, wh
 
   Wave Order'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: druidic order
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: 963736db-6723-552c-809e-ef49960032a5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 724e49f8-118a-5b55-96c6-6fb72dfd9274
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 724e49f8-118a-5b55-96c6-6fb72dfd9274
+          lookupName: classOption
+          options:
+            filter:
+              kind: single
+              value:
+                kind: hasPathPrefix
+                path: omen://class/druid/orders?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: 8STJEFVJISujgpMR
 traits:
 - druid
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://class/druid/features/druidic-order?source=paizo-pathfinder-player-core. Foundry
-  keys: [ChoiceSet, GrantItem].'

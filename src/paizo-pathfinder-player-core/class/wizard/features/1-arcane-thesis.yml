@@ -17,14 +17,43 @@ description: 'During your studies to become a full-fledged wizard, you produced 
 
   Staff Nexus'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: arcane thesis
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: ebb03c21-9135-567e-975b-33089f58a46f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: d4533e9c-d005-5cb5-a507-5ca34d6e5b57
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: d4533e9c-d005-5cb5-a507-5ca34d6e5b57
+          lookupName: classOption
+          options:
+            filter:
+              kind: single
+              value:
+                kind: hasPathPrefix
+                path: omen://class/wizard/theses?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: M89l9FOnjHe63wD7
 traits:
 - wizard
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://class/wizard/features/arcane-thesis?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, GrantItem].'

@@ -5,29 +5,29 @@ level: 3
 mechanicsScope: builder
 name: second doctrine (cloistered cleric)
 rules:
-- id: c602dfe4-3c0d-5361-9cd9-7ab5601fb9bb
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-saving-throw
     revision: 1
+  id: c602dfe4-3c0d-5361-9cd9-7ab5601fb9bb
   inputRecipes:
-  - inputName: savingThrow
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/saving-throw
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/saving-throw
-          revision: 1
           payload: fortitude
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/saving-throw
+      valueTypeID: org.openomen.pf2e.core/value/saving-throw
+    inputName: savingThrow
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
   startLevel: 1
 source:
   book: Pathfinder Player Core

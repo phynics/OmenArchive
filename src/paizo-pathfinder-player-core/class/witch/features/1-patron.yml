@@ -17,14 +17,43 @@ description: 'You weren''t born with the power to cast spells, nor have you spen
   grants you the skill for that tradition of magic, your first witch''s lesson and
   a unique familiar ability.'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: patron
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: 78c4ed8d-20fa-5769-88a3-7c6dfb66cda5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: f9c8c042-dc09-5689-a8a4-44bbeeecfc06
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: f9c8c042-dc09-5689-a8a4-44bbeeecfc06
+          lookupName: classOption
+          options:
+            filter:
+              kind: single
+              value:
+                kind: hasPathPrefix
+                path: omen://class/witch/patrons?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: KPtF29AaeX2sJW0K
 traits:
 - witch
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://class/witch/features/patron?source=paizo-pathfinder-player-core. Foundry
-  keys: [ChoiceSet, GrantItem].'

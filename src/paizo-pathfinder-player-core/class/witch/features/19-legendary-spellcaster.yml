@@ -28,8 +28,33 @@ description: 'Animist You are a near-perfect channel for the magical energies of
   spellcraft. Your proficiency ranks for spell attack modifier and spell DC increase
   to legendary.'
 level: 19
-mechanicsScope: encounter
+mechanicsScope: builder
 name: legendary spellcaster
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
+    revision: 1
+  id: 86513e47-9d88-5bdb-ae13-51b546b4b494
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiency
+  startLevel: 19
 source:
   book: Pathfinder Player Core
   publisher: paizo

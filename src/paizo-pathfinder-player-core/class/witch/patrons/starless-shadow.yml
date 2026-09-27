@@ -19,14 +19,3912 @@ description: 'Your patron first contacted you at the witching hour, as your body
   to an enemy to which it''s Concealed, Hidden, or undetected, the enemy becomes Frightened
   1.'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: starless shadow
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    revision: 1
+  id: 15bce704-074a-5694-b360-053d5d0c4df0
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: occultism
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    inputName: skill
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    revision: 1
+  id: 2fcba1d8-f4a5-55dc-9e28-54f16c716782
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: Witch Spellcasting
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: prepared
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
+      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+    inputName: castingKind
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: occult
+          revision: 1
+          typeID: org.openomen.pf2e.spellcasting/value/tradition
+      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: int
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/attribute
+      valueTypeID: org.openomen.pf2e.core/value/attribute
+    inputName: attribute
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
+    revision: 1
+  id: 3d5db36a-95ed-5126-9f71-a41706db09f5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiency
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: fe675d70-0556-5f06-906a-ee79531ee2a6
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: d958da24-3725-54ce-a4d6-6106720ce17b
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 24857674-d7cc-5733-8dc1-becf4a2b5252
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4d918e51-64aa-5e15-b9d2-f30b4c7d4223
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: e37a257b-459f-56e3-9610-bc481f1b9883
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 751c13b5-70d2-533d-bf3f-1c6666b9efd4
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 386ba108-78e0-544a-b173-6a9d43f2f7bc
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 2f3d3a0f-f854-598b-9950-a443fd8e3711
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: ded7d991-5b1f-5af0-a867-ff18fbab12ce
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 755d7231-d7d4-563e-aa49-99dbd089bb9c
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: d266523f-d2b8-5def-b21a-e213914d896f
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 00ac042d-e7f4-51e0-acfb-d873b7e56137
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 582721f9-8eb2-5765-80f9-1416a8a13ec1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: bd30ae59-624c-5000-b1e7-f8172b369afb
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 48ce2e08-2048-55d4-8e3f-11e337f76665
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 913dd07e-b247-52ce-bca4-3c0245538bab
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 83962620-5e36-59b2-9089-eb229e376eaa
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 5b53047e-3209-5a91-b854-1ca56725f574
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: e6c5f5f8-3894-50c8-a83e-1e5b321a1eb9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: c9c6e3bb-123b-5049-b933-3ec4749b1753
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 33950b96-fb87-58bc-a6f1-6de62160ff57
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: d1637e4e-cc57-59cf-b38e-2f66bbcffd08
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 11dd7a9c-ccdc-56eb-9409-17c05c7c3f2f
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 71a1c308-bed8-562d-83a2-2c666ffe2e48
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8fcb3ea3-6b41-5e02-9264-57935557cdf4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: d6af25b7-f31b-59d7-9e7f-e5d75bfcf6c7
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 19898238-00b2-52c6-a5a9-6b0584024d2e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 92f9dfab-709c-520f-bd8f-4f95252f7433
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: bec553bd-0499-5b11-9387-cf0fa5d14ef2
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 3bce511a-9319-54c4-bf63-be32f931b695
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9efa0618-5c6d-5431-bfab-d368661acd8b
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: bc8f0a35-0a2e-57ca-a63c-384c2d2d7576
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: cantrip
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: dcdf2a28-4ba0-5303-a239-d3066564ca14
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c9c36d7e-c8d5-5f20-91de-789f458914cf
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: f80350d6-0a82-5413-848a-9d0389229d9d
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasExactLevel
+                  level: 1
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: a2bc6c98-4e47-5d2d-8176-e32ce2f4ad8c
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ac754648-c9e9-5fe1-a798-c45d42797543
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 72c0ff9b-1820-5f2d-bfa5-669dcd8efcd8
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasExactLevel
+                  level: 1
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 80aeef67-94ea-5b89-b44a-a89d0a1120c6
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: a102c9f3-8524-5d34-ae6b-af252011091b
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: d879b9a3-3b88-5a8e-8b97-0137c43d2f49
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasExactLevel
+                  level: 1
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 27f2323d-ff86-54b3-8b55-96ea93ee5372
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 934bf605-caca-5814-8481-da1dba367920
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 6de2a3af-4afe-5b8e-9163-1bf8a596cd39
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasExactLevel
+                  level: 1
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: f8d64eca-42d2-5e59-94eb-853df75c3d70
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ed7dcbd0-e0ce-5dca-92cd-44af4c900b74
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 35962381-c52b-543c-9162-c335b15bacec
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasExactLevel
+                  level: 1
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 45234b95-c551-5799-ad13-7ffae851977f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 2
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: d282b80c-ed64-509d-91ea-c00c73c5bd1e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 18335afc-59e5-5b8a-ac91-a0adc465de6e
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 3a054206-6e1e-571b-b4d0-19279c7c6232
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 1
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 2
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 26aee943-928d-5af3-ac15-47c270f60d8e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cda08916-36c6-5476-90dc-608cb22fdf99
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 533dcd8a-c4ee-57e2-991e-f66abb6017b2
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 1
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 2
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 35daf962-78d6-596d-b46b-93048511b217
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 3
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 6f5f0689-63e8-534a-b135-66d998f938af
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: abfb99e1-80ee-59c4-a4e2-c2777f70b42d
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 8e349407-3979-56e6-a667-895432d8b896
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 2
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 3
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 7ab10399-d99d-5717-b675-698b63cd2b07
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b2b6e593-206f-5aa2-953c-4520ae8e2337
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: fc6f823b-0229-5ca6-b669-f05904214019
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 2
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 3
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 15ed67c1-760e-5060-aaa5-0e3399e1a189
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 4
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: f47f2861-9cff-56f1-9033-a75dad71d68f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6132d98a-9d4e-5991-8c17-c9bd78eb5f71
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: efa7d3e5-06eb-52f0-a34c-a4500d892b20
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 2
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 4
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: bbdad8ab-0cae-5adf-8232-a285457dd79f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 00dce28b-86ed-5295-92a9-ddd49bb24d14
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: fa2344dd-5edb-5f7a-b6f7-9405a545da8f
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 2
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 4
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 3577c756-69b8-5323-ba7c-83b7cd02f285
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 5
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: cd650578-c2c9-519d-b6ab-560332ea3f25
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 53d42658-a51a-5958-a341-fa7f6afb8267
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 47fca1ef-af7a-502e-8067-c91b4a667e9d
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 3
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 5
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 7a83aec3-266a-5e1e-93d9-4b4943d46101
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6e3b5695-242d-560c-8486-bc550f332869
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 211b5bca-a252-581f-805d-86da0e331320
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 3
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 5
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 96d0be7d-097c-54d1-8d57-69c02072558d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 6
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 11365182-238a-52d0-937a-d1a85772c674
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3ab62fa9-f1b6-5f33-b0aa-4d3ca341c7fb
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: cb319f85-db63-5244-9739-d7c0cd6e9900
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 3
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 6
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: d249231f-44ec-5422-9ca5-4a0f2362e490
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: adb49660-9ca0-5553-8baa-17358f334d58
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: db18c223-6f5a-5aa2-9784-486feec0c89c
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 3
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 6
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: d8779ec0-28d5-5758-b0ac-ea849d34c7ba
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 7
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 64a910f6-ddea-5e5f-821a-d51fe9c7badd
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 58163aa1-4f9f-5659-9dc7-94d2f82bcd11
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 64c0c12e-4d41-54dd-90f1-1603a3bce8e5
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 4
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 7
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: e3135bbc-b683-5b20-ae30-311ca7e9d666
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: e85e9206-087d-5f96-9c8d-72fb2aea0e65
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 24edc066-18bd-5325-b600-c663cced8305
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 4
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 7
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: ebedd610-1ef3-5641-a4dc-33c3cfcd3874
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 8
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: ff73d95f-a566-5827-91af-98c2936599e5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 788939c9-4038-5aca-9117-83095948d215
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 393717b2-0622-54e2-8de6-8101cc53e1d0
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 4
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 8
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 4b2577a1-8982-57f0-9129-65f7db053049
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 34af867a-8ada-5542-9666-5188815e15a6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 5debf1b1-9ac0-599b-bff7-5ef7cee8c259
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 4
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 8
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 8fdea831-c811-5c3f-b803-17277d4108f7
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 9
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: d61e5c92-ee76-58c6-aca9-7dbd3ead36f1
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 03423485-9315-52a9-9c57-156d4f7b3a51
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 4da30ea7-ab10-5b01-a1e4-53b7aa359845
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 5
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 9
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 1552ca98-915b-55e4-9160-8505ff3cd843
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 386c0ee7-5d60-5ed2-8e83-c4062bd1bf2d
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 25249448-0531-5073-aa78-e1a8b7347fc7
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 5
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 9
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: d7db9816-2f43-5be0-a11a-a66dc829599e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 10
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 83d7bb9f-71a8-56d2-b65b-900bf5a1bd88
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 146b48c6-edd6-5ecc-8fa5-285a51566929
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 29564945-0258-5642-afcd-1e596c9f2cb8
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 5
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 10
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: a46e88fe-699b-5fe5-8a34-4db13ff7b1bf
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5e71ac37-fc54-5f41-93cc-f70b382f7263
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: dae5692f-7413-50b0-8d58-efd1dce2ecd3
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 5
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 10
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 21662682-ab70-5cca-9941-7f89b5918a1c
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 11
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: ef77fd4c-f374-5dd0-813f-68f102adf54e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8a89ea4d-cc22-5157-9644-91fbdceb7fa9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: f96b74d8-16aa-5287-b52c-e9d23e7b0320
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 6
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 11
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 835a971f-698d-5652-ba20-2fe95b975733
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: a26cfad3-a141-5ad8-9a03-48a0f6afa5ac
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: dec05e06-e645-5417-b0dd-b6e57cfb8831
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 6
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 11
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 8b8ef7b9-f4b2-543b-9f90-9799ebd7fcb8
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 12
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 48ac7e76-92ef-5223-9fc2-33684dadbe65
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 638c75ff-78ea-52b0-9250-e4b4dec7dd65
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 9f14fd76-c485-5b39-b789-3cd196d4d616
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 6
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 12
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: a247f1cd-8105-52f9-bcb8-462587a7dbd1
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: c3c957c5-e7ab-57cd-834f-3a8be2b93596
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 832976bd-d6d4-58a2-96c8-ced732175281
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 6
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 12
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 462a40a7-43df-5e53-9564-c6b64fc2c84d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 7
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 13
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: a41eb38c-a037-5417-bea0-6558993ac3ba
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8f9c06c4-81ff-5070-ad09-47b2f9a9a408
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: fbf5aa8f-c060-5bc4-ab90-9a764d731a0b
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 7
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 13
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 98694d5d-3ea5-52e9-b85f-462aa5a711e3
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b2097a6d-4059-5f10-98b3-5c3163e624ef
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: b0c3aa9e-cde2-5f90-a4b2-66b5a8be4185
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 7
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 13
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: c75f1347-19fb-510f-90fb-387b601a98e8
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 7
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 14
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 3ca39256-9b3f-58bd-b263-89ecdb9eb13d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ab0f0054-25b7-5eb8-8ab0-c9582b4c71ce
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 723431ce-91df-55a0-9ad0-39df8094728f
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 7
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 14
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 1b76f365-319b-515f-9468-a73e76e35911
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b00e430a-3a50-5634-97d6-3ecb28a84be4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 5f76fc81-b29b-5fc6-8c52-a038d982d4c2
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 7
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 14
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: ce46aa9e-ee8f-5d94-9645-62c7a375f7d0
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 15
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 7cf21058-3e48-52ab-a5e9-2d731bbf4152
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5fa7a66a-e8da-5511-b2b4-14892d86ccb9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 345ce057-2378-5ae7-8130-7a8bdd8b81c4
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 8
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 15
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 386c844c-4045-5185-9448-bb24bfb3ac9f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: de2773ea-d2f6-543a-8dc4-64b6dbebfd41
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: bdcb09f2-3185-5baa-bdf1-02c72e83be4b
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 8
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 15
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 8fc0633d-644e-548c-8a29-265ce196295f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 16
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 22775774-cf0c-5b3f-b687-d5213dedd7c8
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 922de819-2cd9-5854-b37b-29f6e0deee84
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 1feb5ddc-b9f3-5757-a3a5-28bbae4ba8a2
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 8
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 16
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: c38bcc67-1042-5943-a2c8-89aa38db6b97
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3c254221-7e65-5240-accb-91c54745b4ac
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 0da12975-244d-589a-92dc-41bac5d119dd
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 8
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 16
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: afd27a26-d834-589d-b18e-9c82d73e00b5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 17
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: b4e27a13-3281-5e8b-afb3-a1ae852a2622
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9b5995fb-f596-5f26-b763-f0b35aefd23a
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: f7deeea6-d3ed-5cf2-8a18-be25519058d6
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 9
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 17
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: c1abf60d-e32b-54b3-87dc-97fede75e422
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 68e61c07-c682-58e1-976b-1796a47370cf
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: ec8e754c-b374-55ef-929b-a829397629b3
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 9
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 17
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 73367468-e138-5205-a839-14834b4b0837
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 18
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 1e56f0bd-4852-5e2b-b9e5-ee00c0815188
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: b8e7769d-4da4-537b-91d7-eac95a8c5080
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 0e4606ec-9090-52e3-a74a-891d4c21d414
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 9
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 18
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 1c113e43-eaed-5ddf-ae7e-2f9e5b06c543
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ebcba9dc-c8da-536b-a154-6fe61f21e60f
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: dfcbdc46-ac54-5804-b778-fa10cf5e797f
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 9
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 18
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    revision: 1
+  id: 519785dd-ef7e-5ccd-a387-8442e2e76c3e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 10
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: count
+  startLevel: 19
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: b8024c17-9410-5e7d-81d9-74971e806dec
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0ada0593-0773-5090-b8df-38a31afc96a2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: f7366efc-3aec-5500-a605-46b3ea37974a
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 10
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 19
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 08f4ed0d-046b-55e7-892b-b534ade38066
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 033eb8d6-6810-5d20-8225-e73be5fcc54a
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 482a484a-3e49-59fd-8967-6c35e90d0c10
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 10
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 19
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: e6aee8c8-74f8-5c99-8f79-aecf6b8c4678
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 827fcea6-3ba6-5362-bfaf-36640f9eb76e
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 31b3e6ac-925d-50cb-bfe9-5a61b1ea65cb
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 10
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 20
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    revision: 1
+  id: 5bc0abd8-2631-5ec9-bc39-7a1c74761d12
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 759961ff-b50f-51e0-825b-4f30793a1f63
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: entryId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 49e5d889-1160-5b0e-b352-3cafb574b16a
+          lookupName: list:known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.category
+                  metadataValue: spell
+              - kind: single
+                value:
+                  kind: hasMetadata
+                  metadataKey: spell.tradition
+                  metadataValue: occult
+              - kind: single
+                value:
+                  kind: hasRarity
+                  rarity: common
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 10
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    inputName: spellId
+  startLevel: 20
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: r2ZPRAw9c3VGZi8A
 traits:
 - witch
-unsupportedReason: 'ActiveEffectLike at position 1 has an unsupported conditional
-  builder payload. Resource: omen://class/witch/features/starless-shadow?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, ItemAlteration].'

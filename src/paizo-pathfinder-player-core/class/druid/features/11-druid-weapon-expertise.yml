@@ -6,77 +6,77 @@ level: 11
 mechanicsScope: builder
 name: druid weapon expertise
 rules:
-- id: 02ca9d41-aaff-51df-a463-48df353d5dc0
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
     revision: 1
+  id: 02ca9d41-aaff-51df-a463-48df353d5dc0
   inputRecipes:
-  - inputName: weaponDesignation
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-designation
-          revision: 1
           payload:
             kind: filter
+            weaponGroup: any
             weaponKind: simple
-            weaponGroup: any
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
-  - inputName: selfScaling
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/bool
-          revision: 1
           payload: false
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/bool
+      valueTypeID: org.openomen.pf2e.core/value/bool
+    inputName: selfScaling
   startLevel: 1
-- id: f1110753-85ea-5b2e-a191-b8c95911b075
-  effectReference:
+- effectReference:
     kindID: org.openomen.pf2e.core/effect/add-weapon-proficiency
     revision: 1
+  id: f1110753-85ea-5b2e-a191-b8c95911b075
   inputRecipes:
-  - inputName: weaponDesignation
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/weapon-designation
-          revision: 1
           payload:
             kind: filter
-            weaponKind: unarmed
             weaponGroup: any
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+            weaponKind: unarmed
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/weapon-designation
+      valueTypeID: org.openomen.pf2e.core/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-          revision: 1
           payload: 4
-  - inputName: selfScaling
-    expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/bool
-          revision: 1
           payload: false
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/bool
+      valueTypeID: org.openomen.pf2e.core/value/bool
+    inputName: selfScaling
   startLevel: 1
 source:
   book: Pathfinder Player Core

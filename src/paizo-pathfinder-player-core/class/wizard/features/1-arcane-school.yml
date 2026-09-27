@@ -10,14 +10,43 @@ description: 'Most wizards acquire their knowledge of spells from a formal educa
   of texts and tutors. Though a wizard with this approach lacks the focus of formal
   training, they have greater flexibility.'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: arcane school
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: f6121f43-96cb-5cc7-8894-6b9c17786cb3
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2bd1c159-9475-5614-b098-970cf2c11c65
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 2bd1c159-9475-5614-b098-970cf2c11c65
+          lookupName: classOption
+          options:
+            filter:
+              kind: single
+              value:
+                kind: hasPathPrefix
+                path: omen://class/wizard/schools?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: 7nbKDBGvwSx9T27G
 traits:
 - wizard
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://class/wizard/features/arcane-school?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, GrantItem].'

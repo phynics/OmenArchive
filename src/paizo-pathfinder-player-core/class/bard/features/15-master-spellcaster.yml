@@ -33,8 +33,33 @@ description: 'Animist Your affinity with the apparitions you bond to has further
   Wizard You command superlative spellcasting ability. Your proficiency ranks for
   spell attack modifier and spell DC increase to master.'
 level: 15
-mechanicsScope: encounter
+mechanicsScope: builder
 name: master spellcaster
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
+    revision: 1
+  id: 9389c8e8-a214-5b4a-9f4d-79944c442435
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiency
+  startLevel: 15
 source:
   book: Pathfinder Player Core
   publisher: paizo

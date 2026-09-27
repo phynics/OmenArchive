@@ -8,14 +8,43 @@ description: "As a bard, you select one muse at 1st level. This muse leads you t
   feats. If one type of inspiration is not enough to represent your muse, consider
   the Multifarious Muse feat.\n\t•\tEnigma\n\t•\tMaestro\n\t•\tPolymath\n\t•\tWarrior"
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: muses
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    revision: 1
+  id: 93924d16-c77c-58eb-a1e2-1e2128dc5250
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4fc67025-f3dc-5c91-ac16-63f7eecf6efd
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          id: 4fc67025-f3dc-5c91-ac16-63f7eecf6efd
+          lookupName: classOption
+          options:
+            filter:
+              kind: single
+              value:
+                kind: hasPathPrefix
+                path: omen://class/bard/muses?source=paizo-pathfinder-player-core
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feature-id
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    inputName: featureId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: AIOBWGOS4nkfH3kW
 traits:
 - bard
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://class/bard/features/muses?source=paizo-pathfinder-player-core. Foundry keys:
-  [ChoiceSet, GrantItem].'
