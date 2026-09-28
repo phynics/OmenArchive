@@ -170,7 +170,10 @@ Keep rules text readable for humans. Avoid injecting Foundry-specific JSON/rule 
 
 ### Rules
 
-Use `rules` on feats, features, and heritages when the entry needs to grant or modify game state.
+Use `rules` on feats, features, ancestries, heritages and backgrounds when the entry needs to
+grant or modify game state. Ancestries, heritages and backgrounds apply their inline rules at 1st
+level; keep them to a few effects and put larger mechanics in feature records. Classes use feature
+records only, never inline rules.
 Leave the key out when there are no rules; do not add empty arrays to unchanged files.
 
 ```yaml
@@ -201,6 +204,15 @@ Rules use the namespaced mechanics registry wire shape:
 - `inputRecipes` carries typed effect inputs in order; each value includes its namespaced type ID and revision.
 - `startLevel` is the level at which the rule becomes active.
 - `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
+
+The character's traits come from three effects: `add-character-trait` (a plain trait),
+`add-character-ancestry-trait` (an ancestry or lineage trait: it counts for `hasTrait` and opens
+that ancestry's feats) and `add-character-adopted-ancestry-trait` (it only opens the feats). The
+ancestry's own trait is added from the ancestry record; don't author it.
+
+To gate a rule on the chosen ancestry's vision, use `hasAncestryVision: low-light-vision` (or
+`normal`, `darkvision`). Don't gate on the character's senses: a rule gated on derived state can
+satisfy itself.
 
 Prefer literal values in `inputRecipes` when writing by hand. If a rule needs a new literal shape or prerequisite form, update the shared rule schema first so the archive, loader, and import paths stay in sync.
 
@@ -405,7 +417,8 @@ ancestry: elf
 Rules:
 
 - `ancestry` is the owning ancestry slug, e.g. `elf`.
-- Use `ancestry: versatile` for versatile heritages.
+- Use `ancestry: versatile` for versatile heritages. Their inline rules add their lineage traits
+  (`add-character-ancestry-trait`) and senses.
 - The directory must match the `ancestry` value.
 
 ### Backgrounds

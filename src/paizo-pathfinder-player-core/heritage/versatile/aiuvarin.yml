@@ -5,12 +5,73 @@ description: You have elves, or possibly other aiuvarins, in your family tree. Y
   the aiuvarin trait, and low-light vision. In addition, when you gain an ancestry
   feat, you can choose from aiuvarin and elf feats in addition to those from your
   ancestry.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: aiuvarin
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-character-ancestry-trait
+    revision: 1
+  id: afc1bc15-94fa-5a69-8ae9-6eecb0a4dfa9
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: aiuvarin
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: trait
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-character-ancestry-trait
+    revision: 1
+  id: 4f85a331-03f8-5c46-b705-dbb81c30655e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: elf
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: trait
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-sense
+    revision: 1
+  id: d77ed7d5-3fc7-58b9-83e0-a28b6800f35c
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: low-light-vision
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: selector
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ''
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: acuity
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: -1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: range
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/aiuvarin?source=paizo-pathfinder-player-core. Foundry keys: [Sense,
-  ActorTraits, ActiveEffectLike, ActiveEffectLike, ActiveEffectLike].'

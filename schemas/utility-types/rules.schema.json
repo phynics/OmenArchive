@@ -419,6 +419,20 @@
         },
         {
           "type": "object",
+          "description": "The chosen ancestry's record states this vision. A stand-in for a choice on character.ancestry.vision (Proposal I).",
+          "properties": {
+            "hasAncestryVision": {
+              "type": "string",
+              "enum": ["normal", "low-light-vision", "darkvision"]
+            }
+          },
+          "required": [
+            "hasAncestryVision"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
           "properties": {
             "allOf": {
               "type": "array",
