@@ -87,6 +87,15 @@
         "rarity": {
           "$ref": "utility-types/rarity.schema.json",
           "default": "common"
+        },
+        "rules": {
+          "x-omen-ownership": "archive",
+          "description": "Inline rules, applied at 1st level. Larger mechanics go in feature records.",
+          "type": "array",
+          "items": {
+            "$ref": "utility-types/rules.schema.json#/$defs/rule"
+          },
+          "default": []
         }
       },
       "required": [
