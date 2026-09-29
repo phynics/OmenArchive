@@ -22,7 +22,12 @@ traits:
 type: class
 typedPrerequisites:
 - anyOf:
-  - hasResourceWithName: leaf order
+  - hasChoice:
+      equals:
+        payload: adaf12b2-0f44-5d30-9b39-5571fa850ad4
+        revision: 1
+        typeID: org.openomen.pf2e.core/value/feature-id
+      name: class-option
   - hasResourceWithName: untamed form
 unsupportedReason: 'Resistance at position 0 has an unsupported conditional predicate.
   Resource: omen://feat/plant-shape?source=paizo-pathfinder-player-core. Foundry keys:

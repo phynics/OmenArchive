@@ -4,12 +4,50 @@ description: Humanity's versatility and ambition have fueled its ascendance to b
   the most common ancestry in most nations throughout the world. Select a general
   feat of your choice for which you meet the prerequisites (as with your ancestry
   feat, you can select this general feat at any point during character creation).
-mechanicsScope: mixed
+mechanicsScope: builder
 name: versatile human
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 1
+  id: ce05e332-2417-5450-a867-67570e5df6e5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 04eec7cb-eddf-5a61-9bc2-4146d4ec4ff0
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          lookupName: heritage-feat
+          options:
+            filter:
+              kind: intersection
+              values:
+              - kind: single
+                value:
+                  kind: hasType
+                  type: feat
+              - kind: single
+                value:
+                  kind: hasMaxLevel
+                  level: 1
+              - kind: single
+                value:
+                  kind: hasTrait
+                  trait: general
+            kind: resourceFiltered
+          valueTypeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/versatile-human?source=paizo-pathfinder-player-core. Foundry
-  keys: [ChoiceSet, GrantItem].'

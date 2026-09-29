@@ -433,6 +433,20 @@
         },
         {
           "type": "object",
+          "description": "The character has a sense, by its selector (0143). For feat eligibility; a rule gated on it could satisfy itself (0159).",
+          "properties": {
+            "hasSense": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "required": [
+            "hasSense"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
           "properties": {
             "allOf": {
               "type": "array",

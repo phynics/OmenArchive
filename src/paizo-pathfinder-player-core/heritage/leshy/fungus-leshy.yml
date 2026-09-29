@@ -3,12 +3,58 @@ ancestry: leshy
 description: Your body was made from fungi that grows in the shade of caves and trees,
   and you are at home in dark caverns and warrens. You gain darkvision. You lose the
   plant trait and gain the fungus trait.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: fungus leshy
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-character-trait
+    revision: 1
+  id: 7576e664-4675-5a12-99d4-e967510734d3
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: fungus
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: trait
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-sense
+    revision: 1
+  id: 2d747f88-58dd-5724-9b6f-b8d14abc39c8
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: darkvision
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: selector
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ''
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: acuity
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: -1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: range
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/fungus-leshy?source=paizo-pathfinder-player-core. Foundry keys:
-  [ActorTraits, Sense].'

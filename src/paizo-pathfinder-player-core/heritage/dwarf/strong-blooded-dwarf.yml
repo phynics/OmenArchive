@@ -8,9 +8,40 @@ description: Your blood runs hearty and strong, and you can shake off toxins. Yo
 mechanicsScope: mixed
 name: strong-blooded dwarf
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-resistance
+    revision: 2
+  id: 875e9f38-002c-5fac-9314-d24a1d6d3180
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: poison
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: type
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: '[[(max 1 (divide $.level 2))]]'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/sheet-value
+      valueTypeID: org.openomen.pf2e.core/value/sheet-value
+    inputName: value
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ''
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: exceptions
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/strong-blooded-dwarf?source=paizo-pathfinder-player-core. Foundry
-  keys: [Note, Resistance].'

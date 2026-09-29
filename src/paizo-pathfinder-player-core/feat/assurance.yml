@@ -108,4 +108,52 @@ traits:
 - skill
 type: skill
 typedPrerequisites:
-- hasResourceWithName: trained in at least one skill
+- anyOf:
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: acrobatics
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: arcana
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: athletics
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: crafting
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: deception
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: diplomacy
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: intimidation
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: medicine
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: nature
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: occultism
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: performance
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: religion
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: society
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: stealth
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: survival
+  - hasSkillProficiency:
+      proficiency: trained
+      skill: thievery

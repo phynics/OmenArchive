@@ -7,6 +7,8 @@ description: You move fluidly between stances, using your mastery of combat to a
 level: 16
 mechanicsScope: encounter
 name: master of many styles
+prerequisiteDiagnostics:
+- Unsupported prerequisite for source qX9ZtfaAj6rxrVA7 "Reflexive Stance (Monk)".
 prerequisites:
 - Opening Stance (Fighter)
 - Reflexive Stance (Monk)
@@ -20,5 +22,6 @@ traits:
 - monk
 type: class
 typedPrerequisites:
-- hasResourceWithName: opening stance (fighter)
-- hasResourceWithName: reflexive stance (monk)
+- hasFeatWithName: opening stance
+- unsupported: Unsupported prerequisite for source qX9ZtfaAj6rxrVA7 "Reflexive Stance
+    (Monk)".

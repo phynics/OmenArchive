@@ -6,6 +6,9 @@ description: You gain 3 additional Hit Points for each ranger archetype class fe
 level: 4
 mechanicsScope: encounter
 name: ranger resiliency
+prerequisiteDiagnostics:
+- Unsupported prerequisite for source JKvP4pFHzwWsHu2n "class granting no more Hit
+  Points per level than 8 + your Constitution modifier".
 prerequisites:
 - Ranger Dedication
 - class granting no more Hit Points per level than 8 + your Constitution modifier
@@ -19,5 +22,5 @@ traits:
 type: archetype
 typedPrerequisites:
 - hasResourceWithName: ranger dedication
-- hasResourceWithName: class granting no more hit points per level than 8 + your constitution
-    modifier
+- unsupported: Unsupported prerequisite for source JKvP4pFHzwWsHu2n "class granting
+    no more Hit Points per level than 8 + your Constitution modifier".

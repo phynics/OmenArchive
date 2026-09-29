@@ -4,12 +4,78 @@ description: You were exposed to powerful necromantic energies that should have 
   you—but you survived. Your skin is cold, clammy, and gray. You gain resistance to
   void damage equal to half your level (minimum 1). You also gain a +1 circumstance
   bonus to saving throws against effects with the death or void trait.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: grave orc
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-resistance
+    revision: 2
+  id: f6b0b88b-a85a-58f7-9cad-2d769c3dab2b
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: void
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: type
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: '[[(max 1 (divide $.level 2))]]'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/sheet-value
+      valueTypeID: org.openomen.pf2e.core/value/sheet-value
+    inputName: value
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ''
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: exceptions
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: f6ab4fe9-4323-53e0-a43a-3d6a892ed13e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: e48bc1cd-5fb3-5095-b2ca-de49bab541fb
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - anyNonPerceptionSavingThrow: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Grave Orc: +1 circumstance bonus to saving throws (in some situations).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/grave-orc?source=paizo-pathfinder-player-core. Foundry keys:
-  [Resistance, FlatModifier].'

@@ -17,4 +17,6 @@ traits:
 - ranger
 type: class
 typedPrerequisites:
-- hasResourceWithName: mature animal companion
+- anyOf:
+  - hasFeatWithName: mature animal companion (druid)
+  - hasFeatWithName: mature animal companion (ranger)

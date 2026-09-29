@@ -4,12 +4,25 @@ description: You're able to bounce back from injuries easily due to an exception
   thick skull, cartilaginous bones, or some other mixed blessing. You gain 10 Hit
   Points from your ancestry instead of 6. When you fall, reduce the falling damage
   you take as though you had fallen half the distance.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: unbreakable goblin
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/set-ancestry-hit-points
+    revision: 1
+  id: d8098e50-1433-5919-b70f-690025f99174
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 10
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: hitPoints
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/unbreakable-goblin?source=paizo-pathfinder-player-core. Foundry
-  keys: [ActiveEffectLike].'

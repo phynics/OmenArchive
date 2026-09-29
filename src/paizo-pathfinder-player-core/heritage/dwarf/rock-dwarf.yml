@@ -8,12 +8,84 @@ description: 'Your ancestors lived and worked among the ancient stones of the mo
 
   In addition, if any effect would force you to move 10 feet or more, you are moved
   only half the distance.'
-mechanicsScope: mixed
+mechanicsScope: builder
 name: rock dwarf
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: e6b38100-2aea-5ab5-8055-389f3e55cb4f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: dcca4bd4-ab5d-5e2b-a075-dc4cf143a687
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - savingThrow:
+                _0: fortitude
+            - savingThrow:
+                _0: reflex
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Rock Dwarf: +2 circumstance bonus to Fortitude saves and Reflex
+            saves (Shove or Trip or Reposition).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 40bc6111-4e73-544f-9e41-b0bb8feeabf9
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 66df37e8-137d-5cd8-a2d0-4dc748a102e7
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - anyNonPerceptionSavingThrow: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Rock Dwarf: +2 circumstance bonus to saving throws (in some situations).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/rock-dwarf?source=paizo-pathfinder-player-core. Foundry keys:
-  [FlatModifier, FlatModifier].'

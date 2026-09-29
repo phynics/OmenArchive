@@ -13,9 +13,43 @@ description: 'You can subsist on food that most folks would consider spoiled. Yo
 mechanicsScope: mixed
 name: irongut goblin
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: f6c29cbc-0b5a-5fea-aadc-6db9d79ab2a3
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 99e84d24-b518-5e6c-8e37-de535135c504
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - anyNonPerceptionSavingThrow: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Irongut Goblin: +2 circumstance bonus to saving throws (in some
+            situations).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/irongut-goblin?source=paizo-pathfinder-player-core. Foundry keys:
-  [FlatModifier, AdjustDegreeOfSuccess, ItemAlteration].'

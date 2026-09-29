@@ -1,9 +1,4 @@
 ---
-attributes:
-  chooseFrom:
-  - dexterity
-  - strength
-  freeBoosts: 1
 description: 'You dedicated yourself to intense training and rigorous study to become
   a great warrior. The school you attended might have been a traditionalist monastery,
   an elite military academy, or the local branch of a prestigious mercenary organization.
@@ -14,17 +9,28 @@ description: 'You dedicated yourself to intense training and rigorous study to b
   You''re trained in your choice of the Acrobatics or Athletics skill. You gain a
   skill feat: Cat Fall if you chose Acrobatics or Quick Jump if you chose Athletics.
   You''re also trained in the Warfare Lore skill.'
-loreSkill: warfare lore
-mechanicsScope: mixed
+mechanicsScope: builder
 name: martial disciple
 rarity: common
-skillFeat: cat fall
-skillOption:
-- acrobatics
-- athletics
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for background rules
-  at omen://background/martial-disciple?source=paizo-pathfinder-player-core. Foundry
-  keys: [ChoiceSet, ActiveEffectLike, GrantItem, GrantItem].'
+variants:
+- attributes:
+    chooseFrom:
+    - dexterity
+    - strength
+    freeBoosts: 1
+  key: acrobatics
+  loreSkill: warfare lore
+  skillFeat: cat fall
+  skillOption: acrobatics
+- attributes:
+    chooseFrom:
+    - dexterity
+    - strength
+    freeBoosts: 1
+  key: athletics
+  loreSkill: warfare lore
+  skillFeat: quick jump
+  skillOption: athletics

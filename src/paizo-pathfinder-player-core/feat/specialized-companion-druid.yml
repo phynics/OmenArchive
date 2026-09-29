@@ -22,4 +22,6 @@ traits:
 - druid
 type: class
 typedPrerequisites:
-- hasResourceWithName: incredible companion
+- anyOf:
+  - hasFeatWithName: incredible companion (druid)
+  - hasFeatWithName: incredible companion (ranger)

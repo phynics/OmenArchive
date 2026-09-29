@@ -7,12 +7,25 @@ description: The blood of the fey flows through your veins, saturating you with 
   rank equal to half your level rounded up. You can change this cantrip to a different
   one from the same list once per day by meditating to realign yourself with the First
   World; this is a 10-minute activity that has the concentrate trait.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: fey-touched gnome
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-character-trait
+    revision: 1
+  id: cb1367d6-03c8-5217-9737-401a6bf52bb5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: fey
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: trait
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/fey-touched-gnome?source=paizo-pathfinder-player-core. Foundry
-  keys: [ActorTraits].'

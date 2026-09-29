@@ -11,12 +11,48 @@ description: The color of your hair and skin is mutable, possibly due to latent 
   in a forest), you can use the single action to make minor localized shifts designed
   to help you blend into your surroundings. This grants you a +2 circumstance bonus
   to Stealth checks until your surroundings shift in coloration or pattern.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: chameleon gnome
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: a2e3e8ee-76e7-51e1-89b5-ff538dae11a0
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: f7d5f69f-29d4-589a-a9d1-5cfb339bfe91
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - skill:
+                _0:
+                  stealth: {}
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Chameleon Gnome: +2 circumstance bonus to Stealth checks (in some
+            situations).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/chameleon-gnome?source=paizo-pathfinder-player-core. Foundry
-  keys: [FlatModifier].'

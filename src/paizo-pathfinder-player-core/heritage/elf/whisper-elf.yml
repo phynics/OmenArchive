@@ -7,12 +7,47 @@ description: Your ears are finely tuned, able to detect even the slightest whisp
   a concealed target or 9 for a hidden one. This benefit doesn't apply if you can't
   hear or if the creature is incapable of making sound (for example, if it's affected
   by a Silence spell).
-mechanicsScope: mixed
+mechanicsScope: builder
 name: whisper elf
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: 5117260d-a9e0-5de8-8a9d-4d562c238874
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3246c69e-7299-556d-bc8c-5b4a49868e92
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - savingThrow:
+                _0: perception
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Whisper Elf: +2 circumstance bonus to Perception checks (in some
+            situations).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/whisper-elf?source=paizo-pathfinder-player-core. Foundry keys:
-  [FlatModifier].'

@@ -85,9 +85,10 @@ name is not a unique key. Foundry owns the descriptive and source fields it supp
 `name`, `description`, `traits`, `level`, `source`, `sourceID`, and source-specific item or spell
 data. A refresh updates those fields from the new conversion.
 
-The archive owns reviewed mechanics. Preserve existing `rules`, `typedPrerequisites`,
-`mechanicsScope`, `unsupportedReason`, and `prerequisiteDiagnostics` when a Foundry record is
-regenerated. New records may take the converter's initial values for these fields; later reviewed
+The archive owns reviewed mechanics. Preserve existing `rules`, `mechanicsScope` and
+`unsupportedReason` when a Foundry record is regenerated. A feat's `typedPrerequisites` and
+`prerequisiteDiagnostics` are generated from its prerequisite text (0143): a refresh replaces them,
+so fix a prerequisite in the converter, not in the file. New records may take the converter's initial values for these fields; later reviewed
 edits take precedence. If source identity changes or a field cannot be assigned to one owner,
 show the conflict for review before writing. A hand-authored file with no staged counterpart is
 an explicit removal candidate and must be reviewed before it can be deleted.

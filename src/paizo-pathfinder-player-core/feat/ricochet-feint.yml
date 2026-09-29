@@ -18,4 +18,6 @@ traits:
 - rogue
 type: class
 typedPrerequisites:
-- hasResourceWithName: ricochet stance
+- anyOf:
+  - hasFeatWithName: ricochet stance (fighter)
+  - hasFeatWithName: ricochet stance (rogue)

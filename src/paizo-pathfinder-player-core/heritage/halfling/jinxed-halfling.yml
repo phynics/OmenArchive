@@ -3,12 +3,25 @@ ancestry: halfling
 description: 'You were born with a strange blessing: bereft of the typical halfling
   luck, you can instead manipulate the fortunes of others. You can never take the
   Halfling Luck feat, and you gain the Jinx action.'
-mechanicsScope: mixed
+mechanicsScope: builder
 name: jinxed halfling
 rarity: uncommon
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-action
+    revision: 1
+  id: 29c41498-bb35-5ae7-bf97-b84e78506b95
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3efb74f0-b689-5a2d-abb6-0b3508195a50
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/action-id
+      valueTypeID: org.openomen.pf2e.core/value/action-id
+    inputName: actionId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/jinxed-halfling?source=paizo-pathfinder-player-core. Foundry
-  keys: [GrantItem].'

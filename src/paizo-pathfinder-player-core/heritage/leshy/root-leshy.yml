@@ -6,12 +6,64 @@ description: Your body is made from hardy roots that attach you firmly to the gr
   Fortitude or Reflex DC against attempts to Reposition, Shove, or Trip you. This
   bonus also applies to saving throws against spells or effects that attempt to move
   you or knock you Prone.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: root leshy
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/set-ancestry-hit-points
+    revision: 1
+  id: 2bfe7ad8-e38c-5abd-859d-16a3dafd773b
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 10
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: hitPoints
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
+    revision: 1
+  id: f5445a7f-6cd8-5979-b568-00e06890061a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: a8853edf-3aae-53db-ba3c-30514de35789
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - savingThrow:
+                _0: fortitude
+            - savingThrow:
+                _0: reflex
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/roll-description
+      valueTypeID: org.openomen.pf2e.core/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Root Leshy: +2 circumstance bonus to Fortitude saves and Reflex
+            saves (Shove or Trip or Reposition).'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: description
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/root-leshy?source=paizo-pathfinder-player-core. Foundry keys:
-  [ActiveEffectLike, FlatModifier].'

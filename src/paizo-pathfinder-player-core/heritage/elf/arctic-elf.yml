@@ -4,12 +4,43 @@ description: You dwell deep in the frozen north and have gained incredible resil
   against cold environments, granting you cold resistance equal to half your level
   (minimum 1). You treat environmental cold effects as if they were one step less
   extreme (incredible cold becomes extreme, extreme cold becomes severe, and so on).
-mechanicsScope: mixed
+mechanicsScope: builder
 name: arctic elf
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-resistance
+    revision: 2
+  id: fab32b7d-8a1d-5379-abd6-78817423b849
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cold
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: type
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: '[[(max 1 (divide $.level 2))]]'
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/sheet-value
+      valueTypeID: org.openomen.pf2e.core/value/sheet-value
+    inputName: value
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ''
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: exceptions
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/arctic-elf?source=paizo-pathfinder-player-core. Foundry keys:
-  [Resistance].'

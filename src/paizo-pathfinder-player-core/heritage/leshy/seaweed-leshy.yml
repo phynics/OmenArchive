@@ -4,12 +4,49 @@ description: Your body is made from woven seaweed, and you're just as comfortabl
   underwater as on land. You gain a swim Speed of 20 feet, and you can always breathe
   underwater. However, your land Speed is reduced by 5 feet (to 20 feet for most seaweed
   leshies).
-mechanicsScope: mixed
+mechanicsScope: builder
 name: seaweed leshy
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-base-speed
+    revision: 1
+  id: 93309094-821d-5a8f-9b30-bbf70ec17f59
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: swim
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: selector
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 20
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: value
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-speed-modifier
+    revision: 1
+  id: 2f58807e-3709-5473-82da-85027745090e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: -5
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: amount
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'No deterministic builder translator exists for heritage rules
-  at omen://heritage/seaweed-leshy?source=paizo-pathfinder-player-core. Foundry keys:
-  [BaseSpeed, FlatModifier].'
