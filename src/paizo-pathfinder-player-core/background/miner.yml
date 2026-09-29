@@ -18,6 +18,46 @@ loreSkill: mining lore
 mechanicsScope: builder
 name: miner
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 2
+  id: ed4694b0-5abd-58c2-b284-7bd607fbe8b1
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6f056724-f318-573c-9475-f8d295f673b3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2eaecf28-420e-5387-b141-830108db0496
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            terrain-expertise-terrain:
+              kind: fixed
+              value:
+                payload: underground
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/terrain
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-choice-settings
+      valueTypeID: org.openomen.pf2e.core/value/feat-choice-settings
+    inputName: with
+  startLevel: 1
 skillFeat: terrain expertise
 skillOption: survival
 source:

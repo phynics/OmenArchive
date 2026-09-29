@@ -8,10 +8,26 @@ description: 'Your hardiness lets you withstand more punishment than most. Incre
   If you also have the Toughness feat, the Hit Points gained from it and this feat
   are cumulative, and the DC of your recovery checks is equal to 6 + your dying value.'
 level: 9
-mechanicsScope: encounter
+mechanicsScope: mixed
 name: mountain's stoutness
 prerequisites: []
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-hit-points-per-level
+    revision: 1
+  id: 52867b48-3fe9-5114-8cf3-15c01efbc04e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: amount
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

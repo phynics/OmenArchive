@@ -1,15 +1,14 @@
 ---
 action: {}
-description: Your proficiency rank for Fortitude saves increases to master. When you
-  roll a success at a Fortitude save, you get a critical success instead.
-level: 15
+description: Your proficiency rank for Fortitude saves increases to expert.
+level: 3
 mechanicsScope: builder
-name: fifth doctrine (warpriest)
+name: second doctrine (cloistered cleric)
 rules:
 - effectReference:
     kindID: org.openomen.pf2e.core/effect/add-saving-throw
     revision: 1
-  id: f672ca35-2acd-580d-bb0a-b84edf358b3e
+  id: c602dfe4-3c0d-5361-9cd9-7ab5601fb9bb
   inputRecipes:
   - expectedValue:
       source:
@@ -24,17 +23,15 @@ rules:
       source:
         kind: literal
         value:
-          payload: 6
+          payload: 4
           revision: 1
           typeID: org.openomen.pf2e.core/value/proficiency-rank
       valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
     inputName: proficiencyRank
-  prerequisites:
-  - hasFeatureWithName: warpriest
   startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-sourceID: kmimy4VOaoEOgOiQ
+sourceID: sa7BWfnyCswAvBVa
 traits:
 - cleric

@@ -15,13 +15,52 @@ description: 'With a strong back and an understanding of seasonal cycles, you ti
   You''re trained in the Athletics skill and the Farming Lore skill. You gain the
   Assurance skill feat with Athletics.'
 loreSkill: farming lore
-mechanicsScope: mixed
+mechanicsScope: builder
 name: farmhand
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 2
+  id: 46404ba8-62aa-5b27-a363-f42d07c14fa4
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4af18b33-d6c3-546c-8331-5b39feca1444
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1f53b5e0-164a-5bfe-8380-e480d8a1f009
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            assurance-skill:
+              kind: fixed
+              value:
+                payload:
+                  kind: athletics
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-choice-settings
+      valueTypeID: org.openomen.pf2e.core/value/feat-choice-settings
+    inputName: with
+  startLevel: 1
 skillFeat: assurance
 skillOption: athletics
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'Grants Assurance with its choice already made, which needs 0157.
-  Resource: omen://background/farmhand?source=paizo-pathfinder-player-core.'

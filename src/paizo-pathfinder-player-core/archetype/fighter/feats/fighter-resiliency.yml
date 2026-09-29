@@ -4,7 +4,7 @@ description: You gain 3 additional Hit Points for each fighter archetype class f
   you have. As you continue selecting fighter archetype class feats, you continue
   to gain additional Hit Points in this way.
 level: 4
-mechanicsScope: encounter
+mechanicsScope: builder
 name: fighter resiliency
 prerequisiteDiagnostics:
 - Unsupported prerequisite for source PLz1oIEGJojVUBsW "class granting no more Hit
@@ -13,6 +13,31 @@ prerequisites:
 - Fighter Dedication
 - class granting no more Hit Points per level than 8 + your Constitution modifier
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-hit-points-per-count
+    revision: 1
+  id: 85127d64-80bc-53f6-b90b-a1381f6765a3
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: amount
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: $.archetype.fighter.feat-count
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: count
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

@@ -14,6 +14,51 @@ repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-terrain-expertise
+    revision: 1
+  id: c073d2f4-24fa-5aa3-a164-2e9aeff84148
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          lookupName: terrain-expertise-terrain
+          options:
+            kind: explicit
+            values:
+            - payload: aquatic
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: arctic
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: desert
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: forest
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: mountain
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: plains
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: sky
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: swamp
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+            - payload: underground
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/terrain
+          valueTypeID: org.openomen.pf2e.core/value/terrain
+      valueTypeID: org.openomen.pf2e.core/value/terrain
+    inputName: terrain
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -28,6 +73,3 @@ typedPrerequisites:
 - hasSkillProficiency:
     proficiency: trained
     skill: survival
-unsupportedReason: 'ChoiceSet terrain is not paired with a deterministic builder effect.
-  Resource: omen://feat/terrain-expertise?source=paizo-pathfinder-player-core. Foundry
-  keys: [ChoiceSet, FlatModifier].'

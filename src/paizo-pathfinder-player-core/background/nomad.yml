@@ -15,13 +15,52 @@ description: 'Traveling far and wide, you picked up basic tactics for surviving 
   traveled in (such as Desert Lore or Swamp Lore). You gain the Assurance skill feat
   with Survival.'
 loreSkill: <terrain> lore
-mechanicsScope: mixed
+mechanicsScope: builder
 name: nomad
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 2
+  id: 1f4c9ec5-17d6-5eaf-a85e-6ef667d530ce
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3beca305-7167-59b8-add3-228b4220c506
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1f53b5e0-164a-5bfe-8380-e480d8a1f009
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            assurance-skill:
+              kind: fixed
+              value:
+                payload:
+                  kind: survival
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-choice-settings
+      valueTypeID: org.openomen.pf2e.core/value/feat-choice-settings
+    inputName: with
+  startLevel: 1
 skillFeat: assurance
 skillOption: survival
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'Grants Assurance with its choice already made, which needs 0157.
-  Resource: omen://background/nomad?source=paizo-pathfinder-player-core.'

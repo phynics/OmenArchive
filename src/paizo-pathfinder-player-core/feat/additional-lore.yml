@@ -4,7 +4,7 @@ description: Your knowledge has expanded to encompass a new field. Choose a Lore
   subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an
   additional skill increase you can apply only to the chosen Lore subcategory.
 level: 1
-mechanicsScope: encounter
+mechanicsScope: builder
 name: additional lore
 prerequisites: []
 rarity: common
@@ -12,6 +12,95 @@ repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    revision: 1
+  id: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          lookupName: additional-lore-name
+          options:
+            kind: unrestricted
+          valueTypeID: org.openomen.pf2e.core/value/string
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: loreName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    revision: 1
+  id: 76e1381f-f692-5dc5-8556-02b4fb9875bd
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: lookupByName
+        name: additional-lore-name
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: loreName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 3
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    revision: 1
+  id: 158af683-b149-5a2e-a5d9-e5d4ba28fa27
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: lookupByName
+        name: additional-lore-name
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: loreName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 7
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    revision: 1
+  id: 64a24b99-b575-5246-af08-ff1b960d920c
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: lookupByName
+        name: additional-lore-name
+      valueTypeID: org.openomen.pf2e.core/value/string
+    inputName: loreName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 15
 source:
   book: Pathfinder Player Core
   publisher: paizo

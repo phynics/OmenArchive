@@ -1,15 +1,15 @@
 ---
 action: {}
 description: Your proficiency ranks for the spell attack modifier and spell DC statistics
-  increase to master.
-level: 15
+  increase to expert.
+level: 7
 mechanicsScope: builder
-name: fifth doctrine (cloistered cleric)
+name: third doctrine (cloistered cleric)
 rules:
 - effectReference:
     kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
     revision: 1
-  id: 6dfa835d-2a26-548b-8bf8-55a66aa1fc87
+  id: ffb07def-c1e6-5d84-b66c-42d321595a5a
   inputRecipes:
   - expectedValue:
       source:
@@ -24,17 +24,15 @@ rules:
       source:
         kind: literal
         value:
-          payload: 6
+          payload: 4
           revision: 1
           typeID: org.openomen.pf2e.core/value/proficiency-rank
       valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
     inputName: proficiency
-  prerequisites:
-  - hasFeatureWithName: cloistered cleric
-  startLevel: 15
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-sourceID: n9W8MjjRgPpUTvWf
+sourceID: s8WEmc4GGZSHSC7q
 traits:
 - cleric

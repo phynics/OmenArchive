@@ -4,10 +4,26 @@ description: Your body can withstand more punishment than most before succumbing
   Increase your maximum Hit Points by your level. You reduce the DC of recovery checks
   by 1.
 level: 1
-mechanicsScope: encounter
+mechanicsScope: mixed
 name: toughness
 prerequisites: []
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-hit-points-per-level
+    revision: 1
+  id: 66a656f8-d416-5f27-8057-19e89f42cc9f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/int
+      valueTypeID: org.openomen.pf2e.core/value/int
+    inputName: amount
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

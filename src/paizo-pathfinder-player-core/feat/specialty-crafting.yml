@@ -65,6 +65,60 @@ name: specialty crafting
 prerequisites:
 - trained in Crafting
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-specialty-crafting
+    revision: 1
+  id: bcc320be-915f-5b50-bc71-d4194635aff2
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: selection
+        selection:
+          lookupName: specialty-crafting-specialty
+          options:
+            kind: explicit
+            values:
+            - payload: alchemy
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: artistry
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: blacksmithing
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: bookmaking
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: glassmaking
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: leatherworking
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: pottery
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: shipbuilding
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: stonemasonry
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: tailoring
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: weaving
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+            - payload: woodworking
+              revision: 1
+              typeID: org.openomen.pf2e.core/value/crafting-specialty
+          valueTypeID: org.openomen.pf2e.core/value/crafting-specialty
+      valueTypeID: org.openomen.pf2e.core/value/crafting-specialty
+    inputName: specialty
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -78,6 +132,3 @@ typedPrerequisites:
 - hasSkillProficiency:
     proficiency: trained
     skill: crafting
-unsupportedReason: 'ChoiceSet specialtyCrafting is not paired with a deterministic
-  builder effect. Resource: omen://feat/specialty-crafting?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, FlatModifier].'

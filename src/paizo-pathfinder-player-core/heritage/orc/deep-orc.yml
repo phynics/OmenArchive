@@ -4,11 +4,73 @@ description: Your calloused hands and red eyes speak to a life spent in the deep
   of mountain caverns, where you learned to battle on rocky cliffs and survive with
   minimal resources. You gain the Terrain Expertise skill feat for underground terrain
   and the Combat Climber skill feat.
-mechanicsScope: mixed
+mechanicsScope: builder
 name: deep orc
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 2
+  id: 89532fd6-cdee-5657-bca4-92d12a9f437a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 682ec925-7d67-5830-868f-069f17f658d3
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2eaecf28-420e-5387-b141-830108db0496
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            terrain-expertise-terrain:
+              kind: fixed
+              value:
+                payload: underground
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/terrain
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-choice-settings
+      valueTypeID: org.openomen.pf2e.core/value/feat-choice-settings
+    inputName: with
+  startLevel: 1
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 2
+  id: 5ee787d5-be23-5a6c-b014-e0c898546151
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: f135f10f-ae05-5c58-baf1-b33439bbd626
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 56e24d87-dde2-5485-8a0d-ae240269a3a1
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'Grants Terrain Expertise with its choice set, which needs 0157.
-  Resource: omen://heritage/deep-orc?source=paizo-pathfinder-player-core.'

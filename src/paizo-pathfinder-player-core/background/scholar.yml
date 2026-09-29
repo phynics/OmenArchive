@@ -16,9 +16,62 @@ description: 'You have a knack for learning and sequestered yourself from the ou
   and gain the Assurance skill feat in your chosen skill. You''re also trained in
   the Academia Lore skill.'
 loreSkill: academia lore
-mechanicsScope: mixed
+mechanicsScope: builder
 name: scholar
 rarity: common
+rules:
+- effectReference:
+    kindID: org.openomen.pf2e.core/effect/add-feat
+    revision: 2
+  id: 6439d104-264e-567a-97c3-32c6bdc18b53
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: a16c9c82-8199-565a-a02a-757d56747650
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: org.openomen.pf2e.core/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1f53b5e0-164a-5bfe-8380-e480d8a1f009
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    inputName: featId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            assurance-skill:
+              kind: from
+              values:
+              - payload:
+                  kind: arcana
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/skill
+              - payload:
+                  kind: nature
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/skill
+              - payload:
+                  kind: occultism
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/skill
+              - payload:
+                  kind: religion
+                revision: 1
+                typeID: org.openomen.pf2e.core/value/skill
+          revision: 1
+          typeID: org.openomen.pf2e.core/value/feat-choice-settings
+      valueTypeID: org.openomen.pf2e.core/value/feat-choice-settings
+    inputName: with
+  startLevel: 1
 skillFeat: assurance
 skillOption:
 - arcana
@@ -28,5 +81,3 @@ skillOption:
 source:
   book: Pathfinder Player Core
   publisher: paizo
-unsupportedReason: 'Grants Assurance with its choice already made, which needs 0157.
-  Resource: omen://background/scholar?source=paizo-pathfinder-player-core.'

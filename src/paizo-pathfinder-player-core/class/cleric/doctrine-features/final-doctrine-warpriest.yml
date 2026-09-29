@@ -1,15 +1,15 @@
 ---
 action: {}
-description: Your proficiency ranks for the spell attack modifier and spell DC statistics
-  increase to expert.
-level: 11
+description: You gain master proficiency with your deity's favored weapon, spell attack
+  modifier, and spell DC.
+level: 19
 mechanicsScope: builder
-name: fourth doctrine (warpriest)
+name: final doctrine (warpriest)
 rules:
 - effectReference:
     kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
     revision: 1
-  id: aa49a93a-d73d-53de-9fa0-ea3eb4fa38fc
+  id: 0c6e156f-6c6b-5f8e-a5a7-63e04668921a
   inputRecipes:
   - expectedValue:
       source:
@@ -24,17 +24,15 @@ rules:
       source:
         kind: literal
         value:
-          payload: 4
+          payload: 6
           revision: 1
           typeID: org.openomen.pf2e.core/value/proficiency-rank
       valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
     inputName: proficiency
-  prerequisites:
-  - hasFeatureWithName: warpriest
-  startLevel: 11
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
-sourceID: px3gVYp7zlEQIpcl
+sourceID: N1ugDqZlslxbp3Uy
 traits:
 - cleric
