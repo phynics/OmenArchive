@@ -14,7 +14,7 @@ prerequisites: []
 rarity: common
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
     revision: 1
   id: dd952403-6d75-5aee-8fd4-5954560c3a85
   inputRecipes:
@@ -25,8 +25,8 @@ rules:
           payload:
             kind: religion
           revision: 1
-          typeID: org.openomen.pf2e.core/value/skill
-      valueTypeID: org.openomen.pf2e.core/value/skill
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
     inputName: skill
   - expectedValue:
       source:
@@ -34,33 +34,49 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 1
+- choice:
+    answer:
+      cases:
+      - key: diplomacy
+        label: Diplomacy
+        value:
+          payload:
+            kind: diplomacy
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      - key: intimidation
+        label: Intimidation
+        value:
+          payload:
+            kind: intimidation
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      kind: local
+    label: Skill
+    legacySelections:
+    - inputName: skill
+      lookupName: skill
+      ruleID: 7c859296-24d0-5764-a6a3-9f83fba8bb3f
+      valueTypeID: org.openomen.pf2e.core/value/skill
+    name: $.feat.nephilim-lore.skill
+    startLevel: 1
+  id: 73ef60fd-2c17-52c4-b847-d413dcf18190
+  key: choice-feat-nephilim-lore-skill
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
     revision: 1
   id: 7c859296-24d0-5764-a6a3-9f83fba8bb3f
   inputRecipes:
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: skill
-          options:
-            kind: explicit
-            values:
-            - payload:
-                kind: diplomacy
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/skill
-            - payload:
-                kind: intimidation
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/skill
-          valueTypeID: org.openomen.pf2e.core/value/skill
-      valueTypeID: org.openomen.pf2e.core/value/skill
+        kind: choice
+        name: $.feat.nephilim-lore.skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
     inputName: skill
   - expectedValue:
       source:
@@ -68,12 +84,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-feat
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
     revision: 2
   id: a194f1c4-55b9-5728-9c9b-b9e57ecab6f3
   inputRecipes:
@@ -83,8 +99,8 @@ rules:
         value:
           payload: 9d457e0f-528e-5847-8998-c61a828ee5b7
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: selectionId
   - expectedValue:
       source:
@@ -92,8 +108,8 @@ rules:
         value:
           payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
           revision: 1
-          typeID: org.openomen.pf2e.core/value/feat-id
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
     inputName: featId
   startLevel: 1
 source:

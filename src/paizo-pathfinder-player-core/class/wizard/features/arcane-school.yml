@@ -1,0 +1,54 @@
+---
+action: {}
+description: 'Most wizards acquire their knowledge of spells from a formal educational
+  institution, such as the Arcanamirium or the Magaambya. At 1st level, you choose
+  your arcane school, which grants you magical abilities.
+
+  You gain additional spells and spell slots from the curriculum taught at the school
+  you attended. Some wizards follow the school of unified magical theory, which attempts
+  to forge a new school by studying independently and drawing information from a multitude
+  of texts and tutors. Though a wizard with this approach lacks the focus of formal
+  training, they have greater flexibility.'
+level: 1
+mechanicsScope: builder
+name: arcane school
+rules:
+- choice:
+    answer:
+      filter:
+        kind: single
+        value:
+          kind: hasPathPrefix
+          path: omen://class/wizard/schools?source=paizo-pathfinder-player-core
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    label: School
+    legacySelections:
+    - inputName: featureId
+      lookupName: class-option
+      ruleID: f6121f43-96cb-5cc7-8894-6b9c17786cb3
+      sourceID: 0c05d786-194d-50be-9057-b8948be3da15
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    name: $.wizard.school
+    startLevel: 1
+  id: 1e2fd909-5612-5e82-bf63-793d0501d44d
+  key: choice-wizard-school
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
+    revision: 1
+  id: f6121f43-96cb-5cc7-8894-6b9c17786cb3
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.wizard.school
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    inputName: featureId
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 7nbKDBGvwSx9T27G
+traits:
+- wizard

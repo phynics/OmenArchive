@@ -1,0 +1,148 @@
+---
+action: {}
+description: You gain expert proficiency in simple weapons, martial weapons, and unarmed
+  attacks. When you critically succeed at an attack roll against an Off-Guard creature
+  while using an agile or finesse weapon or an agile or finesse unarmed attack, you
+  apply the critical specialization effect for that weapon or unarmed attack.
+level: 5
+mechanicsScope: mixed
+name: weapon tricks
+rules:
+- id: abfa4055-11c5-57dd-b4f9-2f237f89fcf0
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-critical-specialization
+    revision: 1
+  inputRecipes:
+  - inputName: uuid
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+          revision: 1
+          payload: 3323a693-d688-59c5-b780-b5409f524c34
+  - inputName: weaponGroup
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-group
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-group
+          revision: 1
+          payload: any
+  startLevel: 1
+- id: 0a1e87d7-8b4b-5978-97ca-7343036a7d65
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: martial
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+          revision: 1
+          payload: false
+  startLevel: 1
+- id: 377c9e32-c0f1-5af6-986f-7b4c943228ab
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: simple
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+          revision: 1
+          payload: false
+  startLevel: 1
+- id: 422c366d-3f88-55fe-ba7d-bdd1c733dca8
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: unarmed
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+          revision: 1
+          payload: false
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: v8UNEJR5IDKi8yqa
+traits:
+- rogue

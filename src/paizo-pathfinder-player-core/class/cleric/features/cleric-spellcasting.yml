@@ -1,0 +1,783 @@
+---
+action: {}
+description: 'Your deity bestows on you the power to cast divine spells. You are a
+  spellcaster, and you can cast spells of the divine tradition using the Cast a Spell
+  activity. As a cleric, your chants generally invoke your deity and their powerful
+  servants by name or title, while your gestures are followed by sacred symbols or
+  other representations of your deity.
+
+  At 1st level, you can prepare two 1st-rank spells and five cantrips each morning
+  from the common spells on the divine spell list or from other divine spells to which
+  you gain access and learn via Learn a Spell. Prepared spells remain available to
+  you until you cast them or until you prepare your spells again. The number of spells
+  you can prepare each day is called your spell slots.
+
+  As you increase in level as a cleric, the number of spells you can prepare each
+  day increases, as does the highest rank of spell you can cast, as shown in Cleric
+  Spells per Day table above.
+
+  Some of your spells require you to attempt a spell attack to see how effective they
+  are or for your enemies to roll against your spell DC (typically by attempting a
+  saving throw). Since your key attribute is Wisdom, your spell attack modifier and
+  spell DC use your Wisdom modifier.
+
+  Heightening Spells
+
+  When you get spell slots of 2nd rank and higher, you can fill those slots with stronger
+  versions of lower-rank spells. This increases the spell''s rank, heightening it
+  to match the spell slot. Many spells have specific improvements when they are heightened
+  to certain ranks.
+
+  Cantrips
+
+  Some of your spells are cantrips. A cantrip is a special type of spell that doesn''t
+  use spell slots. You can cast a cantrip at will, any number of times per day. A
+  cantrip is always automatically heightened to half your level rounded up—this is
+  usually equal to the highest rank of cleric spell slot you have. For example, as
+  a 1st-level cleric, your cantrips are 1st-rank spells, and as a 5th-level cleric,
+  your cantrips are 3rd-rank spells.'
+level: 1
+mechanicsScope: builder
+name: cleric spellcasting
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
+    revision: 1
+  id: 903d76c2-586a-5c2c-a584-914918f96686
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: Cleric Spellcasting
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
+    inputName: sourceName
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: prepared
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
+    inputName: castingKind
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: divine
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
+    inputName: tradition
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: wis
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/attribute
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
+    inputName: attribute
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/increase-source-proficiency
+    revision: 1
+  id: 84940614-eef2-55df-82de-5755041e615d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiency
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 92d483d7-bcb8-5cb3-8cf1-2a07a2a66773
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 1e8ec332-1f71-5dd7-84d0-320d22b1538a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: fa98735c-f70a-5e63-838d-80d4755fe068
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 2
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 6de47ec8-dcbe-53b8-a139-a79335250eff
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 3
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 6c972139-4101-54fe-af48-f3ae7dcbfbd9
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 4
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 0b6891fe-caaf-58eb-97a5-8088c2980888
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 5
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: ba3b31c4-b16a-5a60-98e4-d4400ff6c53f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 3
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 6
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 629981f0-a142-5594-a539-0ef752ecc6c8
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 7
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 2680cf20-a9f2-5b7f-a83d-845253d15f79
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 8
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 7d711b62-2a13-587f-982f-d25213395a5a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 9
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: aa7dc8b9-d26f-509a-a95f-7d5caf09e10b
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 5
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 10
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 80a86910-5524-547d-a961-58b7012e9ded
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 11
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 1ec07d09-f44a-500e-a262-90fddf6908a6
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 12
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 1cfaefbc-a27d-5f2c-85fc-2adf0ea9217d
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 7
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 13
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 67f05494-a971-5ffb-9d34-e0abd873050f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 7
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 14
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 8c875dac-7499-5dba-bb32-826f9fea7bb1
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 15
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 5750564b-2a6e-56cb-9c59-b4cb306deec0
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 16
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 2a910f8c-bc02-526f-a1d3-60d1a5aaed55
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 17
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: da14b4db-39e1-5e25-b437-327c926b22b1
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 18
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
+    revision: 1
+  id: 8ec6e065-5919-5bc3-ad16-d7c9a3a08572
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: sourceId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 10
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: spellRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: count
+  startLevel: 19
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: AvNbdGSOTWNRgcxs
+traits:
+- cleric

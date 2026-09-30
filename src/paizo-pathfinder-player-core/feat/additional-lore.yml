@@ -13,20 +13,31 @@ repeatPolicy:
   instanceLevelGates: []
   maxCount: null
 rules:
+- choice:
+    answer:
+      kind: freeText
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
+    label: Lore name
+    legacySelections:
+    - inputName: loreName
+      lookupName: additional-lore-name
+      ruleID: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
+      valueTypeID: org.openomen.pf2e.core/value/string
+    name: $.additional-lore.name
+    startLevel: 1
+  id: c5846cff-7ccb-5fc7-a84a-5813ae122f55
+  key: choice-additional-lore-name
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
     revision: 1
   id: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
   inputRecipes:
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: additional-lore-name
-          options:
-            kind: unrestricted
-          valueTypeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+        kind: choice
+        name: $.additional-lore.name
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:
       source:
@@ -34,20 +45,20 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
     revision: 1
   id: 76e1381f-f692-5dc5-8556-02b4fb9875bd
   inputRecipes:
   - expectedValue:
       source:
-        kind: lookupByName
-        name: additional-lore-name
-      valueTypeID: org.openomen.pf2e.core/value/string
+        kind: choice
+        name: $.additional-lore.name
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:
       source:
@@ -55,20 +66,20 @@ rules:
         value:
           payload: 4
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 3
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
     revision: 1
   id: 158af683-b149-5a2e-a5d9-e5d4ba28fa27
   inputRecipes:
   - expectedValue:
       source:
-        kind: lookupByName
-        name: additional-lore-name
-      valueTypeID: org.openomen.pf2e.core/value/string
+        kind: choice
+        name: $.additional-lore.name
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:
       source:
@@ -76,20 +87,20 @@ rules:
         value:
           payload: 6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 7
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-lore-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
     revision: 1
   id: 64a24b99-b575-5246-af08-ff1b960d920c
   inputRecipes:
   - expectedValue:
       source:
-        kind: lookupByName
-        name: additional-lore-name
-      valueTypeID: org.openomen.pf2e.core/value/string
+        kind: choice
+        name: $.additional-lore.name
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:
       source:
@@ -97,8 +108,8 @@ rules:
         value:
           payload: 8
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 15
 source:

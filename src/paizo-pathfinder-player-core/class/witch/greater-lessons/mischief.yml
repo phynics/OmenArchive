@@ -11,7 +11,7 @@ mechanicsScope: builder
 name: lesson of mischief
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
     revision: 1
   id: 11439c74-2d92-557d-91f8-6a7c7266e5fa
   inputRecipes:
@@ -21,8 +21,8 @@ rules:
         value:
           payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -30,8 +30,8 @@ rules:
         value:
           payload: c61f6a8f-f37c-5171-ab84-555ccdf3b17f
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: grantId
   - expectedValue:
       source:
@@ -39,8 +39,8 @@ rules:
         value:
           payload: 78b1967e-065e-55e1-ad09-75de43c671b2
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:
       source:
@@ -49,8 +49,8 @@ rules:
           payload:
             kind: cantrip
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
     inputName: rankPolicy
   - expectedValue:
       source:
@@ -59,18 +59,18 @@ rules:
           payload:
             kind: focus
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
     inputName: castFrequency
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
     revision: 1
   id: bdc4fa5c-d665-5d42-bed1-aabac3107037
   inputRecipes: []
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 9ec51d4d-8fda-5a54-8f6f-80bb57e848f5
   inputRecipes:
@@ -80,8 +80,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -89,8 +89,8 @@ rules:
         value:
           payload: 8890013f-9478-5c42-8a46-9c8a993e01c8
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -98,8 +98,8 @@ rules:
         value:
           payload: 009ea7cd-a793-5384-9dce-7f1c7c96b3dc
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 source:

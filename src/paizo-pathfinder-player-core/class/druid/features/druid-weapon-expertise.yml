@@ -1,0 +1,88 @@
+---
+action: {}
+description: You have become thoroughly familiar with the weapons of your trade. Your
+  proficiency ranks for all simple weapons and unarmed attacks increase to expert.
+level: 11
+mechanicsScope: builder
+name: druid weapon expertise
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: ad98c823-5b84-516f-86a2-61bd0d5033e2
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: simple
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-1
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: 87cd25a2-e62e-5b63-ace7-d7d1722eb32c
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: unarmed
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 4
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-2
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: Ra32tlqBxHzT6fzN
+traits:
+- druid

@@ -13,36 +13,48 @@ repeatPolicy:
   instanceLevelGates: []
   maxCount: null
 rules:
+- choice:
+    answer:
+      filter:
+        kind: union
+        values:
+        - kind: single
+          value:
+            kind: hasPathPrefix
+            path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
+        - kind: single
+          value:
+            kind: hasPathPrefix
+            path: omen://class/witch/greater-lessons?source=paizo-pathfinder-player-core
+        - kind: single
+          value:
+            kind: hasPathPrefix
+            path: omen://class/witch/major-lessons?source=paizo-pathfinder-player-core
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    label: Lesson
+    legacySelections:
+    - inputName: featureId
+      lookupName: lesson
+      ruleID: ea65835c-020c-5101-b2b6-1d576cbab142
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    name: $.feat.major-lesson.lesson
+    startLevel: 1
+  id: 67c26448-8c44-5f63-adbd-e4fcf571b983
+  key: choice-feat-major-lesson-lesson
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
     revision: 1
-  id: ea65835c-020c-5101-b2b6-1d576cbab142
+  id: 0bbc031e-c756-574c-a1d8-46a62e8e3b17
   inputRecipes:
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: lesson
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  kind: hasPathPrefix
-                  path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
-              - kind: single
-                value:
-                  kind: hasPathPrefix
-                  path: omen://class/witch/greater-lessons?source=paizo-pathfinder-player-core
-              - kind: single
-                value:
-                  kind: hasPathPrefix
-                  path: omen://class/witch/major-lessons?source=paizo-pathfinder-player-core
-            kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.core/value/feature-id
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
+        kind: choice
+        name: $.feat.major-lesson.lesson
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
     inputName: featureId
+  key: choice-set-1
   startLevel: 1
 source:
   book: Pathfinder Player Core

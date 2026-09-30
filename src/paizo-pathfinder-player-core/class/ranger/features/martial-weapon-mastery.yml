@@ -1,0 +1,128 @@
+---
+action: {}
+description: You fully understand your weapons. Your proficiency ranks for simple
+  weapons, martial weapons, and unarmed attacks increase to master.
+level: 13
+mechanicsScope: builder
+name: martial weapon mastery
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: e11932a2-4138-5368-b718-0b41198ecb2a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: martial
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-1
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: 19569940-d574-525a-870e-3bbf42f27bdc
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: simple
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-2
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: e5651cf1-0eab-5859-8db3-a3a25ad83ac8
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: unarmed
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-3
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: i6563IU7x4L9oRgC
+traits:
+- champion
+- investigator
+- ranger
+- swashbuckler

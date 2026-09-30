@@ -9,40 +9,40 @@ name: improved familiar attunement
 rules:
 - id: a0659116-55ec-5aa3-b926-168af4a6d503
   effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-feat
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
     revision: 2
   inputRecipes:
   - inputName: selectionId
     expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
           revision: 1
           payload: d87ec061-e4e2-5a23-967e-af3c66c99ea5
   - inputName: featId
     expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/feat-id
+          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
           revision: 1
           payload: 48428829-c126-51e9-b1cc-0c5f0b67b527
   startLevel: 1
 - id: 623fe6c5-cefa-5f67-9b19-38ea84621e7a
   effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-action
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-action
     revision: 1
   inputRecipes:
   - inputName: actionId
     expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/action-id
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/action-id
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/action-id
+          typeID: me.atkn.omen.pf2e.playercore/value/action-id
           revision: 1
           payload: 37a83d37-2f65-523e-9aa1-82eef3697b44
   startLevel: 1

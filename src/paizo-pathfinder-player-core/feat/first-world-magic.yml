@@ -10,8 +10,44 @@ name: first world magic
 prerequisites: []
 rarity: common
 rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: spell
+        - kind: single
+          value:
+            kind: hasRarity
+            rarity: common
+        - kind: single
+          value:
+            kind: hasMetadata
+            metadataKey: spell.category
+            metadataValue: cantrip
+        - kind: single
+          value:
+            kind: hasMetadata
+            metadataKey: spell.tradition
+            metadataValue: primal
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+    label: First World Magic Spell
+    legacySelections:
+    - inputName: spellId
+      lookupName: first-world-magic-spell
+      ruleID: c1172df4-b063-5a4b-b40a-be1d8bad4953
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    name: $.feat.first-world-magic.first-world-magic-spell
+    startLevel: 1
+  id: 32f2bf0d-9c96-54f7-8485-c3fb6a92557a
+  key: choice-feat-first-world-magic-first-world-magic-spell
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-innate-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
     revision: 1
   id: c1172df4-b063-5a4b-b40a-be1d8bad4953
   inputRecipes:
@@ -21,8 +57,8 @@ rules:
         value:
           payload: f9fc550d-e6c9-5b90-9142-c5607ad4e3fd
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -30,8 +66,8 @@ rules:
         value:
           payload: First World Magic
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: sourceName
   - expectedValue:
       source:
@@ -39,39 +75,14 @@ rules:
         value:
           payload: 6b02bd09-bb6c-5a7c-84dc-a161fc078c42
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: grantId
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: first-world-magic-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: primal
-            kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+        kind: choice
+        name: $.feat.first-world-magic.first-world-magic-spell
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:
       source:
@@ -79,8 +90,8 @@ rules:
         value:
           payload: primal
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/tradition
-      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
     inputName: tradition
   - expectedValue:
       source:
@@ -88,8 +99,8 @@ rules:
         value:
           payload: cha
           revision: 1
-          typeID: org.openomen.pf2e.core/value/attribute
-      valueTypeID: org.openomen.pf2e.core/value/attribute
+          typeID: me.atkn.omen.pf2e.playercore/value/attribute
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
     inputName: attribute
   - expectedValue:
       source:
@@ -98,8 +109,8 @@ rules:
           payload:
             kind: cantrip
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
     inputName: rankPolicy
   - expectedValue:
       source:
@@ -108,8 +119,8 @@ rules:
           payload:
             kind: atWill
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
     inputName: castFrequency
   startLevel: 1
 source:

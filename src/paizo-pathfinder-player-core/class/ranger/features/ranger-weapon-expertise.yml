@@ -1,0 +1,148 @@
+---
+action: {}
+description: You gain every advantage from your weapons. Your proficiency rank for
+  martial weapons, simple weapons, and unarmed attacks increases to expert. You gain
+  access to the critical specialization effects of all such weapons and unarmed attacks
+  when attacking your hunted prey.
+level: 5
+mechanicsScope: mixed
+name: ranger weapon expertise
+rules:
+- id: 21ab3dd9-eda3-571a-b866-32139e9f2aee
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-critical-specialization
+    revision: 1
+  inputRecipes:
+  - inputName: uuid
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+          revision: 1
+          payload: 952b3fce-86d6-5cae-ab3b-c7d17142b978
+  - inputName: weaponGroup
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-group
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-group
+          revision: 1
+          payload: any
+  startLevel: 1
+- id: 2de3bf68-b996-5187-80d1-a7898a45b989
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: martial
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+          revision: 1
+          payload: false
+  startLevel: 1
+- id: 8df16d51-b5a4-5614-996d-bd9bc1d9bb5a
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: simple
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+          revision: 1
+          payload: false
+  startLevel: 1
+- id: 683ba965-3abd-5389-a512-47e514a31080
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  inputRecipes:
+  - inputName: weaponDesignation
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+          revision: 1
+          payload:
+            kind: filter
+            weaponKind: unarmed
+            weaponGroup: any
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+          revision: 1
+          payload: 4
+  - inputName: selfScaling
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+          revision: 1
+          payload: false
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: QhoW8ivPvYmWzyEZ
+traits:
+- ranger

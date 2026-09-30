@@ -10,8 +10,44 @@ name: otherworldly magic
 prerequisites: []
 rarity: common
 rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: spell
+        - kind: single
+          value:
+            kind: hasRarity
+            rarity: common
+        - kind: single
+          value:
+            kind: hasMetadata
+            metadataKey: spell.category
+            metadataValue: cantrip
+        - kind: single
+          value:
+            kind: hasMetadata
+            metadataKey: spell.tradition
+            metadataValue: arcane
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+    label: Otherworldly Magic Spell
+    legacySelections:
+    - inputName: spellId
+      lookupName: otherworldly-magic-spell
+      ruleID: 9a58e0df-e080-5bc7-85ab-1315342197ff
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    name: $.feat.otherworldly-magic.otherworldly-magic-spell
+    startLevel: 1
+  id: 68865885-4cdf-533b-926f-5f36e1cda45b
+  key: choice-feat-otherworldly-magic-otherworldly-magic-spell
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-innate-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
     revision: 1
   id: 9a58e0df-e080-5bc7-85ab-1315342197ff
   inputRecipes:
@@ -21,8 +57,8 @@ rules:
         value:
           payload: ca0eb87b-2e8d-528e-8794-9689682b8ab1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -30,8 +66,8 @@ rules:
         value:
           payload: Otherworldly Magic
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: sourceName
   - expectedValue:
       source:
@@ -39,39 +75,14 @@ rules:
         value:
           payload: f5a7d26e-b19f-53ec-a1df-b2a7b510ef44
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: grantId
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: otherworldly-magic-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: arcane
-            kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+        kind: choice
+        name: $.feat.otherworldly-magic.otherworldly-magic-spell
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:
       source:
@@ -79,8 +90,8 @@ rules:
         value:
           payload: arcane
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/tradition
-      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
     inputName: tradition
   - expectedValue:
       source:
@@ -88,8 +99,8 @@ rules:
         value:
           payload: cha
           revision: 1
-          typeID: org.openomen.pf2e.core/value/attribute
-      valueTypeID: org.openomen.pf2e.core/value/attribute
+          typeID: me.atkn.omen.pf2e.playercore/value/attribute
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
     inputName: attribute
   - expectedValue:
       source:
@@ -98,8 +109,8 @@ rules:
           payload:
             kind: cantrip
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
     inputName: rankPolicy
   - expectedValue:
       source:
@@ -108,8 +119,8 @@ rules:
           payload:
             kind: atWill
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
     inputName: castFrequency
   startLevel: 1
 source:

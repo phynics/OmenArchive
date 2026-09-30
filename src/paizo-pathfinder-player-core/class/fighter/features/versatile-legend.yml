@@ -1,0 +1,164 @@
+---
+action: {}
+description: You are nigh-unmatched with any weapon. Your proficiency ranks for simple
+  weapons, martial weapons, and unarmed attacks increase to legendary, and your proficiency
+  rank for advanced weapons increases to master. Your proficiency rank for your fighter
+  class DC increases to master.
+level: 19
+mechanicsScope: builder
+name: versatile legend
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: bd302761-d032-5064-881d-5744219b8656
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: advanced
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-1
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: 880f3fbe-b37f-56d5-afd2-316ff36ba33a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: martial
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-3
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: ef63d363-60d1-50b1-b096-547dfad34119
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: simple
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-4
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
+    revision: 1
+  id: b2076f5b-eb09-5cf1-a4c2-efdbbb615e7e
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: filter
+            weaponGroup: any
+            weaponKind: unarmed
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
+    inputName: weaponDesignation
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 8
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyRank
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: false
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
+    inputName: selfScaling
+  key: generated-5
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: 0H2LxtiZTJ275pSD
+traits:
+- fighter

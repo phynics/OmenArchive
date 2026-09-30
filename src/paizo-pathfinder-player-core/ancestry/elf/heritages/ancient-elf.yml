@@ -1,0 +1,66 @@
+---
+ancestry: elf
+description: In your long life, you've dabbled in many paths and many styles. A typical
+  ancient elf is at least 100 years old, though you might be younger at the GM's discretion.
+  Choose a class other than your own. You gain the multiclass dedication feat for
+  that class, even though you don't meet its level prerequisite. You must still meet
+  its other prerequisites to gain the feat.
+mechanicsScope: builder
+name: ancient elf
+rarity: common
+rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: feat
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: dedication
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: multiclass
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    label: Heritage Feat
+    legacySelections:
+    - inputName: featId
+      lookupName: heritage-feat
+      ruleID: b83190e2-ad58-584f-a588-42596e887686
+      sourceID: 9020e3ef-8d08-5b04-bb0f-ab7bcd5a1fe2
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    name: $.heritage.ancient-elf.heritage-feat
+    startLevel: 1
+  id: a77b48fb-d879-50d8-8027-18c2229852de
+  key: choice-heritage-ancient-elf-heritage-feat
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: b83190e2-ad58-584f-a588-42596e887686
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ed226c21-e662-5cc2-9c2b-bdc4abb7e161
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.heritage.ancient-elf.heritage-feat
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

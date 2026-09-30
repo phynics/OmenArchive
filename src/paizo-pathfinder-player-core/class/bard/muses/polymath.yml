@@ -22,7 +22,7 @@ mechanicsScope: builder
 name: polymath
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-feat
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
     revision: 2
   id: 1dc70ff2-468b-58b0-9b1e-6194f3c08691
   inputRecipes:
@@ -32,8 +32,8 @@ rules:
         value:
           payload: 50e057fc-efea-5668-bd73-73e20b0d8e7e
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: selectionId
   - expectedValue:
       source:
@@ -41,12 +41,12 @@ rules:
         value:
           payload: 9b497376-d682-5ba0-965a-afb96b462f9d
           revision: 1
-          typeID: org.openomen.pf2e.core/value/feat-id
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
     inputName: featId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 035c0b87-64d9-5bbe-86a1-6bc98818315b
   inputRecipes:
@@ -56,8 +56,8 @@ rules:
         value:
           payload: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -65,8 +65,8 @@ rules:
         value:
           payload: 391accd6-b16f-5405-9256-7fc80fef11b9
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -74,8 +74,8 @@ rules:
         value:
           payload: 16fbd17d-cb71-5b41-a7a4-d4c158b9ecac
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 source:

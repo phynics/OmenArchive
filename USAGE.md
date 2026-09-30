@@ -29,7 +29,7 @@ src/
     background/
     class/                   # classes and their declared option collections
     feat/
-    heritage/
+    versatile-heritage/       # ancestry-owned heritages live under ancestry/<owner>/heritages/
     item/                  # Canonical equipment records (all subtypes)
     archetype/               # archetype bundles and owned feats
     companion/
@@ -51,9 +51,9 @@ publisher: Paizo
 title: Pathfinder Player Core
 published: "2023-11-15"
 mechanicsModules:
-  - moduleID: org.openomen.pf2e.core
+  - moduleID: me.atkn.omen.pf2e.playercore
     revision: 1
-  - moduleID: org.openomen.pf2e.spellcasting
+  - moduleID: me.atkn.omen.pf2e.playercore-spellcasting
     revision: 1
 ```
 
@@ -134,11 +134,9 @@ seer-elf.yml
 administer-first-aid.yml
 ```
 
-The filename stem must equal the canonical OmenPath encoding of `name`: lowercase letters and
-numbers, spaces converted to hyphens, and punctuation removed. Domain filenames omit the terminal
-`-domain` because it is not part of the domain OmenPath. A level-gated class or ancestry feature
-may prefix its canonical stem with its declared numeric level (for example, `1-reactive-strike`);
-the prefix does not change its OmenPath identity.
+Filename stems are stable kebab-case storage slugs. New records normally use the encoded display
+name, but later display-name edits do not rename files or change identity. Domain slugs omit
+the terminal `-domain`. Class and ancestry feature filenames have no level prefix.
 
 ### Source field
 
@@ -186,16 +184,16 @@ Leave the key out when there are no rules; do not add empty arrays to unchanged 
 rules:
   - id: 11111111-1111-1111-1111-111111111111
     effectReference:
-      kindID: org.openomen.pf2e.core/effect/add-language
+      kindID: me.atkn.omen.pf2e.playercore/effect/add-language
       revision: 1
     inputRecipes:
       - inputName: languageName
         expectedValue:
-          valueTypeID: org.openomen.pf2e.core/value/string
+          valueTypeID: me.atkn.omen.pf2e.playercore/value/string
           source:
             kind: literal
             value:
-              typeID: org.openomen.pf2e.core/value/string
+              typeID: me.atkn.omen.pf2e.playercore/value/string
               revision: 1
               payload: Draconic
     startLevel: 1
@@ -230,7 +228,7 @@ satisfy itself.
 
 Prefer literal values in `inputRecipes` when writing by hand. If a rule needs a new literal shape or prerequisite form, update the shared rule schema first so the archive, loader, and import paths stay in sync.
 
-Spellcasting rules use `org.openomen.pf2e.spellcasting`. Model an innate cantrip with
+Spellcasting rules use `me.atkn.omen.pf2e.playercore-spellcasting`. Model an innate cantrip with
 `rankPolicy: {kind: cantrip}` and `castFrequency: {kind: atWill}`. Model a fixed-rank
 daily spell with `{kind: fixed, rank: N}` and `{kind: perDay, uses: N}`. Daily uses belong
 to each spell grant; do not represent ancestry-granted innate spells as spell slots.
@@ -240,19 +238,20 @@ to each spell grant; do not represent ancestry-granted innate spells as spell sl
 Use a plain `omen://` URI when a rule input refers to another curated resource:
 
 ```yaml
-valueTypeID: org.openomen.pf2e.core/value/feat-id
+valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
 source:
   kind: lookupByID
   id: omen://feat/group-impression?source=paizo-pathfinder-player-core
 ```
 
-The URI path uses the resource's canonical encoded `name`, not its filename. For example,
-`name: armor expertise` is referenced as `omen://class/fighter/features/armor-expertise`,
-even when the storage filename contains a level prefix such as `7-armor-expertise.yml`.
+Archive format 3 derives record paths from storage slugs, not display names. For example,
+`class/fighter/features/armor-expertise.yml` maps to
+`omen://class/fighter/features/armor-expertise`. The YAML `level` field carries the level;
+the filename has no level prefix. Bundle roots use the enclosing directory slug.
 
 An explicit `source` query limits resolution to one publication. Without `source`, all matching
 publication versions are candidates; consumers that require one value use the newest publication
-date, with the publication ID as a deterministic tie-breaker. Malformed or dangling references
+date. Equal latest dates require an explicit publication qualifier. Malformed or dangling references
 must be fixed before Archive-to-OmenDB export. Registered UUID payloads remain valid for executable
 runtime inputs; use a lookup source when a rule should resolve a curated resource by OmenPath.
 
@@ -405,8 +404,8 @@ Rules:
 Path:
 
 ```text
-src/{publication}/heritage/{ancestry}/{slug}.yml
-src/{publication}/heritage/versatile/{slug}.yml
+src/{publication}/ancestry/{ancestry}/heritages/{slug}.yml
+src/{publication}/versatile-heritage/{slug}.yml
 ```
 
 Schema:
@@ -571,7 +570,7 @@ Rules:
 
 - Keep base class data in `{class}.yml`.
 - Put fixed class features in `features/`.
-- Prefix feature filenames with level when the feature is level-gated: `1-reactive-strike.yml`.
+- Use feature filename slugs without level prefixes: `reactive-strike.yml`. Keep the level in YAML.
 - Put class options in the owner-specific collection declared in `schemas/archive-format.json`. For example, bard options use `muses/`, rogue options use `rackets/`, wizard options use `schools/` or `theses/`, and witch options use `patrons/` or one of `basic-lessons/`, `greater-lessons/`, and `major-lessons/`. These collections use the `character-feature` schema and are part of the archive path contract.
 
 ### Feats
@@ -652,8 +651,8 @@ entryFeat: omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-p
 Use only source-backed root fields. Do not infer progression or configuration rules
 from feat names; add those fields only when the source provides them.
 
-Ticket 0055's exact path set is recorded in
-`docs/migrations/player-core-0055-v1.0.0.json`. From the `OmenArchive` directory,
+The Player Core historical path map, including ticket 0055 and batch 0162/0163/0146,
+is recorded in `docs/migrations/player-core-0055-v1.0.0.json`. From the `OmenArchive` directory,
 run `./scripts/player_core_0055_migration.py --apply` to move those records and
 create the eight source-backed roots, or `./scripts/player_core_0055_migration.py
 --check` to verify the completed migration. The script reads the corresponding
@@ -675,9 +674,9 @@ in `description`; do not add partial `rules` to avoid an unsupported classificat
 
 Domains and companions are top-level resource families with their own flat
 directories. Archetypes are bundles whose owned feats live under `feats/`.
-The domain directory is singular for storage, but canonical OmenPath references
-remain plural: `omen://domains/<name>`. Migration tools must preserve that
-identity when they move a domain file.
+Domains use the singular host and filename leaf, such as `omen://domain/air` for
+`domain/air.yml`, even when the display name is `air domain`. Historical domain
+paths belong to the explicit migration map, not current runtime resolution.
 
 ## Schema conventions
 

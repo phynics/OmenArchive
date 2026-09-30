@@ -1,0 +1,61 @@
+---
+action: {}
+description: 'You weren''t born with the power to cast spells, nor have you spent
+  years dedicated to worship, study, or uncovering mystical secrets. Your magic instead
+  has been gifted to you by a potent being, one who knows that by empowering you so,
+  you''ll further the being''s agenda in the world, whatever it may be. This entity
+  is typically mysterious and distant, revealing little of their identity and motivations.
+  They make their will known to you in abstract signs such as omens, dreams, or similar
+  subtleties rather than words.
+
+  Rather than interacting with you directly, your patron works through a familiar—a
+  mystical creature that teaches you, serves as the conduit for your patron''s magic,
+  and maybe even keeps an eye on you to ensure you''re furthering your patron''s nebulous
+  ends.
+
+  At 1st level, choose your patron, which determines your spellcasting tradition and
+  grants you the skill for that tradition of magic, your first witch''s lesson and
+  a unique familiar ability.'
+level: 1
+mechanicsScope: builder
+name: patron
+rules:
+- choice:
+    answer:
+      filter:
+        kind: single
+        value:
+          kind: hasPathPrefix
+          path: omen://class/witch/patrons?source=paizo-pathfinder-player-core
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    label: Patron
+    legacySelections:
+    - inputName: featureId
+      lookupName: class-option
+      ruleID: 78c4ed8d-20fa-5769-88a3-7c6dfb66cda5
+      sourceID: b2cd901f-8bec-5eaa-929d-ba033a592334
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    name: $.witch.patron
+    startLevel: 1
+  id: a2ecc265-825b-53b0-a9c2-f745b691f735
+  key: choice-witch-patron
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
+    revision: 1
+  id: 78c4ed8d-20fa-5769-88a3-7c6dfb66cda5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.witch.patron
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    inputName: featureId
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: KPtF29AaeX2sJW0K
+traits:
+- witch

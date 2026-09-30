@@ -10,51 +10,51 @@ name: scoundrel
 rules:
 - id: 4b75669c-93b2-554a-b597-e2c7eb6bb30f
   effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
     revision: 1
   inputRecipes:
   - inputName: skill
     expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
           revision: 1
           payload:
             kind: diplomacy
   - inputName: proficiencyCap
     expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
           revision: 1
           payload: 2
   startLevel: 1
 - id: cab0eaa1-e65c-520a-83c0-cf2990cb225c
   effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
     revision: 1
   inputRecipes:
   - inputName: skill
     expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/skill
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
           revision: 1
           payload:
             kind: deception
   - inputName: proficiencyCap
     expectedValue:
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
       source:
         kind: literal
         value:
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
           revision: 1
           payload: 2
   startLevel: 1

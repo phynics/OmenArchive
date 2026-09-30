@@ -32,7 +32,7 @@ mechanicsScope: builder
 name: the resentment
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
     revision: 1
   id: 2135a188-e197-51bc-bd98-919096c19ae1
   inputRecipes:
@@ -43,8 +43,8 @@ rules:
           payload:
             kind: occultism
           revision: 1
-          typeID: org.openomen.pf2e.core/value/skill
-      valueTypeID: org.openomen.pf2e.core/value/skill
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
     inputName: skill
   - expectedValue:
       source:
@@ -52,12 +52,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
     revision: 1
   id: aca3e5e4-ce86-548d-b3c6-8655790655c8
   inputRecipes:
@@ -67,8 +67,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -76,8 +76,8 @@ rules:
         value:
           payload: Witch Spellcasting
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: sourceName
   - expectedValue:
       source:
@@ -85,8 +85,8 @@ rules:
         value:
           payload: prepared
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
-      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
     inputName: castingKind
   - expectedValue:
       source:
@@ -94,8 +94,8 @@ rules:
         value:
           payload: occult
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/tradition
-      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
     inputName: tradition
   - expectedValue:
       source:
@@ -103,12 +103,12 @@ rules:
         value:
           payload: int
           revision: 1
-          typeID: org.openomen.pf2e.core/value/attribute
-      valueTypeID: org.openomen.pf2e.core/value/attribute
+          typeID: me.atkn.omen.pf2e.playercore/value/attribute
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
     inputName: attribute
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/increase-source-proficiency
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/increase-source-proficiency
     revision: 1
   id: c8acc813-89a3-5606-9d09-925e162a08fc
   inputRecipes:
@@ -118,8 +118,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -127,12 +127,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiency
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 76576a78-fe32-5a02-b910-90292afc5ce5
   inputRecipes:
@@ -142,8 +142,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -151,8 +151,8 @@ rules:
         value:
           payload: 0
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -160,12 +160,12 @@ rules:
         value:
           payload: 5
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 42a2267f-b17d-589f-b175-13af049d055e
   inputRecipes:
@@ -175,8 +175,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -184,8 +184,8 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -193,12 +193,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: b57a4007-45b4-51f4-9fa2-a1952944c4b9
   inputRecipes:
@@ -208,8 +208,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -217,8 +217,8 @@ rules:
         value:
           payload: cb141428-7ed6-5a74-b412-2733f133c88d
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -249,12 +249,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: b9e6c9a6-7a3a-5c27-ad85-2581e129d1f8
   inputRecipes:
@@ -264,8 +264,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -273,8 +273,8 @@ rules:
         value:
           payload: d4390352-144e-5d30-a4bc-9e00a3dbc402
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -305,12 +305,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: d55e25b6-35d9-5b59-a31f-1438a793321f
   inputRecipes:
@@ -320,8 +320,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -329,8 +329,8 @@ rules:
         value:
           payload: edfc03d8-1080-5552-a96b-a7b7080ac0a2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -361,12 +361,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 603a674b-cc55-5a18-ba91-10660bd8738b
   inputRecipes:
@@ -376,8 +376,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -385,8 +385,8 @@ rules:
         value:
           payload: dd4c0033-6814-535d-a01a-8b9db61d8b7f
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -417,12 +417,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 57b2478d-aaef-5fc1-b4f3-c3c547759bf4
   inputRecipes:
@@ -432,8 +432,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -441,8 +441,8 @@ rules:
         value:
           payload: b737f72c-ffc2-509e-9313-629b7cf3ffcd
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -473,12 +473,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 205b65e5-a5b5-52eb-bce3-f203ba8cdf64
   inputRecipes:
@@ -488,8 +488,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -497,8 +497,8 @@ rules:
         value:
           payload: f2d90901-1a36-5a22-bb01-addd70eeb405
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -529,12 +529,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: aeaf7315-fcb3-53ac-b536-2513247a4ecb
   inputRecipes:
@@ -544,8 +544,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -553,8 +553,8 @@ rules:
         value:
           payload: 8a7d04dd-729d-5ed4-abdc-c4f6acf331d9
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -585,12 +585,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 618454c0-22b0-5804-9662-b3e5a212fb87
   inputRecipes:
@@ -600,8 +600,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -609,8 +609,8 @@ rules:
         value:
           payload: 36b95804-8922-5842-9edb-eebdb920b0e3
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -641,12 +641,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 5f3c509e-8392-59b3-a1ab-0c785c7c1b64
   inputRecipes:
@@ -656,8 +656,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -665,8 +665,8 @@ rules:
         value:
           payload: bae8460a-c198-59f7-baab-a00352617082
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -697,12 +697,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 3eda67c4-b8db-53cc-8c48-ed55f189a860
   inputRecipes:
@@ -712,8 +712,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -721,8 +721,8 @@ rules:
         value:
           payload: 84d6a929-c139-5066-a5e6-61abf87a03f0
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -753,12 +753,12 @@ rules:
                   kind: hasRarity
                   rarity: common
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: a7d9409a-ec90-581f-b4e8-2e567fa21fd3
   inputRecipes:
@@ -768,8 +768,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -777,8 +777,8 @@ rules:
         value:
           payload: 0cf3e82f-10c5-50bd-a66d-afdd59e79114
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -813,12 +813,12 @@ rules:
                   kind: hasExactLevel
                   level: 1
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: faf82775-542e-54f3-b32a-258df3021105
   inputRecipes:
@@ -828,8 +828,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -837,8 +837,8 @@ rules:
         value:
           payload: 899bbf9f-dbb0-595c-98bc-03d848e6e0cb
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -873,12 +873,12 @@ rules:
                   kind: hasExactLevel
                   level: 1
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 7b35a7bb-0d43-56fe-9cdf-cf908231d409
   inputRecipes:
@@ -888,8 +888,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -897,8 +897,8 @@ rules:
         value:
           payload: 10d792b4-b39c-5cc3-8c5c-9a163506f934
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -933,12 +933,12 @@ rules:
                   kind: hasExactLevel
                   level: 1
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 37c6e676-4104-5ee5-8b62-0c23a1e83136
   inputRecipes:
@@ -948,8 +948,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -957,8 +957,8 @@ rules:
         value:
           payload: 17d97d97-e179-5713-bfdb-67d6af6283ab
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -993,12 +993,12 @@ rules:
                   kind: hasExactLevel
                   level: 1
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 35df7442-36ec-5077-8967-51998a2bba98
   inputRecipes:
@@ -1008,8 +1008,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1017,8 +1017,8 @@ rules:
         value:
           payload: ff84796e-4ca0-5f29-8ead-496f912b3a9f
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1053,12 +1053,12 @@ rules:
                   kind: hasExactLevel
                   level: 1
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: a6de7dea-4f84-50ca-9aa9-6bcf2489c288
   inputRecipes:
@@ -1068,8 +1068,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1077,8 +1077,8 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -1086,12 +1086,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 2
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: d36dec88-b505-5920-aab2-9703c39eb4a6
   inputRecipes:
@@ -1101,8 +1101,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1110,8 +1110,8 @@ rules:
         value:
           payload: 5ec28a5e-26b6-5cd9-8a6a-6f66b2aa9ac6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1146,12 +1146,12 @@ rules:
                   kind: hasMaxLevel
                   level: 1
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 2
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: f8afe696-2be9-59d2-9c5f-c4183f30a312
   inputRecipes:
@@ -1161,8 +1161,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1170,8 +1170,8 @@ rules:
         value:
           payload: de653114-306f-5625-834d-8a5e0daced80
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1206,12 +1206,12 @@ rules:
                   kind: hasMaxLevel
                   level: 1
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 2
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: ee5f212a-65f6-599f-abed-e7390ffff15f
   inputRecipes:
@@ -1221,8 +1221,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1230,8 +1230,8 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -1239,12 +1239,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 3
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 7510a96e-a2cf-58a5-a0ac-6bf82804324f
   inputRecipes:
@@ -1254,8 +1254,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1263,8 +1263,8 @@ rules:
         value:
           payload: 189b4236-1988-5061-b614-9d759598998c
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1299,12 +1299,12 @@ rules:
                   kind: hasMaxLevel
                   level: 2
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 3
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 4796387b-521c-543b-b949-ea60b955496c
   inputRecipes:
@@ -1314,8 +1314,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1323,8 +1323,8 @@ rules:
         value:
           payload: 5bbe1439-8320-56ea-b129-c80f41b7b510
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1359,12 +1359,12 @@ rules:
                   kind: hasMaxLevel
                   level: 2
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 3
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: b9575869-f07b-534a-ae51-22d060ce175b
   inputRecipes:
@@ -1374,8 +1374,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1383,8 +1383,8 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -1392,12 +1392,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 4
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 1e286f52-1e7a-5de4-997d-bb5f3ec898d3
   inputRecipes:
@@ -1407,8 +1407,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1416,8 +1416,8 @@ rules:
         value:
           payload: 453051fe-43f1-543a-9b9f-0c1146a837d3
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1452,12 +1452,12 @@ rules:
                   kind: hasMaxLevel
                   level: 2
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 4
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: a30e7a22-e417-57d9-a68c-42af35b8caca
   inputRecipes:
@@ -1467,8 +1467,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1476,8 +1476,8 @@ rules:
         value:
           payload: dc200357-0403-5730-839a-c616ad7e0630
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1512,12 +1512,12 @@ rules:
                   kind: hasMaxLevel
                   level: 2
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 4
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 542c5cc7-a6a4-58d9-aabc-b5a54f99f8e7
   inputRecipes:
@@ -1527,8 +1527,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1536,8 +1536,8 @@ rules:
         value:
           payload: 3
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -1545,12 +1545,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 5
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 1ea088f9-307d-574b-9d9e-273a4cdccbf0
   inputRecipes:
@@ -1560,8 +1560,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1569,8 +1569,8 @@ rules:
         value:
           payload: a22b071a-3408-54bb-a315-e2520fddd7fd
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1605,12 +1605,12 @@ rules:
                   kind: hasMaxLevel
                   level: 3
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 5
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 0aa649f9-2d9c-5359-9c75-791b3722f23d
   inputRecipes:
@@ -1620,8 +1620,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1629,8 +1629,8 @@ rules:
         value:
           payload: 1d5ffeb5-480b-52a6-90df-207d0208b668
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1665,12 +1665,12 @@ rules:
                   kind: hasMaxLevel
                   level: 3
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 5
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 7a356587-6681-5300-aa5b-44b151b496ab
   inputRecipes:
@@ -1680,8 +1680,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1689,8 +1689,8 @@ rules:
         value:
           payload: 3
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -1698,12 +1698,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 6
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 8012152b-1808-5541-868b-5e4a02fdadd9
   inputRecipes:
@@ -1713,8 +1713,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1722,8 +1722,8 @@ rules:
         value:
           payload: ee8addb7-754d-5a8b-b234-0a7b2d5fc9e6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1758,12 +1758,12 @@ rules:
                   kind: hasMaxLevel
                   level: 3
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 6
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: fdcc8912-a986-5c68-8284-0f0f80ac2c3b
   inputRecipes:
@@ -1773,8 +1773,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1782,8 +1782,8 @@ rules:
         value:
           payload: b5609ea0-d4f6-5190-8c1d-a86a44c59fb0
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1818,12 +1818,12 @@ rules:
                   kind: hasMaxLevel
                   level: 3
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 6
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: f9732af9-55e9-5551-8866-63726636dbcf
   inputRecipes:
@@ -1833,8 +1833,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1842,8 +1842,8 @@ rules:
         value:
           payload: 4
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -1851,12 +1851,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 7
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: ddae87c6-646f-5bbd-9b66-dec9d1fea7ff
   inputRecipes:
@@ -1866,8 +1866,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1875,8 +1875,8 @@ rules:
         value:
           payload: 4c6cc423-9793-524b-b58a-69003b33e842
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1911,12 +1911,12 @@ rules:
                   kind: hasMaxLevel
                   level: 4
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 7
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 2ea0ee5c-062b-5278-b153-296203fd662e
   inputRecipes:
@@ -1926,8 +1926,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1935,8 +1935,8 @@ rules:
         value:
           payload: 5526cf3b-9a5d-5444-a3f3-1e5d2a35f816
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -1971,12 +1971,12 @@ rules:
                   kind: hasMaxLevel
                   level: 4
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 7
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 60d1d87a-d582-59ff-a24b-26c9414337ef
   inputRecipes:
@@ -1986,8 +1986,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -1995,8 +1995,8 @@ rules:
         value:
           payload: 4
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -2004,12 +2004,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 8
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: b9a5936a-da18-5fcd-9a2e-3bfe79f91813
   inputRecipes:
@@ -2019,8 +2019,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2028,8 +2028,8 @@ rules:
         value:
           payload: a45e82ac-d582-5725-a93f-fb72cce6d29f
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2064,12 +2064,12 @@ rules:
                   kind: hasMaxLevel
                   level: 4
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 8
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 323a7561-56cc-5fc2-9f72-467f5be1bb06
   inputRecipes:
@@ -2079,8 +2079,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2088,8 +2088,8 @@ rules:
         value:
           payload: b6e4054e-3905-5868-98b2-8119946bacde
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2124,12 +2124,12 @@ rules:
                   kind: hasMaxLevel
                   level: 4
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 8
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 0a8a3908-a140-5cf8-a1e6-848d0a2e9607
   inputRecipes:
@@ -2139,8 +2139,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2148,8 +2148,8 @@ rules:
         value:
           payload: 5
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -2157,12 +2157,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 9
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: ead7367e-45e6-5dfe-a3d5-07ade0511d9f
   inputRecipes:
@@ -2172,8 +2172,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2181,8 +2181,8 @@ rules:
         value:
           payload: 5aac6b5a-271e-5fa3-b6b7-cb7aeab9bc35
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2217,12 +2217,12 @@ rules:
                   kind: hasMaxLevel
                   level: 5
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 9
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: dc862ed9-2b7a-55e7-a448-5a412d6faca0
   inputRecipes:
@@ -2232,8 +2232,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2241,8 +2241,8 @@ rules:
         value:
           payload: 9700d151-1664-5f17-ba97-a67c74e2f361
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2277,12 +2277,12 @@ rules:
                   kind: hasMaxLevel
                   level: 5
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 9
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 8df20eaf-363c-5632-8c26-002f85d11b3d
   inputRecipes:
@@ -2292,8 +2292,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2301,8 +2301,8 @@ rules:
         value:
           payload: 5
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -2310,12 +2310,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 10
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: b8b2f5be-1937-5c95-a4c3-ac4705de758b
   inputRecipes:
@@ -2325,8 +2325,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2334,8 +2334,8 @@ rules:
         value:
           payload: dacf9397-a75a-5845-95dd-9da82bb634ab
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2370,12 +2370,12 @@ rules:
                   kind: hasMaxLevel
                   level: 5
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 10
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: af30678c-cc93-596c-86d5-8c19024b2ac1
   inputRecipes:
@@ -2385,8 +2385,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2394,8 +2394,8 @@ rules:
         value:
           payload: b0537cfe-628a-5b65-b71f-63505f419f14
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2430,12 +2430,12 @@ rules:
                   kind: hasMaxLevel
                   level: 5
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 10
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: f06d4ac5-7108-5e55-a4c2-673991456524
   inputRecipes:
@@ -2445,8 +2445,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2454,8 +2454,8 @@ rules:
         value:
           payload: 6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -2463,12 +2463,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 11
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 630bb23b-e600-5346-9ae1-f4aac7ffbeba
   inputRecipes:
@@ -2478,8 +2478,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2487,8 +2487,8 @@ rules:
         value:
           payload: 8637989c-3e7f-5229-b9f8-799f91c66aa3
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2523,12 +2523,12 @@ rules:
                   kind: hasMaxLevel
                   level: 6
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 11
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 891db9c2-e409-5606-b658-9352fa148469
   inputRecipes:
@@ -2538,8 +2538,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2547,8 +2547,8 @@ rules:
         value:
           payload: 22760b4f-df3e-5a44-9e97-386f97bee927
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2583,12 +2583,12 @@ rules:
                   kind: hasMaxLevel
                   level: 6
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 11
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: aeb980dd-281b-5fd9-b955-ff928d205e92
   inputRecipes:
@@ -2598,8 +2598,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2607,8 +2607,8 @@ rules:
         value:
           payload: 6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -2616,12 +2616,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 12
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 50df68d3-05db-567d-8e9f-3a012af4620d
   inputRecipes:
@@ -2631,8 +2631,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2640,8 +2640,8 @@ rules:
         value:
           payload: 2b0535e5-e4dc-5976-8088-dac96615c08b
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2676,12 +2676,12 @@ rules:
                   kind: hasMaxLevel
                   level: 6
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 12
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 8c252f01-e65b-52ce-bfe0-e08fd0627f12
   inputRecipes:
@@ -2691,8 +2691,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2700,8 +2700,8 @@ rules:
         value:
           payload: fbbc0143-416e-5aae-9bb8-89a290f8ca4c
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2736,12 +2736,12 @@ rules:
                   kind: hasMaxLevel
                   level: 6
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 12
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: eeb6f3b8-f59a-5028-ba23-d1f3ce7741b5
   inputRecipes:
@@ -2751,8 +2751,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2760,8 +2760,8 @@ rules:
         value:
           payload: 7
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -2769,12 +2769,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 13
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: fd66c4aa-bdf3-5f74-963a-a28f1079d0f2
   inputRecipes:
@@ -2784,8 +2784,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2793,8 +2793,8 @@ rules:
         value:
           payload: 0a080916-d9bf-53c8-9e33-a1caec77b442
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2829,12 +2829,12 @@ rules:
                   kind: hasMaxLevel
                   level: 7
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 13
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: e8f14f31-2bcd-5e02-8add-6711c20c2d31
   inputRecipes:
@@ -2844,8 +2844,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2853,8 +2853,8 @@ rules:
         value:
           payload: 0d2f599c-14a5-52f7-aa90-d435fb9a44bc
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2889,12 +2889,12 @@ rules:
                   kind: hasMaxLevel
                   level: 7
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 13
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: d97851bb-c920-51c9-913f-b3d7c57eb545
   inputRecipes:
@@ -2904,8 +2904,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2913,8 +2913,8 @@ rules:
         value:
           payload: 7
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -2922,12 +2922,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 14
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: bdcfd090-8deb-541b-8b6f-e67f2b37fb46
   inputRecipes:
@@ -2937,8 +2937,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -2946,8 +2946,8 @@ rules:
         value:
           payload: 6247ef6e-6d25-5407-8625-5f7e5a973516
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -2982,12 +2982,12 @@ rules:
                   kind: hasMaxLevel
                   level: 7
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 14
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: a40a92f1-75b0-5101-a42c-9a640a7edacd
   inputRecipes:
@@ -2997,8 +2997,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3006,8 +3006,8 @@ rules:
         value:
           payload: 0fb3ab2f-75b8-5e0f-8b0f-e3ad07017cf4
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3042,12 +3042,12 @@ rules:
                   kind: hasMaxLevel
                   level: 7
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 14
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 31b849eb-0db3-5067-a7f3-ffc80651ad35
   inputRecipes:
@@ -3057,8 +3057,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3066,8 +3066,8 @@ rules:
         value:
           payload: 8
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -3075,12 +3075,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 15
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: c6774ffc-15b9-5f8c-84a8-a9ea6820d8b2
   inputRecipes:
@@ -3090,8 +3090,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3099,8 +3099,8 @@ rules:
         value:
           payload: 17bbf83f-d2c6-51d1-8f6c-2aeb9ef549dc
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3135,12 +3135,12 @@ rules:
                   kind: hasMaxLevel
                   level: 8
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 15
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 62d14242-0ce4-54b6-9005-c01e33d7fbbc
   inputRecipes:
@@ -3150,8 +3150,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3159,8 +3159,8 @@ rules:
         value:
           payload: 3e6c6500-e12f-56df-b24b-34ecf7bb09de
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3195,12 +3195,12 @@ rules:
                   kind: hasMaxLevel
                   level: 8
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 15
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 96e41f89-4b11-5842-a792-5d530f360737
   inputRecipes:
@@ -3210,8 +3210,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3219,8 +3219,8 @@ rules:
         value:
           payload: 8
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -3228,12 +3228,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 16
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 8a590b7b-e30e-5a96-b828-08c31f31c789
   inputRecipes:
@@ -3243,8 +3243,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3252,8 +3252,8 @@ rules:
         value:
           payload: c65a53f2-99b5-5795-a47b-2871a30503a0
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3288,12 +3288,12 @@ rules:
                   kind: hasMaxLevel
                   level: 8
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 16
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 19a994ec-f5a3-53ac-8436-de0338c32c1b
   inputRecipes:
@@ -3303,8 +3303,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3312,8 +3312,8 @@ rules:
         value:
           payload: 60e94fc1-b4fb-574e-b9d1-96878bae5697
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3348,12 +3348,12 @@ rules:
                   kind: hasMaxLevel
                   level: 8
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 16
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: c2a7a0de-4b35-51e1-a312-354718c5f9e9
   inputRecipes:
@@ -3363,8 +3363,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3372,8 +3372,8 @@ rules:
         value:
           payload: 9
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -3381,12 +3381,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 17
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 7112f5c0-e526-54b1-b056-411394ae739e
   inputRecipes:
@@ -3396,8 +3396,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3405,8 +3405,8 @@ rules:
         value:
           payload: c1cb06ba-28ab-5d54-ae64-792b9005563b
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3441,12 +3441,12 @@ rules:
                   kind: hasMaxLevel
                   level: 9
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 17
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 44f401fd-05c1-5267-93e9-2f3dba9d4c1d
   inputRecipes:
@@ -3456,8 +3456,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3465,8 +3465,8 @@ rules:
         value:
           payload: a60eed92-ae08-5ade-89c6-785bdd46cbae
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3501,12 +3501,12 @@ rules:
                   kind: hasMaxLevel
                   level: 9
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 17
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: abafec94-7de3-5c78-8165-18c1a0db2f55
   inputRecipes:
@@ -3516,8 +3516,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3525,8 +3525,8 @@ rules:
         value:
           payload: 9
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -3534,12 +3534,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 18
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: c2e3462e-7ff8-584d-8fa8-4dcfa3020bc7
   inputRecipes:
@@ -3549,8 +3549,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3558,8 +3558,8 @@ rules:
         value:
           payload: 0f0b4111-7283-5334-8c7c-63d3d81de5db
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3594,12 +3594,12 @@ rules:
                   kind: hasMaxLevel
                   level: 9
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 18
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 8ac53954-5f58-55a7-9f65-99f953bfff56
   inputRecipes:
@@ -3609,8 +3609,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3618,8 +3618,8 @@ rules:
         value:
           payload: c891fd3a-8048-5fc7-a3d4-e553381074d1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3654,12 +3654,12 @@ rules:
                   kind: hasMaxLevel
                   level: 9
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 18
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-slot
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
     revision: 1
   id: 8afc71ee-f4ad-53b7-9072-239242320607
   inputRecipes:
@@ -3669,8 +3669,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3678,8 +3678,8 @@ rules:
         value:
           payload: 10
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: spellRank
   - expectedValue:
       source:
@@ -3687,12 +3687,12 @@ rules:
         value:
           payload: 1
           revision: 1
-          typeID: org.openomen.pf2e.core/value/int
-      valueTypeID: org.openomen.pf2e.core/value/int
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
     inputName: count
   startLevel: 19
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: d06012f2-dbf3-5e13-a810-b3b47d93fc49
   inputRecipes:
@@ -3702,8 +3702,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3711,8 +3711,8 @@ rules:
         value:
           payload: 2cf08061-c496-59d4-ab5c-ac785367022c
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3747,12 +3747,12 @@ rules:
                   kind: hasMaxLevel
                   level: 10
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 19
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 6b1a0e49-da7d-573d-ae61-32ba47ed3da9
   inputRecipes:
@@ -3762,8 +3762,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3771,8 +3771,8 @@ rules:
         value:
           payload: 41f2b467-e08c-545d-add3-e302d3c59a1d
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3807,12 +3807,12 @@ rules:
                   kind: hasMaxLevel
                   level: 10
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 19
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 299693ad-be92-5846-b591-fbf32f12c403
   inputRecipes:
@@ -3822,8 +3822,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3831,8 +3831,8 @@ rules:
         value:
           payload: d48edd17-a0f9-5abe-95fb-9acf0ea8c1e4
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3867,12 +3867,12 @@ rules:
                   kind: hasMaxLevel
                   level: 10
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 20
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 9311eb19-f2fd-5072-9136-d62f07d6e3d5
   inputRecipes:
@@ -3882,8 +3882,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3891,8 +3891,8 @@ rules:
         value:
           payload: b96a568d-c474-5430-a517-7f2c98c85012
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -3927,12 +3927,12 @@ rules:
                   kind: hasMaxLevel
                   level: 10
             kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 20
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
     revision: 1
   id: 889d6ccc-7dc8-52b3-ab24-714df87fb26f
   inputRecipes:
@@ -3942,8 +3942,8 @@ rules:
         value:
           payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -3951,8 +3951,8 @@ rules:
         value:
           payload: Witch Focus Spells
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: sourceName
   - expectedValue:
       source:
@@ -3960,8 +3960,8 @@ rules:
         value:
           payload: focus
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
-      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
     inputName: castingKind
   - expectedValue:
       source:
@@ -3969,8 +3969,8 @@ rules:
         value:
           payload: occult
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/tradition
-      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
     inputName: tradition
   - expectedValue:
       source:
@@ -3978,12 +3978,12 @@ rules:
         value:
           payload: int
           revision: 1
-          typeID: org.openomen.pf2e.core/value/attribute
-      valueTypeID: org.openomen.pf2e.core/value/attribute
+          typeID: me.atkn.omen.pf2e.playercore/value/attribute
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
     inputName: attribute
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
     revision: 1
   id: 9b3a3e67-9d10-561b-a6a0-cfdadc95a4fa
   inputRecipes:
@@ -3993,8 +3993,8 @@ rules:
         value:
           payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -4002,8 +4002,8 @@ rules:
         value:
           payload: 406c8193-b924-5c90-b0f4-73fd5fb0d529
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: grantId
   - expectedValue:
       source:
@@ -4011,8 +4011,8 @@ rules:
         value:
           payload: 28872160-c0f1-5ec8-94c0-f86862936e07
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:
       source:
@@ -4021,8 +4021,8 @@ rules:
           payload:
             kind: cantrip
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
     inputName: rankPolicy
   - expectedValue:
       source:
@@ -4031,12 +4031,12 @@ rules:
           payload:
             kind: atWill
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
     inputName: castFrequency
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-known-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
     revision: 1
   id: 1fa4fcf2-6fed-5393-b3c8-d91a92902493
   inputRecipes:
@@ -4046,8 +4046,8 @@ rules:
         value:
           payload: 0835758c-a3b1-57be-bafd-0a18c240f441
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -4055,8 +4055,8 @@ rules:
         value:
           payload: 61262499-a793-5440-ae03-6b6ced2462bb
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: entryId
   - expectedValue:
       source:
@@ -4064,12 +4064,38 @@ rules:
         value:
           payload: 4835eb13-abe9-58bb-915d-b2470c68091a
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   startLevel: 1
+- choice:
+    answer:
+      filter:
+        kind: union
+        values:
+        - kind: single
+          value:
+            id: 4b68f59e-140e-56c3-9e12-ce55049e5fea
+            kind: hasID
+        - kind: single
+          value:
+            id: 363639ec-a868-505d-8d57-499f2a8fba0a
+            kind: hasID
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+    label: First hex
+    legacySelections:
+    - inputName: spellId
+      lookupName: first-hex
+      ruleID: 6313d1d9-80a9-54cf-9fb6-784a0244e639
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    name: $.witch.patron.first-hex
+    startLevel: 1
+  id: d76db8e6-b104-5680-8aa9-03bcb0695a5f
+  key: choice-witch-patron-first-hex
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
     revision: 1
   id: 6313d1d9-80a9-54cf-9fb6-784a0244e639
   inputRecipes:
@@ -4079,8 +4105,8 @@ rules:
         value:
           payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -4088,29 +4114,14 @@ rules:
         value:
           payload: a0b37176-fd40-507b-9bd9-beff1d4413b7
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: grantId
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: first-hex
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 4b68f59e-140e-56c3-9e12-ce55049e5fea
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 363639ec-a868-505d-8d57-499f2a8fba0a
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+        kind: choice
+        name: $.witch.patron.first-hex
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:
       source:
@@ -4119,8 +4130,8 @@ rules:
           payload:
             kind: cantrip
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
     inputName: rankPolicy
   - expectedValue:
       source:
@@ -4129,12 +4140,12 @@ rules:
           payload:
             kind: focus
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
     inputName: castFrequency
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
     revision: 1
   id: db141d54-2099-5c61-ba77-29247cec1355
   inputRecipes: []

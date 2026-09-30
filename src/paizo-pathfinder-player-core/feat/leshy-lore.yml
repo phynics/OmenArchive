@@ -13,7 +13,7 @@ prerequisites: []
 rarity: common
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-feat
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
     revision: 2
   id: c2aa3de1-9221-5611-ad18-af5959bec543
   inputRecipes:
@@ -23,8 +23,8 @@ rules:
         value:
           payload: 624f4841-a001-5e37-8cff-0726d7dfe43f
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: selectionId
   - expectedValue:
       source:
@@ -32,12 +32,12 @@ rules:
         value:
           payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
           revision: 1
-          typeID: org.openomen.pf2e.core/value/feat-id
-      valueTypeID: org.openomen.pf2e.core/value/feat-id
+          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
     inputName: featId
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
     revision: 1
   id: c522ede7-d108-56d8-b682-30a524d8adb9
   inputRecipes:
@@ -48,8 +48,8 @@ rules:
           payload:
             kind: nature
           revision: 1
-          typeID: org.openomen.pf2e.core/value/skill
-      valueTypeID: org.openomen.pf2e.core/value/skill
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
     inputName: skill
   - expectedValue:
       source:
@@ -57,12 +57,12 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-skill-increase
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
     revision: 1
   id: 82626215-c7cc-5e5a-acae-205ae07f40ba
   inputRecipes:
@@ -73,8 +73,8 @@ rules:
           payload:
             kind: stealth
           revision: 1
-          typeID: org.openomen.pf2e.core/value/skill
-      valueTypeID: org.openomen.pf2e.core/value/skill
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
     inputName: skill
   - expectedValue:
       source:
@@ -82,8 +82,8 @@ rules:
         value:
           payload: 2
           revision: 1
-          typeID: org.openomen.pf2e.core/value/proficiency-rank
-      valueTypeID: org.openomen.pf2e.core/value/proficiency-rank
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
     inputName: proficiencyCap
   startLevel: 1
 source:

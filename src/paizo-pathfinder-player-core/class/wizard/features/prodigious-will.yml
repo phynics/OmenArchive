@@ -1,0 +1,39 @@
+---
+action: {}
+description: Your mind is simply too complex and sophisticated to be tampered with.
+  Your proficiency rank for Will saves increases to master. When you roll a success
+  at a Will save, you get a critical success instead.
+level: 17
+mechanicsScope: builder
+name: prodigious will
+rules:
+- id: 83789ea2-d4aa-527d-aea6-56ca9c87294b
+  effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-saving-throw
+    revision: 1
+  inputRecipes:
+  - inputName: savingThrow
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/saving-throw
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/saving-throw
+          revision: 1
+          payload: will
+  - inputName: proficiencyRank
+    expectedValue:
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      source:
+        kind: literal
+        value:
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+          revision: 1
+          payload: 6
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: j5TZw3xoIo6Lz0Re
+traits:
+- wizard

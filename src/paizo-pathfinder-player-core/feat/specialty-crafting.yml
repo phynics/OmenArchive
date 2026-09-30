@@ -66,57 +66,103 @@ prerequisites:
 - trained in Crafting
 rarity: common
 rules:
+- choice:
+    answer:
+      cases:
+      - key: alchemy
+        label: Alchemy
+        value:
+          payload: alchemy
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: artistry
+        label: Artistry
+        value:
+          payload: artistry
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: blacksmithing
+        label: Blacksmithing
+        value:
+          payload: blacksmithing
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: bookmaking
+        label: Bookmaking
+        value:
+          payload: bookmaking
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: glassmaking
+        label: Glassmaking
+        value:
+          payload: glassmaking
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: leatherworking
+        label: Leatherworking
+        value:
+          payload: leatherworking
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: pottery
+        label: Pottery
+        value:
+          payload: pottery
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: shipbuilding
+        label: Shipbuilding
+        value:
+          payload: shipbuilding
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: stonemasonry
+        label: Stonemasonry
+        value:
+          payload: stonemasonry
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: tailoring
+        label: Tailoring
+        value:
+          payload: tailoring
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: weaving
+        label: Weaving
+        value:
+          payload: weaving
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      - key: woodworking
+        label: Woodworking
+        value:
+          payload: woodworking
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
+      kind: local
+    label: Specialty Crafting Specialty
+    legacySelections:
+    - inputName: specialty
+      lookupName: specialty-crafting-specialty
+      ruleID: bcc320be-915f-5b50-bc71-d4194635aff2
+      valueTypeID: org.openomen.pf2e.core/value/crafting-specialty
+    name: $.feat.specialty-crafting.specialty-crafting-specialty
+    startLevel: 1
+  id: 7b080c61-d658-5c01-82f2-1dde29296095
+  key: choice-feat-specialty-crafting-specialty-crafting-specialty
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-specialty-crafting
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-specialty-crafting
     revision: 1
   id: bcc320be-915f-5b50-bc71-d4194635aff2
   inputRecipes:
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: specialty-crafting-specialty
-          options:
-            kind: explicit
-            values:
-            - payload: alchemy
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: artistry
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: blacksmithing
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: bookmaking
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: glassmaking
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: leatherworking
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: pottery
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: shipbuilding
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: stonemasonry
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: tailoring
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: weaving
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-            - payload: woodworking
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/crafting-specialty
-          valueTypeID: org.openomen.pf2e.core/value/crafting-specialty
-      valueTypeID: org.openomen.pf2e.core/value/crafting-specialty
+        kind: choice
+        name: $.feat.specialty-crafting.specialty-crafting-specialty
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/crafting-specialty
     inputName: specialty
   startLevel: 1
 source:

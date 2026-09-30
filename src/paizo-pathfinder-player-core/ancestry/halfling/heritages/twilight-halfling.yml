@@ -1,0 +1,45 @@
+---
+ancestry: halfling
+description: Your ancestors performed many secret acts under the concealing cover
+  of dusk, whether for good or ill, and over time they developed the ability to see
+  in twilight beyond even the usual keen sight of halflings. You gain low-light vision.
+mechanicsScope: builder
+name: twilight halfling
+rarity: common
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-sense
+    revision: 1
+  id: aa494d65-5fcd-5c03-a0b8-e05204ef29f2
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: low-light-vision
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
+    inputName: selector
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ''
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
+    inputName: acuity
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: -1
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: range
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

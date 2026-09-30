@@ -13,36 +13,61 @@ name: nephilim resistance
 prerequisites: []
 rarity: common
 rules:
+- choice:
+    answer:
+      cases:
+      - key: fire
+        label: Fire
+        value:
+          payload: fire
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      - key: acid
+        label: Acid
+        value:
+          payload: acid
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      - key: cold
+        label: Cold
+        value:
+          payload: cold
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      - key: sonic
+        label: Sonic
+        value:
+          payload: sonic
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      - key: electricity
+        label: Electricity
+        value:
+          payload: electricity
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      kind: local
+    label: Feat Celestial Resistance
+    legacySelections:
+    - inputName: type
+      lookupName: feat-celestial-resistance
+      ruleID: 19a41923-d992-5e15-8597-133c4b2d700d
+      valueTypeID: org.openomen.pf2e.core/value/string
+    name: $.feat.nephilim-resistance.feat-celestial-resistance
+    startLevel: 1
+  id: a8a4c860-d3e4-5473-987e-5645379a46ef
+  key: choice-feat-nephilim-resistance-feat-celestial-resistance
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-resistance
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-resistance
     revision: 2
   id: 19a41923-d992-5e15-8597-133c4b2d700d
   inputRecipes:
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: feat-celestial-resistance
-          options:
-            kind: explicit
-            values:
-            - payload: fire
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-            - payload: acid
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-            - payload: cold
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-            - payload: sonic
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-            - payload: electricity
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-          valueTypeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+        kind: choice
+        name: $.feat.nephilim-resistance.feat-celestial-resistance
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: type
   - expectedValue:
       source:
@@ -50,8 +75,8 @@ rules:
         value:
           payload: 5
           revision: 1
-          typeID: org.openomen.pf2e.core/value/sheet-value
-      valueTypeID: org.openomen.pf2e.core/value/sheet-value
+          typeID: me.atkn.omen.pf2e.playercore/value/sheet-value
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/sheet-value
     inputName: value
   - expectedValue:
       source:
@@ -59,8 +84,8 @@ rules:
         value:
           payload: ''
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: exceptions
   startLevel: 1
 source:

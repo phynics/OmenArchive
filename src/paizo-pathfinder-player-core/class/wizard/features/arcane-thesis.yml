@@ -1,0 +1,61 @@
+---
+action: {}
+description: 'During your studies to become a full-fledged wizard, you produced a
+  thesis of unique magical research. You gain a special benefit depending on the topic
+  of your thesis research. The arcane thesis topics presented in this book are below;
+  your specific thesis probably has a much longer and more technical title like "On
+  the Methods of Spell Interpolation and the Genesis of a New Understanding of the
+  Building Blocks of Magic."
+
+  Experimental Spellshaping
+
+  Improved Familiar Attunement
+
+  Spell Blending
+
+  Spell Substitution
+
+  Staff Nexus'
+level: 1
+mechanicsScope: builder
+name: arcane thesis
+rules:
+- choice:
+    answer:
+      filter:
+        kind: single
+        value:
+          kind: hasPathPrefix
+          path: omen://class/wizard/theses?source=paizo-pathfinder-player-core
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    label: Thesis
+    legacySelections:
+    - inputName: featureId
+      lookupName: class-option
+      ruleID: ebb03c21-9135-567e-975b-33089f58a46f
+      sourceID: 97e3793e-9674-5d2f-85b8-8b46399735ec
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    name: $.wizard.thesis
+    startLevel: 1
+  id: 9049adb1-2634-53dc-80f8-d89702902565
+  key: choice-wizard-thesis
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
+    revision: 1
+  id: ebb03c21-9135-567e-975b-33089f58a46f
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.wizard.thesis
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    inputName: featureId
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
+sourceID: M89l9FOnjHe63wD7
+traits:
+- wizard

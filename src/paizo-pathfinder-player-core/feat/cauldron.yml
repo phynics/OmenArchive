@@ -24,7 +24,7 @@ prerequisites: []
 rarity: common
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-crafting-ability
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-crafting-ability
     revision: 1
   id: 2cdc9fa9-359d-5902-82e2-637747827f6c
   inputRecipes:
@@ -34,8 +34,8 @@ rules:
         value:
           payload: cauldron
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: slug
   - expectedValue:
       source:
@@ -43,8 +43,8 @@ rules:
         value:
           payload: PF2E.SpecificRule.Witch.Cauldron.CraftingEntry
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: label
   - expectedValue:
       source:
@@ -52,8 +52,8 @@ rules:
         value:
           payload: ternary(eq(@actor.system.proficiencies.spellcasting.rank,4),3,ternary(eq(@actor.system.proficiencies.spellcasting.rank,3),2,1))
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: maxSlotsExpression
   - expectedValue:
       source:
@@ -61,8 +61,8 @@ rules:
         value:
           payload: true
           revision: 1
-          typeID: org.openomen.pf2e.core/value/bool
-      valueTypeID: org.openomen.pf2e.core/value/bool
+          typeID: me.atkn.omen.pf2e.playercore/value/bool
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
     inputName: isDailyPreparation
   - expectedValue:
       source:
@@ -70,8 +70,8 @@ rules:
         value:
           payload: or(item:trait:oil,item:trait:potion)
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: craftableItems
   startLevel: 1
 source:

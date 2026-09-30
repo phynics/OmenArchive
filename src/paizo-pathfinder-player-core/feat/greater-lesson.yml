@@ -8,32 +8,44 @@ name: greater lesson
 prerequisites: []
 rarity: common
 rules:
+- choice:
+    answer:
+      filter:
+        kind: union
+        values:
+        - kind: single
+          value:
+            kind: hasPathPrefix
+            path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
+        - kind: single
+          value:
+            kind: hasPathPrefix
+            path: omen://class/witch/greater-lessons?source=paizo-pathfinder-player-core
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+    label: Lesson
+    legacySelections:
+    - inputName: featureId
+      lookupName: lesson
+      ruleID: f03bff07-93d4-5378-bacf-395780ab4ba6
+      valueTypeID: org.openomen.pf2e.core/value/feature-id
+    name: $.feat.greater-lesson.lesson
+    startLevel: 1
+  id: 70f4eaa2-511e-51ee-886b-4db01b867837
+  key: choice-feat-greater-lesson-lesson
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-feature-by-id
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
     revision: 1
-  id: f03bff07-93d4-5378-bacf-395780ab4ba6
+  id: f55af4b5-dfe4-5028-b629-cdaf6f27a72f
   inputRecipes:
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: lesson
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  kind: hasPathPrefix
-                  path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
-              - kind: single
-                value:
-                  kind: hasPathPrefix
-                  path: omen://class/witch/greater-lessons?source=paizo-pathfinder-player-core
-            kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.core/value/feature-id
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
+        kind: choice
+        name: $.feat.greater-lesson.lesson
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
     inputName: featureId
+  key: choice-set-1
   startLevel: 1
 source:
   book: Pathfinder Player Core

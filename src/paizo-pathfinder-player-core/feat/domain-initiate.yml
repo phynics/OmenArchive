@@ -26,9 +26,9 @@ repeatPolicy:
   maxCount: null
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/configure-source
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
     revision: 1
-  id: 184f5436-f053-58db-a5d4-317391ae63e6
+  id: 3163a065-97a0-5ffe-9667-a73120b731cf
   inputRecipes:
   - expectedValue:
       source:
@@ -36,8 +36,8 @@ rules:
         value:
           payload: b7e73ea3-1be8-5215-a0c7-055d23080c56
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -45,8 +45,8 @@ rules:
         value:
           payload: Cleric Focus Spells
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: sourceName
   - expectedValue:
       source:
@@ -54,8 +54,8 @@ rules:
         value:
           payload: focus
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/casting-kind
-      valueTypeID: org.openomen.pf2e.spellcasting/value/casting-kind
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
     inputName: castingKind
   - expectedValue:
       source:
@@ -63,8 +63,8 @@ rules:
         value:
           payload: divine
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/tradition
-      valueTypeID: org.openomen.pf2e.spellcasting/value/tradition
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
     inputName: tradition
   - expectedValue:
       source:
@@ -72,14 +72,50 @@ rules:
         value:
           payload: wis
           revision: 1
-          typeID: org.openomen.pf2e.core/value/attribute
-      valueTypeID: org.openomen.pf2e.core/value/attribute
+          typeID: me.atkn.omen.pf2e.playercore/value/attribute
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
     inputName: attribute
+  key: choice-set-1
+  startLevel: 1
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: spell
+        - kind: single
+          value:
+            kind: hasMetadata
+            metadataKey: spell.category
+            metadataValue: focus
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: classTrait-cleric
+        - kind: single
+          value:
+            kind: hasExactLevel
+            level: 1
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+    label: Domain spell
+    legacySelections:
+    - inputName: spellId
+      lookupName: domain-spell
+      ruleID: bc13c386-c4f8-5ae1-8290-f5ae806da57c
+      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+    name: $.cleric.domain-spell
+    startLevel: 1
+  id: 7243dd43-b04e-59b6-ae0c-79453c9afd91
+  key: choice-cleric-domain-spell
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/grant-spell
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
     revision: 1
-  id: bc13c386-c4f8-5ae1-8290-f5ae806da57c
+  id: 47bea169-cf58-5590-b3ac-e66a61ed8e7f
   inputRecipes:
   - expectedValue:
       source:
@@ -87,8 +123,8 @@ rules:
         value:
           payload: b7e73ea3-1be8-5215-a0c7-055d23080c56
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: sourceId
   - expectedValue:
       source:
@@ -96,38 +132,14 @@ rules:
         value:
           payload: deed40aa-9248-59b4-9bc9-257e988c9d3c
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: grantId
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: domain-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: focus
-              - kind: single
-                value:
-                  kind: hasTrait
-                  trait: classTrait-cleric
-              - kind: single
-                value:
-                  kind: hasExactLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
+        kind: choice
+        name: $.cleric.domain-spell
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:
       source:
@@ -136,8 +148,8 @@ rules:
           payload:
             kind: cantrip
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/rank-policy
-      valueTypeID: org.openomen.pf2e.spellcasting/value/rank-policy
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
     inputName: rankPolicy
   - expectedValue:
       source:
@@ -146,15 +158,17 @@ rules:
           payload:
             kind: focus
           revision: 1
-          typeID: org.openomen.pf2e.spellcasting/value/cast-frequency
-      valueTypeID: org.openomen.pf2e.spellcasting/value/cast-frequency
+          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
+      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
     inputName: castFrequency
+  key: active-effect-like-1
   startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.spellcasting/effect/add-focus-point
+    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
     revision: 1
-  id: 84e64307-9056-5020-aab8-f6f389fb8707
+  id: d2248280-eea1-5f05-a31d-53aea3801a38
   inputRecipes: []
+  key: generated-3
   startLevel: 1
 source:
   book: Pathfinder Player Core

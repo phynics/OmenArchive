@@ -25,6 +25,9 @@
             "$ref": "#/$defs/inputRecipe"
           }
         },
+        "choice": {
+          "$ref": "#/$defs/choice"
+        },
         "startLevel": {
           "type": "integer",
           "minimum": 1,
@@ -42,10 +45,177 @@
       },
       "required": [
         "id",
-        "effectReference",
-        "inputRecipes",
         "startLevel"
       ],
+      "oneOf": [
+        {
+          "required": [
+            "effectReference",
+            "inputRecipes"
+          ],
+          "not": {
+            "required": [
+              "choice"
+            ]
+          }
+        },
+        {
+          "required": [
+            "choice"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "effectReference"
+                ]
+              },
+              {
+                "required": [
+                  "inputRecipes"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "choice": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/choiceDefinitionName"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "startLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choiceName"
+          }
+        },
+        "legacySelections": {
+          "description": "Original slot coordinates used only for one-time character package migration.",
+          "type": "array",
+          "items": { "$ref": "#/$defs/legacySelection" }
+        },
+        "answer": {
+          "type": "object",
+          "oneOf": [
+            {
+              "properties": {
+                "kind": {
+                  "const": "local"
+                },
+                "cases": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "$ref": "#/$defs/choiceCase"
+                  }
+                }
+              },
+              "required": [
+                "kind",
+                "cases"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "records"
+                },
+                "filter": {
+                  "$ref": "resource-filter.schema.json"
+                },
+                "valueTypeID": {
+                  "$ref": "#/$defs/valueTypeID"
+                }
+              },
+              "required": [
+                "kind",
+                "filter",
+                "valueTypeID"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "freeText"
+                },
+                "valueTypeID": {
+                  "$ref": "#/$defs/valueTypeID"
+                }
+              },
+              "required": [
+                "kind",
+                "valueTypeID"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "label",
+        "startLevel",
+        "answer"
+      ],
+      "additionalProperties": false
+    },
+    "choiceCase": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "$ref": "#/$defs/registeredValue"
+        },
+        "effects": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/effectWire"
+          }
+        }
+      },
+      "required": [
+        "key",
+        "label"
+      ],
+      "oneOf": [
+        { "required": ["value"], "not": { "required": ["effects"] } },
+        { "required": ["effects"], "not": { "required": ["value"] } }
+      ],
+      "additionalProperties": false
+    },
+    "legacySelection": {
+      "type": "object",
+      "properties": {
+        "ruleID": { "type": "string", "format": "uuid" },
+        "inputName": { "type": "string", "minLength": 1 },
+        "lookupName": { "$ref": "#/$defs/legacyLookupName" },
+        "valueTypeID": { "$ref": "#/$defs/valueTypeID" },
+        "sourceID": { "type": "string", "format": "uuid" }
+      },
+      "required": ["ruleID", "inputName", "lookupName", "valueTypeID"],
       "additionalProperties": false
     },
     "inputRecipe": {
@@ -105,6 +275,21 @@
               "const": "lookupByName"
             },
             "name": {
+              "$ref": "#/$defs/legacyLookupName"
+            }
+          },
+          "required": [
+            "kind",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "choice"
+            },
+            "name": {
               "$ref": "#/$defs/choiceName"
             }
           },
@@ -132,15 +317,41 @@
       ]
     },
     "choiceName": {
-      "description": "A selection's lookup name: kebab-case, like filenames. Rules read it with lookupByName and hasChoice, which look in their own resource first.",
+      "description": "A choice read path: a namespaced content path, the shared deity group, or a supported engine read.",
       "type": "string",
-      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      "anyOf": [
+        { "pattern": "^\\$\\.(?:level|attributes\\.(?:str|dex|con|int|wis|cha))$" },
+        { "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$" },
+        { "const": "$.deity" }
+      ]
+    },
+    "legacyChoiceName": {
+      "description": "A deprecated hasChoice name retained for unrevised resources; new choice reads use a namespaced choiceName.",
+      "anyOf": [
+        { "$ref": "#/$defs/choiceName" },
+        { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" }
+      ]
+    },
+    "legacyLookupName": {
+      "description": "A legacy lookup/selection name. These names are retained only while archive resources are rewritten to named-choice paths.",
+      "type": "string",
+      "minLength": 1
+    },
+    "choiceDefinitionName": {
+      "description": "A namespaced content choice definition, except the shared `$.deity` group; engine roots are reserved for reads.",
+      "type": "string",
+      "anyOf": [
+        { "const": "$.deity" },
+        {
+          "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
+        }
+      ]
     },
     "selection": {
       "type": "object",
       "properties": {
         "lookupName": {
-          "$ref": "#/$defs/choiceName"
+          "$ref": "#/$defs/legacyLookupName"
         },
         "valueTypeID": {
           "$ref": "#/$defs/valueTypeID"
@@ -479,7 +690,7 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "$ref": "#/$defs/choiceName"
+                  "$ref": "#/$defs/legacyChoiceName"
                 },
                 "isSet": {
                   "const": true
@@ -594,6 +805,41 @@
         "kindID",
         "revision"
       ],
+      "additionalProperties": false
+    },
+    "effectWire": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "format": "uuid" },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "reference": { "$ref": "#/$defs/effectReference" },
+        "inputDescriptors": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/effectInputDescriptor" }
+        },
+        "inputRecipes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/inputRecipe" }
+        }
+      },
+      "required": ["reference", "inputDescriptors", "inputRecipes"],
+      "anyOf": [
+        { "required": ["id"] },
+        { "required": ["key"] }
+      ],
+      "additionalProperties": false
+    },
+    "effectInputDescriptor": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "valueTypeID": { "$ref": "#/$defs/valueTypeID" },
+        "optional": { "type": "boolean" }
+      },
+      "required": ["name", "valueTypeID"],
       "additionalProperties": false
     },
     "registeredValue": {

@@ -1,0 +1,69 @@
+---
+ancestry: leshy
+description: Your body is made from hardy roots that attach you firmly to the ground.
+  You gain 10 Hit Points from your ancestry instead of 8. You can go without sunlight
+  for 2 weeks before you begin to starve. You gain a +2 circumstance bonus to your
+  Fortitude or Reflex DC against attempts to Reposition, Shove, or Trip you. This
+  bonus also applies to saving throws against spells or effects that attempt to move
+  you or knock you Prone.
+mechanicsScope: builder
+name: root leshy
+rarity: common
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/set-ancestry-hit-points
+    revision: 1
+  id: 2bfe7ad8-e38c-5abd-859d-16a3dafd773b
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 10
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/int
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
+    inputName: hitPoints
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
+    revision: 2
+  id: f5445a7f-6cd8-5979-b568-00e06890061a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: a8853edf-3aae-53db-ba3c-30514de35789
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: uuid
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            description:
+            - savingThrow:
+                _0: fortitude
+            - savingThrow:
+                _0: reflex
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
+    inputName: target
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 'Root Leshy: +2 circumstance bonus to Fortitude saves and Reflex
+            saves (Shove or Trip or Reposition).'
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
+    inputName: description
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

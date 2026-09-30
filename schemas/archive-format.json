@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "publication": {
     "path": "src/{publication}/publication.yml",
     "schema": "publication.schema.json"
@@ -66,6 +66,12 @@
           "layout": "flat",
           "schema": "character-feature.schema.json",
           "collection": "features"
+        },
+        {
+          "directory": "heritages",
+          "layout": "flat",
+          "schema": "character-heritage.schema.json",
+          "collection": "heritages"
         }
       ],
       "identity": {
@@ -115,7 +121,7 @@
       "layout": "flat",
       "schema": "character-domain.schema.json",
       "identity": {
-        "host": "domains",
+        "host": "domain",
         "includesOwner": false
       }
     },
@@ -130,12 +136,12 @@
       }
     },
     {
-      "id": "heritage",
-      "directory": "heritage",
-      "layout": "grouped",
+      "id": "versatile-heritage",
+      "directory": "versatile-heritage",
+      "layout": "flat",
       "schema": "character-heritage.schema.json",
       "identity": {
-        "host": "heritage",
+        "host": "versatile-heritage",
         "includesOwner": false
       }
     }

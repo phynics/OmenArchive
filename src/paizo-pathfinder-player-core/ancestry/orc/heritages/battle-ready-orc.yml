@@ -1,0 +1,60 @@
+---
+ancestry: orc
+description: You descend from a line of terrifying battlefield commanders. You become
+  trained in Intimidation, and you gain the Intimidating Glare skill feat.
+mechanicsScope: builder
+name: battle-ready orc
+rarity: common
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: a3067fa7-271a-5066-983d-07a6304db411
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ec0b7962-7df0-56aa-909d-ce43aefb13a4
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: f83d7065-a1bd-51e6-965b-c5ee638c8bd5
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
+    revision: 1
+  id: b1fea2bb-d2cc-5f4a-bfb3-63acdecf5754
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: intimidation
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
+    inputName: skill
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo

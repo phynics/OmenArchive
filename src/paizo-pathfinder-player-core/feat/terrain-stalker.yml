@@ -19,30 +19,49 @@ repeatPolicy:
   instanceLevelGates: []
   maxCount: null
 rules:
+- choice:
+    answer:
+      cases:
+      - key: rubble
+        label: Rubble
+        value:
+          payload: rubble
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      - key: snow
+        label: Snow
+        value:
+          payload: snow
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      - key: underbrush
+        label: Underbrush
+        value:
+          payload: underbrush
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      kind: local
+    label: Terrain Stalker Terrain
+    legacySelections:
+    - inputName: terrain
+      lookupName: terrain-stalker-terrain
+      ruleID: 31305979-4390-5b91-945c-94df98b8fbae
+      valueTypeID: org.openomen.pf2e.core/value/string
+    name: $.feat.terrain-stalker.terrain-stalker-terrain
+    startLevel: 1
+  id: 87522d0e-5e26-5c28-9263-4011282b25a6
+  key: choice-feat-terrain-stalker-terrain-stalker-terrain
+  startLevel: 1
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-terrain-stalker
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-terrain-stalker
     revision: 1
   id: 31305979-4390-5b91-945c-94df98b8fbae
   inputRecipes:
   - expectedValue:
       source:
-        kind: selection
-        selection:
-          lookupName: terrain-stalker-terrain
-          options:
-            kind: explicit
-            values:
-            - payload: rubble
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-            - payload: snow
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-            - payload: underbrush
-              revision: 1
-              typeID: org.openomen.pf2e.core/value/string
-          valueTypeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+        kind: choice
+        name: $.feat.terrain-stalker.terrain-stalker-terrain
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: terrain
   startLevel: 1
 source:

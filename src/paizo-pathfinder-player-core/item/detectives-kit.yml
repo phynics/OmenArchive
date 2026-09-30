@@ -22,8 +22,8 @@ physical:
 rarity: common
 rules:
 - effectReference:
-    kindID: org.openomen.pf2e.core/effect/add-roll-modifier
-    revision: 1
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
+    revision: 2
   id: 18f2e293-46e9-5a6d-894e-1ad3984e0fa9
   inputRecipes:
   - expectedValue:
@@ -32,8 +32,8 @@ rules:
         value:
           payload: 5b8418ce-849e-5367-a8bc-5a821c137d33
           revision: 1
-          typeID: org.openomen.pf2e.core/value/uuid
-      valueTypeID: org.openomen.pf2e.core/value/uuid
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
     inputName: uuid
   - expectedValue:
       source:
@@ -45,8 +45,8 @@ rules:
                 _0: perception
             - anySkill: {}
           revision: 1
-          typeID: org.openomen.pf2e.core/value/roll-description
-      valueTypeID: org.openomen.pf2e.core/value/roll-description
+          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
     inputName: target
   - expectedValue:
       source:
@@ -55,8 +55,8 @@ rules:
           payload: 'Detective''s Kit: +1 item bonus to Perception checks and skill
             checks (Investigate).'
           revision: 1
-          typeID: org.openomen.pf2e.core/value/string
-      valueTypeID: org.openomen.pf2e.core/value/string
+          typeID: me.atkn.omen.pf2e.playercore/value/string
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: description
   startLevel: 1
 source:

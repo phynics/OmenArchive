@@ -1,0 +1,65 @@
+---
+ancestry: human
+description: Humanity's versatility and ambition have fueled its ascendance to be
+  the most common ancestry in most nations throughout the world. Select a general
+  feat of your choice for which you meet the prerequisites (as with your ancestry
+  feat, you can select this general feat at any point during character creation).
+mechanicsScope: builder
+name: versatile human
+rarity: common
+rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: feat
+        - kind: single
+          value:
+            kind: hasMaxLevel
+            level: 1
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: general
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    label: Heritage Feat
+    legacySelections:
+    - inputName: featId
+      lookupName: heritage-feat
+      ruleID: ce05e332-2417-5450-a867-67570e5df6e5
+      sourceID: 5cf0ddd9-0777-5fc3-880a-a1b8006540b7
+      valueTypeID: org.openomen.pf2e.core/value/feat-id
+    name: $.heritage.versatile-human.heritage-feat
+    startLevel: 1
+  id: be80f3c1-fdab-5fd3-8fed-27fc9ad9fdef
+  key: choice-heritage-versatile-human-heritage-feat
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: ce05e332-2417-5450-a867-67570e5df6e5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 04eec7cb-eddf-5a61-9bc2-4146d4ec4ff0
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.heritage.versatile-human.heritage-feat
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  startLevel: 1
+source:
+  book: Pathfinder Player Core
+  publisher: paizo
