@@ -8,6 +8,7 @@ import html
 import json
 import re
 import sys
+import uuid
 from pathlib import Path
 
 
@@ -22,16 +23,23 @@ def load_map() -> dict:
     moves = data.get("moves", [])
     if data.get("format") != "openomen.omenpath-migration-map" or data.get("ticket") != "0055":
         raise ValueError("unexpected migration map format or ticket")
-    if len(moves) != 107:
-        raise ValueError(f"expected 107 move rows, found {len(moves)}")
+    artifact_version = data.get("artifactVersion", "1.0.0")
+    if artifact_version not in {"1.0.0", "2.0.0"}:
+        raise ValueError(f"unsupported migration artifact version: {artifact_version}")
+    if not moves or (artifact_version == "1.0.0" and len(moves) != 107):
+        raise ValueError(f"unexpected move count for artifact {artifact_version}: {len(moves)}")
     old_paths = [row["oldArchiveRelativePath"] for row in moves]
     new_paths = [row["newArchiveRelativePath"] for row in moves]
-    if len(set(old_paths)) != 107 or len(set(new_paths)) != 107:
+    if len(set(old_paths)) != len(moves) or len(set(new_paths)) != len(moves):
         raise ValueError("migration map contains duplicate old or new paths")
     class_count = sum(row["id"].startswith("class:") for row in moves)
     archetype_count = sum(row["id"].startswith("archetype:") for row in moves)
-    if (class_count, archetype_count) != (50, 57):
-        raise ValueError(f"expected 50 class options and 57 archetype feats, found {class_count} and {archetype_count}")
+    summary = data.get("summary", {})
+    expected_counts = (50, 57) if artifact_version == "1.0.0" else (
+        summary.get("classOptions"), summary.get("archetypeFeats")
+    )
+    if (class_count, archetype_count) != expected_counts:
+        raise ValueError(f"class option and archetype feat counts differ from the artifact: {class_count}, {archetype_count}")
     if data.get("summary", {}).get("totalMoves") != len(moves):
         raise ValueError("map summary does not match move rows")
     format_manifest = json.loads((ARCHIVE / "schemas/archive-format.json").read_text(encoding="utf-8"))
@@ -49,13 +57,20 @@ def load_map() -> dict:
         for group in format_manifest.get("customGroups", [])
         if group["familyID"] == "class"
     }
-    if declared_groups != expected_groups:
+    if not expected_groups <= declared_groups or (
+        artifact_version == "1.0.0" and declared_groups != expected_groups
+    ):
         raise ValueError(f"class custom groups do not match the migration map; missing={sorted(expected_groups - declared_groups)}, extra={sorted(declared_groups - expected_groups)}")
     for row in moves:
         if row["publication"] != PUBLICATION:
             raise ValueError(f"unexpected publication in row {row['id']}")
         if not row["oldOmenPath"].endswith(f"?source={PUBLICATION}") or not row["newOmenPath"].endswith(f"?source={PUBLICATION}"):
             raise ValueError(f"publication qualifier mismatch in row {row['id']}")
+        if artifact_version == "2.0.0":
+            for side in ("old", "new"):
+                expected = str(uuid.uuid5(uuid.UUID("00000000-0000-0000-0000-000000000027"), row[f"{side}OmenPath"]))
+                if row[f"{side}RecordID"].lower() != expected:
+                    raise ValueError(f"{side} record identity mismatch in row {row['id']}")
     return data
 
 
@@ -123,7 +138,7 @@ def check(data: dict) -> None:
     for row in data["moves"]:
         old = absolute_archive_path(row["oldArchiveRelativePath"])
         new = absolute_archive_path(row["newArchiveRelativePath"])
-        if old.exists():
+        if old != new and old.exists():
             stale.append(row["oldArchiveRelativePath"])
         if not new.is_file():
             missing.append(row["newArchiveRelativePath"])
@@ -140,10 +155,13 @@ def check(data: dict) -> None:
         content = actual.read_text(encoding="utf-8")
         if content != expected:
             raise ValueError(f"archetype root differs from its Foundry-backed source: {relative}")
-    print("ticket 0055 migration check passed: 107 old paths absent, 107 new paths present, 8 roots verified")
+    moved = sum(row["oldArchiveRelativePath"] != row["newArchiveRelativePath"] for row in data["moves"])
+    print(f"migration check passed: {moved} moved old paths absent, {len(data['moves'])} destinations present, 8 roots verified")
 
 
 def apply(data: dict) -> None:
+    if data.get("artifactVersion", "1.0.0") != "1.0.0":
+        raise ValueError("artifact 2 requires coordinated resource and saved-character migration; do not apply it as file moves alone")
     states = []
     for row in data["moves"]:
         old = absolute_archive_path(row["oldArchiveRelativePath"])

@@ -653,10 +653,11 @@ from feat names; add those fields only when the source provides them.
 
 The Player Core historical path map, including ticket 0055 and batch 0162/0163/0146,
 is recorded in `docs/migrations/player-core-0055-v1.0.0.json`. From the `OmenArchive` directory,
-run `./scripts/player_core_0055_migration.py --apply` to move those records and
-create the eight source-backed roots, or `./scripts/player_core_0055_migration.py
---check` to verify the completed migration. The script reads the corresponding
-class descriptions from the workspace's `pf2e/` source checkout.
+run `./scripts/player_core_0055_migration.py --check` to verify mapped destinations,
+record UUIDs, and the eight source-backed roots. The script reads the corresponding
+class descriptions from the workspace's `pf2e/` source checkout. Artifact version 2
+requires the coordinated batch migration and gated refresh. The legacy `--apply`
+command refuses that artifact because file moves alone cannot migrate saved identities.
 
 ## Mechanics coverage
 
