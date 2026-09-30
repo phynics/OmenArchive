@@ -23,10 +23,7 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/inputRecipe"
-          },
-          "default": [
-
-          ]
+          }
         },
         "startLevel": {
           "type": "integer",
@@ -72,8 +69,7 @@
       "type": "object",
       "properties": {
         "valueTypeID": {
-          "type": "string",
-          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+          "$ref": "#/$defs/valueTypeID"
         },
         "source": {
           "$ref": "#/$defs/source"
@@ -147,8 +143,7 @@
           "$ref": "#/$defs/choiceName"
         },
         "valueTypeID": {
-          "type": "string",
-          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+          "$ref": "#/$defs/valueTypeID"
         },
         "options": {
           "$ref": "#/$defs/selectionOptions"
@@ -165,11 +160,6 @@
         "options"
       ],
       "additionalProperties": false
-    },
-    "resourceReference": {
-      "type": "string",
-      "pattern": "^omen://\\S+$",
-      "description": "A canonical OmenPath URI, optionally qualified with ?source=<publication-id>."
     },
     "prerequisite": {
       "oneOf": [
@@ -243,7 +233,8 @@
           "type": "object",
           "properties": {
             "hasFeatWithName": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
           },
           "required": [
@@ -255,7 +246,8 @@
           "type": "object",
           "properties": {
             "hasFeatureWithName": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
           },
           "required": [
@@ -283,15 +275,7 @@
               "type": "object",
               "properties": {
                 "attribute": {
-                  "type": "string",
-                  "enum": [
-                    "str",
-                    "dex",
-                    "con",
-                    "int",
-                    "wis",
-                    "cha"
-                  ]
+                  "$ref": "#/$defs/prerequisiteAttribute"
                 },
                 "score": {
                   "type": "integer",
@@ -318,15 +302,7 @@
               "type": "object",
               "properties": {
                 "attribute": {
-                  "type": "string",
-                  "enum": [
-                    "str",
-                    "dex",
-                    "con",
-                    "int",
-                    "wis",
-                    "cha"
-                  ]
+                  "$ref": "#/$defs/prerequisiteAttribute"
                 },
                 "modifier": {
                   "type": "integer",
@@ -353,7 +329,7 @@
               "type": "object",
               "properties": {
                 "skill": {
-                  "$ref": "skill.schema.json"
+                  "$ref": "#/$defs/prerequisiteSkill"
                 },
                 "proficiency": {
                   "$ref": "proficiency-rank.schema.json"
@@ -549,6 +525,59 @@
         }
       ]
     },
+    "valueTypeID": {
+      "type": "string",
+      "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+    },
+    "prerequisiteAttribute": {
+      "type": "string",
+      "enum": [
+        "str",
+        "dex",
+        "con",
+        "int",
+        "wis",
+        "cha"
+      ]
+    },
+    "prerequisiteSkill": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "acrobatics",
+            "arcana",
+            "athletics",
+            "crafting",
+            "deception",
+            "diplomacy",
+            "intimidation",
+            "medicine",
+            "nature",
+            "occultism",
+            "performance",
+            "religion",
+            "society",
+            "stealth",
+            "survival",
+            "thievery"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "lore": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "lore"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
     "effectReference": {
       "type": "object",
       "properties": {
@@ -571,8 +600,7 @@
       "type": "object",
       "properties": {
         "typeID": {
-          "type": "string",
-          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+          "$ref": "#/$defs/valueTypeID"
         },
         "revision": {
           "type": "integer",
