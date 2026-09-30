@@ -93,6 +93,11 @@ edits take precedence. If source identity changes or a field cannot be assigned 
 show the conflict for review before writing. A hand-authored file with no staged counterpart is
 an explicit removal candidate and must be reviewed before it can be deleted.
 
+When a refresh finds a reviewed rule whose non-identity content no longer matches the generated
+rule, it preserves the archive rule and creates a review item. It never silently drops a reviewed
+mechanic. A generated rule may be added automatically only when every reviewed rule still matches;
+the matcher ignores only `id` and `key` while comparing rule content.
+
 The schemas declare this ownership. An archive-owned property carries
 `"x-omen-ownership": "archive"`, and a property without the annotation is generated. OmenScribe reads
 the annotation (through `ArchiveFormat.archiveOwnedFields(for:)`) to decide which fields a refresh
@@ -201,10 +206,18 @@ rules:
 Rules use the namespaced mechanics registry wire shape:
 
 - `id` is a stable UUID for the rule instance.
+- `key` is an optional readable kebab-case member name. A keyed rule's ID is
+  `uuid5("<record-path>#rule/<key>")`; keys are unique within a resource and rule IDs are unique
+  across the archive. Existing rules may omit `key` and retain their IDs.
 - `effectReference.kindID` and `revision` identify the executable effect definition.
 - `inputRecipes` carries typed effect inputs in order; each value includes its namespaced type ID and revision.
 - `startLevel` is the level at which the rule becomes active.
 - `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
+
+Foundry conversion assigns new keys as `<foundry-rule-key>-<n>`, where `n` is that source key's
+occurrence in the record. New authoring proposals use their explicit key when present; otherwise
+they receive a random UUID. When an edited keyed rule is written, OmenScribe derives its ID from
+the actual record path.
 
 The character's traits come from three effects: `add-character-trait` (a plain trait),
 `add-character-ancestry-trait` (an ancestry or lineage trait: it counts for `hasTrait` and opens

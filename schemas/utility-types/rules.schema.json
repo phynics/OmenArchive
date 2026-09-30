@@ -11,6 +11,11 @@
           "type": "string",
           "format": "uuid"
         },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Readable stable member identity for a rule"
+        },
         "effectReference": {
           "$ref": "#/$defs/effectReference"
         },
