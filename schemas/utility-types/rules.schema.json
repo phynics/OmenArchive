@@ -704,6 +704,10 @@
                     "$ref": "#/$defs/registeredValue"
                   },
                   "minItems": 1
+                },
+                "contains": {
+                  "description": "A repeatable choice holds a list, one answer per copy; one of them equals this value.",
+                  "$ref": "#/$defs/registeredValue"
                 }
               },
               "required": [
@@ -723,6 +727,11 @@
                 {
                   "required": [
                     "oneOf"
+                  ]
+                },
+                {
+                  "required": [
+                    "contains"
                   ]
                 }
               ],

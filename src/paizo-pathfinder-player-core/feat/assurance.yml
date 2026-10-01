@@ -137,10 +137,10 @@ rules:
       lookupName: assurance-skill
       ruleID: 94c764f5-2f26-59a6-a1f4-49f2544a07ee
       valueTypeID: org.openomen.pf2e.core/value/skill
-    name: $.assurance.skill
+    name: $.feat.assurance.skills
     startLevel: 1
-  id: 59fe9d6c-93a4-5f4b-a722-6a373e63da0d
-  key: choice-assurance-skill
+  id: d1b27eff-6287-5e9c-9685-7dc872e04a05
+  key: choice-feat-assurance-skills
   startLevel: 1
 - effectReference:
     kindID: me.atkn.omen.pf2e.playercore/effect/add-assurance
@@ -150,7 +150,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.assurance.skill
+        name: $.feat.assurance.skills
       valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
     inputName: skill
   startLevel: 1

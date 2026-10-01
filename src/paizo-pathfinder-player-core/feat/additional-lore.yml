@@ -23,10 +23,10 @@ rules:
       lookupName: additional-lore-name
       ruleID: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
       valueTypeID: org.openomen.pf2e.core/value/string
-    name: $.additional-lore.name
+    name: $.feat.additional-lore.lores
     startLevel: 1
-  id: c5846cff-7ccb-5fc7-a84a-5813ae122f55
-  key: choice-additional-lore-name
+  id: 0cdaf71e-6897-5421-8cd4-afc138149ca4
+  key: choice-feat-additional-lore-lores
   startLevel: 1
 - effectReference:
     kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
@@ -36,7 +36,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.additional-lore.name
+        name: $.feat.additional-lore.lores
       valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:
@@ -57,7 +57,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.additional-lore.name
+        name: $.feat.additional-lore.lores
       valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:
@@ -78,7 +78,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.additional-lore.name
+        name: $.feat.additional-lore.lores
       valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:
@@ -99,7 +99,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.additional-lore.name
+        name: $.feat.additional-lore.lores
       valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: loreName
   - expectedValue:

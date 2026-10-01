@@ -134,10 +134,10 @@ rules:
       lookupName: skill
       ruleID: e7fee549-73f4-58ca-a96c-3729ea0795c7
       valueTypeID: org.openomen.pf2e.core/value/skill
-    name: $.feat.skill-training.skill
+    name: $.feat.skill-training.skills
     startLevel: 1
-  id: 5c1ea266-b8ff-5aa3-975c-2329eadf5683
-  key: choice-feat-skill-training-skill
+  id: b0f974e9-59a8-5f99-9a38-c2d61fb5caf0
+  key: choice-feat-skill-training-skills
   startLevel: 1
 - effectReference:
     kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
@@ -147,7 +147,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.feat.skill-training.skill
+        name: $.feat.skill-training.skills
       valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
     inputName: skill
   - expectedValue:

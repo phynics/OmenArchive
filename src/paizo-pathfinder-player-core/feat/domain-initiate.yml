@@ -106,10 +106,10 @@ rules:
       lookupName: domain-spell
       ruleID: bc13c386-c4f8-5ae1-8290-f5ae806da57c
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-    name: $.cleric.domain-spell
+    name: $.cleric.domain-spells
     startLevel: 1
-  id: 7243dd43-b04e-59b6-ae0c-79453c9afd91
-  key: choice-cleric-domain-spell
+  id: a22adb22-507a-5367-8bef-035753a25563
+  key: choice-cleric-domain-spells
   startLevel: 1
 - effectReference:
     kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
@@ -137,7 +137,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.cleric.domain-spell
+        name: $.cleric.domain-spells
       valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
     inputName: spellId
   - expectedValue:

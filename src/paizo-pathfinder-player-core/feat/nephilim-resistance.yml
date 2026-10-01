@@ -47,16 +47,16 @@ rules:
           revision: 1
           typeID: me.atkn.omen.pf2e.playercore/value/string
       kind: local
-    label: Feat Celestial Resistance
+    label: Damage Type
     legacySelections:
     - inputName: type
       lookupName: feat-celestial-resistance
       ruleID: 19a41923-d992-5e15-8597-133c4b2d700d
       valueTypeID: org.openomen.pf2e.core/value/string
-    name: $.feat.nephilim-resistance.feat-celestial-resistance
+    name: $.feat.nephilim-resistance.damage-type
     startLevel: 1
-  id: a8a4c860-d3e4-5473-987e-5645379a46ef
-  key: choice-feat-nephilim-resistance-feat-celestial-resistance
+  id: 0968f704-6234-59d0-9815-e2309e4e71d0
+  key: choice-feat-nephilim-resistance-damage-type
   startLevel: 1
 - effectReference:
     kindID: me.atkn.omen.pf2e.playercore/effect/add-resistance
@@ -66,7 +66,7 @@ rules:
   - expectedValue:
       source:
         kind: choice
-        name: $.feat.nephilim-resistance.feat-celestial-resistance
+        name: $.feat.nephilim-resistance.damage-type
       valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: type
   - expectedValue:
