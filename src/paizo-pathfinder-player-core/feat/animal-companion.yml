@@ -1,25 +1,17 @@
 ---
-action: {}
+name: animal companion
+level: 1
+rarity: common
+type: class
+traits:
+- druid
+prerequisites:
+- text: animal order
+  hasChoice:
+    name: $.druid.order
+    equals: {type: core/feature-id, value: '@class.druid.orders.animal'}
 description: You gain the service of a young animal companion that travels with you
   on your adventures and obeys any simple commands you give it to the best of its
   abilities.
-level: 1
 mechanicsScope: encounter
-name: animal companion
-prerequisites:
-- animal order
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: f2Pl5dWEL9ZvEyI1
-traits:
-- druid
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 1ebe36e9-4dc2-5dce-8471-fd38abca238d
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.druid.order
+foundryID: f2Pl5dWEL9ZvEyI1

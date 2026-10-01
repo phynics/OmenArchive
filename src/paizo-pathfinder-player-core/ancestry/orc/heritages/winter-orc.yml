@@ -1,37 +1,14 @@
 ---
+name: winter orc
 ancestry: orc
+rarity: common
 description: Your ancestors survived in cold climates. You become trained in Survival,
   and you treat environmental cold effects as if they were one step less extreme (incredible
   cold becomes extreme, extreme cold becomes severe, and so on).
 mechanicsScope: builder
-name: winter orc
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 94c72e42-8717-52a1-a427-670b3757873e
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: survival
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: 94c72e42-8717-52a1-a427-670b3757873e
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: survival}
+    proficiencyCap: 2

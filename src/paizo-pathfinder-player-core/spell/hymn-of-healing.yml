@@ -1,29 +1,8 @@
 ---
-action:
-  count: two_actions
-category: focus
-description: 'Your glorious singing mends wounds and provides a temporary respite
-  from harm. The target gains fast healing 2. When you Cast the Spell and the first
-  time each round you Sustain the Spell, the target gains 2 temporary Hit Points,
-  which last for 1 round.
-
-
-  Heightened (+1) The fast healing and temporary Hit Points each increase by 2.'
-diagnostics:
-- Foundry sustained duration flag is not represented by CharacterSpell
-duration: 4 rounds
-mechanicsScope: encounter
 name: hymn of healing
-range: 30 feet
 rank: 1
 rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: gSUQlTDYoLDGAsCP
-target: you or 1 ally
-time: '2'
-traditions: []
+category: focus
 traits:
 - bard
 - composition
@@ -31,3 +10,21 @@ traits:
 - focus
 - healing
 - vitality
+traditions: []
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+target: you or 1 ally
+duration: 4 rounds
+description: 'Your glorious singing mends wounds and provides a temporary respite
+  from harm. The target gains fast healing 2. When you Cast the Spell and the first
+  time each round you Sustain the Spell, the target gains 2 temporary Hit Points,
+  which last for 1 round.
+
+
+  Heightened (+1) The fast healing and temporary Hit Points each increase by 2.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry sustained duration flag is not represented by CharacterSpell
+foundryID: gSUQlTDYoLDGAsCP

@@ -1,125 +1,31 @@
 ---
-action: {}
-description: You've mastered a rogue's fighting moves. Your proficiency ranks increase
-  to master for all simple weapons, martial weapons, and unarmed attacks.
-level: 13
-mechanicsScope: builder
 name: master tricks
-rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
-    revision: 1
-  id: 94e9c85b-a6e4-56c8-939a-db3f23fa1633
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: filter
-            weaponGroup: any
-            weaponKind: martial
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-    inputName: weaponDesignation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: false
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: selfScaling
-  key: generated-1
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
-    revision: 1
-  id: dab7b392-7745-5299-a50d-d4866b2bdbea
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: filter
-            weaponGroup: any
-            weaponKind: simple
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-    inputName: weaponDesignation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: false
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: selfScaling
-  key: generated-2
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
-    revision: 1
-  id: 8cc49b70-95b4-5a4a-8b61-ce43b28fdef0
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: filter
-            weaponGroup: any
-            weaponKind: unarmed
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-    inputName: weaponDesignation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: false
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: selfScaling
-  key: generated-3
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: myvcir1LEkaVxOlE
+level: 13
 traits:
 - rogue
+description: You've mastered a rogue's fighting moves. Your proficiency ranks increase
+  to master for all simple weapons, martial weapons, and unarmed attacks.
+mechanicsScope: builder
+foundryID: myvcir1LEkaVxOlE
+rules:
+- id: 94e9c85b-a6e4-56c8-939a-db3f23fa1633
+  key: generated-1
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    proficiencyRank: 6
+    selfScaling: false
+- id: dab7b392-7745-5299-a50d-d4866b2bdbea
+  key: generated-2
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    proficiencyRank: 6
+    selfScaling: false
+- id: 8cc49b70-95b4-5a4a-8b61-ce43b28fdef0
+  key: generated-3
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    proficiencyRank: 6
+    selfScaling: false

@@ -1,5 +1,7 @@
 ---
+name: nephilim
 ancestry: versatile
+rarity: uncommon
 description: Your nature is influenced by celestials, fiends, or monitors. This manifests
   as a combination of features that belie your heritage, such as golden eyes, a halo,
   horns, or a tail. You gain the nephilim trait, in addition to the traits from your
@@ -7,92 +9,22 @@ description: Your nature is influenced by celestials, fiends, or monitors. This 
   has low-light vision. You can choose from nephilim feats and feats from your ancestry
   whenever you gain an ancestry feat.
 mechanicsScope: builder
-name: nephilim
-rarity: uncommon
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-character-ancestry-trait
-    revision: 1
-  id: 36900294-d49c-5f34-9dbf-28532b5ea671
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: nephilim
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: trait
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-sense
-    revision: 1
-  id: 6d904172-8aae-5b82-82a7-240927c9f9aa
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: low-light-vision
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: selector
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: acuity
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: -1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: range
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-sense
-    revision: 1
-  id: f0c11a17-7c42-59ff-9dc6-92e60a8296ff
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: darkvision
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: selector
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: acuity
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: -1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: range
+- id: 36900294-d49c-5f34-9dbf-28532b5ea671
+  effect: core/add-character-ancestry-trait
+  inputs:
+    trait: nephilim
+- id: 6d904172-8aae-5b82-82a7-240927c9f9aa
+  effect: core/add-sense
+  inputs:
+    selector: low-light-vision
+    acuity: ''
+    range: -1
+- id: f0c11a17-7c42-59ff-9dc6-92e60a8296ff
+  effect: core/add-sense
   prerequisites:
   - hasAncestryVision: low-light-vision
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+  inputs:
+    selector: darkvision
+    acuity: ''
+    range: -1

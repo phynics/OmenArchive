@@ -1,24 +1,17 @@
 ---
-action: {}
+name: arcane sense
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Arcana
+  hasSkillProficiency: {skill: arcana, proficiency: trained}
 description: Your study of magic allows you to instinctively sense its presence. You
   can cast 1st-rank Detect Magic at will as an arcane innate spell. If you're a master
   in Arcana, the spell is heightened to 3rd rank; if you're legendary, it is heightened
   to 4th rank.
-level: 1
 mechanicsScope: encounter
-name: arcane sense
-prerequisites:
-- trained in Arcana
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: blMeVamjGz4ODWxq
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: arcana
+foundryID: blMeVamjGz4ODWxq

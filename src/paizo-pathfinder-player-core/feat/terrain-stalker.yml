@@ -1,5 +1,18 @@
 ---
-action: {}
+name: terrain stalker
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Stealth
+  hasSkillProficiency: {skill: stealth, proficiency: trained}
+repeatPolicy:
+  duplicateSelectionRules: []
+  instanceLevelGates: []
+  maxCount: null
 description: 'Select one type of difficult terrain from the following list: rubble,
   snow, or underbrush. While Undetected by all non-allies in that type of terrain,
   you can Sneak without attempting a Stealth check as long as you move no more than
@@ -8,73 +21,27 @@ description: 'Select one type of difficult terrain from the following list: rubb
   During exploration, this also allows you to automatically approach within 15 feet
   of other creatures while Avoiding their Notice, as long as they aren''t actively
   Searching or on guard.'
-level: 1
+specialText: You can select this feat multiple times. Each time, choose a different
+  type of terrain.
 mechanicsScope: mixed
-name: terrain stalker
-prerequisites:
-- trained in Stealth
-rarity: common
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+foundryID: beyw5bdA5hkQbmaG
 rules:
-- choice:
-    answer:
-      cases:
-      - key: rubble
-        label: Rubble
-        value:
-          payload: rubble
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      - key: snow
-        label: Snow
-        value:
-          payload: snow
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      - key: underbrush
-        label: Underbrush
-        value:
-          payload: underbrush
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      kind: local
+- id: 9ab9e42c-ae3d-53af-bbf0-3889ba0b49df
+  key: choice-feat-terrain-stalker-terrains
+  choice:
+    name: $.feat.terrain-stalker.terrains
     label: Terrain Stalker Terrain
     legacySelections:
     - inputName: terrain
       lookupName: terrain-stalker-terrain
       ruleID: 31305979-4390-5b91-945c-94df98b8fbae
       valueTypeID: org.openomen.pf2e.core/value/string
-    name: $.feat.terrain-stalker.terrains
-    startLevel: 1
-  id: 9ab9e42c-ae3d-53af-bbf0-3889ba0b49df
-  key: choice-feat-terrain-stalker-terrains
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-terrain-stalker
-    revision: 1
-  id: 31305979-4390-5b91-945c-94df98b8fbae
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.terrain-stalker.terrains
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: terrain
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: beyw5bdA5hkQbmaG
-specialText: You can select this feat multiple times. Each time, choose a different
-  type of terrain.
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: stealth
+    type: core/string
+    cases:
+    - {value: rubble}
+    - {value: snow}
+    - {value: underbrush}
+- id: 31305979-4390-5b91-945c-94df98b8fbae
+  effect: core/add-terrain-stalker
+  inputs:
+    terrain: {choice: $.feat.terrain-stalker.terrains}

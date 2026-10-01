@@ -1,43 +1,40 @@
 ---
-action:
-  count: two_actions
-area: '30'
-category: focus
-damage:
-  0:
-    formula: 4d12
-    kinds:
-    - damage
-    type: vitality
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
-description: 'A massive deluge of life energy causes the undead to fall apart. Each
-  undead creature in the area takes 4d12 vitality damage.
-
-
-  Heightened (+1) The damage increases by 1d12.'
-diagnostics:
-- Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 1d12
-  interval: 1
-  type: interval
-mechanicsScope: encounter
 name: eradicate undeath
 rank: 4
 rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: J5MNC4xq3CHH31qT
-time: '2'
-traditions: []
+category: focus
 traits:
 - cleric
 - concentrate
 - focus
 - manipulate
 - vitality
+traditions: []
+time: '2'
+action:
+  count: two_actions
+area: '30'
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 4d12
+    kinds:
+    - damage
+    type: vitality
+heightening:
+  damage:
+    0: 1d12
+  interval: 1
+  type: interval
+description: 'A massive deluge of life energy causes the undead to fall apart. Each
+  undead creature in the area takes 4d12 vitality damage.
+
+
+  Heightened (+1) The damage increases by 1d12.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: J5MNC4xq3CHH31qT

@@ -1,5 +1,13 @@
 ---
-action: {}
+name: fast recovery
+level: 1
+rarity: common
+type: general
+traits:
+- general
+prerequisites:
+- text: Constitution +2
+  hasAttributeModifier: {attribute: con, modifier: 2}
 description: Your body quickly bounces back from afflictions. You regain twice as
   many Hit Points from resting. Each time you succeed at a Fortitude save against
   an ongoing disease or poison, you reduce its stage by 2, or by 1 against a virulent
@@ -7,20 +15,5 @@ description: Your body quickly bounces back from afflictions. You regain twice a
   or poison reduces its stage by 3, or by 2 against a virulent disease or poison.
   In addition, you reduce the severity of your drained condition by 2 when you rest
   for a night instead of by 1.
-level: 1
 mechanicsScope: encounter
-name: fast recovery
-prerequisites:
-- Constitution +2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: N8Xz5fuW6o7GW124
-traits:
-- general
-type: general
-typedPrerequisites:
-- hasAttributeModifier:
-    attribute: con
-    modifier: 2
+foundryID: N8Xz5fuW6o7GW124

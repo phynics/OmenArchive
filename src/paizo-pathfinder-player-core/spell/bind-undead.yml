@@ -1,27 +1,24 @@
 ---
-action:
-  count: two_actions
-category: spell
-description: With a word of power, you seize control of the target. It gains the minion
-  trait. If you or an ally uses any hostile actions against the target, the spell
-  ends.
-duration: 1 day
-mechanicsScope: encounter
 name: bind undead
-range: 30 feet
 rank: 3
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: GUeRTriJkMlMlVrk
-target: 1 mindless undead creature with a level no greater than bind undead's spell
-  rank
-time: '2'
+category: spell
+traits:
+- concentrate
+- manipulate
 traditions:
 - arcane
 - divine
 - occult
-traits:
-- concentrate
-- manipulate
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+target: 1 mindless undead creature with a level no greater than bind undead's spell
+  rank
+duration: 1 day
+description: With a word of power, you seize control of the target. It gains the minion
+  trait. If you or an ally uses any hostile actions against the target, the spell
+  ends.
+mechanicsScope: encounter
+foundryID: GUeRTriJkMlMlVrk

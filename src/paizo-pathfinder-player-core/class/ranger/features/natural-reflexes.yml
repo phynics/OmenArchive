@@ -1,39 +1,16 @@
 ---
-action: {}
+name: natural reflexes
+level: 7
+traits:
+- ranger
 description: You've honed your reflexes dodging falling trees and pounding hail. Your
   proficiency rank for Reflex saves increases to master. When you roll a success on
   a Reflex save, you get a critical success instead.
-level: 7
 mechanicsScope: builder
-name: natural reflexes
+foundryID: 7dMDxvzGKbqoEAdX
 rules:
 - id: ba77673f-3a54-5d62-b4ed-4d7e6a441217
-  effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-saving-throw
-    revision: 1
-  inputRecipes:
-  - inputName: savingThrow
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-          revision: 1
-          payload: reflex
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-          revision: 1
-          payload: 6
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 7dMDxvzGKbqoEAdX
-traits:
-- ranger
+  effect: core/add-saving-throw
+  inputs:
+    savingThrow: reflex
+    proficiencyRank: 6

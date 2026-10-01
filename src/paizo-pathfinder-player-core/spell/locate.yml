@@ -1,5 +1,24 @@
 ---
+name: locate
+rank: 3
+rarity: uncommon
 category: spell
+traits:
+- concentrate
+- detection
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+time: 10 minutes
+range: 500 feet
+target: 1 specific object or type of object
+heightening:
+  levels:
+    5:
+      target: 1 specific object or type of object, or a specific creature or ancestry
+  type: fixed
 description: 'You learn the direction to the target (if you picked a specific object,
   such as "my mother''s sword") or the nearest target (if you picked a type of object,
   such as "swords"). If the target is a specific object, you must have observed it
@@ -12,30 +31,8 @@ description: 'You learn the direction to the target (if you picked a specific ob
 
   Heightened (5th) You can target a specific creature or ancestry instead of an object,
   but you must have met or seen up close the creature or ancestry you want to target.'
+mechanicsScope: encounter
 diagnostics:
 - 'Foundry casting time retained without normalized action count: 10 minutes'
 - Foundry sustained duration flag is not represented by CharacterSpell
-heightening:
-  levels:
-    5:
-      target: 1 specific object or type of object, or a specific creature or ancestry
-  type: fixed
-mechanicsScope: encounter
-name: locate
-range: 500 feet
-rank: 3
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: LQzlKbYjZSMFQawP
-target: 1 specific object or type of object
-time: 10 minutes
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- concentrate
-- detection
-- manipulate
+foundryID: LQzlKbYjZSMFQawP

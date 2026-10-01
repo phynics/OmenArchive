@@ -1,112 +1,49 @@
 ---
-action: {}
-description: 'Your experience in navigating a certain type of terrain makes you supremely
-  confident while doing so. You gain a +1 circumstance bonus to Survival checks in
-  one of the following types of terrain, chosen when you select this feat: aquatic,
-  arctic, desert, forest, mountain, plains, sky, swamp, or underground.'
-level: 1
-mechanicsScope: mixed
 name: terrain expertise
-prerequisites:
-- trained in Survival
+level: 1
 rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Survival
+  hasSkillProficiency: {skill: survival, proficiency: trained}
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+description: 'Your experience in navigating a certain type of terrain makes you supremely
+  confident while doing so. You gain a +1 circumstance bonus to Survival checks in
+  one of the following types of terrain, chosen when you select this feat: aquatic,
+  arctic, desert, forest, mountain, plains, sky, swamp, or underground.'
+specialText: You can select this feat more than once, choosing a different type of
+  terrain each time.
+mechanicsScope: mixed
+foundryID: 4tTkRyOQ0VuRBac3
 rules:
-- choice:
-    answer:
-      cases:
-      - key: aquatic
-        label: Aquatic
-        value:
-          payload: aquatic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: arctic
-        label: Arctic
-        value:
-          payload: arctic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: desert
-        label: Desert
-        value:
-          payload: desert
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: forest
-        label: Forest
-        value:
-          payload: forest
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: mountain
-        label: Mountain
-        value:
-          payload: mountain
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: plains
-        label: Plains
-        value:
-          payload: plains
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: sky
-        label: Sky
-        value:
-          payload: sky
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: swamp
-        label: Swamp
-        value:
-          payload: swamp
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      - key: underground
-        label: Underground
-        value:
-          payload: underground
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/terrain
-      kind: local
+- id: 33cce07a-795d-5095-be7f-d7d1aacfbd07
+  key: choice-feat-terrain-expertise-terrains
+  choice:
+    name: $.feat.terrain-expertise.terrains
     label: Terrain Expertise Terrain
     legacySelections:
     - inputName: terrain
       lookupName: terrain-expertise-terrain
       ruleID: c073d2f4-24fa-5aa3-a164-2e9aeff84148
       valueTypeID: org.openomen.pf2e.core/value/terrain
-    name: $.feat.terrain-expertise.terrains
-    startLevel: 1
-  id: 33cce07a-795d-5095-be7f-d7d1aacfbd07
-  key: choice-feat-terrain-expertise-terrains
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-terrain-expertise
-    revision: 1
-  id: c073d2f4-24fa-5aa3-a164-2e9aeff84148
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.terrain-expertise.terrains
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/terrain
-    inputName: terrain
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4tTkRyOQ0VuRBac3
-specialText: You can select this feat more than once, choosing a different type of
-  terrain each time.
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: survival
+    type: core/terrain
+    cases:
+    - {value: aquatic}
+    - {value: arctic}
+    - {value: desert}
+    - {value: forest}
+    - {value: mountain}
+    - {value: plains}
+    - {value: sky}
+    - {value: swamp}
+    - {value: underground}
+- id: c073d2f4-24fa-5aa3-a164-2e9aeff84148
+  effect: core/add-terrain-expertise
+  inputs:
+    terrain: {choice: $.feat.terrain-expertise.terrains}

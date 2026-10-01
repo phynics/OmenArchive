@@ -1,42 +1,18 @@
 ---
-action: {}
+name: harmlessly cute
+level: 1
+rarity: common
+type: ancestry
+traits:
+- leshy
 description: Your size and demeanor make it easy for you to convince others that you
   mean no harm. You gain the Shameless Request skill feat. Additionally, you gain
   a +1 circumstance bonus to initiative checks when you roll Deception for initiative.
-level: 1
 mechanicsScope: mixed
-name: harmlessly cute
-prerequisites: []
-rarity: common
+foundryID: GYdLf1LhvSUeu95Y
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 3272b36c-573e-58a4-8af2-91e590f9fafe
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 09712bb5-0694-57c8-a514-ca6055d2cdc8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 836e23d6-ed7d-5527-a365-3792c77e31d0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: GYdLf1LhvSUeu95Y
-traits:
-- leshy
-type: ancestry
+- id: 3272b36c-573e-58a4-8af2-91e590f9fafe
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 09712bb5-0694-57c8-a514-ca6055d2cdc8
+    featId: '@feat.shameless-request'

@@ -1,18 +1,36 @@
 ---
+name: blessed boundary
+rank: 6
+rarity: common
+category: spell
+traits:
+- concentrate
+- force
+- manipulate
+- sanctified
+traditions:
+- divine
+time: '3'
 action:
   count: three_actions
+range: 120 feet
 area: '60'
-category: spell
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   rQT6Is4xVcbWJIAt:
     formula: 7d8
     kinds:
     - damage
     type: force
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    rQT6Is4xVcbWJIAt: 1d8
+  interval: 1
+  type: interval
 description: 'Manifestations of divine force appear in the hundreds, swirling in a
   massive, protective sphere. These typically look like spiky fragments, but often
   take on an appearance themed to the deity of the caster. The sphere is hollow, with
@@ -40,28 +58,7 @@ description: 'Manifestations of divine force appear in the hundreds, swirling in
 
 
   Heightened (+1) The damage increases by 1d8.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 minute
-heightening:
-  damage:
-    rQT6Is4xVcbWJIAt: 1d8
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: blessed boundary
-range: 120 feet
-rank: 6
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: jj5d830iUi2ZlQfs
-time: '3'
-traditions:
-- divine
-traits:
-- concentrate
-- force
-- manipulate
-- sanctified
+foundryID: jj5d830iUi2ZlQfs

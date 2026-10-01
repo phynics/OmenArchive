@@ -1,51 +1,25 @@
 ---
-action: {}
+name: fighter resiliency
+level: 4
+rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Fighter Dedication
+  hasResourceWithName: fighter dedication
+- text: class granting no more Hit Points per level than 8 + your Constitution modifier
+  unsupported: Unsupported prerequisite for source PLz1oIEGJojVUBsW "class granting
+    no more Hit Points per level than 8 + your Constitution modifier".
+  diagnostic: true
 description: You gain 3 additional Hit Points for each fighter archetype class feat
   you have. As you continue selecting fighter archetype class feats, you continue
   to gain additional Hit Points in this way.
-level: 4
 mechanicsScope: builder
-name: fighter resiliency
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source PLz1oIEGJojVUBsW "class granting no more Hit
-  Points per level than 8 + your Constitution modifier".
-prerequisites:
-- Fighter Dedication
-- class granting no more Hit Points per level than 8 + your Constitution modifier
-rarity: common
+foundryID: PLz1oIEGJojVUBsW
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-hit-points-per-count
-    revision: 1
-  id: 85127d64-80bc-53f6-b90b-a1381f6765a3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: amount
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: $.archetype.fighter.feat-count
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: count
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: PLz1oIEGJojVUBsW
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: fighter dedication
-- unsupported: Unsupported prerequisite for source PLz1oIEGJojVUBsW "class granting
-    no more Hit Points per level than 8 + your Constitution modifier".
+- id: 85127d64-80bc-53f6-b90b-a1381f6765a3
+  effect: core/add-hit-points-per-count
+  inputs:
+    amount: 3
+    count: \$.archetype.fighter.feat-count

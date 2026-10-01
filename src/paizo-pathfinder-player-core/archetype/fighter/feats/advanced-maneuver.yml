@@ -1,25 +1,20 @@
 ---
-action: {}
-description: You gain a fighter feat. For the purpose of meeting its prerequisites,
-  your fighter level is equal to half your character level.
-level: 6
-mechanicsScope: encounter
 name: advanced maneuver
-prerequisites:
-- Basic Maneuver
+level: 6
 rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Basic Maneuver
+  hasResourceWithName: basic maneuver
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: euWpgjPNcDjeXAWQ
+description: You gain a fighter feat. For the purpose of meeting its prerequisites,
+  your fighter level is equal to half your character level.
 specialText: You can select this feat more than once. Each time you select it, you
   gain another fighter feat.
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic maneuver
+mechanicsScope: encounter
+foundryID: euWpgjPNcDjeXAWQ

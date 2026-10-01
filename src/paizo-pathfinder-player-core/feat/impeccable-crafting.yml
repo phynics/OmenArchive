@@ -1,23 +1,16 @@
 ---
-action: {}
-description: ''
-level: 7
-mechanicsScope: encounter
 name: impeccable crafting
-prerequisites:
-- master in Crafting
-- Specialty Crafting
+level: 7
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: PiUe3tpv7UVtnfvS
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: crafting
-- hasResourceWithName: specialty crafting
+prerequisites:
+- text: master in Crafting
+  hasSkillProficiency: {skill: crafting, proficiency: master}
+- text: Specialty Crafting
+  hasResourceWithName: specialty crafting
+description: ''
+mechanicsScope: encounter
+foundryID: PiUe3tpv7UVtnfvS

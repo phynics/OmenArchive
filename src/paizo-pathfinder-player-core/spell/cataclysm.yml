@@ -1,8 +1,30 @@
 ---
+name: cataclysm
+rank: 10
+rarity: common
+category: spell
+traits:
+- acid
+- air
+- cold
+- concentrate
+- earth
+- electricity
+- fire
+- manipulate
+- water
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
+range: 1,000 feet
 area: '60'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 3d10
@@ -34,10 +56,6 @@ damage:
     kinds:
     - damage
     type: fire
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
 description: 'You call upon the unimaginable power of world-ending cataclysms, ripping
   a small piece of each cataclysm and combining them together into one horrifically
   powerful attack. The following effects come down upon all creatures in the area.
@@ -68,28 +86,7 @@ description: 'You call upon the unimaginable power of world-ending cataclysms, r
 
 
   A massive wildfire burns in a sudden inferno, dealing 3d10 fire damage.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-mechanicsScope: encounter
-name: cataclysm
-range: 1,000 feet
-rank: 10
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wLIvH0AT1u7oa64N
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- acid
-- air
-- cold
-- concentrate
-- earth
-- electricity
-- fire
-- manipulate
-- water
+foundryID: wLIvH0AT1u7oa64N

@@ -1,31 +1,8 @@
 ---
-action:
-  count: one_action
-  requirements: Your most recent action dealt damage to a target.
-category: focus
-defense:
-  basic: false
-  counteraction: false
-  save: will
-description: With the threat of more pain, you compel a creature you've recently harmed.
-  You issue a command to the target, with the effects of the spell Command.If the
-  target is Frightened, Stupefied, or taking persistent damage, it takes a –2 circumstance
-  penalty to the save. Regardless of the result, the target is then temporarily immune
-  for 1 hour
-duration: until the end of your target's next turn
-mechanicsScope: encounter
 name: commanding lash
-range: 100 feet
 rank: 4
 rarity: uncommon
-requirements: Your most recent action dealt damage to a target.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4DaHIgtMBTyxebY3
-target: A creature you dealt damage to on your most recent action.
-time: '1'
-traditions: []
+category: focus
 traits:
 - cleric
 - concentrate
@@ -33,3 +10,23 @@ traits:
 - linguistic
 - manipulate
 - mental
+traditions: []
+time: '1'
+action:
+  count: one_action
+  requirements: Your most recent action dealt damage to a target.
+range: 100 feet
+target: A creature you dealt damage to on your most recent action.
+duration: until the end of your target's next turn
+defense:
+  basic: false
+  counteraction: false
+  save: will
+requirements: Your most recent action dealt damage to a target.
+description: With the threat of more pain, you compel a creature you've recently harmed.
+  You issue a command to the target, with the effects of the spell Command.If the
+  target is Frightened, Stupefied, or taking persistent damage, it takes a –2 circumstance
+  penalty to the save. Regardless of the result, the target is then temporarily immune
+  for 1 hour
+mechanicsScope: encounter
+foundryID: 4DaHIgtMBTyxebY3

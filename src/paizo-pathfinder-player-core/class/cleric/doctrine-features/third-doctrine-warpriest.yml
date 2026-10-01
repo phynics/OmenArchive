@@ -1,148 +1,35 @@
 ---
-action: {}
+name: third doctrine (warpriest)
+level: 7
+traits:
+- cleric
 description: You gain expert proficiency with your deity's favored weapon, martial
   weapons, simple weapons, and unarmed attacks. When you critically succeed at an
   attack roll using your deity's favored weapon, you apply the weapon's critical specialization
   effect; you can use your spell DC in place of your class DC.
-level: 7
 mechanicsScope: builder
-name: third doctrine (warpriest)
+foundryID: Zp81uTBItG1xlH4O
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-critical-specialization
-    revision: 1
-  id: d39c0784-9feb-506d-b26a-01d52d79b618
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c703bc45-6b23-58b9-8206-0c97dc501da6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: any
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-group
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-group
-    inputName: weaponGroup
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
-    revision: 1
-  id: eceb18cf-fa22-5994-957c-a4a49e6d82e6
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: filter
-            weaponGroup: any
-            weaponKind: martial
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-    inputName: weaponDesignation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: false
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: selfScaling
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
-    revision: 1
-  id: 3276d103-951b-5ce1-b4b7-a4e34c4596b3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: filter
-            weaponGroup: any
-            weaponKind: simple
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-    inputName: weaponDesignation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: false
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: selfScaling
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
-    revision: 1
-  id: afb06242-948d-59f5-b354-5d0c3e6d1bf8
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: filter
-            weaponGroup: any
-            weaponKind: unarmed
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-    inputName: weaponDesignation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: false
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: selfScaling
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Zp81uTBItG1xlH4O
-traits:
-- cleric
+- id: d39c0784-9feb-506d-b26a-01d52d79b618
+  effect: core/add-weapon-critical-specialization
+  inputs:
+    uuid: c703bc45-6b23-58b9-8206-0c97dc501da6
+    weaponGroup: any
+- id: eceb18cf-fa22-5994-957c-a4a49e6d82e6
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 3276d103-951b-5ce1-b4b7-a4e34c4596b3
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    proficiencyRank: 4
+    selfScaling: false
+- id: afb06242-948d-59f5-b354-5d0c3e6d1bf8
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    proficiencyRank: 4
+    selfScaling: false

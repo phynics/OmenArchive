@@ -1,18 +1,30 @@
 ---
+name: gust of wind
+rank: 1
+rarity: common
+category: spell
+traits:
+- air
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
 area: '60'
-category: spell
+duration: until the start of your next turn
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   C34n7XTpCLCXJWwt:
     formula: 2d6
     kinds:
     - damage
     type: bludgeoning
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
 description: 'A violent wind issues forth from your palm, blowing from the point where
   you are when you Cast the Spell to the line''s opposite end. The wind extinguishes
   small non-magical fires, disperses fog and mist, blows objects of light Bulk or
@@ -33,22 +45,7 @@ description: 'A violent wind issues forth from your palm, blowing from the point
 
   Critical Failure The creature is pushed 30 feet in the wind''s direction, knocked
   prone, and takes 2d6 bludgeoning damage.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: until the start of your next turn
-mechanicsScope: encounter
-name: gust of wind
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: g8QqHpv2CWDwmIm1
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- air
-- concentrate
-- manipulate
+foundryID: g8QqHpv2CWDwmIm1

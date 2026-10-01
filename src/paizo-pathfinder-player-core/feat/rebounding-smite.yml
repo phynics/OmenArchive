@@ -1,22 +1,18 @@
 ---
+name: rebounding smite
+level: 16
+rarity: common
+type: class
+traits:
+- cleric
+prerequisites:
+- text: Channel Smite
+  hasResourceWithName: channel smite
 action:
   count: reaction
   trigger: You miss with your Strike during Channel Smite.
 description: The energy from your smite persists for a moment, allowing you to pass
   it to a new target. Cast the 1-action version of the Harm or Heal spell you expended,
   targeting a creature other than the target of your Strike.
-level: 16
 mechanicsScope: encounter
-name: rebounding smite
-prerequisites:
-- Channel Smite
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Q0gFkEoJDmbRaaiU
-traits:
-- cleric
-type: class
-typedPrerequisites:
-- hasResourceWithName: channel smite
+foundryID: Q0gFkEoJDmbRaaiU

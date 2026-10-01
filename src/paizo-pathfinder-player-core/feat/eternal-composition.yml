@@ -1,28 +1,20 @@
 ---
-action: {}
+name: eternal composition
+level: 18
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: maestro muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 description: The world is a stage upon which you are always playing. You are permanently
   Quickened; you can use your extra action only to cast a composition cantrip that
   requires 1 action to cast. While in exploration mode, you can declare that you are
   performing an eligible composition cantrip while using any exploration tactic. Even
   before your first turn in a combat encounter, that cantrip is active as if you had
   cast it on your previous turn.
-level: 18
 mechanicsScope: encounter
-name: eternal composition
-prerequisites:
-- maestro muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: yFoBVSOCnC2R2r8s
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: e3ea2e9a-ac76-5a96-9d90-d127c118411b
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: yFoBVSOCnC2R2r8s

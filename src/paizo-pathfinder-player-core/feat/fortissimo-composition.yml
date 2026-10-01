@@ -1,24 +1,16 @@
 ---
-action: {}
-description: Your anthems grow louder and more potent, bolstered by your muse's power.
-  You learn the Fortissimo Composition spellshape focus spell.
-level: 8
-mechanicsScope: encounter
 name: fortissimo composition
-prerequisites:
-- maestro muse
+level: 8
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: FjuuX0vUWlYchRNM
+type: class
 traits:
 - bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: e3ea2e9a-ac76-5a96-9d90-d127c118411b
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
+prerequisites:
+- text: maestro muse
+  hasChoice:
     name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
+description: Your anthems grow louder and more potent, bolstered by your muse's power.
+  You learn the Fortissimo Composition spellshape focus spell.
+mechanicsScope: encounter
+foundryID: FjuuX0vUWlYchRNM

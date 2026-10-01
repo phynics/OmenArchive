@@ -1,18 +1,34 @@
 ---
+name: arctic rift
+rank: 8
+rarity: common
+category: spell
+traits:
+- cold
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
 area: '120'
-category: spell
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   dFAvAi8vt0k4MIyH:
     formula: 12d8
     kinds:
     - damage
     type: cold
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    dFAvAi8vt0k4MIyH: 1d8
+  interval: 1
+  type: interval
 description: 'A jagged crack opens in the air, dealing 12d8 cold damage as it draws
   away warmth. Each creature along the rift must attempt a Fortitude save.
 
@@ -35,26 +51,7 @@ description: 'A jagged crack opens in the air, dealing 12d8 cold damage as it dr
 
   Heightened (+1) The damage increases by 1d8 and the ice''s Hit Points increase by
   5.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    dFAvAi8vt0k4MIyH: 1d8
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: arctic rift
-rank: 8
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: C2GYCH3TtUFqPfdX
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- cold
-- concentrate
-- manipulate
+foundryID: C2GYCH3TtUFqPfdX

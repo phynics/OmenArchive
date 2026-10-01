@@ -1,18 +1,36 @@
 ---
+name: floating flame
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- fire
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
+range: 30 feet
 area: '5'
-category: spell
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 3d6
     kinds:
     - damage
     type: fire
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
 description: 'You create a fire that burns without fuel and moves to your commands.
   The flame deals 3d6 fire damage to each creature in the square in which it appears,
   with a basic Reflex save. When you Sustain this spell, you can levitate the flame
@@ -23,29 +41,8 @@ description: 'You create a fire that burns without fuel and moves to your comman
 
 
   Heightened (+1) The damage increases by 1d6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d6
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: floating flame
-range: 30 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 2ZdHjnpEQJuqOYSG
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- fire
-- manipulate
+foundryID: 2ZdHjnpEQJuqOYSG

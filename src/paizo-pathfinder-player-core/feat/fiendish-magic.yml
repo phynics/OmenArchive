@@ -1,276 +1,81 @@
 ---
-action: {}
+name: fiendish magic
+level: 9
+rarity: common
+type: ancestry
+traits:
+- nephilim
+prerequisites:
+- text: Grimspawn, Pitborn, Hellspawn, or another lineage feat associated with fiends
+  unsupported: Unsupported prerequisite for source UKYO5kiOnCY1hgCD "Grimspawn, Pitborn,
+    Hellspawn, or another lineage feat associated with fiends".
+  diagnostic: true
 description: 'You possess fiendish magic. Choose two of the following spells: Disguise
   Magic, False Vitality, Invisibility, See the Unseen, Shatter, or Paranoia. You can
   use each of the chosen spells once per day as 2nd-rank divine innate spells.
 
   Grimspawn typically take false vitality and see the unseen, pitborn typically take
   paranoia and shatter, and hellspawn typically take invisibility and disguise.'
-level: 9
 mechanicsScope: builder
-name: fiendish magic
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source UKYO5kiOnCY1hgCD "Grimspawn, Pitborn, Hellspawn,
-  or another lineage feat associated with fiends".
-prerequisites:
-- Grimspawn, Pitborn, Hellspawn, or another lineage feat associated with fiends
-rarity: common
+foundryID: UKYO5kiOnCY1hgCD
 rules:
-- choice:
-    answer:
-      filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: spell
-        - kind: union
-          values:
-          - kind: single
-            value:
-              kind: hasName
-              name: paranoia
-          - kind: single
-            value:
-              kind: hasName
-              name: shatter
-          - kind: single
-            value:
-              kind: hasName
-              name: disguise magic
-          - kind: single
-            value:
-              kind: hasName
-              name: see the unseen
-          - kind: single
-            value:
-              kind: hasName
-              name: false vitality
-          - kind: single
-            value:
-              kind: hasName
-              name: invisibility
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    label: First Spell
-    name: $.feat.fiendish-magic.spell-one
-    startLevel: 1
-  id: 39b75ef0-061e-5e93-b7e0-7875ff3a811a
+- id: 39b75ef0-061e-5e93-b7e0-7875ff3a811a
   key: choice-feat-fiendish-magic-spell-one
-  startLevel: 1
-- choice:
-    answer:
+  choice:
+    name: $.feat.fiendish-magic.spell-one
+    label: First Spell
+    records:
       filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: spell
-        - kind: union
-          values:
-          - kind: single
-            value:
-              kind: hasName
-              name: paranoia
-          - kind: single
-            value:
-              kind: hasName
-              name: shatter
-          - kind: single
-            value:
-              kind: hasName
-              name: disguise magic
-          - kind: single
-            value:
-              kind: hasName
-              name: see the unseen
-          - kind: single
-            value:
-              kind: hasName
-              name: false vitality
-          - kind: single
-            value:
-              kind: hasName
-              name: invisibility
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+        all:
+        - {type: spell}
+        - any:
+          - {name: paranoia}
+          - {name: shatter}
+          - {name: disguise magic}
+          - {name: see the unseen}
+          - {name: false vitality}
+          - {name: invisibility}
+      type: spellcasting/spell-id
+- id: c8881bc7-499b-5c1e-a946-bc0406bf3668
+  key: choice-feat-fiendish-magic-spell-two
+  choice:
+    name: $.feat.fiendish-magic.spell-two
+    label: Second Spell
     distinctFrom:
     - $.feat.fiendish-magic.spell-one
-    label: Second Spell
-    name: $.feat.fiendish-magic.spell-two
-    startLevel: 1
-  id: c8881bc7-499b-5c1e-a946-bc0406bf3668
-  key: choice-feat-fiendish-magic-spell-two
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: abaa7337-ec12-508b-84af-b07f18560aa6
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: d3b0e1fd-c5df-5faf-b809-39c4c12ec10a
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Fiendish Magic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 24d66b69-c68b-5963-8aa2-359c4dc6dbbe
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.fiendish-magic.spell-one
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: divine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: fixed
-            rank: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: perDay
-            uses: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - any:
+          - {name: paranoia}
+          - {name: shatter}
+          - {name: disguise magic}
+          - {name: see the unseen}
+          - {name: false vitality}
+          - {name: invisibility}
+      type: spellcasting/spell-id
+- id: abaa7337-ec12-508b-84af-b07f18560aa6
   key: innate-spell-1
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: eceb252d-979e-55ff-ac2e-b0c86d848e66
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: d3b0e1fd-c5df-5faf-b809-39c4c12ec10a
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Fiendish Magic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2b1eb757-984b-559f-b8b1-c6cdb99a8807
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.fiendish-magic.spell-two
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: divine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: fixed
-            rank: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: perDay
-            uses: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: d3b0e1fd-c5df-5faf-b809-39c4c12ec10a
+    sourceName: Fiendish Magic
+    grantId: 24d66b69-c68b-5963-8aa2-359c4dc6dbbe
+    spellId: {choice: $.feat.fiendish-magic.spell-one}
+    tradition: divine
+    attribute: cha
+    rankPolicy: {kind: fixed, rank: 2}
+    castFrequency: {kind: perDay, uses: 1}
+- id: eceb252d-979e-55ff-ac2e-b0c86d848e66
   key: innate-spell-2
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: UKYO5kiOnCY1hgCD
-traits:
-- nephilim
-type: ancestry
-typedPrerequisites:
-- unsupported: Unsupported prerequisite for source UKYO5kiOnCY1hgCD "Grimspawn, Pitborn,
-    Hellspawn, or another lineage feat associated with fiends".
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: d3b0e1fd-c5df-5faf-b809-39c4c12ec10a
+    sourceName: Fiendish Magic
+    grantId: 2b1eb757-984b-559f-b8b1-c6cdb99a8807
+    spellId: {choice: $.feat.fiendish-magic.spell-two}
+    tradition: divine
+    attribute: cha
+    rankPolicy: {kind: fixed, rank: 2}
+    castFrequency: {kind: perDay, uses: 1}

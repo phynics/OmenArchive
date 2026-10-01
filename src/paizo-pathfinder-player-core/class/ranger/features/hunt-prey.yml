@@ -1,29 +1,14 @@
 ---
-action: {}
-description: When you focus your attention on a single foe, you become unstoppable
-  in your pursuit. You gain the Hunt Prey action.
-level: 1
-mechanicsScope: mixed
 name: hunt prey
-rules:
-- id: 69dcac03-d6b6-5f85-ab61-0b201a03cedb
-  effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-action
-    revision: 1
-  inputRecipes:
-  - inputName: actionId
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/action-id
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/action-id
-          revision: 1
-          payload: 82ac6f94-330a-5e69-90f1-573c0fa3ac5d
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 0nIOGpHQNHsKSFKT
+level: 1
 traits:
 - ranger
+description: When you focus your attention on a single foe, you become unstoppable
+  in your pursuit. You gain the Hunt Prey action.
+mechanicsScope: mixed
+foundryID: 0nIOGpHQNHsKSFKT
+rules:
+- id: 69dcac03-d6b6-5f85-ab61-0b201a03cedb
+  effect: core/add-action
+  inputs:
+    actionId: '@action.hunt-prey'

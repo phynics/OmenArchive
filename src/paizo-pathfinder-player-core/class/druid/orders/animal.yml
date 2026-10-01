@@ -1,5 +1,8 @@
 ---
-action: {}
+name: animal order
+level: 1
+traits:
+- druid
 description: 'You have a strong connection to beasts, always feeling like you understood
   them (and they you) better than your own people. You stand for the animals of nature,
   a powerful animal companion at your side.
@@ -16,172 +19,34 @@ description: 'You have a strong connection to beasts, always feeling like you un
 grantedSpells:
 - grant: focus
   spell: omen://spell/heal-animal?source=paizo-pathfinder-player-core
-level: 1
 mechanicsScope: builder
-name: animal order
+foundryID: POBvoXifa9HaejAg
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
-    revision: 1
-  id: 8e5024d8-053e-5e1c-854e-66de30036540
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 81e74f02-2bec-54d4-9883-4708f5f35ccb
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Druid Focus Spells
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-    inputName: castingKind
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: primal
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: wis
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 9be7e59b-e74f-58d8-af75-76604472f8a5
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 81e74f02-2bec-54d4-9883-4708f5f35ccb
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 89e8fd02-8086-59bd-a626-87b48e66f24e
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5e5126ec-3775-55f4-8281-c0585fe8cbe1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 659d30f3-b208-5708-bdfa-a925bd541bc4
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 20504b27-ba1e-534e-b538-c1960ec137ed
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: athletics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: b5275881-dc7f-5492-b794-c06999a91a4b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cec3a688-f309-5801-96fe-8de29c3600fa
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9792c05d-5f08-5e75-91ad-0d568e04ceba
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: POBvoXifa9HaejAg
-traits:
-- druid
+- id: 8e5024d8-053e-5e1c-854e-66de30036540
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    sourceName: Druid Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: wis
+- id: 9be7e59b-e74f-58d8-af75-76604472f8a5
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    grantId: 89e8fd02-8086-59bd-a626-87b48e66f24e
+    spellId: '@spell.heal-animal'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 659d30f3-b208-5708-bdfa-a925bd541bc4
+  effect: spellcasting/add-focus-point
+- id: 20504b27-ba1e-534e-b538-c1960ec137ed
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: athletics}
+    proficiencyCap: 2
+- id: b5275881-dc7f-5492-b794-c06999a91a4b
+  effect: core/add-feat@2
+  inputs:
+    selectionId: cec3a688-f309-5801-96fe-8de29c3600fa
+    featId: '@feat.animal-companion'

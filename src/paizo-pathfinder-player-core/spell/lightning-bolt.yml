@@ -1,43 +1,40 @@
 ---
+name: lightning bolt
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- electricity
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
 area: '120'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 4d12
     kinds:
     - damage
     type: electricity
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
-description: 'A bolt of lightning strikes outward from your hand, dealing 4d12 electricity
-  damage.
-
-
-  Heightened (+1) The damage increases by 1d12.'
-diagnostics:
-- Foundry area type is not represented when area details are absent
 heightening:
   damage:
     0: 1d12
   interval: 1
   type: interval
+description: 'A bolt of lightning strikes outward from your hand, dealing 4d12 electricity
+  damage.
+
+
+  Heightened (+1) The damage increases by 1d12.'
 mechanicsScope: encounter
-name: lightning bolt
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 9AAkVUCwF6WVNNY2
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- electricity
-- manipulate
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: 9AAkVUCwF6WVNNY2

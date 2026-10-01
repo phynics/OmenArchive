@@ -1,5 +1,10 @@
 ---
-action: {}
+name: cauldron
+level: 1
+rarity: common
+type: class
+traits:
+- witch
 description: 'You can brew magic in your cauldron, creating useful magical concoctions.
   You can use the Craft activity to create oils and potions. You immediately gain
   the formulas for four common 1st-level oils or potions. At 4th level and every 2
@@ -17,67 +22,14 @@ description: 'You can brew magic in your cauldron, creating useful magical conco
   this way become inert bottles of liquid the next time you make your daily preparations,
   and any remaining effects of the temporary items end. A temporary oil or potion
   has no value.'
-level: 1
 mechanicsScope: builder
-name: cauldron
-prerequisites: []
-rarity: common
+foundryID: zUtdBd3IbM7UX0AD
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-crafting-ability
-    revision: 1
-  id: 2cdc9fa9-359d-5902-82e2-637747827f6c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cauldron
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: slug
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: PF2E.SpecificRule.Witch.Cauldron.CraftingEntry
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: label
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ternary(eq(@actor.system.proficiencies.spellcasting.rank,4),3,ternary(eq(@actor.system.proficiencies.spellcasting.rank,3),2,1))
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: maxSlotsExpression
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: true
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: isDailyPreparation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: or(item:trait:oil,item:trait:potion)
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: craftableItems
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: zUtdBd3IbM7UX0AD
-traits:
-- witch
-type: class
+- id: 2cdc9fa9-359d-5902-82e2-637747827f6c
+  effect: core/add-crafting-ability
+  inputs:
+    slug: cauldron
+    label: PF2E.SpecificRule.Witch.Cauldron.CraftingEntry
+    maxSlotsExpression: ternary(eq(@actor.system.proficiencies.spellcasting.rank,4),3,ternary(eq(@actor.system.proficiencies.spellcasting.rank,3),2,1))
+    isDailyPreparation: true
+    craftableItems: or(item:trait:oil,item:trait:potion)

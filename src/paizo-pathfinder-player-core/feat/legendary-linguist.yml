@@ -1,27 +1,20 @@
 ---
-action: {}
+name: legendary linguist
+level: 15
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: legendary in Society
+  hasSkillProficiency: {skill: society, proficiency: legendary}
+- text: Multilingual
+  hasResourceWithName: multilingual
 description: You're so skilled with languages you can create a pidgin instantly. You
   can always talk to any creature that has a language—even a language you don't know—by
   creating a new pidgin language that uses simplified terms and conveys basic concepts.
   To do so, you must first understand at least what medium of communication the creature
   uses (speech, sign language, and so on).
-level: 15
 mechanicsScope: encounter
-name: legendary linguist
-prerequisites:
-- legendary in Society
-- Multilingual
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: n0S0tJiOJPQk0Rne
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: society
-- hasResourceWithName: multilingual
+foundryID: n0S0tJiOJPQk0Rne

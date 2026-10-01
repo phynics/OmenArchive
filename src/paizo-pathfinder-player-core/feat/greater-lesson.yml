@@ -1,56 +1,33 @@
 ---
-action: {}
+name: greater lesson
+level: 6
+rarity: common
+type: class
+traits:
+- witch
 description: Your patron grants you greater knowledge. Choose a greater or basic lesson.
   You gain its associated hex, and your familiar learns the associated spell.
-level: 6
 mechanicsScope: builder
-name: greater lesson
-prerequisites: []
-rarity: common
+foundryID: qDfTqetM9UEpp8ty
 rules:
-- choice:
-    answer:
-      filter:
-        kind: union
-        values:
-        - kind: single
-          value:
-            kind: hasPathPrefix
-            path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
-        - kind: single
-          value:
-            kind: hasPathPrefix
-            path: omen://class/witch/greater-lessons?source=paizo-pathfinder-player-core
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+- id: 70f4eaa2-511e-51ee-886b-4db01b867837
+  key: choice-feat-greater-lesson-lesson
+  choice:
+    name: $.feat.greater-lesson.lesson
     label: Lesson
     legacySelections:
     - inputName: featureId
       lookupName: lesson
       ruleID: f03bff07-93d4-5378-bacf-395780ab4ba6
       valueTypeID: org.openomen.pf2e.core/value/feature-id
-    name: $.feat.greater-lesson.lesson
-    startLevel: 1
-  id: 70f4eaa2-511e-51ee-886b-4db01b867837
-  key: choice-feat-greater-lesson-lesson
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
-    revision: 1
-  id: f55af4b5-dfe4-5028-b629-cdaf6f27a72f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.greater-lesson.lesson
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    inputName: featureId
+    records:
+      filter:
+        any:
+        - {pathPrefix: '@class.witch.basic-lessons'}
+        - {pathPrefix: '@class.witch.greater-lessons'}
+      type: core/feature-id
+- id: f55af4b5-dfe4-5028-b629-cdaf6f27a72f
   key: choice-set-1
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: qDfTqetM9UEpp8ty
-traits:
-- witch
-type: class
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.feat.greater-lesson.lesson}

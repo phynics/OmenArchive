@@ -1,51 +1,29 @@
 ---
-action: {}
+name: basic lesson
+level: 2
+rarity: common
+type: class
+traits:
+- witch
 description: Your patron grants you a special lesson, revealing a hidden facet of
   its nature. Choose a basic lesson. You gain its associated hex, and your familiar
   learns the associated spell.
-level: 2
 mechanicsScope: builder
-name: basic lesson
-prerequisites: []
-rarity: common
+foundryID: wsq8nncD25Q1fRn2
 rules:
-- choice:
-    answer:
-      filter:
-        kind: single
-        value:
-          kind: hasPathPrefix
-          path: omen://class/witch/basic-lessons?source=paizo-pathfinder-player-core
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+- id: b32bac00-34f6-5654-90da-f73cdca7a9fc
+  key: choice-feat-basic-lesson-lesson
+  choice:
+    name: $.feat.basic-lesson.lesson
     label: Lesson
     legacySelections:
     - inputName: featureId
       lookupName: lesson
       ruleID: c8692669-590c-5977-8264-c04efbfcfbf4
       valueTypeID: org.openomen.pf2e.core/value/feature-id
-    name: $.feat.basic-lesson.lesson
-    startLevel: 1
-  id: b32bac00-34f6-5654-90da-f73cdca7a9fc
-  key: choice-feat-basic-lesson-lesson
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
-    revision: 1
-  id: 22653d6d-4696-5dff-8635-bf6afe37e270
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.basic-lesson.lesson
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    inputName: featureId
+    records: {filter: {pathPrefix: '@class.witch.basic-lessons'}, type: core/feature-id}
+- id: 22653d6d-4696-5dff-8635-bf6afe37e270
   key: choice-set-1
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wsq8nncD25Q1fRn2
-traits:
-- witch
-type: class
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.feat.basic-lesson.lesson}

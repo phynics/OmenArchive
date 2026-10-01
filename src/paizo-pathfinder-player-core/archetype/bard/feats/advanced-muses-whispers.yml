@@ -1,25 +1,20 @@
 ---
-action: {}
-description: You gain one bard feat. For the purpose of meeting its prerequisites,
-  your bard level is equal to half your character level.
-level: 6
-mechanicsScope: encounter
 name: advanced muse's whispers
-prerequisites:
-- Basic Muse's Whispers
+level: 6
 rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Basic Muse's Whispers
+  hasResourceWithName: basic muse's whispers
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: eTqWgfojpvuigdvx
+description: You gain one bard feat. For the purpose of meeting its prerequisites,
+  your bard level is equal to half your character level.
 specialText: You can select this feat more than once. Each time you select it, you
   gain another bard feat.
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic muse's whispers
+mechanicsScope: encounter
+foundryID: eTqWgfojpvuigdvx

@@ -1,42 +1,39 @@
 ---
+name: spirit blast
+rank: 6
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- spirit
+traditions:
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 16d6
     kinds:
     - damage
     type: spirit
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
-description: 'You concentrate ethereal energy and attack a creature''s spirit, dealing
-  16d6 spirit damage with a basic Fortitude save.
-
-
-  Heightened (+1) The damage increases by 2d6.'
 heightening:
   damage:
     0: 2d6
   interval: 1
   type: interval
+description: 'You concentrate ethereal energy and attack a creature''s spirit, dealing
+  16d6 spirit damage with a basic Fortitude save.
+
+
+  Heightened (+1) The damage increases by 2d6.'
 mechanicsScope: encounter
-name: spirit blast
-range: 30 feet
-rank: 6
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: PHVHBbdHeQRfjLmE
-target: 1 creature
-time: '2'
-traditions:
-- divine
-- occult
-traits:
-- concentrate
-- manipulate
-- spirit
+foundryID: PHVHBbdHeQRfjLmE

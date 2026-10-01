@@ -1,9 +1,10 @@
 ---
+name: aid
+traits: []
 count: reaction
-criticalFailure: Your ally takes a –1 circumstance penalty to the triggering check.
-criticalSuccess: You grant your ally a +2 circumstance bonus to the triggering check.
-  If you're a master with the check you attempted, the bonus is +3, and if you're
-  legendary, it's +4.
+trigger: An ally is about to use an action that requires a skill check or attack roll.
+requirements: The ally is willing to accept your aid, and you have prepared to help
+  (see below).
 description: 'You try to help your ally with a task. To use this reaction, you must
   first prepare to help, usually by using an action during your turn. You must explain
   to the GM exactly how you''re trying to help, and they determine whether you can
@@ -14,12 +15,8 @@ description: 'You try to help your ally with a task. To use this reaction, you m
   hard or easy tasks. The GM can add any relevant traits to your preparatory action
   or to your Aid reaction depending on the situation, or even allow you to Aid checks
   other than skill checks and attack rolls.'
-name: aid
-requirements: The ally is willing to accept your aid, and you have prepared to help
-  (see below).
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+criticalSuccess: You grant your ally a +2 circumstance bonus to the triggering check.
+  If you're a master with the check you attempted, the bonus is +3, and if you're
+  legendary, it's +4.
 success: You grant your ally a +1 circumstance bonus to the triggering check.
-traits: []
-trigger: An ally is about to use an action that requires a skill check or attack roll.
+criticalFailure: Your ally takes a –1 circumstance penalty to the triggering check.

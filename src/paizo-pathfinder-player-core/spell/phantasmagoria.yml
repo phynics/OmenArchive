@@ -1,17 +1,32 @@
 ---
+name: phantasmagoria
+rank: 9
+rarity: common
+category: spell
+traits:
+- concentrate
+- death
+- illusion
+- manipulate
+- mental
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: any number of creatures
+defense:
+  basic: false
+  counteraction: false
+  save: will
 damage:
   1pyYgYlbN6qQ6aOV:
     formula: 16d6
     kinds:
     - damage
     type: mental
-defense:
-  basic: false
-  counteraction: false
-  save: will
 description: 'You fill the targets'' minds with endless images, like countless dreams
   and lives colliding with each other. The onrushing information deals 16d6[mental]
   damage to each target, depending on its Will save.
@@ -30,22 +45,4 @@ description: 'You fill the targets'' minds with endless images, like countless d
 
   Critical Failure The target takes double damage and is confused for 1 minute.'
 mechanicsScope: encounter
-name: phantasmagoria
-range: 120 feet
-rank: 9
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: MJx7DmjsWYzDZ3a4
-target: any number of creatures
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- death
-- illusion
-- manipulate
-- mental
+foundryID: MJx7DmjsWYzDZ3a4

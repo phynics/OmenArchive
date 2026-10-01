@@ -1,5 +1,15 @@
 ---
-action: {}
+name: wizard dedication
+level: 2
+rarity: common
+type: archetype
+traits:
+- archetype
+- dedication
+- multiclass
+prerequisites:
+- text: Intelligence +2
+  hasAttributeModifier: {attribute: int, modifier: 2}
 description: 'You cast spells like a wizard, gaining a spellbook with four common
   arcane cantrips of your choice. You gain the Cast a Spell activity. You can prepare
   two cantrips each day from your spellbook. You''re trained in the spell attack modifier
@@ -10,48 +20,11 @@ description: 'You cast spells like a wizard, gaining a spellbook with four commo
   school, but qualify for feats as a member.
 
   Wizard'
-level: 2
 mechanicsScope: builder
-name: wizard dedication
-prerequisites:
-- Intelligence +2
-rarity: common
+foundryID: oQ6EZRFXbHWCx08C
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 72622e67-8651-5ac8-ab5c-a68a9ad7f1bf
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: arcana
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: oQ6EZRFXbHWCx08C
-traits:
-- archetype
-- dedication
-- multiclass
-type: archetype
-typedPrerequisites:
-- hasAttributeModifier:
-    attribute: int
-    modifier: 2
+- id: 72622e67-8651-5ac8-ab5c-a68a9ad7f1bf
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: arcana}
+    proficiencyCap: 2

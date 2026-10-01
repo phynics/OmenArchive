@@ -1,39 +1,16 @@
 ---
-action: {}
+name: evasive reflexes
+level: 7
+traits:
+- rogue
 description: You've learned to move quickly to avoid explosions, dragons' breath,
   and worse. Your proficiency rank for Reflex saves increases to master. When you
   roll a success on a Reflex save, you get a critical success instead.
-level: 7
 mechanicsScope: builder
-name: evasive reflexes
+foundryID: oa3TJpPnvL98EUHh
 rules:
 - id: f4025db8-3162-573b-bfa8-928ce3305072
-  effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-saving-throw
-    revision: 1
-  inputRecipes:
-  - inputName: savingThrow
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-          revision: 1
-          payload: reflex
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-          revision: 1
-          payload: 6
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: oa3TJpPnvL98EUHh
-traits:
-- rogue
+  effect: core/add-saving-throw
+  inputs:
+    savingThrow: reflex
+    proficiencyRank: 6

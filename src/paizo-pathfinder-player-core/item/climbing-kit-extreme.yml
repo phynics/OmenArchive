@@ -1,4 +1,19 @@
 ---
+name: climbing kit (extreme)
+level: 3
+rarity: common
+type: equipment
+traits: []
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 40 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+details:
+  equipment: {}
 description: 'This satchel includes 50 feet of rope, pulleys, a dozen pitons, a hammer,
   a grappling hook, and one set of crampons. Climbing kits allow you to attach yourself
   to the wall you''re Climbing, moving half as quickly as usual (minimum 5 feet) but
@@ -8,75 +23,18 @@ description: 'This satchel includes 50 feet of rope, pulleys, a dozen pitons, a 
   kit. A single kit has only enough materials for one climber; each climber needs
   their own kit. If you wear your climbing kit, you can access it as part of a Climb
   action.'
-details:
-  equipment: {}
-level: 3
 mechanicsScope: builder
-name: climbing kit (extreme)
-physical:
-  bulk: '1'
-  hardness: 0
-  hitPoints: 0
-  price: 40 gp
-  quantity: 1
-  size: med
-  usage: held-in-two-hands
-rarity: common
+foundryID: TWv2EeDJaCjtmGUN
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 969b1878-e6fe-5dfc-b8ad-bbd1e3bd7542
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6c57fee0-2ba6-5fd8-a3a2-76a7901292db
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  athletics: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Climbing Kit (Extreme): +1 item bonus to Athletics checks (Climb).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: Climb
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: TWv2EeDJaCjtmGUN
-traits: []
-type: equipment
+- id: 969b1878-e6fe-5dfc-b8ad-bbd1e3bd7542
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 6c57fee0-2ba6-5fd8-a3a2-76a7901292db
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    description: 'Climbing Kit (Extreme): +1 item bonus to Athletics checks (Climb).'
+    numeric: {literal: {amount: 1, applicability: {description: Climb, kind: situational},
+        type: item}}

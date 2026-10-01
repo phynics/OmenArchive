@@ -1,37 +1,30 @@
 ---
-action: {}
-description: You know basic facts off the top of your head. Choose a skill you're
-  an expert in that has the Recall Knowledge action and for which you have the Assurance
-  feat. You can use the Recall Knowledge action with that skill as a free action once
-  per round. If you do, you must use Assurance on the skill check.
-level: 2
-mechanicsScope: encounter
 name: automatic knowledge
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source H3I2X0f7v4EzwxuN "expert in a skill with the
-  recall knowledge action".
-- Unsupported prerequisite for source H3I2X0f7v4EzwxuN "Assurance in that skill".
-prerequisites:
-- expert in a skill with the recall knowledge action
-- Assurance in that skill
+level: 2
 rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: expert in a skill with the recall knowledge action
+  unsupported: Unsupported prerequisite for source H3I2X0f7v4EzwxuN "expert in a skill
+    with the recall knowledge action".
+  diagnostic: true
+- text: Assurance in that skill
+  unsupported: Unsupported prerequisite for source H3I2X0f7v4EzwxuN "Assurance in
+    that skill".
+  diagnostic: true
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: H3I2X0f7v4EzwxuN
+description: You know basic facts off the top of your head. Choose a skill you're
+  an expert in that has the Recall Knowledge action and for which you have the Assurance
+  feat. You can use the Recall Knowledge action with that skill as a free action once
+  per round. If you do, you must use Assurance on the skill check.
 specialText: You can select this feat multiple times, choosing a different skill each
   time. You can use Automatic Knowledge with any skills you have chosen, but you can
   still use Automatic Knowledge only once per round.
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- unsupported: Unsupported prerequisite for source H3I2X0f7v4EzwxuN "expert in a skill
-    with the recall knowledge action".
-- unsupported: Unsupported prerequisite for source H3I2X0f7v4EzwxuN "Assurance in
-    that skill".
+mechanicsScope: encounter
+foundryID: H3I2X0f7v4EzwxuN

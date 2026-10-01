@@ -1,22 +1,15 @@
 ---
-action: {}
-description: Your proficiency rank in Perception increases to master.
-level: 12
-mechanicsScope: encounter
 name: master spotter (ranger)
-prerequisites:
-- Ranger Dedication
-- expert in Perception
+level: 12
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: rW1q7x5CMf9Rh1bi
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: ranger dedication
-- hasSavingThrowProficiency:
-    proficiency: expert
-    savingThrow: perception
+prerequisites:
+- text: Ranger Dedication
+  hasResourceWithName: ranger dedication
+- text: expert in Perception
+  hasSavingThrowProficiency: {savingThrow: perception, proficiency: expert}
+description: Your proficiency rank in Perception increases to master.
+mechanicsScope: encounter
+foundryID: rW1q7x5CMf9Rh1bi

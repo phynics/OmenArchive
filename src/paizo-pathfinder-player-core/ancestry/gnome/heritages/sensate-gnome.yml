@@ -1,5 +1,7 @@
 ---
+name: sensate gnome
 ancestry: gnome
+rarity: common
 description: 'You see all colors as brighter, hear all sounds as richer, and especially
   smell all scents with incredible detail. You gain a special sense: imprecise scent
   with a range of 30 feet. This means you can use your sense of smell to determine
@@ -9,92 +11,21 @@ description: 'You see all colors as brighter, hear all sounds as richer, and esp
   In addition, you gain a +2 circumstance bonus to Perception checks whenever you''re
   trying to locate an undetected creature that is within the range of your scent.'
 mechanicsScope: builder
-name: sensate gnome
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 700fa535-2e6f-5895-bba7-56631bf6df69
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 860e337d-ab31-5195-96c6-69f6ddba1ca7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - savingThrow:
-                _0: perception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Sensate Gnome: +2 circumstance bonus to Perception checks (Seek).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 2
-            applicability:
-              description: Seek
-              kind: situational
-            type: circumstance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-sense
-    revision: 1
-  id: 79b5c51d-65ac-5efe-ac1d-4d3ca9d10c1d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: scent
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: selector
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: imprecise
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: acuity
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 30
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: range
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: 700fa535-2e6f-5895-bba7-56631bf6df69
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 860e337d-ab31-5195-96c6-69f6ddba1ca7
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    description: 'Sensate Gnome: +2 circumstance bonus to Perception checks (Seek).'
+    numeric: {literal: {amount: 2, applicability: {description: Seek, kind: situational},
+        type: circumstance}}
+- id: 79b5c51d-65ac-5efe-ac1d-4d3ca9d10c1d
+  effect: core/add-sense
+  inputs:
+    selector: scent
+    acuity: imprecise
+    range: 30

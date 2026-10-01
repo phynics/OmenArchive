@@ -1,5 +1,14 @@
 ---
-action: {}
+name: unusual treatment
+level: 2
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: expert in Medicine
+  hasSkillProficiency: {skill: medicine, proficiency: expert}
 description: Your medical training extends to less obvious conditions. When you succeed
   against a DC 20 check to Treat Wounds, you can also reduce the value of one Clumsy,
   Enfeebled, or Stupefied condition on the patient by 1. If you're able to treat more
@@ -10,21 +19,5 @@ description: Your medical training extends to less obvious conditions. When you 
   Drained condition to the list of conditions you can remove if you succeed at a DC
   30 check. If you are legendary in Medicine, you reduce the chosen condition by 2
   instead of by 1.
-level: 2
 mechanicsScope: encounter
-name: unusual treatment
-prerequisites:
-- expert in Medicine
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: rLwzwcrLh1qaN4pk
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: medicine
+foundryID: rLwzwcrLh1qaN4pk

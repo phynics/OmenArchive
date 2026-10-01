@@ -1,27 +1,19 @@
 ---
-action: {}
+name: bardic lore
+level: 1
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: enigma muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: Your studies make you informed on every subject. You are trained in Bardic
   Lore, a special Lore skill that can be used only to Recall Knowledge, but on any
   topic. If you have legendary proficiency in Occultism, you gain expert proficiency
   in Bardic Lore, but you can't increase your proficiency rank in Bardic Lore by any
   other means.
-level: 1
 mechanicsScope: encounter
-name: bardic lore
-prerequisites:
-- enigma muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: uVXEZblPRuCyPRua
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 561e24d0-c44a-5fff-9abd-ec39e3d7f785
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: uVXEZblPRuCyPRua

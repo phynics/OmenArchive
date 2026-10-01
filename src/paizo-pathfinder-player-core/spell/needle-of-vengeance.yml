@@ -1,17 +1,36 @@
 ---
+name: needle of vengeance
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- focus
+- hex
+- manipulate
+- mental
+- witch
+traditions: []
+time: '1'
 action:
   count: one_action
-category: focus
+range: 30 feet
+target: 1 enemy
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: will
 damage:
   0:
     formula: '2'
     kinds:
     - damage
     type: mental
-defense:
-  basic: true
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: '2'
+  interval: 1
+  type: interval
 description: 'A long, jagged needle jabs into the target foe''s psyche whenever it
   tries to attack a creature your patron holds in special regard. Name yourself or
   one of your allies. The target takes 2 mental damage any time it uses a hostile
@@ -19,29 +38,7 @@ description: 'A long, jagged needle jabs into the target foe''s psyche whenever 
 
 
   Heightened (+1) Increase the damage by 2.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: '2'
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: needle of vengeance
-range: 30 feet
-rank: 1
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: aEitTTb9PnOyidRf
-target: 1 enemy
-time: '1'
-traditions: []
-traits:
-- focus
-- hex
-- manipulate
-- mental
-- witch
+foundryID: aEitTTb9PnOyidRf

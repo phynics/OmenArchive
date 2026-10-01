@@ -1,24 +1,17 @@
 ---
-action: {}
-description: You gain the Master Spellcasting Feat benefits.
-level: 18
-mechanicsScope: encounter
 name: master witch spellcasting
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source i7ibUqJCl1GXRFEa "legendary in the skill associated
-  with your patron's tradition".
-prerequisites:
-- Expert Witch Spellcasting
-- legendary in the skill associated with your patron's tradition
+level: 18
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: i7ibUqJCl1GXRFEa
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: expert witch spellcasting
-- unsupported: Unsupported prerequisite for source i7ibUqJCl1GXRFEa "legendary in
+prerequisites:
+- text: Expert Witch Spellcasting
+  hasResourceWithName: expert witch spellcasting
+- text: legendary in the skill associated with your patron's tradition
+  unsupported: Unsupported prerequisite for source i7ibUqJCl1GXRFEa "legendary in
     the skill associated with your patron's tradition".
+  diagnostic: true
+description: You gain the Master Spellcasting Feat benefits.
+mechanicsScope: encounter
+foundryID: i7ibUqJCl1GXRFEa

@@ -1,8 +1,27 @@
 ---
+name: eclipse burst
+rank: 7
+rarity: common
+category: spell
+traits:
+- cold
+- concentrate
+- darkness
+- manipulate
+- void
+traditions:
+- arcane
+- divine
+- primal
+time: '2'
 action:
   count: two_actions
+range: 500 feet
 area: '60'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 8d10
@@ -14,10 +33,12 @@ damage:
     kinds:
     - damage
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    0: 1d10
+    v1pnjhfu6e9akqe0: 1d4
+  interval: 1
+  type: interval
 description: 'A globe of freezing darkness explodes in the area, dealing 8d10 cold
   damage to creatures in the area, plus an additional 8d4 void damage to living creatures.
   Each creature in the area must attempt a Reflex save.
@@ -42,31 +63,7 @@ description: 'A globe of freezing darkness explodes in the area, dealing 8d10 co
 
   Heightened (+1) The cold damage increases by 1d10 and the void damage against the
   living increases by 1d4.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 1d10
-    v1pnjhfu6e9akqe0: 1d4
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: eclipse burst
-range: 500 feet
-rank: 7
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 0jadeyQIItIuRgeH
-time: '2'
-traditions:
-- arcane
-- divine
-- primal
-traits:
-- cold
-- concentrate
-- darkness
-- manipulate
-- void
+foundryID: 0jadeyQIItIuRgeH

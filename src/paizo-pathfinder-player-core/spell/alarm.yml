@@ -1,6 +1,20 @@
 ---
-area: '20'
+name: alarm
+rank: 1
+rarity: common
 category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: 10 minutes
+range: touch
+area: '20'
+duration: 8 hours
 description: 'You ward an area to alert you when creatures enter without your permission.
   When you cast alarm, select a password. Whenever a Small or larger corporeal creature
   enters the spell''s area without speaking the password, alarm sends your choice
@@ -14,25 +28,8 @@ description: 'You ward an area to alert you when creatures enter without your pe
 
   Heightened (3rd) You can specify a trigger for which types of creatures sound the
   alarm spell.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
 - 'Foundry casting time retained without normalized action count: 10 minutes'
-duration: 8 hours
-mechanicsScope: encounter
-name: alarm
-range: touch
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4WAib3GichxLjp5p
-time: 10 minutes
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- concentrate
-- manipulate
+foundryID: 4WAib3GichxLjp5p

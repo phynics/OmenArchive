@@ -1,43 +1,40 @@
 ---
+name: breathe fire
+rank: 1
+rarity: common
+category: spell
+traits:
+- concentrate
+- fire
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
 area: '15'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 2d6
     kinds:
     - damage
     type: fire
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
-description: 'A gout of flame sprays from your mouth. You deal 2d6 fire damage to
-  creatures in the area with a basic Reflex save.
-
-
-  Heightened (+1) The damage increases by 2d6.'
-diagnostics:
-- Foundry area type is not represented when area details are absent
 heightening:
   damage:
     0: 2d6
   interval: 1
   type: interval
+description: 'A gout of flame sprays from your mouth. You deal 2d6 fire damage to
+  creatures in the area with a basic Reflex save.
+
+
+  Heightened (+1) The damage increases by 2d6.'
 mechanicsScope: encounter
-name: breathe fire
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: y6rAdMK6EFlV6U0t
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- fire
-- manipulate
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: y6rAdMK6EFlV6U0t

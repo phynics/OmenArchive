@@ -1,4 +1,21 @@
 ---
+name: cast down
+level: 6
+rarity: common
+type: class
+traits:
+- cleric
+- concentrate
+- spellshape
+prerequisites:
+- text: harmful font or healing font
+  anyOf:
+  - hasChoice:
+      name: $.cleric.divine-font
+      equals: {type: spellcasting/spell-id, value: '@spell.harm'}
+  - hasChoice:
+      name: $.cleric.divine-font
+      equals: {type: spellcasting/spell-id, value: '@spell.heal'}
 action:
   count: one_action
 description: The sheer force of your faith can bring a foe crashing down. If the next
@@ -6,32 +23,5 @@ description: The sheer force of your faith can bring a foe crashing down. If the
   Prone if it takes any damage from the spell. If the target critically fails its
   save against the spell, it also takes a –10-foot status penalty to its Speed for
   1 minute.
-level: 6
 mechanicsScope: encounter
-name: cast down
-prerequisites:
-- harmful font or healing font
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: lGCFVYjL9Lp5m9Ex
-traits:
-- cleric
-- concentrate
-- spellshape
-type: class
-typedPrerequisites:
-- anyOf:
-  - hasChoice:
-      equals:
-        payload: e37496b6-d203-5183-9c4c-1a9c0d030cf8
-        revision: 1
-        typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      name: $.cleric.divine-font
-  - hasChoice:
-      equals:
-        payload: 4304f211-3168-5db9-8c6f-ecf24393f20a
-        revision: 1
-        typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      name: $.cleric.divine-font
+foundryID: lGCFVYjL9Lp5m9Ex

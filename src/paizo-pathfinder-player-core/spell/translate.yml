@@ -1,7 +1,26 @@
 ---
+name: translate
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: 1 hour
+heightening:
+  levels:
+    4:
+      target: 10 creatures
+  type: fixed
 description: 'The target can understand the meaning of a single language it is hearing
   or reading when you cast the spell. This doesn''t let it understand codes, language
   couched in metaphor, and the like (subject to GM discretion). If the target can
@@ -14,27 +33,5 @@ description: 'The target can understand the meaning of a single language it is h
 
   Heightened (4th) You can target up to 10 creatures, and targets can also speak the
   language.'
-duration: 1 hour
-heightening:
-  levels:
-    4:
-      target: 10 creatures
-  type: fixed
 mechanicsScope: encounter
-name: translate
-range: 30 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: vTQvfYu2llKQedmY
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- concentrate
-- manipulate
+foundryID: vTQvfYu2llKQedmY

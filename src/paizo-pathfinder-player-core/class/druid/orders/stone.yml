@@ -1,5 +1,8 @@
 ---
-action: {}
+name: stone order
+level: 1
+traits:
+- druid
 description: 'You''re as enduring as stone, and you take comfort in its steadfast
   presence, both natural and worked.
 
@@ -11,38 +14,11 @@ description: 'You''re as enduring as stone, and you take comfort in its steadfas
 
   Anathema Poisoning or polluting the land and heedlessly carving the earth to plunder
   its natural resources. (this doesn''t prevent you from responsibly digging or mining).'
-level: 1
 mechanicsScope: builder
-name: stone order
+foundryID: fKTewWlYgFuhl4KA
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: fdf66bb6-e003-5972-870e-40a664ac471f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: crafting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: fKTewWlYgFuhl4KA
-traits:
-- druid
+- id: fdf66bb6-e003-5972-870e-40a664ac471f
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: crafting}
+    proficiencyCap: 2

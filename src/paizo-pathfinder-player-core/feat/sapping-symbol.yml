@@ -1,4 +1,14 @@
 ---
+name: sapping symbol
+level: 12
+rarity: common
+type: class
+traits:
+- cleric
+- divine
+prerequisites:
+- text: Raise Symbol
+  hasResourceWithName: raise symbol
 action:
   count: reaction
   criticalSuccess: The creature is Enfeebled 2 until it spends at least 1 action moving
@@ -10,19 +20,5 @@ description: Your religious symbol glows with sacred energy, turning the attacke
   strength to weakness. Attempt a religion|defense:will check against the triggering
   creature's Will DC. Regardless of the result, the creature is temporarily immune
   for 1 minute.
-level: 12
 mechanicsScope: encounter
-name: sapping symbol
-prerequisites:
-- Raise Symbol
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: UPTQ9oIpz0bTJf3M
-traits:
-- cleric
-- divine
-type: class
-typedPrerequisites:
-- hasResourceWithName: raise symbol
+foundryID: UPTQ9oIpz0bTJf3M

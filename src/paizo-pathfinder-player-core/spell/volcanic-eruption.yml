@@ -1,18 +1,34 @@
 ---
+name: volcanic eruption
+rank: 7
+rarity: common
+category: spell
+traits:
+- concentrate
+- fire
+- manipulate
+traditions:
+- primal
+time: '2'
 action:
   count: two_actions
+range: 120 feet
 area: '5'
-category: spell
+defense:
+  basic: false
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 14d6
     kinds:
     - damage
     type: fire
-defense:
-  basic: false
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'Area 5-foot radius, 80-foot-tall cylinder
 
 
@@ -43,26 +59,7 @@ description: 'Area 5-foot radius, 80-foot-tall cylinder
 
   Heightened (+1) The damage in the area increases by 2d6, and the damage from the
   intense heat increases by 1d6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: volcanic eruption
-range: 120 feet
-rank: 7
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: O7ZEqWjwdKyo2CUv
-time: '2'
-traditions:
-- primal
-traits:
-- concentrate
-- fire
-- manipulate
+foundryID: O7ZEqWjwdKyo2CUv

@@ -1,17 +1,30 @@
 ---
+name: spider sting
+rank: 1
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- poison
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: touch
+target: 1 creature
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 1d4
     kinds:
     - damage
     type: piercing
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
 description: 'You magically duplicate a spider''s venomous sting. You deal 1d4 piercing
   damage to the touched creature and afflict it with spider venom. The target must
   attempt a Fortitude save.
@@ -43,20 +56,4 @@ description: 'You magically duplicate a spider''s venomous sting. You deal 1d4 p
 
   Stage 2 1d4 poison damage and Enfeebled 2 (1 round)'
 mechanicsScope: encounter
-name: spider sting
-range: touch
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: DYdvMZ8G2LiSLVWw
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- manipulate
-- poison
+foundryID: DYdvMZ8G2LiSLVWw

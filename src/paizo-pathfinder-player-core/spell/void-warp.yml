@@ -1,45 +1,42 @@
 ---
+name: void warp
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- cantrip
+- concentrate
+- manipulate
+- void
+traditions:
+- arcane
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
-category: cantrip
+range: 30 feet
+target: 1 living creature
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 2d4
     kinds:
     - damage
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
 description: 'You call upon the Void to harm life force. The target takes 2d4 void
   damage with a basic Fortitude save. On a critical failure, the target is also Enfeebled
   1 until the start of your next turn.
 
 
   Heightened (+1) The damage increases by 1d4.'
-heightening:
-  damage:
-    0: 1d4
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: void warp
-range: 30 feet
-rank: 0
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: mAMEt4FFbdqoRnkN
-target: 1 living creature
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- cantrip
-- concentrate
-- manipulate
-- void
+foundryID: mAMEt4FFbdqoRnkN

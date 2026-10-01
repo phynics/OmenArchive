@@ -1,4 +1,19 @@
 ---
+name: trick magic item
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- manipulate
+- skill
+prerequisites:
+- text: trained in Arcana, Nature, Occultism, or Religion
+  anyOf:
+  - hasSkillProficiency: {skill: arcana, proficiency: trained}
+  - hasSkillProficiency: {skill: nature, proficiency: trained}
+  - hasSkillProficiency: {skill: occultism, proficiency: trained}
+  - hasSkillProficiency: {skill: religion, proficiency: trained}
 action:
   count: one_action
   criticalFailure: You can't use the item, and you can't try to trick it again until
@@ -26,32 +41,5 @@ description: 'You examine a magic item you normally couldn''t use in an effort t
   a master in the appropriate skill for the item''s tradition, you instead use the
   trained proficiency bonus; if you''re legendary, you instead use the expert proficiency
   bonus.'
-level: 1
 mechanicsScope: mixed
-name: trick magic item
-prerequisites:
-- trained in Arcana, Nature, Occultism, or Religion
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: uR62fVC9FyQAMCO1
-traits:
-- general
-- manipulate
-- skill
-type: skill
-typedPrerequisites:
-- anyOf:
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: arcana
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: nature
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: occultism
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: religion
+foundryID: uR62fVC9FyQAMCO1

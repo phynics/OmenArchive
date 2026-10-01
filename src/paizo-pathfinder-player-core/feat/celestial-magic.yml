@@ -1,5 +1,16 @@
 ---
-action: {}
+name: celestial magic
+level: 9
+rarity: common
+type: ancestry
+traits:
+- nephilim
+prerequisites:
+- text: Angelkin, Lawbringer, Musetouched, or another lineage feat associated with
+    celestials
+  unsupported: Unsupported prerequisite for source esKk5XrnlqRayDPG "Angelkin, Lawbringer,
+    Musetouched, or another lineage feat associated with celestials".
+  diagnostic: true
 description: 'You possess celestial magic. Choose two of the following spells: Clear
   Mind, Everlight, Humanoid Form, Revealing Light, Share Life, or Sure Footing. You
   can use each of the chosen spells once per day as 2nd-rank divine innate spells.
@@ -7,271 +18,66 @@ description: 'You possess celestial magic. Choose two of the following spells: C
   Angelkin typically take clear mind and humanoid form, lawbringers typically have
   everlight and share life, and musetouched typically have revealing light and sure
   footing.'
-level: 9
 mechanicsScope: builder
-name: celestial magic
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source esKk5XrnlqRayDPG "Angelkin, Lawbringer, Musetouched,
-  or another lineage feat associated with celestials".
-prerequisites:
-- Angelkin, Lawbringer, Musetouched, or another lineage feat associated with celestials
-rarity: common
+foundryID: esKk5XrnlqRayDPG
 rules:
-- choice:
-    answer:
-      filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: spell
-        - kind: union
-          values:
-          - kind: single
-            value:
-              kind: hasName
-              name: clear mind
-          - kind: single
-            value:
-              kind: hasName
-              name: sure footing
-          - kind: single
-            value:
-              kind: hasName
-              name: share life
-          - kind: single
-            value:
-              kind: hasName
-              name: revealing light
-          - kind: single
-            value:
-              kind: hasName
-              name: humanoid form
-          - kind: single
-            value:
-              kind: hasName
-              name: everlight
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    label: First Spell
-    name: $.feat.celestial-magic.spell-one
-    startLevel: 1
-  id: df8c5375-ec3f-5c49-810b-17060553ab7c
+- id: df8c5375-ec3f-5c49-810b-17060553ab7c
   key: choice-feat-celestial-magic-spell-one
-  startLevel: 1
-- choice:
-    answer:
+  choice:
+    name: $.feat.celestial-magic.spell-one
+    label: First Spell
+    records:
       filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: spell
-        - kind: union
-          values:
-          - kind: single
-            value:
-              kind: hasName
-              name: clear mind
-          - kind: single
-            value:
-              kind: hasName
-              name: sure footing
-          - kind: single
-            value:
-              kind: hasName
-              name: share life
-          - kind: single
-            value:
-              kind: hasName
-              name: revealing light
-          - kind: single
-            value:
-              kind: hasName
-              name: humanoid form
-          - kind: single
-            value:
-              kind: hasName
-              name: everlight
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+        all:
+        - {type: spell}
+        - any:
+          - {name: clear mind}
+          - {name: sure footing}
+          - {name: share life}
+          - {name: revealing light}
+          - {name: humanoid form}
+          - {name: everlight}
+      type: spellcasting/spell-id
+- id: f40b3533-c4c6-5eb0-bae5-9ea6fa8a890c
+  key: choice-feat-celestial-magic-spell-two
+  choice:
+    name: $.feat.celestial-magic.spell-two
+    label: Second Spell
     distinctFrom:
     - $.feat.celestial-magic.spell-one
-    label: Second Spell
-    name: $.feat.celestial-magic.spell-two
-    startLevel: 1
-  id: f40b3533-c4c6-5eb0-bae5-9ea6fa8a890c
-  key: choice-feat-celestial-magic-spell-two
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: 44c0b95f-aa84-5bcf-8671-56f273cdc767
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8489e194-bc95-5401-bf6c-c2fe1ee5bf9c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Celestial Magic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 509fa672-ba95-52bf-938c-cc6cc83916de
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.celestial-magic.spell-one
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: divine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: fixed
-            rank: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: perDay
-            uses: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - any:
+          - {name: clear mind}
+          - {name: sure footing}
+          - {name: share life}
+          - {name: revealing light}
+          - {name: humanoid form}
+          - {name: everlight}
+      type: spellcasting/spell-id
+- id: 44c0b95f-aa84-5bcf-8671-56f273cdc767
   key: innate-spell-1
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: f6193526-7762-5612-8834-183cb721e775
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8489e194-bc95-5401-bf6c-c2fe1ee5bf9c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Celestial Magic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 71a03a05-2997-5d47-9550-0b4994cd4bd9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.celestial-magic.spell-two
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: divine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: fixed
-            rank: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: perDay
-            uses: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: 8489e194-bc95-5401-bf6c-c2fe1ee5bf9c
+    sourceName: Celestial Magic
+    grantId: 509fa672-ba95-52bf-938c-cc6cc83916de
+    spellId: {choice: $.feat.celestial-magic.spell-one}
+    tradition: divine
+    attribute: cha
+    rankPolicy: {kind: fixed, rank: 2}
+    castFrequency: {kind: perDay, uses: 1}
+- id: f6193526-7762-5612-8834-183cb721e775
   key: innate-spell-2
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: esKk5XrnlqRayDPG
-traits:
-- nephilim
-type: ancestry
-typedPrerequisites:
-- unsupported: Unsupported prerequisite for source esKk5XrnlqRayDPG "Angelkin, Lawbringer,
-    Musetouched, or another lineage feat associated with celestials".
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: 8489e194-bc95-5401-bf6c-c2fe1ee5bf9c
+    sourceName: Celestial Magic
+    grantId: 71a03a05-2997-5d47-9550-0b4994cd4bd9
+    spellId: {choice: $.feat.celestial-magic.spell-two}
+    tradition: divine
+    attribute: cha
+    rankPolicy: {kind: fixed, rank: 2}
+    castFrequency: {kind: perDay, uses: 1}

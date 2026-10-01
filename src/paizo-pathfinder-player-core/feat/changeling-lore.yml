@@ -1,95 +1,31 @@
 ---
-action: {}
+name: changeling lore
+level: 1
+rarity: common
+type: ancestry
+traits:
+- changeling
 description: 'All too aware of your true nature, you''ve studied hags and their powers.
   You gain the trained proficiency rank in Deception and Occultism. If you would automatically
   become trained in one of those skills (from your background or class, for example),
   you instead become trained in a skill of your choice.
 
   You also gain the Additional Lore general feat for Hag Lore.'
-level: 1
 mechanicsScope: builder
-name: changeling lore
-prerequisites: []
-rarity: common
+foundryID: 4mLlHpD41101H0Iy
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: f4b65f6f-1b2a-50b9-83e9-b30da59d4948
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: deception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 1a42e487-f0fa-5882-8cd8-b3fa5eac10ce
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: occultism
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: b7e7a0d3-5e6f-55cc-b505-b8c1e13c9918
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 76eb13c7-0fd1-5c5b-bbb6-033941f7dd9a
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4mLlHpD41101H0Iy
-traits:
-- changeling
-type: ancestry
+- id: f4b65f6f-1b2a-50b9-83e9-b30da59d4948
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: deception}
+    proficiencyCap: 2
+- id: 1a42e487-f0fa-5882-8cd8-b3fa5eac10ce
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: occultism}
+    proficiencyCap: 2
+- id: b7e7a0d3-5e6f-55cc-b505-b8c1e13c9918
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 76eb13c7-0fd1-5c5b-bbb6-033941f7dd9a
+    featId: '@feat.additional-lore'

@@ -1,18 +1,31 @@
 ---
+name: impaling briars
+rank: 8
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- druid
+- focus
+- manipulate
+- plant
+- wood
+traditions: []
+time: '3'
 action:
   count: three_actions
 area: '100'
-category: focus
+duration: 1 minute
+defense:
+  basic: false
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 10d6
     kinds:
     - damage
     type: piercing
-defense:
-  basic: false
-  counteraction: false
-  save: reflex
 description: 'The ground within the area transforms into a mass of dangerous briars
   that assault and impede your foes. When you Cast the Supell and the first time you
   Sustain it each turn on subsequent rounds, select one of the following effects to
@@ -38,24 +51,8 @@ description: 'The ground within the area transforms into a mass of dangerous bri
   On a success, the target takes 10d6 piercing damage and takes a -10-foot circumstance
   penalty to all Speeds for 1 round; on a critical success, the target is Immobilized
   for 1 round unless it Escapes.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-mechanicsScope: encounter
-name: impaling briars
-rank: 8
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: oGV6YdpZLIG4G4gH
-time: '3'
-traditions: []
-traits:
-- concentrate
-- druid
-- focus
-- manipulate
-- plant
-- wood
+foundryID: oGV6YdpZLIG4G4gH

@@ -1,7 +1,9 @@
 ---
+name: command an animal
+traits:
+- auditory
+- concentrate
 count: one_action
-criticalFailure: The animal misbehaves or misunderstands, and it takes some other
-  action determined by the GM.
 description: 'You issue an order to an animal. Attempt a Nature check against the
   animal''s Will DC. The GM might adjust the DC if the animal has a good attitude
   toward you, you suggest a course of action it was predisposed toward, or you offer
@@ -18,12 +20,7 @@ description: 'You issue an order to an animal. Attempt a Nature check against th
   the Animal to perform that number of basic actions on its next turn; for instance,
   you could spend 3 actions to Command an Animal to Stride three times or to Stride
   twice and then make a Strike.'
-failure: The animal is hesitant or resistant, and it does nothing.
-name: command an animal
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
 success: The animal does as you command on its next turn.
-traits:
-- auditory
-- concentrate
+failure: The animal is hesitant or resistant, and it does nothing.
+criticalFailure: The animal misbehaves or misunderstands, and it takes some other
+  action determined by the GM.

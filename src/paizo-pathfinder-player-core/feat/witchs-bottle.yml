@@ -1,5 +1,13 @@
 ---
-action: {}
+name: witch's bottle
+level: 8
+rarity: common
+type: class
+traits:
+- witch
+prerequisites:
+- text: Cauldron
+  hasResourceWithName: cauldron
 description: 'You spend 10 minutes and 1 Focus Point brewing a special potion containing
   the power of one of your hexes that targets a creature. A creature that consumes
   this potion is targeted by the hex. If the hex has a sustained duration and you
@@ -13,18 +21,5 @@ description: 'You spend 10 minutes and 1 Focus Point brewing a special potion co
   a single action that has the concentrate trait. You can''t regain the Focus Point
   you spent to create the potion (or the Focus Point you spent to cast cackle) until
   the potion is consumed or loses its magic.'
-level: 8
 mechanicsScope: encounter
-name: witch's bottle
-prerequisites:
-- Cauldron
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: oEjRfI4ATIFxDCzL
-traits:
-- witch
-type: class
-typedPrerequisites:
-- hasResourceWithName: cauldron
+foundryID: oEjRfI4ATIFxDCzL

@@ -1,25 +1,17 @@
 ---
-action: {}
+name: ultimate polymath
+level: 20
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: polymath muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 description: You can flexibly cast all of your spells, granting a dizzying array of
   possible options. All of the spells in your repertoire are signature spells for
   you.
-level: 20
 mechanicsScope: encounter
-name: ultimate polymath
-prerequisites:
-- polymath muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: QSBuAkJ5GMLcuZg9
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: a97a9fdf-136d-5006-a083-4825663520ec
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: QSBuAkJ5GMLcuZg9

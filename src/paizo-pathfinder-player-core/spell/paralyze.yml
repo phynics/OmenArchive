@@ -1,11 +1,31 @@
 ---
+name: paralyze
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- incapacitation
+- manipulate
+- mental
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: varies
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  levels:
+    7:
+      target: 10 creatures
+  type: fixed
 description: 'You block the target''s motor impulses before they can leave its mind,
   threatening to freeze the target in place. The target must attempt a Will save.
 
@@ -25,28 +45,5 @@ description: 'You block the target''s motor impulses before they can leave its m
 
 
   Heightened (7th) You can target up to 10 creatures.'
-duration: varies
-heightening:
-  levels:
-    7:
-      target: 10 creatures
-  type: fixed
 mechanicsScope: encounter
-name: paralyze
-range: 30 feet
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: DCQHaLrYXMI37dvW
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- incapacitation
-- manipulate
-- mental
+foundryID: DCQHaLrYXMI37dvW

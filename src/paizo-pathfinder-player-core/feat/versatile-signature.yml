@@ -1,26 +1,18 @@
 ---
-action: {}
+name: versatile signature
+level: 4
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: polymath muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 description: While most bards are known for certain signature performances and spells,
   you're always tweaking your available repertoire. When you make your daily preparations,
   you can change one of your signature spells to a different spell of that rank from
   your repertoire.
-level: 4
 mechanicsScope: encounter
-name: versatile signature
-prerequisites:
-- polymath muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: toFhkS9QbObxg6cp
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: a97a9fdf-136d-5006-a083-4825663520ec
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: toFhkS9QbObxg6cp

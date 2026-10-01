@@ -1,24 +1,17 @@
 ---
-action: {}
-description: You gain the Expert Spellcasting Feat benefits.
-level: 12
-mechanicsScope: encounter
 name: expert witch spellcasting
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source x7vMKBSrxXmfs5C2 "master in the skill associated
-  with your patron's tradition".
-prerequisites:
-- Basic Witch Spellcasting
-- master in the skill associated with your patron's tradition
+level: 12
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: x7vMKBSrxXmfs5C2
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic witch spellcasting
-- unsupported: Unsupported prerequisite for source x7vMKBSrxXmfs5C2 "master in the
+prerequisites:
+- text: Basic Witch Spellcasting
+  hasResourceWithName: basic witch spellcasting
+- text: master in the skill associated with your patron's tradition
+  unsupported: Unsupported prerequisite for source x7vMKBSrxXmfs5C2 "master in the
     skill associated with your patron's tradition".
+  diagnostic: true
+description: You gain the Expert Spellcasting Feat benefits.
+mechanicsScope: encounter
+foundryID: x7vMKBSrxXmfs5C2

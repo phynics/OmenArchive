@@ -1,21 +1,18 @@
 ---
+name: balance
+traits:
+- move
 count: one_action
-criticalFailure: You fall and your turn ends.
-criticalSuccess: You move up to your Speed.
+requirements: You are in a square that contains a narrow surface, uneven ground, or
+  another similar feature.
 description: "You move across a narrow surface or uneven ground, attempting an Acrobatics
   check against its Balance DC. You are Off-Guard while on a narrow surface or uneven
   ground.\nSample Balance Tasks\n\t•\tUntrained tangled roots, uneven cobblestones\n\t•\tTrained
   wooden beam\n\t•\tExpert deep, loose gravel\n\t•\tMaster tightrope, smooth sheet
   of ice\n\t•\tLegendary razor's edge, chunks of floor falling in midair"
-failure: You must remain stationary to keep your balance (wasting the action) or you
-  fall. If you fall, your turn ends.
-name: balance
-requirements: You are in a square that contains a narrow surface, uneven ground, or
-  another similar feature.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+criticalSuccess: You move up to your Speed.
 success: You move up to your Speed, treating it as difficult terrain (every 5 feet
   costs 10 feet of movement).
-traits:
-- move
+failure: You must remain stationary to keep your balance (wasting the action) or you
+  fall. If you fall, your turn ends.
+criticalFailure: You fall and your turn ends.

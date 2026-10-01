@@ -1,4 +1,17 @@
 ---
+name: reactive distraction
+level: 20
+rarity: common
+type: class
+traits:
+- concentrate
+- manipulate
+- rogue
+prerequisites:
+- text: legendary in Deception
+  hasSkillProficiency: {skill: deception, proficiency: legendary}
+- text: Perfect Distraction
+  hasResourceWithName: perfect distraction
 action:
   count: reaction
   requirements: You have Perfect Distraction ready to use.
@@ -10,24 +23,5 @@ description: You reactively switch with your decoy to foil your foe. You use Per
   targeted by the attack or effect instead of you. In the case of an area effect,
   if your Sneak doesn't move you out of the area, both you and the decoy are targeted
   by the effect.
-level: 20
 mechanicsScope: encounter
-name: reactive distraction
-prerequisites:
-- legendary in Deception
-- Perfect Distraction
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: LDIZtE7saDLSBduG
-traits:
-- concentrate
-- manipulate
-- rogue
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: deception
-- hasResourceWithName: perfect distraction
+foundryID: LDIZtE7saDLSBduG

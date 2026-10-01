@@ -1,8 +1,22 @@
 ---
+name: detect magic
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- cantrip
+- concentrate
+- detection
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: '2'
 action:
   count: two_actions
 area: '30'
-category: cantrip
 description: 'You send out a pulse that registers the presence of magic. You receive
   no information beyond the presence or absence of magic. You can choose to ignore
   magic you''re fully aware of, such as the magic items and ongoing spells of you
@@ -19,24 +33,7 @@ description: 'You send out a pulse that registers the presence of magic. You rec
   Heightened (4th) As 3rd rank, but you also pinpoint the source of the highest-rank
   magic. Like for an imprecise sense, you don''t learn the exact location, but can
   narrow down the source to within a 5-foot cube (or the nearest if larger than that).'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-mechanicsScope: encounter
-name: detect magic
-rank: 0
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: gpzpAAAJ1Lza2JVl
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- cantrip
-- concentrate
-- detection
-- manipulate
+foundryID: gpzpAAAJ1Lza2JVl

@@ -1,4 +1,16 @@
 ---
+name: train animal
+level: 1
+rarity: common
+type: skill
+traits:
+- downtime
+- general
+- manipulate
+- skill
+prerequisites:
+- text: trained in Nature
+  hasSkillProficiency: {skill: nature, proficiency: trained}
 action:
   failure: The animal doesn't learn the trick.
   success: The animal learns the action. If it was an action the animal already knew,
@@ -12,23 +24,5 @@ description: You spend time teaching an animal to do a certain action. You can e
   takes (usually at least a week). It's usually impossible to teach an animal a trick
   that uses critical thinking. If you're expert, master, or legendary in Nature, you
   might be able to train more unusual creatures, at the GM's discretion.
-level: 1
 mechanicsScope: encounter
-name: train animal
-prerequisites:
-- trained in Nature
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: nowEaHgIyij7im8F
-traits:
-- downtime
-- general
-- manipulate
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: nature
+foundryID: nowEaHgIyij7im8F

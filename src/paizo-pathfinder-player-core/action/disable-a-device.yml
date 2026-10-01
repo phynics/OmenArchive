@@ -1,9 +1,8 @@
 ---
+name: disable a device
+traits:
+- manipulate
 count: two_actions
-criticalFailure: You trigger the device.
-criticalSuccess: You disable the device, or you achieve two successes toward disabling
-  a device requiring more than one success. You leave no trace of your tampering,
-  and you can rearm the device later, if that type of device can be rearmed.
 description: 'This action allows you to disarm a trap or another complex device. Often,
   a device requires numerous successes before becoming disabled, depending on its
   construction and complexity. A Thieves'' Toolkit is helpful and sometimes even required
@@ -11,11 +10,9 @@ description: 'This action allows you to disarm a trap or another complex device.
   higher proficiency rank in Thievery to disable it.
 
   Your Thievery check result determines your progress.'
-name: disable a device
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+criticalSuccess: You disable the device, or you achieve two successes toward disabling
+  a device requiring more than one success. You leave no trace of your tampering,
+  and you can rearm the device later, if that type of device can be rearmed.
 success: You disable the device, or you achieve one success toward disabling a device
   that requires more than one success.
-traits:
-- manipulate
+criticalFailure: You trigger the device.

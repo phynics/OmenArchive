@@ -1,169 +1,58 @@
 ---
-action: {}
-description: Your prayers have unlocked deeper secrets of your deity's domain. You
-  gain an advanced domain spell from one of your domains for which you have an initial
-  domain spell.
-level: 8
-mechanicsScope: builder
 name: advanced domain
-prerequisites:
-- Domain Initiate
+level: 8
 rarity: common
+type: class
+traits:
+- cleric
+prerequisites:
+- text: Domain Initiate
+  hasResourceWithName: domain initiate
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+description: Your prayers have unlocked deeper secrets of your deity's domain. You
+  gain an advanced domain spell from one of your domains for which you have an initial
+  domain spell.
+specialText: You can select this feat multiple times. Each time, you must select a
+  different advanced domain spell.
+mechanicsScope: builder
+foundryID: uR44wELN9OlU68cL
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
-    revision: 1
-  id: 1003fc8e-6eb2-56e4-ad19-703747febb20
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b7e73ea3-1be8-5215-a0c7-055d23080c56
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Cleric Focus Spells
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-    inputName: castingKind
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: divine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: wis
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  startLevel: 1
-- choice:
-    answer:
-      filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: spell
-        - kind: single
-          value:
-            kind: hasMetadata
-            metadataKey: spell.category
-            metadataValue: focus
-        - kind: single
-          value:
-            kind: hasTrait
-            trait: classTrait-cleric
-        - kind: single
-          value:
-            kind: hasExactLevel
-            level: 4
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+- id: 1003fc8e-6eb2-56e4-ad19-703747febb20
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
+    sourceName: Cleric Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: wis
+- id: 6620c163-3088-508e-839c-a0dcd3f0289f
+  key: choice-cleric-advanced-domain-spells
+  choice:
+    name: $.cleric.advanced-domain-spells
     label: Advanced Domain Spell
     legacySelections:
     - inputName: spellId
       lookupName: advanced-domain-spell
       ruleID: 66d0436f-a6bd-5c8d-a3ff-33c1789632b1
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-    name: $.cleric.advanced-domain-spells
-    startLevel: 1
-  id: 6620c163-3088-508e-839c-a0dcd3f0289f
-  key: choice-cleric-advanced-domain-spells
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 66d0436f-a6bd-5c8d-a3ff-33c1789632b1
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b7e73ea3-1be8-5215-a0c7-055d23080c56
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: efc56cbe-f2d6-5b97-bd51-c00f2252ab4d
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.cleric.advanced-domain-spells
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 0aa2d2a4-aeb6-5b9c-bb92-6375717fa92a
-  inputRecipes: []
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: uR44wELN9OlU68cL
-specialText: You can select this feat multiple times. Each time, you must select a
-  different advanced domain spell.
-traits:
-- cleric
-type: class
-typedPrerequisites:
-- hasResourceWithName: domain initiate
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - {spell.category: focus}
+        - {trait: classTrait-cleric}
+        - {level: 4}
+      type: spellcasting/spell-id
+- id: 66d0436f-a6bd-5c8d-a3ff-33c1789632b1
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
+    grantId: efc56cbe-f2d6-5b97-bd51-c00f2252ab4d
+    spellId: {choice: $.cleric.advanced-domain-spells}
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 0aa2d2a4-aeb6-5b9c-bb92-6375717fa92a
+  effect: spellcasting/add-focus-point

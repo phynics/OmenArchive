@@ -1,313 +1,78 @@
 ---
-action: {}
+name: natural skill
+level: 1
+rarity: common
+type: ancestry
+traits:
+- human
 description: Your ingenuity allows you to learn a wide variety of skills. You gain
   the trained proficiency rank in two skills of your choice.
-level: 1
 mechanicsScope: builder
-name: natural skill
-prerequisites: []
-rarity: common
+foundryID: Rfyhlyql1GSoDkI2
 rules:
-- choice:
-    answer:
-      cases:
-      - key: acrobatics
-        label: Acrobatics
-        value:
-          payload:
-            kind: acrobatics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: arcana
-        label: Arcana
-        value:
-          payload:
-            kind: arcana
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: athletics
-        label: Athletics
-        value:
-          payload:
-            kind: athletics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: crafting
-        label: Crafting
-        value:
-          payload:
-            kind: crafting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: deception
-        label: Deception
-        value:
-          payload:
-            kind: deception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: diplomacy
-        label: Diplomacy
-        value:
-          payload:
-            kind: diplomacy
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: intimidation
-        label: Intimidation
-        value:
-          payload:
-            kind: intimidation
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: medicine
-        label: Medicine
-        value:
-          payload:
-            kind: medicine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: nature
-        label: Nature
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: occultism
-        label: Occultism
-        value:
-          payload:
-            kind: occultism
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: performance
-        label: Performance
-        value:
-          payload:
-            kind: performance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: religion
-        label: Religion
-        value:
-          payload:
-            kind: religion
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: society
-        label: Society
-        value:
-          payload:
-            kind: society
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: stealth
-        label: Stealth
-        value:
-          payload:
-            kind: stealth
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: survival
-        label: Survival
-        value:
-          payload:
-            kind: survival
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: thievery
-        label: Thievery
-        value:
-          payload:
-            kind: thievery
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      kind: local
+- id: c2f0d1cd-3270-5fa5-bf7c-4efe9a54218c
+  key: choice-feat-natural-skill-skill-one
+  choice:
+    name: $.feat.natural-skill.skill-one
     label: Skill One
     legacySelections:
     - inputName: skill
       lookupName: skill-one
       ruleID: febd46e5-784e-5a47-a8a9-d2d6a5bb3bb3
       valueTypeID: org.openomen.pf2e.core/value/skill
-    name: $.feat.natural-skill.skill-one
-    startLevel: 1
-  id: c2f0d1cd-3270-5fa5-bf7c-4efe9a54218c
-  key: choice-feat-natural-skill-skill-one
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: febd46e5-784e-5a47-a8a9-d2d6a5bb3bb3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.natural-skill.skill-one
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- choice:
-    answer:
-      cases:
-      - key: acrobatics
-        label: Acrobatics
-        value:
-          payload:
-            kind: acrobatics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: arcana
-        label: Arcana
-        value:
-          payload:
-            kind: arcana
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: athletics
-        label: Athletics
-        value:
-          payload:
-            kind: athletics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: crafting
-        label: Crafting
-        value:
-          payload:
-            kind: crafting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: deception
-        label: Deception
-        value:
-          payload:
-            kind: deception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: diplomacy
-        label: Diplomacy
-        value:
-          payload:
-            kind: diplomacy
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: intimidation
-        label: Intimidation
-        value:
-          payload:
-            kind: intimidation
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: medicine
-        label: Medicine
-        value:
-          payload:
-            kind: medicine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: nature
-        label: Nature
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: occultism
-        label: Occultism
-        value:
-          payload:
-            kind: occultism
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: performance
-        label: Performance
-        value:
-          payload:
-            kind: performance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: religion
-        label: Religion
-        value:
-          payload:
-            kind: religion
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: society
-        label: Society
-        value:
-          payload:
-            kind: society
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: stealth
-        label: Stealth
-        value:
-          payload:
-            kind: stealth
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: survival
-        label: Survival
-        value:
-          payload:
-            kind: survival
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: thievery
-        label: Thievery
-        value:
-          payload:
-            kind: thievery
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      kind: local
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: {kind: acrobatics}}
+    - {key: arcana, value: {kind: arcana}}
+    - {key: athletics, value: {kind: athletics}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: deception, value: {kind: deception}}
+    - {key: diplomacy, value: {kind: diplomacy}}
+    - {key: intimidation, value: {kind: intimidation}}
+    - {key: medicine, value: {kind: medicine}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: performance, value: {kind: performance}}
+    - {key: religion, value: {kind: religion}}
+    - {key: society, value: {kind: society}}
+    - {key: stealth, value: {kind: stealth}}
+    - {key: survival, value: {kind: survival}}
+    - {key: thievery, value: {kind: thievery}}
+- id: febd46e5-784e-5a47-a8a9-d2d6a5bb3bb3
+  effect: core/add-skill-increase
+  inputs:
+    skill: {choice: $.feat.natural-skill.skill-one}
+    proficiencyCap: 2
+- id: 43f462a6-ff8d-5e89-b5e9-7d5e04451d89
+  key: choice-feat-natural-skill-skill-two
+  choice:
+    name: $.feat.natural-skill.skill-two
     label: Skill Two
     legacySelections:
     - inputName: skill
       lookupName: skill-two
       ruleID: 6a0a295e-bf25-5ab1-a05c-a3a652465b44
       valueTypeID: org.openomen.pf2e.core/value/skill
-    name: $.feat.natural-skill.skill-two
-    startLevel: 1
-  id: 43f462a6-ff8d-5e89-b5e9-7d5e04451d89
-  key: choice-feat-natural-skill-skill-two
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 6a0a295e-bf25-5ab1-a05c-a3a652465b44
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.natural-skill.skill-two
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Rfyhlyql1GSoDkI2
-traits:
-- human
-type: ancestry
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: {kind: acrobatics}}
+    - {key: arcana, value: {kind: arcana}}
+    - {key: athletics, value: {kind: athletics}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: deception, value: {kind: deception}}
+    - {key: diplomacy, value: {kind: diplomacy}}
+    - {key: intimidation, value: {kind: intimidation}}
+    - {key: medicine, value: {kind: medicine}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: performance, value: {kind: performance}}
+    - {key: religion, value: {kind: religion}}
+    - {key: society, value: {kind: society}}
+    - {key: stealth, value: {kind: stealth}}
+    - {key: survival, value: {kind: survival}}
+    - {key: thievery, value: {kind: thievery}}
+- id: 6a0a295e-bf25-5ab1-a05c-a3a652465b44
+  effect: core/add-skill-increase
+  inputs:
+    skill: {choice: $.feat.natural-skill.skill-two}
+    proficiencyCap: 2

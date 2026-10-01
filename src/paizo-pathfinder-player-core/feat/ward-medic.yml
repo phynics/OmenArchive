@@ -1,24 +1,17 @@
 ---
-action: {}
+name: ward medic
+level: 2
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: expert in Medicine
+  hasSkillProficiency: {skill: medicine, proficiency: expert}
 description: You've studied in large medical wards, treating several patients at once
   and tending to all their needs. When you use Treat Disease or Treat Wounds, you
   can treat up to two targets. If you're a master in Medicine, you can treat up to
   four targets, and if you're legendary, you can treat up to eight targets.
-level: 2
 mechanicsScope: encounter
-name: ward medic
-prerequisites:
-- expert in Medicine
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 8c61nOIr5AM3KxZi
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: medicine
+foundryID: 8c61nOIr5AM3KxZi

@@ -1,17 +1,34 @@
 ---
+name: disintegrate
+rank: 6
+rarity: common
+category: spell
+traits:
+- attack
+- concentrate
+- manipulate
+traditions:
+- arcane
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: 1 creature, unattended object, or force construct
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 12d10
     kinds:
     - damage
     type: untyped
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 2d10
+  interval: 1
+  type: interval
 description: 'A black tracer bolt flies toward your target, and upon making contact
   intensifies into a powerful destructive beam. Make a spell attack against the target.
   If you hit an object or force construct (such as a wall of force), it''s destroyed
@@ -23,25 +40,5 @@ description: 'A black tracer bolt flies toward your target, and upon making cont
 
 
   Heightened (+1) The damage increases by 2d10.'
-heightening:
-  damage:
-    0: 2d10
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: disintegrate
-range: 120 feet
-rank: 6
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: r7ihOgKv19eJQnik
-target: 1 creature, unattended object, or force construct
-time: '2'
-traditions:
-- arcane
-traits:
-- attack
-- concentrate
-- manipulate
+foundryID: r7ihOgKv19eJQnik

@@ -1,4 +1,13 @@
 ---
+name: underhanded assault
+level: 2
+rarity: common
+type: class
+traits:
+- rogue
+prerequisites:
+- text: trained in Stealth
+  hasSkillProficiency: {skill: stealth, proficiency: trained}
 action:
   count: two_actions
 description: You capitalize on the distraction provided by an ally. You Sneak up to
@@ -6,20 +15,5 @@ description: You capitalize on the distraction provided by an ally. You Sneak up
   up on, even if it's currently observing you, as though you were Hidden. You take
   a –2 penalty on your Stealth check. If your Stealth check against the chosen foe
   succeeds, you can make a melee Strike against that foe at the end of your Sneak.
-level: 2
 mechanicsScope: mixed
-name: underhanded assault
-prerequisites:
-- trained in Stealth
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: eoDDjIGAA67Z7rQt
-traits:
-- rogue
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: stealth
+foundryID: eoDDjIGAA67Z7rQt

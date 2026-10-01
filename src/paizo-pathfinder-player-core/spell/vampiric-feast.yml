@@ -1,17 +1,37 @@
 ---
+name: vampiric feast
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- death
+- manipulate
+- void
+traditions:
+- arcane
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: touch
+target: 1 living creature
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 6d6
     kinds:
     - damage
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'Your touch leeches the lifeblood out of a target to empower yourself.
   You deal 6d6 void damage to the target. You gain temporary Hit Points equal to half
   the void damage the target takes (after applying resistances and the like). You
@@ -19,28 +39,5 @@ description: 'Your touch leeches the lifeblood out of a target to empower yourse
 
 
   Heightened (+1) The damage increases by 2d6.'
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: vampiric feast
-range: touch
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: N1Z1oLPdBxaSgrEE
-target: 1 living creature
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- concentrate
-- death
-- manipulate
-- void
+foundryID: N1Z1oLPdBxaSgrEE

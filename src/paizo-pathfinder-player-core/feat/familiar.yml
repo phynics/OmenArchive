@@ -1,5 +1,13 @@
 ---
-action: {}
+name: familiar
+level: 1
+rarity: common
+type: class
+traits:
+- magus
+- sorcerer
+- thaumaturge
+- wizard
 description: 'Magus, Sorcerer An animal serves you and assists your spellcasting.
 
   Wizard You make a pact with a creature that serves you and assists your spellcasting.
@@ -9,43 +17,11 @@ description: 'Magus, Sorcerer An animal serves you and assists your spellcasting
   your constant companion in your studies of the supernatural.
 
   You gain a familiar.'
-level: 1
 mechanicsScope: builder
-name: familiar
-prerequisites: []
-rarity: common
+foundryID: bcxIg7wi8ZAhvhOD
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: bd88c472-7157-5022-b6a9-396a0cb0cf17
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: be4c97ce-70ab-539e-aa11-3557628b907b
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 654bc7f0-2100-5e7d-929e-d44d2e61f8ed
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: bcxIg7wi8ZAhvhOD
-traits:
-- magus
-- sorcerer
-- thaumaturge
-- wizard
-type: class
+- id: bd88c472-7157-5022-b6a9-396a0cb0cf17
+  effect: core/add-feat@2
+  inputs:
+    selectionId: be4c97ce-70ab-539e-aa11-3557628b907b
+    featId: '@feat.pet'

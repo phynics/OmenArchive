@@ -1,17 +1,36 @@
 ---
+name: execute
+rank: 7
+rarity: common
+category: spell
+traits:
+- concentrate
+- death
+- manipulate
+- void
+traditions:
+- divine
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: '70'
     kinds:
     - damage
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: '10'
+  interval: 1
+  type: interval
 description: 'You point at a creature and invoke the demise of all things. The target
   takes 70 void damage with a basic Fortitude save. If the target is undead or otherwise
   has void healing, the spell loses the death and void traits and gains the vitality
@@ -19,28 +38,6 @@ description: 'You point at a creature and invoke the demise of all things. The t
 
 
   Heightened (+1) The damage increases by 10.'
-heightening:
-  damage:
-    0: '10'
-  interval: 1
-  type: interval
 mechanicsScope: mixed
-name: execute
-range: 30 feet
-rank: 7
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Z9OrRXKgAPv6Hn5l
-target: 1 creature
-time: '2'
-traditions:
-- divine
-- primal
-traits:
-- concentrate
-- death
-- manipulate
-- void
 unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
+foundryID: Z9OrRXKgAPv6Hn5l

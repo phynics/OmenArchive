@@ -1,7 +1,21 @@
 ---
+name: enthrall
+rank: 3
+rarity: common
+category: spell
+traits:
+- auditory
+- concentrate
+- emotion
+- manipulate
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: all creatures in range
 defense:
   basic: false
   counteraction: false
@@ -34,24 +48,7 @@ description: 'Your words fascinate your targets. You speak or sing without inter
 
   Critical Failure As failure, but the target can''t attempt a save to end the fascination
   if it disagrees with you.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-mechanicsScope: encounter
-name: enthrall
-range: 120 feet
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: IihxWhRfpsBgQ5jS
-target: all creatures in range
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- auditory
-- concentrate
-- emotion
-- manipulate
+foundryID: IihxWhRfpsBgQ5jS

@@ -1,18 +1,36 @@
 ---
+name: phantasmal calamity
+rank: 6
+rarity: common
+category: spell
+traits:
+- concentrate
+- illusion
+- manipulate
+- mental
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
+range: 500 feet
 area: '30'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: will
 damage:
   0:
     formula: 11d6
     kinds:
     - damage
     type: mental
-defense:
-  basic: true
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'A vision of apocalyptic destruction fills the mind of each creature
   in the area. The vision deals 11d6 mental damage (basic Will save). On a critical
   failure, the creature must also succeed at a Reflex save or believe it''s trapped
@@ -23,28 +41,7 @@ description: 'A vision of apocalyptic destruction fills the mind of each creatur
 
 
   Heightened (+1) The damage increases by 2d6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: phantasmal calamity
-range: 500 feet
-rank: 6
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 0XP2XOxT9VSiXFDr
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- illusion
-- manipulate
-- mental
+foundryID: 0XP2XOxT9VSiXFDr

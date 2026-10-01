@@ -1,11 +1,33 @@
 ---
+name: command
+rank: 1
+rarity: common
+category: spell
+traits:
+- auditory
+- concentrate
+- linguistic
+- manipulate
+- mental
+traditions:
+- arcane
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: until the end of the target's next turn
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  levels:
+    5:
+      target: 10 creatures
+  type: fixed
 description: 'You shout a command that''s hard to ignore. You can command the target
   to approach you, run away (as if it had the Fleeing condition), release what it''s
   holding, drop Prone, or stand in place. It can''t Delay or take any reactions until
@@ -24,30 +46,5 @@ description: 'You shout a command that''s hard to ignore. You can command the ta
 
 
   Heightened (5th) You can target up to 10 creatures.'
-duration: until the end of the target's next turn
-heightening:
-  levels:
-    5:
-      target: 10 creatures
-  type: fixed
 mechanicsScope: encounter
-name: command
-range: 30 feet
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: aIHY2DArKFweIrpf
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- auditory
-- concentrate
-- linguistic
-- manipulate
-- mental
+foundryID: aIHY2DArKFweIrpf

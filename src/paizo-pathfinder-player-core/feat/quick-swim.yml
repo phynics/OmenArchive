@@ -1,26 +1,19 @@
 ---
-action: {}
-description: You Swim 5 feet farther on a success and 10 feet farther on a critical
-  success, to a maximum of your Speed. If you're legendary in Athletics, you gain
-  a swim Speed equal to your Speed.
-level: 7
-mechanicsScope: mixed
 name: quick swim
-prerequisites:
-- master in Athletics
+level: 7
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: bFoh3267kNLk68cU
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: athletics
+prerequisites:
+- text: master in Athletics
+  hasSkillProficiency: {skill: athletics, proficiency: master}
+description: You Swim 5 feet farther on a success and 10 feet farther on a critical
+  success, to a maximum of your Speed. If you're legendary in Athletics, you gain
+  a swim Speed equal to your Speed.
+mechanicsScope: mixed
 unsupportedReason: 'BaseSpeed at position 0 is not a fixed builder value. Resource:
   omen://feat/quick-swim?source=paizo-pathfinder-player-core. Foundry keys: [BaseSpeed,
   Note].'
+foundryID: bFoh3267kNLk68cU

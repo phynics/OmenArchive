@@ -1,25 +1,18 @@
 ---
-action: {}
+name: robust recovery
+level: 2
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: expert in Medicine
+  hasSkillProficiency: {skill: medicine, proficiency: expert}
 description: You learned folk medicine to help recover from diseases and poison, and
   using it diligently has made you especially resilient. When you Treat a Disease
   or a Poison, or someone else uses one of these actions on you, increase the circumstance
   bonus granted on a success to +4, and if the result of the patient's saving throw
   is a success, the patient gets a critical success.
-level: 2
 mechanicsScope: encounter
-name: robust recovery
-prerequisites:
-- expert in Medicine
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 3ZerjLH8ls3JT6cD
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: medicine
+foundryID: 3ZerjLH8ls3JT6cD

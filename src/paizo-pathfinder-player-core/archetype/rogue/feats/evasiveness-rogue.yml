@@ -1,22 +1,15 @@
 ---
-action: {}
-description: Your proficiency rank for Reflex saves increases to master.
-level: 12
-mechanicsScope: encounter
 name: evasiveness (rogue)
-prerequisites:
-- Rogue Dedication
-- expert in Reflex saves
+level: 12
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: VD446AflrQ3kO1al
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: rogue dedication
-- hasSavingThrowProficiency:
-    proficiency: expert
-    savingThrow: reflex
+prerequisites:
+- text: Rogue Dedication
+  hasResourceWithName: rogue dedication
+- text: expert in Reflex saves
+  hasSavingThrowProficiency: {savingThrow: reflex, proficiency: expert}
+description: Your proficiency rank for Reflex saves increases to master.
+mechanicsScope: encounter
+foundryID: VD446AflrQ3kO1al

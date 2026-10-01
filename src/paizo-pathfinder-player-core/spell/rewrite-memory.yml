@@ -1,11 +1,26 @@
 ---
+name: rewrite memory
+rank: 4
+rarity: uncommon
+category: spell
+traits:
+- concentrate
+- manipulate
+- mental
+traditions:
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: unlimited
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  type: fixed
 description: 'You alter the target''s memories by erasing a memory, enhancing a memory''s
   clarity, altering a memory, or adding a false memory. The target can attempt a Will
   save to resist the spell.
@@ -31,23 +46,5 @@ description: 'You alter the target''s memories by erasing a memory, enhancing a 
   Heightened (6th) You can Cast the Spell on a willing target to suppress all memory
   of a particular topic, detailed in 50 words or fewer. The effect is permanent, and
   it patches these omissions with an indistinct haze.'
-duration: unlimited
-heightening:
-  type: fixed
 mechanicsScope: encounter
-name: rewrite memory
-range: 30 feet
-rank: 4
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: FhOaQDTSnsY7tiam
-target: 1 creature
-time: '2'
-traditions:
-- occult
-traits:
-- concentrate
-- manipulate
-- mental
+foundryID: FhOaQDTSnsY7tiam

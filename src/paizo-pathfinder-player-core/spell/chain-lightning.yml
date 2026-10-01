@@ -1,17 +1,35 @@
 ---
+name: chain lightning
+rank: 6
+rarity: common
+category: spell
+traits:
+- concentrate
+- electricity
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 500 feet
+target: 1 creature, plus any number of additional creatures
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 8d12
     kinds:
     - damage
     type: electricity
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    0: 1d12
+  interval: 1
+  type: interval
 description: 'You discharge a powerful bolt of lightning at the target, dealing 8d12
   electricity damage. The target must attempt a basic Reflex save. The electricity
   arcs to another creature within 30 feet of the first target, jumps to another creature
@@ -23,26 +41,5 @@ description: 'You discharge a powerful bolt of lightning at the target, dealing 
 
 
   Heightened (+1) The damage increases by 1d12.'
-heightening:
-  damage:
-    0: 1d12
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: chain lightning
-range: 500 feet
-rank: 6
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: TDNlDWbYb58Y55Da
-target: 1 creature, plus any number of additional creatures
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- electricity
-- manipulate
+foundryID: TDNlDWbYb58Y55Da

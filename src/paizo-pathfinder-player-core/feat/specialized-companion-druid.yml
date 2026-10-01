@@ -1,27 +1,21 @@
 ---
-action: {}
-description: Your animal companion continues to grow in power and ability. It gains
-  one specialization of your choice
-level: 14
-mechanicsScope: encounter
 name: specialized companion (druid)
-prerequisites:
-- Incredible Companion
+level: 14
 rarity: common
+type: class
+traits:
+- druid
+prerequisites:
+- text: Incredible Companion
+  anyOf: [{hasFeatWithName: incredible companion (druid)}, {hasFeatWithName: incredible
+        companion (ranger)}]
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: 3
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 3r5rg0BCqSh5RBNS
+description: Your animal companion continues to grow in power and ability. It gains
+  one specialization of your choice
 specialText: You can select this feat up to three times. Each time, add a different
   specialization to your companion.
-traits:
-- druid
-type: class
-typedPrerequisites:
-- anyOf:
-  - hasFeatWithName: incredible companion (druid)
-  - hasFeatWithName: incredible companion (ranger)
+mechanicsScope: encounter
+foundryID: 3r5rg0BCqSh5RBNS

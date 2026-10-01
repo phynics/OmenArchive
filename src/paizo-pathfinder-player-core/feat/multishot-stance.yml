@@ -1,25 +1,21 @@
 ---
+name: multishot stance
+level: 16
+rarity: common
+type: class
+traits:
+- fighter
+- stance
+prerequisites:
+- text: Double Shot
+  hasResourceWithName: double shot
 action:
   count: one_action
   requirements: You are wielding a ranged weapon with reload 0.
 description: You lock yourself in a stable position so you can fire swiftly and accurately.
   While you are in this stance, your penalty for Double Shot is reduced to –1. If
   you move from your position, this stance ends.
-level: 16
-mechanicsScope: mixed
-name: multishot stance
-prerequisites:
-- Double Shot
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: RzhnxgiAopWILCvs
 specialText: If you have Triple Shot, when you use Double Shot to make three Strikes,
   the penalty is –2.
-traits:
-- fighter
-- stance
-type: class
-typedPrerequisites:
-- hasResourceWithName: double shot
+mechanicsScope: mixed
+foundryID: RzhnxgiAopWILCvs

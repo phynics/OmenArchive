@@ -1,26 +1,19 @@
 ---
-action: {}
+name: legendary sneak
+level: 15
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: legendary in Stealth
+  hasSkillProficiency: {skill: stealth, proficiency: legendary}
+- text: Swift Sneak
+  hasResourceWithName: swift sneak
 description: You're always sneaking unless you choose to be seen, even when there's
   nowhere to hide. You can Hide and Sneak even without cover or being Concealed. When
   you employ an exploration tactic other than Avoiding Notice, you also gain the benefits
   of Avoiding Notice unless you choose not to.
-level: 15
 mechanicsScope: encounter
-name: legendary sneak
-prerequisites:
-- legendary in Stealth
-- Swift Sneak
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: n0urrOL8YlnVBVRQ
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: stealth
-- hasResourceWithName: swift sneak
+foundryID: n0urrOL8YlnVBVRQ

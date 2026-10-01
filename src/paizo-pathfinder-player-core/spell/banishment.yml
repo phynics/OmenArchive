@@ -1,11 +1,31 @@
 ---
+name: banishment
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- incapacitation
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature that isn't on its home plane
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  levels:
+    9:
+      target: 10 creatures that aren't on their home plane
+  type: fixed
 description: 'You send the target back to its home plane. The target must attempt
   a Will save. You can spend an extra action while Casting this Spell and add a cost
   to the spell to give the creature a –2 circumstance penalty to its save. The cost
@@ -28,28 +48,5 @@ description: 'You send the target back to its home plane. The target must attemp
 
   Heightened (9th) You can target up to 10 creatures. The extra cost affects targets
   to which it is anathema.'
-heightening:
-  levels:
-    9:
-      target: 10 creatures that aren't on their home plane
-  type: fixed
 mechanicsScope: encounter
-name: banishment
-range: 30 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: bay4AfSu2iIozNNW
-target: 1 creature that isn't on its home plane
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- concentrate
-- incapacitation
-- manipulate
+foundryID: bay4AfSu2iIozNNW

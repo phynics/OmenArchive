@@ -1,18 +1,36 @@
 ---
+name: divine immolation
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- fire
+- manipulate
+- sanctified
+- spirit
+traditions:
+- divine
+time: '2'
 action:
   count: two_actions
+range: 120 feet
 area: '20'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   b9dAiWfV57lyCWpP:
     formula: 6d6
     kinds:
     - damage
     type: fire
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    b9dAiWfV57lyCWpP: 1d6
+  interval: 1
+  type: interval
 description: 'Divine flames scour creatures within the area. Creatures take 6d6 fire
   damage and (spell rank -3)d6[persistent,fire] damage. The divine power within the
   flames scorches the spirit as well; a creature takes spirit damage instead of fire
@@ -33,28 +51,7 @@ description: 'Divine flames scour creatures within the area. Creatures take 6d6 
 
 
   Heightened (+1) The damage increases by 1d6 and persistent damage increases by 1d6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    b9dAiWfV57lyCWpP: 1d6
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: divine immolation
-range: 120 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: A16eFTRh82xIjMu8
-time: '2'
-traditions:
-- divine
-traits:
-- concentrate
-- fire
-- manipulate
-- sanctified
-- spirit
+foundryID: A16eFTRh82xIjMu8

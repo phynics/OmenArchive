@@ -1,5 +1,14 @@
 ---
-action: {}
+name: courtly graces
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Society
+  hasSkillProficiency: {skill: society, proficiency: trained}
 description: You were raised among the nobility or have learned proper etiquette and
   bearing, allowing you to present yourself as a noble and play games of influence
   and politics. Unless you are intentionally presenting yourself differently, anyone
@@ -8,21 +17,5 @@ description: You were raised among the nobility or have learned proper etiquette
   as well as with Impersonate to pretend to be a type of noble or a specific individual
   noble. If you use the normal skills in those situations, you receive a +1 circumstance
   bonus to the check instead.
-level: 1
 mechanicsScope: encounter
-name: courtly graces
-prerequisites:
-- trained in Society
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: JtjnFsOToBLnSRO9
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: society
+foundryID: JtjnFsOToBLnSRO9

@@ -1,189 +1,40 @@
 ---
-action: {}
+name: first world adept
+level: 9
+rarity: common
+type: ancestry
+traits:
+- gnome
+prerequisites:
+- text: at least one primal innate spell
+  unsupported: Unsupported prerequisite for source WUVNZoIZvr9XFv2x "at least one
+    primal innate spell".
+  diagnostic: true
 description: Over time your fey magic has grown stronger. You gain Invisibility and
   Revealing Light as 2nd-rank primal innate spells. You can cast each of these primal
   innate spells once per day.
-level: 9
 mechanicsScope: mixed
-name: first world adept
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source WUVNZoIZvr9XFv2x "at least one primal innate
-  spell".
-prerequisites:
-- at least one primal innate spell
-rarity: common
+foundryID: WUVNZoIZvr9XFv2x
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: a0c6e8e8-724d-5fdb-be65-07957cd67941
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f0cbda3b-2317-5d56-9406-6de65af13136
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: First World Adept
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 81c9e640-2a9c-503d-8bf1-9e38661cc911
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 90ecf007-9f8c-52ed-ad6c-1c4526df908e
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: primal
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: fixed
-            rank: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: perDay
-            uses: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: a6bfac4f-0301-5bb2-a194-5bf59dc92e4d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f0cbda3b-2317-5d56-9406-6de65af13136
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: First World Adept
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 46c40d00-6614-52fe-8cb8-d74634fcb658
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 44ddc22e-a307-5f2e-936e-6a25adf5fcdc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: primal
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: fixed
-            rank: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: perDay
-            uses: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: WUVNZoIZvr9XFv2x
-traits:
-- gnome
-type: ancestry
-typedPrerequisites:
-- unsupported: Unsupported prerequisite for source WUVNZoIZvr9XFv2x "at least one
-    primal innate spell".
+- id: a0c6e8e8-724d-5fdb-be65-07957cd67941
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: f0cbda3b-2317-5d56-9406-6de65af13136
+    sourceName: First World Adept
+    grantId: 81c9e640-2a9c-503d-8bf1-9e38661cc911
+    spellId: '@spell.invisibility'
+    tradition: primal
+    attribute: cha
+    rankPolicy: {kind: fixed, rank: 2}
+    castFrequency: {kind: perDay, uses: 1}
+- id: a6bfac4f-0301-5bb2-a194-5bf59dc92e4d
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: f0cbda3b-2317-5d56-9406-6de65af13136
+    sourceName: First World Adept
+    grantId: 46c40d00-6614-52fe-8cb8-d74634fcb658
+    spellId: '@spell.revealing-light'
+    tradition: primal
+    attribute: cha
+    rankPolicy: {kind: fixed, rank: 2}
+    castFrequency: {kind: perDay, uses: 1}

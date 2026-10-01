@@ -1,95 +1,31 @@
 ---
-action: {}
+name: goblin lore
+level: 1
+rarity: common
+type: ancestry
+traits:
+- goblin
 description: 'You''ve picked up skills and tales from your goblin community. You gain
   the trained proficiency rank in Nature and Stealth. If you would automatically become
   trained in one of those skills (from your background or class, for example), you
   instead become trained in a skill of your choice.
 
   You also gain the Additional Lore general feat for Goblin Lore.'
-level: 1
 mechanicsScope: builder
-name: goblin lore
-prerequisites: []
-rarity: common
+foundryID: sm6Y3fTcltxE8N0p
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 991e31e9-3922-5b04-bf03-2ed9eea06052
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: ce461ae1-a3d9-588c-8c6e-aaf687836ab4
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: stealth
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: d0191fd3-e38e-5b4f-8ad9-cd1467f269d5
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: d73b5643-b9b9-5270-9369-a002c1d9af3c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: sm6Y3fTcltxE8N0p
-traits:
-- goblin
-type: ancestry
+- id: 991e31e9-3922-5b04-bf03-2ed9eea06052
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: ce461ae1-a3d9-588c-8c6e-aaf687836ab4
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: stealth}
+    proficiencyCap: 2
+- id: d0191fd3-e38e-5b4f-8ad9-cd1467f269d5
+  effect: core/add-feat@2
+  inputs:
+    selectionId: d73b5643-b9b9-5270-9369-a002c1d9af3c
+    featId: '@feat.additional-lore'

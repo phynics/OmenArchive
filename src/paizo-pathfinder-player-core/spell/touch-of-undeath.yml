@@ -1,17 +1,34 @@
 ---
+name: touch of undeath
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- cleric
+- focus
+- manipulate
+- void
+traditions: []
+time: '1'
 action:
   count: one_action
-category: focus
+range: touch
+target: 1 living creature
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 1d6
     kinds:
     - damage
     type: void
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
 description: 'You attack the target''s life force with undeath, dealing 1d6 void damage.
   The target must attempt a Fortitude save.
 
@@ -31,25 +48,5 @@ description: 'You attack the target''s life force with undeath, dealing 1d6 void
 
 
   Heightened (+1) The damage increases by 1d6.'
-heightening:
-  damage:
-    0: 1d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: touch of undeath
-range: touch
-rank: 1
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: GYI4xloAgkm6tTrT
-target: 1 living creature
-time: '1'
-traditions: []
-traits:
-- cleric
-- focus
-- manipulate
-- void
+foundryID: GYI4xloAgkm6tTrT

@@ -1,17 +1,34 @@
 ---
+name: crisis of faith
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- mental
+traditions:
+- divine
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+defense:
+  basic: false
+  counteraction: false
+  save: will
 damage:
   0:
     formula: 6d6
     kinds:
     - damage
     type: mental
-defense:
-  basic: false
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'You assault the target''s faith, riddling the creature with doubt and
   mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast
   divine spells. The effects are determined by its Will save.
@@ -37,26 +54,6 @@ description: 'You assault the target''s faith, riddling the creature with doubt 
 
   Heightened (+1) The damage increases by 2d6 (or by 2d8 if the target is a divine
   spellcaster).'
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
 mechanicsScope: mixed
-name: crisis of faith
-range: 30 feet
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 3x6eUCm17n6ROzUa
-target: 1 creature
-time: '2'
-traditions:
-- divine
-traits:
-- concentrate
-- manipulate
-- mental
 unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
+foundryID: 3x6eUCm17n6ROzUa

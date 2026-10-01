@@ -1,4 +1,17 @@
 ---
+name: implausible infiltration
+level: 18
+rarity: common
+type: class
+traits:
+- magical
+- move
+- rogue
+prerequisites:
+- text: legendary in Acrobatics
+  hasSkillProficiency: {skill: acrobatics, proficiency: legendary}
+- text: Quick Squeeze
+  hasResourceWithName: quick squeeze
 action:
   count: two_actions
   requirements: You are adjacent to a floor or vertical wall.
@@ -7,24 +20,5 @@ description: You find tiny imperfections and somehow fit yourself through them, 
   or floor is made of something other than wood, plaster, or stone; is thicker than
   10 feet; or contains even a thin layer of metal. If you have a climb Speed, you
   can use this ability to attempt to move through a ceiling.
-level: 18
 mechanicsScope: mixed
-name: implausible infiltration
-prerequisites:
-- legendary in Acrobatics
-- Quick Squeeze
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: fLrwddS607eRFfHA
-traits:
-- magical
-- move
-- rogue
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: acrobatics
-- hasResourceWithName: quick squeeze
+foundryID: fLrwddS607eRFfHA

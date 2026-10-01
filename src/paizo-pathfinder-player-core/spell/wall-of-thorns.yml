@@ -1,13 +1,32 @@
 ---
+name: wall of thorns
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- plant
+- wood
+traditions:
+- arcane
+- primal
+time: '3'
 action:
   count: three_actions
-category: spell
+range: 60 feet
+duration: 1 minute
 damage:
   0:
     formula: 3d4
     kinds:
     - damage
     type: piercing
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
 description: 'You grow a wall of thorny brambles from the ground. You create a 5-foot-thick
   wall of brambles and thorns in a straight line up to 60 feet long and 10 feet high.
   You must create the wall in an unbroken open space so its edges don''t pass through
@@ -25,27 +44,5 @@ description: 'You grow a wall of thorny brambles from the ground. You create a 5
 
   Heightened (+1) The Hit Points of each section of the wall increase by 5, and the
   piercing damage increases by 1d4.'
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d4
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: wall of thorns
-range: 60 feet
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: KsWhliKfUs3IpW3c
-time: '3'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- manipulate
-- plant
-- wood
+foundryID: KsWhliKfUs3IpW3c

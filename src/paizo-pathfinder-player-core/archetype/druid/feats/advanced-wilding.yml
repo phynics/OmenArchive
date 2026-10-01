@@ -1,25 +1,20 @@
 ---
-action: {}
-description: You gain one druid feat. For the purpose of meeting its prerequisites,
-  your druid level is equal to half your character level.
-level: 6
-mechanicsScope: encounter
 name: advanced wilding
-prerequisites:
-- Basic Wilding
+level: 6
 rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Basic Wilding
+  hasResourceWithName: basic wilding
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: l9K62T7qMCvJXUoY
+description: You gain one druid feat. For the purpose of meeting its prerequisites,
+  your druid level is equal to half your character level.
 specialText: You can select this feat more than once. Each time you select it, you
   gain another druid feat.
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic wilding
+mechanicsScope: encounter
+foundryID: l9K62T7qMCvJXUoY

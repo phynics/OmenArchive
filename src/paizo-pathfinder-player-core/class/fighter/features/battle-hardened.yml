@@ -1,39 +1,16 @@
 ---
-action: {}
+name: battle hardened
+level: 9
+traits:
+- fighter
 description: Your experience in battle helps protect you against magic and toxins
   alike. Your proficiency rank for Fortitude saves increases to master. When you roll
   a success on a Fortitude save, you get a critical success instead.
-level: 9
 mechanicsScope: builder
-name: battle hardened
+foundryID: gdSmSTaGDxf4g2d8
 rules:
 - id: 4069e594-2698-5fa0-97b5-2ba32d504e7e
-  effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-saving-throw
-    revision: 1
-  inputRecipes:
-  - inputName: savingThrow
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-          revision: 1
-          payload: fortitude
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-          revision: 1
-          payload: 6
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: gdSmSTaGDxf4g2d8
-traits:
-- fighter
+  effect: core/add-saving-throw
+  inputs:
+    savingThrow: fortitude
+    proficiencyRank: 6

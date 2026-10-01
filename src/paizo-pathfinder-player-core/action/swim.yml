@@ -1,9 +1,8 @@
 ---
+name: swim
+traits:
+- move
 count: one_action
-criticalFailure: You make no progress. If you're holding your breath, you lose 1 round
-  of air.
-criticalSuccess: You move through the water, increasing the maximum distance by 5
-  feet.
 description: 'You attempt an Athletics check to move a maximum distance of 10 feet
   through water. The GM determines the DC based on the turbulence or danger of the
   water; in most instances of calm water, you get an automatic critical success. If
@@ -25,10 +24,8 @@ description: 'You attempt an Athletics check to move a maximum distance of 10 fe
   Master stormy sea
 
   Legendary maelstrom, waterfall'
-name: swim
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+criticalSuccess: You move through the water, increasing the maximum distance by 5
+  feet.
 success: You move through the water.
-traits:
-- move
+criticalFailure: You make no progress. If you're holding your breath, you lose 1 round
+  of air.

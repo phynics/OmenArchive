@@ -1,4 +1,17 @@
 ---
+name: in tune
+level: 4
+rarity: common
+type: class
+traits:
+- bard
+- concentrate
+- spellshape
+prerequisites:
+- text: maestro muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 action:
   count: one_action
 description: 'You attune your great skill in performing to another, granting them
@@ -7,25 +20,5 @@ description: 'You attune your great skill in performing to another, granting the
   ally of your choice within 60 feet instead of you.
 
   If you have Directed Audience, you can have that cone originate from the ally instead.'
-level: 4
 mechanicsScope: encounter
-name: in tune
-prerequisites:
-- maestro muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 6FCWkhOo9NqfLKqV
-traits:
-- bard
-- concentrate
-- spellshape
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: e3ea2e9a-ac76-5a96-9d90-d127c118411b
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: 6FCWkhOo9NqfLKqV

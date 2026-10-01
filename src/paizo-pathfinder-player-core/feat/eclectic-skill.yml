@@ -1,31 +1,21 @@
 ---
-action: {}
+name: eclectic skill
+level: 8
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: polymath muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
+- text: master in Occultism
+  hasSkillProficiency: {skill: occultism, proficiency: master}
 description: Your broad experiences translate to a range of skills. Your proficiency
   bonus to untrained skill checks is equal to your level. You can attempt any skill
   check that normally requires you to be trained, even if you are untrained. If you
   have legendary proficiency in Occultism, you can attempt any skill check that normally
   requires you to have expert proficiency, even if untrained or trained.
-level: 8
 mechanicsScope: encounter
-name: eclectic skill
-prerequisites:
-- polymath muse
-- master in Occultism
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: TOyqtUUnOkOLl1Pm
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: a97a9fdf-136d-5006-a083-4825663520ec
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
-- hasSkillProficiency:
-    proficiency: master
-    skill: occultism
+foundryID: TOyqtUUnOkOLl1Pm

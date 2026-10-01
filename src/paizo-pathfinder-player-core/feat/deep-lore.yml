@@ -1,28 +1,18 @@
 ---
-action: {}
-description: Your repertoire is vast, containing far more spells than usual. Add one
-  spell to your repertoire of each spell rank you can cast.
-level: 18
-mechanicsScope: encounter
 name: deep lore
-prerequisites:
-- enigma muse
-- legendary in Occultism
+level: 18
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: iTtnN49D8ZJ2Ilur
+type: class
 traits:
 - bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 561e24d0-c44a-5fff-9abd-ec39e3d7f785
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
+prerequisites:
+- text: enigma muse
+  hasChoice:
     name: $.bard.muse
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: occultism
+    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+- text: legendary in Occultism
+  hasSkillProficiency: {skill: occultism, proficiency: legendary}
+description: Your repertoire is vast, containing far more spells than usual. Add one
+  spell to your repertoire of each spell rank you can cast.
+mechanicsScope: encounter
+foundryID: iTtnN49D8ZJ2Ilur

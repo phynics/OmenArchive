@@ -1,13 +1,31 @@
 ---
+name: hurtling stone
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- attack
+- cleric
+- earth
+- focus
+- manipulate
+traditions: []
+time: '1'
 action:
   count: one_action
-category: focus
+range: 60 feet
+target: 1 creature
 damage:
   0:
     formula: 2d6
     kinds:
     - damage
     type: bludgeoning
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
 description: 'You evoke a magical stone and throw it, with divine guide to your aim.
   The stone deals 2d6 bludgeoning damage depending on your spell attack roll against
   the target''s AC.
@@ -20,26 +38,5 @@ description: 'You evoke a magical stone and throw it, with divine guide to your 
 
 
   Heightened (+1) The stone''s damage increases by 1d6.'
-heightening:
-  damage:
-    0: 1d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: hurtling stone
-range: 60 feet
-rank: 1
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: pRKaEXnjGJXbPHPC
-target: 1 creature
-time: '1'
-traditions: []
-traits:
-- attack
-- cleric
-- earth
-- focus
-- manipulate
+foundryID: pRKaEXnjGJXbPHPC

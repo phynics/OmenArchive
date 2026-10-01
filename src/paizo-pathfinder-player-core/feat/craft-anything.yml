@@ -1,5 +1,14 @@
 ---
-action: {}
+name: craft anything
+level: 15
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: legendary in Crafting
+  hasSkillProficiency: {skill: crafting, proficiency: legendary}
 description: You can find ways to craft just about anything, despite restrictions.
   As long as you have the appropriate Crafting skill feat (such as Magical Crafting
   for magic items) and meet the item's level and proficiency requirements, you ignore
@@ -8,21 +17,5 @@ description: You can find ways to craft just about anything, despite restriction
   castings of spells that themselves have a cost). You can't ignore requirements of
   special items that have exclusive means of access and Crafting, such as artifacts.
   The GM decides whether you can ignore a requirement.
-level: 15
 mechanicsScope: encounter
-name: craft anything
-prerequisites:
-- legendary in Crafting
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: v62QzTwHOT3t86cL
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: crafting
+foundryID: v62QzTwHOT3t86cL

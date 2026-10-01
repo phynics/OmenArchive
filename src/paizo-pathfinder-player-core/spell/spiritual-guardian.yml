@@ -1,13 +1,31 @@
 ---
+name: spiritual guardian
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- sanctified
+- spirit
+traditions:
+- divine
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+duration: 1 minute
 damage:
   0:
     formula: 3d8
     kinds:
     - damage
     type: spirit
+heightening:
+  damage:
+    0: 1d8
+  interval: 2
+  type: interval
 description: 'A Medium guardian made of magical force appears in an unoccupied space
   in range. The spiritual guardian is translucent and wields a ghostly echo of one
   weapon you''re wielding or wearing. If you have a deity, the guardian takes the
@@ -42,28 +60,7 @@ description: 'A Medium guardian made of magical force appears in an unoccupied s
 
   Heightened (+2) The guardian''s damage increases by 1d8, and its Hit Points increase
   by 20.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d8
-  interval: 2
-  type: interval
-mechanicsScope: encounter
-name: spiritual guardian
-range: 120 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: jQdm301h6e8hIY4U
-time: '2'
-traditions:
-- divine
-traits:
-- concentrate
-- manipulate
-- sanctified
-- spirit
+foundryID: jQdm301h6e8hIY4U

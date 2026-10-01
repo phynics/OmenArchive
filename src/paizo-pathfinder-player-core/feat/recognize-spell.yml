@@ -1,4 +1,19 @@
 ---
+name: recognize spell
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- secret
+- skill
+prerequisites:
+- text: trained in Arcana, Nature, Occultism or Religion
+  anyOf:
+  - hasSkillProficiency: {skill: arcana, proficiency: trained}
+  - hasSkillProficiency: {skill: nature, proficiency: trained}
+  - hasSkillProficiency: {skill: occultism, proficiency: trained}
+  - hasSkillProficiency: {skill: religion, proficiency: trained}
 action:
   count: reaction
   criticalFailure: You misidentify the spell as another spell entirely, of the GM's
@@ -18,32 +33,5 @@ description: If you are trained in the appropriate skill for the spell's traditi
   a secret Arcana, Nature, Occultism, or Religion check, whichever corresponds to
   the tradition of the spell being cast. If you're not trained in the skill, you can't
   get a result better than failure.
-level: 1
 mechanicsScope: encounter
-name: recognize spell
-prerequisites:
-- trained in Arcana, Nature, Occultism or Religion
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: MjQyTcV8Jiv1Jtln
-traits:
-- general
-- secret
-- skill
-type: skill
-typedPrerequisites:
-- anyOf:
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: arcana
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: nature
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: occultism
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: religion
+foundryID: MjQyTcV8Jiv1Jtln

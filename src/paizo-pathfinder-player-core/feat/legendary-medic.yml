@@ -1,26 +1,19 @@
 ---
-action: {}
+name: legendary medic
+level: 15
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: legendary in Medicine
+  hasSkillProficiency: {skill: medicine, proficiency: legendary}
 description: You've discovered medical breakthroughs or techniques that achieve miraculous
   results. Once per day for each target, you can spend 1 hour treating that target
   and attempt a Medicine check to remove a disease or the Blinded, Deafened, Doomed,
   or Drained condition. Use the DC of the disease or of the spell or effect that created
   the condition. If the effect's source is an artifact, above 20th level, or similarly
   powerful, increase the DC by 10.
-level: 15
 mechanicsScope: encounter
-name: legendary medic
-prerequisites:
-- legendary in Medicine
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Kk4AMZtpQnLEgN0b
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: medicine
+foundryID: Kk4AMZtpQnLEgN0b

@@ -1,4 +1,14 @@
 ---
+name: sanctify armament
+level: 8
+rarity: common
+type: class
+traits:
+- cleric
+- divine
+prerequisites:
+- text: holy or unholy trait
+  anyOf: [{hasTrait: holy}, {hasTrait: unholy}]
 action:
   count: one_action
 description: 'You touch a weapon and bring it into concordance with your deity. For
@@ -7,21 +17,5 @@ description: 'You touch a weapon and bring it into concordance with your deity. 
   the weapon would deal an extra 2d6 spirit damage to unholy creatures.
 
   If you use Sanctify Armament again, any previous use of it expires.'
-level: 8
 mechanicsScope: mixed
-name: sanctify armament
-prerequisites:
-- holy or unholy trait
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xtXWw3cUnVB25XSV
-traits:
-- cleric
-- divine
-type: class
-typedPrerequisites:
-- anyOf:
-  - hasTrait: holy
-  - hasTrait: unholy
+foundryID: xtXWw3cUnVB25XSV

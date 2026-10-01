@@ -1,24 +1,17 @@
 ---
-action: {}
+name: group impression
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Diplomacy
+  hasSkillProficiency: {skill: diplomacy, proficiency: trained}
 description: When you Make an Impression, you can compare your Diplomacy check result
   to the Will DCs of up to 10 targets you conversed with, with no penalty. The number
   of targets increases to 20 if you're an expert, 50 if you're a master, and 100 if
   you're legendary.
-level: 1
 mechanicsScope: encounter
-name: group impression
-prerequisites:
-- trained in Diplomacy
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: KpFetnUqTiweypZk
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: diplomacy
+foundryID: KpFetnUqTiweypZk

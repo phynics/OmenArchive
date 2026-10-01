@@ -1,5 +1,16 @@
 ---
-action: {}
+name: blind-fight
+level: 8
+rarity: common
+type: class
+traits:
+- fighter
+- investigator
+- ranger
+- rogue
+prerequisites:
+- text: master in Perception
+  hasSavingThrowProficiency: {savingThrow: perception, proficiency: master}
 description: 'Fighter, Rogue, Investigator Your battle instincts make you more aware
   of Concealed and Invisible opponents.
 
@@ -12,23 +23,5 @@ description: 'Fighter, Rogue, Investigator Your battle instincts make you more a
 
   While you''re adjacent to an Undetected creature of your level or lower, it is instead
   only hidden from you.'
-level: 8
 mechanicsScope: encounter
-name: blind-fight
-prerequisites:
-- master in Perception
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: y2XeMe1F18lIyo59
-traits:
-- fighter
-- investigator
-- ranger
-- rogue
-type: class
-typedPrerequisites:
-- hasSavingThrowProficiency:
-    proficiency: master
-    savingThrow: perception
+foundryID: y2XeMe1F18lIyo59

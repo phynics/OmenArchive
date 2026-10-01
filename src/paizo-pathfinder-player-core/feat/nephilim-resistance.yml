@@ -1,5 +1,10 @@
 ---
-action: {}
+name: nephilim resistance
+level: 5
+rarity: common
+type: ancestry
+traits:
+- nephilim
 description: 'You resist energy like your extraplanar predecessors. Choose one of
   the following energy damage types: acid, cold, electricity, fire, or sonic. You
   gain resistance 5 to that damage type.
@@ -7,91 +12,29 @@ description: 'You resist energy like your extraplanar predecessors. Choose one o
   The damage type typically matches an extraplanar entity associated with your bloodline.
   For instance, an Angelkin might choose resistance to cold, while a Hellspawn might
   choose resistance to fire.'
-level: 5
 mechanicsScope: builder
-name: nephilim resistance
-prerequisites: []
-rarity: common
+foundryID: 8CSewrCVEmL8sjnk
 rules:
-- choice:
-    answer:
-      cases:
-      - key: fire
-        label: Fire
-        value:
-          payload: fire
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      - key: acid
-        label: Acid
-        value:
-          payload: acid
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      - key: cold
-        label: Cold
-        value:
-          payload: cold
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      - key: sonic
-        label: Sonic
-        value:
-          payload: sonic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      - key: electricity
-        label: Electricity
-        value:
-          payload: electricity
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      kind: local
+- id: 0968f704-6234-59d0-9815-e2309e4e71d0
+  key: choice-feat-nephilim-resistance-damage-type
+  choice:
+    name: $.feat.nephilim-resistance.damage-type
     label: Damage Type
     legacySelections:
     - inputName: type
       lookupName: feat-celestial-resistance
       ruleID: 19a41923-d992-5e15-8597-133c4b2d700d
       valueTypeID: org.openomen.pf2e.core/value/string
-    name: $.feat.nephilim-resistance.damage-type
-    startLevel: 1
-  id: 0968f704-6234-59d0-9815-e2309e4e71d0
-  key: choice-feat-nephilim-resistance-damage-type
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-resistance
-    revision: 2
-  id: 19a41923-d992-5e15-8597-133c4b2d700d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.nephilim-resistance.damage-type
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: type
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/sheet-value
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/sheet-value
-    inputName: value
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: exceptions
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 8CSewrCVEmL8sjnk
-traits:
-- nephilim
-type: ancestry
+    type: core/string
+    cases:
+    - {value: fire}
+    - {value: acid}
+    - {value: cold}
+    - {value: sonic}
+    - {value: electricity}
+- id: 19a41923-d992-5e15-8597-133c4b2d700d
+  effect: core/add-resistance@2
+  inputs:
+    type: {choice: $.feat.nephilim-resistance.damage-type}
+    value: 5
+    exceptions: ''

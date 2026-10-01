@@ -1,4 +1,17 @@
 ---
+name: scare to death
+level: 15
+rarity: common
+type: skill
+traits:
+- emotion
+- fear
+- general
+- incapacitation
+- skill
+prerequisites:
+- text: legendary in Intimidation
+  hasSkillProficiency: {skill: intimidation, proficiency: legendary}
 action:
   count: one_action
   criticalFailure: The target is unaffected.
@@ -13,24 +26,5 @@ description: You can frighten foes so much, they might die. Attempt an intimidat
   or observe and who can sense or observe you. If the target can't hear you or doesn't
   understand the language you are speaking, you take a –4 circumstance penalty. The
   creature is temporarily immune for 1 minute.
-level: 15
 mechanicsScope: mixed
-name: scare to death
-prerequisites:
-- legendary in Intimidation
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: mZttsiWl1ql5NvrH
-traits:
-- emotion
-- fear
-- general
-- incapacitation
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: intimidation
+foundryID: mZttsiWl1ql5NvrH

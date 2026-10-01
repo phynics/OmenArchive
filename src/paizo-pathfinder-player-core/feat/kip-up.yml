@@ -1,22 +1,16 @@
 ---
-action:
-  count: free_action
-description: You stand up. This movement doesn't trigger reactions.
-level: 7
-mechanicsScope: encounter
 name: kip up
-prerequisites:
-- master in Acrobatics
+level: 7
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: gBSPbQRXdagZTUwY
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: acrobatics
+prerequisites:
+- text: master in Acrobatics
+  hasSkillProficiency: {skill: acrobatics, proficiency: master}
+action:
+  count: free_action
+description: You stand up. This movement doesn't trigger reactions.
+mechanicsScope: encounter
+foundryID: gBSPbQRXdagZTUwY

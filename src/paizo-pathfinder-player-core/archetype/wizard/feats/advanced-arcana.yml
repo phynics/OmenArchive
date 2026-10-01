@@ -1,25 +1,20 @@
 ---
-action: {}
-description: You gain one wizard feat. For the purpose of meeting its prerequisites,
-  your wizard level is equal to half your character level.
-level: 6
-mechanicsScope: encounter
 name: advanced arcana
-prerequisites:
-- Basic Arcana
+level: 6
 rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Basic Arcana
+  hasResourceWithName: basic arcana
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Tg3Iyq55xW9PTSW9
+description: You gain one wizard feat. For the purpose of meeting its prerequisites,
+  your wizard level is equal to half your character level.
 specialText: You can select this feat more than once. Each time you select it, you
   gain another wizard feat.
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic arcana
+mechanicsScope: encounter
+foundryID: Tg3Iyq55xW9PTSW9

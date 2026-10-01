@@ -1,5 +1,14 @@
 ---
-action: {}
+name: sign language
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Society
+  hasSkillProficiency: {skill: society, proficiency: trained}
 description: 'You learn the sign languages associated with the languages you know,
   allowing you to sign and understand signs. Sign languages typically require both
   hands to convey more complex concepts, and they are visual rather than auditory.
@@ -8,21 +17,5 @@ description: 'You learn the sign languages associated with the languages you kno
   needed, unlike basic gestures like pointing at a foe to suggest a target. Sign language
   is hard to use in areas of low visibility, just like speech is difficult in a noisy
   environment.'
-level: 1
 mechanicsScope: encounter
-name: sign language
-prerequisites:
-- trained in Society
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: aAoFc10cOpxGypOY
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: society
+foundryID: aAoFc10cOpxGypOY

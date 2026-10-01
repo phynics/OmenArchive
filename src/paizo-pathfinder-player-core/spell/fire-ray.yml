@@ -1,13 +1,33 @@
 ---
+name: fire ray
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- attack
+- cleric
+- concentrate
+- fire
+- focus
+- manipulate
+traditions: []
+time: '2'
 action:
   count: two_actions
-category: focus
+range: 60 feet
+target: 1 creature
+duration: until the end of the target's next turn
 damage:
   0:
     formula: 2d6
     kinds:
     - damage
     type: fire
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'A blazing band of fire arcs through the air, lighting your opponent
   and the ground they stand upon on fire. Make a spell attack roll against the target''s
   AC. The ray deals 2d6 fire damage on a hit (or double damage on a critical hit).
@@ -18,28 +38,5 @@ description: 'A blazing band of fire arcs through the air, lighting your opponen
 
   Heightened (+1) The ray''s initial damage increases by 2d6, and the fire damage
   dealt by the burning space increases by 1d6.'
-duration: until the end of the target's next turn
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: fire ray
-range: 60 feet
-rank: 1
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: oJKZi8OQgmVXHOc0
-target: 1 creature
-time: '2'
-traditions: []
-traits:
-- attack
-- cleric
-- concentrate
-- fire
-- focus
-- manipulate
+foundryID: oJKZi8OQgmVXHOc0

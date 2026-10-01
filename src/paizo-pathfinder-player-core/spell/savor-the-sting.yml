@@ -1,17 +1,35 @@
 ---
+name: savor the sting
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- cleric
+- focus
+- manipulate
+- mental
+- nonlethal
+traditions: []
+time: '1'
 action:
   count: one_action
-category: focus
+range: touch
+target: 1 creature
+defense:
+  basic: false
+  counteraction: false
+  save: will
 damage:
   0:
     formula: 1d4
     kinds:
     - damage
     type: mental
-defense:
-  basic: false
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
 description: 'You inflict pain upon the target and revel in their anguish. This deals
   1d4 mental damage and (spell rank)d4[persistent,mental] damage; the target must
   attempt a Will save. As long as the target is taking persistent damage from this
@@ -32,26 +50,5 @@ description: 'You inflict pain upon the target and revel in their anguish. This 
 
   Heightened (+1) The initial damage increases by 1d4 and the persistent damage increases
   by 1d4.'
-heightening:
-  damage:
-    0: 1d4
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: savor the sting
-range: touch
-rank: 1
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xn0V2HDrmDWNzPEt
-target: 1 creature
-time: '1'
-traditions: []
-traits:
-- cleric
-- focus
-- manipulate
-- mental
-- nonlethal
+foundryID: xn0V2HDrmDWNzPEt

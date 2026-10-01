@@ -1,5 +1,7 @@
 ---
+name: chameleon gnome
 ancestry: gnome
+rarity: common
 description: The color of your hair and skin is mutable, possibly due to latent magic
   from First World influences or lingering illusion effects. You can slowly change
   the vibrancy and the exact color, and the coloration can be different across your
@@ -12,61 +14,17 @@ description: The color of your hair and skin is mutable, possibly due to latent 
   to help you blend into your surroundings. This grants you a +2 circumstance bonus
   to Stealth checks until your surroundings shift in coloration or pattern.
 mechanicsScope: builder
-name: chameleon gnome
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: a2e3e8ee-76e7-51e1-89b5-ff538dae11a0
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f7d5f69f-29d4-589a-a9d1-5cfb339bfe91
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  stealth: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Chameleon Gnome: +2 circumstance bonus to Stealth checks (in some
-            situations).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 2
-            applicability:
-              description: in some situations
-              kind: situational
-            type: circumstance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: a2e3e8ee-76e7-51e1-89b5-ff538dae11a0
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: f7d5f69f-29d4-589a-a9d1-5cfb339bfe91
+    target:
+      description:
+      - skill:
+          '_0':
+            stealth: {}
+    description: 'Chameleon Gnome: +2 circumstance bonus to Stealth checks (in some
+      situations).'
+    numeric: {literal: {amount: 2, applicability: {description: in some situations,
+          kind: situational}, type: circumstance}}

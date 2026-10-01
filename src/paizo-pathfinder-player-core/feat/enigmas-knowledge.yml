@@ -1,46 +1,22 @@
 ---
-action: {}
+name: enigma's knowledge
+level: 12
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: Assured Knowledge
+  hasResourceWithName: assured knowledge
 description: Your muse whispers knowledge to you at all the right times. You gain
   the benefits of the Automatic Knowledge skill feat with any skill you can use to
   Recall Knowledge. As per the special clause in the Automatic Knowledge feat, you
   can still only use Automatic Knowledge once per round.
-level: 12
 mechanicsScope: builder
-name: enigma's knowledge
-prerequisites:
-- Assured Knowledge
-rarity: common
+foundryID: 8cbSVw8RnVzy5USe
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 713dc20d-b65f-5592-8a44-a40e135171fa
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f3b57b29-f397-5dfb-a8ed-cc7697eefd3c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b554df07-fbb5-5310-876a-fe47f3fa4541
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 8cbSVw8RnVzy5USe
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasResourceWithName: assured knowledge
+- id: 713dc20d-b65f-5592-8a44-a40e135171fa
+  effect: core/add-feat@2
+  inputs:
+    selectionId: f3b57b29-f397-5dfb-a8ed-cc7697eefd3c
+    featId: '@feat.automatic-knowledge'

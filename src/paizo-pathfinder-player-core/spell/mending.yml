@@ -1,5 +1,27 @@
 ---
+name: mending
+rank: 1
+rarity: common
 category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: 10 minutes
+range: touch
+target: non-magical object of light Bulk or less
+heightening:
+  levels:
+    2:
+      target: non-magical object of 1 Bulk or less
+    3:
+      target: non-magical object of 2 Bulk or less, or a magical object of 1 Bulk
+        or less
+  type: fixed
 description: 'You repair the target item. You restore 5 Hit Points per spell rank
   to the target, potentially removing the Broken condition if this repairs it past
   the item''s Broken Threshold. You can''t replace lost pieces or repair an object
@@ -11,32 +33,7 @@ description: 'You repair the target item. You restore 5 Hit Points per spell ran
 
   Heightened (3rd) You can target a non-magical object of 2 Bulk or less, or a magical
   object of 1 Bulk or less.'
+mechanicsScope: encounter
 diagnostics:
 - 'Foundry casting time retained without normalized action count: 10 minutes'
-heightening:
-  levels:
-    2:
-      target: non-magical object of 1 Bulk or less
-    3:
-      target: non-magical object of 2 Bulk or less, or a magical object of 1 Bulk
-        or less
-  type: fixed
-mechanicsScope: encounter
-name: mending
-range: touch
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: dINQzhqGmIsqGMUY
-target: non-magical object of light Bulk or less
-time: 10 minutes
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- concentrate
-- manipulate
+foundryID: dINQzhqGmIsqGMUY

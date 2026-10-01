@@ -1,25 +1,18 @@
 ---
-action: {}
+name: glad-hand
+level: 2
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: expert in Diplomacy
+  hasSkillProficiency: {skill: diplomacy, proficiency: expert}
 description: First impressions are your strong suit. When you meet someone in a casual
   or social situation, you can immediately attempt a Diplomacy check to Make an Impression
   on that creature rather than needing to converse for 1 minute. If you fail, you
   can engage in 1 minute of conversation and attempt a new check at the end of that
   time rather than accepting the failure or critical failure result.
-level: 2
 mechanicsScope: encounter
-name: glad-hand
-prerequisites:
-- expert in Diplomacy
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: cc8O47KFsODReoBe
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: diplomacy
+foundryID: cc8O47KFsODReoBe

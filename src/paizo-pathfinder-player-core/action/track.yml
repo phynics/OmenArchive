@@ -1,5 +1,9 @@
 ---
-criticalFailure: You lose the trail and can't try again for 24 hours.
+name: track
+traits:
+- concentrate
+- exploration
+- move
 description: "You follow tracks, moving at up to half your travel Speed, using the
   Travel Speed rules. After a successful check to Track, you can continue following
   the tracks at half your Speed without attempting additional checks for up to 1 hour.\nIn
@@ -16,13 +20,6 @@ description: "You follow tracks, moving at up to half your travel Speed, using t
   creature, tracks left on surfaces that can't hold prints like bare rock\n\t•\tLegendary
   old tracks through a windy desert's sands, tracks obscured by a major blizzard or
   hurricane"
-failure: You lose the trail but can try again after a 1-hour delay.
-name: track
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
 success: You find the trail or continue to follow the one you're already following.
-traits:
-- concentrate
-- exploration
-- move
+failure: You lose the trail but can try again after a 1-hour delay.
+criticalFailure: You lose the trail and can't try again for 24 hours.

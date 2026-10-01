@@ -1,4 +1,20 @@
 ---
+name: defensive coordination
+level: 6
+rarity: common
+type: class
+traits:
+- auditory
+- bard
+- concentrate
+- spellshape
+prerequisites:
+- text: warrior muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.warrior'}
+- text: Rallying Anthem
+  hasResourceWithName: rallying anthem
 action:
   count: one_action
 description: Like the storied heroes who persist in the face of overwhelming odds,
@@ -6,28 +22,5 @@ description: Like the storied heroes who persist in the face of overwhelming odd
   Anthem composition cantrip, you can Raise a Shield, and one ally of your choice
   who gains a status bonus from the spell can immediately use their reaction to Raise
   a Shield.
-level: 6
 mechanicsScope: encounter
-name: defensive coordination
-prerequisites:
-- warrior muse
-- Rallying Anthem
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 515N9nl9ChZwLWKR
-traits:
-- auditory
-- bard
-- concentrate
-- spellshape
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 4e9ebea9-187a-5215-8af4-a3f318430870
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
-- hasResourceWithName: rallying anthem
+foundryID: 515N9nl9ChZwLWKR

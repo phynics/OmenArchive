@@ -1,125 +1,55 @@
 ---
-action: {}
-description: Your knowledge has expanded to encompass a new field. Choose a Lore skill
-  subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an
-  additional skill increase you can apply only to the chosen Lore subcategory.
-level: 1
-mechanicsScope: builder
 name: additional lore
-prerequisites: []
+level: 1
 rarity: common
+type: skill
+traits:
+- general
+- skill
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+description: Your knowledge has expanded to encompass a new field. Choose a Lore skill
+  subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an
+  additional skill increase you can apply only to the chosen Lore subcategory.
+specialText: You can select this feat more than once. Each time you must select a
+  new subcategory of Lore and you gain the additional skill increases to that subcategory
+  for the listed levels.
+mechanicsScope: builder
+foundryID: BocFD2KV0qgUC76x
 rules:
-- choice:
-    answer:
-      kind: freeText
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
+- id: 0cdaf71e-6897-5421-8cd4-afc138149ca4
+  key: choice-feat-additional-lore-lores
+  choice:
+    name: $.feat.additional-lore.lores
     label: Lore name
     legacySelections:
     - inputName: loreName
       lookupName: additional-lore-name
       ruleID: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
       valueTypeID: org.openomen.pf2e.core/value/string
-    name: $.feat.additional-lore.lores
-    startLevel: 1
-  id: 0cdaf71e-6897-5421-8cd4-afc138149ca4
-  key: choice-feat-additional-lore-lores
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
-    revision: 1
-  id: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.additional-lore.lores
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: loreName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
-    revision: 1
-  id: 76e1381f-f692-5dc5-8556-02b4fb9875bd
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.additional-lore.lores
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: loreName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 3
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
-    revision: 1
-  id: 158af683-b149-5a2e-a5d9-e5d4ba28fa27
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.additional-lore.lores
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: loreName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 7
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-lore-skill-increase
-    revision: 1
-  id: 64a24b99-b575-5246-af08-ff1b960d920c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.additional-lore.lores
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: loreName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 15
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: BocFD2KV0qgUC76x
-specialText: You can select this feat more than once. Each time you must select a
-  new subcategory of Lore and you gain the additional skill increases to that subcategory
-  for the listed levels.
-traits:
-- general
-- skill
-type: skill
+    freeText: core/string
+- id: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
+  effect: core/add-lore-skill-increase
+  inputs:
+    loreName: {choice: $.feat.additional-lore.lores}
+    proficiencyCap: 2
+- id: 76e1381f-f692-5dc5-8556-02b4fb9875bd
+  effect: core/add-lore-skill-increase
+  level: 3
+  inputs:
+    loreName: {choice: $.feat.additional-lore.lores}
+    proficiencyCap: 4
+- id: 158af683-b149-5a2e-a5d9-e5d4ba28fa27
+  effect: core/add-lore-skill-increase
+  level: 7
+  inputs:
+    loreName: {choice: $.feat.additional-lore.lores}
+    proficiencyCap: 6
+- id: 64a24b99-b575-5246-af08-ff1b960d920c
+  effect: core/add-lore-skill-increase
+  level: 15
+  inputs:
+    loreName: {choice: $.feat.additional-lore.lores}
+    proficiencyCap: 8

@@ -1,39 +1,16 @@
 ---
-action: {}
+name: will of the pupil
+level: 17
+traits:
+- witch
 description: Communion with your familiar has steeled your mental fortitude. Your
   proficiency rank for Will saves increases to master. When you roll a success on
   a Will save, you get a critical success instead.
-level: 17
 mechanicsScope: builder
-name: will of the pupil
+foundryID: FuVO8ksHI1B5ozVI
 rules:
 - id: c5656f27-ffc2-5cf8-8717-6d43c77dc3f6
-  effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-saving-throw
-    revision: 1
-  inputRecipes:
-  - inputName: savingThrow
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-          revision: 1
-          payload: will
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-          revision: 1
-          payload: 6
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: FuVO8ksHI1B5ozVI
-traits:
-- witch
+  effect: core/add-saving-throw
+  inputs:
+    savingThrow: will
+    proficiencyRank: 6

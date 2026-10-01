@@ -1,8 +1,22 @@
 ---
+name: sleep
+rank: 1
+rarity: common
+category: spell
+traits:
+- concentrate
+- incapacitation
+- manipulate
+- mental
+- sleep
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
+range: 30 feet
 area: '5'
-category: spell
 defense:
   basic: false
   counteraction: false
@@ -31,24 +45,7 @@ description: 'Each creature in the area becomes drowsy and might fall asleep. A 
   on a critical failure. They fall Prone and release what they''re holding, and they
   can''t attempt Perception checks to wake up. When the duration ends, the creature
   is sleeping normally instead of automatically waking up.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-mechanicsScope: encounter
-name: sleep
-range: 30 feet
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: o4lRVTwSxnOOn5vl
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- incapacitation
-- manipulate
-- mental
-- sleep
+foundryID: o4lRVTwSxnOOn5vl

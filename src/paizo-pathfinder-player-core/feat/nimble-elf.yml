@@ -1,31 +1,15 @@
 ---
-action: {}
-description: Your muscles are tightly honed. Your Speed increases by 5 feet.
-level: 1
-mechanicsScope: builder
 name: nimble elf
-prerequisites: []
+level: 1
 rarity: common
-rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-speed-modifier
-    revision: 1
-  id: 02a669a3-f384-540d-99d9-a9b334d3d7d3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: amount
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: kCO4r8NOm8E2T3eH
+type: ancestry
 traits:
 - elf
-type: ancestry
+description: Your muscles are tightly honed. Your Speed increases by 5 feet.
+mechanicsScope: builder
+foundryID: kCO4r8NOm8E2T3eH
+rules:
+- id: 02a669a3-f384-540d-99d9-a9b334d3d7d3
+  effect: core/add-speed-modifier
+  inputs:
+    amount: 5

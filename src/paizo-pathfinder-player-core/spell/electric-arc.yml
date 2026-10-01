@@ -1,43 +1,40 @@
 ---
+name: electric arc
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- cantrip
+- concentrate
+- electricity
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: cantrip
+range: 30 feet
+target: 1 or 2 creatures
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 2d4
     kinds:
     - damage
     type: electricity
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
-description: 'An arc of lightning leaps from one target to another. Each target takes
-  2d4 electricity damage with a basic Reflex save.
-
-
-  Heightened (+1) The damage increases by 1d4.'
 heightening:
   damage:
     0: 1d4
   interval: 1
   type: interval
+description: 'An arc of lightning leaps from one target to another. Each target takes
+  2d4 electricity damage with a basic Reflex save.
+
+
+  Heightened (+1) The damage increases by 1d4.'
 mechanicsScope: encounter
-name: electric arc
-range: 30 feet
-rank: 0
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: kBhaPuzLUSwS6vVf
-target: 1 or 2 creatures
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- cantrip
-- concentrate
-- electricity
-- manipulate
+foundryID: kBhaPuzLUSwS6vVf

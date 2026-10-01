@@ -1,5 +1,14 @@
 ---
-action: {}
+name: fascinating performance
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Performance
+  hasSkillProficiency: {skill: performance, proficiency: trained}
 description: 'When you Perform, compare your result to the Will DC of one observer.
   If you succeed, the target is Fascinated by you for 1 round. If the observer is
   in a situation that demands immediate attention, such as combat, you must critically
@@ -10,21 +19,5 @@ description: 'When you Perform, compare your result to the Will DC of one observ
   If you''re an expert in Performance, you can fascinate up to four observers; if
   you''re a master, you can fascinate up to 10 observers; and if you''re legendary,
   you can fascinate any number of observers at the same time.'
-level: 1
 mechanicsScope: encounter
-name: fascinating performance
-prerequisites:
-- trained in Performance
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 7LB00jkh6JaJr3vS
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: performance
+foundryID: 7LB00jkh6JaJr3vS

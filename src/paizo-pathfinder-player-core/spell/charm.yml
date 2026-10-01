@@ -1,11 +1,34 @@
 ---
+name: charm
+rank: 1
+rarity: common
+category: spell
+traits:
+- concentrate
+- emotion
+- incapacitation
+- manipulate
+- mental
+- subtle
+traditions:
+- arcane
+- occult
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: 1 hour
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  levels:
+    8:
+      target: 10 creatures
+  type: fixed
 description: 'To the target, your words are honey and your visage seems bathed in
   a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you
   or your allies recently threatened it or used hostile actions against it.
@@ -38,31 +61,5 @@ description: 'To the target, your words are honey and your visage seems bathed i
 
   Heightened (8th) The duration lasts until the next time you make your daily preparations,
   and you can target up to 10 creatures.'
-duration: 1 hour
-heightening:
-  levels:
-    8:
-      target: 10 creatures
-  type: fixed
 mechanicsScope: encounter
-name: charm
-range: 30 feet
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: vLA0q0WOK2YPuJs6
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- occult
-- primal
-traits:
-- concentrate
-- emotion
-- incapacitation
-- manipulate
-- mental
-- subtle
+foundryID: vLA0q0WOK2YPuJs6

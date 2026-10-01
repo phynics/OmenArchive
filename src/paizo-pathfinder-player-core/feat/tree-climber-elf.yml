@@ -1,41 +1,17 @@
 ---
-action: {}
-description: You've spent much of your life among the treetops and have become an
-  expert at quickly and safely climbing them. You gain a Climb Speed of 10 feet.
-level: 9
-mechanicsScope: builder
 name: tree climber (elf)
-prerequisites: []
+level: 9
 rarity: common
-rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-base-speed
-    revision: 1
-  id: 5b3233fc-3f22-50eb-b9c0-04976fe6a78e
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: climb
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: selector
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 10
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: value
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: qS2VcFLez4PLOpIS
+type: ancestry
 traits:
 - elf
-type: ancestry
+description: You've spent much of your life among the treetops and have become an
+  expert at quickly and safely climbing them. You gain a Climb Speed of 10 feet.
+mechanicsScope: builder
+foundryID: qS2VcFLez4PLOpIS
+rules:
+- id: 5b3233fc-3f22-50eb-b9c0-04976fe6a78e
+  effect: core/add-base-speed
+  inputs:
+    selector: climb
+    value: 10

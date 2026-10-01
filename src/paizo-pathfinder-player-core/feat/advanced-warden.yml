@@ -1,5 +1,17 @@
 ---
-action: {}
+name: advanced warden
+level: 4
+rarity: common
+type: class
+traits:
+- ranger
+prerequisites:
+- text: Initiate Warden
+  hasResourceWithName: initiate warden
+repeatPolicy:
+  duplicateSelectionRules: []
+  instanceLevelGates: []
+  maxCount: null
 description: 'You unlock more powerful primal spells. You gain your choice of one
   warden spell from the advanced warden spells.
 
@@ -10,24 +22,7 @@ description: 'You unlock more powerful primal spells. You gain your choice of on
   Hunter''s Luck
 
   Soothing Mist'
-level: 4
-mechanicsScope: encounter
-name: advanced warden
-prerequisites:
-- Initiate Warden
-rarity: common
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: it2i6OXfGIizokpg
 specialText: You can take this feat multiple times, choosing a different advanced
   warden spell each time.
-traits:
-- ranger
-type: class
-typedPrerequisites:
-- hasResourceWithName: initiate warden
+mechanicsScope: encounter
+foundryID: it2i6OXfGIizokpg

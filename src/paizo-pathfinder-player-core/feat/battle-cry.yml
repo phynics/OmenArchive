@@ -1,23 +1,16 @@
 ---
-action: {}
-description: When you roll initiative, you can yell a mighty battle cry and Demoralize
-  an observed foe as a free action. If you're legendary in Intimidation, you can use
-  a reaction to Demoralize your foe when you critically succeed at an attack roll.
-level: 7
-mechanicsScope: encounter
 name: battle cry
-prerequisites:
-- master in Intimidation
+level: 7
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: ePObIpaJDgDb9CQj
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: intimidation
+prerequisites:
+- text: master in Intimidation
+  hasSkillProficiency: {skill: intimidation, proficiency: master}
+description: When you roll initiative, you can yell a mighty battle cry and Demoralize
+  an observed foe as a free action. If you're legendary in Intimidation, you can use
+  a reaction to Demoralize your foe when you critically succeed at an attack roll.
+mechanicsScope: encounter
+foundryID: ePObIpaJDgDb9CQj

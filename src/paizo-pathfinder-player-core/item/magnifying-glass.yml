@@ -1,11 +1,9 @@
 ---
-description: This quality handheld lens gives you a +1 item bonus to Perception checks
-  to notice minute details of documents, fabric, and the like.
-details:
-  equipment: {}
-level: 3
-mechanicsScope: builder
 name: magnifying glass
+level: 3
+rarity: common
+type: equipment
+traits: []
 physical:
   bulk: '0'
   hardness: 0
@@ -14,61 +12,21 @@ physical:
   quantity: 1
   size: med
   usage: held-in-one-hand
-rarity: common
+details:
+  equipment: {}
+description: This quality handheld lens gives you a +1 item bonus to Perception checks
+  to notice minute details of documents, fabric, and the like.
+mechanicsScope: builder
+foundryID: 5GbC7RTgyAeaOcAI
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 03441575-f809-5777-8a44-f7d54c3b1ba3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 911bcec0-754f-584e-8e5e-f08b3da8630c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - savingThrow:
-                _0: perception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Magnifying Glass: +1 item bonus to Perception checks (minute details).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: minute details
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 5GbC7RTgyAeaOcAI
-traits: []
-type: equipment
+- id: 03441575-f809-5777-8a44-f7d54c3b1ba3
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 911bcec0-754f-584e-8e5e-f08b3da8630c
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    description: 'Magnifying Glass: +1 item bonus to Perception checks (minute details).'
+    numeric: {literal: {amount: 1, applicability: {description: minute details, kind: situational},
+        type: item}}

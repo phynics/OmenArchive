@@ -1,14 +1,31 @@
 ---
+name: nature's bounty
+rank: 4
+rarity: uncommon
+category: focus
+traits:
+- cleric
+- focus
+- manipulate
+- plant
+- vitality
+traditions: []
+time: '1'
 action:
   count: one_action
   requirements: You have a free hand.
-category: focus
 damage:
   0:
     formula: 3d10+12
     kinds:
     - healing
     type: vitality
+heightening:
+  damage:
+    0: '6'
+  interval: 1
+  type: interval
+requirements: You have a free hand.
 description: 'A palm-sized raw fruit or vegetable of your choice appears in your open
   hand. A creature can consume the food with an Interact action to regain 3d10+12
   Hit Points and be nourished as if it had eaten a meal. If uneaten, the food crumbles
@@ -16,25 +33,5 @@ description: 'A palm-sized raw fruit or vegetable of your choice appears in your
 
 
   Heightened (+1) The Hit Points restored increase by 6.'
-heightening:
-  damage:
-    0: '6'
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: nature's bounty
-rank: 4
-rarity: uncommon
-requirements: You have a free hand.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: vSSKyUdrHu86E5Gk
-time: '1'
-traditions: []
-traits:
-- cleric
-- focus
-- manipulate
-- plant
-- vitality
+foundryID: vSSKyUdrHu86E5Gk

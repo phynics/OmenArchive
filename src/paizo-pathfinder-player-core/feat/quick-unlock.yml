@@ -1,21 +1,14 @@
 ---
-action: {}
-description: You can Pick a Lock using 1 action instead of 2.
-level: 7
-mechanicsScope: encounter
 name: quick unlock
-prerequisites:
-- master in Thievery
+level: 7
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 7GmXKrkzmInkFyEr
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: thievery
+prerequisites:
+- text: master in Thievery
+  hasSkillProficiency: {skill: thievery, proficiency: master}
+description: You can Pick a Lock using 1 action instead of 2.
+mechanicsScope: encounter
+foundryID: 7GmXKrkzmInkFyEr

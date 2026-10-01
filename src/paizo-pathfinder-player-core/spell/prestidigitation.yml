@@ -1,7 +1,22 @@
 ---
+name: prestidigitation
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- cantrip
+- concentrate
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: '2'
 action:
   count: two_actions
-category: cantrip
+range: 10 feet
+target: 1 object (cook, lift, or tidy only)
 description: 'The simplest magic does your bidding. You can perform simple magical
   effects for as long as you Sustain the spell. Each time you Sustain the spell, you
   can choose one of four options.
@@ -25,25 +40,7 @@ description: 'The simplest magic does your bidding. You can perform simple magic
   Prestidigitation can''t deal damage or cause adverse conditions. Any actual change
   to an object (beyond what is noted above) persists only as long as you Sustain the
   spell.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-mechanicsScope: encounter
-name: prestidigitation
-range: 10 feet
-rank: 0
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Qw3fnUlaUbnn7ipC
-target: 1 object (cook, lift, or tidy only)
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- cantrip
-- concentrate
-- manipulate
+foundryID: Qw3fnUlaUbnn7ipC

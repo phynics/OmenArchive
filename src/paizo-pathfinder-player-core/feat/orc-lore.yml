@@ -1,5 +1,10 @@
 ---
-action: {}
+name: orc lore
+level: 1
+rarity: common
+type: ancestry
+traits:
+- orc
 description: 'The hold elders taught you your people''s histories, told tales of great
   athletic feats, and shared with you the hardships your ancestors endured so that
   you can pass this wisdom down to future generations. You become trained in Athletics
@@ -8,90 +13,21 @@ description: 'The hold elders taught you your people''s histories, told tales of
   your choice.
 
   You also gain the Additional Lore general feat for Orc Lore.'
-level: 1
 mechanicsScope: builder
-name: orc lore
-prerequisites: []
-rarity: common
+foundryID: 254C4rqrE8APDfCf
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: d6bc6500-74ee-5f6d-81d9-f9ec701be679
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: athletics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 7685350f-b992-5eab-8a24-c122a7c96e41
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: survival
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 43e87335-0489-5071-a6f3-a07b5748cb79
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: d4876e48-6e7e-51f5-828a-efc3589ade76
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 254C4rqrE8APDfCf
-traits:
-- orc
-type: ancestry
+- id: d6bc6500-74ee-5f6d-81d9-f9ec701be679
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: athletics}
+    proficiencyCap: 2
+- id: 7685350f-b992-5eab-8a24-c122a7c96e41
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: survival}
+    proficiencyCap: 2
+- id: 43e87335-0489-5071-a6f3-a07b5748cb79
+  effect: core/add-feat@2
+  inputs:
+    selectionId: d4876e48-6e7e-51f5-828a-efc3589ade76
+    featId: '@feat.additional-lore'

@@ -1,72 +1,38 @@
 ---
-action: {}
-description: Your adaptability manifests in your mastery of a range of useful abilities.
-  You gain a 1st-level general feat. You must meet the feat's prerequisites, but if
-  you select this feat during character creation, you can select the feat later in
-  the process in order to determine which prerequisites you meet.
-level: 1
-mechanicsScope: builder
 name: general training
-prerequisites: []
+level: 1
 rarity: common
+type: ancestry
+traits:
+- human
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-rules:
-- choice:
-    answer:
-      filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: feat
-        - kind: single
-          value:
-            kind: hasExactLevel
-            level: 1
-        - kind: single
-          value:
-            kind: hasTrait
-            trait: systemTrait-general
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    label: General Feat
-    name: $.feat.general-training.feats
-    startLevel: 1
-  id: 56b4f717-2631-5a31-b47b-038e0265a61c
-  key: choice-feat-general-training-feats
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: faee132b-e9f5-5960-9345-e2c92cc54024
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 32a1da1f-27dd-574f-93ee-3d10783758e8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.general-training.feats
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  key: grant-item-1
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: D3SuA5MaKucO1flE
+description: Your adaptability manifests in your mastery of a range of useful abilities.
+  You gain a 1st-level general feat. You must meet the feat's prerequisites, but if
+  you select this feat during character creation, you can select the feat later in
+  the process in order to determine which prerequisites you meet.
 specialText: You can select this feat multiple times, choosing a different feat each
   time.
-traits:
-- human
-type: ancestry
+mechanicsScope: builder
+foundryID: D3SuA5MaKucO1flE
+rules:
+- id: 56b4f717-2631-5a31-b47b-038e0265a61c
+  key: choice-feat-general-training-feats
+  choice:
+    name: $.feat.general-training.feats
+    label: General Feat
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {level: 1}
+        - {trait: systemTrait-general}
+      type: core/feat-id
+- id: faee132b-e9f5-5960-9345-e2c92cc54024
+  key: grant-item-1
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 32a1da1f-27dd-574f-93ee-3d10783758e8
+    featId: {choice: $.feat.general-training.feats}

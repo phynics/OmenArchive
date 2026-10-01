@@ -1,5 +1,8 @@
 ---
-action: {}
+name: lesson of snow
+level: 6
+traits:
+- witch
 description: You gain the Personal Blizzard hex, and your familiar learns Wall of
   Wind.
 grantedSpells:
@@ -7,105 +10,22 @@ grantedSpells:
   spell: omen://spell/personal-blizzard?source=paizo-pathfinder-player-core
 - grant: known
   spell: omen://spell/wall-of-wind?source=paizo-pathfinder-player-core
-level: 6
 mechanicsScope: builder
-name: lesson of snow
+foundryID: rECRfbkVwHuG06vO
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: a5afc68a-7dc9-5ea6-b21f-aa3bd64529df
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e98c1e2f-5c09-5f42-b816-d2298105486e
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3c0aae10-dcd2-59d6-a494-c4e328897c08
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 1fe1a374-1f13-5085-95fc-e944af753403
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: ffecb3da-35cd-5dc4-bcdf-f1249f62c27c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8286cca4-bd96-5d93-b3e2-6c5cb9f4c4e6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6a874345-d90a-5419-affe-f7db9f1e94eb
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: rECRfbkVwHuG06vO
-traits:
-- witch
+- id: a5afc68a-7dc9-5ea6-b21f-aa3bd64529df
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: e98c1e2f-5c09-5f42-b816-d2298105486e
+    spellId: '@spell.personal-blizzard'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 1fe1a374-1f13-5085-95fc-e944af753403
+  effect: spellcasting/add-focus-point
+- id: ffecb3da-35cd-5dc4-bcdf-f1249f62c27c
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 8286cca4-bd96-5d93-b3e2-6c5cb9f4c4e6
+    spellId: '@spell.wall-of-wind'

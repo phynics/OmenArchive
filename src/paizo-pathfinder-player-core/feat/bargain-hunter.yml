@@ -1,5 +1,14 @@
 ---
-action: {}
+name: bargain hunter
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Diplomacy
+  hasSkillProficiency: {skill: diplomacy, proficiency: trained}
 description: You can Earn Income using Diplomacy, spending your days hunting for bargains
   and reselling at a profit. You can also spend time specifically sniffing out a great
   bargain on an item; this works as if you were using Earn Income with Diplomacy,
@@ -7,21 +16,5 @@ description: You can Earn Income using Diplomacy, spending your days hunting for
   money you would have gained, gaining the item for free if your earned income equals
   or exceeds its cost. Finally, if you select Bargain Hunter during character creation
   at 1st level, you start play with an additional 2 gp.
-level: 1
 mechanicsScope: encounter
-name: bargain hunter
-prerequisites:
-- trained in Diplomacy
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 5nc5ridFBfYpn2Om
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: diplomacy
+foundryID: 5nc5ridFBfYpn2Om

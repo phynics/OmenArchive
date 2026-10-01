@@ -1,5 +1,15 @@
 ---
-action: {}
+name: ranger dedication
+level: 2
+rarity: common
+type: archetype
+traits:
+- archetype
+- dedication
+- multiclass
+prerequisites:
+- text: Dexterity +2
+  hasAttributeModifier: {attribute: dex, modifier: 2}
 description: 'You become trained in Survival; if you were already trained in Survival,
   you instead become trained in another skill of your choice. You become trained in
   ranger class DC. If you gain a warden spell through this archetype, you become trained
@@ -7,26 +17,9 @@ description: 'You become trained in Survival; if you were already trained in Sur
   the Hunt Prey action.
 
   Ranger'
-level: 2
 mechanicsScope: mixed
-name: ranger dedication
-prerequisites:
-- Dexterity +2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: R00qiDE5pBctgtyU
-traits:
-- archetype
-- dedication
-- multiclass
-type: archetype
-typedPrerequisites:
-- hasAttributeModifier:
-    attribute: dex
-    modifier: 2
 unsupportedReason: 'ActiveEffectLike at position 5 has an unsupported conditional
   builder payload. Resource: omen://feat/ranger-dedication?source=paizo-pathfinder-player-core.
   Foundry keys: [GrantItem, RollOption, ActiveEffectLike, ActiveEffectLike, ChoiceSet,
   ActiveEffectLike].'
+foundryID: R00qiDE5pBctgtyU

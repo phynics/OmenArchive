@@ -1,4 +1,18 @@
 ---
+name: harmonize
+level: 6
+rarity: common
+type: class
+traits:
+- bard
+- concentrate
+- manipulate
+- spellshape
+prerequisites:
+- text: maestro muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 action:
   count: one_action
 description: You can perform multiple compositions simultaneously, typically by performing
@@ -9,26 +23,5 @@ description: You can perform multiple compositions simultaneously, typically by 
   and you can cast another composition on the same turn as a harmonized one. Casting
   another harmonized composition ends any harmonized composition you already have
   in effect.
-level: 6
 mechanicsScope: encounter
-name: harmonize
-prerequisites:
-- maestro muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 21YWBdoXGmj60vdI
-traits:
-- bard
-- concentrate
-- manipulate
-- spellshape
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: e3ea2e9a-ac76-5a96-9d90-d127c118411b
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: 21YWBdoXGmj60vdI

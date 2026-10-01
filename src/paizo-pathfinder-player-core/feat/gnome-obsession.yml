@@ -1,67 +1,24 @@
 ---
-action: {}
+name: gnome obsession
+level: 1
+rarity: common
+type: ancestry
+traits:
+- gnome
 description: You might have a flighty nature, but when a topic captures your attention,
   you dive into it headfirst. You gain the Additional Lore feat and the Assurance
   feat for the chosen Lore. As gnome obsessions can come and go quickly, you can retrain
   Gnome Obsession to a different Lore subcategory in 1 day of downtime.
-level: 1
 mechanicsScope: builder
-name: gnome obsession
-prerequisites: []
-rarity: common
+foundryID: mxhGH4FVYXJwb0BC
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: e742eefd-4bcd-5455-963a-8b94d272ac73
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e3911cdc-2cf4-5df6-994b-aeeb52538932
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: d794a0e3-7139-5242-9271-bff626ea90fa
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2182bf09-e03b-5b49-9a3f-87c447b4f42b
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1f53b5e0-164a-5bfe-8380-e480d8a1f009
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: mxhGH4FVYXJwb0BC
-traits:
-- gnome
-type: ancestry
+- id: e742eefd-4bcd-5455-963a-8b94d272ac73
+  effect: core/add-feat@2
+  inputs:
+    selectionId: e3911cdc-2cf4-5df6-994b-aeeb52538932
+    featId: '@feat.additional-lore'
+- id: d794a0e3-7139-5242-9271-bff626ea90fa
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 2182bf09-e03b-5b49-9a3f-87c447b4f42b
+    featId: '@feat.assurance'

@@ -1,176 +1,54 @@
 ---
-action: {}
-description: You become trained in the skill of your choice.
-level: 1
-mechanicsScope: builder
 name: skill training
-prerequisites:
-- Intelligence +1
+level: 1
 rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: Intelligence +1
+  hasAttributeModifier: {attribute: int, modifier: 1}
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+description: You become trained in the skill of your choice.
+specialText: You can select this feat multiple times, choosing a new skill to become
+  trained in each time.
+mechanicsScope: builder
+foundryID: P6icK2DbRoZ3H6kc
 rules:
-- choice:
-    answer:
-      cases:
-      - key: acrobatics
-        label: Acrobatics
-        value:
-          payload:
-            kind: acrobatics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: arcana
-        label: Arcana
-        value:
-          payload:
-            kind: arcana
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: athletics
-        label: Athletics
-        value:
-          payload:
-            kind: athletics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: crafting
-        label: Crafting
-        value:
-          payload:
-            kind: crafting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: deception
-        label: Deception
-        value:
-          payload:
-            kind: deception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: diplomacy
-        label: Diplomacy
-        value:
-          payload:
-            kind: diplomacy
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: intimidation
-        label: Intimidation
-        value:
-          payload:
-            kind: intimidation
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: medicine
-        label: Medicine
-        value:
-          payload:
-            kind: medicine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: nature
-        label: Nature
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: occultism
-        label: Occultism
-        value:
-          payload:
-            kind: occultism
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: performance
-        label: Performance
-        value:
-          payload:
-            kind: performance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: religion
-        label: Religion
-        value:
-          payload:
-            kind: religion
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: society
-        label: Society
-        value:
-          payload:
-            kind: society
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: stealth
-        label: Stealth
-        value:
-          payload:
-            kind: stealth
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: survival
-        label: Survival
-        value:
-          payload:
-            kind: survival
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: thievery
-        label: Thievery
-        value:
-          payload:
-            kind: thievery
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      kind: local
+- id: b0f974e9-59a8-5f99-9a38-c2d61fb5caf0
+  key: choice-feat-skill-training-skills
+  choice:
+    name: $.feat.skill-training.skills
     label: Skill
     legacySelections:
     - inputName: skill
       lookupName: skill
       ruleID: e7fee549-73f4-58ca-a96c-3729ea0795c7
       valueTypeID: org.openomen.pf2e.core/value/skill
-    name: $.feat.skill-training.skills
-    startLevel: 1
-  id: b0f974e9-59a8-5f99-9a38-c2d61fb5caf0
-  key: choice-feat-skill-training-skills
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: e7fee549-73f4-58ca-a96c-3729ea0795c7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.skill-training.skills
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: P6icK2DbRoZ3H6kc
-specialText: You can select this feat multiple times, choosing a new skill to become
-  trained in each time.
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasAttributeModifier:
-    attribute: int
-    modifier: 1
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: {kind: acrobatics}}
+    - {key: arcana, value: {kind: arcana}}
+    - {key: athletics, value: {kind: athletics}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: deception, value: {kind: deception}}
+    - {key: diplomacy, value: {kind: diplomacy}}
+    - {key: intimidation, value: {kind: intimidation}}
+    - {key: medicine, value: {kind: medicine}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: performance, value: {kind: performance}}
+    - {key: religion, value: {kind: religion}}
+    - {key: society, value: {kind: society}}
+    - {key: stealth, value: {kind: stealth}}
+    - {key: survival, value: {kind: survival}}
+    - {key: thievery, value: {kind: thievery}}
+- id: e7fee549-73f4-58ca-a96c-3729ea0795c7
+  effect: core/add-skill-increase
+  inputs:
+    skill: {choice: $.feat.skill-training.skills}
+    proficiencyCap: 2

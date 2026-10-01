@@ -1,110 +1,30 @@
 ---
-action: {}
+name: lesson of death
+level: 10
+traits:
+- witch
 description: You gain the Curse of Death hex, and your familiar learns Raise Dead.
 grantedSpells:
 - grant: focus
   spell: omen://spell/curse-of-death?source=paizo-pathfinder-player-core
 - grant: known
   spell: omen://spell/raise-dead?source=paizo-pathfinder-player-core
-level: 10
 mechanicsScope: builder
-name: lesson of death
+foundryID: wRHeY7tCN6HFFF3a
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 3bea0b7c-f10f-5cdc-b494-5b855f6a2f2f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f018398e-f90a-5e94-bc75-fcc218d7530d
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b640ba17-3646-5371-aaa9-9bc0660fc61d
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 6703051f-daca-5d45-829e-2952c6efdac2
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: f84df877-0cda-589f-af83-5c459d912784
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f41bc630-5536-5368-9204-a62e144798c9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 33aa3602-6eb8-5922-b1d0-f49066ab66ca
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wRHeY7tCN6HFFF3a
-traits:
-- witch
+- id: 3bea0b7c-f10f-5cdc-b494-5b855f6a2f2f
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: f018398e-f90a-5e94-bc75-fcc218d7530d
+    spellId: '@spell.curse-of-death'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 6703051f-daca-5d45-829e-2952c6efdac2
+  effect: spellcasting/add-focus-point
+- id: f84df877-0cda-589f-af83-5c459d912784
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: f41bc630-5536-5368-9204-a62e144798c9
+    spellId: '@spell.raise-dead'

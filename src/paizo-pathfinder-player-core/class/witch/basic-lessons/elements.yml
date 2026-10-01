@@ -1,5 +1,8 @@
 ---
-action: {}
+name: lesson of elements
+level: 2
+traits:
+- witch
 description: You gain the Elemental Betrayal hex. Your familiar learns your choice
   of Breathe Fire, Air Bubble, Hydraulic Push, or Pummeling Rubble.
 grantedSpells:
@@ -13,126 +16,32 @@ grantedSpells:
   spell: omen://spell/hydraulic-push?source=paizo-pathfinder-player-core
 - grant: known-choice
   spell: omen://spell/pummeling-rubble?source=paizo-pathfinder-player-core
-level: 2
 mechanicsScope: builder
-name: lesson of elements
+foundryID: FuOHRoEU8nHOXZnk
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 10942a6d-a47e-5cfa-88b0-a2c9764b3a75
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 78c925d7-0583-585e-b6ef-aa64c0e577a2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ddc6356e-d4c6-5cb0-8785-0509bad9a4c8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 4a5e5e03-02fb-5d7d-a3d6-99756f975ffd
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: d5357d0a-e8bd-54e1-b7ed-e4ed45993c7b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: fec03b01-1489-5b57-a922-13b554f7b4ad
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 5679243d-a1d1-5993-8d2b-1efd210c602a
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 207c478b-d317-560c-86da-4718de72a4e0
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 500be7dd-b647-5248-b0c8-cf9510fb19ab
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 0c4f5187-fce0-57d2-b12f-c93f1d65a993
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: FuOHRoEU8nHOXZnk
-traits:
-- witch
+- id: 10942a6d-a47e-5cfa-88b0-a2c9764b3a75
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: 78c925d7-0583-585e-b6ef-aa64c0e577a2
+    spellId: '@spell.elemental-betrayal'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 4a5e5e03-02fb-5d7d-a3d6-99756f975ffd
+  effect: spellcasting/add-focus-point
+- id: d5357d0a-e8bd-54e1-b7ed-e4ed45993c7b
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: fec03b01-1489-5b57-a922-13b554f7b4ad
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            any:
+            - {id: '@spell.breathe-fire'}
+            - {id: '@spell.air-bubble'}
+            - {id: '@spell.hydraulic-push'}
+            - {id: '@spell.pummeling-rubble'}

@@ -1,23 +1,16 @@
 ---
-action: {}
-description: You can Demoralize with a mere glare. When you do, Demoralize loses the
-  auditory trait and gains the visual trait, and you don't take a penalty if the creature
-  doesn't understand your language.
-level: 1
-mechanicsScope: encounter
 name: intimidating glare
-prerequisites:
-- trained in Intimidation
+level: 1
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xQMz6eDgX75WX2ce
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: intimidation
+prerequisites:
+- text: trained in Intimidation
+  hasSkillProficiency: {skill: intimidation, proficiency: trained}
+description: You can Demoralize with a mere glare. When you do, Demoralize loses the
+  auditory trait and gains the visual trait, and you don't take a penalty if the creature
+  doesn't understand your language.
+mechanicsScope: encounter
+foundryID: xQMz6eDgX75WX2ce

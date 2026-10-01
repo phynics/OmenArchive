@@ -1,13 +1,30 @@
 ---
+name: breath of life
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- healing
+- vitality
+traditions:
+- divine
+time: reaction
 action:
   count: reaction
-category: spell
+range: 60 feet
+target: the triggering creature
 damage:
   0:
     formula: 5d8
     kinds:
     - healing
     type: untyped
+heightening:
+  damage:
+    0: 1d8
+  interval: 1
+  type: interval
 description: 'Trigger A living creature within range would die.
 
 
@@ -18,25 +35,5 @@ description: 'Trigger A living creature within range would die.
 
 
   Heightened (+2) The healing increases by 1d8.'
-heightening:
-  damage:
-    0: 1d8
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: breath of life
-range: 60 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Hnc7eGi7vyZenAIm
-target: the triggering creature
-time: reaction
-traditions:
-- divine
-traits:
-- concentrate
-- healing
-- vitality
+foundryID: Hnc7eGi7vyZenAIm

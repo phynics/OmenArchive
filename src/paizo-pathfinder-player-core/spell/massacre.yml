@@ -1,18 +1,33 @@
 ---
+name: massacre
+rank: 9
+rarity: common
+category: spell
+traits:
+- concentrate
+- death
+- manipulate
+- void
+traditions:
+- arcane
+- divine
+- primal
+time: '2'
 action:
   count: two_actions
 area: '60'
-category: spell
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 9d6
     kinds:
     - damage
     type: void
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
+heightening:
+  type: fixed
 description: 'You unleash a wave of death to snuff out the life force of those in
   its path. Each living creature of 17th level or lower in the line must attempt a
   Fortitude save. If the damage from massacre reduces a creature to 0 Hit Points,
@@ -36,27 +51,9 @@ description: 'You unleash a wave of death to snuff out the life force of those i
 
   Heightened (10th) The spell can affect living creatures up to 19th level. Increase
   the damage to 10d6 on a success, and to 115 on a failure.'
-diagnostics:
-- Foundry area type is not represented when area details are absent
-heightening:
-  type: fixed
 mechanicsScope: mixed
-name: massacre
-rank: 9
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 10VcmSYNBrvBphu1
-time: '2'
-traditions:
-- arcane
-- divine
-- primal
-traits:
-- concentrate
-- death
-- manipulate
-- void
 unsupportedReason: 'fixed heightening fields are not represented by CharacterSpell:
   damage'
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: 10VcmSYNBrvBphu1

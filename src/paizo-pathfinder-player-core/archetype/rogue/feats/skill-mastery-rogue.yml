@@ -1,128 +1,59 @@
 ---
-action: {}
-description: Increase your proficiency rank in one of your skills from expert to master
-  and in another of your skills from trained to expert. You gain a skill feat associated
-  with one of the skills you chose; you must meet all its prerequisites.
-level: 8
-mechanicsScope: mixed
 name: skill mastery (rogue)
-prerequisites:
-- Rogue Dedication
-- trained in at least one skill and expert in at least one skill
+level: 8
 rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Rogue Dedication
+  hasResourceWithName: rogue dedication
+- text: trained in at least one skill and expert in at least one skill
+  allOf:
+  - anyOf:
+    - hasSkillProficiency: {skill: acrobatics, proficiency: trained}
+    - hasSkillProficiency: {skill: arcana, proficiency: trained}
+    - hasSkillProficiency: {skill: athletics, proficiency: trained}
+    - hasSkillProficiency: {skill: crafting, proficiency: trained}
+    - hasSkillProficiency: {skill: deception, proficiency: trained}
+    - hasSkillProficiency: {skill: diplomacy, proficiency: trained}
+    - hasSkillProficiency: {skill: intimidation, proficiency: trained}
+    - hasSkillProficiency: {skill: medicine, proficiency: trained}
+    - hasSkillProficiency: {skill: nature, proficiency: trained}
+    - hasSkillProficiency: {skill: occultism, proficiency: trained}
+    - hasSkillProficiency: {skill: performance, proficiency: trained}
+    - hasSkillProficiency: {skill: religion, proficiency: trained}
+    - hasSkillProficiency: {skill: society, proficiency: trained}
+    - hasSkillProficiency: {skill: stealth, proficiency: trained}
+    - hasSkillProficiency: {skill: survival, proficiency: trained}
+    - hasSkillProficiency: {skill: thievery, proficiency: trained}
+  - anyOf:
+    - hasSkillProficiency: {skill: acrobatics, proficiency: expert}
+    - hasSkillProficiency: {skill: arcana, proficiency: expert}
+    - hasSkillProficiency: {skill: athletics, proficiency: expert}
+    - hasSkillProficiency: {skill: crafting, proficiency: expert}
+    - hasSkillProficiency: {skill: deception, proficiency: expert}
+    - hasSkillProficiency: {skill: diplomacy, proficiency: expert}
+    - hasSkillProficiency: {skill: intimidation, proficiency: expert}
+    - hasSkillProficiency: {skill: medicine, proficiency: expert}
+    - hasSkillProficiency: {skill: nature, proficiency: expert}
+    - hasSkillProficiency: {skill: occultism, proficiency: expert}
+    - hasSkillProficiency: {skill: performance, proficiency: expert}
+    - hasSkillProficiency: {skill: religion, proficiency: expert}
+    - hasSkillProficiency: {skill: society, proficiency: expert}
+    - hasSkillProficiency: {skill: stealth, proficiency: expert}
+    - hasSkillProficiency: {skill: survival, proficiency: expert}
+    - hasSkillProficiency: {skill: thievery, proficiency: expert}
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: 5
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: c9rhGmKft1BVT4JO
+description: Increase your proficiency rank in one of your skills from expert to master
+  and in another of your skills from trained to expert. You gain a skill feat associated
+  with one of the skills you chose; you must meet all its prerequisites.
 specialText: You can select this feat up to five times.
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: rogue dedication
-- allOf:
-  - anyOf:
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: acrobatics
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: arcana
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: athletics
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: crafting
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: deception
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: diplomacy
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: intimidation
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: medicine
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: nature
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: occultism
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: performance
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: religion
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: society
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: stealth
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: survival
-    - hasSkillProficiency:
-        proficiency: trained
-        skill: thievery
-  - anyOf:
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: acrobatics
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: arcana
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: athletics
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: crafting
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: deception
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: diplomacy
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: intimidation
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: medicine
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: nature
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: occultism
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: performance
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: religion
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: society
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: stealth
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: survival
-    - hasSkillProficiency:
-        proficiency: expert
-        skill: thievery
+mechanicsScope: mixed
 unsupportedReason: 'ChoiceSet at position 4 has no supported typed options. Resource:
   omen://feat/skill-mastery-rogue?source=paizo-pathfinder-player-core. Foundry keys:
   [ChoiceSet, ChoiceSet, ActiveEffectLike, ActiveEffectLike, ChoiceSet, GrantItem].'
+foundryID: c9rhGmKft1BVT4JO

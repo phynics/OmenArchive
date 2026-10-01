@@ -1,8 +1,29 @@
 ---
+name: invoke spirits
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- emotion
+- fear
+- manipulate
+- mental
+- void
+traditions:
+- arcane
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
+range: 120 feet
 area: '10'
-category: spell
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: will
 damage:
   0:
     formula: 2d4
@@ -14,10 +35,12 @@ damage:
     kinds:
     - damage
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: 1d4
+    1: 1d4
+  interval: 2
+  type: interval
 description: 'Ragged apparitions of the dead rise to stalk the living. They deal 2d4
   mental damage and 2d4 void damage to each living creature in the area, with a basic
   Will save. Additionally, creatures that critically fail the save are Frightened
@@ -31,34 +54,8 @@ description: 'Ragged apparitions of the dead rise to stalk the living. They deal
 
 
   Heightened (+2) The mental damage and void damage each increase by 1d4.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d4
-    1: 1d4
-  interval: 2
-  type: interval
-mechanicsScope: encounter
-name: invoke spirits
-range: 120 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: hghGRzOSzEl4UXdS
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- concentrate
-- emotion
-- fear
-- manipulate
-- mental
-- void
+foundryID: hghGRzOSzEl4UXdS

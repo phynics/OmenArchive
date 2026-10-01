@@ -1,44 +1,41 @@
 ---
+name: fireball
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- fire
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
+range: 500 feet
 area: '20'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 6d6
     kinds:
     - damage
     type: fire
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
-description: 'A roaring blast of fire detonates at a spot you designate, dealing 6d6
-  fire damage.
-
-
-  Heightened (+1) The damage increases by 2d6.'
-diagnostics:
-- Foundry area type is not represented when area details are absent
 heightening:
   damage:
     0: 2d6
   interval: 1
   type: interval
+description: 'A roaring blast of fire detonates at a spot you designate, dealing 6d6
+  fire damage.
+
+
+  Heightened (+1) The damage increases by 2d6.'
 mechanicsScope: encounter
-name: fireball
-range: 500 feet
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: sxQZ6yqTn0czJxVd
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- fire
-- manipulate
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: sxQZ6yqTn0czJxVd

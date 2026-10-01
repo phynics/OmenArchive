@@ -1,4 +1,18 @@
 ---
+name: snowdrift spell
+level: 4
+rarity: common
+type: class
+traits:
+- cold
+- druid
+- manipulate
+- spellshape
+prerequisites:
+- text: storm order
+  hasChoice:
+    name: $.druid.order
+    equals: {type: core/feature-id, value: '@class.druid.orders.storm'}
 action:
   count: one_action
 description: The howling wind and precipitation of your magic turn to thick snow.
@@ -8,26 +22,5 @@ description: The howling wind and precipitation of your magic turn to thick snow
   ankle-deep snow. Those squares are difficult terrain until the beginning of your
   next turn. A creature can Interact to clear a square of snow, and the snow in a
   square melts if that square is exposed to a fire effect.
-level: 4
 mechanicsScope: encounter
-name: snowdrift spell
-prerequisites:
-- storm order
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: ds9dNclMMiDBKRtm
-traits:
-- cold
-- druid
-- manipulate
-- spellshape
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 23f5173a-92ba-5901-a0d2-c3533fbcefad
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.druid.order
+foundryID: ds9dNclMMiDBKRtm

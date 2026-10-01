@@ -1,5 +1,17 @@
 ---
-action: {}
+name: peerless warden
+level: 10
+rarity: common
+type: class
+traits:
+- ranger
+prerequisites:
+- text: Initiate Warden
+  hasResourceWithName: initiate warden
+repeatPolicy:
+  duplicateSelectionRules: []
+  instanceLevelGates: []
+  maxCount: null
 description: 'Your mastery of primal magic has given you access to the greatest secrets
   of warden magic. You gain your choice of one warden spell from the peerless warden
   spells.
@@ -7,24 +19,7 @@ description: 'Your mastery of primal magic has given you access to the greatest 
   Hunter''s Vision
 
   Terrain Transposition'
-level: 10
-mechanicsScope: encounter
-name: peerless warden
-prerequisites:
-- Initiate Warden
-rarity: common
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: W7aT1UJOVFkYdQti
 specialText: You can take this feat multiple times, choosing a different peerless
   warden spell each time.
-traits:
-- ranger
-type: class
-typedPrerequisites:
-- hasResourceWithName: initiate warden
+mechanicsScope: encounter
+foundryID: W7aT1UJOVFkYdQti

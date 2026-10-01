@@ -1,39 +1,16 @@
 ---
-action: {}
+name: agile mind
+level: 17
+traits:
+- rogue
 description: You play mental games and employ cognitive tricks to throw off mind-altering
   effects. Your proficiency rank for Will saves increases to master. When you roll
   a success at a Will save, you get a critical success instead.
-level: 17
 mechanicsScope: builder
-name: agile mind
+foundryID: xmZ7oeTDcQVXegUP
 rules:
 - id: 93f05571-40da-5dfe-a189-deff2dbfb0d7
-  effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-saving-throw
-    revision: 1
-  inputRecipes:
-  - inputName: savingThrow
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-          revision: 1
-          payload: will
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-          revision: 1
-          payload: 6
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xmZ7oeTDcQVXegUP
-traits:
-- rogue
+  effect: core/add-saving-throw
+  inputs:
+    savingThrow: will
+    proficiencyRank: 6

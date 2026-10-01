@@ -1,7 +1,20 @@
 ---
+name: duplicate foe
+rank: 7
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- occult
+time: '3'
 action:
   count: three_actions
-category: spell
+range: 30 feet
+target: 1 enemy of level 15 or lower
+duration: 1 minute
 defense:
   basic: false
   counteraction: false
@@ -43,23 +56,7 @@ description: 'You create a temporary duplicate of an enemy to fight on your beha
 
   Heightened (+1) The level of creature you can target increases by 2. The duplicate
   has 10 more HP.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-mechanicsScope: encounter
-name: duplicate foe
-range: 30 feet
-rank: 7
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 73rToy0v5Ra9NvL6
-target: 1 enemy of level 15 or lower
-time: '3'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- manipulate
+foundryID: 73rToy0v5Ra9NvL6

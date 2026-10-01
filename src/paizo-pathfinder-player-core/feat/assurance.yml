@@ -1,217 +1,73 @@
 ---
-action: {}
-description: Even in the worst circumstances, you can perform basic tasks. Choose
-  a skill you're trained in. You can forgo rolling a skill check for that skill to
-  instead receive a result of 10 + your proficiency bonus (do not apply any other
-  bonuses, penalties, or modifiers).
-level: 1
-mechanicsScope: builder
 name: assurance
-prerequisites:
-- trained in at least one skill
+level: 1
 rarity: common
+type: skill
+traits:
+- fortune
+- general
+- skill
+prerequisites:
+- text: trained in at least one skill
+  anyOf:
+  - hasSkillProficiency: {skill: acrobatics, proficiency: trained}
+  - hasSkillProficiency: {skill: arcana, proficiency: trained}
+  - hasSkillProficiency: {skill: athletics, proficiency: trained}
+  - hasSkillProficiency: {skill: crafting, proficiency: trained}
+  - hasSkillProficiency: {skill: deception, proficiency: trained}
+  - hasSkillProficiency: {skill: diplomacy, proficiency: trained}
+  - hasSkillProficiency: {skill: intimidation, proficiency: trained}
+  - hasSkillProficiency: {skill: medicine, proficiency: trained}
+  - hasSkillProficiency: {skill: nature, proficiency: trained}
+  - hasSkillProficiency: {skill: occultism, proficiency: trained}
+  - hasSkillProficiency: {skill: performance, proficiency: trained}
+  - hasSkillProficiency: {skill: religion, proficiency: trained}
+  - hasSkillProficiency: {skill: society, proficiency: trained}
+  - hasSkillProficiency: {skill: stealth, proficiency: trained}
+  - hasSkillProficiency: {skill: survival, proficiency: trained}
+  - hasSkillProficiency: {skill: thievery, proficiency: trained}
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+description: Even in the worst circumstances, you can perform basic tasks. Choose
+  a skill you're trained in. You can forgo rolling a skill check for that skill to
+  instead receive a result of 10 + your proficiency bonus (do not apply any other
+  bonuses, penalties, or modifiers).
+specialText: You can select this feat multiple times. Each time, choose a different
+  skill and gain the benefits for that skill.
+mechanicsScope: builder
+foundryID: W6Gl9ePmItfDHji0
 rules:
-- choice:
-    answer:
-      cases:
-      - key: acrobatics
-        label: Acrobatics
-        value:
-          payload:
-            kind: acrobatics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: arcana
-        label: Arcana
-        value:
-          payload:
-            kind: arcana
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: athletics
-        label: Athletics
-        value:
-          payload:
-            kind: athletics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: crafting
-        label: Crafting
-        value:
-          payload:
-            kind: crafting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: deception
-        label: Deception
-        value:
-          payload:
-            kind: deception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: diplomacy
-        label: Diplomacy
-        value:
-          payload:
-            kind: diplomacy
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: intimidation
-        label: Intimidation
-        value:
-          payload:
-            kind: intimidation
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: medicine
-        label: Medicine
-        value:
-          payload:
-            kind: medicine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: nature
-        label: Nature
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: occultism
-        label: Occultism
-        value:
-          payload:
-            kind: occultism
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: performance
-        label: Performance
-        value:
-          payload:
-            kind: performance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: religion
-        label: Religion
-        value:
-          payload:
-            kind: religion
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: society
-        label: Society
-        value:
-          payload:
-            kind: society
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: stealth
-        label: Stealth
-        value:
-          payload:
-            kind: stealth
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: survival
-        label: Survival
-        value:
-          payload:
-            kind: survival
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: thievery
-        label: Thievery
-        value:
-          payload:
-            kind: thievery
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      kind: local
+- id: d1b27eff-6287-5e9c-9685-7dc872e04a05
+  key: choice-feat-assurance-skills
+  choice:
+    name: $.feat.assurance.skills
     label: Skill
     legacySelections:
     - inputName: skill
       lookupName: assurance-skill
       ruleID: 94c764f5-2f26-59a6-a1f4-49f2544a07ee
       valueTypeID: org.openomen.pf2e.core/value/skill
-    name: $.feat.assurance.skills
-    startLevel: 1
-  id: d1b27eff-6287-5e9c-9685-7dc872e04a05
-  key: choice-feat-assurance-skills
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-assurance
-    revision: 1
-  id: 94c764f5-2f26-59a6-a1f4-49f2544a07ee
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.assurance.skills
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: W6Gl9ePmItfDHji0
-specialText: You can select this feat multiple times. Each time, choose a different
-  skill and gain the benefits for that skill.
-traits:
-- fortune
-- general
-- skill
-type: skill
-typedPrerequisites:
-- anyOf:
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: acrobatics
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: arcana
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: athletics
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: crafting
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: deception
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: diplomacy
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: intimidation
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: medicine
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: nature
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: occultism
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: performance
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: religion
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: society
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: stealth
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: survival
-  - hasSkillProficiency:
-      proficiency: trained
-      skill: thievery
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: {kind: acrobatics}}
+    - {key: arcana, value: {kind: arcana}}
+    - {key: athletics, value: {kind: athletics}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: deception, value: {kind: deception}}
+    - {key: diplomacy, value: {kind: diplomacy}}
+    - {key: intimidation, value: {kind: intimidation}}
+    - {key: medicine, value: {kind: medicine}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: performance, value: {kind: performance}}
+    - {key: religion, value: {kind: religion}}
+    - {key: society, value: {kind: society}}
+    - {key: stealth, value: {kind: stealth}}
+    - {key: survival, value: {kind: survival}}
+    - {key: thievery, value: {kind: thievery}}
+- id: 94c764f5-2f26-59a6-a1f4-49f2544a07ee
+  effect: core/add-assurance
+  inputs:
+    skill: {choice: $.feat.assurance.skills}

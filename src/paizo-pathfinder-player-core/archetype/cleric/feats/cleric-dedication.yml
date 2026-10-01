@@ -1,5 +1,15 @@
 ---
-action: {}
+name: cleric dedication
+level: 2
+rarity: common
+type: archetype
+traits:
+- archetype
+- dedication
+- multiclass
+prerequisites:
+- text: Wisdom +2
+  hasAttributeModifier: {attribute: wis, modifier: 2}
 description: 'You cast spells like a cleric. You gain the Cast a Spell activity. You
   can prepare two common cantrips each day from the divine spell list or any other
   divine cantrips you have access to. You''re trained in the spell attack modifier
@@ -12,25 +22,8 @@ description: 'You cast spells like a cleric. You gain the Cast a Spell activity.
   choice of deity.
 
   Cleric'
-level: 2
 mechanicsScope: mixed
-name: cleric dedication
-prerequisites:
-- Wisdom +2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: smCDaPlpRDA47xjK
-traits:
-- archetype
-- dedication
-- multiclass
-type: archetype
-typedPrerequisites:
-- hasAttributeModifier:
-    attribute: wis
-    modifier: 2
 unsupportedReason: 'Selectable class feature reference at position 0 did not resolve
   canonically. Resource: omen://feat/cleric-dedication?source=paizo-pathfinder-player-core.
   Foundry keys: [GrantItem, ActiveEffectLike].'
+foundryID: smCDaPlpRDA47xjK

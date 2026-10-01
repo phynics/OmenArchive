@@ -1,13 +1,34 @@
 ---
+name: spiritual armament
+rank: 2
+rarity: common
+category: spell
+traits:
+- attack
+- concentrate
+- manipulate
+- sanctified
+- spirit
+traditions:
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: 1 creature
+duration: 1 minute
 damage:
   0Uok2pip94aNbBFd:
     formula: 2d8
     kinds:
     - damage
     type: untyped
+heightening:
+  damage:
+    0Uok2pip94aNbBFd: 1d8
+  interval: 2
+  type: interval
 description: 'You create a ghostly, magical echo of one weapon you''re wielding or
   wearing and fling it. Attempt a spell attack roll against the target''s AC, dealing
   2d8 damage on a hit (or double damage on a critical hit). The damage type is the
@@ -20,32 +41,8 @@ description: 'You create a ghostly, magical echo of one weapon you''re wielding 
 
 
   Heightened (+2) The damage increases by 1d8.'
+mechanicsScope: mixed
+unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0Uok2pip94aNbBFd: 1d8
-  interval: 2
-  type: interval
-mechanicsScope: mixed
-name: spiritual armament
-range: 120 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: WPu3UE3kTXSLqO40
-target: 1 creature
-time: '2'
-traditions:
-- divine
-- occult
-traits:
-- attack
-- concentrate
-- manipulate
-- sanctified
-- spirit
-unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
+foundryID: WPu3UE3kTXSLqO40

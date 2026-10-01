@@ -1,5 +1,15 @@
 ---
-action: {}
+name: clever counterspell
+level: 12
+rarity: common
+type: class
+traits:
+- wizard
+prerequisites:
+- text: Counterspell
+  hasFeatWithName: counterspell (prepared)
+- text: Quick Recognition
+  hasResourceWithName: quick recognition
 description: You creatively apply your prepared spells to Counterspell a much wider
   variety of your opponents' magic. Instead of being able to counter a foe's spell
   with Counterspell only if you have that same spell prepared, you can use Counterspell
@@ -10,20 +20,5 @@ description: You creatively apply your prepared spells to Counterspell a much wi
   that has an opposing trait or that otherwise logically would counter the triggering
   spell (such as using a cold or water spell to counter Fireball or using Clear Mind
   to counter a fear spell).
-level: 12
 mechanicsScope: encounter
-name: clever counterspell
-prerequisites:
-- Counterspell
-- Quick Recognition
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: IMPP5pa8AmvCby4W
-traits:
-- wizard
-type: class
-typedPrerequisites:
-- hasFeatWithName: counterspell (prepared)
-- hasResourceWithName: quick recognition
+foundryID: IMPP5pa8AmvCby4W

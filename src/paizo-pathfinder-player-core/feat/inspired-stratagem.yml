@@ -1,33 +1,17 @@
 ---
-action: {}
+name: inspired stratagem
+level: 8
+rarity: common
+type: class
+traits:
+- rogue
 description: During your daily preparations, you can review stratagems for the day's
   adventures with up to five allies. Later, you can quickly advise them on your schemes
   using the Inspired Stratagem reaction.
-level: 8
 mechanicsScope: builder
-name: inspired stratagem
-prerequisites: []
-rarity: common
+foundryID: 9pTQrhbeF348bYky
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-action
-    revision: 1
-  id: 1ae48edb-cccf-5edd-9e93-da25096d1864
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 54b95f68-c039-5afe-ba04-14fd3568fee6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/action-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/action-id
-    inputName: actionId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 9pTQrhbeF348bYky
-traits:
-- rogue
-type: class
+- id: 1ae48edb-cccf-5edd-9e93-da25096d1864
+  effect: core/add-action
+  inputs:
+    actionId: '@action.inspired-stratagem'

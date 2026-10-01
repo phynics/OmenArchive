@@ -1,8 +1,28 @@
 ---
+name: wrathful storm
+rank: 9
+rarity: common
+category: spell
+traits:
+- air
+- cold
+- concentrate
+- electricity
+- manipulate
+traditions:
+- primal
+time: '3'
 action:
   count: three_actions
+range: 800 feet
 area: '400'
-category: spell
+duration: 1 minute
+heightening:
+  levels:
+    10:
+      area: '1000'
+      range: 2000 feet
+  type: fixed
 description: 'A massive storm cloud forms in the air above the area, spreading rain
   and gales. The wind imposes a –4 circumstance penalty to physical ranged attacks.
   The air in the area is greater difficult terrain for flying creatures. When you
@@ -30,31 +50,8 @@ description: 'A massive storm cloud forms in the air above the area, spreading r
 
   Heightened (10th) The range increases to 2,000 feet and the cloud is a 1,000-foot
   burst.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  levels:
-    10:
-      area: '1000'
-      range: 2000 feet
-  type: fixed
-mechanicsScope: encounter
-name: wrathful storm
-range: 800 feet
-rank: 9
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: yLJROsQtyrPIKcDx
-time: '3'
-traditions:
-- primal
-traits:
-- air
-- cold
-- concentrate
-- electricity
-- manipulate
+foundryID: yLJROsQtyrPIKcDx

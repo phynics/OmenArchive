@@ -1,9 +1,18 @@
 ---
+name: scholar
+rarity: common
 attributes:
   chooseFrom:
   - intelligence
   - wisdom
   freeBoosts: 1
+skillOption:
+- arcana
+- nature
+- occultism
+- religion
+loreSkill: academia lore
+skillFeat: assurance
 description: 'You have a knack for learning and sequestered yourself from the outside
   world to learn all you could. You read about so many wondrous places and things
   in your books, always dreaming about one day seeing the real things. Eventually,
@@ -15,69 +24,30 @@ description: 'You have a knack for learning and sequestered yourself from the ou
   You''re trained in your choice of the Arcana, Nature, Occultism, or Religion skill,
   and gain the Assurance skill feat in your chosen skill. You''re also trained in
   the Academia Lore skill.'
-loreSkill: academia lore
 mechanicsScope: builder
-name: scholar
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 6439d104-264e-567a-97c3-32c6bdc18b53
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: a16c9c82-8199-565a-a02a-757d56747650
+- id: 6439d104-264e-567a-97c3-32c6bdc18b53
+  effect: core/add-feat@2
+  inputs:
+    selectionId: a16c9c82-8199-565a-a02a-757d56747650
+    featId: '@feat.assurance'
+    with:
+      $.feat.assurance.skills:
+        kind: from
+        values:
+        - payload:
+            kind: arcana
           revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1f53b5e0-164a-5bfe-8380-e480d8a1f009
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+        - payload:
+            kind: nature
           revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            $.feat.assurance.skills:
-              kind: from
-              values:
-              - payload:
-                  kind: arcana
-                revision: 1
-                typeID: me.atkn.omen.pf2e.playercore/value/skill
-              - payload:
-                  kind: nature
-                revision: 1
-                typeID: me.atkn.omen.pf2e.playercore/value/skill
-              - payload:
-                  kind: occultism
-                revision: 1
-                typeID: me.atkn.omen.pf2e.playercore/value/skill
-              - payload:
-                  kind: religion
-                revision: 1
-                typeID: me.atkn.omen.pf2e.playercore/value/skill
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+        - payload:
+            kind: occultism
           revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-choice-settings
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-choice-settings
-    inputName: with
-  startLevel: 1
-skillFeat: assurance
-skillOption:
-- arcana
-- nature
-- occultism
-- religion
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+        - payload:
+            kind: religion
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/skill

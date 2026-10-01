@@ -1,7 +1,25 @@
 ---
+name: thunderstrike
+rank: 1
+rarity: common
+category: spell
+traits:
+- concentrate
+- electricity
+- manipulate
+- sonic
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: 1 creature
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   6aFqAhfOSz7ukuwr:
     formula: 1d12
@@ -13,10 +31,12 @@ damage:
     kinds:
     - damage
     type: sonic
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    6aFqAhfOSz7ukuwr: 1d12
+    K00cW8XZuHvutOhE: 1d4
+  interval: 1
+  type: interval
 description: 'You call down a tendril of lightning that cracks with thunder, dealing
   1d12 electricity damage and 1d4 sonic damage to the target with a basic Reflex save.
   A target wearing metal armor or made of metal takes a –1 circumstance bonus to its
@@ -24,28 +44,5 @@ description: 'You call down a tendril of lightning that cracks with thunder, dea
 
 
   Heightened (+1) The damage increases by 1d12 electricity and 1d4 sonic.'
-heightening:
-  damage:
-    6aFqAhfOSz7ukuwr: 1d12
-    K00cW8XZuHvutOhE: 1d4
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: thunderstrike
-range: 120 feet
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: zDJS8E66UI0himqV
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- electricity
-- manipulate
-- sonic
+foundryID: zDJS8E66UI0himqV

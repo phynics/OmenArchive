@@ -1,5 +1,15 @@
 ---
-action: {}
+name: druid dedication
+level: 2
+rarity: common
+type: archetype
+traits:
+- archetype
+- dedication
+- multiclass
+prerequisites:
+- text: Wisdom +2
+  hasAttributeModifier: {attribute: wis, modifier: 2}
 description: 'You cast spells like a druid. You gain the Cast a Spell activity. You
   can prepare two common cantrips each day from the primal spell list or any other
   primal cantrips you learn or discover. You''re trained in the spell attack modifier
@@ -13,25 +23,8 @@ description: 'You cast spells like a druid. You gain the Cast a Spell activity. 
   order.
 
   Druid'
-level: 2
 mechanicsScope: mixed
-name: druid dedication
-prerequisites:
-- Wisdom +2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: vhw3n86TEs6laopA
-traits:
-- archetype
-- dedication
-- multiclass
-type: archetype
-typedPrerequisites:
-- hasAttributeModifier:
-    attribute: wis
-    modifier: 2
 unsupportedReason: 'Selectable class feature reference at position 1 did not resolve
   canonically. Resource: omen://feat/druid-dedication?source=paizo-pathfinder-player-core.
   Foundry keys: [ActiveEffectLike, GrantItem].'
+foundryID: vhw3n86TEs6laopA

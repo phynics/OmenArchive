@@ -1,16 +1,9 @@
 ---
-description: This leather satchel contains empty vials, a pair of tweezers, a supply
-  of small linen cloths, a set of brass calipers and a knotted string for measuring
-  distances, several pieces of chalk, a pen, and a blank notebook for keeping notes.
-  Every component of a detective's kit is of exceeding quality, and thus a detective's
-  kit adds a +1 item bonus to checks to investigate a crime scene, a clue, or similar
-  details. Like other tool kits, a detective's kit uses one hand if wearing the kit
-  and two hands otherwise.
-details:
-  equipment: {}
-level: 3
-mechanicsScope: builder
 name: detective's kit
+level: 3
+rarity: common
+type: equipment
+traits: []
 physical:
   bulk: '1'
   hardness: 0
@@ -19,63 +12,28 @@ physical:
   quantity: 1
   size: med
   usage: held-in-two-hands
-rarity: common
+details:
+  equipment: {}
+description: This leather satchel contains empty vials, a pair of tweezers, a supply
+  of small linen cloths, a set of brass calipers and a knotted string for measuring
+  distances, several pieces of chalk, a pen, and a blank notebook for keeping notes.
+  Every component of a detective's kit is of exceeding quality, and thus a detective's
+  kit adds a +1 item bonus to checks to investigate a crime scene, a clue, or similar
+  details. Like other tool kits, a detective's kit uses one hand if wearing the kit
+  and two hands otherwise.
+mechanicsScope: builder
+foundryID: ItLZL9Bd6xwgfeB8
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 18f2e293-46e9-5a6d-894e-1ad3984e0fa9
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5b8418ce-849e-5367-a8bc-5a821c137d33
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - savingThrow:
-                _0: perception
-            - anySkill: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Detective''s Kit: +1 item bonus to Perception checks and skill
-            checks (Investigate).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: Investigate
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: ItLZL9Bd6xwgfeB8
-traits: []
-type: equipment
+- id: 18f2e293-46e9-5a6d-894e-1ad3984e0fa9
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 5b8418ce-849e-5367-a8bc-5a821c137d33
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+      - anySkill: {}
+    description: 'Detective''s Kit: +1 item bonus to Perception checks and skill checks
+      (Investigate).'
+    numeric: {literal: {amount: 1, applicability: {description: Investigate, kind: situational},
+        type: item}}

@@ -1,22 +1,15 @@
 ---
-action: {}
-description: You gain the Master Spellcasting Feat benefits.
-level: 18
-mechanicsScope: encounter
 name: master cleric spellcasting
-prerequisites:
-- Expert Cleric Spellcasting
-- legendary in Religion
+level: 18
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: bc6tcXSzakyCbQsS
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: expert cleric spellcasting
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: religion
+prerequisites:
+- text: Expert Cleric Spellcasting
+  hasResourceWithName: expert cleric spellcasting
+- text: legendary in Religion
+  hasSkillProficiency: {skill: religion, proficiency: legendary}
+description: You gain the Master Spellcasting Feat benefits.
+mechanicsScope: encounter
+foundryID: bc6tcXSzakyCbQsS

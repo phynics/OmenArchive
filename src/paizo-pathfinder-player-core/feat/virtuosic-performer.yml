@@ -1,5 +1,14 @@
 ---
-action: {}
+name: virtuosic performer
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Performance
+  hasSkillProficiency: {skill: performance, proficiency: trained}
 description: 'You have exceptional talent with one type of performance. You gain a
   +1 circumstance bonus when making a certain type of performance. If you are a master
   in Performance, this bonus increases to +2. Select one of the following specialties
@@ -43,25 +52,9 @@ description: 'You have exceptional talent with one type of performance. You gain
   Winds
 
   Bagpipe, flute, recorder, trumpet'
-level: 1
-mechanicsScope: mixed
-name: virtuosic performer
-prerequisites:
-- trained in Performance
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: lFwfUvH2708rl6i3
 specialText: ty
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: performance
+mechanicsScope: mixed
 unsupportedReason: 'ChoiceSet performanceType is not paired with a deterministic builder
   effect. Resource: omen://feat/virtuosic-performer?source=paizo-pathfinder-player-core.
   Foundry keys: [ChoiceSet, FlatModifier].'
+foundryID: lFwfUvH2708rl6i3

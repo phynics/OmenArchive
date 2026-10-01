@@ -1,5 +1,28 @@
 ---
+name: read aura
+rank: 0
+rarity: common
 category: cantrip
+traits:
+- cantrip
+- concentrate
+- detection
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: 1 minute
+range: 30 feet
+target: 1 object
+heightening:
+  levels:
+    3:
+      target: 10 objects
+    6:
+      target: any number of objects
+  type: fixed
 description: 'You focus on the target object, opening your mind to perceive magical
   auras. When the casting is complete, you know whether that item is magical. You
   or anyone you advise about the aura gains a +2 circumstance bonus to Identify Magic
@@ -11,33 +34,7 @@ description: 'You focus on the target object, opening your mind to perceive magi
 
 
   Heightened (6th) You can target any number of objects.'
+mechanicsScope: encounter
 diagnostics:
 - 'Foundry casting time retained without normalized action count: 1 minute'
-heightening:
-  levels:
-    3:
-      target: 10 objects
-    6:
-      target: any number of objects
-  type: fixed
-mechanicsScope: encounter
-name: read aura
-range: 30 feet
-rank: 0
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: OhD2Z6rIGGD5ocZA
-target: 1 object
-time: 1 minute
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- cantrip
-- concentrate
-- detection
-- manipulate
+foundryID: OhD2Z6rIGGD5ocZA

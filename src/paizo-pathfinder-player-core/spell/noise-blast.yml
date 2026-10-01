@@ -1,18 +1,36 @@
 ---
+name: noise blast
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- sonic
+traditions:
+- arcane
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
+range: 30 feet
 area: '10'
-category: spell
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 2d10
     kinds:
     - damage
     type: sonic
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d10
+  interval: 1
+  type: interval
 description: 'A cacophonous noise blasts out, dealing 2d10 sonic damage. Each creature
   must attempt a Fortitude save.
 
@@ -31,28 +49,7 @@ description: 'A cacophonous noise blasts out, dealing 2d10 sonic damage. Each cr
 
 
   Heightened (+1) The damage increases by 1d10.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 1d10
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: noise blast
-range: 30 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wzLkNU3AAqOSKFPR
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- concentrate
-- manipulate
-- sonic
+foundryID: wzLkNU3AAqOSKFPR

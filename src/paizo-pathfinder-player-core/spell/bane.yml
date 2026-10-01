@@ -1,8 +1,22 @@
 ---
+name: bane
+rank: 1
+rarity: common
+category: spell
+traits:
+- aura
+- concentrate
+- manipulate
+- mental
+traditions:
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
+target: enemies in the area
 area: '10'
-category: spell
+duration: 1 minute
 defense:
   basic: false
   counteraction: true
@@ -15,24 +29,7 @@ description: 'You fill the minds of your enemies with doubt. Enemies in the area
 
 
   Bane can counteract Bless.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 minute
-mechanicsScope: encounter
-name: bane
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 7ZinJNzxq0XF0oMx
-target: enemies in the area
-time: '2'
-traditions:
-- divine
-- occult
-traits:
-- aura
-- concentrate
-- manipulate
-- mental
+foundryID: 7ZinJNzxq0XF0oMx

@@ -1,17 +1,36 @@
 ---
+name: clinging ice
+rank: 0
+rarity: uncommon
+category: cantrip
+traits:
+- cantrip
+- cold
+- hex
+- manipulate
+- witch
+traditions: []
+time: '1'
 action:
   count: one_action
-category: cantrip
+range: 30 feet
+target: 1 creature
+duration: 1 minute
+defense:
+  basic: false
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 1d4
     kinds:
     - damage
     type: cold
-defense:
-  basic: false
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
 description: 'Freezing sleet and heavy snowfall collect on the target''s feet and
   legs, dealing 1d4 cold damage and other effects depending on its Reflex save.
 
@@ -31,29 +50,7 @@ description: 'Freezing sleet and heavy snowfall collect on the target''s feet an
 
 
   Heightened (+1) The damage increases by 1d4.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d4
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: clinging ice
-range: 30 feet
-rank: 0
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: MraZBLJ4Be3ogmWL
-target: 1 creature
-time: '1'
-traditions: []
-traits:
-- cantrip
-- cold
-- hex
-- manipulate
-- witch
+foundryID: MraZBLJ4Be3ogmWL

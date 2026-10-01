@@ -1,49 +1,15 @@
 ---
-action: {}
-description: You're trained in martial weapons.
-level: 3
-mechanicsScope: builder
 name: second doctrine (warpriest)
-rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-weapon-proficiency
-    revision: 1
-  id: 6ec8d259-ddd5-5ff6-ab75-c2c4319cea74
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: filter
-            weaponGroup: any
-            weaponKind: martial
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/weapon-designation
-    inputName: weaponDesignation
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: false
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/bool
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/bool
-    inputName: selfScaling
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: D34mPo29r1J3DPaX
+level: 3
 traits:
 - cleric
+description: You're trained in martial weapons.
+mechanicsScope: builder
+foundryID: D34mPo29r1J3DPaX
+rules:
+- id: 6ec8d259-ddd5-5ff6-ab75-c2c4319cea74
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    proficiencyRank: 2
+    selfScaling: false

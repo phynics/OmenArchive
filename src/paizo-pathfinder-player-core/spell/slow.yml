@@ -1,11 +1,30 @@
 ---
+name: slow
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- occult
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: 1 minute
 defense:
   basic: false
   counteraction: false
   save: fortitude
+heightening:
+  levels:
+    6:
+      target: 10 creatures
+  type: fixed
 description: 'You dilate the flow of time around the target, slowing its actions.
 
 
@@ -22,27 +41,5 @@ description: 'You dilate the flow of time around the target, slowing its actions
 
 
   Heightened (6th) You can target up to 10 creatures.'
-duration: 1 minute
-heightening:
-  levels:
-    6:
-      target: 10 creatures
-  type: fixed
 mechanicsScope: encounter
-name: slow
-range: 30 feet
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: WsUwpfmhKrKwoIe3
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- occult
-- primal
-traits:
-- concentrate
-- manipulate
+foundryID: WsUwpfmhKrKwoIe3

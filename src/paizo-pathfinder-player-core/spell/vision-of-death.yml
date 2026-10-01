@@ -1,17 +1,38 @@
 ---
+name: vision of death
+rank: 4
+rarity: common
+category: spell
+traits:
+- concentrate
+- death
+- emotion
+- fear
+- manipulate
+- mental
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: 1 living creature
+defense:
+  basic: false
+  counteraction: false
+  save: will
 damage:
   0:
     formula: 8d6
     kinds:
     - damage
     type: mental
-defense:
-  basic: false
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'You force the target to see a vision of its own death. It takes 8d6
   mental damage with a Will save. If the target is reduced to 0 HP by this spell,
   its vision becomes reality and kills it instantly.
@@ -31,29 +52,5 @@ description: 'You force the target to see a vision of its own death. It takes 8d
 
 
   Heightened (+1) The damage increases by 2d6.'
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: vision of death
-range: 120 feet
-rank: 4
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Jmxru8zMdYMRuO5n
-target: 1 living creature
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- death
-- emotion
-- fear
-- manipulate
-- mental
+foundryID: Jmxru8zMdYMRuO5n

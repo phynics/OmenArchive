@@ -1,5 +1,16 @@
 ---
-action: {}
+name: know-it-all
+level: 8
+rarity: common
+type: class
+traits:
+- bard
+- thaumaturge
+prerequisites:
+- text: enigma muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: 'Bard - When you succeed at a check to Recall Knowledge, you gain additional
   information or context. When you critically succeed at a check to Recall Knowledge,
   you get additional information or context or can ask an additional follow-up question
@@ -11,24 +22,5 @@ description: 'Bard - When you succeed at a check to Recall Knowledge, you gain a
   or context about the given topic. When you critically succeed at a check to Recall
   Knowledge, at the GM''s discretion, you might gain even more additional information
   or context than normal.'
-level: 8
 mechanicsScope: encounter
-name: know-it-all
-prerequisites:
-- enigma muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 1qJCMbs3zcPMWDux
-traits:
-- bard
-- thaumaturge
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 561e24d0-c44a-5fff-9abd-ec39e3d7f785
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: 1qJCMbs3zcPMWDux

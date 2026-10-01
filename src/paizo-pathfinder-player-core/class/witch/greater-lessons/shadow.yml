@@ -1,5 +1,8 @@
 ---
-action: {}
+name: lesson of shadow
+level: 6
+traits:
+- witch
 description: You gain the Malicious Shadow hex, and your familiar learns Chilling
   Darkness.
 grantedSpells:
@@ -7,105 +10,22 @@ grantedSpells:
   spell: omen://spell/malicious-shadow?source=paizo-pathfinder-player-core
 - grant: known
   spell: omen://spell/chilling-darkness?source=paizo-pathfinder-player-core
-level: 6
 mechanicsScope: builder
-name: lesson of shadow
+foundryID: YSxymsAe2Dvq47f2
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: c3092a5c-29bd-53a5-ac05-7aed00ef9b3d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e0b95116-bb48-5932-a2a4-d2ee7e48e761
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 08f8e228-c4de-59f7-a595-6e3d07470156
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: a851fa0f-7307-55cb-a49b-9749a26c5526
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 94e39ed6-213f-5664-aee4-9a2209ecb33d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 45825dc2-02e3-55df-9293-4b53e0d0e7cc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 350edb20-0756-51c9-b780-fabf0df817cb
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: YSxymsAe2Dvq47f2
-traits:
-- witch
+- id: c3092a5c-29bd-53a5-ac05-7aed00ef9b3d
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: e0b95116-bb48-5932-a2a4-d2ee7e48e761
+    spellId: '@spell.malicious-shadow'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: a851fa0f-7307-55cb-a49b-9749a26c5526
+  effect: spellcasting/add-focus-point
+- id: 94e39ed6-213f-5664-aee4-9a2209ecb33d
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 45825dc2-02e3-55df-9293-4b53e0d0e7cc
+    spellId: '@spell.chilling-darkness'

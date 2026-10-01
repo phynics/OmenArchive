@@ -1,22 +1,15 @@
 ---
-action: {}
-description: You can carry more than your frame implies. Increase your maximum and
-  encumbered Bulk limits by 2.
-level: 1
-mechanicsScope: encounter
 name: hefty hauler
-prerequisites:
-- trained in Athletics
+level: 1
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: C0Tcelg3BAPhML6J
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: athletics
+prerequisites:
+- text: trained in Athletics
+  hasSkillProficiency: {skill: athletics, proficiency: trained}
+description: You can carry more than your frame implies. Increase your maximum and
+  encumbered Bulk limits by 2.
+mechanicsScope: encounter
+foundryID: C0Tcelg3BAPhML6J

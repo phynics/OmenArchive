@@ -1,18 +1,36 @@
 ---
+name: vampiric exsanguination
+rank: 6
+rarity: common
+category: spell
+traits:
+- concentrate
+- death
+- manipulate
+- void
+traditions:
+- arcane
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
 area: '30'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 12d6
     kinds:
     - damage
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'You draw in the blood and life force of other creatures through your
   outstretched arms. You deal 12d6 void damage to living creatures in the area with
   a basic Fortitude save.
@@ -24,28 +42,7 @@ description: 'You draw in the blood and life force of other creatures through yo
 
 
   Heightened (+1) The damage increases by 2d6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: vampiric exsanguination
-rank: 6
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: fd31tAHSSGXyOxW6
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- concentrate
-- death
-- manipulate
-- void
+foundryID: fd31tAHSSGXyOxW6

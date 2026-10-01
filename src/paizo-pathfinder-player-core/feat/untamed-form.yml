@@ -1,25 +1,17 @@
 ---
-action: {}
+name: untamed form
+level: 1
+rarity: common
+type: class
+traits:
+- druid
+prerequisites:
+- text: untamed order
+  hasChoice:
+    name: $.druid.order
+    equals: {type: core/feature-id, value: '@class.druid.orders.untamed'}
 description: You are one with the wild, always changing and adapting to meet any challenge.
   You gain the Untamed Form order spell, which lets you transform into a variety of
   shapes that you can expand with druid feats.
-level: 1
 mechanicsScope: encounter
-name: untamed form
-prerequisites:
-- untamed order
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: VaIHQzOE5ibmbtqU
-traits:
-- druid
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 6b5c866f-ef9c-59be-b395-510760851d90
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.druid.order
+foundryID: VaIHQzOE5ibmbtqU

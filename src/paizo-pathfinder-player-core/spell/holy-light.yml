@@ -1,15 +1,36 @@
 ---
+name: holy light
+rank: 3
+rarity: common
+category: spell
+traits:
+- attack
+- concentrate
+- fire
+- holy
+- light
+- manipulate
+traditions:
+- divine
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: 1 creature
+defense:
+  counteraction: true
 damage:
   0:
     formula: 5d6
     kinds:
     - damage
     type: fire
-defense:
-  counteraction: true
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'You shine a blazing ray of light tinged with holy energy. Make a ranged
   spell attack. The ray deals 5d6 fire damage. If the target has the unholy trait,
   you deal an extra 5d6 spirit damage.
@@ -29,34 +50,10 @@ description: 'You shine a blazing ray of light tinged with holy energy. Make a r
 
   Heightened (+1) The fire damage increases by 2d6, and the spirit damage against
   unholy creatures increases by 2d6.'
+mechanicsScope: mixed
+unsupportedReason: non-empty Foundry rule elements are not represented by CharacterSpell
 diagnostics:
 - 'Foundry rule elements not imported: DamageDice'
 - 'Foundry spell rule elements are preserved for external review at omen://spell/holy-light?source=paizo-pathfinder-player-core.
   Foundry keys: [DamageDice].'
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
-mechanicsScope: mixed
-name: holy light
-range: 120 feet
-rank: 3
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: DyiD239dNS7RIxZE
-target: 1 creature
-time: '2'
-traditions:
-- divine
-- primal
-traits:
-- attack
-- concentrate
-- fire
-- holy
-- light
-- manipulate
-unsupportedReason: non-empty Foundry rule elements are not represented by CharacterSpell
+foundryID: DyiD239dNS7RIxZE

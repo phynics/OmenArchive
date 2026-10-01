@@ -1,51 +1,25 @@
 ---
-action: {}
+name: ranger resiliency
+level: 4
+rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Ranger Dedication
+  hasResourceWithName: ranger dedication
+- text: class granting no more Hit Points per level than 8 + your Constitution modifier
+  unsupported: Unsupported prerequisite for source JKvP4pFHzwWsHu2n "class granting
+    no more Hit Points per level than 8 + your Constitution modifier".
+  diagnostic: true
 description: You gain 3 additional Hit Points for each ranger archetype class feat
   you have. As you continue selecting ranger archetype class feats, you continue to
   gain additional Hit Points in this way.
-level: 4
 mechanicsScope: builder
-name: ranger resiliency
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source JKvP4pFHzwWsHu2n "class granting no more Hit
-  Points per level than 8 + your Constitution modifier".
-prerequisites:
-- Ranger Dedication
-- class granting no more Hit Points per level than 8 + your Constitution modifier
-rarity: common
+foundryID: JKvP4pFHzwWsHu2n
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-hit-points-per-count
-    revision: 1
-  id: 67295037-1df2-589e-b0ce-8597f2fbe84b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: amount
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: $.archetype.ranger.feat-count
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: count
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: JKvP4pFHzwWsHu2n
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: ranger dedication
-- unsupported: Unsupported prerequisite for source JKvP4pFHzwWsHu2n "class granting
-    no more Hit Points per level than 8 + your Constitution modifier".
+- id: 67295037-1df2-589e-b0ce-8597f2fbe84b
+  effect: core/add-hit-points-per-count
+  inputs:
+    amount: 3
+    count: \$.archetype.ranger.feat-count

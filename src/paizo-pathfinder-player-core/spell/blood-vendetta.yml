@@ -1,8 +1,25 @@
 ---
+name: blood vendetta
+rank: 2
+rarity: common
+category: spell
+traits:
+- curse
+traditions:
+- arcane
+- divine
+- occult
+time: reaction
 action:
   count: reaction
   requirements: You can bleed
-category: spell
+range: 30 feet
+target: The triggering creature
+duration: varies
+defense:
+  basic: false
+  counteraction: false
+  save: will
 damage:
   0:
     category: persistent
@@ -10,10 +27,12 @@ damage:
     kinds:
     - damage
     type: bleed
-defense:
-  basic: false
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: 2d6
+  interval: 2
+  type: interval
+requirements: You can bleed
 description: 'Requirements You can bleed.
 
 
@@ -38,27 +57,5 @@ description: 'Requirements You can bleed.
 
 
   Heightened (+2) The persistent bleed damage increases by 2d6.'
-duration: varies
-heightening:
-  damage:
-    0: 2d6
-  interval: 2
-  type: interval
 mechanicsScope: encounter
-name: blood vendetta
-range: 30 feet
-rank: 2
-rarity: common
-requirements: You can bleed
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: TaaMEYdZXQXF0Sks
-target: The triggering creature
-time: reaction
-traditions:
-- arcane
-- divine
-- occult
-traits:
-- curse
+foundryID: TaaMEYdZXQXF0Sks

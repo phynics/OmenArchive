@@ -1,9 +1,7 @@
 ---
-criticalFailure: You earn nothing for your work and are fired immediately. You can't
-  continue at the task. Your reputation suffers, potentially making it difficult for
-  you to find rewarding jobs in that community in the future.
-criticalSuccess: You do outstanding work. Gain the amount of currency listed for the
-  task level + 1 and your proficiency rank.
+name: earn income
+traits:
+- downtime
 description: "You can use a skill to earn money during downtime. You must be trained
   in the skill to do so. This takes time to set up, and your income depends on your
   proficiency rank and how lucrative a task you can find. Because this process requires
@@ -78,14 +76,13 @@ description: "You can use a skill to earn money during downtime. You must be tra
   keep it, you can, but if you had a bad initial roll, you can't try for a better
   one by pausing to do something else. If your statistics changed during the break—usually
   because you leveled up while adventuring—you can attempt a new check."
+criticalSuccess: You do outstanding work. Gain the amount of currency listed for the
+  task level + 1 and your proficiency rank.
+success: You do competent work. Gain the amount of currency listed for the task level
+  and your proficiency rank.
 failure: You do shoddy work and get paid the bare minimum for your time. Gain the
   amount of currency listed in the failure column for the task level. The GM will
   likely reduce how long you can continue at the task.
-name: earn income
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-success: You do competent work. Gain the amount of currency listed for the task level
-  and your proficiency rank.
-traits:
-- downtime
+criticalFailure: You earn nothing for your work and are fired immediately. You can't
+  continue at the task. Your reputation suffers, potentially making it difficult for
+  you to find rewarding jobs in that community in the future.

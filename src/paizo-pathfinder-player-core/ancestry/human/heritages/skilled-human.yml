@@ -1,128 +1,16 @@
 ---
+name: skilled human
 ancestry: human
+rarity: common
 description: Your ingenuity allows you to train in a wide variety of skills. You become
   trained in one skill of your choice. At 5th level, you become an expert in the chosen
   skill.
 mechanicsScope: builder
-name: skilled human
-rarity: common
 rules:
-- choice:
-    answer:
-      cases:
-      - key: acrobatics
-        label: Acrobatics
-        value:
-          payload:
-            kind: acrobatics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: arcana
-        label: Arcana
-        value:
-          payload:
-            kind: arcana
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: athletics
-        label: Athletics
-        value:
-          payload:
-            kind: athletics
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: crafting
-        label: Crafting
-        value:
-          payload:
-            kind: crafting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: deception
-        label: Deception
-        value:
-          payload:
-            kind: deception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: diplomacy
-        label: Diplomacy
-        value:
-          payload:
-            kind: diplomacy
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: intimidation
-        label: Intimidation
-        value:
-          payload:
-            kind: intimidation
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: medicine
-        label: Medicine
-        value:
-          payload:
-            kind: medicine
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: nature
-        label: Nature
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: occultism
-        label: Occultism
-        value:
-          payload:
-            kind: occultism
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: performance
-        label: Performance
-        value:
-          payload:
-            kind: performance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: religion
-        label: Religion
-        value:
-          payload:
-            kind: religion
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: society
-        label: Society
-        value:
-          payload:
-            kind: society
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: stealth
-        label: Stealth
-        value:
-          payload:
-            kind: stealth
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: survival
-        label: Survival
-        value:
-          payload:
-            kind: survival
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      - key: thievery
-        label: Thievery
-        value:
-          payload:
-            kind: thievery
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      kind: local
+- id: 238451c6-3892-531e-84c9-6fd394ddb877
+  key: choice-heritage-skill
+  choice:
+    name: $.heritage.skill
     label: Skill
     legacySelections:
     - inputName: skill
@@ -130,53 +18,32 @@ rules:
       ruleID: 2850c923-0d8f-5ad7-b603-7773153dceff
       sourceID: 77667875-019a-5e7d-858c-f0babaab554b
       valueTypeID: org.openomen.pf2e.core/value/skill
-    name: $.heritage.skill
-    startLevel: 1
-  id: 238451c6-3892-531e-84c9-6fd394ddb877
-  key: choice-heritage-skill
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 2850c923-0d8f-5ad7-b603-7773153dceff
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.heritage.skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 4d6d706b-542d-5899-a417-3edc99928555
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.heritage.skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 5
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: {kind: acrobatics}}
+    - {key: arcana, value: {kind: arcana}}
+    - {key: athletics, value: {kind: athletics}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: deception, value: {kind: deception}}
+    - {key: diplomacy, value: {kind: diplomacy}}
+    - {key: intimidation, value: {kind: intimidation}}
+    - {key: medicine, value: {kind: medicine}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: performance, value: {kind: performance}}
+    - {key: religion, value: {kind: religion}}
+    - {key: society, value: {kind: society}}
+    - {key: stealth, value: {kind: stealth}}
+    - {key: survival, value: {kind: survival}}
+    - {key: thievery, value: {kind: thievery}}
+- id: 2850c923-0d8f-5ad7-b603-7773153dceff
+  effect: core/add-skill-increase
+  inputs:
+    skill: {choice: $.heritage.skill}
+    proficiencyCap: 2
+- id: 4d6d706b-542d-5899-a417-3edc99928555
+  effect: core/add-skill-increase
+  level: 5
+  inputs:
+    skill: {choice: $.heritage.skill}
+    proficiencyCap: 4

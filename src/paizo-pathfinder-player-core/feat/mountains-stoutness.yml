@@ -1,5 +1,10 @@
 ---
-action: {}
+name: mountain's stoutness
+level: 9
+rarity: common
+type: ancestry
+traits:
+- dwarf
 description: 'Your hardiness lets you withstand more punishment than most. Increase
   your maximum Hit Points by your level. When you have the Dying 1 condition, the
   DC of your recovery checks is equal to 9 + your dying value (instead of 10 + your
@@ -7,32 +12,11 @@ description: 'Your hardiness lets you withstand more punishment than most. Incre
 
   If you also have the Toughness feat, the Hit Points gained from it and this feat
   are cumulative, and the DC of your recovery checks is equal to 6 + your dying value.'
-level: 9
 mechanicsScope: mixed
-name: mountain's stoutness
-prerequisites: []
-rarity: common
+foundryID: COP89tjrNhEucuRW
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-hit-points-per-level
-    revision: 1
-  id: a8d4743b-85e5-549a-b491-236b7447f177
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: amount
+- id: a8d4743b-85e5-549a-b491-236b7447f177
   key: flat-modifier-1
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: COP89tjrNhEucuRW
-traits:
-- dwarf
-type: ancestry
+  effect: core/add-hit-points-per-level
+  inputs:
+    amount: 1

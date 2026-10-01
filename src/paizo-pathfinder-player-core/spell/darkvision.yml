@@ -1,7 +1,26 @@
 ---
+name: darkvision
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+duration: 1 hour
+heightening:
+  levels:
+    3:
+      range: touch
+      target: 1 willing creature
+  type: fixed
 description: 'You grant yourself supernatural sight in areas of darkness. You gain
   Darkvision.
 
@@ -11,27 +30,5 @@ description: 'You grant yourself supernatural sight in areas of darkness. You ga
 
   Heightened (5th) The spell''s range is touch and it targets 1 willing creature.
   The duration is until the next time you make your daily preparations.'
-duration: 1 hour
-heightening:
-  levels:
-    3:
-      range: touch
-      target: 1 willing creature
-  type: fixed
 mechanicsScope: encounter
-name: darkvision
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: pZTqGY1MLRjgKasV
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- concentrate
-- manipulate
+foundryID: pZTqGY1MLRjgKasV

@@ -1,18 +1,35 @@
 ---
+name: divine wrath
+rank: 4
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- sanctified
+- spirit
+traditions:
+- divine
+time: '2'
 action:
   count: two_actions
+range: 120 feet
 area: '20'
-category: spell
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 4d10
     kinds:
     - damage
     type: spirit
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d10
+  interval: 1
+  type: interval
 description: 'You channel the fury of divinity against your foes. You deal 4d10 spirit
   damage to enemies in the area, depending on their Fortitude save.
 
@@ -31,27 +48,7 @@ description: 'You channel the fury of divinity against your foes. You deal 4d10 
 
 
   Heightened (+1) The damage increases by 1d10.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 1d10
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: divine wrath
-range: 120 feet
-rank: 4
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: hVU9msO9yGkxKZ3J
-time: '2'
-traditions:
-- divine
-traits:
-- concentrate
-- manipulate
-- sanctified
-- spirit
+foundryID: hVU9msO9yGkxKZ3J

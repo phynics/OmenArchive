@@ -1,30 +1,22 @@
 ---
-action: {}
+name: warpriest's armor
+level: 2
+rarity: common
+type: class
+traits:
+- cleric
+prerequisites:
+- text: warpriest doctrine
+  hasChoice:
+    name: $.cleric.doctrine
+    equals: {type: core/feature-id, value: '@class.cleric.doctrines.warpriest'}
 description: Your training has helped you adapt to ever-heavier armor. You are trained
   in heavy armor. Whenever you gain a class feature that grants you expert or greater
   proficiency in medium armor, you also gain that proficiency in heavy armor. You
   treat armor you wear of 2 Bulk or higher as though it were 1 Bulk lighter (to a
   minimum of 1 Bulk).
-level: 2
 mechanicsScope: mixed
-name: warpriest's armor
-prerequisites:
-- warpriest doctrine
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 0XdK3BJBA66jBcbQ
-traits:
-- cleric
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 5c00a6ea-c806-5adb-a1d4-68a5a52bf7d8
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.cleric.doctrine
 unsupportedReason: 'ActiveEffectLike at position 0 has an unsupported conditional
   builder payload. Resource: omen://feat/warpriests-armor?source=paizo-pathfinder-player-core.
   Foundry keys: [ActiveEffectLike].'
+foundryID: 0XdK3BJBA66jBcbQ

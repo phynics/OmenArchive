@@ -1,4 +1,17 @@
 ---
+name: heroic recovery
+level: 10
+rarity: common
+type: class
+traits:
+- cleric
+- concentrate
+- spellshape
+prerequisites:
+- text: healing font
+  hasChoice:
+    name: $.cleric.divine-font
+    equals: {type: spellcasting/spell-id, value: '@spell.heal'}
 action:
   count: one_action
 description: 'The restorative power of your healing invigorates the recipient. If
@@ -7,25 +20,5 @@ description: 'The restorative power of your healing invigorates the recipient. I
   the end of its next turn: a +5-foot status bonus to its Speed, a +1 status bonus
   to attack rolls, and a +1 status bonus to damage rolls. In addition, if the target
   is Prone, it can immediately Stand as a free action that doesn''t trigger reactions.'
-level: 10
 mechanicsScope: encounter
-name: heroic recovery
-prerequisites:
-- healing font
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: KR78kinMmAZQHeoa
-traits:
-- cleric
-- concentrate
-- spellshape
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 4304f211-3168-5db9-8c6f-ecf24393f20a
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    name: $.cleric.divine-font
+foundryID: KR78kinMmAZQHeoa

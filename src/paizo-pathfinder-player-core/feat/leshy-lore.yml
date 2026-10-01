@@ -1,95 +1,31 @@
 ---
-action: {}
+name: leshy lore
+level: 1
+rarity: common
+type: ancestry
+traits:
+- leshy
 description: 'You deeply understand your people''s cultural traditions and innate
   strengths. You gain the trained proficiency rank in Nature and Stealth. If you would
   automatically become trained in one of those skills (from your background or class,
   for example), you instead become trained in a skill of your choice.
 
   You also gain the Additional Lore general feat for Leshy Lore.'
-level: 1
 mechanicsScope: builder
-name: leshy lore
-prerequisites: []
-rarity: common
+foundryID: i5W5aGWEiyo1vt2d
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: c2aa3de1-9221-5611-ad18-af5959bec543
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 624f4841-a001-5e37-8cff-0726d7dfe43f
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: c522ede7-d108-56d8-b682-30a524d8adb9
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 82626215-c7cc-5e5a-acae-205ae07f40ba
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: stealth
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: i5W5aGWEiyo1vt2d
-traits:
-- leshy
-type: ancestry
+- id: c2aa3de1-9221-5611-ad18-af5959bec543
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 624f4841-a001-5e37-8cff-0726d7dfe43f
+    featId: '@feat.additional-lore'
+- id: c522ede7-d108-56d8-b682-30a524d8adb9
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: 82626215-c7cc-5e5a-acae-205ae07f40ba
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: stealth}
+    proficiencyCap: 2

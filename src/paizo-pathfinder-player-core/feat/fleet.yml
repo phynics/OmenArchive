@@ -1,31 +1,15 @@
 ---
-action: {}
-description: You move more quickly on foot. Your Speed increases by 5 feet.
-level: 1
-mechanicsScope: builder
 name: fleet
-prerequisites: []
+level: 1
 rarity: common
-rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-speed-modifier
-    revision: 1
-  id: 539232b3-59a3-5f75-b0d0-57e24f7e0bf3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: amount
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Ux73dmoF8KnavyUD
+type: general
 traits:
 - general
-type: general
+description: You move more quickly on foot. Your Speed increases by 5 feet.
+mechanicsScope: builder
+foundryID: Ux73dmoF8KnavyUD
+rules:
+- id: 539232b3-59a3-5f75-b0d0-57e24f7e0bf3
+  effect: core/add-speed-modifier
+  inputs:
+    amount: 5

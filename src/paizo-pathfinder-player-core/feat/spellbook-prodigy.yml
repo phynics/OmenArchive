@@ -1,48 +1,22 @@
 ---
-action: {}
+name: spellbook prodigy
+level: 1
+rarity: common
+type: class
+traits:
+- wizard
+prerequisites:
+- text: trained in Arcana
+  hasSkillProficiency: {skill: arcana, proficiency: trained}
 description: You are particularly adept at learning spells to add to your spellbook.
   You gain the Magical Shorthand skill feat without needing to meet its prerequisites.
   Further, when you roll a critical failure on your check to Learn a Spell, you get
   a failure instead.
-level: 1
 mechanicsScope: mixed
-name: spellbook prodigy
-prerequisites:
-- trained in Arcana
-rarity: common
+foundryID: FCzfh8QHMo7QJpAM
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 001addc8-e6aa-5495-98ff-e0c5479ee97f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 51c0fcfe-146f-5caf-9286-fbcf23fb98b4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1f1ec909-af03-5432-ae1f-45e2c6280824
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: FCzfh8QHMo7QJpAM
-traits:
-- wizard
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: arcana
+- id: 001addc8-e6aa-5495-98ff-e0c5479ee97f
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 51c0fcfe-146f-5caf-9286-fbcf23fb98b4
+    featId: '@feat.magical-shorthand'

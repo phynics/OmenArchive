@@ -1,5 +1,15 @@
 ---
-action: {}
+name: assured knowledge
+level: 6
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: enigma muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: 'You can procure information with confidence. Whenever you Recall Knowledge
   using any skill (including Bardic Lore), you can forgo rolling your check to instead
   receive a result of 10 + your proficiency bonus (don''t apply any other bonuses,
@@ -7,23 +17,5 @@ description: 'You can procure information with confidence. Whenever you Recall K
 
   As long as you are an expert in a skill, you meet the prerequisites for the Automatic
   Knowledge skill feat in that skill, even if you don''t have Assurance in that skill.'
-level: 6
 mechanicsScope: encounter
-name: assured knowledge
-prerequisites:
-- enigma muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: c6CS97Zs0DPmInaI
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 561e24d0-c44a-5fff-9abd-ec39e3d7f785
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: c6CS97Zs0DPmInaI

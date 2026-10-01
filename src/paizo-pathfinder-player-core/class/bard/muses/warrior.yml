@@ -1,5 +1,8 @@
 ---
-action: {}
+name: warrior
+level: 1
+traits:
+- bard
 description: 'The battlefield is your stage, the clang of steel, your song. Your muse
   has seen countless battles, whether reveling in combat or resigned to its necessity.
   An individual soldier or general might inspire you, but so might a battlefield or
@@ -18,70 +21,17 @@ description: 'The battlefield is your stage, the clang of steel, your song. Your
 grantedSpells:
 - grant: known
   spell: omen://spell/fear?source=paizo-pathfinder-player-core
-level: 1
 mechanicsScope: builder
-name: warrior
+foundryID: N03BtRvjX9TeHRa4
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: e930c758-094a-54ea-b6da-d353aa46213f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e5d06bf0-0446-5547-aebc-a7437c5f8d02
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 381b323b-da61-5fd5-9f0f-5099b242b1df
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 1e42979a-4a49-56c3-8a8f-c7c344363f1c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: fe037758-b6aa-53e6-97fd-014de3f3bdcf
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1f7bbe94-f20e-5c3a-9c5a-a02b009877a9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: N03BtRvjX9TeHRa4
-traits:
-- bard
+- id: e930c758-094a-54ea-b6da-d353aa46213f
+  effect: core/add-feat@2
+  inputs:
+    selectionId: e5d06bf0-0446-5547-aebc-a7437c5f8d02
+    featId: '@feat.martial-performance'
+- id: 1e42979a-4a49-56c3-8a8f-c7c344363f1c
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    entryId: fe037758-b6aa-53e6-97fd-014de3f3bdcf
+    spellId: '@spell.fear'

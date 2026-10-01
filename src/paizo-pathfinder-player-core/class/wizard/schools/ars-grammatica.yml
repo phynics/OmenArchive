@@ -1,5 +1,19 @@
 ---
-action: {}
+name: school of ars grammatica
+level: 1
+traits:
+- wizard
+description: "Runes and wards, numbers and letters—they underpin all magic, making
+  them the logical subject for a wizard who studies fundamental forces. Perhaps you
+  studied at the Pathfinder Society's School of Spells or a similar institution, but
+  whether you're lacing your words with magic to compel others, casting wards around
+  your workshop, or destabilizing the very structure of an opponent's spells, you
+  know this unassuming school carries elegant power.\nCurriculum\n\t•\tcantrips: Message,
+  Sigil\n\t•\t1st: Command, Disguise Magic, Runic Body, Runic Weapon\n\t•\t2nd: Dispel
+  Magic, Translate\n\t•\t3rd: Enthrall, Veil of Privacy\n\t•\t4th: Dispelling Globe,
+  Suggestion\n\t•\t5th: Sending, Truespeech\n\t•\t6th: Repulsion, Spellwrack\n\t•\t7th:
+  Contingency, Planar Seal\n\t•\t8th: Quandary, Unrelenting Observation\n\t•\t9th:
+  Detonate Magic\nSchool Spells initial: Protective Wards; advanced: Rune of Observation"
 curriculum:
 - rank: 0
   spells:
@@ -42,985 +56,253 @@ curriculum:
 - rank: 9
   spells:
   - omen://spell/detonate-magic?source=paizo-pathfinder-player-core
-description: "Runes and wards, numbers and letters—they underpin all magic, making
-  them the logical subject for a wizard who studies fundamental forces. Perhaps you
-  studied at the Pathfinder Society's School of Spells or a similar institution, but
-  whether you're lacing your words with magic to compel others, casting wards around
-  your workshop, or destabilizing the very structure of an opponent's spells, you
-  know this unassuming school carries elegant power.\nCurriculum\n\t•\tcantrips: Message,
-  Sigil\n\t•\t1st: Command, Disguise Magic, Runic Body, Runic Weapon\n\t•\t2nd: Dispel
-  Magic, Translate\n\t•\t3rd: Enthrall, Veil of Privacy\n\t•\t4th: Dispelling Globe,
-  Suggestion\n\t•\t5th: Sending, Truespeech\n\t•\t6th: Repulsion, Spellwrack\n\t•\t7th:
-  Contingency, Planar Seal\n\t•\t8th: Quandary, Unrelenting Observation\n\t•\t9th:
-  Detonate Magic\nSchool Spells initial: Protective Wards; advanced: Rune of Observation"
 grantedSpells:
 - grant: focus
   spell: omen://spell/protective-wards?source=paizo-pathfinder-player-core
-level: 1
 mechanicsScope: builder
-name: school of ars grammatica
+foundryID: wObrT6PytPdS5aUi
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
-    revision: 1
-  id: 9c203f86-f742-5595-beb1-9bdca1355ebc
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: df20e95c-0996-52fa-acbb-6ba6afa79aaf
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Wizard Focus Spells
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-    inputName: castingKind
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: arcane
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: int
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 1f56b8b6-6de0-50fb-98e3-b9bed09ea36d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: df20e95c-0996-52fa-acbb-6ba6afa79aaf
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8d06a9e7-66b7-5b12-8f14-12389569a071
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6267aa85-4324-51c4-811f-e491d1a4a34c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 9f1da1c0-bba2-5de8-9acb-990c64b8e9dd
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: eba99b47-05ac-5603-9a06-90dd2aeff64a
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 2a946da3-8afc-5846-a6fd-8520cd83c7e0
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 39dc1193-6683-53b7-b8b2-73616289102c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 89275ec8-88d8-5ae5-9bb8-2a7acdc704ae
-                  kind: hasID
-              - kind: single
-                value:
-                  id: fd443646-571f-5b9c-ac31-9bda07809918
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: d2a4a3a8-1e84-5090-a090-38a8c8920789
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 4c06876c-9888-5a7c-b7d1-b37a20a1a496
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 32134395-c6ab-5c1f-808a-23f465f563f0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 6b17ea06-15a4-5d0a-9f18-0bd451c1c1f7
-                  kind: hasID
-              - kind: single
-                value:
-                  id: c4da72b1-5ab5-5a8b-a61f-d789135852d0
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 20893b92-3441-5cf7-bffd-efe30e2a835a
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 7f7f4615-7222-5cee-a5b6-8415ae08507b
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: c9d1c6ce-5593-5b11-9c3d-331506719c21
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: dbff53a7-0dad-5570-8a0d-2480bda8cba7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 6b17ea06-15a4-5d0a-9f18-0bd451c1c1f7
-                  kind: hasID
-              - kind: single
-                value:
-                  id: c4da72b1-5ab5-5a8b-a61f-d789135852d0
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 20893b92-3441-5cf7-bffd-efe30e2a835a
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 7f7f4615-7222-5cee-a5b6-8415ae08507b
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: ffcc369f-70c2-5e10-b27a-74daabe42dd6
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 3
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 5e8b0a08-2b5c-52ac-97d5-f86e826d3a13
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 60e096c8-d55e-56b0-9be5-879207b777d0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 9869954a-9471-5491-8bd0-9e9dffdf3d91
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 78cd81f1-521e-5cb4-875c-bf23554ba4c5
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 3
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 680ece23-49b0-5ebf-9d5b-06a4177fd81e
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 5
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: f66f8faa-11c1-5bdc-af15-6513b35de51b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3c27ceaf-1f55-56c1-a351-8de1ad057ef1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: c6608af0-51c3-5c66-9f75-6801a78ca46f
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 2bd59453-2c48-5ce5-ae65-72a86f4d5e24
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 5
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 23e0e886-954a-5e3c-9589-231005b8c4c7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 7
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 2670994f-c97c-52ae-a166-4a6687b12315
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 19c83114-5733-5bd1-acb5-536f96e106ee
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 15c17e98-dfe8-5850-8ec9-d88111440714
-                  kind: hasID
-              - kind: single
-                value:
-                  id: c9526126-341e-538b-b3bd-beef8ba7bebe
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 7
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: f36e2ab3-4efc-51dd-8128-7becc34db892
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 9
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 9b5c0e03-6fd0-58aa-a12a-6dfdf4e575fc
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6d7b5bc4-9ca9-58be-8641-7ab1dee9ae31
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 873841f0-ba76-541c-b5d2-f57c3d2d1361
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 8db7f663-f818-5c37-8a86-02ae745e81fd
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 9
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: cc9b068f-80aa-5bff-827e-dc807bacd5a2
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 11
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: d85ca272-6a4d-5760-990c-7189503f7ce7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 46e60e96-fe80-533a-b6a1-4188c2aabdba
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: c79d026b-4a94-53cb-ba64-c03d882d0aab
-                  kind: hasID
-              - kind: single
-                value:
-                  id: efdf5f35-4902-5b15-a1ef-36c0de5cbc3f
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 11
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: ecc45289-9179-5141-ad6e-a81f0c303e3c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 13
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 7f3d910b-7c8b-5d56-8d35-7e65bd897af7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ae951998-777f-5604-819d-b2c2be0fd143
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: ec0d2bf6-8bbf-5129-b47a-e8789c1f59e3
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 2774a79c-2ba1-5454-bee2-141c71948d1f
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 13
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 747fbcb3-0835-55c5-a4a1-ca8b65e4ee75
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 15
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 7f0388de-55a5-5d59-a4bd-2627d4ceb222
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5264158a-31e6-507e-896e-2395989eee76
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 12953315-573e-57c2-b08a-9836aaccab6e
-                  kind: hasID
-              - kind: single
-                value:
-                  id: 4973da3e-e908-53fe-b30e-7db4ae41c87b
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 15
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 6a62941c-3fd2-5690-859c-5b958a4e4f7e
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 17
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 5d16718e-6fd5-5f51-b170-01c3628c30df
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c78cb906-1cd7-57cc-b713-288becbb7f90
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 98c94608-8901-500c-a5e6-4bce00fc3bcb
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-          lookupName: known-spell
-          options:
-            filter:
-              kind: union
-              values:
-              - kind: single
-                value:
-                  id: 4fa0a955-6f18-5362-b297-4cd3a117c227
-                  kind: hasID
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 17
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wObrT6PytPdS5aUi
-traits:
-- wizard
+- id: 9c203f86-f742-5595-beb1-9bdca1355ebc
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
+    sourceName: Wizard Focus Spells
+    castingKind: focus
+    tradition: arcane
+    attribute: int
+- id: 1f56b8b6-6de0-50fb-98e3-b9bed09ea36d
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
+    grantId: 8d06a9e7-66b7-5b12-8f14-12389569a071
+    spellId: '@spell.protective-wards'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 9f1da1c0-bba2-5de8-9acb-990c64b8e9dd
+  effect: spellcasting/add-focus-point
+- id: eba99b47-05ac-5603-9a06-90dd2aeff64a
+  effect: spellcasting/grant-slot
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 0
+    count: 1
+- id: 2a946da3-8afc-5846-a6fd-8520cd83c7e0
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 39dc1193-6683-53b7-b8b2-73616289102c
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options: {filter: {any: [{id: '@spell.message'}, {id: '@spell.sigil'}]}}
+- id: d2a4a3a8-1e84-5090-a090-38a8c8920789
+  effect: spellcasting/grant-slot
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 1
+    count: 1
+- id: 4c06876c-9888-5a7c-b7d1-b37a20a1a496
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 32134395-c6ab-5c1f-808a-23f465f563f0
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.command'}
+            - {id: '@spell.disguise-magic'}
+            - {id: '@spell.runic-body'}
+            - {id: '@spell.runic-weapon'}
+- id: c9d1c6ce-5593-5b11-9c3d-331506719c21
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: dbff53a7-0dad-5570-8a0d-2480bda8cba7
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.command'}
+            - {id: '@spell.disguise-magic'}
+            - {id: '@spell.runic-body'}
+            - {id: '@spell.runic-weapon'}
+- id: ffcc369f-70c2-5e10-b27a-74daabe42dd6
+  effect: spellcasting/grant-slot
+  level: 3
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 2
+    count: 1
+- id: 5e8b0a08-2b5c-52ac-97d5-f86e826d3a13
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 60e096c8-d55e-56b0-9be5-879207b777d0
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.dispel-magic'}
+            - {id: '@spell.translate'}
+- id: 680ece23-49b0-5ebf-9d5b-06a4177fd81e
+  effect: spellcasting/grant-slot
+  level: 5
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 3
+    count: 1
+- id: f66f8faa-11c1-5bdc-af15-6513b35de51b
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 3c27ceaf-1f55-56c1-a351-8de1ad057ef1
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.enthrall'}
+            - {id: '@spell.veil-of-privacy'}
+- id: 23e0e886-954a-5e3c-9589-231005b8c4c7
+  effect: spellcasting/grant-slot
+  level: 7
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 4
+    count: 1
+- id: 2670994f-c97c-52ae-a166-4a6687b12315
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 19c83114-5733-5bd1-acb5-536f96e106ee
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.dispelling-globe'}
+            - {id: '@spell.suggestion'}
+- id: f36e2ab3-4efc-51dd-8128-7becc34db892
+  effect: spellcasting/grant-slot
+  level: 9
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 5
+    count: 1
+- id: 9b5c0e03-6fd0-58aa-a12a-6dfdf4e575fc
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 6d7b5bc4-9ca9-58be-8641-7ab1dee9ae31
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.sending'}
+            - {id: '@spell.truespeech'}
+- id: cc9b068f-80aa-5bff-827e-dc807bacd5a2
+  effect: spellcasting/grant-slot
+  level: 11
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 6
+    count: 1
+- id: d85ca272-6a4d-5760-990c-7189503f7ce7
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 46e60e96-fe80-533a-b6a1-4188c2aabdba
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.repulsion'}
+            - {id: '@spell.spellwrack'}
+- id: ecc45289-9179-5141-ad6e-a81f0c303e3c
+  effect: spellcasting/grant-slot
+  level: 13
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 7
+    count: 1
+- id: 7f3d910b-7c8b-5d56-8d35-7e65bd897af7
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: ae951998-777f-5604-819d-b2c2be0fd143
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.contingency'}
+            - {id: '@spell.planar-seal'}
+- id: 747fbcb3-0835-55c5-a4a1-ca8b65e4ee75
+  effect: spellcasting/grant-slot
+  level: 15
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 8
+    count: 1
+- id: 7f0388de-55a5-5d59-a4bd-2627d4ceb222
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 5264158a-31e6-507e-896e-2395989eee76
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options:
+          filter:
+            any:
+            - {id: '@spell.quandary'}
+            - {id: '@spell.unrelenting-observation'}
+- id: 6a62941c-3fd2-5690-859c-5b958a4e4f7e
+  effect: spellcasting/grant-slot
+  level: 17
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    spellRank: 9
+    count: 1
+- id: 5d16718e-6fd5-5f51-b170-01c3628c30df
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
+    entryId: 98c94608-8901-500c-a5e6-4bce00fc3bcb
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
+        options: {filter: {any: [{id: '@spell.detonate-magic'}]}}

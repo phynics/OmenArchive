@@ -1,11 +1,30 @@
 ---
+name: paranoia
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- illusion
+- manipulate
+- mental
+traditions:
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: 1 minute
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  levels:
+    6:
+      target: 5 creatures
+  type: fixed
 description: 'You cause the target to see all other creatures as dire threats. The
   target is stricken by intense paranoia toward all creatures around it and must attempt
   a Will save.
@@ -30,27 +49,5 @@ description: 'You cause the target to see all other creatures as dire threats. T
 
 
   Heightened (6th) You can target up to 5 creatures.'
-duration: 1 minute
-heightening:
-  levels:
-    6:
-      target: 5 creatures
-  type: fixed
 mechanicsScope: encounter
-name: paranoia
-range: 30 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Mkbq9xlAUxHUHyR2
-target: 1 creature
-time: '2'
-traditions:
-- occult
-traits:
-- concentrate
-- illusion
-- manipulate
-- mental
+foundryID: Mkbq9xlAUxHUHyR2

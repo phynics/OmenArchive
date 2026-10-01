@@ -1,14 +1,9 @@
 ---
-description: 'A compass helps you Sense Direction or navigate, provided you''re in
-  a location with uniform magnetic fields. Without a compass, you take a -2 item penalty
-  to these checks (similar to using a shoddy item).
-
-  A lensatic compass gives you a +1 item bonus to these checks.'
-details:
-  equipment: {}
-level: 3
-mechanicsScope: mixed
 name: compass (lensatic)
+level: 3
+rarity: common
+type: equipment
+traits: []
 physical:
   bulk: '0'
   hardness: 0
@@ -17,63 +12,26 @@ physical:
   quantity: 1
   size: med
   usage: held-in-one-hand
-rarity: common
+details:
+  equipment: {}
+description: 'A compass helps you Sense Direction or navigate, provided you''re in
+  a location with uniform magnetic fields. Without a compass, you take a -2 item penalty
+  to these checks (similar to using a shoddy item).
+
+  A lensatic compass gives you a +1 item bonus to these checks.'
+mechanicsScope: mixed
+foundryID: xVhd8NF9KQ6VWfMu
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 301ccdfc-8bfe-5e8a-ac72-c1d01eba5477
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: da7b9df4-c14b-5aa4-9b6a-d472c773c989
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  survival: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Compass (Lensatic): +1 item bonus to Survival checks (Sense Direction
-            or navigate).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: Sense Direction or navigate
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xVhd8NF9KQ6VWfMu
-traits: []
-type: equipment
+- id: 301ccdfc-8bfe-5e8a-ac72-c1d01eba5477
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: da7b9df4-c14b-5aa4-9b6a-d472c773c989
+    target:
+      description:
+      - skill:
+          '_0':
+            survival: {}
+    description: 'Compass (Lensatic): +1 item bonus to Survival checks (Sense Direction
+      or navigate).'
+    numeric: {literal: {amount: 1, applicability: {description: Sense Direction or
+            navigate, kind: situational}, type: item}}

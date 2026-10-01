@@ -1,15 +1,36 @@
 ---
+name: malicious shadow
+rank: 3
+rarity: uncommon
+category: focus
+traits:
+- attack
+- concentrate
+- focus
+- hex
+- manipulate
+- shadow
+- witch
+traditions: []
+time: '2'
 action:
   count: two_actions
-category: focus
+range: 30 feet
+target: 1 creature
+duration: 1 minute
+defense:
+  counteraction: true
 damage:
   0:
     formula: 1d10
     kinds:
     - damage
     type: untyped
-defense:
-  counteraction: true
+heightening:
+  damage:
+    0: 1d10
+  interval: 2
+  type: interval
 description: 'Your patron warps the target''s shadow into a deadly form, such as strangling
   hands, a dangerous weapon, harrying runes, or the like. The shadow moves along with
   the target, always remaining within reach. When you Cast the Spell, and each time
@@ -28,33 +49,9 @@ description: 'Your patron warps the target''s shadow into a deadly form, such as
 
 
   Heightened (+2) The Strike damage increases by 1d10.'
+mechanicsScope: mixed
+unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
 diagnostics:
 - Foundry damage materials/applyMod metadata is not represented by CharacterSpell
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d10
-  interval: 2
-  type: interval
-mechanicsScope: mixed
-name: malicious shadow
-range: 30 feet
-rank: 3
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: vhMCd15ZwNJn0zen
-target: 1 creature
-time: '2'
-traditions: []
-traits:
-- attack
-- concentrate
-- focus
-- hex
-- manipulate
-- shadow
-- witch
-unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
+foundryID: vhMCd15ZwNJn0zen

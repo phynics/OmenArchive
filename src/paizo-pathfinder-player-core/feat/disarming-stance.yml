@@ -1,4 +1,14 @@
 ---
+name: disarming stance
+level: 6
+rarity: common
+type: class
+traits:
+- fighter
+- stance
+prerequisites:
+- text: trained in Athletics
+  hasSkillProficiency: {skill: athletics, proficiency: trained}
 action:
   count: one_action
   requirements: You are wielding a single one-handed melee weapon and hold nothing
@@ -8,21 +18,5 @@ description: You adopt a fencing stance that improves your control over your wea
   to Disarm and a +2 circumstance bonus to your Reflex DC when defending against checks
   to Disarm you. In addition, you can attempt to Disarm creatures up to two sizes
   larger than you.
-level: 6
 mechanicsScope: mixed
-name: disarming stance
-prerequisites:
-- trained in Athletics
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 1p5ErCp33nGOzEsk
-traits:
-- fighter
-- stance
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: athletics
+foundryID: 1p5ErCp33nGOzEsk

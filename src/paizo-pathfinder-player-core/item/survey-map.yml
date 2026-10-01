@@ -1,14 +1,9 @@
 ---
-description: Maps are uncommon. Most maps you can find are simple and functional.
-  A survey map details a single location in excellent detail. One of these maps gives
-  you a +1 item bonus to Survival checks and any skill checks to Recall Knowledge,
-  provided the checks are related to the location detailed on the map. The GM determines
-  what maps are available in any location.
-details:
-  equipment: {}
-level: 3
-mechanicsScope: builder
 name: survey map
+level: 3
+rarity: uncommon
+type: equipment
+traits: []
 physical:
   bulk: L
   hardness: 0
@@ -17,112 +12,36 @@ physical:
   quantity: 1
   size: med
   usage: held-in-one-hand
-rarity: uncommon
+details:
+  equipment: {}
+description: Maps are uncommon. Most maps you can find are simple and functional.
+  A survey map details a single location in excellent detail. One of these maps gives
+  you a +1 item bonus to Survival checks and any skill checks to Recall Knowledge,
+  provided the checks are related to the location detailed on the map. The GM determines
+  what maps are available in any location.
+mechanicsScope: builder
+foundryID: UhcRWtnjU2WLSClx
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 9b33fb74-c82d-5e8d-b17a-08513332e1b2
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4167aac3-a761-5d6e-b3f6-277a89e8c0f2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  survival: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Survey Map: +1 item bonus to Survival checks (mapped area).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: mapped area
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 126d92b7-ec70-5337-9bdc-83cbdb8f691f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b4739301-ecce-5225-930b-2877074b88c5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - anySkill: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Survey Map: +1 item bonus to skill checks (Recall knowledge on
-            mapped area).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: Recall knowledge on mapped area
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: UhcRWtnjU2WLSClx
-traits: []
-type: equipment
+- id: 9b33fb74-c82d-5e8d-b17a-08513332e1b2
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 4167aac3-a761-5d6e-b3f6-277a89e8c0f2
+    target:
+      description:
+      - skill:
+          '_0':
+            survival: {}
+    description: 'Survey Map: +1 item bonus to Survival checks (mapped area).'
+    numeric: {literal: {amount: 1, applicability: {description: mapped area, kind: situational},
+        type: item}}
+- id: 126d92b7-ec70-5337-9bdc-83cbdb8f691f
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: b4739301-ecce-5225-930b-2877074b88c5
+    target:
+      description:
+      - anySkill: {}
+    description: 'Survey Map: +1 item bonus to skill checks (Recall knowledge on mapped
+      area).'
+    numeric: {literal: {amount: 1, applicability: {description: Recall knowledge on
+            mapped area, kind: situational}, type: item}}

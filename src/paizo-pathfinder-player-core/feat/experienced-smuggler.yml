@@ -1,5 +1,14 @@
 ---
-action: {}
+name: experienced smuggler
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: Trained in Stealth
+  hasSkillProficiency: {skill: stealth, proficiency: trained}
 description: 'You often smuggle things past the authorities. When the GM rolls your
   Stealth check to see if a passive observer notices a small item you''ve Concealed,
   the GM uses the number rolled or 10—whichever is higher—as the result of your die
@@ -11,21 +20,5 @@ description: 'You often smuggle things past the authorities. When the GM rolls y
 
   PFS Note This feat allows you to Earn Income with Underworld Lore with tasks of
   your level -1 (instead of the normal level -2).'
-level: 1
 mechanicsScope: encounter
-name: experienced smuggler
-prerequisites:
-- Trained in Stealth
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: t3btih0O5RUwWynt
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: stealth
+foundryID: t3btih0O5RUwWynt

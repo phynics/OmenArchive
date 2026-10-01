@@ -1,4 +1,13 @@
 ---
+name: shadow self
+level: 17
+rarity: common
+type: ancestry
+traits:
+- halfling
+prerequisites:
+- text: legendary Stealth
+  hasSkillProficiency: {skill: stealth, proficiency: legendary}
 action:
   frequency: once per hour
   trigger: You successfully use Stealth to Hide and become Hidden from all your current
@@ -9,20 +18,5 @@ description: You slip from your adversaries' notice and appear to be somewhere e
   you appear to be hidden in that location to anyone trying to find you. If the searcher
   gets clear evidence that you're not there, they no longer think you're hidden there,
   but they don't discover your actual location.
-level: 17
 mechanicsScope: encounter
-name: shadow self
-prerequisites:
-- legendary Stealth
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 7YvOqcdp9Z0RALMp
-traits:
-- halfling
-type: ancestry
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: stealth
+foundryID: 7YvOqcdp9Z0RALMp

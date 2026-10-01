@@ -1,4 +1,18 @@
 ---
+name: unusual composition
+level: 10
+rarity: common
+type: class
+traits:
+- bard
+- concentrate
+- manipulate
+- spellshape
+prerequisites:
+- text: polymath muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 action:
   count: one_action
 description: You can translate the emotion and power of a composition to other mediums.
@@ -6,26 +20,5 @@ description: You can translate the emotion and power of a composition to other m
   can have it affect creatures who can witness it with any sense, not just those the
   traits indicate, even including special senses like tremorsense. You can choose
   to exclude any senses you choose.
-level: 10
 mechanicsScope: encounter
-name: unusual composition
-prerequisites:
-- polymath muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: tonJdHGheKZ16tMI
-traits:
-- bard
-- concentrate
-- manipulate
-- spellshape
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: a97a9fdf-136d-5006-a083-4825663520ec
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: tonJdHGheKZ16tMI

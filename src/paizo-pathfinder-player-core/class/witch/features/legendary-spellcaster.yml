@@ -1,5 +1,15 @@
 ---
-action: {}
+name: legendary spellcaster
+level: 19
+traits:
+- animist
+- bard
+- druid
+- oracle
+- psychic
+- sorcerer
+- witch
+- wizard
 description: 'Animist You are a near-perfect channel for the magical energies of the
   realms beyond. Your proficiency ranks for spell attack modifier and spell DC increase
   to legendary.
@@ -27,44 +37,12 @@ description: 'Animist You are a near-perfect channel for the magical energies of
   Wizard You are a consummate spellcaster, blending both arcane theory and practical
   spellcraft. Your proficiency ranks for spell attack modifier and spell DC increase
   to legendary.'
-level: 19
 mechanicsScope: builder
-name: legendary spellcaster
+foundryID: Hfaa7TuLn3nE8lr3
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/increase-source-proficiency
-    revision: 1
-  id: 86513e47-9d88-5bdb-ae13-51b546b4b494
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiency
-  startLevel: 19
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Hfaa7TuLn3nE8lr3
-traits:
-- animist
-- bard
-- druid
-- oracle
-- psychic
-- sorcerer
-- witch
-- wizard
+- id: 86513e47-9d88-5bdb-ae13-51b546b4b494
+  effect: spellcasting/increase-source-proficiency
+  level: 19
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    proficiency: 8

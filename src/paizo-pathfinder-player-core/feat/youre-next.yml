@@ -1,4 +1,17 @@
 ---
+name: you're next
+level: 1
+rarity: common
+type: class
+traits:
+- emotion
+- fear
+- mental
+- rogue
+- swashbuckler
+prerequisites:
+- text: trained in Intimidation
+  hasSkillProficiency: {skill: intimidation, proficiency: trained}
 action:
   count: reaction
   trigger: You reduce an enemy to 0 Hit Points.
@@ -10,24 +23,5 @@ description: 'Rogue After downing a foe, you menace another. Attempt to Demorali
   them next. Attempt an Intimidation check with a +2 circumstance bonus to Demoralize
   a single creature that you can see and that can see you. If you''re legendary in
   Intimidation, you can use this as a free action with the same trigger.'
-level: 1
 mechanicsScope: encounter
-name: you're next
-prerequisites:
-- trained in Intimidation
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: gjec0ts3wkFbjvHN
-traits:
-- emotion
-- fear
-- mental
-- rogue
-- swashbuckler
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: intimidation
+foundryID: gjec0ts3wkFbjvHN

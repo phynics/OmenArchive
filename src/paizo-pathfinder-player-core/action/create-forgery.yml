@@ -1,4 +1,9 @@
 ---
+name: create forgery
+traits:
+- downtime
+- secret
+requirements: You provide the proper writing materials for your forgery.
 description: 'You create a forged document, usually over the course of a day or a
   week. The GM rolls a secret DC 20 Society check. If you need to forge a specific
   person''s handwriting, you need a sample of that person''s handwriting. Otherwise,
@@ -16,18 +21,10 @@ description: 'You create a forged document, usually over the course of a day or 
   is genuine and can''t try again unless they get a new reason to be suspicious of
   the document. If a PC examines a genuine document, the GM might still pretend to
   roll a secret check before revealing the document is genuine.'
+success: The forgery is of good enough quality that passive observers can't notice
+  the fake (but see Examining Forgeries).
 failure: The forgery has some obvious signs of being a fake, potentially allowing
   passive observers to detect it. Each time a passive observer sees the document,
   the GM compares your check result to the observer's Perception DC or Society DC,
   whichever is higher. If your result doesn't exceed a passive observer's DC, that
   observer knows the document is a forgery.
-name: create forgery
-requirements: You provide the proper writing materials for your forgery.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-success: The forgery is of good enough quality that passive observers can't notice
-  the fake (but see Examining Forgeries).
-traits:
-- downtime
-- secret

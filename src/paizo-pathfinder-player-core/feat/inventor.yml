@@ -1,5 +1,15 @@
 ---
-action: {}
+name: inventor
+level: 2
+rarity: common
+type: skill
+traits:
+- downtime
+- general
+- skill
+prerequisites:
+- text: expert in Crafting
+  hasSkillProficiency: {skill: crafting, proficiency: expert}
 description: 'You are a genius at Crafting, easily able to determine how things are
   made and create new inventions. You can spend downtime to invent a common formula
   that you don''t know. This works just like the Craft activity: you spend half the
@@ -12,22 +22,5 @@ description: 'You are a genius at Crafting, easily able to determine how things 
   The GM might allow you to invent uncommon or rare formulas, typically with an increased
   DC. You need the Alchemical Crafting feat to invent alchemical formulas and the
   Magical Crafting feat to invent magical formulas.'
-level: 2
 mechanicsScope: encounter
-name: inventor
-prerequisites:
-- expert in Crafting
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: XR95taODq1sq82Du
-traits:
-- downtime
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: crafting
+foundryID: XR95taODq1sq82Du

@@ -1,24 +1,16 @@
 ---
-action: {}
-description: Your vitality is even more vibrant and restorative. When you cast Heal,
-  you roll d10s instead of d8s.
-level: 1
-mechanicsScope: encounter
 name: healing hands
-prerequisites:
-- healing font
+level: 1
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: zYhcEX4JnrZ08HfV
+type: class
 traits:
 - cleric
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 4304f211-3168-5db9-8c6f-ecf24393f20a
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+prerequisites:
+- text: healing font
+  hasChoice:
     name: $.cleric.divine-font
+    equals: {type: spellcasting/spell-id, value: '@spell.heal'}
+description: Your vitality is even more vibrant and restorative. When you cast Heal,
+  you roll d10s instead of d8s.
+mechanicsScope: encounter
+foundryID: zYhcEX4JnrZ08HfV

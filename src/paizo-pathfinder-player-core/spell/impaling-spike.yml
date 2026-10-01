@@ -1,17 +1,36 @@
 ---
+name: impaling spike
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- metal
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: 1 minute
+defense:
+  basic: false
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 8d6
     kinds:
     - damage
     type: piercing
-defense:
-  basic: false
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'You conjure a spike that thrusts up from the earth beneath a target
   creature, potentially impaling it. The spike is made of cold iron and deals 8d6
   piercing damage. The target must attempt a Reflex save.
@@ -34,29 +53,7 @@ description: 'You conjure a spike that thrusts up from the earth beneath a targe
 
 
   Heightened (+1) The damage increases by 2d6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry damage materials/applyMod metadata is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: impaling spike
-range: 30 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: oXeEbcUdgJGWHGEJ
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- manipulate
-- metal
+foundryID: oXeEbcUdgJGWHGEJ

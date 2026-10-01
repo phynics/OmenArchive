@@ -1,5 +1,7 @@
 ---
+name: rock dwarf
 ancestry: dwarf
+rarity: common
 description: 'Your ancestors lived and worked among the ancient stones of the mountains
   or the depths of the earth. This makes you solid as a rock when you plant your feet.
   You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts
@@ -9,111 +11,28 @@ description: 'Your ancestors lived and worked among the ancient stones of the mo
   In addition, if any effect would force you to move 10 feet or more, you are moved
   only half the distance.'
 mechanicsScope: builder
-name: rock dwarf
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: e6b38100-2aea-5ab5-8055-389f3e55cb4f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: dcca4bd4-ab5d-5e2b-a075-dc4cf143a687
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - savingThrow:
-                _0: fortitude
-            - savingThrow:
-                _0: reflex
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Rock Dwarf: +2 circumstance bonus to Fortitude saves and Reflex
-            saves (Shove or Trip or Reposition).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 2
-            applicability:
-              description: Shove or Trip or Reposition
-              kind: situational
-            type: circumstance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 40bc6111-4e73-544f-9e41-b0bb8feeabf9
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 66df37e8-137d-5cd8-a2d0-4dc748a102e7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - anyNonPerceptionSavingThrow: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Rock Dwarf: +2 circumstance bonus to saving throws (in some situations).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 2
-            applicability:
-              description: in some situations
-              kind: situational
-            type: circumstance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: e6b38100-2aea-5ab5-8055-389f3e55cb4f
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: dcca4bd4-ab5d-5e2b-a075-dc4cf143a687
+    target:
+      description:
+      - savingThrow:
+          '_0': fortitude
+      - savingThrow:
+          '_0': reflex
+    description: 'Rock Dwarf: +2 circumstance bonus to Fortitude saves and Reflex
+      saves (Shove or Trip or Reposition).'
+    numeric: {literal: {amount: 2, applicability: {description: Shove or Trip or Reposition,
+          kind: situational}, type: circumstance}}
+- id: 40bc6111-4e73-544f-9e41-b0bb8feeabf9
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 66df37e8-137d-5cd8-a2d0-4dc748a102e7
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    description: 'Rock Dwarf: +2 circumstance bonus to saving throws (in some situations).'
+    numeric: {literal: {amount: 2, applicability: {description: in some situations,
+          kind: situational}, type: circumstance}}

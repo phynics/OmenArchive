@@ -1,7 +1,24 @@
 ---
+name: personal blizzard
+rank: 3
+rarity: uncommon
+category: focus
+traits:
+- cold
+- focus
+- hex
+- witch
+traditions: []
+time: '1'
 action:
   count: one_action
-category: focus
+range: 30 feet
+target: 1 creature
+duration: 1 minute
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 1d6
@@ -14,10 +31,12 @@ damage:
     kinds:
     - damage
     type: cold
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: '1'
+    1: '1'
+  interval: 1
+  type: interval
 description: 'Your patron''s breath becomes blizzard of obscuring, scouring ice that
   follows your target. The target attempts a Fortitude save.
 
@@ -39,29 +58,7 @@ description: 'Your patron''s breath becomes blizzard of obscuring, scouring ice 
 
   Heightened (+1) The cold damage and persistent cold damage increase by 1 (2 on a
   critical failure).'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: '1'
-    1: '1'
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: personal blizzard
-range: 30 feet
-rank: 3
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: g4MAIQodRDVfNp1B
-target: 1 creature
-time: '1'
-traditions: []
-traits:
-- cold
-- focus
-- hex
-- witch
+foundryID: g4MAIQodRDVfNp1B

@@ -1,132 +1,43 @@
 ---
-action: {}
+name: first world magic
+level: 1
+rarity: common
+type: ancestry
+traits:
+- gnome
 description: Your connection to the First World grants you a primal innate spell,
   much like those of the fey. Choose one cantrip from the primal spell list. You can
   cast this spell as a primal innate spell at will. A cantrip is heightened to a spell
   rank equal to half your level rounded up.
-level: 1
 mechanicsScope: mixed
-name: first world magic
-prerequisites: []
-rarity: common
+foundryID: yJ8Ez5dEscIk1xr5
 rules:
-- choice:
-    answer:
-      filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: spell
-        - kind: single
-          value:
-            kind: hasRarity
-            rarity: common
-        - kind: single
-          value:
-            kind: hasMetadata
-            metadataKey: spell.category
-            metadataValue: cantrip
-        - kind: single
-          value:
-            kind: hasMetadata
-            metadataKey: spell.tradition
-            metadataValue: primal
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+- id: 117268fb-66f0-50d0-bfcb-53568b6fea33
+  key: choice-feat-first-world-magic-cantrip
+  choice:
+    name: $.feat.first-world-magic.cantrip
     label: First World Magic Spell
     legacySelections:
     - inputName: spellId
       lookupName: first-world-magic-spell
       ruleID: c1172df4-b063-5a4b-b40a-be1d8bad4953
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-    name: $.feat.first-world-magic.cantrip
-    startLevel: 1
-  id: 117268fb-66f0-50d0-bfcb-53568b6fea33
-  key: choice-feat-first-world-magic-cantrip
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: c1172df4-b063-5a4b-b40a-be1d8bad4953
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f9fc550d-e6c9-5b90-9142-c5607ad4e3fd
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: First World Magic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6b02bd09-bb6c-5a7c-84dc-a161fc078c42
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.first-world-magic.cantrip
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: primal
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: atWill
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: yJ8Ez5dEscIk1xr5
-traits:
-- gnome
-type: ancestry
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - {rarity: common}
+        - {spell.category: cantrip}
+        - {spell.tradition: primal}
+      type: spellcasting/spell-id
+- id: c1172df4-b063-5a4b-b40a-be1d8bad4953
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: f9fc550d-e6c9-5b90-9142-c5607ad4e3fd
+    sourceName: First World Magic
+    grantId: 6b02bd09-bb6c-5a7c-84dc-a161fc078c42
+    spellId: {choice: $.feat.first-world-magic.cantrip}
+    tradition: primal
+    attribute: cha
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: atWill}

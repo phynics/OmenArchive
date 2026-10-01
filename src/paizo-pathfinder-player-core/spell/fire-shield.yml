@@ -1,13 +1,30 @@
 ---
+name: fire shield
+rank: 4
+rarity: common
+category: spell
+traits:
+- concentrate
+- fire
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+duration: 1 minute
 damage:
   0:
     formula: 2d6
     kinds:
     - damage
     type: fire
+heightening:
+  damage:
+    0: 1d6
+  interval: 2
+  type: interval
 description: 'You create a hovering shield made of fire. As long as the shield persists,
   its heat grants you cold resistance 5 and makes you immune to mild and severe environmental
   cold. You can Raise a Shield with the fire shield as a normal shield to gain a +1
@@ -20,25 +37,5 @@ description: 'You create a hovering shield made of fire. As long as the shield p
 
   Heightened (+2) The cold resistance increases by 5, the HP increase by 10, and the
   fire damage increases by 1d6.'
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d6
-  interval: 2
-  type: interval
 mechanicsScope: encounter
-name: fire shield
-rank: 4
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: YrzBLPLd3r9m6t1p
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- fire
-- manipulate
+foundryID: YrzBLPLd3r9m6t1p

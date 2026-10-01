@@ -1,4 +1,16 @@
 ---
+name: resounding finale
+level: 16
+rarity: common
+type: class
+traits:
+- bard
+- concentrate
+prerequisites:
+- text: maestro muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 action:
   count: reaction
   trigger: You or an ally benefiting from your composition spell would take sonic
@@ -7,24 +19,5 @@ description: You bring your performance to a sudden, dramatic finish, drowning o
   other sounds. Your composition spell ends immediately, and all allies that had been
   benefiting from the spell's effects gain sonic resistance against the triggering
   damage equal to twice the composition spell's rank.
-level: 16
 mechanicsScope: encounter
-name: resounding finale
-prerequisites:
-- maestro muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: lhSqWHXK1JShUabF
-traits:
-- bard
-- concentrate
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: e3ea2e9a-ac76-5a96-9d90-d127c118411b
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: lhSqWHXK1JShUabF

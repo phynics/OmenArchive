@@ -1,5 +1,17 @@
 ---
-action: {}
+name: master spellcaster
+level: 15
+traits:
+- animist
+- bard
+- druid
+- magus
+- oracle
+- psychic
+- sorcerer
+- summoner
+- witch
+- wizard
 description: 'Animist Your affinity with the apparitions you bond to has further enhanced
   the potency of your magic. Your proficiency ranks for spell attack modifier and
   spell DC increase to master.
@@ -32,47 +44,13 @@ description: 'Animist Your affinity with the apparitions you bond to has further
 
   Wizard You command superlative spellcasting ability. Your proficiency ranks for
   spell attack modifier and spell DC increase to master.'
-level: 15
 mechanicsScope: builder
-name: master spellcaster
+foundryID: l1InYvhnQSz6Ucxc
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/increase-source-proficiency
-    revision: 1
-  id: 202e0539-2342-5933-9482-c2cdc1b09d48
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiency
+- id: 202e0539-2342-5933-9482-c2cdc1b09d48
   key: item-alteration-1
-  startLevel: 15
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: l1InYvhnQSz6Ucxc
-traits:
-- animist
-- bard
-- druid
-- magus
-- oracle
-- psychic
-- sorcerer
-- summoner
-- witch
-- wizard
+  effect: spellcasting/increase-source-proficiency
+  level: 15
+  inputs:
+    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
+    proficiency: 6

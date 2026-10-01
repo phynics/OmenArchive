@@ -1,25 +1,20 @@
 ---
-action: {}
-description: You gain one ranger feat. For the purpose of meeting its prerequisites,
-  your ranger level is equal to half your character level.
-level: 6
-mechanicsScope: encounter
 name: advanced hunter's trick
-prerequisites:
-- Basic Hunter's Trick
+level: 6
 rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Basic Hunter's Trick
+  hasResourceWithName: basic hunter's trick
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: f754txt1ZyhVWXHk
+description: You gain one ranger feat. For the purpose of meeting its prerequisites,
+  your ranger level is equal to half your character level.
 specialText: You can select this feat more than once. Each time you select it, you
   gain another ranger feat.
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic hunter's trick
+mechanicsScope: encounter
+foundryID: f754txt1ZyhVWXHk

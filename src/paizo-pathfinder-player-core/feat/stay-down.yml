@@ -1,4 +1,13 @@
 ---
+name: stay down!
+level: 14
+rarity: common
+type: class
+traits:
+- rogue
+prerequisites:
+- text: master in Athletics
+  hasSkillProficiency: {skill: athletics, proficiency: master}
 action:
   count: reaction
   trigger: A Prone foe within your reach Stands.
@@ -6,20 +15,5 @@ description: You have ways of keeping your foes down. Attempt an athletics|defen
   check against the triggering foe's Fortitude DC. On a success, the action is disrupted,
   causing the creature to remain prone. On a critical success, the creature also can't
   Stand until its next turn.
-level: 14
 mechanicsScope: encounter
-name: stay down!
-prerequisites:
-- master in Athletics
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 2KBKXkRthBXpw48X
-traits:
-- rogue
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: athletics
+foundryID: 2KBKXkRthBXpw48X

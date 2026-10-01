@@ -1,6 +1,10 @@
 ---
-criticalFailure: As failure, except you expend half the materials.
-criticalSuccess: You expend half the materials and learn the spell.
+name: learn a spell
+traits:
+- concentrate
+- exploration
+requirements: You have a spellcasting class feature, and the spell you want to learn
+  is on your magical tradition's spell list.
 description: "Magical Traditions and Skills\nEach magical tradition has a corresponding
   skill, as shown on the table below. You must have the trained proficiency rank in
   a skill to use it to Identify Magic or Learn a Spell. Something without a specific
@@ -21,15 +25,8 @@ description: "Magical Traditions and Skills\nEach magical tradition has a corres
   Rank\nPrice\nTypical DC\n1st or cantrip\n2 gp\n15\n2nd\n6 gp\n18\n3rd\n16 gp\n20\n4th\n36
   gp\n23\n5th\n70 gp\n26\n6th\n140 gp\n28\n7th\n300 gp\n31\n8th\n650 gp\n34\n9th\n1,500
   gp\n36\n10th\n7,000 gp\n41"
+criticalSuccess: You expend half the materials and learn the spell.
+success: You expend the materials and learn the spell.
 failure: You fail to learn the spell but can try again after you gain a level. The
   materials aren't expended.
-name: learn a spell
-requirements: You have a spellcasting class feature, and the spell you want to learn
-  is on your magical tradition's spell list.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-success: You expend the materials and learn the spell.
-traits:
-- concentrate
-- exploration
+criticalFailure: As failure, except you expend half the materials.

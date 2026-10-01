@@ -1,44 +1,14 @@
 ---
+name: cavern elf
 ancestry: elf
+rarity: common
 description: You were born or spent many years in underground tunnels or caverns where
   light is scarce. You gain darkvision.
 mechanicsScope: builder
-name: cavern elf
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-sense
-    revision: 1
-  id: c361b305-9eb7-5b81-9e25-f60d59819d54
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: darkvision
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: selector
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: acuity
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: -1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: range
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: c361b305-9eb7-5b81-9e25-f60d59819d54
+  effect: core/add-sense
+  inputs:
+    selector: darkvision
+    acuity: ''
+    range: -1

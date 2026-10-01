@@ -1,22 +1,16 @@
 ---
-action: {}
+name: incredible companion (ranger)
+level: 10
+rarity: common
+type: class
+traits:
+- ranger
+prerequisites:
+- text: Mature Animal Companion
+  anyOf: [{hasFeatWithName: mature animal companion (druid)}, {hasFeatWithName: mature
+        animal companion (ranger)}]
 description: Your animal companion continues to grow and develop. It becomes a nimble
   or savage animal companion (your choice), gaining additional capabilities determined
   by the type of companion.
-level: 10
 mechanicsScope: encounter
-name: incredible companion (ranger)
-prerequisites:
-- Mature Animal Companion
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: U52NMdeSNbjSSRHE
-traits:
-- ranger
-type: class
-typedPrerequisites:
-- anyOf:
-  - hasFeatWithName: mature animal companion (druid)
-  - hasFeatWithName: mature animal companion (ranger)
+foundryID: U52NMdeSNbjSSRHE

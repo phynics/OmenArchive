@@ -1,45 +1,20 @@
 ---
-action: {}
+name: prairie rider
+level: 1
+rarity: common
+type: ancestry
+traits:
+- halfling
 description: You grew up riding your clan's shaggy ponies and riding dogs. You become
   trained in Nature. If you would automatically become trained in Nature (from your
   background or class, for example), you instead become trained in a skill of your
   choice. You also get a +1 circumstance bonus to Command an Animal if the target
   is a traditional halfling mount, such as a pony or riding dog.
-level: 1
 mechanicsScope: mixed
-name: prairie rider
-prerequisites: []
-rarity: common
+foundryID: A9HQ2bMAge2aGgWx
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 22bd760f-65c8-5e0d-b302-0f3f41cc62ad
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: nature
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: A9HQ2bMAge2aGgWx
-traits:
-- halfling
-type: ancestry
+- id: 22bd760f-65c8-5e0d-b302-0f3f41cc62ad
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2

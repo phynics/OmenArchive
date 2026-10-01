@@ -1,4 +1,14 @@
 ---
+name: slam down
+level: 4
+rarity: common
+type: class
+traits:
+- fighter
+- flourish
+prerequisites:
+- text: trained in Athletics
+  hasSkillProficiency: {skill: athletics, proficiency: trained}
 action:
   count: two_actions
 description: You make an attack to knock a foe off balance, then follow up immediately
@@ -7,21 +17,5 @@ description: You make an attack to knock a foe off balance, then follow up immed
   a two-handed melee weapon, you can ignore Trip's requirement that you have a hand
   free. Both attacks count toward your multiple attack penalty, but the penalty doesn't
   increase until after you've made both of them.
-level: 4
 mechanicsScope: mixed
-name: slam down
-prerequisites:
-- trained in Athletics
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 39CqlOzlHjEhh0E4
-traits:
-- fighter
-- flourish
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: athletics
+foundryID: 39CqlOzlHjEhh0E4

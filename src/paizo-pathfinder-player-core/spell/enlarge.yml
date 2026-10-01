@@ -1,7 +1,26 @@
 ---
+name: enlarge
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- polymorph
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 willing creature
+duration: 5 minutes
+heightening:
+  levels:
+    6:
+      target: 10 willing creatures
+  type: fixed
 description: 'Bolstered by magical power, the target grows to size Large. Its equipment
   grows with it but returns to natural size if removed. The creature is Clumsy 1.
   Its reach increases by 5 feet (or by 10 feet if it started out Tiny), and it gains
@@ -16,27 +35,5 @@ description: 'Bolstered by magical power, the target grows to size Large. Its eq
 
   Heightened (6th) Choose either the 2nd-rank or 4th-rank version of this spell and
   apply its effects to up to 10 willing creatures.'
-duration: 5 minutes
-heightening:
-  levels:
-    6:
-      target: 10 willing creatures
-  type: fixed
 mechanicsScope: encounter
-name: enlarge
-range: 30 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wzctak6BxOW8xvFV
-target: 1 willing creature
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- manipulate
-- polymorph
+foundryID: wzctak6BxOW8xvFV

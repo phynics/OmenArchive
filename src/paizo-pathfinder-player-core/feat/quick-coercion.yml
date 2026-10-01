@@ -1,23 +1,16 @@
 ---
-action: {}
-description: You can bully others with just a few choice implications. You can Coerce
-  a creature after 1 round of conversation instead of 1 minute. You still can't Coerce
-  a creature in the midst of combat, or without engaging in a conversation.
-level: 1
-mechanicsScope: encounter
 name: quick coercion
-prerequisites:
-- trained in Intimidation
+level: 1
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: ar2DUlvDK4LDcH9J
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: intimidation
+prerequisites:
+- text: trained in Intimidation
+  hasSkillProficiency: {skill: intimidation, proficiency: trained}
+description: You can bully others with just a few choice implications. You can Coerce
+  a creature after 1 round of conversation instead of 1 minute. You still can't Coerce
+  a creature in the midst of combat, or without engaging in a conversation.
+mechanicsScope: encounter
+foundryID: ar2DUlvDK4LDcH9J

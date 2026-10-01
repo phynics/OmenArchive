@@ -1,13 +1,32 @@
 ---
+name: telekinetic projectile
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- attack
+- cantrip
+- concentrate
+- manipulate
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
-category: cantrip
+range: 30 feet
+target: 1 creature
 damage:
   0:
     formula: 2d6
     kinds:
     - damage
     type: untyped
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
 description: 'You hurl a loose, unattended object that is within range and that has
   1 Bulk or less at the target. Make a spell attack roll against the target. If you
   hit, you deal 2d6 bludgeoning, piercing, or slashing damage—as appropriate for the
@@ -22,28 +41,6 @@ description: 'You hurl a loose, unattended object that is within range and that 
 
 
   Heightened (+1) The damage increases by 1d6.'
-heightening:
-  damage:
-    0: 1d6
-  interval: 1
-  type: interval
 mechanicsScope: mixed
-name: telekinetic projectile
-range: 30 feet
-rank: 0
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 60sgbuMWN0268dB7
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- attack
-- cantrip
-- concentrate
-- manipulate
 unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
+foundryID: 60sgbuMWN0268dB7

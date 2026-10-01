@@ -1,5 +1,8 @@
 ---
-action: {}
+name: lesson of vengeance
+level: 2
+traits:
+- witch
 description: You gain the Needle of Vengeance hex, and your familiar learns Phantom
   Pain.
 grantedSpells:
@@ -7,105 +10,22 @@ grantedSpells:
   spell: omen://spell/needle-of-vengeance?source=paizo-pathfinder-player-core
 - grant: known
   spell: omen://spell/phantom-pain?source=paizo-pathfinder-player-core
-level: 2
 mechanicsScope: builder
-name: lesson of vengeance
+foundryID: DtmKrCvsmutVLAhH
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 57ff3100-4bc0-5d6d-a2b3-21a588a8fdec
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8255cbe4-4877-509a-8a3a-306410711a6e
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b26cce8f-5e11-5833-9651-78fa4a347260
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 7b8c7267-0672-5a77-b9a4-05904017b1eb
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 099a4403-221f-5b95-9ecd-9370d1ce31d6
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9c2dc576-32ed-5d00-8fc3-9dcbe0685374
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 750f15af-16ea-5996-9a1e-5e5b3ad9465c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: DtmKrCvsmutVLAhH
-traits:
-- witch
+- id: 57ff3100-4bc0-5d6d-a2b3-21a588a8fdec
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: 8255cbe4-4877-509a-8a3a-306410711a6e
+    spellId: '@spell.needle-of-vengeance'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 7b8c7267-0672-5a77-b9a4-05904017b1eb
+  effect: spellcasting/add-focus-point
+- id: 099a4403-221f-5b95-9ecd-9370d1ce31d6
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 9c2dc576-32ed-5d00-8fc3-9dcbe0685374
+    spellId: '@spell.phantom-pain'

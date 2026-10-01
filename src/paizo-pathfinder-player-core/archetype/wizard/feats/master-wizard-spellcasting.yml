@@ -1,22 +1,15 @@
 ---
-action: {}
-description: You gain the Master Spellcasting Feat benefits.
-level: 18
-mechanicsScope: encounter
 name: master wizard spellcasting
-prerequisites:
-- Expert Wizard Spellcasting
-- legendary in Arcana
+level: 18
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: PMckhnGYMyiwUNiL
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: expert wizard spellcasting
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: arcana
+prerequisites:
+- text: Expert Wizard Spellcasting
+  hasResourceWithName: expert wizard spellcasting
+- text: legendary in Arcana
+  hasSkillProficiency: {skill: arcana, proficiency: legendary}
+description: You gain the Master Spellcasting Feat benefits.
+mechanicsScope: encounter
+foundryID: PMckhnGYMyiwUNiL

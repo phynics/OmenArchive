@@ -1,45 +1,21 @@
 ---
-action: {}
+name: callow may
+level: 1
+rarity: common
+type: ancestry
+traits:
+- changeling
+- lineage
 description: You are among the most common of changelings—those born to sweet hags—and
   a vibrant green eye signifies that parentage. Your mother's manipulative nature
   and versatile voice gives you an edge when deceiving others. You gain the Charming
   Liar skill feat. If you roll Deception for initiative, foes in that combat encounter
   that haven't acted yet are Off-Guard against you.
-level: 1
 mechanicsScope: mixed
-name: callow may
-prerequisites: []
-rarity: common
+foundryID: IFvjnLMw3ht8f84U
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 444b18d3-e176-5bc7-9a4d-362678475100
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: a6e2c6af-e9a1-53b5-8f7d-04860a48f047
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 155d1f05-c016-5596-828b-37f0ab571fd9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: IFvjnLMw3ht8f84U
-traits:
-- changeling
-- lineage
-type: ancestry
+- id: 444b18d3-e176-5bc7-9a4d-362678475100
+  effect: core/add-feat@2
+  inputs:
+    selectionId: a6e2c6af-e9a1-53b5-8f7d-04860a48f047
+    featId: '@feat.charming-liar'

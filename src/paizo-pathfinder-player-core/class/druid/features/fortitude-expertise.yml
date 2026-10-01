@@ -1,44 +1,25 @@
 ---
-action: {}
-description: |-
-  Animist Spiritual energy reinforces your body, making you more resilient. Your proficiency rank for Fortitude saves increases to expert.
-  Bard, Investigator, Swashbuckler Your physique has grown hardy in your adventures. Your proficiency rank for Fortitude saves increases to expert.
-  Druid Adventures have made your physique more hardy. Your proficiency rank for Fortitude saves increases to expert.
-level: 3
-mechanicsScope: builder
 name: fortitude expertise
-rules:
-- id: a482bae0-851d-5b94-a2e7-e3b6587ea33f
-  effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-saving-throw
-    revision: 1
-  inputRecipes:
-  - inputName: savingThrow
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/saving-throw
-          revision: 1
-          payload: fortitude
-  - inputName: proficiencyRank
-    expectedValue:
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      source:
-        kind: literal
-        value:
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-          revision: 1
-          payload: 4
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: F57Na5VxfBp56kke
+level: 3
 traits:
 - animist
 - bard
 - druid
 - investigator
 - swashbuckler
+description: 'Animist Spiritual energy reinforces your body, making you more resilient.
+  Your proficiency rank for Fortitude saves increases to expert.
+
+  Bard, Investigator, Swashbuckler Your physique has grown hardy in your adventures.
+  Your proficiency rank for Fortitude saves increases to expert.
+
+  Druid Adventures have made your physique more hardy. Your proficiency rank for Fortitude
+  saves increases to expert.'
+mechanicsScope: builder
+foundryID: F57Na5VxfBp56kke
+rules:
+- id: a482bae0-851d-5b94-a2e7-e3b6587ea33f
+  effect: core/add-saving-throw
+  inputs:
+    savingThrow: fortitude
+    proficiencyRank: 4

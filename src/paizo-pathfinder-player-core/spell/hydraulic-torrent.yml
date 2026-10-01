@@ -1,18 +1,33 @@
 ---
+name: hydraulic torrent
+rank: 4
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- water
+traditions:
+- primal
+time: '2'
 action:
   count: two_actions
 area: '60'
-category: spell
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 8d6
     kinds:
     - damage
     type: bludgeoning
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'A swirling torrent of water manifests along a straight line, battering
   creatures and unattended objects in its path and possibly pushing them away from
   you. The torrent deals 8d6 bludgeoning damage. Each creature in the area must attempt
@@ -21,25 +36,7 @@ description: 'A swirling torrent of water manifests along a straight line, batte
 
 
   Heightened (+1) The damage increases by 2d6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: hydraulic torrent
-rank: 4
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Y3G6Y6EDgCY0s3fq
-time: '2'
-traditions:
-- primal
-traits:
-- concentrate
-- manipulate
-- water
+foundryID: Y3G6Y6EDgCY0s3fq

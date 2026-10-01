@@ -1,5 +1,7 @@
 ---
+name: changeling
 ancestry: versatile
+rarity: uncommon
 description: Your mother was a hag. Your eyes' heterochromia is the most obvious signifier
   of this parentage, but you likely also have a slighter build, paler skin, and darker
   hair than most members of your other parent's ancestry. You gain the changeling
@@ -7,92 +9,22 @@ description: Your mother was a hag. Your eyes' heterochromia is the most obvious
   has low-light vision. You can select from changeling feats and feats from your other
   parent's ancestry whenever you gain an ancestry feat.
 mechanicsScope: builder
-name: changeling
-rarity: uncommon
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-character-ancestry-trait
-    revision: 1
-  id: 15645c09-a032-58ba-a4ae-d08ac6724bab
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: changeling
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: trait
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-sense
-    revision: 1
-  id: c72fbdab-6af0-54c7-bdef-3ff696479c1a
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: low-light-vision
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: selector
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: acuity
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: -1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: range
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-sense
-    revision: 1
-  id: 0741247b-bcf1-5982-8a1e-ece0c1249b25
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: darkvision
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: selector
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: acuity
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: -1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: range
+- id: 15645c09-a032-58ba-a4ae-d08ac6724bab
+  effect: core/add-character-ancestry-trait
+  inputs:
+    trait: changeling
+- id: c72fbdab-6af0-54c7-bdef-3ff696479c1a
+  effect: core/add-sense
+  inputs:
+    selector: low-light-vision
+    acuity: ''
+    range: -1
+- id: 0741247b-bcf1-5982-8a1e-ece0c1249b25
+  effect: core/add-sense
   prerequisites:
   - hasAncestryVision: low-light-vision
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+  inputs:
+    selector: darkvision
+    acuity: ''
+    range: -1

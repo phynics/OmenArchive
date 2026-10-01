@@ -1,22 +1,15 @@
 ---
-action: {}
-description: You can survive indefinitely without food or water and can endure severe,
-  extreme, and incredible cold and heat without taking damage from doing so.
-level: 15
-mechanicsScope: encounter
 name: legendary survivalist
-prerequisites:
-- legendary in Survival
+level: 15
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Ta61ObC8Lk7BxTFO
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: survival
+prerequisites:
+- text: legendary in Survival
+  hasSkillProficiency: {skill: survival, proficiency: legendary}
+description: You can survive indefinitely without food or water and can endure severe,
+  extreme, and incredible cold and heat without taking damage from doing so.
+mechanicsScope: encounter
+foundryID: Ta61ObC8Lk7BxTFO

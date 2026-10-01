@@ -1,5 +1,14 @@
 ---
-action: {}
+name: natural medicine
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Nature
+  hasSkillProficiency: {skill: nature, proficiency: trained}
 description: 'You can apply natural cures to heal your allies. You can use Nature
   instead of Medicine to Treat Wounds, including higher Nature proficiency letting
   you attempt more difficult checks. It doesn''t replace Medicine for uses of the
@@ -8,21 +17,5 @@ description: 'You can apply natural cures to heal your allies. You can use Natur
   If you''re in the wilderness, you might have easier access to fresh ingredients,
   allowing you to gain a +2 circumstance bonus to your check to Treat Wounds using
   Nature, subject to the GM''s determination.'
-level: 1
 mechanicsScope: encounter
-name: natural medicine
-prerequisites:
-- trained in Nature
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: WC4xLBGmBsdOdHWu
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: nature
+foundryID: WC4xLBGmBsdOdHWu

@@ -1,25 +1,18 @@
 ---
-action: {}
+name: divine castigation
+level: 1
+rarity: common
+type: class
+traits:
+- cleric
+prerequisites:
+- text: holy or unholy trait
+  anyOf: [{hasTrait: holy}, {hasTrait: unholy}]
 description: Your deity's grace doesn't extend to your sworn enemies. When you cast
   a Harm or Heal spell, you can add your holy or unholy trait to it. If you do, the
   spell deals damage to creatures with the opposing trait, even if it wouldn't normally
   damage them. The spell deals spirit damage when used this way. For example, if you
   are holy, you could add the holy trait to a heal spell and deal spirit damage to
   a fiend that has the unholy trait.
-level: 1
 mechanicsScope: encounter
-name: divine castigation
-prerequisites:
-- holy or unholy trait
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 142QRyK2aPIrJu48
-traits:
-- cleric
-type: class
-typedPrerequisites:
-- anyOf:
-  - hasTrait: holy
-  - hasTrait: unholy
+foundryID: 142QRyK2aPIrJu48

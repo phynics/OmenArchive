@@ -1,18 +1,37 @@
 ---
+name: sunburst
+rank: 7
+rarity: common
+category: spell
+traits:
+- concentrate
+- fire
+- light
+- manipulate
+- vitality
+traditions:
+- divine
+- primal
+time: '2'
 action:
   count: two_actions
+range: 500 feet
 area: '60'
-category: spell
+defense:
+  basic: false
+  counteraction: true
+  save: reflex
 damage:
   0:
     formula: 8d10
     kinds:
     - damage
     type: fire
-defense:
-  basic: false
-  counteraction: true
-  save: reflex
+heightening:
+  damage:
+    0: 1d10
+  interval: 1
+  type: interval
 description: 'A powerful globe of searing sunlight explodes in the area, dealing 8d10
   fire damage to all creatures in the area, plus an additional (spell rank+1)d10[vitality]
   damage to undead creatures. Each creature in the area must attempt a Reflex save.
@@ -36,29 +55,7 @@ description: 'A powerful globe of searing sunlight explodes in the area, dealing
 
   Heightened (+1) The fire damage increases by 1d10, and the vitality damage against
   undead increases by 1d10.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    0: 1d10
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: sunburst
-range: 500 feet
-rank: 7
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: a3aQxCpoj1q1NQxC
-time: '2'
-traditions:
-- divine
-- primal
-traits:
-- concentrate
-- fire
-- light
-- manipulate
-- vitality
+foundryID: a3aQxCpoj1q1NQxC

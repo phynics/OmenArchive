@@ -1,15 +1,9 @@
 ---
-description: 'This leather sheath is large enough to hold an item of up to light Bulk
-  and is typically used for daggers, wands, thieves'' tools, and similar objects.
-
-  You can affix it to the inside of a boot, under a bracer or sleeve, or in other
-  inconspicuous locations to gain a +1 item bonus to Stealth checks and DCs to hide
-  or conceal the item within.'
-details:
-  equipment: {}
-level: 3
-mechanicsScope: builder
 name: concealed sheath
+level: 3
+rarity: common
+type: equipment
+traits: []
 physical:
   bulk: '0'
   hardness: 0
@@ -18,63 +12,27 @@ physical:
   quantity: 1
   size: med
   usage: worn
-rarity: common
+details:
+  equipment: {}
+description: 'This leather sheath is large enough to hold an item of up to light Bulk
+  and is typically used for daggers, wands, thieves'' tools, and similar objects.
+
+  You can affix it to the inside of a boot, under a bracer or sleeve, or in other
+  inconspicuous locations to gain a +1 item bonus to Stealth checks and DCs to hide
+  or conceal the item within.'
+mechanicsScope: builder
+foundryID: laU7xnX42wXch2Dv
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 320598ed-7f6a-5389-8346-eb7423b159d2
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: baa0e6e2-8977-5130-b59d-95648b0f3806
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  stealth: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Concealed Sheath: +1 item bonus to Stealth checks (hide or conceal
-            contents).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: hide or conceal contents
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: laU7xnX42wXch2Dv
-traits: []
-type: equipment
+- id: 320598ed-7f6a-5389-8346-eb7423b159d2
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: baa0e6e2-8977-5130-b59d-95648b0f3806
+    target:
+      description:
+      - skill:
+          '_0':
+            stealth: {}
+    description: 'Concealed Sheath: +1 item bonus to Stealth checks (hide or conceal
+      contents).'
+    numeric: {literal: {amount: 1, applicability: {description: hide or conceal contents,
+          kind: situational}, type: item}}

@@ -1,13 +1,32 @@
 ---
+name: wall of ice
+rank: 5
+rarity: common
+category: spell
+traits:
+- cold
+- concentrate
+- manipulate
+- water
+traditions:
+- arcane
+- primal
+time: '3'
 action:
   count: three_actions
-category: spell
+range: 120 feet
+duration: 1 minute
 damage:
   0:
     formula: 2d6
     kinds:
     - damage
     type: cold
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
 description: 'You sculpt an ice barrier that blocks sight and, once shattered, freezes
   foes. You create either a 1-foot-thick wall of ice in a straight line up to 60 feet
   long and 10 feet high (the wall doesn''t have to be vertical, but it must be anchored
@@ -28,27 +47,5 @@ description: 'You sculpt an ice barrier that blocks sight and, once shattered, f
 
   Heightened (+2) The Hit Points of each section of the wall increase by 10, and the
   cold damage dealt to creatures crossing a destroyed section increases by 1d6.'
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: wall of ice
-range: 120 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: R5FHRv7VqyRnxg2t
-time: '3'
-traditions:
-- arcane
-- primal
-traits:
-- cold
-- concentrate
-- manipulate
-- water
+foundryID: R5FHRv7VqyRnxg2t

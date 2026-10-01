@@ -1,23 +1,16 @@
 ---
-action: {}
-description: When you successfully Coerce someone, the maximum time they comply increases
-  to a week, still determined by the GM. If you're legendary, the maximum increases
-  to a month.
-level: 2
-mechanicsScope: encounter
 name: lasting coercion
-prerequisites:
-- expert in Intimidation
+level: 2
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 6vnbC90UQ3I57RrQ
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: intimidation
+prerequisites:
+- text: expert in Intimidation
+  hasSkillProficiency: {skill: intimidation, proficiency: expert}
+description: When you successfully Coerce someone, the maximum time they comply increases
+  to a week, still determined by the GM. If you're legendary, the maximum increases
+  to a month.
+mechanicsScope: encounter
+foundryID: 6vnbC90UQ3I57RrQ

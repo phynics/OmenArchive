@@ -1,5 +1,15 @@
 ---
-action: {}
+name: witch dedication
+level: 2
+rarity: common
+type: archetype
+traits:
+- archetype
+- dedication
+- multiclass
+prerequisites:
+- text: Intelligence +2
+  hasAttributeModifier: {attribute: int, modifier: 2}
 description: 'You cast spells like a witch. Choose a Patron; you gain a familiar with
   two common cantrips of your choice from your chosen patron''s tradition, but aside
   from the tradition, you don''t gain any other effects the patron would usually grant.
@@ -15,25 +25,8 @@ description: 'You cast spells like a witch. Choose a Patron; you gain a familiar
   were already trained in it, you instead become trained in a skill of your choice.
 
   Witch'
-level: 2
 mechanicsScope: mixed
-name: witch dedication
-prerequisites:
-- Intelligence +2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: y0vdu6DGhKKElmE6
-traits:
-- archetype
-- dedication
-- multiclass
-type: archetype
-typedPrerequisites:
-- hasAttributeModifier:
-    attribute: int
-    modifier: 2
 unsupportedReason: 'Selectable class feature reference at position 0 did not resolve
   canonically. Resource: omen://feat/witch-dedication?source=paizo-pathfinder-player-core.
   Foundry keys: [GrantItem, GrantItem].'
+foundryID: y0vdu6DGhKKElmE6

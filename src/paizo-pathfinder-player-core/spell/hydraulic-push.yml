@@ -1,13 +1,32 @@
 ---
+name: hydraulic push
+rank: 1
+rarity: common
+category: spell
+traits:
+- attack
+- concentrate
+- manipulate
+- water
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 60 feet
+target: 1 creature or unattended object
 damage:
   0:
     formula: 3d6
     kinds:
     - damage
     type: bludgeoning
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'You call forth a powerful blast of pressurized water that bludgeons
   the target and knocks it back. Make a ranged spell attack roll.
 
@@ -20,27 +39,5 @@ description: 'You call forth a powerful blast of pressurized water that bludgeon
 
 
   Heightened (+1) The bludgeoning damage increases by 2d6.'
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: hydraulic push
-range: 60 feet
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: jfVCuOpzC6mUrf6f
-target: 1 creature or unattended object
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- attack
-- concentrate
-- manipulate
-- water
+foundryID: jfVCuOpzC6mUrf6f

@@ -1,5 +1,15 @@
 ---
-action: {}
+name: esoteric polymath
+level: 2
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: polymath muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 description: 'You keep a book of occult spells, similar to a wizard''s spellbook,
   and can use its spells to supplement your spell repertoire. Add all the spells in
   your repertoire to this book for free. You can use the Occultism skill to Learn
@@ -9,23 +19,5 @@ description: 'You keep a book of occult spells, similar to a wizard''s spellbook
   If that spell is already in your spell repertoire, you can treat it as an additional
   signature spell that day. If it isn''t in your repertoire, treat it as though it
   were until your next daily preparations.'
-level: 2
 mechanicsScope: encounter
-name: esoteric polymath
-prerequisites:
-- polymath muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4HZTLPKPteEFsa7n
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: a97a9fdf-136d-5006-a083-4825663520ec
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: 4HZTLPKPteEFsa7n

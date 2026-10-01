@@ -1,5 +1,8 @@
 ---
-action: {}
+name: deity (cleric)
+level: 1
+traits:
+- cleric
 description: 'As a cleric, you are a mortal servitor of a deity you revere above all
   others. Your deity grants you the trained proficiency rank in one skill and with
   the deity''s favored weapon. If the favored weapon is uncommon, you also get access
@@ -38,19 +41,13 @@ description: 'As a cleric, you are a mortal servitor of a deity you revere above
   you lose are determined by the GM, but they likely include your divine font and
   all cleric spellcasting. These abilities can be regained only if you repent by conducting
   an atone ritual.'
-level: 1
 mechanicsScope: builder
-name: deity (cleric)
+foundryID: DutW12WMFPHBoLTH
 rules:
-- choice:
-    answer:
-      filter:
-        kind: single
-        value:
-          kind: hasPathPrefix
-          path: omen://class/cleric/deities?source=paizo-pathfinder-player-core
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+- id: 1491e9ee-f6eb-5b91-b646-405a577e9a5c
+  key: choice-deity
+  choice:
+    name: $.deity
     label: Deity
     legacySelections:
     - inputName: featureId
@@ -58,26 +55,8 @@ rules:
       ruleID: 4d35a879-0974-5345-a98b-97f4626507a1
       sourceID: 633c6777-bb3b-5017-b936-e5046a4d0757
       valueTypeID: org.openomen.pf2e.core/value/feature-id
-    name: $.deity
-    startLevel: 1
-  id: 1491e9ee-f6eb-5b91-b646-405a577e9a5c
-  key: choice-deity
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
-    revision: 1
-  id: 4d35a879-0974-5345-a98b-97f4626507a1
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.deity
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    inputName: featureId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: DutW12WMFPHBoLTH
-traits:
-- cleric
+    records: {filter: {pathPrefix: '@class.cleric.deities'}, type: core/feature-id}
+- id: 4d35a879-0974-5345-a98b-97f4626507a1
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.deity}

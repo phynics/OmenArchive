@@ -1,21 +1,14 @@
 ---
-action: {}
-description: It's almost impossible to spot you. When you roll a failure on a Sneak
-  action, you get a success instead. You can still critically fail.
-level: 10
-mechanicsScope: encounter
 name: sneak adept
-prerequisites:
-- master in Stealth
+level: 10
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 2Nu4ZdKQM8hx8x5D
+type: class
 traits:
 - rogue
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: stealth
+prerequisites:
+- text: master in Stealth
+  hasSkillProficiency: {skill: stealth, proficiency: master}
+description: It's almost impossible to spot you. When you roll a failure on a Sneak
+  action, you get a success instead. You can still critically fail.
+mechanicsScope: encounter
+foundryID: 2Nu4ZdKQM8hx8x5D

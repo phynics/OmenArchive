@@ -1,25 +1,17 @@
 ---
-action: {}
+name: forest passage
+level: 4
+rarity: common
+type: class
+traits:
+- druid
+prerequisites:
+- text: leaf order
+  hasChoice:
+    name: $.druid.order
+    equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
 description: You can always find a path, almost as if foliage parted before you. You
   ignore any difficult terrain caused by plants and fungi, such as bushes, vines,
   and undergrowth.
-level: 4
 mechanicsScope: encounter
-name: forest passage
-prerequisites:
-- leaf order
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: lKgpe2JKaeLjgnYF
-traits:
-- druid
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: adaf12b2-0f44-5d30-9b39-5571fa850ad4
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.druid.order
+foundryID: lKgpe2JKaeLjgnYF

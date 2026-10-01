@@ -1,16 +1,9 @@
 ---
-description: This small wooden box contains cosmetics, false facial hair, spirit gum,
-  and a few simple wigs. You usually need a disguise kit to set up a disguise in order
-  to Impersonate someone using the Deception skill. An elite disguise kit adds a +1
-  item bonus to relevant checks. If you've crafted a large number of disguises, you
-  can replenish your cosmetics supply with replacement cosmetics suitable for the
-  type of your disguise kit. You can draw and replace a worn disguise kit as part
-  of the action that uses it.
-details:
-  equipment: {}
-level: 3
-mechanicsScope: builder
 name: disguise kit (elite)
+level: 3
+rarity: common
+type: equipment
+traits: []
 physical:
   bulk: L
   hardness: 0
@@ -19,62 +12,27 @@ physical:
   quantity: 1
   size: med
   usage: held-in-two-hands
-rarity: common
+details:
+  equipment: {}
+description: This small wooden box contains cosmetics, false facial hair, spirit gum,
+  and a few simple wigs. You usually need a disguise kit to set up a disguise in order
+  to Impersonate someone using the Deception skill. An elite disguise kit adds a +1
+  item bonus to relevant checks. If you've crafted a large number of disguises, you
+  can replenish your cosmetics supply with replacement cosmetics suitable for the
+  type of your disguise kit. You can draw and replace a worn disguise kit as part
+  of the action that uses it.
+mechanicsScope: builder
+foundryID: YhkomhtKBK3i9C7Q
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 5dfd9019-9684-5e3b-8f6f-98bb749806bd
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 47aa8268-b8dd-5c67-8121-3cf6acef1e84
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  deception: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Disguise Kit (Elite): +1 item bonus to Deception checks (Impersonate).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: Impersonate
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: YhkomhtKBK3i9C7Q
-traits: []
-type: equipment
+- id: 5dfd9019-9684-5e3b-8f6f-98bb749806bd
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 47aa8268-b8dd-5c67-8121-3cf6acef1e84
+    target:
+      description:
+      - skill:
+          '_0':
+            deception: {}
+    description: 'Disguise Kit (Elite): +1 item bonus to Deception checks (Impersonate).'
+    numeric: {literal: {amount: 1, applicability: {description: Impersonate, kind: situational},
+        type: item}}

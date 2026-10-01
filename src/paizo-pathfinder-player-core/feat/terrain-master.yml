@@ -1,26 +1,19 @@
 ---
-action: {}
+name: terrain master
+level: 8
+rarity: common
+type: class
+traits:
+- ranger
+prerequisites:
+- text: master in Survival
+  hasSkillProficiency: {skill: survival, proficiency: master}
+- text: Favored Terrain
+  hasResourceWithName: favored terrain
 description: You are able to adapt to your surroundings in any natural terrain. You
   can spend 1 hour practicing in your current terrain in order to make it your favored
   terrain, replacing your current favored terrain temporarily. If you spend a full
   day out of the new favored terrain, your favored terrain reverts back to your original
   choice when you took the Favored Terrain feat.
-level: 8
 mechanicsScope: encounter
-name: terrain master
-prerequisites:
-- master in Survival
-- Favored Terrain
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: VKNxblSUxYXQYlLr
-traits:
-- ranger
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: master
-    skill: survival
-- hasResourceWithName: favored terrain
+foundryID: VKNxblSUxYXQYlLr

@@ -1,5 +1,15 @@
 ---
-action: {}
+name: versatile performance
+level: 1
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: polymath muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 description: 'You can rely on the grandeur of your performances rather than ordinary
   social skills. You can use Performance instead of Diplomacy to Make An Impression
   and instead of Intimidation to Demoralize. You can also use an acting Performance
@@ -8,23 +18,5 @@ description: 'You can rely on the grandeur of your performances rather than ordi
   In addition, you can use your proficiency rank in Performance to meet the prerequisites
   of skill feats that require a particular proficiency rank in Deception, Diplomacy,
   or Intimidation.'
-level: 1
 mechanicsScope: encounter
-name: versatile performance
-prerequisites:
-- polymath muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: jBp91q4uzwd4FeSX
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: a97a9fdf-136d-5006-a083-4825663520ec
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: jBp91q4uzwd4FeSX

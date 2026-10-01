@@ -1,5 +1,18 @@
 ---
-action: {}
+name: ferocious beasts
+level: 13
+rarity: common
+type: ancestry
+traits:
+- orc
+prerequisites:
+- text: animal companion, Pet, or Bonded Animal
+  anyOf:
+  - hasResourceWithName: animal companion
+  - hasResourceWithName: pet
+  - hasResourceWithName: bonded animal
+- text: Orc Ferocity
+  hasResourceWithName: orc ferocity
 description: Since ancient times, the mightiest orc beast tamers would draw out the
   true fighting spirit of their companion beasts by feeding the creatures a draft
   incorporating the orc's own blood. All animal companions, pets, familiars, and bonded
@@ -7,23 +20,5 @@ description: Since ancient times, the mightiest orc beast tamers would draw out 
   can use only for Orc Ferocity. If you have the Undying Ferocity ancestry feat, all
   animal companions, pets, familiars, and bonded animals you have also gain the benefits
   of that feat when using the Orc Ferocity reaction.
-level: 13
 mechanicsScope: encounter
-name: ferocious beasts
-prerequisites:
-- animal companion, Pet, or Bonded Animal
-- Orc Ferocity
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wteuGNhOXLvBudRQ
-traits:
-- orc
-type: ancestry
-typedPrerequisites:
-- anyOf:
-  - hasResourceWithName: animal companion
-  - hasResourceWithName: pet
-  - hasResourceWithName: bonded animal
-- hasResourceWithName: orc ferocity
+foundryID: wteuGNhOXLvBudRQ

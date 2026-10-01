@@ -1,47 +1,17 @@
 ---
+name: snow goblin
 ancestry: goblin
+rarity: common
 description: You are acclimated to living in frigid lands and have skin ranging from
   sky blue to navy in color, as well as blue fur. You gain cold resistance equal to
   half your level (minimum 1). You treat environmental cold effects as if they were
   one step less extreme (incredible cold becomes extreme, extreme cold becomes severe,
   and so on).
 mechanicsScope: builder
-name: snow goblin
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-resistance
-    revision: 2
-  id: 6c0d98a9-35ff-51b8-8583-df5ccb69bc20
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cold
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: type
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: '[[(max 1 (divide $.level 2))]]'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/sheet-value
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/sheet-value
-    inputName: value
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: exceptions
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: 6c0d98a9-35ff-51b8-8583-df5ccb69bc20
+  effect: core/add-resistance@2
+  inputs:
+    type: cold
+    value: \[[(max 1 (divide $.level 2))]]
+    exceptions: ''

@@ -1,18 +1,37 @@
 ---
+name: earthquake
+rank: 8
+rarity: common
+category: spell
+traits:
+- concentrate
+- earth
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
+range: 500 feet
 area: '60'
-category: spell
+duration: 1 round
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 11d6
     kinds:
     - damage
     type: bludgeoning
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  levels:
+    10:
+      area: '1320'
+      range: half a mile
+  type: fixed
 description: 'You shake the ground, topple creatures into fissures, and collapse structures.
   The GM might add additional effects in certain areas. Cliffs might collapse, causing
   creatures to fall, or a lake might drain as fissures open up below its surface,
@@ -39,29 +58,7 @@ description: 'You shake the ground, topple creatures into fissures, and collapse
 
   Heightened (10th) You create a massive earthquake that can devastate a settlement.
   The range increases to half a mile and the area to a quarter-mile burst.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 round
-heightening:
-  levels:
-    10:
-      area: '1320'
-      range: half a mile
-  type: fixed
-mechanicsScope: encounter
-name: earthquake
-range: 500 feet
-rank: 8
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: x7SPrsRxGb2Vy2nu
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- earth
-- manipulate
+foundryID: x7SPrsRxGb2Vy2nu

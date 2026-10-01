@@ -1,17 +1,33 @@
 ---
+name: localized quake
+rank: 4
+rarity: uncommon
+category: focus
+traits:
+- cleric
+- concentrate
+- earth
+- focus
+- manipulate
+traditions: []
+time: '2'
 action:
   count: two_actions
-category: focus
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 4d6
     kinds:
     - damage
     type: bludgeoning
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
 description: 'You shake the earth, toppling nearby creatures. Choose whether the spell''s
   area is a 15-foot emanation or a 15-foot cone when you cast it. Each creature in
   the area standing on solid ground takes 4d6 bludgeoning damage with a basic Reflex
@@ -19,24 +35,5 @@ description: 'You shake the earth, toppling nearby creatures. Choose whether the
 
 
   Heightened (+1) Increase the damage by 2d6.'
-heightening:
-  damage:
-    0: 2d6
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: localized quake
-rank: 4
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: cBUuG1yJHGeKffpg
-time: '2'
-traditions: []
-traits:
-- cleric
-- concentrate
-- earth
-- focus
-- manipulate
+foundryID: cBUuG1yJHGeKffpg

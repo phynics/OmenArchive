@@ -1,12 +1,29 @@
 ---
+name: dazzling flash
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- cleric
+- concentrate
+- focus
+- light
+- manipulate
+- visual
+traditions: []
+time: '2'
 action:
   count: two_actions
 area: '15'
-category: focus
 defense:
   basic: false
   counteraction: false
   save: fortitude
+heightening:
+  levels:
+    3:
+      area: '30'
+  type: fixed
 description: 'You raise your religious symbol and create a blinding flash of light.
   Each creature in the area must attempt a Fortitude save.
 
@@ -25,27 +42,7 @@ description: 'You raise your religious symbol and create a blinding flash of lig
 
 
   Heightened (3rd) The area increases to a 30-foot cone.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  levels:
-    3:
-      area: '30'
-  type: fixed
-mechanicsScope: encounter
-name: dazzling flash
-rank: 1
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: zul5cBTfr7NXHBZf
-time: '2'
-traditions: []
-traits:
-- cleric
-- concentrate
-- focus
-- light
-- manipulate
-- visual
+foundryID: zul5cBTfr7NXHBZf

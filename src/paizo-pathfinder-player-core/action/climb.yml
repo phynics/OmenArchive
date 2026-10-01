@@ -1,9 +1,9 @@
 ---
+name: climb
+traits:
+- move
 count: one_action
-criticalFailure: You fall. If you began the climb on stable ground, you fall and land
-  Prone.
-criticalSuccess: You move along the incline, increasing the maximum distance by 5
-  feet.
+requirements: You have both hands free
 description: "You attempt an Athletics check to move a maximum distance of 5 feet
   up, down, or across an incline. You're Off-Guard while climbing unless you have
   a climb Speed. The GM determines the DC based on the nature of the incline and environmental
@@ -13,11 +13,8 @@ description: "You attempt an Athletics check to move a maximum distance of 5 fee
   ladder, steep slope, low-branched tree\n\t•\tTrained rigging, rope, typical tree\n\t•\tExpert
   wall with small handholds and footholds\n\t•\tMaster ceiling with handholds and
   footholds, rock wall\n\t•\tLegendary smooth surface"
-name: climb
-requirements: You have both hands free
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+criticalSuccess: You move along the incline, increasing the maximum distance by 5
+  feet.
 success: You move along the incline.
-traits:
-- move
+criticalFailure: You fall. If you began the climb on stable ground, you fall and land
+  Prone.

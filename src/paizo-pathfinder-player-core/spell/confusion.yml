@@ -1,11 +1,31 @@
 ---
+name: confusion
+rank: 4
+rarity: common
+category: spell
+traits:
+- concentrate
+- emotion
+- manipulate
+- mental
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: 1 minute
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  levels:
+    8:
+      target: 10 creatures
+  type: fixed
 description: 'You befuddle your target with strange impulses, causing it to act randomly.
   The effects are determined by the target''s Will save. You can Dismiss the spell.
 
@@ -24,28 +44,5 @@ description: 'You befuddle your target with strange impulses, causing it to act 
 
 
   Heightened (8th) You can target up to 10 creatures.'
-duration: 1 minute
-heightening:
-  levels:
-    8:
-      target: 10 creatures
-  type: fixed
 mechanicsScope: encounter
-name: confusion
-range: 30 feet
-rank: 4
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: LiGbewa9pO0yjbsY
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- emotion
-- manipulate
-- mental
+foundryID: LiGbewa9pO0yjbsY

@@ -1,25 +1,20 @@
 ---
-action: {}
-description: You gain one cleric feat. For the purpose of meeting its prerequisites,
-  your cleric level is equal to half your character level.
-level: 6
-mechanicsScope: encounter
 name: advanced dogma
-prerequisites:
-- Basic Dogma
+level: 6
 rarity: common
+type: archetype
+traits:
+- archetype
+prerequisites:
+- text: Basic Dogma
+  hasResourceWithName: basic dogma
 repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: tkMEdh0gM07teWkx
+description: You gain one cleric feat. For the purpose of meeting its prerequisites,
+  your cleric level is equal to half your character level.
 specialText: You can select this feat more than once. Each time you select it, you
   gain another cleric feat.
-traits:
-- archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic dogma
+mechanicsScope: encounter
+foundryID: tkMEdh0gM07teWkx

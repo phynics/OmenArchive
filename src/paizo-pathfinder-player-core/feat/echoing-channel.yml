@@ -1,4 +1,16 @@
 ---
+name: echoing channel
+level: 18
+rarity: common
+type: class
+traits:
+- animist
+- cleric
+- concentrate
+- spellshape
+prerequisites:
+- text: Embodiment of Balance or Cleric
+  anyOf: [{unsupported: Embodiment of Balance is outside Player Core.}, {hasClassWithName: cleric}]
 action:
   count: one_action
 description: 'Animist When you channel the powers of life and death, your apparition
@@ -11,23 +23,5 @@ description: 'Animist When you channel the powers of life and death, your appari
   a single creature, choose one additional creature in range. Target that creature
   with a 1-action version of the same spell. This spell is the same rank as the 2-action
   harm or heal you cast and doesn''t cost another spell slot.'
-level: 18
 mechanicsScope: encounter
-name: echoing channel
-prerequisites:
-- Embodiment of Balance or Cleric
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: T4Xm8vYtnGMOM0Cw
-traits:
-- animist
-- cleric
-- concentrate
-- spellshape
-type: class
-typedPrerequisites:
-- anyOf:
-  - unsupported: Embodiment of Balance is outside Player Core.
-  - hasClassWithName: cleric
+foundryID: T4Xm8vYtnGMOM0Cw

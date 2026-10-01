@@ -1,110 +1,30 @@
 ---
-action: {}
+name: lesson of dreams
+level: 2
+traits:
+- witch
 description: You gain the Veil of Dreams hex, and your familiar learns Sleep.
 grantedSpells:
 - grant: focus
   spell: omen://spell/veil-of-dreams?source=paizo-pathfinder-player-core
 - grant: known
   spell: omen://spell/sleep?source=paizo-pathfinder-player-core
-level: 2
 mechanicsScope: builder
-name: lesson of dreams
+foundryID: evKUM58ymuuypRn9
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 6279138c-7ec8-52be-8fc2-8b4d43987337
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 694cb2af-f052-5d07-b451-6e249e69305b
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c3b74831-ce97-58eb-844a-93d9fe935133
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: c5a8e346-2389-50fd-921f-8cfa60b3ab1c
-  inputRecipes: []
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: e789a7bc-2736-5adb-ace7-2410a3388858
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0ab6e4e1-399b-5e6c-abe2-3f39e23d179d
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: be4519cb-70da-5686-aabb-2c2b5bfc7095
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: evKUM58ymuuypRn9
-traits:
-- witch
+- id: 6279138c-7ec8-52be-8fc2-8b4d43987337
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: 694cb2af-f052-5d07-b451-6e249e69305b
+    spellId: '@spell.veil-of-dreams'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: c5a8e346-2389-50fd-921f-8cfa60b3ab1c
+  effect: spellcasting/add-focus-point
+- id: e789a7bc-2736-5adb-ace7-2410a3388858
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 0ab6e4e1-399b-5e6c-abe2-3f39e23d179d
+    spellId: '@spell.sleep'

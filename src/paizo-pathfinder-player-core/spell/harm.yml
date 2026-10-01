@@ -1,7 +1,22 @@
 ---
+name: harm
+rank: 1
+rarity: common
+category: spell
+traits:
+- manipulate
+- void
+traditions:
+- divine
+time: 1 to 3
 action:
   count: one_to_three_actions
-category: spell
+range: varies
+target: 1 living creature or 1 willing undead creature
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 1d8
@@ -9,10 +24,11 @@ damage:
     - damage
     - healing
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d8
+  interval: 1
+  type: interval
 description: 'You channel void energy to harm the living or heal the undead. If the
   target is a living creature, you deal 1d8 void damage to it, and it gets a basic
   Fortitude save. If the target is a willing undead creature, you restore that amount
@@ -33,25 +49,6 @@ description: 'You channel void energy to harm the living or heal the undead. If 
 
   Heightened (+1) The amount of healing or damage increases by 1d8, and the extra
   healing for the 2-action version increases by 8.'
-heightening:
-  damage:
-    0: 1d8
-  interval: 1
-  type: interval
 mechanicsScope: mixed
-name: harm
-range: varies
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: wdA52JJnsuQWeyqz
-target: 1 living creature or 1 willing undead creature
-time: 1 to 3
-traditions:
-- divine
-traits:
-- manipulate
-- void
 unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
+foundryID: wdA52JJnsuQWeyqz

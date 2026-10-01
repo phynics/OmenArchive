@@ -1,18 +1,36 @@
 ---
+name: divine decree
+rank: 7
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- sanctified
+- spirit
+traditions:
+- divine
+time: '2'
 action:
   count: two_actions
+range: 40 feet
 area: '40'
-category: spell
+duration: varies
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 7d10
     kinds:
     - damage
     type: spirit
-defense:
-  basic: false
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d10
+  interval: 1
+  type: interval
 description: 'You utter a potent litany from your faith, a mandate that harms those
   who oppose your ideals. You deal 7d10 spirit damage to your enemies in the area;
   each enemy must attempt a Fortitude save.
@@ -36,28 +54,7 @@ description: 'You utter a potent litany from your faith, a mandate that harms th
 
   Heightened (+1) The damage increases by 1d10, and the level of creatures that must
   attempt a second save on a critical failure increases by 2.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: varies
-heightening:
-  damage:
-    0: 1d10
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: divine decree
-range: 40 feet
-rank: 7
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: sX2o0HH4RjJDAZ8C
-time: '2'
-traditions:
-- divine
-traits:
-- concentrate
-- manipulate
-- sanctified
-- spirit
+foundryID: sX2o0HH4RjJDAZ8C

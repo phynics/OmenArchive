@@ -1,116 +1,34 @@
 ---
+name: rainfall orc
 ancestry: orc
+rarity: common
 description: You were born in a rain forest with only tangles of trees providing protection
   from torrential rainstorms and flash floods. You've learned to move adeptly through
   jungle terrain and resist the various ailments common in humid environs. You gain
   a +2 circumstance bonus to Athletics checks to Climb or Swim and a +1 circumstance
   bonus to saving throws against diseases.
 mechanicsScope: builder
-name: rainfall orc
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 3ded115e-2f60-5707-9205-d2bb51549837
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8d7f1320-95cc-512c-8d1b-95d74d4197f4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  athletics: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Rainfall Orc: +2 circumstance bonus to Athletics checks (Climb
-            or Swim).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 2
-            applicability:
-              description: Climb or Swim
-              kind: situational
-            type: circumstance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 8ea45514-5365-5b76-91a5-c7af943c4926
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 32e63df8-763e-5530-9c55-64bc232b2ec8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - anyNonPerceptionSavingThrow: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Rainfall Orc: +1 circumstance bonus to saving throws (in some
-            situations).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: in some situations
-              kind: situational
-            type: circumstance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: 3ded115e-2f60-5707-9205-d2bb51549837
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 8d7f1320-95cc-512c-8d1b-95d74d4197f4
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    description: 'Rainfall Orc: +2 circumstance bonus to Athletics checks (Climb or
+      Swim).'
+    numeric: {literal: {amount: 2, applicability: {description: Climb or Swim, kind: situational},
+        type: circumstance}}
+- id: 8ea45514-5365-5b76-91a5-c7af943c4926
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 32e63df8-763e-5530-9c55-64bc232b2ec8
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    description: 'Rainfall Orc: +1 circumstance bonus to saving throws (in some situations).'
+    numeric: {literal: {amount: 1, applicability: {description: in some situations,
+          kind: situational}, type: circumstance}}

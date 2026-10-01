@@ -1,8 +1,22 @@
 ---
+name: bless
+rank: 1
+rarity: common
+category: spell
+traits:
+- aura
+- concentrate
+- manipulate
+- mental
+traditions:
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
+target: you and allies in the area
 area: '15'
-category: spell
+duration: 1 minute
 defense:
   counteraction: true
 description: 'Blessings from beyond help your companions strike true. You and your
@@ -12,24 +26,7 @@ description: 'Blessings from beyond help your companions strike true. You and yo
 
 
   Bless can counteract Bane.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 minute
-mechanicsScope: encounter
-name: bless
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: XSujb7EsSwKl19Uu
-target: you and allies in the area
-time: '2'
-traditions:
-- divine
-- occult
-traits:
-- aura
-- concentrate
-- manipulate
-- mental
+foundryID: XSujb7EsSwKl19Uu

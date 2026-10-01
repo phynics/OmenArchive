@@ -1,7 +1,24 @@
 ---
+name: peaceful rest
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: touch
+target: 1 corpse
+duration: until the next time you make your daily preparations
+heightening:
+  type: fixed
 description: 'The targeted corpse doesn''t decay, nor can it be transformed into an
   undead. If the corpse is subject to a spell that requires the corpse to have died
   within a certain amount of time (for example, Raise Dead), do not count the duration
@@ -11,27 +28,7 @@ description: 'The targeted corpse doesn''t decay, nor can it be transformed into
 
   Heightened (5th) The spell''s duration is unlimited, but the spell takes one more
   action to cast and requires a cost (embalming fluid worth 6 gp).'
-duration: until the next time you make your daily preparations
-heightening:
-  type: fixed
 mechanicsScope: mixed
-name: peaceful rest
-range: touch
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xRgU9rrhmGAgG4Rc
-target: 1 corpse
-time: '2'
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- concentrate
-- manipulate
 unsupportedReason: 'fixed heightening fields are not represented by CharacterSpell:
   time, traits'
+foundryID: xRgU9rrhmGAgG4Rc

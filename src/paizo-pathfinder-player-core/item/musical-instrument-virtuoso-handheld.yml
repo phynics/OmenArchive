@@ -1,4 +1,19 @@
 ---
+name: musical instrument (virtuoso handheld)
+level: 3
+rarity: common
+type: equipment
+traits: []
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 50 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+details:
+  equipment: {}
 description: 'Handheld instruments include bagpipes, a small set of chimes, small
   drums, fiddles and viols, flutes and recorders, small harps, lutes, trumpets, and
   similarly sized instruments. The GM might rule that an especially large handheld
@@ -8,76 +23,19 @@ description: 'Handheld instruments include bagpipes, a small set of chimes, smal
 
   A virtuoso instrument is more finely made and gives a +1 item bonus to Performance
   checks using that instrument.'
-details:
-  equipment: {}
-level: 3
 mechanicsScope: mixed
-name: musical instrument (virtuoso handheld)
-physical:
-  bulk: '1'
-  hardness: 0
-  hitPoints: 0
-  price: 50 gp
-  quantity: 1
-  size: med
-  usage: held-in-two-hands
-rarity: common
+foundryID: 3ld14dsn2RLu9owg
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: f21a114d-2f53-545f-9c23-69478127cfa8
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0b8d80b6-234f-59b0-bbe9-f2c0b67b5d7d
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - skill:
-                _0:
-                  performance: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Musical Instrument (Virtuoso handheld): +1 item bonus to Performance
-            checks (playing).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: playing
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 3ld14dsn2RLu9owg
-traits: []
-type: equipment
+- id: f21a114d-2f53-545f-9c23-69478127cfa8
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 0b8d80b6-234f-59b0-bbe9-f2c0b67b5d7d
+    target:
+      description:
+      - skill:
+          '_0':
+            performance: {}
+    description: 'Musical Instrument (Virtuoso handheld): +1 item bonus to Performance
+      checks (playing).'
+    numeric: {literal: {amount: 1, applicability: {description: playing, kind: situational},
+        type: item}}

@@ -1,5 +1,14 @@
 ---
-action: {}
+name: forager
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Survival
+  hasSkillProficiency: {skill: survival, proficiency: trained}
 description: 'While using Survival to Subsist, if you roll any result worse than a
   success, you get a success. On a success, you can provide subsistence living for
   yourself and four additional creatures, and on a critical success, you can take
@@ -8,21 +17,5 @@ description: 'While using Survival to Subsist, if you roll any result worse than
 
   Increase the number of additional creatures you feed on a success to eight if you''re
   an expert in Survival, 16 if you''re a master, and 32 if you''re legendary.'
-level: 1
 mechanicsScope: encounter
-name: forager
-prerequisites:
-- trained in Survival
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 8qebBeOJsyRIchcu
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: survival
+foundryID: 8qebBeOJsyRIchcu

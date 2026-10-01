@@ -1,24 +1,16 @@
 ---
-action: {}
-description: The mordant power of your void energy grows. When you cast Harm, you
-  roll d10s instead of d8s.
-level: 1
-mechanicsScope: encounter
 name: harming hands
-prerequisites:
-- harmful font
+level: 1
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 1W0a6YCyoYv8dm4e
+type: class
 traits:
 - cleric
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: e37496b6-d203-5183-9c4c-1a9c0d030cf8
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+prerequisites:
+- text: harmful font
+  hasChoice:
     name: $.cleric.divine-font
+    equals: {type: spellcasting/spell-id, value: '@spell.harm'}
+description: The mordant power of your void energy grows. When you cast Harm, you
+  roll d10s instead of d8s.
+mechanicsScope: encounter
+foundryID: 1W0a6YCyoYv8dm4e

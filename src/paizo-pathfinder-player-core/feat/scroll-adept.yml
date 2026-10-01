@@ -1,5 +1,13 @@
 ---
-action: {}
+name: scroll adept
+level: 10
+rarity: common
+type: class
+traits:
+- wizard
+prerequisites:
+- text: expert in Crafting
+  hasSkillProficiency: {skill: crafting, proficiency: expert}
 description: 'During your daily preparations, you can create two temporary scrolls
   containing arcane spells from your spellbook. Each scroll must be of a different
   spell rank, and both spell ranks must be 2 or more ranks lower than your highest-rank
@@ -12,20 +20,5 @@ description: 'During your daily preparations, you can create two temporary scrol
   If you have master proficiency in spell DC, you can create three temporary scrolls
   during your daily preparations, and if you have legendary proficiency, you can create
   four temporary scrolls.'
-level: 10
 mechanicsScope: encounter
-name: scroll adept
-prerequisites:
-- expert in Crafting
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: u5DBg0LrBUKP0JsJ
-traits:
-- wizard
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: crafting
+foundryID: u5DBg0LrBUKP0JsJ

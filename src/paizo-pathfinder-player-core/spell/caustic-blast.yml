@@ -1,18 +1,36 @@
 ---
+name: caustic blast
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- acid
+- cantrip
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
+range: 30 feet
 area: '5'
-category: cantrip
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   yI4fzrhnbFxup4Ep:
     formula: 1d8
     kinds:
     - damage
     type: acid
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    yI4fzrhnbFxup4Ep: 1d8
+  interval: 2
+  type: interval
 description: 'You fling a large glob of acid that immediately detonates, spraying
   nearby creatures. Creatures in the area take 1d8 acid damage with a basic Reflex
   save; on a critical failure, the creature also takes (1+floor((spell rank -1)/2))[persistent,acid]
@@ -21,28 +39,7 @@ description: 'You fling a large glob of acid that immediately detonates, sprayin
 
   Heightened (+2) The initial damage increases by 1d8, and the persistent damage on
   a critical failure increases by 1.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-heightening:
-  damage:
-    yI4fzrhnbFxup4Ep: 1d8
-  interval: 2
-  type: interval
-mechanicsScope: encounter
-name: caustic blast
-range: 30 feet
-rank: 0
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: thAHF1zxNplLCJPO
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- acid
-- cantrip
-- concentrate
-- manipulate
+foundryID: thAHF1zxNplLCJPO

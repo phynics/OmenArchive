@@ -1,24 +1,17 @@
 ---
-action: {}
+name: bloody debilitation
+level: 12
+rarity: common
+type: class
+traits:
+- rogue
+prerequisites:
+- text: trained in Medicine
+  hasSkillProficiency: {skill: medicine, proficiency: trained}
+- text: Debilitating Strike
+  hasResourceWithName: debilitating strike
 description: "Your attacks slice arteries and veins. Add the following debilitation
   to the list you can choose from when you use Debilitating Strike.\n\t•\tDebilitation
   The target takes 3d6[bleed] damage."
-level: 12
 mechanicsScope: encounter
-name: bloody debilitation
-prerequisites:
-- trained in Medicine
-- Debilitating Strike
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: QicYF43HqgpOBLzo
-traits:
-- rogue
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: medicine
-- hasResourceWithName: debilitating strike
+foundryID: QicYF43HqgpOBLzo

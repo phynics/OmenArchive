@@ -1,5 +1,8 @@
 ---
-action: {}
+name: spinner of threads
+level: 1
+traits:
+- witch
 description: 'You met your patron in a memory of an encounter yet to come or a premonition
   of something long since passed, as they untangled and re-spun the tapestry of time
   and fate. Was your patron a norn? A herald of a deity like Pharasma, Alseta, or
@@ -25,4132 +28,1139 @@ grantedSpells:
   spell: omen://spell/nudge-fate?source=paizo-pathfinder-player-core
 - grant: known
   spell: omen://spell/sure-strike?source=paizo-pathfinder-player-core
-level: 1
 mechanicsScope: builder
-name: spinner of threads
+foundryID: ghIsqhEsJTvjJiNl
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: e18e3061-cd46-5dee-8c86-73a5d277042c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: occultism
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
-    revision: 1
-  id: d3003fd2-c287-5a1b-9226-18ed5a31cf50
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Witch Spellcasting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: prepared
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-    inputName: castingKind
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: occult
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: int
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/increase-source-proficiency
-    revision: 1
-  id: 775dd5d2-85f6-5eca-9cbd-e5aa06d31c3d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: cdbf5b44-8be3-5ebd-ba60-ac77cd9f44f0
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 5afd63ec-a896-5df1-970d-73a42d5af55c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: d89b5949-2611-5da6-8433-e91f4829e266
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c9839c69-e923-5721-8dcb-5e285f434e7d
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 8142c55c-3d15-59db-b4e0-4234d3181471
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1b8af4e9-154e-54e9-a0e6-e335abbbefd7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 45a474f1-1520-5d9b-a749-ad3bec3ccc14
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0cc92267-86bc-5832-b866-1a641fc24cfd
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 9254d248-efad-564d-a853-01d2605663c9
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: d346dba1-1f1d-5db2-bae0-1589c6a3a00f
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: fc713869-80cb-52ef-9786-7fb0dfe9428b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e77056d7-5bce-5d31-a2ff-c4d793b53ce5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: ac00c607-92b1-5a9e-a702-d278193900b4
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: da588ed5-0e20-5412-8a64-c5f92c244737
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 534df52c-b4ac-5565-9501-6276f8bba403
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4535f475-df5a-5039-bc99-2f6bf5c2bbac
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 48f487f5-5ff2-5fab-9487-4a1145ac7604
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: eafff292-3372-5be3-b0c0-78f087cee612
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: ca9f138f-a00e-5662-aefb-1f182e3bc840
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 35292258-33b7-5d1d-9c95-5cb53f7863e6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: c2952c24-0e34-5661-851c-31418b4595f2
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b49fe301-dfb1-5b65-be2e-b25a3c67e9c1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: cantrip
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: b2499760-98eb-52ae-91df-5f835d599d8c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: acf8e588-71ab-5087-93b6-69b62d807334
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasExactLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: bc0ad396-0fa2-56fc-9336-ef17f490971a
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 7159f4b5-898e-5ca4-9ab3-07cdc49f130e
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasExactLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: a2cb133b-b74f-5a0f-9b0c-dc38eb61a469
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 07e9fd4c-d69d-546c-b40d-e1a5ea1a8f45
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasExactLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: d312fb2a-9a34-595b-82d3-72a8625a46e1
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 630c63b9-5ca5-51bc-bdac-92c31598c633
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasExactLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: dc257c9b-74af-5a35-ada4-8f6f8bbfa4ca
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 51a9822f-22d9-515d-8ad2-ecf73e9136a5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasExactLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: eb0f1252-0bf9-5a19-98de-4b365ab5433f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 2
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 2f2677e6-38cf-5275-880f-03cff350bdef
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f69cb4d7-9437-5ad1-afad-023b5df36cdc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 2
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 8f52530b-2884-5c1f-9b1e-0ec811a8cbb4
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: d96fe507-6728-5171-8219-e38c1f19328c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 1
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 2
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 39d2461b-b4db-55d0-8c83-5915480734fd
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 3
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 359c08b3-9cec-52f6-8e2f-44e4cef62371
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f40880b2-0ddb-5a3e-b1ed-284bf2d8c9b1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 2
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 3
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 33bb08b1-2121-5d5b-84b6-ef254387816c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6fc3ec4b-001a-5c59-9d82-d58ce04c28b0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 2
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 3
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 3c214583-d8a9-578e-8c80-f61882f86988
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 4
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 9e784c8c-5e3c-5b04-940a-e4266afac10f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 06fc52c9-2945-5fbd-a208-e259596409c1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 2
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 4
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: d824a036-1a0d-5f36-adf9-6e309915346d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2b13932b-625e-5a4b-9398-b3c8804d897e
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 2
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 4
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: c4a39e2a-6e5b-54b8-96a6-622a7548d7b8
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 5
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 4df7f04b-1f95-5fef-b5c4-78b2fcf9d832
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0e4d5e98-4867-5bea-b8be-9ef07ac276d8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 3
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 5
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 7a56c0db-2df0-5145-87ea-29193d3f72f5
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: bbae94aa-517d-5aab-b412-f55c5849e75c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 3
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 5
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 28f3e6c6-8c81-513a-8bca-1c502aa93138
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 6
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 55a39939-4b26-5a81-b058-a07ec9527039
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 04fc722e-fcfe-51f7-8a37-2f2788b3d7a7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 3
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 6
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: f0ad898d-aa5d-5d7d-9e14-3b60eaa8bf2b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: dec9fea3-0f02-5fd6-9de0-65bcd1669cdd
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 3
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 6
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 814035eb-5e0a-5c43-a859-4e77bf0091ce
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 7
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 6d57dfc5-9911-5254-8d52-f9edffbd0f7a
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f350ba8c-951c-52dc-84e3-8c0ec24d97b0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 4
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 7
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 06d5f614-818d-52df-bcdc-f687b479c126
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5a6f8450-7958-525e-8cd5-6a8bf3d1a14c
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 4
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 7
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 4228c09e-a233-5846-9758-cc6a6628f1ab
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 8
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: a8017433-ef88-5523-9693-40ef725635c3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 211be2bc-3c14-5653-b079-27fa31e02c1e
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 4
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 8
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 75ef2cdb-7b0b-5ee8-87de-92d478699200
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b55b3e15-b094-53db-b84f-8ac9e3b1ecf6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 4
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 8
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 636ba61d-7b20-5583-8ea4-cc3ce1d1b363
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 9
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 95c87819-c22f-54f4-9a55-fa7d193e7e22
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c67c6a9f-9896-5d9c-ba0b-0258025e89f9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 5
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 9
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 30fa52b1-9071-5a95-841d-a5ffee61d7d7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 14670ab8-76c5-52ce-9377-8a510cd66cf0
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 5
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 9
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 05abe40c-5fb5-5850-add0-d43a687c071d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 10
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 3a8a35ac-4a5d-5c73-81d7-fd79021146ba
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8083ad66-b0c9-5eed-a36b-b3bc226afcb8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 5
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 10
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: e21be0a9-edd8-50cd-962f-2a9f844170d6
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: fc614010-7f6e-5e83-8e45-205d13fd2e4f
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 5
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 10
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: cbd1ce40-56ba-539f-b84a-df9b1ab3664c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 11
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: bb6540fb-1ca8-5d74-976d-6674f3da64ff
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0772e9ba-969d-5f50-9f8b-d7adb25e60ea
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 6
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 11
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 3ecb19ea-469c-5fd6-ab57-4136bff85088
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6f94964a-f80c-599e-b4f9-94c4d9639fa5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 6
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 11
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: b0aea9a5-a573-5853-b32b-b9e3885a79d5
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 12
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: e5efb884-67bd-5c55-a744-954453603deb
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cd4ac809-a189-5de2-9c70-1093d2b1521a
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 6
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 12
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 74d82ea6-6188-59c0-8bf7-cefb6688b8b7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 80256696-ddab-5550-be92-98a01a64461b
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 6
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 12
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: af92463d-d629-5610-bb61-efc95068672c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 13
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: fb75c323-d159-58b5-b598-4e5bd9714b74
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: b62b153c-aee5-591d-a05f-2e3f4d960bbc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 7
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 13
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: ff869c4d-d803-50ea-ac87-87c42ccba591
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2cf9835d-f5c0-5dca-bf94-756fcf3607cf
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 7
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 13
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 72cf3a19-8dca-5e81-aee8-ed3e25116796
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 14
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 63d1c6a8-ab64-5b12-88ee-73f95d51ff02
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 32475220-f8b9-5767-9f41-feb41cc4fdbf
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 7
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 14
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: cfc57829-7edd-5564-a52c-417c4fbd8a43
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2156b5c4-8f17-5e44-b66a-d1be02f5bdcd
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 7
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 14
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: ab9f8e0e-b74b-5b5c-b19f-17450aecc646
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 15
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 753e8d09-6578-569a-924f-786316f0b5cc
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: d2dbbdfd-33de-5944-9749-d1b608339e16
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 8
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 15
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: d5dab4ba-4067-5c8b-852a-bd7e85efcfa8
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e96b6ed5-c252-5143-8ed6-a1dc98ea2c3a
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 8
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 15
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 8d36b47d-2091-524e-b5ed-edf4f43e8fc8
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 8
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 16
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 5ee648e0-f4d4-565f-9632-d68a4e3fb978
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0cde110e-6fac-5641-90d9-d3bbe3d27358
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 8
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 16
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 80d7f7f3-4ea0-538a-a309-9a6a408c0b0f
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: c2490be3-7ffa-536c-8000-f6350dedb760
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 8
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 16
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 21237996-03a8-5638-ac96-55ea95851c1c
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 17
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: debdc3bc-a466-56a1-9bfc-aa0355e96b1a
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e3a11a3a-30ac-5d19-9ace-a7c068768f12
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 9
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 17
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: a92be031-f8d8-59f9-ab01-4f7810627fb8
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 25b265b8-7876-5285-a1f7-f953ae5d8425
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 9
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 17
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: e0fca29e-04b8-5a35-8333-397b5efe5fc3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 18
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 44245eca-d4c1-526b-86ff-35fe55d0edf6
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 141faf54-9cba-5510-b05e-34d5db1142b5
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 9
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 18
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 537f39a9-2365-5349-a6ee-8a74b1abcd7a
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e114dc20-4083-5cd0-8e5a-a923e2268a8a
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 9
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 18
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-slot
-    revision: 1
-  id: 9f1e40ec-a8d5-52bf-9b55-0274a1ac52b2
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 10
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: spellRank
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/int
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/int
-    inputName: count
-  startLevel: 19
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: df391591-eef1-52d1-9454-4bb91330e640
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6bf59537-79eb-53e2-bb56-9bccc3656e64
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 10
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 19
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 4e2cc584-12a4-5d3c-bab8-2309406d87f4
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 7e2d3502-5821-5aac-b9a4-05b3f736c7e7
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 10
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 19
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 42154b86-cf9d-5962-8a6d-485be6b84a27
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9d5a80b9-c58b-59eb-a978-2fd273e55a21
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 10
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 20
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 31408377-9143-5426-951a-f711972ed58b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 856ad867-9eb3-5696-aa09-e8623af812c2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: selection
-        selection:
-          distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-          lookupName: known-spell
-          options:
-            filter:
-              kind: intersection
-              values:
-              - kind: single
-                value:
-                  kind: hasType
-                  type: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.category
-                  metadataValue: spell
-              - kind: single
-                value:
-                  kind: hasMetadata
-                  metadataKey: spell.tradition
-                  metadataValue: occult
-              - kind: single
-                value:
-                  kind: hasRarity
-                  rarity: common
-              - kind: single
-                value:
-                  kind: hasMaxLevel
-                  level: 10
-            kind: resourceFiltered
-          valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 20
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/configure-source
-    revision: 1
-  id: 17b00210-1487-5e58-90d8-609daa26a67d
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Witch Focus Spells
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/casting-kind
-    inputName: castingKind
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: occult
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: int
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 25aecdf7-f9c3-53f5-945c-9293483ec742
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 4d7db65a-aa5c-51d2-92c3-5034d1935191
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2e3e67e1-c936-5a1e-8f32-f7e8f7c22879
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: atWill
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-known-spell
-    revision: 1
-  id: 249e45d1-33b0-588a-ab08-d3dddef7eba7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 0835758c-a3b1-57be-bafd-0a18c240f441
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9738b524-f5e2-59e7-9dce-6580ae4b46da
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: entryId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: bc28896d-73c0-5c43-8ee0-0cd092f755b3
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  startLevel: 1
-- choice:
-    answer:
-      filter:
-        kind: union
-        values:
-        - kind: single
-          value:
-            id: 4b68f59e-140e-56c3-9e12-ce55049e5fea
-            kind: hasID
-        - kind: single
-          value:
-            id: 363639ec-a868-505d-8d57-499f2a8fba0a
-            kind: hasID
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+- id: e18e3061-cd46-5dee-8c86-73a5d277042c
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: occultism}
+    proficiencyCap: 2
+- id: d3003fd2-c287-5a1b-9226-18ed5a31cf50
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceName: Witch Spellcasting
+    castingKind: prepared
+    tradition: occult
+    attribute: int
+- id: 775dd5d2-85f6-5eca-9cbd-e5aa06d31c3d
+  effect: spellcasting/increase-source-proficiency
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    proficiency: 2
+- id: cdbf5b44-8be3-5ebd-ba60-ac77cd9f44f0
+  effect: spellcasting/grant-slot
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 0
+    count: 5
+- id: 5afd63ec-a896-5df1-970d-73a42d5af55c
+  effect: spellcasting/grant-slot
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 1
+    count: 2
+- id: d89b5949-2611-5da6-8433-e91f4829e266
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: c9839c69-e923-5721-8dcb-5e285f434e7d
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: 8142c55c-3d15-59db-b4e0-4234d3181471
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 1b8af4e9-154e-54e9-a0e6-e335abbbefd7
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: 45a474f1-1520-5d9b-a749-ad3bec3ccc14
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 0cc92267-86bc-5832-b866-1a641fc24cfd
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: 9254d248-efad-564d-a853-01d2605663c9
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: d346dba1-1f1d-5db2-bae0-1589c6a3a00f
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: fc713869-80cb-52ef-9786-7fb0dfe9428b
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: e77056d7-5bce-5d31-a2ff-c4d793b53ce5
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: ac00c607-92b1-5a9e-a702-d278193900b4
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: da588ed5-0e20-5412-8a64-c5f92c244737
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: 534df52c-b4ac-5565-9501-6276f8bba403
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 4535f475-df5a-5039-bc99-2f6bf5c2bbac
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: 48f487f5-5ff2-5fab-9487-4a1145ac7604
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: eafff292-3372-5be3-b0c0-78f087cee612
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: ca9f138f-a00e-5662-aefb-1f182e3bc840
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 35292258-33b7-5d1d-9c95-5cb53f7863e6
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: c2952c24-0e34-5661-851c-31418b4595f2
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: b49fe301-dfb1-5b65-be2e-b25a3c67e9c1
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: cantrip}
+            - {spell.tradition: occult}
+            - {rarity: common}
+- id: b2499760-98eb-52ae-91df-5f835d599d8c
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: acf8e588-71ab-5087-93b6-69b62d807334
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {level: 1}
+- id: bc0ad396-0fa2-56fc-9336-ef17f490971a
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 7159f4b5-898e-5ca4-9ab3-07cdc49f130e
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {level: 1}
+- id: a2cb133b-b74f-5a0f-9b0c-dc38eb61a469
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 07e9fd4c-d69d-546c-b40d-e1a5ea1a8f45
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {level: 1}
+- id: d312fb2a-9a34-595b-82d3-72a8625a46e1
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 630c63b9-5ca5-51bc-bdac-92c31598c633
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {level: 1}
+- id: dc257c9b-74af-5a35-ada4-8f6f8bbfa4ca
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 51a9822f-22d9-515d-8ad2-ecf73e9136a5
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {level: 1}
+- id: eb0f1252-0bf9-5a19-98de-4b365ab5433f
+  effect: spellcasting/grant-slot
+  level: 2
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 1
+    count: 1
+- id: 2f2677e6-38cf-5275-880f-03cff350bdef
+  effect: spellcasting/add-known-spell
+  level: 2
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: f69cb4d7-9437-5ad1-afad-023b5df36cdc
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 1}
+- id: 8f52530b-2884-5c1f-9b1e-0ec811a8cbb4
+  effect: spellcasting/add-known-spell
+  level: 2
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: d96fe507-6728-5171-8219-e38c1f19328c
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 1}
+- id: 39d2461b-b4db-55d0-8c83-5915480734fd
+  effect: spellcasting/grant-slot
+  level: 3
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 2
+    count: 2
+- id: 359c08b3-9cec-52f6-8e2f-44e4cef62371
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: f40880b2-0ddb-5a3e-b1ed-284bf2d8c9b1
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 2}
+- id: 33bb08b1-2121-5d5b-84b6-ef254387816c
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 6fc3ec4b-001a-5c59-9d82-d58ce04c28b0
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 2}
+- id: 3c214583-d8a9-578e-8c80-f61882f86988
+  effect: spellcasting/grant-slot
+  level: 4
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 2
+    count: 1
+- id: 9e784c8c-5e3c-5b04-940a-e4266afac10f
+  effect: spellcasting/add-known-spell
+  level: 4
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 06fc52c9-2945-5fbd-a208-e259596409c1
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 2}
+- id: d824a036-1a0d-5f36-adf9-6e309915346d
+  effect: spellcasting/add-known-spell
+  level: 4
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 2b13932b-625e-5a4b-9398-b3c8804d897e
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 2}
+- id: c4a39e2a-6e5b-54b8-96a6-622a7548d7b8
+  effect: spellcasting/grant-slot
+  level: 5
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 3
+    count: 2
+- id: 4df7f04b-1f95-5fef-b5c4-78b2fcf9d832
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 0e4d5e98-4867-5bea-b8be-9ef07ac276d8
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 3}
+- id: 7a56c0db-2df0-5145-87ea-29193d3f72f5
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: bbae94aa-517d-5aab-b412-f55c5849e75c
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 3}
+- id: 28f3e6c6-8c81-513a-8bca-1c502aa93138
+  effect: spellcasting/grant-slot
+  level: 6
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 3
+    count: 1
+- id: 55a39939-4b26-5a81-b058-a07ec9527039
+  effect: spellcasting/add-known-spell
+  level: 6
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 04fc722e-fcfe-51f7-8a37-2f2788b3d7a7
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 3}
+- id: f0ad898d-aa5d-5d7d-9e14-3b60eaa8bf2b
+  effect: spellcasting/add-known-spell
+  level: 6
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: dec9fea3-0f02-5fd6-9de0-65bcd1669cdd
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 3}
+- id: 814035eb-5e0a-5c43-a859-4e77bf0091ce
+  effect: spellcasting/grant-slot
+  level: 7
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 4
+    count: 2
+- id: 6d57dfc5-9911-5254-8d52-f9edffbd0f7a
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: f350ba8c-951c-52dc-84e3-8c0ec24d97b0
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 4}
+- id: 06d5f614-818d-52df-bcdc-f687b479c126
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 5a6f8450-7958-525e-8cd5-6a8bf3d1a14c
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 4}
+- id: 4228c09e-a233-5846-9758-cc6a6628f1ab
+  effect: spellcasting/grant-slot
+  level: 8
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 4
+    count: 1
+- id: a8017433-ef88-5523-9693-40ef725635c3
+  effect: spellcasting/add-known-spell
+  level: 8
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 211be2bc-3c14-5653-b079-27fa31e02c1e
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 4}
+- id: 75ef2cdb-7b0b-5ee8-87de-92d478699200
+  effect: spellcasting/add-known-spell
+  level: 8
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: b55b3e15-b094-53db-b84f-8ac9e3b1ecf6
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 4}
+- id: 636ba61d-7b20-5583-8ea4-cc3ce1d1b363
+  effect: spellcasting/grant-slot
+  level: 9
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 5
+    count: 2
+- id: 95c87819-c22f-54f4-9a55-fa7d193e7e22
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: c67c6a9f-9896-5d9c-ba0b-0258025e89f9
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 5}
+- id: 30fa52b1-9071-5a95-841d-a5ffee61d7d7
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 14670ab8-76c5-52ce-9377-8a510cd66cf0
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 5}
+- id: 05abe40c-5fb5-5850-add0-d43a687c071d
+  effect: spellcasting/grant-slot
+  level: 10
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 5
+    count: 1
+- id: 3a8a35ac-4a5d-5c73-81d7-fd79021146ba
+  effect: spellcasting/add-known-spell
+  level: 10
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 8083ad66-b0c9-5eed-a36b-b3bc226afcb8
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 5}
+- id: e21be0a9-edd8-50cd-962f-2a9f844170d6
+  effect: spellcasting/add-known-spell
+  level: 10
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: fc614010-7f6e-5e83-8e45-205d13fd2e4f
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 5}
+- id: cbd1ce40-56ba-539f-b84a-df9b1ab3664c
+  effect: spellcasting/grant-slot
+  level: 11
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 6
+    count: 2
+- id: bb6540fb-1ca8-5d74-976d-6674f3da64ff
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 0772e9ba-969d-5f50-9f8b-d7adb25e60ea
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 6}
+- id: 3ecb19ea-469c-5fd6-ab57-4136bff85088
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 6f94964a-f80c-599e-b4f9-94c4d9639fa5
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 6}
+- id: b0aea9a5-a573-5853-b32b-b9e3885a79d5
+  effect: spellcasting/grant-slot
+  level: 12
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 6
+    count: 1
+- id: e5efb884-67bd-5c55-a744-954453603deb
+  effect: spellcasting/add-known-spell
+  level: 12
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: cd4ac809-a189-5de2-9c70-1093d2b1521a
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 6}
+- id: 74d82ea6-6188-59c0-8bf7-cefb6688b8b7
+  effect: spellcasting/add-known-spell
+  level: 12
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 80256696-ddab-5550-be92-98a01a64461b
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 6}
+- id: af92463d-d629-5610-bb61-efc95068672c
+  effect: spellcasting/grant-slot
+  level: 13
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 7
+    count: 2
+- id: fb75c323-d159-58b5-b598-4e5bd9714b74
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: b62b153c-aee5-591d-a05f-2e3f4d960bbc
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 7}
+- id: ff869c4d-d803-50ea-ac87-87c42ccba591
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 2cf9835d-f5c0-5dca-bf94-756fcf3607cf
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 7}
+- id: 72cf3a19-8dca-5e81-aee8-ed3e25116796
+  effect: spellcasting/grant-slot
+  level: 14
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 7
+    count: 1
+- id: 63d1c6a8-ab64-5b12-88ee-73f95d51ff02
+  effect: spellcasting/add-known-spell
+  level: 14
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 32475220-f8b9-5767-9f41-feb41cc4fdbf
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 7}
+- id: cfc57829-7edd-5564-a52c-417c4fbd8a43
+  effect: spellcasting/add-known-spell
+  level: 14
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 2156b5c4-8f17-5e44-b66a-d1be02f5bdcd
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 7}
+- id: ab9f8e0e-b74b-5b5c-b19f-17450aecc646
+  effect: spellcasting/grant-slot
+  level: 15
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 8
+    count: 2
+- id: 753e8d09-6578-569a-924f-786316f0b5cc
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: d2dbbdfd-33de-5944-9749-d1b608339e16
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 8}
+- id: d5dab4ba-4067-5c8b-852a-bd7e85efcfa8
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: e96b6ed5-c252-5143-8ed6-a1dc98ea2c3a
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 8}
+- id: 8d36b47d-2091-524e-b5ed-edf4f43e8fc8
+  effect: spellcasting/grant-slot
+  level: 16
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 8
+    count: 1
+- id: 5ee648e0-f4d4-565f-9632-d68a4e3fb978
+  effect: spellcasting/add-known-spell
+  level: 16
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 0cde110e-6fac-5641-90d9-d3bbe3d27358
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 8}
+- id: 80d7f7f3-4ea0-538a-a309-9a6a408c0b0f
+  effect: spellcasting/add-known-spell
+  level: 16
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: c2490be3-7ffa-536c-8000-f6350dedb760
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 8}
+- id: 21237996-03a8-5638-ac96-55ea95851c1c
+  effect: spellcasting/grant-slot
+  level: 17
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 9
+    count: 2
+- id: debdc3bc-a466-56a1-9bfc-aa0355e96b1a
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: e3a11a3a-30ac-5d19-9ace-a7c068768f12
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 9}
+- id: a92be031-f8d8-59f9-ab01-4f7810627fb8
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 25b265b8-7876-5285-a1f7-f953ae5d8425
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 9}
+- id: e0fca29e-04b8-5a35-8333-397b5efe5fc3
+  effect: spellcasting/grant-slot
+  level: 18
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 9
+    count: 1
+- id: 44245eca-d4c1-526b-86ff-35fe55d0edf6
+  effect: spellcasting/add-known-spell
+  level: 18
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 141faf54-9cba-5510-b05e-34d5db1142b5
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 9}
+- id: 537f39a9-2365-5349-a6ee-8a74b1abcd7a
+  effect: spellcasting/add-known-spell
+  level: 18
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: e114dc20-4083-5cd0-8e5a-a923e2268a8a
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 9}
+- id: 9f1e40ec-a8d5-52bf-9b55-0274a1ac52b2
+  effect: spellcasting/grant-slot
+  level: 19
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    spellRank: 10
+    count: 1
+- id: df391591-eef1-52d1-9454-4bb91330e640
+  effect: spellcasting/add-known-spell
+  level: 19
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 6bf59537-79eb-53e2-bb56-9bccc3656e64
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 10}
+- id: 4e2cc584-12a4-5d3c-bab8-2309406d87f4
+  effect: spellcasting/add-known-spell
+  level: 19
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 7e2d3502-5821-5aac-b9a4-05b3f736c7e7
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 10}
+- id: 42154b86-cf9d-5962-8a6d-485be6b84a27
+  effect: spellcasting/add-known-spell
+  level: 20
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 9d5a80b9-c58b-59eb-a978-2fd273e55a21
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 10}
+- id: 31408377-9143-5426-951a-f711972ed58b
+  effect: spellcasting/add-known-spell
+  level: 20
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 856ad867-9eb3-5696-aa09-e8623af812c2
+    spellId:
+      selection:
+        lookupName: known-spell
+        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
+        options:
+          filter:
+            all:
+            - {type: spell}
+            - {spell.category: spell}
+            - {spell.tradition: occult}
+            - {rarity: common}
+            - {maxLevel: 10}
+- id: 17b00210-1487-5e58-90d8-609daa26a67d
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    sourceName: Witch Focus Spells
+    castingKind: focus
+    tradition: occult
+    attribute: int
+- id: 25aecdf7-f9c3-53f5-945c-9293483ec742
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: 4d7db65a-aa5c-51d2-92c3-5034d1935191
+    spellId: '@spell.nudge-fate'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: atWill}
+- id: 249e45d1-33b0-588a-ab08-d3dddef7eba7
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    entryId: 9738b524-f5e2-59e7-9dce-6580ae4b46da
+    spellId: '@spell.sure-strike'
+- id: d5124c47-df7d-5619-8083-1611e525a3dd
+  key: choice-witch-patron-first-hex
+  choice:
+    name: $.witch.patron.first-hex
     label: First Hex
     legacySelections:
     - inputName: spellId
       lookupName: first-hex
       ruleID: 55f90c94-ff1d-508e-bfa4-4112271602ff
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-    name: $.witch.patron.first-hex
-    startLevel: 1
-  id: d5124c47-df7d-5619-8083-1611e525a3dd
-  key: choice-witch-patron-first-hex
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-spell
-    revision: 1
-  id: 55f90c94-ff1d-508e-bfa4-4112271602ff
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 6f44b94b-f734-503c-8c1d-834cfd16b7ff
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.witch.patron.first-hex
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: focus
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/add-focus-point
-    revision: 1
-  id: 08bbcacb-6397-5571-8c89-e8f5835d8bd7
-  inputRecipes: []
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: ghIsqhEsJTvjJiNl
-traits:
-- witch
+    records:
+      filter:
+        any:
+        - {id: '@spell.patrons-puppet'}
+        - {id: '@spell.phase-familiar'}
+      type: spellcasting/spell-id
+- id: 55f90c94-ff1d-508e-bfa4-4112271602ff
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    grantId: 6f44b94b-f734-503c-8c1d-834cfd16b7ff
+    spellId: {choice: $.witch.patron.first-hex}
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 08bbcacb-6397-5571-8c89-e8f5835d8bd7
+  effect: spellcasting/add-focus-point

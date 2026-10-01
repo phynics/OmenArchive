@@ -1,17 +1,35 @@
 ---
+name: acid grip
+rank: 2
+rarity: common
+category: spell
+traits:
+- acid
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 120 feet
+target: 1 creature
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   YBeTuItHduzXElD5:
     formula: 2d8
     kinds:
     - damage
     type: acid
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    YBeTuItHduzXElD5: 2d8
+  interval: 2
+  type: interval
 description: 'An ephemeral, taloned hand grips the target, burning it with magical
   acid. The target takes 2d8 acid damage plus floor(spell rank/2)d6[persistent,acid]
   damage depending on its Reflex save. A creature taking persistent damage from this
@@ -35,26 +53,5 @@ description: 'An ephemeral, taloned hand grips the target, burning it with magic
 
   Heightened (+2) The initial damage increases by 2d8, and the persistent acid damage
   increases by 1d6.'
-heightening:
-  damage:
-    YBeTuItHduzXElD5: 2d8
-  interval: 2
-  type: interval
 mechanicsScope: encounter
-name: acid grip
-range: 120 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 9h9YCncqah6VNsKf
-target: 1 creature
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- acid
-- concentrate
-- manipulate
+foundryID: 9h9YCncqah6VNsKf

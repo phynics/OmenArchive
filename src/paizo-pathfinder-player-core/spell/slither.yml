@@ -1,8 +1,25 @@
 ---
+name: slither
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- shadow
+traditions:
+- arcane
+- occult
+time: '3'
 action:
   count: three_actions
+range: 120 feet
 area: '20'
-category: spell
+duration: 1 minute
+defense:
+  basic: false
+  counteraction: false
+  save: reflex
 damage:
   hBNB5kWrMV8T2CuH:
     formula: 3d6
@@ -15,10 +32,12 @@ damage:
     kinds:
     - damage
     type: poison
-defense:
-  basic: false
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    hBNB5kWrMV8T2CuH: '0'
+    mY0vhGfbdzA69pIz: 1d6
+  interval: 2
+  type: interval
 description: 'A mass of snakes made of shadow rise up to capture creatures in the
   area. Each creature in the area when you Cast the Spell takes 3d6[piercing] damage
   and 1d6[persistent,poison] damage from a biting snake, and it''s Grabbed or Restrained
@@ -43,29 +62,7 @@ description: 'A mass of snakes made of shadow rise up to capture creatures in th
 
   Heightened (+2) The persistent poison damage increases by 1d6 and snake HP increases
   by 6.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 minute
-heightening:
-  damage:
-    hBNB5kWrMV8T2CuH: '0'
-    mY0vhGfbdzA69pIz: 1d6
-  interval: 2
-  type: interval
-mechanicsScope: encounter
-name: slither
-range: 120 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xFp4EwVcYwSG336t
-time: '3'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- manipulate
-- shadow
+foundryID: xFp4EwVcYwSG336t

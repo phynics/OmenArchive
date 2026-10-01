@@ -1,25 +1,18 @@
 ---
-action: {}
-description: Your proficiency ranks for simple weapons and martial weapons increase
-  to expert, and your proficiency rank for advanced weapons increases to trained.
-level: 12
-mechanicsScope: encounter
 name: diverse weapon expert
-prerequisiteDiagnostics:
-- Unsupported prerequisite for source pu1U9ZWVVG1Lc94t "expert in any kind of weapon
-  or unarmed attacks".
-prerequisites:
-- Fighter Dedication
-- expert in any kind of weapon or unarmed attacks
+level: 12
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: pu1U9ZWVVG1Lc94t
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: fighter dedication
-- unsupported: Unsupported prerequisite for source pu1U9ZWVVG1Lc94t "expert in any
+prerequisites:
+- text: Fighter Dedication
+  hasResourceWithName: fighter dedication
+- text: expert in any kind of weapon or unarmed attacks
+  unsupported: Unsupported prerequisite for source pu1U9ZWVVG1Lc94t "expert in any
     kind of weapon or unarmed attacks".
+  diagnostic: true
+description: Your proficiency ranks for simple weapons and martial weapons increase
+  to expert, and your proficiency rank for advanced weapons increases to trained.
+mechanicsScope: encounter
+foundryID: pu1U9ZWVVG1Lc94t

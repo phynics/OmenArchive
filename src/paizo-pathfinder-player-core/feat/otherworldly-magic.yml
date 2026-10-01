@@ -1,132 +1,43 @@
 ---
-action: {}
+name: otherworldly magic
+level: 1
+rarity: common
+type: ancestry
+traits:
+- elf
 description: Your elven magic manifests as a simple arcane spell, even if you aren't
   formally trained in magic. Choose one cantrip from the arcane spell list. You can
   cast this cantrip as an arcane innate spell at will. A cantrip is heightened to
   a spell rank equal to half your level rounded up.
-level: 1
 mechanicsScope: mixed
-name: otherworldly magic
-prerequisites: []
-rarity: common
+foundryID: Pat4H0VbmApblZxc
 rules:
-- choice:
-    answer:
-      filter:
-        kind: intersection
-        values:
-        - kind: single
-          value:
-            kind: hasType
-            type: spell
-        - kind: single
-          value:
-            kind: hasRarity
-            rarity: common
-        - kind: single
-          value:
-            kind: hasMetadata
-            metadataKey: spell.category
-            metadataValue: cantrip
-        - kind: single
-          value:
-            kind: hasMetadata
-            metadataKey: spell.tradition
-            metadataValue: arcane
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
+- id: 3030173f-bc11-5288-bc1f-ce79143da9b8
+  key: choice-feat-otherworldly-magic-cantrip
+  choice:
+    name: $.feat.otherworldly-magic.cantrip
     label: Otherworldly Magic Spell
     legacySelections:
     - inputName: spellId
       lookupName: otherworldly-magic-spell
       ruleID: 9a58e0df-e080-5bc7-85ab-1315342197ff
       valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
-    name: $.feat.otherworldly-magic.cantrip
-    startLevel: 1
-  id: 3030173f-bc11-5288-bc1f-ce79143da9b8
-  key: choice-feat-otherworldly-magic-cantrip
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore-spellcasting/effect/grant-innate-spell
-    revision: 1
-  id: 9a58e0df-e080-5bc7-85ab-1315342197ff
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ca0eb87b-2e8d-528e-8794-9689682b8ab1
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: sourceId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: Otherworldly Magic
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: sourceName
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: f5a7d26e-b19f-53ec-a1df-b2a7b510ef44
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: grantId
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.feat.otherworldly-magic.cantrip
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-    inputName: spellId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: arcane
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/tradition
-    inputName: tradition
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cha
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/attribute
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/attribute
-    inputName: attribute
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: cantrip
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/rank-policy
-    inputName: rankPolicy
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: atWill
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-      valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/cast-frequency
-    inputName: castFrequency
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: Pat4H0VbmApblZxc
-traits:
-- elf
-type: ancestry
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - {rarity: common}
+        - {spell.category: cantrip}
+        - {spell.tradition: arcane}
+      type: spellcasting/spell-id
+- id: 9a58e0df-e080-5bc7-85ab-1315342197ff
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: ca0eb87b-2e8d-528e-8794-9689682b8ab1
+    sourceName: Otherworldly Magic
+    grantId: f5a7d26e-b19f-53ec-a1df-b2a7b510ef44
+    spellId: {choice: $.feat.otherworldly-magic.cantrip}
+    tradition: arcane
+    attribute: cha
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: atWill}

@@ -1,30 +1,20 @@
 ---
-action: {}
+name: studious capacity
+level: 16
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: enigma muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+- text: legendary in Occultism
+  hasSkillProficiency: {skill: occultism, proficiency: legendary}
 description: Your continued study of occult magic has increased your magical capacity,
   allowing you to cast spells even when it seems impossible. You can cast one spell
   each day even after you've run out of spell slots of the appropriate spell rank,
   but you can't use this ability to cast a spell of your highest spell rank.
-level: 16
 mechanicsScope: encounter
-name: studious capacity
-prerequisites:
-- enigma muse
-- legendary in Occultism
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: QGpcyvIezLMgmTia
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 561e24d0-c44a-5fff-9abd-ec39e3d7f785
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: occultism
+foundryID: QGpcyvIezLMgmTia

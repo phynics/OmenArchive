@@ -1,34 +1,18 @@
 ---
-action: {}
-description: You gain the Reactive Strike reaction.
-level: 4
-mechanicsScope: mixed
 name: reactive striker
-prerequisites:
-- Fighter Dedication
+level: 4
 rarity: common
-rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-action
-    revision: 1
-  id: 50573e2d-ed4b-5bbf-a491-ded556edf229
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: cc779b41-4561-57ad-91a9-797f5bee8d81
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/action-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/action-id
-    inputName: actionId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: OqU6QXkMrZqToEEi
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: fighter dedication
+prerequisites:
+- text: Fighter Dedication
+  hasResourceWithName: fighter dedication
+description: You gain the Reactive Strike reaction.
+mechanicsScope: mixed
+foundryID: OqU6QXkMrZqToEEi
+rules:
+- id: 50573e2d-ed4b-5bbf-a491-ded556edf229
+  effect: core/add-action
+  inputs:
+    actionId: '@action.reactive-strike'

@@ -1,26 +1,19 @@
 ---
-action: {}
+name: pickpocket
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Thievery
+  hasSkillProficiency: {skill: thievery, proficiency: trained}
 description: You can Steal or Palm an Object that's closely guarded, such as in a
   pocket, without taking the –5 penalty. You can't steal objects that would be extremely
   noticeable or time consuming to remove (like worn shoes or armor or actively wielded
   objects). If you're a master in Thievery, you can attempt to Steal from a creature
   in combat or otherwise on guard. When doing so, Stealing requires 2 actions instead
   of 1, and you take a –5 penalty.
-level: 1
 mechanicsScope: encounter
-name: pickpocket
-prerequisites:
-- trained in Thievery
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: jDdOqFmZLwE4dblQ
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: thievery
+foundryID: jDdOqFmZLwE4dblQ

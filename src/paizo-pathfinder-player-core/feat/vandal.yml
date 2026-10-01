@@ -1,5 +1,10 @@
 ---
-action: {}
+name: vandal
+level: 5
+rarity: common
+type: ancestry
+traits:
+- goblin
 description: 'You have a knack for breaking and dismantling things. Putting them back
   together is the boring part, so you largely don''t bother with that. You become
   trained in Thievery. If you would automatically become trained in Thievery (from
@@ -8,41 +13,11 @@ description: 'You have a knack for breaking and dismantling things. Putting them
 
   In addition, whenever you hit with a Strike against a trap or an unattended object,
   you ignore the first 5 points of the object''s Hardness.'
-level: 5
 mechanicsScope: builder
-name: vandal
-prerequisites: []
-rarity: common
+foundryID: 7ZwXUlnqjj9zEYbO
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: a2d747fa-8ab4-5443-be0c-9fa7d7ff4c22
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: thievery
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 7ZwXUlnqjj9zEYbO
-traits:
-- goblin
-type: ancestry
+- id: a2d747fa-8ab4-5443-be0c-9fa7d7ff4c22
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: thievery}
+    proficiencyCap: 2

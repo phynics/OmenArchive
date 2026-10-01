@@ -1,7 +1,10 @@
 ---
-criticalFailure: The target takes 1d8[damage] damage.
-criticalSuccess: The target regains 4d8[healing] Hit Points and loses the Wounded
-  condition.
+name: treat wounds
+traits:
+- exploration
+- healing
+- manipulate
+requirements: You're wearing or holding a Healer's Toolkit.
 description: 'You spend 10 minutes treating one injured living creature (targeting
   yourself, if you so choose). The target is then temporarily immune to Treat Wounds
   actions for 1 hour, but this interval overlaps with the time you spent treating
@@ -22,13 +25,7 @@ description: 'You spend 10 minutes treating one injured living creature (targeti
   The result of your Medicine check determines how many Hit Points the target regains.
 
   Treat Wounds'
-name: treat wounds
-requirements: You're wearing or holding a Healer's Toolkit.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+criticalSuccess: The target regains 4d8[healing] Hit Points and loses the Wounded
+  condition.
 success: The target regains 2d8[healing] Hit Points, and loses the wounded condition.
-traits:
-- exploration
-- healing
-- manipulate
+criticalFailure: The target takes 1d8[damage] damage.

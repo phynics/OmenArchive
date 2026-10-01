@@ -1,57 +1,22 @@
 ---
-action: {}
+name: anchoring roots
+level: 5
+rarity: common
+type: ancestry
+traits:
+- leshy
 description: Small roots sprout from your feet, steadying you as you move. You gain
   the Steady Balance skill feat, even if you aren't trained in Acrobatics, and you
   can use the Anchor action.
-level: 5
 mechanicsScope: builder
-name: anchoring roots
-prerequisites: []
-rarity: common
+foundryID: 1miLVRtvsnZU6TTk
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 327302f5-8e67-5d6c-a555-7eafe0012194
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 5d24d35c-02ac-5631-9a16-e86e8d6ef0df
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: a5f5afa7-91cb-514b-ab1b-62259edede12
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-action
-    revision: 1
-  id: 30999921-cfe9-586c-9a69-61145a789ee7
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e456ecf4-3c8a-5ca8-82fe-834ac9eb5bef
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/action-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/action-id
-    inputName: actionId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 1miLVRtvsnZU6TTk
-traits:
-- leshy
-type: ancestry
+- id: 327302f5-8e67-5d6c-a555-7eafe0012194
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 5d24d35c-02ac-5631-9a16-e86e8d6ef0df
+    featId: '@feat.steady-balance'
+- id: 30999921-cfe9-586c-9a69-61145a789ee7
+  effect: core/add-action
+  inputs:
+    actionId: '@action.anchor'

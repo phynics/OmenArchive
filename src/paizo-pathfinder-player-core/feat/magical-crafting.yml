@@ -1,23 +1,16 @@
 ---
-action: {}
-description: You can Craft magic items, though some have other requirements. When
-  you select this feat, you gain formulas for four common magic items of 2nd level
-  or lower.
-level: 2
-mechanicsScope: encounter
 name: magical crafting
-prerequisites:
-- expert in Crafting
+level: 2
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: xWY5omyIcILNR7y1
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: crafting
+prerequisites:
+- text: expert in Crafting
+  hasSkillProficiency: {skill: crafting, proficiency: expert}
+description: You can Craft magic items, though some have other requirements. When
+  you select this feat, you gain formulas for four common magic items of 2nd level
+  or lower.
+mechanicsScope: encounter
+foundryID: xWY5omyIcILNR7y1

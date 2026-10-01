@@ -1,17 +1,37 @@
 ---
+name: phantom pain
+rank: 1
+rarity: common
+category: spell
+traits:
+- concentrate
+- illusion
+- manipulate
+- mental
+- nonlethal
+traditions:
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 creature
+duration: 1 minute
+defense:
+  basic: false
+  counteraction: false
+  save: will
 damage:
   0:
     formula: 2d4
     kinds:
     - damage
     type: mental
-defense:
-  basic: false
-  counteraction: false
-  save: will
+heightening:
+  damage:
+    0: 2d4
+  interval: 1
+  type: interval
 description: 'Illusory pain wracks the target, dealing 2d4 mental damage and (spell
   rank)d4[persistent,mental] damage. The target must attempt a Will save.
 
@@ -32,28 +52,5 @@ description: 'Illusory pain wracks the target, dealing 2d4 mental damage and (sp
 
 
   Heightened (+1) The damage increases by 2d4 and the persistent damage by 1d4.'
-duration: 1 minute
-heightening:
-  damage:
-    0: 2d4
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: phantom pain
-range: 30 feet
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: R8bqnYiThB6MYTxD
-target: 1 creature
-time: '2'
-traditions:
-- occult
-traits:
-- concentrate
-- illusion
-- manipulate
-- mental
-- nonlethal
+foundryID: R8bqnYiThB6MYTxD

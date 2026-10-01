@@ -1,4 +1,13 @@
 ---
+name: instinctive support
+level: 6
+rarity: common
+type: class
+traits:
+- druid
+prerequisites:
+- text: Animal Companion
+  hasResourceWithName: animal companion
 action:
   count: free_action
   trigger: You Cast a non-cantrip spell that targets only your animal companion.
@@ -6,18 +15,5 @@ description: When you support your animal companion, your companion supports you
   turn. After your spell takes place, your companion gains its actions for the turn,
   as if you Commanded it, and one of the actions must be Support. If the companion
   has used any other actions already, it can't Support you, as normal.
-level: 6
 mechanicsScope: encounter
-name: instinctive support
-prerequisites:
-- Animal Companion
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: buRSqam06r9jFAbB
-traits:
-- druid
-type: class
-typedPrerequisites:
-- hasResourceWithName: animal companion
+foundryID: buRSqam06r9jFAbB

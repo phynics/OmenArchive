@@ -1,5 +1,16 @@
 ---
-action: {}
+name: legendary thief
+level: 15
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: legendary in Thievery
+  hasSkillProficiency: {skill: thievery, proficiency: legendary}
+- text: Pickpocket
+  hasResourceWithName: pickpocket
 description: Your ability to Steal defies belief. You can attempt to Steal something
   that is actively wielded or that would be extremely noticeable or time consuming
   to remove (like worn shoes or armor). You must do so slowly and carefully, spending
@@ -8,23 +19,5 @@ description: Your ability to Steal defies belief. You can attempt to Steal somet
   Hidden, such as the cover of darkness or a bustling crowd. Even if you succeed,
   if the item is extremely prominent—like a suit of full plate armor—onlookers will
   quickly notice it's gone after you steal it.
-level: 15
 mechanicsScope: encounter
-name: legendary thief
-prerequisites:
-- legendary in Thievery
-- Pickpocket
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: IZbjUaZI5zHTd1Vp
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: legendary
-    skill: thievery
-- hasResourceWithName: pickpocket
+foundryID: IZbjUaZI5zHTd1Vp

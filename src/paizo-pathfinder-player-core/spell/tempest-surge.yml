@@ -1,40 +1,8 @@
 ---
-action:
-  count: two_actions
-category: focus
-damage:
-  0:
-    formula: 1d12
-    kinds:
-    - damage
-    type: electricity
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
-description: 'You surround a foe in a swirling storm of violent winds, roiling clouds,
-  and crackling lightning. The storm deals 1d12 electricity damage to the target with
-  a basic Reflex save. On a failure, the target also is Clumsy 2 for 1 round.
-
-
-  Heightened (+1) The initial damage increases by 1d12.'
-heightening:
-  damage:
-    0: 1d12
-  interval: 1
-  type: interval
-mechanicsScope: encounter
 name: tempest surge
-range: 30 feet
 rank: 1
 rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: ho1jSoYKrHUNnM90
-target: 1 creature
-time: '2'
-traditions: []
+category: focus
 traits:
 - air
 - concentrate
@@ -42,3 +10,32 @@ traits:
 - electricity
 - focus
 - manipulate
+traditions: []
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+target: 1 creature
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 1d12
+    kinds:
+    - damage
+    type: electricity
+heightening:
+  damage:
+    0: 1d12
+  interval: 1
+  type: interval
+description: 'You surround a foe in a swirling storm of violent winds, roiling clouds,
+  and crackling lightning. The storm deals 1d12 electricity damage to the target with
+  a basic Reflex save. On a failure, the target also is Clumsy 2 for 1 round.
+
+
+  Heightened (+1) The initial damage increases by 1d12.'
+mechanicsScope: encounter
+foundryID: ho1jSoYKrHUNnM90

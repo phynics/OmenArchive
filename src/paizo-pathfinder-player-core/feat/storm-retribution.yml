@@ -1,4 +1,19 @@
 ---
+name: storm retribution
+level: 6
+rarity: common
+type: class
+traits:
+- druid
+prerequisites:
+- text: storm order
+  hasChoice:
+    name: $.druid.order
+    equals: {type: core/feature-id, value: '@class.druid.orders.storm'}
+- text: tempest surge order spell
+  hasChoice:
+    name: $.druid.order
+    equals: {type: core/feature-id, value: '@class.druid.orders.storm'}
 action:
   count: reaction
   requirements: You have at least 1 available Focus Point.
@@ -8,30 +23,5 @@ description: You lash out, directing a burst of storming fury toward a creature 
   has harmed you. You cast Tempest Surge on the triggering opponent and push that
   creature, moving it 5 feet away from you if it fails its Reflex save, or 10 feet
   if it critically fails. This movement is forced movement.
-level: 6
 mechanicsScope: encounter
-name: storm retribution
-prerequisites:
-- storm order
-- tempest surge order spell
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: F1DVDJRARfdb1Kjz
-traits:
-- druid
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 23f5173a-92ba-5901-a0d2-c3533fbcefad
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.druid.order
-- hasChoice:
-    equals:
-      payload: 23f5173a-92ba-5901-a0d2-c3533fbcefad
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.druid.order
+foundryID: F1DVDJRARfdb1Kjz

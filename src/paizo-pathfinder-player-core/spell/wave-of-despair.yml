@@ -1,12 +1,30 @@
 ---
+name: wave of despair
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- emotion
+- manipulate
+- mental
+traditions:
+- arcane
+- occult
+time: '2'
 action:
   count: two_actions
 area: '30'
-category: spell
+duration: 1 or more rounds
 defense:
   basic: false
   counteraction: false
   save: will
+heightening:
+  levels:
+    7:
+      area: '60'
+  type: fixed
 description: 'You inflict despair on creatures in the area. The effects for each creature
   are determined by its Will save.
 
@@ -26,28 +44,7 @@ description: 'You inflict despair on creatures in the area. The effects for each
 
 
   Heightened (7th) The area increases to a 60-foot cone.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 or more rounds
-heightening:
-  levels:
-    7:
-      area: '60'
-  type: fixed
-mechanicsScope: encounter
-name: wave of despair
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: GaRQlC9Yw1BGKHfN
-time: '2'
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- emotion
-- manipulate
-- mental
+foundryID: GaRQlC9Yw1BGKHfN

@@ -1,11 +1,9 @@
 ---
-description: A typical spyglass lets you see eight times farther than normal. A fine
-  spyglass adds a +1 item bonus to Perception checks to notice details at a distance.
-details:
-  equipment: {}
-level: 4
-mechanicsScope: builder
 name: spyglass (fine)
+level: 4
+rarity: common
+type: equipment
+traits: []
 physical:
   bulk: L
   hardness: 0
@@ -14,62 +12,22 @@ physical:
   quantity: 1
   size: med
   usage: held-in-two-hands
-rarity: common
+details:
+  equipment: {}
+description: A typical spyglass lets you see eight times farther than normal. A fine
+  spyglass adds a +1 item bonus to Perception checks to notice details at a distance.
+mechanicsScope: builder
+foundryID: rV7MTDCseZmEZKDw
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: 31aaaa3f-dd3c-5e00-9192-6485f4b97361
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e68cc959-7311-50a6-b17b-0cb145346b21
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - savingThrow:
-                _0: perception
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Spyglass (Fine): +1 item bonus to Perception checks (Notice details
-            at distance).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: Notice details at distance
-              kind: situational
-            type: item
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: rV7MTDCseZmEZKDw
-traits: []
-type: equipment
+- id: 31aaaa3f-dd3c-5e00-9192-6485f4b97361
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: e68cc959-7311-50a6-b17b-0cb145346b21
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    description: 'Spyglass (Fine): +1 item bonus to Perception checks (Notice details
+      at distance).'
+    numeric: {literal: {amount: 1, applicability: {description: Notice details at
+            distance, kind: situational}, type: item}}

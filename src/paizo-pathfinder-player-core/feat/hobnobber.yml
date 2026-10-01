@@ -1,25 +1,18 @@
 ---
-action: {}
+name: hobnobber
+level: 1
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: trained in Diplomacy
+  hasSkillProficiency: {skill: diplomacy, proficiency: trained}
 description: You are skilled at learning information through conversation. The Gather
   Information exploration activity takes you half as long as normal (typically reducing
   the time to 1 hour). If you're a master in Diplomacy and roll a critical failure
   to Gather Information, you get a failure instead. There is still no guarantee that
   a rumor you learn with Gather Information is accurate.
-level: 1
 mechanicsScope: encounter
-name: hobnobber
-prerequisites:
-- trained in Diplomacy
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4RjDxgvNXNl5GG9d
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: diplomacy
+foundryID: 4RjDxgvNXNl5GG9d

@@ -1,47 +1,44 @@
 ---
+name: toxic cloud
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- death
+- manipulate
+- poison
+traditions:
+- arcane
+- primal
+time: '3'
 action:
   count: three_actions
+range: 120 feet
 area: '20'
-category: spell
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 6d8
     kinds:
     - damage
     type: poison
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d8
+  interval: 1
+  type: interval
 description: 'You conjure a poisonous fog. This functions as Mist, except the area
   moves 10 feet away from you each round. You deal 6d8 poison damage to each breathing
   creature that starts its turn in the spell''s area. You can Dismiss the spell.
 
 
   Heightened (+1) The damage increases by 1d8.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 minute
-heightening:
-  damage:
-    0: 1d8
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: toxic cloud
-range: 120 feet
-rank: 5
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: MlpbeZ61Euhl0d60
-time: '3'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- death
-- manipulate
-- poison
+foundryID: MlpbeZ61Euhl0d60

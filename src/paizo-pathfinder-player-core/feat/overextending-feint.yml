@@ -1,4 +1,13 @@
 ---
+name: overextending feint
+level: 1
+rarity: common
+type: class
+traits:
+- rogue
+prerequisites:
+- text: trained in Deception
+  hasSkillProficiency: {skill: deception, proficiency: trained}
 action:
   criticalSuccess: The target takes a –2 circumstance penalty to all attack rolls
     against you before the end of its next turn.
@@ -7,20 +16,5 @@ action:
 description: You goad a foe into overextending. On a successful Feint, you can use
   the following success and critical success effects instead of any other effects
   that would occur when you Feint.
-level: 1
 mechanicsScope: encounter
-name: overextending feint
-prerequisites:
-- trained in Deception
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 9CaaU5szcf3mtJXD
-traits:
-- rogue
-type: class
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: deception
+foundryID: 9CaaU5szcf3mtJXD

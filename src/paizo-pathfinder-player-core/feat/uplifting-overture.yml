@@ -1,24 +1,16 @@
 ---
-action: {}
-description: You learn the Uplifting Overture composition cantrip, which aids your
-  allies' skills with the inspiring nature of your performance.
-level: 2
-mechanicsScope: encounter
 name: uplifting overture
-prerequisites:
-- maestro muse
+level: 2
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: eUXgY8W3fShlW7pd
+type: class
 traits:
 - bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: e3ea2e9a-ac76-5a96-9d90-d127c118411b
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
+prerequisites:
+- text: maestro muse
+  hasChoice:
     name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
+description: You learn the Uplifting Overture composition cantrip, which aids your
+  allies' skills with the inspiring nature of your performance.
+mechanicsScope: encounter
+foundryID: eUXgY8W3fShlW7pd

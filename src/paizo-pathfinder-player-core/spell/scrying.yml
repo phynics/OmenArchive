@@ -1,5 +1,19 @@
 ---
+name: scrying
+rank: 6
+rarity: uncommon
 category: spell
+traits:
+- concentrate
+- manipulate
+- scrying
+traditions:
+- arcane
+- occult
+time: 10 minutes
+range: planetary
+target: 1 creature
+duration: 10 minutes
 defense:
   basic: false
   counteraction: false
@@ -30,25 +44,8 @@ description: 'You magically spy on a creature of your choice. Scrying works like
 
   Critical Failure The spell succeeds, and the eye follows the target if it moves,
   traveling up to 60 feet per round.'
+mechanicsScope: encounter
 diagnostics:
 - 'Foundry casting time retained without normalized action count: 10 minutes'
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 10 minutes
-mechanicsScope: encounter
-name: scrying
-range: planetary
-rank: 6
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: r784cIz17eWujtQj
-target: 1 creature
-time: 10 minutes
-traditions:
-- arcane
-- occult
-traits:
-- concentrate
-- manipulate
-- scrying
+foundryID: r784cIz17eWujtQj

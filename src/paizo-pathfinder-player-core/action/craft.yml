@@ -1,10 +1,8 @@
 ---
-criticalFailure: You fail to complete the item. You ruin 10% of the raw materials
-  you supplied, but you can salvage the rest. If you want to try again, you must start
-  over.
-criticalSuccess: Your attempt is successful. Each additional day spent Crafting reduces
-  the materials needed to complete the item by an amount based on your level + 1 and
-  your proficiency rank in Crafting.
+name: craft
+traits:
+- downtime
+- manipulate
 description: "You can make an item from raw materials. You need the Alchemical Crafting
   skill feat to create alchemical items and the Magical Crafting feat to create magic
   items.\nTo craft an item, you must meet the following requirements:\n\t•\tThe item
@@ -30,15 +28,14 @@ description: "You can make an item from raw materials. You need the Alchemical C
   of its Price in materials. If the downtime days you spend are interrupted,you can
   return to finish the item later, continuing where you left off. An example of Crafting
   appears in the sidebar."
-failure: You fail to complete the item. You can salvage the raw materials you supplied
-  for their full value. If you want to try again, you must start over.
-name: craft
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+criticalSuccess: Your attempt is successful. Each additional day spent Crafting reduces
+  the materials needed to complete the item by an amount based on your level + 1 and
+  your proficiency rank in Crafting.
 success: Your attempt is successful. Each additional day spent Crafting reduces the
   materials needed to complete the item by an amount based on your level and your
   proficiency rank.
-traits:
-- downtime
-- manipulate
+failure: You fail to complete the item. You can salvage the raw materials you supplied
+  for their full value. If you want to try again, you must start over.
+criticalFailure: You fail to complete the item. You ruin 10% of the raw materials
+  you supplied, but you can salvage the rest. If you want to try again, you must start
+  over.

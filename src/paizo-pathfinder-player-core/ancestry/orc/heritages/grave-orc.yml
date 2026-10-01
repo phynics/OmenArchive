@@ -1,95 +1,26 @@
 ---
+name: grave orc
 ancestry: orc
+rarity: common
 description: You were exposed to powerful necromantic energies that should have killed
   you—but you survived. Your skin is cold, clammy, and gray. You gain resistance to
   void damage equal to half your level (minimum 1). You also gain a +1 circumstance
   bonus to saving throws against effects with the death or void trait.
 mechanicsScope: builder
-name: grave orc
-rarity: common
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-resistance
-    revision: 2
-  id: f6b0b88b-a85a-58f7-9cad-2d769c3dab2b
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: void
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: type
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: '[[(max 1 (divide $.level 2))]]'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/sheet-value
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/sheet-value
-    inputName: value
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: ''
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: exceptions
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
-    revision: 2
-  id: f6ab4fe9-4323-53e0-a43a-3d6a892ed13e
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: e48bc1cd-5fb3-5095-b2ca-de49bab541fb
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: uuid
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            description:
-            - anyNonPerceptionSavingThrow: {}
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-description
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-description
-    inputName: target
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 'Grave Orc: +1 circumstance bonus to saving throws (in some situations).'
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/string
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-    inputName: description
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            amount: 1
-            applicability:
-              description: in some situations
-              kind: situational
-            type: circumstance
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
-    inputName: numeric
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
+- id: f6b0b88b-a85a-58f7-9cad-2d769c3dab2b
+  effect: core/add-resistance@2
+  inputs:
+    type: void
+    value: \[[(max 1 (divide $.level 2))]]
+    exceptions: ''
+- id: f6ab4fe9-4323-53e0-a43a-3d6a892ed13e
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: e48bc1cd-5fb3-5095-b2ca-de49bab541fb
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    description: 'Grave Orc: +1 circumstance bonus to saving throws (in some situations).'
+    numeric: {literal: {amount: 1, applicability: {description: in some situations,
+          kind: situational}, type: circumstance}}

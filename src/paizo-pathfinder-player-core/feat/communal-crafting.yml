@@ -1,5 +1,14 @@
 ---
-action: {}
+name: communal crafting
+level: 2
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: expert in Crafting
+  hasSkillProficiency: {skill: crafting, proficiency: expert}
 description: You can have other PCs help you Craft an item, under your direction.
   A helper PC rolls a check with a skill in which they're trained. The skill must
   be Crafting or another skill relevant to the item, as determined by the GM. For
@@ -13,21 +22,5 @@ description: You can have other PCs help you Craft an item, under your direction
   a certain number of PCs can help depending on the circumstances. Communal Crafting
   also allows you to take the role of a helper when someone else is crafting, provided
   they accept your help.
-level: 2
 mechanicsScope: encounter
-name: communal crafting
-prerequisites:
-- expert in Crafting
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: lUXVmSFJbaPos5pY
-traits:
-- general
-- skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: expert
-    skill: crafting
+foundryID: lUXVmSFJbaPos5pY

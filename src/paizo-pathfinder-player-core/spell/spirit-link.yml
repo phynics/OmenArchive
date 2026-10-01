@@ -1,13 +1,33 @@
 ---
+name: spirit link
+rank: 1
+rarity: common
+category: spell
+traits:
+- concentrate
+- healing
+- manipulate
+- spirit
+traditions:
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 willing creature
+duration: 10 minutes
 damage:
   9k8ayqgvgultdghx:
     formula: '2'
     kinds:
     - healing
     type: untyped
+heightening:
+  damage:
+    9k8ayqgvgultdghx: '2'
+  interval: 1
+  type: interval
 description: 'You form a spiritual link with another creature, taking in its pain.
   When you Cast this Spell and at the start of each of your turns, if the target is
   below maximum Hit Points, it regains 2 Hit Points (or the difference between its
@@ -25,28 +45,5 @@ description: 'You form a spiritual link with another creature, taking in its pai
 
 
   Heightened (+1) The number of Hit Points transferred each time increases by 2.'
-duration: 10 minutes
-heightening:
-  damage:
-    9k8ayqgvgultdghx: '2'
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: spirit link
-range: 30 feet
-rank: 1
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: yHujiDQPdtXW797e
-target: 1 willing creature
-time: '2'
-traditions:
-- divine
-- occult
-traits:
-- concentrate
-- healing
-- manipulate
-- spirit
+foundryID: yHujiDQPdtXW797e

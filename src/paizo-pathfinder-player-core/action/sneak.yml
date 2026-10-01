@@ -1,8 +1,9 @@
 ---
+name: sneak
+traits:
+- move
+- secret
 count: one_action
-criticalFailure: You're spotted! You're observed by the creature throughout your movement
-  and remain so. If you're Invisible and were hidden from the creature, instead of
-  being observed you're hidden throughout your movement and remain so.
 description: 'You attempt to move to another place while becoming or staying undetected.
   Stride up to half your Speed. (You can use Sneak while Burrowing, Climbing, Flying,
   or Swimming instead of Striding if you have the corresponding movement type; you
@@ -27,15 +28,11 @@ description: 'You attempt to move to another place while becoming or staying und
 
   If a creature uses Seek and you become hidden to it as a result, you must Sneak
   if you want to become undetected by that creature again.'
+success: You're undetected by the creature during your movement and remain undetected
+  by the creature at the end of it.
 failure: A telltale sound or other sign gives your position away, though you still
   remain unseen. You're hidden from the creature throughout your movement and remain
   so.
-name: sneak
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-success: You're undetected by the creature during your movement and remain undetected
-  by the creature at the end of it.
-traits:
-- move
-- secret
+criticalFailure: You're spotted! You're observed by the creature throughout your movement
+  and remain so. If you're Invisible and were hidden from the creature, instead of
+  being observed you're hidden throughout your movement and remain so.

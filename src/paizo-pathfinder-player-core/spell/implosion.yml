@@ -1,17 +1,35 @@
 ---
+name: implosion
+rank: 9
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 30 feet
+target: 1 corporeal creature
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: '75'
     kinds:
     - damage
     type: untyped
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: '10'
+  interval: 1
+  type: interval
 description: 'You crush the target by causing it to collapse in on itself, dealing
   75 damage. The first time each round you Sustain the spell, you must choose a new
   target to be subject to the same effect; the same creature can never be targeted
@@ -21,28 +39,7 @@ description: 'You crush the target by causing it to collapse in on itself, deali
 
 
   Heightened (+1) The damage increases by 10.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-heightening:
-  damage:
-    0: '10'
-  interval: 1
-  type: interval
-mechanicsScope: encounter
-name: implosion
-range: 30 feet
-rank: 9
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4WS7HrFjwNvTn8T2
-target: 1 corporeal creature
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- manipulate
+foundryID: 4WS7HrFjwNvTn8T2

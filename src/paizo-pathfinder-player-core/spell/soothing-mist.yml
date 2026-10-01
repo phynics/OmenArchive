@@ -1,7 +1,25 @@
 ---
+name: soothing mist
+rank: 2
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- focus
+- healing
+- manipulate
+- ranger
+- vitality
+traditions: []
+time: '2'
 action:
   count: two_actions
-category: focus
+range: 30 feet
+target: 1 willing living creature or 1 undead creature
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 2d8
@@ -9,10 +27,11 @@ damage:
     - damage
     - healing
     type: vitality
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d8
+  interval: 1
+  type: interval
 description: 'You call forth a magical mist that envelops a creature. The mist restores
   2d8 Hit Points to a target living creature and ends one source of persistent acid,
   bleed, fire, poison, or void damage affecting it. If the creature is taking persistent
@@ -23,27 +42,5 @@ description: 'You call forth a magical mist that envelops a creature. The mist r
 
   Heightened (+1) The amount of healing (or damage to an undead target) increases
   by 1d8, and the persistent vitality damage to an undead creature increases by 1.'
-heightening:
-  damage:
-    0: 1d8
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: soothing mist
-range: 30 feet
-rank: 2
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: RGBZrVRIEDb2G48h
-target: 1 willing living creature or 1 undead creature
-time: '2'
-traditions: []
-traits:
-- concentrate
-- focus
-- healing
-- manipulate
-- ranger
-- vitality
+foundryID: RGBZrVRIEDb2G48h

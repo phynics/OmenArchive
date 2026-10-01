@@ -1,8 +1,23 @@
 ---
+name: calm
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- emotion
+- incapacitation
+- manipulate
+- mental
+traditions:
+- divine
+- occult
+time: '2'
 action:
   count: two_actions
+range: 120 feet
 area: '10'
-category: spell
+duration: 1 minute
 defense:
   basic: false
   counteraction: false
@@ -23,26 +38,8 @@ description: 'You forcibly calm creatures in the area, soothing them into a nonv
 
 
   Critical Failure As failure, but hostility doesn''t end the effect.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-mechanicsScope: encounter
-name: calm
-range: 120 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: b515AZlB0sridKSq
-time: '2'
-traditions:
-- divine
-- occult
-traits:
-- concentrate
-- emotion
-- incapacitation
-- manipulate
-- mental
+foundryID: b515AZlB0sridKSq

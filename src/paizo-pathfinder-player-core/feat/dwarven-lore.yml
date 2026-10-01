@@ -1,5 +1,10 @@
 ---
-action: {}
+name: dwarven lore
+level: 1
+rarity: common
+type: ancestry
+traits:
+- dwarf
 description: 'You eagerly absorbed the old stories and traditions of your ancestors,
   your gods, and your people, studying subjects and techniques passed down for generation
   upon generation. You gain the trained proficiency rank in Crafting and Religion.
@@ -7,90 +12,21 @@ description: 'You eagerly absorbed the old stories and traditions of your ancest
   or class, for example), you instead become trained in a skill of your choice.
 
   You also gain the Additional Lore general feat for Dwarf Lore.'
-level: 1
 mechanicsScope: builder
-name: dwarven lore
-prerequisites: []
-rarity: common
+foundryID: 9bnkx6VgcO5mOk5b
 rules:
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: a469d3e4-c36c-58cc-9afb-a117744fcea0
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: crafting
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
-    revision: 1
-  id: 580ed93a-b72b-5aaf-9449-c1c29aa6a2a4
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload:
-            kind: religion
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/skill
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
-    inputName: skill
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 2
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
-    inputName: proficiencyCap
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
-    revision: 2
-  id: 5208e770-6fff-5d68-a48f-a9f767fbebe3
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 9c0f3d5b-31ad-517b-8515-7535c6bed777
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/uuid
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
-    inputName: selectionId
-  - expectedValue:
-      source:
-        kind: literal
-        value:
-          payload: 3d88c622-5354-5dd3-99b6-acfedf3f6bbc
-          revision: 1
-          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-    inputName: featId
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 9bnkx6VgcO5mOk5b
-traits:
-- dwarf
-type: ancestry
+- id: a469d3e4-c36c-58cc-9afb-a117744fcea0
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: crafting}
+    proficiencyCap: 2
+- id: 580ed93a-b72b-5aaf-9449-c1c29aa6a2a4
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: religion}
+    proficiencyCap: 2
+- id: 5208e770-6fff-5d68-a48f-a9f767fbebe3
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 9c0f3d5b-31ad-517b-8515-7535c6bed777
+    featId: '@feat.additional-lore'

@@ -1,22 +1,15 @@
 ---
-action: {}
-description: You gain the Expert Spellcasting Feat benefits.
-level: 12
-mechanicsScope: encounter
 name: expert cleric spellcasting
-prerequisites:
-- Basic Cleric Spellcasting
-- master in Religion
+level: 12
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: PLTOCEAvqBS05pZu
+type: archetype
 traits:
 - archetype
-type: archetype
-typedPrerequisites:
-- hasResourceWithName: basic cleric spellcasting
-- hasSkillProficiency:
-    proficiency: master
-    skill: religion
+prerequisites:
+- text: Basic Cleric Spellcasting
+  hasResourceWithName: basic cleric spellcasting
+- text: master in Religion
+  hasSkillProficiency: {skill: religion, proficiency: master}
+description: You gain the Expert Spellcasting Feat benefits.
+mechanicsScope: encounter
+foundryID: PLTOCEAvqBS05pZu

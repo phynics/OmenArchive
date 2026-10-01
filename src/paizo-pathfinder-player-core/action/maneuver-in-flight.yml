@@ -1,20 +1,17 @@
 ---
+name: maneuver in flight
+traits:
+- move
 count: one_action
-criticalFailure: As failure, but the consequence is more dire.
+requirements: You have a fly Speed.
 description: "You try a difficult maneuver while flying. Attempt an Acrobatics check.
   The GM determines what maneuvers are possible, but they rarely allow you to move
   farther than your fly Speed.\nSample Maneuver in Flight Tasks\n\t•\tTrained steep
   ascent or descent\n\t•\tExpert fly against the wind, hover midair\n\t•\tMaster reverse
   direction\n\t•\tLegendary fly through gale force winds"
+success: You succeed at the maneuver.
 failure: Your maneuver fails. The GM chooses if you simply can't move or if some other
   detrimental effect happens. The outcome should be appropriate for the maneuver you
   attempted (for instance, being blown off course if you were trying to fly against
   a strong wind).
-name: maneuver in flight
-requirements: You have a fly Speed.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-success: You succeed at the maneuver.
-traits:
-- move
+criticalFailure: As failure, but the consequence is more dire.

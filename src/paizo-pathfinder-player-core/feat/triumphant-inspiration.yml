@@ -1,27 +1,20 @@
 ---
+name: triumphant inspiration
+level: 14
+rarity: common
+type: class
+traits:
+- bard
+prerequisites:
+- text: warrior muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.warrior'}
 action:
   count: free_action
   trigger: You critically hit a foe with a melee weapon Strike or a melee unarmed
     attack.
 description: With a triumphant shout, you inspire your allies. You cast a composition
   cantrip you know that normally takes a single action to cast.
-level: 14
 mechanicsScope: encounter
-name: triumphant inspiration
-prerequisites:
-- warrior muse
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: RHLfM9NlIlHTH85w
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 4e9ebea9-187a-5215-8af4-a3f318430870
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
+foundryID: RHLfM9NlIlHTH85w

@@ -1,29 +1,19 @@
 ---
-action: {}
+name: ritual researcher
+level: 4
+rarity: uncommon
+type: class
+traits:
+- bard
+prerequisites:
+- text: enigma muse
+  hasChoice:
+    name: $.bard.muse
+    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+- text: expert in Occultism
+  hasSkillProficiency: {skill: occultism, proficiency: expert}
 description: Careful research into the art of rituals has made you better at performing
   them. You gain a +2 circumstance bonus to all primary and secondary checks you attempt
   as part of casting a ritual.
-level: 4
 mechanicsScope: encounter
-name: ritual researcher
-prerequisites:
-- enigma muse
-- expert in Occultism
-rarity: uncommon
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: DUuCOQ9FiZf7vS5b
-traits:
-- bard
-type: class
-typedPrerequisites:
-- hasChoice:
-    equals:
-      payload: 561e24d0-c44a-5fff-9abd-ec39e3d7f785
-      revision: 1
-      typeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    name: $.bard.muse
-- hasSkillProficiency:
-    proficiency: expert
-    skill: occultism
+foundryID: DUuCOQ9FiZf7vS5b

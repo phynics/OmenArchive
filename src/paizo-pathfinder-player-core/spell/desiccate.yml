@@ -1,17 +1,35 @@
 ---
+name: desiccate
+rank: 8
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- void
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 500 feet
+target: any number of living creatures
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
 damage:
   0:
     formula: 10d10
     kinds:
     - damage
     type: void
-defense:
-  basic: true
-  counteraction: false
-  save: fortitude
+heightening:
+  damage:
+    0: 1d10
+  interval: 1
+  type: interval
 description: 'You pull the moisture from the targets'' bodies, dealing 10d10 void
   damage. Creatures made of water (such as water elementals) and plant creatures use
   the outcome for one degree of success worse than the result of their saving throw.
@@ -20,26 +38,5 @@ description: 'You pull the moisture from the targets'' bodies, dealing 10d10 voi
 
 
   Heightened (+1) The damage increases by 1d10.'
-heightening:
-  damage:
-    0: 1d10
-  interval: 1
-  type: interval
 mechanicsScope: encounter
-name: desiccate
-range: 500 feet
-rank: 8
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: M0jQlpQYUr0pp2Sv
-target: any number of living creatures
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- manipulate
-- void
+foundryID: M0jQlpQYUr0pp2Sv

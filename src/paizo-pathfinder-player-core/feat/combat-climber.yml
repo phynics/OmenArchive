@@ -1,23 +1,16 @@
 ---
-action: {}
-description: Your techniques allow you to fight as you climb. You're not Off-Guard
-  while Climbing and can Climb with a hand occupied. You must still use another hand
-  and both legs to Climb.
-level: 1
-mechanicsScope: encounter
 name: combat climber
-prerequisites:
-- trained in Athletics
+level: 1
 rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 09PurtIanNUPfNRq
+type: skill
 traits:
 - general
 - skill
-type: skill
-typedPrerequisites:
-- hasSkillProficiency:
-    proficiency: trained
-    skill: athletics
+prerequisites:
+- text: trained in Athletics
+  hasSkillProficiency: {skill: athletics, proficiency: trained}
+description: Your techniques allow you to fight as you climb. You're not Off-Guard
+  while Climbing and can Climb with a hand occupied. You must still use another hand
+  and both legs to Climb.
+mechanicsScope: encounter
+foundryID: 09PurtIanNUPfNRq

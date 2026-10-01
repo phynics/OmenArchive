@@ -1,8 +1,23 @@
 ---
+name: darkness
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- darkness
+- manipulate
+traditions:
+- arcane
+- divine
+- occult
+- primal
+time: '3'
 action:
   count: three_actions
+range: 120 feet
 area: '20'
-category: spell
+duration: 1 minute
 description: 'You create a shroud of darkness that prevents light from penetrating
   or emanating within the area. Light does not enter the area and any non-magical
   light sources, such as a torch or lantern, do not emanate any light while inside
@@ -15,25 +30,7 @@ description: 'You create a shroud of darkness that prevents light from penetrati
   Heightened (4th) Even creatures with darkvision (but not greater darkvision) can
   barely see through the darkness. They treat targets seen through the darkness as
   Concealed.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent
-duration: 1 minute
-mechanicsScope: encounter
-name: darkness
-range: 120 feet
-rank: 2
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4GE2ZdODgIQtg51c
-time: '3'
-traditions:
-- arcane
-- divine
-- occult
-- primal
-traits:
-- concentrate
-- darkness
-- manipulate
+foundryID: 4GE2ZdODgIQtg51c

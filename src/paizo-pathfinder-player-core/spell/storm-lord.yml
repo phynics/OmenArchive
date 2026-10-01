@@ -1,19 +1,33 @@
 ---
+name: storm lord
+rank: 9
+rarity: uncommon
+category: focus
+traits:
+- air
+- concentrate
+- druid
+- electricity
+- focus
+- manipulate
+traditions: []
+time: '2'
 action:
   count: two_actions
   requirements: You are outdoors and aboveground.
 area: 100-foot emanation which affects you.
-category: focus
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   0:
     formula: 10d6
     kinds:
     - damage
     type: electricity
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+requirements: You are outdoors and aboveground.
 description: 'The sky above you darkens in a matter of moments, swirling with ominous
   clouds punctuated by flashes of lighting. When you Cast the Spell and the first
   time you Sustain it each turn on subsequent rounds, select one of the following
@@ -38,24 +52,7 @@ description: 'The sky above you darkens in a matter of moments, swirling with om
   and manipulate traits, to call down a bolt of lightning, striking any target in
   range that you can see. You deal 10d6 electricity damage to the target; it must
   attempt a basic Reflex save. On a failure, it is also Deafened for 1 round.'
+mechanicsScope: encounter
 diagnostics:
 - Foundry sustained duration flag is not represented by CharacterSpell
-duration: 1 minute
-mechanicsScope: encounter
-name: storm lord
-rank: 9
-rarity: uncommon
-requirements: You are outdoors and aboveground.
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: XYhU3Wi94n1RKxTa
-time: '2'
-traditions: []
-traits:
-- air
-- concentrate
-- druid
-- electricity
-- focus
-- manipulate
+foundryID: XYhU3Wi94n1RKxTa

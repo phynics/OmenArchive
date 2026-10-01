@@ -1,5 +1,8 @@
 ---
-action: {}
+name: druidic order
+level: 1
+traits:
+- druid
 description: 'Upon becoming a druid, you align yourself with a druidic order, which
   grants you a class feat, an order spell (see below), and an additional trained skill
   tied to your order While you''ll always be a member of your initial order, it''s
@@ -41,19 +44,13 @@ description: 'Upon becoming a druid, you align yourself with a druidic order, wh
   Untamed Order
 
   Wave Order'
-level: 1
 mechanicsScope: builder
-name: druidic order
+foundryID: 8STJEFVJISujgpMR
 rules:
-- choice:
-    answer:
-      filter:
-        kind: single
-        value:
-          kind: hasPathPrefix
-          path: omen://class/druid/orders?source=paizo-pathfinder-player-core
-      kind: records
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
+- id: 7de42d3e-ba36-5ad8-b49b-d9959ef7e6c7
+  key: choice-druid-order
+  choice:
+    name: $.druid.order
     label: Order
     legacySelections:
     - inputName: featureId
@@ -61,27 +58,9 @@ rules:
       ruleID: 963736db-6723-552c-809e-ef49960032a5
       sourceID: 145c3edc-1fa7-5188-b9f9-3be5b1dde220
       valueTypeID: org.openomen.pf2e.core/value/feature-id
-    name: $.druid.order
-    startLevel: 1
-  id: 7de42d3e-ba36-5ad8-b49b-d9959ef7e6c7
-  key: choice-druid-order
-  startLevel: 1
-- effectReference:
-    kindID: me.atkn.omen.pf2e.playercore/effect/add-feature-by-id
-    revision: 1
-  id: b7b77c1a-78d8-5368-8a54-e221cf391ff9
-  inputRecipes:
-  - expectedValue:
-      source:
-        kind: choice
-        name: $.druid.order
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
-    inputName: featureId
+    records: {filter: {pathPrefix: '@class.druid.orders'}, type: core/feature-id}
+- id: b7b77c1a-78d8-5368-8a54-e221cf391ff9
   key: choice-set-1
-  startLevel: 1
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 8STJEFVJISujgpMR
-traits:
-- druid
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.druid.order}

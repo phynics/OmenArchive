@@ -1,4 +1,19 @@
 ---
+name: reactive transformation
+level: 14
+rarity: common
+type: class
+traits:
+- druid
+prerequisites:
+- text: Untamed Form
+  hasResourceWithName: untamed form
+- text: Dragon Shape, Elemental Shape, Plant Shape, or Soaring Shape
+  anyOf:
+  - hasResourceWithName: dragon shape
+  - hasResourceWithName: elemental shape
+  - hasResourceWithName: plant shape
+  - hasResourceWithName: soaring shape
 action:
   count: reaction
   trigger: You take poison damage
@@ -14,24 +29,5 @@ description: 'You transform reflexively when in danger. You cast Untamed Form to
   Effect Choose a fire elemental shape from Elemental Form.
 
   Effect Choose a shape from Plant Form.'
-level: 14
 mechanicsScope: encounter
-name: reactive transformation
-prerequisites:
-- Untamed Form
-- Dragon Shape, Elemental Shape, Plant Shape, or Soaring Shape
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: 4Q9Q41KLPYJMdV4b
-traits:
-- druid
-type: class
-typedPrerequisites:
-- hasResourceWithName: untamed form
-- anyOf:
-  - hasResourceWithName: dragon shape
-  - hasResourceWithName: elemental shape
-  - hasResourceWithName: plant shape
-  - hasResourceWithName: soaring shape
+foundryID: 4Q9Q41KLPYJMdV4b

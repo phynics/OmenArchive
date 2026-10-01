@@ -1,7 +1,22 @@
 ---
+name: falling stars
+rank: 9
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
 action:
   count: two_actions
-category: spell
+range: 500 feet
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
 damage:
   5hgRJg7CfV9pZSUa:
     formula: 6d10
@@ -13,10 +28,12 @@ damage:
     kinds:
     - damage
     type: fire
-defense:
-  basic: true
-  counteraction: false
-  save: reflex
+heightening:
+  damage:
+    5hgRJg7CfV9pZSUa: 1d10
+    RrsNfz6nzSiUPvoY: 2d6
+  interval: 1
+  type: interval
 description: 'Area 4 40-foot bursts
 
 
@@ -33,26 +50,6 @@ description: 'Area 4 40-foot bursts
 
   Heightened (+1) The bludgeoning damage increases by 1d10, and the energy damage
   increases by 2d6.'
-heightening:
-  damage:
-    5hgRJg7CfV9pZSUa: 1d10
-    RrsNfz6nzSiUPvoY: 2d6
-  interval: 1
-  type: interval
 mechanicsScope: mixed
-name: falling stars
-range: 500 feet
-rank: 9
-rarity: common
-source:
-  book: Pathfinder Player Core
-  publisher: paizo
-sourceID: jrBa9deU2ULFWvSl
-time: '2'
-traditions:
-- arcane
-- primal
-traits:
-- concentrate
-- manipulate
 unsupportedReason: non-empty Foundry overlays are not represented by CharacterSpell
+foundryID: jrBa9deU2ULFWvSl
