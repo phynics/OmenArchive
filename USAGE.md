@@ -95,8 +95,21 @@ an explicit removal candidate and must be reviewed before it can be deleted.
 
 When a refresh finds a reviewed rule whose non-identity content no longer matches the generated
 rule, it preserves the archive rule and creates a review item. It never silently drops a reviewed
-mechanic. A generated rule may be added automatically only when every reviewed rule still matches;
-the matcher ignores only `id` and `key` while comparing rule content.
+mechanic. A generated rule may be added automatically only when every reviewed rule still matches.
+The matcher ignores what identifies a rule rather than what it does: `id`, `key`, a choice's
+`legacySelections`, and the identity inputs the converter derives from the rule (`selectionId`,
+`grantId`, `entryId`, a roll modifier's `uuid`). A matched rule without a key stays exactly as
+reviewed, since its released IDs can't be rederived; a matched keyed rule takes the generated ID
+(derived from the current path) and keeps the archive's legacy selections. A reviewed key the
+converter no longer produces is a divergence. A record the converter has no rules for keeps its
+hand-authored rules without a review item.
+
+`omendb-build player-core stage` lists the diverged records and writes the converter's own output
+for each under `review/generated/` in the staging folder, outside what the gate hashes and Apply
+copies. After comparing, restage with `--adopt-generated <file,…>` (or `@list`, one archive-relative
+path per line) to take the generated mechanics for those records. Adoption still keeps the identity
+of every rule that says what a reviewed rule says, gives a changed rule the ID and identity inputs
+of the unkeyed reviewed rule with the same effect, and keeps each choice's legacy selections.
 
 The schemas declare this ownership. An archive-owned property carries
 `"x-omen-ownership": "archive"`, and a property without the annotation is generated. OmenScribe reads
@@ -213,7 +226,10 @@ Rules use the namespaced mechanics registry wire shape:
 - `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
 
 Foundry conversion assigns new keys as `<foundry-rule-key>-<n>`, where `n` is that source key's
-occurrence in the record. New authoring proposals use their explicit key when present; otherwise
+occurrence in the record, counted over the Foundry rules rather than the converted ones, so an
+inserted or reordered Foundry rule of another kind moves no other key. Rules the converter builds
+for a purpose rather than from one Foundry rule get a key naming it (`choice-bard-muse`, named after
+the choice), and spellcasting and focus rules keep their semantic IDs without a key. New authoring proposals use their explicit key when present; otherwise
 they receive a random UUID. When an edited keyed rule is written, OmenScribe derives its ID from
 the actual record path.
 

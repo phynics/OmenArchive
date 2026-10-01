@@ -62,6 +62,20 @@ rules:
           typeID: me.atkn.omen.pf2e.playercore/value/string
       valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: description
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            amount: 1
+            applicability:
+              description: mapped area
+              kind: situational
+            type: item
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
+    inputName: numeric
   startLevel: 1
 - effectReference:
     kindID: me.atkn.omen.pf2e.playercore/effect/add-roll-modifier
@@ -98,6 +112,20 @@ rules:
           typeID: me.atkn.omen.pf2e.playercore/value/string
       valueTypeID: me.atkn.omen.pf2e.playercore/value/string
     inputName: description
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            amount: 1
+            applicability:
+              description: Recall knowledge on mapped area
+              kind: situational
+            type: item
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/roll-modifier-numeric
+    inputName: numeric
   startLevel: 1
 source:
   book: Pathfinder Player Core
