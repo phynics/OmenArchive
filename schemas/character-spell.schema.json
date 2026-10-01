@@ -6,8 +6,8 @@
   "type": "object",
   "properties": {
     "name": { "type": "string" },
-    "source": { "$ref": "utility-types/content-source.schema.json" },
-    "sourceID": { "type": "string" },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
+    "foundryID": { "type": "string" },
     "rank": { "type": "integer", "minimum": 0, "maximum": 10 },
     "category": { "type": "string", "enum": ["spell", "cantrip", "focus", "ritual"] },
     "traditions": { "type": "array", "items": { "type": "string", "enum": ["arcane", "divine", "occult", "primal"] } },
@@ -81,7 +81,7 @@
     "unsupportedReason": {
   "x-omen-ownership": "archive", "type": "string", "minLength": 1 }
   },
-  "required": ["name", "source", "rank", "category", "traditions", "rarity", "traits", "description"],
+  "required": ["name", "rank", "category", "traditions", "rarity", "traits", "description"],
   "additionalProperties": false,
   "allOf": [
     {

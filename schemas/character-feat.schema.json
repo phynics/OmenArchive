@@ -5,7 +5,7 @@
   "description": "Schema for a character feat in the game",
   "type": "object",
   "properties": {
-    "sourceID": {
+    "foundryID": {
       "type": "string",
       "minLength": 1,
       "description": "Stable source-system identifier retained for import diagnostics"
@@ -14,9 +14,7 @@
       "type": "string",
       "description": "Name of the feat"
     },
-    "source": {
-      "$ref": "utility-types/content-source.schema.json"
-    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "type": {
       "type": "string",
       "enum": ["general", "ancestry", "class", "skill", "archetype", "other"],
@@ -53,23 +51,12 @@
     },
     "prerequisites": {
       "type": "array",
+      "description": "One list per feat: each prerequisite's text and, next to it, its typed form. A bare string is text with no typed form.",
       "items": {
-        "type": "string"
-      },
-      "default": []
-    },
-    "typedPrerequisites": {
-      "type": "array",
-      "items": {
-        "$ref": "utility-types/rules.schema.json#/$defs/prerequisite"
-      },
-      "default": []
-    },
-    "prerequisiteDiagnostics": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "minLength": 1
+        "oneOf": [
+          { "type": "string", "minLength": 1 },
+          { "$ref": "utility-types/rules.schema.json#/$defs/prerequisiteEntry" }
+        ]
       },
       "default": []
     },
@@ -163,7 +150,6 @@
   },
   "required": [
     "name",
-    "source",
     "type",
     "level",
     "rarity",

@@ -2,55 +2,282 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/resource-filter.schema.json",
   "title": "Resource Filter",
-  "description": "Portable resource-filter options for a generalized mechanics selection.",
+  "description": "Portable resource-filter options (archive format 4): all: and any: lists of filters, and leaves with one key (a metadata key is a dotted name such as spell.category).",
   "oneOf": [
     {
       "type": "object",
       "properties": {
-        "kind": { "const": "single" },
-        "value": { "$ref": "#/$defs/component" }
+        "all": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#"
+          }
+        }
       },
-      "required": ["kind", "value"],
+      "required": [
+        "all"
+      ],
+      "additionalProperties": false,
+      "description": "Every filter passes."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "any": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#"
+          }
+        }
+      },
+      "required": [
+        "any"
+      ],
+      "additionalProperties": false,
+      "description": "Some filter passes."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "not": {
+          "type": "object",
+          "properties": {
+            "trait": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "trait"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "not"
+      ],
+      "additionalProperties": false,
+      "description": "Only a trait can be negated (lacksTrait)."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "everything": {
+          "const": true
+        }
+      },
+      "required": [
+        "everything"
+      ],
+      "additionalProperties": false,
+      "description": "Every record."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "rules.schema.json#/$defs/recordReference"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false,
+      "description": "The record."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "excludesIds": {
+          "type": "array",
+          "items": {
+            "$ref": "rules.schema.json#/$defs/recordReference"
+          }
+        }
+      },
+      "required": [
+        "excludesIds"
+      ],
+      "additionalProperties": false,
+      "description": "Every record but these."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name"
+      ],
       "additionalProperties": false
     },
     {
       "type": "object",
       "properties": {
-        "kind": { "const": "union" },
-        "values": { "type": "array", "minItems": 1, "items": { "$ref": "#" } }
+        "trait": {
+          "type": "string",
+          "minLength": 1
+        }
       },
-      "required": ["kind", "values"],
+      "required": [
+        "trait"
+      ],
       "additionalProperties": false
     },
     {
       "type": "object",
       "properties": {
-        "kind": { "const": "intersection" },
-        "values": { "type": "array", "minItems": 1, "items": { "$ref": "#" } }
+        "type": {
+          "type": "string",
+          "minLength": 1
+        }
       },
-      "required": ["kind", "values"],
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "rarity": {
+          "enum": [
+            "common",
+            "uncommon",
+            "rare",
+            "unique"
+          ]
+        }
+      },
+      "required": [
+        "rarity"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "level"
+      ],
+      "additionalProperties": false,
+      "description": "The exact level."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "maxLevel": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maxLevel"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "pathPrefix": {
+          "type": "string",
+          "pattern": "^[@$].+$",
+          "description": "A record collection (@class.witch.patrons) or, reserved, a $ character value"
+        }
+      },
+      "required": [
+        "pathPrefix"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sharesAncestryTrait": {
+          "const": true
+        }
+      },
+      "required": [
+        "sharesAncestryTrait"
+      ],
+      "additionalProperties": false,
+      "description": "The resource shares an ancestry trait with the character's ancestry (adopted and heritage-granted ones included)."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sharesClassTrait": {
+          "const": true
+        }
+      },
+      "required": [
+        "sharesClassTrait"
+      ],
+      "additionalProperties": false,
+      "description": "The resource carries the character's class trait ($.class)."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "characterHasFeat": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "characterHasFeat"
+      ],
+      "additionalProperties": false,
+      "description": "The character has the named feat."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "minLength": 1
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "key",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "metadata"
+      ],
+      "additionalProperties": false,
+      "description": "A metadata key without a dot."
+    },
+    {
+      "type": "object",
+      "description": "A metadata key with a dot (spell.category: cantrip).",
+      "patternProperties": {
+        "^[A-Za-z]+\\.[A-Za-z0-9.-]+$": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1,
+      "maxProperties": 1,
       "additionalProperties": false
     }
-  ],
-  "$defs": {
-    "component": {
-      "oneOf": [
-        { "type": "object", "properties": { "kind": { "const": "any" } }, "required": ["kind"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasID" }, "id": { "type": "string", "minLength": 1 } }, "required": ["kind", "id"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "excludesIDs" }, "ids": { "type": "array", "items": { "type": "string", "minLength": 1 } } }, "required": ["kind", "ids"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasName" }, "name": { "type": "string", "minLength": 1 } }, "required": ["kind", "name"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasTrait" }, "trait": { "type": "string", "minLength": 1 } }, "required": ["kind", "trait"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "lacksTrait" }, "trait": { "type": "string", "minLength": 1 } }, "required": ["kind", "trait"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasType" }, "type": { "type": "string", "minLength": 1 } }, "required": ["kind", "type"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasRarity" }, "rarity": { "enum": ["common", "uncommon", "rare", "unique"] } }, "required": ["kind", "rarity"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasMetadata" }, "metadataKey": { "type": "string", "minLength": 1 }, "metadataValue": { "type": "string", "minLength": 1 } }, "required": ["kind", "metadataKey", "metadataValue"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasExactLevel" }, "level": { "type": "integer" } }, "required": ["kind", "level"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasMaxLevel" }, "level": { "type": "integer" } }, "required": ["kind", "level"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasPathPrefix" }, "path": { "type": "string", "minLength": 1 } }, "required": ["kind", "path"], "additionalProperties": false },
-        { "type": "object", "description": "The resource shares an ancestry trait with the character's ancestry (adopted and heritage-granted ones included).", "properties": { "kind": { "const": "sharesAncestryTrait" } }, "required": ["kind"], "additionalProperties": false },
-        { "type": "object", "description": "The character has the named feat.", "properties": { "kind": { "const": "characterHasFeat" }, "name": { "type": "string", "minLength": 1 } }, "required": ["kind", "name"], "additionalProperties": false },
-        { "type": "object", "description": "The resource carries the character's class trait ($.class).", "properties": { "kind": { "const": "sharesClassTrait" } }, "required": ["kind"], "additionalProperties": false }
-      ]
-    }
-  }
+  ]
 }

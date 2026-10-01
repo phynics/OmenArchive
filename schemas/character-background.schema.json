@@ -77,9 +77,7 @@
           "type": "string",
           "description": "Name of the background"
         },
-        "source": {
-          "$ref": "utility-types/content-source.schema.json"
-        },
+        "attribution": { "$ref": "utility-types/attribution.schema.json" },
         "description": {
           "type": "string",
           "description": "Description text of the background"
@@ -100,7 +98,6 @@
       },
       "required": [
         "name",
-        "source",
         "description"
       ]
     },

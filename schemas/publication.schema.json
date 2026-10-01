@@ -29,16 +29,39 @@
             "type": "string",
             "pattern": "^[a-z0-9.-]+$"
           },
+          "alias": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$",
+            "description": "The short name files use for this module in effect and type names (core/add-feat)."
+          },
           "revision": {
             "type": "integer",
             "minimum": 1
           }
         },
-        "required": ["moduleID", "revision"],
+        "required": [
+          "moduleID",
+          "alias",
+          "revision"
+        ],
         "additionalProperties": false
+      }
+    },
+    "externalRecords": {
+      "type": "array",
+      "description": "Records that rules refer to but no publication of the archive holds, as canonical omen:// paths. A reference to one of them is not a miss.",
+      "items": {
+        "type": "string",
+        "pattern": "^omen://[a-z0-9-]+(/[a-z0-9-]+)+\\?source=[a-z0-9-]+$"
       }
     }
   },
-  "required": ["id", "publisher", "title", "published", "mechanicsModules"],
+  "required": [
+    "id",
+    "publisher",
+    "title",
+    "published",
+    "mechanicsModules"
+  ],
   "additionalProperties": false
 }

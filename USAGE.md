@@ -74,24 +74,28 @@ size) stay under `physical`, which keeps filtering and imports consistent across
 Inventory ownership, invested/equipped state, and bulk accounting are character-state data
 and are intentionally outside the authored item record.
 
-When an item originates in Foundry, `sourceID` retains its stable source-record ID alongside
+When an item originates in Foundry, `foundryID` retains its stable source-record ID alongside
 the human-readable `source` block. This keeps repeated source-aware imports deterministic;
 hand-authored items may omit it.
 
 ### Field ownership during a Foundry refresh
 
-Match an existing record by its publication-qualified OmenPath or stable `sourceID`. A display
+Match an existing record by its publication-qualified OmenPath or stable `foundryID`. A display
 name is not a unique key. Foundry owns the descriptive and source fields it supplies, including
-`name`, `description`, `traits`, `level`, `source`, `sourceID`, and source-specific item or spell
+`name`, `description`, `traits`, `level`, `attribution`, `foundryID`, and source-specific item or spell
 data. A refresh updates those fields from the new conversion.
 
 The archive owns reviewed mechanics. Preserve existing `rules`, `mechanicsScope` and
-`unsupportedReason` when a Foundry record is regenerated. A feat's `typedPrerequisites` and
-`prerequisiteDiagnostics` are generated from its prerequisite text (0143): a refresh replaces them,
-so fix a prerequisite in the converter, not in the file. New records may take the converter's initial values for these fields; later reviewed
+`unsupportedReason` when a Foundry record is regenerated. A feat's `prerequisites` (the text and the
+typed form and diagnostic beside it) are generated from its prerequisite text (0143): a refresh
+replaces them, so fix a prerequisite in the converter, not in the file. New records may take the converter's initial values for these fields; later reviewed
 edits take precedence. If source identity changes or a field cannot be assigned to one owner,
 show the conflict for review before writing. A hand-authored file with no staged counterpart is
 an explicit removal candidate and must be reviewed before it can be deleted.
+
+A refresh compares what files mean, not how they are spelled: both versions are read to their
+wire form (see "Archive format 4" below) before they are compared, so a difference in key order,
+quoting or `@` spelling alone is never a divergence.
 
 When a refresh finds a reviewed rule whose non-identity content no longer matches the generated
 rule, it preserves the archive rule and creates a review item. It never silently drops a reviewed
@@ -151,26 +155,23 @@ Filename stems are stable kebab-case storage slugs. New records normally use the
 name, but later display-name edits do not rename files or change identity. Domain slugs omit
 the terminal `-domain`. Class and ancestry feature filenames have no level prefix.
 
-### Source field
+### Source and attribution
 
-Every resource has a `source` block:
+A resource file has no `source` block: its directory (`src/<publication>/`) and the publication's
+`publication.yml` already say where it comes from. The loader fills `publisher` (the publication's,
+lowercased) and `book` (its `title`) in. An optional `attribution` holds what the publication
+doesn't say:
 
 ```yaml
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
-  page: 123        # optional when known
-  url: https://... # optional, mainly for third-party references
+attribution:
+  page: 123        # when known
+  url: https://... # mainly for third-party references
 ```
 
-Rules:
-
-- `book` is required by the schema.
-- `publisher` defaults to `paizo`, but include it explicitly for readability.
-- `publisher` and `book` preserve attribution on each resource and must match the publication
-  manifest's `publisher` and `title` after canonical OmenPath text normalization.
-- Use `page` when known.
-- Use `url` for online/third-party reference material.
+- `attribution.publisher` and `attribution.book` are only for a record whose own publisher or book
+  differs; if given, they must match the publication manifest's `publisher` and `title` after
+  canonical OmenPath text normalization.
+- The identifier Foundry gave a record is `foundryID`, not `source`.
 
 ### Descriptions
 
@@ -195,43 +196,65 @@ Leave the key out when there are no rules; do not add empty arrays to unchanged 
 
 ```yaml
 rules:
-  - id: 11111111-1111-1111-1111-111111111111
-    effectReference:
-      kindID: me.atkn.omen.pf2e.playercore/effect/add-language
-      revision: 1
-    inputRecipes:
-      - inputName: languageName
-        expectedValue:
-          valueTypeID: me.atkn.omen.pf2e.playercore/value/string
-          source:
-            kind: literal
-            value:
-              typeID: me.atkn.omen.pf2e.playercore/value/string
-              revision: 1
-              payload: Draconic
-    startLevel: 1
-    prerequisites:
-      - hasClassTrait: true
+- id: 11111111-1111-1111-1111-111111111111
+  effect: core/add-language
+  level: 3                 # left out when 1
+  prerequisites:
+  - hasClassTrait: true
+  inputs:
+    languageName: Draconic
 ```
 
-Rules use the namespaced mechanics registry wire shape:
+A rule has these keys, in this order:
 
-- `id` is a stable UUID for the rule instance.
-- `key` is an optional readable kebab-case member name. A keyed rule's ID is
-  `uuid5("<record-path>#rule/<key>")`; keys are unique within a resource and rule IDs are unique
-  across the archive. Existing rules may omit `key` and retain their IDs.
-- `effectReference.kindID` and `revision` identify the executable effect definition.
-- `inputRecipes` carries typed effect inputs in order; each value includes its namespaced type ID and revision.
-- `startLevel` is the level at which the rule becomes active.
-- `prerequisites` stays as a list of typed prerequisite blocks instead of free-form text.
+- `id` is a stable UUID for the rule instance. It is always written. A keyed rule's ID is
+  `uuid5("<record-path>#rule/<key>")` and the validator rejects one that disagrees.
+- `key` is an optional readable kebab-case member name. Keys are unique within a resource and rule
+  IDs are unique across the archive.
+- `effect` is `<module alias>/<effect>`, with `@<revision>` for a revision other than 1
+  (`core/add-feat@2`). The aliases are declared once, in `publication.yml`'s `mechanicsModules`.
+- `level` is the level at which the rule becomes active; 1 when left out.
+- `prerequisites` is a list of typed prerequisite blocks.
+- `inputs` maps each input name to its value.
+
+An input value is **bare** when it is a literal: the effect's descriptor says its type, so there is
+no type ID, revision or namespace (`proficiencyCap: 2`, `skill: {kind: deception}`). The explicit
+forms are `{choice: $.cleric.divine-font}` (read a named choice), `{selection: …}`,
+`{lookup: name}` and `{literal: …}` (with an optional `type: core/skill`, for a payload that looks
+like one of the explicit forms). A string literal that starts with `$`, `@` or `(`, or with `[[`, is
+written with a leading backslash (`\$5`): Proposal K reserves those for character values, references,
+expressions and sheet values. Expressions (`(max 1 (divide $.level 2))`) and `$` values have no wire
+form yet and are rejected.
+
+A **record** input (a feat, action, feature or spell ID) takes a reference, never a UUID:
+`featId: '@feat.lie-to-me'`. See "Resource references".
+
+A **choice** is a rule with `choice:` in place of `effect:` and `inputs:`:
+
+```yaml
+- id: 7be6e4c7-d7c1-570e-8c0c-dc5dfe5c0c7e
+  key: choice-cleric-divine-font
+  choice:
+    name: $.cleric.divine-font
+    label: Divine Font
+    type: spellcasting/spell-id
+    cases:
+    - {value: '@spell.heal'}
+    - {value: '@spell.harm'}
+```
+
+One of `cases`, `records` (`{filter, type}`) or `freeText` (a type) gives the options. A case's
+`key` is left out when it is the value's own text and its `label` when it is the key's words
+capitalized; a case may instead hold `effects` (rule entries with no `level`) that apply when it is
+picked. A choice's `level` is the rule's, unless it says otherwise.
 
 Foundry conversion assigns new keys as `<foundry-rule-key>-<n>`, where `n` is that source key's
 occurrence in the record, counted over the Foundry rules rather than the converted ones, so an
 inserted or reordered Foundry rule of another kind moves no other key. Rules the converter builds
 for a purpose rather than from one Foundry rule get a key naming it (`choice-bard-muse`, named after
-the choice), and spellcasting and focus rules keep their semantic IDs without a key. New authoring proposals use their explicit key when present; otherwise
-they receive a random UUID. When an edited keyed rule is written, OmenScribe derives its ID from
-the actual record path.
+the choice), and spellcasting and focus rules keep their semantic IDs without a key. New authoring
+proposals use their explicit key when present; otherwise they receive a random UUID. When an edited
+keyed rule is written, OmenScribe derives its ID from the actual record path.
 
 The character's traits come from three effects: `add-character-trait` (a plain trait),
 `add-character-ancestry-trait` (an ancestry or lineage trait: it counts for `hasTrait` and opens
@@ -242,34 +265,85 @@ To gate a rule on the chosen ancestry's vision, use `hasAncestryVision: low-ligh
 `normal`, `darkvision`). Don't gate on the character's senses: a rule gated on derived state can
 satisfy itself.
 
-Prefer literal values in `inputRecipes` when writing by hand. If a rule needs a new literal shape or prerequisite form, update the shared rule schema first so the archive, loader, and import paths stay in sync.
+Prefer literal values in `inputs` when writing by hand. If a rule needs a new literal shape or
+prerequisite form, update the shared rule schema first so the archive, loader, and import paths stay
+in sync.
 
-Spellcasting rules use `me.atkn.omen.pf2e.playercore-spellcasting`. Model an innate cantrip with
+Spellcasting rules use the `spellcasting` module. Model an innate cantrip with
 `rankPolicy: {kind: cantrip}` and `castFrequency: {kind: atWill}`. Model a fixed-rank
 daily spell with `{kind: fixed, rank: N}` and `{kind: perDay, uses: N}`. Daily uses belong
 to each spell grant; do not represent ancestry-granted innate spells as spell slots.
 
-### Resource references
+### Filters
 
-Use a plain `omen://` URI when a rule input refers to another curated resource:
+A resource filter is a list or a leaf, with no wrapper:
 
 ```yaml
-valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
-source:
-  kind: lookupByID
-  id: omen://feat/group-impression?source=paizo-pathfinder-player-core
+options:
+  filter:
+    all:
+    - {type: spell}
+    - {spell.category: cantrip}
+    - {spell.tradition: arcane}
+    - {rarity: common}
 ```
+
+`all` and `any` take lists of filters. A leaf has one key: `type`, `rarity`, `level` (exact),
+`maxLevel`, `name`, `trait`, `id` (a record reference), `excludesIds`, `pathPrefix` (a collection
+such as `@class.witch.patrons`), `sharesAncestryTrait`, `sharesClassTrait`, `characterHasFeat`,
+`everything`, or a metadata key written with its dot (`spell.category: cantrip`). `not` takes one
+`trait` leaf (`{not: {trait: uncommon}}`); no other negation exists yet. A filter that fits in 56
+characters stays on one line; a longer one puts each item of its `all`/`any` list on its own line.
+
+### Archive format 4
+
+Format 4 (0152, 0153, 0154, 0156) is a spelling of the same data: reading a file gives the same
+rules and records as format 3 did, and OmenDB is built from the same records. What changed:
+
+- Rules use `effect` and `inputs`, with bare literals (above); filters are flat; choice rules are
+  compact.
+- Records are named by `@` reference, not UUID; no rule holds a record UUID. Rule IDs and the other
+  identities (`selectionId`, `grantId`, `sourceId`, `legacySelections`) stay UUIDs, since they are
+  identities, not references.
+- No `source` block, no empty `action`, `foundryID` for `sourceID`, and a feat's `prerequisites`,
+  `typedPrerequisites` and `prerequisiteDiagnostics` are one list (see "Feats").
+- Keys follow a fixed order per family (a feat: `name`, `level`, `rarity`, `type`, `traits`,
+  `prerequisites`, `action`, `description`, …, `foundryID`, `attribution`, `rules` last) in every
+  writer, and scalars are written the way the writers always wrote them.
+
+`omen-archive migrate-format-4 <archive-root> [--write]` rewrites a format 3 archive, and writes
+nothing unless every file reads back as the same document. The grammar fixtures under
+`OmenArchiveKit/Tests/Fixtures/format-4` pair every construct in both formats.
+
+### Resource references
+
+A record is written `@family.name`, steps joined by dots, with an optional `#member` and then
+`?source=` (Proposal K):
+
+```yaml
+featId: '@feat.lie-to-me'                       # this publication's record
+featId: '@feat.lie-to-me?source=other-book'     # another publication's
+featureId: '@feat.assurance#feature'            # a member of a record
+pathPrefix: '@class.witch.patrons'              # a collection
+```
+
+`@feat.additional-lore` is `omen://feat/additional-lore`. Without `?source=` a reference means the
+file's own publication's record when the store is built; the validator warns when it only finds the
+record in another publication. A reference to a record no publication of the archive holds (Natural
+Ambition leaves out feats of books the archive lacks) is declared in `publication.yml`'s
+`externalRecords`, as full `omen://…?source=…` paths; any other reference that doesn't resolve is an
+error. Quote references in YAML, since `@` can't start a plain scalar.
 
 Archive format 3 derives record paths from storage slugs, not display names. For example,
 `class/fighter/features/armor-expertise.yml` maps to
 `omen://class/fighter/features/armor-expertise`. The YAML `level` field carries the level;
 the filename has no level prefix. Bundle roots use the enclosing directory slug.
 
+Plain `omen://` URIs remain in fields that hold a path as text (`entryFeat`, `grantedSpells`).
 An explicit `source` query limits resolution to one publication. Without `source`, all matching
 publication versions are candidates; consumers that require one value use the newest publication
 date. Equal latest dates require an explicit publication qualifier. Malformed or dangling references
-must be fixed before Archive-to-OmenDB export. Registered UUID payloads remain valid for executable
-runtime inputs; use a lookup source when a rule should resolve a curated resource by OmenPath.
+must be fixed before Archive-to-OmenDB export.
 
 ### Traits and enums
 
@@ -311,9 +385,6 @@ Example:
 
 ```yaml
 name: administer first aid
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 description: |
   You perform first aid...
 traits:
@@ -354,7 +425,7 @@ the description is rules text for readers, while diagnostics explain conversion 
 
 The Player Core corpus manifest (`docs/player-core-corpus-manifest.json`) accounts for the
 spells with every other Player Core record: all 488 source spells are archived. Each generated
-payload retains Foundry's stable `sourceID` for source-aware rebuilds. Spells are refreshed with
+payload retains Foundry's stable `foundryID` for source-aware rebuilds. Spells are refreshed with
 the rest of the corpus, and `make player-core-check` in OmenBuilder verifies that a refresh
 reproduces them. `docs/player-core-spell-import-manifest.json` is the older spell-only accounting
 from the Python importer (0026). Nothing regenerates it; OmenScribe's Python-parity tests still
@@ -380,9 +451,6 @@ Example:
 
 ```yaml
 name: elf
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 description: |
   ...
 rarity: common
@@ -434,9 +502,6 @@ Example:
 
 ```yaml
 name: seer elf
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 description: |
   ...
 rarity: common
@@ -470,9 +535,6 @@ Single variant:
 
 ```yaml
 name: bandit
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 description: |
   ...
 attributes:
@@ -490,9 +552,6 @@ Multiple variants:
 
 ```yaml
 name: scholar
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 description: |
   ...
 variants:
@@ -532,9 +591,6 @@ Example class:
 
 ```yaml
 name: fighter
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 rarity: common
 description: |
   ...
@@ -571,9 +627,6 @@ Example feature:
 
 ```yaml
 name: reactive strike
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 level: 1
 traits:
 - fighter
@@ -607,9 +660,6 @@ Expected shape:
 
 ```yaml
 name: example feat
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 level: 1
 rarity: common
 traits:
@@ -626,17 +676,28 @@ Supported optional fields:
 
 - `alternateLevels`
 - `prerequisites`
-- `typedPrerequisites`
-- `prerequisiteDiagnostics`
 - `relatedArchetype`
 - `specialText`
-- `action`
+- `action` (left out for a feat that isn't an action)
 
-`typedPrerequisites` contains machine-readable prerequisite cases defined in
-`schemas/utility-types/rules.schema.json`. Keep the authored wording in
-`prerequisites` as well. When an importer cannot translate a source prerequisite,
-it records an `unsupported` typed case and explains the translation in
-`prerequisiteDiagnostics`; do not treat an unsupported condition as satisfied.
+A feat has one `prerequisites` list. Each entry is its authored wording alone, or the wording
+(`text`) with its machine-readable form beside it: one of the prerequisite cases defined in
+`schemas/utility-types/rules.schema.json`:
+
+```yaml
+prerequisites:
+- text: trained in Athletics
+  hasSkillProficiency: {skill: athletics, proficiency: trained}
+- text: You are wielding a ranged weapon
+  unsupported: Unsupported prerequisite for source UiQ… "You are wielding a ranged weapon".
+  diagnostic: true
+```
+
+When an importer cannot translate a source prerequisite, it records `unsupported` with its
+explanation, and `diagnostic: true` when the explanation is also reported as a diagnostic (a string
+gives a different diagnostic text); do not treat an unsupported condition as satisfied. A list is
+typed in full or not at all. Record values in a typed form are `{type: core/feature-id, value:
+'@class.bard.muses.maestro'}`.
 
 Rules:
 
@@ -656,9 +717,6 @@ The root's `entryFeat` is the publication-qualified OmenPath of its dedication f
 
 ```yaml
 name: bard
-source:
-  publisher: paizo
-  book: Pathfinder Player Core
 description: |
   A short source description of the archetype.
 entryFeat: omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-player-core

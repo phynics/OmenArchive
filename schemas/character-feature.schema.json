@@ -5,7 +5,7 @@
   "description": "Schema for a character feature in the game",
   "type": "object",
   "properties": {
-    "sourceID": {
+    "foundryID": {
       "type": "string",
       "description": "The source system's stable record identifier"
     },
@@ -13,9 +13,7 @@
       "type": "string",
       "description": "Name of the character feature"
     },
-    "source": {
-      "$ref": "utility-types/content-source.schema.json"
-    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "level": {
       "type": "integer",
       "minimum": 1,
@@ -116,7 +114,6 @@
   },
   "required": [
     "name",
-    "source",
     "description"
   ],
   "allOf": [

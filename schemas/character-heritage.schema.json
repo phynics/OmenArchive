@@ -9,9 +9,7 @@
       "type": "string",
       "description": "Name of the heritage"
     },
-    "source": {
-      "$ref": "utility-types/content-source.schema.json"
-    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "description": {
       "type": "string",
       "description": "Description text of the heritage"
@@ -44,7 +42,6 @@
   },
   "required": [
     "name",
-    "source",
     "description",
     "rarity",
     "ancestry"

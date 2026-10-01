@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "name": { "type": "string" },
-    "source": { "$ref": "utility-types/content-source.schema.json" },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "description": { "type": "string" },
     "entryFeat": { "type": "string", "pattern": "^omen://archetype/[^/]+/feats/[^/?]+(?:\\?source=[^/?]+)?$" },
     "progression": {
@@ -38,6 +38,6 @@
       "additionalProperties": false
     }
   },
-  "required": ["name", "source", "description", "entryFeat"],
+  "required": ["name", "description", "entryFeat"],
   "additionalProperties": false
 }

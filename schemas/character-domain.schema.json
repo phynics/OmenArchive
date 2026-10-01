@@ -7,9 +7,7 @@
     "name": {
       "type": "string"
     },
-    "source": {
-      "$ref": "utility-types/content-source.schema.json"
-    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "description": {
       "type": "string"
     },
@@ -26,7 +24,6 @@
   },
   "required": [
     "name",
-    "source",
     "description"
   ],
   "additionalProperties": false

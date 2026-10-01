@@ -6,8 +6,8 @@
   "type": "object",
   "properties": {
     "name": { "type": "string" },
-    "source": { "$ref": "utility-types/content-source.schema.json" },
-    "sourceID": { "type": "string" },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
+    "foundryID": { "type": "string" },
     "type": {
       "type": "string",
       "enum": ["equipment", "weapon", "armor", "shield", "consumable", "container", "treasure", "kit"]
@@ -161,7 +161,7 @@
       "minLength": 1
     }
   },
-  "required": ["name", "source", "type", "level", "rarity", "traits", "description", "physical", "details"],
+  "required": ["name", "type", "level", "rarity", "traits", "description", "physical", "details"],
   "additionalProperties": false,
   "allOf": [
     {

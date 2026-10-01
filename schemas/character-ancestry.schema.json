@@ -16,9 +16,7 @@
       "type": "string",
       "description": "Name of the ancestry"
     },
-    "source": {
-      "$ref": "utility-types/content-source.schema.json"
-    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "description": {
       "type": "string",
       "description": "Description text of the ancestry"
@@ -142,7 +140,6 @@
   },
   "required": [
     "name",
-    "source",
     "description",
     "rarity",
     "hitPoints",
