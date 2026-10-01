@@ -12,14 +12,37 @@ description: 'You feel a kinship with flames and can use them for succor and des
   in a way that harms the environment. (this doesn''t prevent you from using fire
   destructively or force you to combat a controlled or natural fire).'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: flame order
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
+    revision: 1
+  id: 465a3bf7-5cba-5c37-bfe2-a0ec60c83394
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: acrobatics
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
+    inputName: skill
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: NdeFvIXdHwKYLiUj
 traits:
 - druid
-unsupportedReason: 'ActiveEffectLike at position 0 has an unsupported conditional
-  builder payload. Resource: omen://class/druid/features/flame-order?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, GrantItem].'

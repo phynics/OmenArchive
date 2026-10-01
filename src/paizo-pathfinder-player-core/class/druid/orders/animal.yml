@@ -130,6 +130,55 @@ rules:
   id: 659d30f3-b208-5708-bdfa-a925bd541bc4
   inputRecipes: []
   startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
+    revision: 1
+  id: 20504b27-ba1e-534e-b538-c1960ec137ed
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: athletics
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
+    inputName: skill
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: b5275881-dc7f-5492-b794-c06999a91a4b
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: cec3a688-f309-5801-96fe-8de29c3600fa
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 9792c05d-5f08-5e75-91ad-0d568e04ceba
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/feat-id
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo

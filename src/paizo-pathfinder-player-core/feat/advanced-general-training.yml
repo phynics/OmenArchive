@@ -4,7 +4,7 @@ description: Over the long course of your adventuring life, your adaptability ha
   let you pick up numerous useful abilities. You gain a general feat of 7th level
   or lower. You must meet the feat's prerequisites.
 level: 13
-mechanicsScope: mixed
+mechanicsScope: builder
 name: advanced general training
 prerequisites: []
 rarity: common
@@ -12,6 +12,54 @@ repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: null
+rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: feat
+        - kind: single
+          value:
+            kind: hasMaxLevel
+            level: 7
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: systemTrait-general
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    label: General Feat
+    name: $.feat.advanced-general-training.feats
+    startLevel: 1
+  id: 0b23a6b7-16cf-57a1-868f-83b3d1019356
+  key: choice-feat-advanced-general-training-feats
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: f369a53e-9a65-5aa7-958f-17f2c78d18e5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 0d1f7873-f52d-5f63-a68a-6104f51009fc
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.feat.advanced-general-training.feats
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  key: grant-item-1
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -21,6 +69,3 @@ specialText: You can select this feat multiple times, choosing a different feat 
 traits:
 - human
 type: ancestry
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/advanced-general-training?source=paizo-pathfinder-player-core. Foundry
-  keys: [ChoiceSet, GrantItem].'

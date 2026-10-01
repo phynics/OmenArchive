@@ -5,10 +5,77 @@ description: You were raised to be ambitious and always reach for the stars, lea
   your class. You must meet the prerequisites, but you can select the feat later in
   the character creation process in order to determine which prerequisites you meet.
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: natural ambition
 prerequisites: []
 rarity: common
+rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: feat
+        - kind: single
+          value:
+            kind: hasExactLevel
+            level: 1
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: systemTrait-class
+        - kind: single
+          value:
+            kind: sharesClassTrait
+        - kind: single
+          value:
+            ids:
+            - 9792c05d-5f08-5e75-91ad-0d568e04ceba
+            - 50ba8eda-2799-56f8-bc23-8885ffced6cb
+            - d74591ff-4b65-573b-9913-43e767592917
+            - 86de32a2-f4a3-557a-8e1a-c6307860fa66
+            - ad78aec6-11f5-509e-9173-b6363416c3f7
+            - fb56196d-dd8c-5453-9ddd-8b37fc061151
+            - 381b323b-da61-5fd5-9f0f-5099b242b1df
+            - aade79b9-d3a0-5926-b1de-4948d170c6e1
+            - cd17aec1-d5dc-5096-8b12-ae056301ee4e
+            - 7f3c0f13-3e9f-5021-8dd3-4b0ad5b4f7cd
+            - 9b497376-d682-5ba0-965a-afb96b462f9d
+            - 18b82e1a-ed8e-5b8b-9936-c71f86b48ebc
+            kind: excludesIDs
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    label: Class Feat
+    name: $.feat.natural-ambition.feat
+    startLevel: 1
+  id: e75adc63-b7d9-5c97-acc6-70f6c84f99ac
+  key: choice-feat-natural-ambition-feat
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: 800ea6f7-3ef6-5875-afc1-3df602a08c2a
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: e4a2d602-7f51-5a0e-85fb-16509afb6096
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.feat.natural-ambition.feat
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  key: grant-item-1
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -16,6 +83,3 @@ sourceID: PodajLVxqYSAqVox
 traits:
 - human
 type: ancestry
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/natural-ambition?source=paizo-pathfinder-player-core. Foundry keys:
-  [ChoiceSet, GrantItem].'

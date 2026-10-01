@@ -102,6 +102,13 @@
             "$ref": "#/$defs/choiceName"
           }
         },
+        "distinctFrom": {
+          "description": "Choices whose picks this choice's options leave out.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choiceName"
+          }
+        },
         "legacySelections": {
           "description": "Original slot coordinates used only for one-time character package migration.",
           "type": "array",

@@ -3,10 +3,65 @@ action: {}
 description: Whether through instinct, study, or magic, you feel a deeper connection
   to your ancestry. You gain a 1st-level ancestry feat.
 level: 3
-mechanicsScope: mixed
+mechanicsScope: builder
 name: ancestral paragon
 prerequisites: []
 rarity: common
+rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: feat
+        - kind: single
+          value:
+            kind: hasExactLevel
+            level: 1
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: systemTrait-ancestry
+        - kind: single
+          value:
+            kind: sharesAncestryTrait
+        - kind: single
+          value:
+            kind: lacksTrait
+            trait: lineage
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    label: Ancestry Feat
+    name: $.feat.ancestral-paragon.feat
+    startLevel: 1
+  id: d3b5c226-4c0a-56b0-aef9-a1395772d37e
+  key: choice-feat-ancestral-paragon-feat
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: f9fdccc6-a163-5758-8a84-17b36c6a8fd5
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 6dba2ba5-0b16-55a5-aed2-cedd4e579e81
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.feat.ancestral-paragon.feat
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  key: grant-item-1
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -14,6 +69,3 @@ sourceID: m7KjpkAAh9PptJsY
 traits:
 - general
 type: general
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/ancestral-paragon?source=paizo-pathfinder-player-core. Foundry keys:
-  [ChoiceSet, GrantItem].'

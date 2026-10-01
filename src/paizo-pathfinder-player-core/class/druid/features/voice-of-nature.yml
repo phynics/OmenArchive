@@ -2,14 +2,55 @@
 action: {}
 description: You gain your choice of the Animal Empathy or Plant Empathy druid feat.
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: voice of nature
+rules:
+- choice:
+    answer:
+      filter:
+        kind: union
+        values:
+        - kind: single
+          value:
+            id: 63909e2e-64c2-5b3a-b3aa-63e71bfca5ec
+            kind: hasID
+        - kind: single
+          value:
+            id: 6af7e962-885b-5a1f-8808-260d097c0b40
+            kind: hasID
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    label: Level 1 Class Feat
+    name: $.druid.voice-of-nature.feat
+    startLevel: 1
+  id: da9d942d-fe06-5e1a-a0ff-38fede6efea2
+  key: choice-druid-voice-of-nature-feat
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: dcc4bc17-64fe-5462-8b60-68913867f412
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: ac08060d-ef53-5afd-b5a3-13e0e86da78d
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.druid.voice-of-nature.feat
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  key: grant-item-1
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: d5BFFHXFJYKs5LXr
 traits:
 - druid
-unsupportedReason: 'GrantItem at position 1 references unsupported ChoiceSet type
-  string. Resource: omen://class/druid/features/voice-of-nature?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, GrantItem].'

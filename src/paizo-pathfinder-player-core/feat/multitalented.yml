@@ -7,10 +7,62 @@ description: 'You''ve learned to split your focus between multiple classes with 
   If you have the aiuvarin versatile heritage, you don''t need to meet the feat''s
   attribute modifier prerequisites.'
 level: 9
-mechanicsScope: mixed
+mechanicsScope: builder
 name: multitalented
 prerequisites: []
 rarity: common
+rules:
+- choice:
+    answer:
+      filter:
+        kind: intersection
+        values:
+        - kind: single
+          value:
+            kind: hasType
+            type: feat
+        - kind: single
+          value:
+            kind: hasExactLevel
+            level: 2
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: dedication
+        - kind: single
+          value:
+            kind: hasTrait
+            trait: systemTrait-multiclassDedication
+      kind: records
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    label: Multiclass Dedication
+    name: $.feat.multitalented.dedication
+    startLevel: 1
+  id: 393b3a6e-583c-53f1-b1ed-5b612fc632ff
+  key: choice-feat-multitalented-dedication
+  startLevel: 1
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-feat
+    revision: 2
+  id: 5dbd661e-f6a7-5610-9361-2d617ad1cb48
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 744b3264-0b88-5c5f-9935-b37d17f7b84a
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/uuid
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/uuid
+    inputName: selectionId
+  - expectedValue:
+      source:
+        kind: choice
+        name: $.feat.multitalented.dedication
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/feat-id
+    inputName: featId
+  key: grant-item-1
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
@@ -18,6 +70,3 @@ sourceID: C80vQCKQBGRaqcmq
 traits:
 - human
 type: ancestry
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/multitalented?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet,
-  GrantItem].'

@@ -40,12 +40,16 @@
         { "type": "object", "properties": { "kind": { "const": "excludesIDs" }, "ids": { "type": "array", "items": { "type": "string", "minLength": 1 } } }, "required": ["kind", "ids"], "additionalProperties": false },
         { "type": "object", "properties": { "kind": { "const": "hasName" }, "name": { "type": "string", "minLength": 1 } }, "required": ["kind", "name"], "additionalProperties": false },
         { "type": "object", "properties": { "kind": { "const": "hasTrait" }, "trait": { "type": "string", "minLength": 1 } }, "required": ["kind", "trait"], "additionalProperties": false },
+        { "type": "object", "properties": { "kind": { "const": "lacksTrait" }, "trait": { "type": "string", "minLength": 1 } }, "required": ["kind", "trait"], "additionalProperties": false },
         { "type": "object", "properties": { "kind": { "const": "hasType" }, "type": { "type": "string", "minLength": 1 } }, "required": ["kind", "type"], "additionalProperties": false },
         { "type": "object", "properties": { "kind": { "const": "hasRarity" }, "rarity": { "enum": ["common", "uncommon", "rare", "unique"] } }, "required": ["kind", "rarity"], "additionalProperties": false },
         { "type": "object", "properties": { "kind": { "const": "hasMetadata" }, "metadataKey": { "type": "string", "minLength": 1 }, "metadataValue": { "type": "string", "minLength": 1 } }, "required": ["kind", "metadataKey", "metadataValue"], "additionalProperties": false },
         { "type": "object", "properties": { "kind": { "const": "hasExactLevel" }, "level": { "type": "integer" } }, "required": ["kind", "level"], "additionalProperties": false },
         { "type": "object", "properties": { "kind": { "const": "hasMaxLevel" }, "level": { "type": "integer" } }, "required": ["kind", "level"], "additionalProperties": false },
-        { "type": "object", "properties": { "kind": { "const": "hasPathPrefix" }, "path": { "type": "string", "minLength": 1 } }, "required": ["kind", "path"], "additionalProperties": false }
+        { "type": "object", "properties": { "kind": { "const": "hasPathPrefix" }, "path": { "type": "string", "minLength": 1 } }, "required": ["kind", "path"], "additionalProperties": false },
+        { "type": "object", "description": "The resource shares an ancestry trait with the character's ancestry (adopted and heritage-granted ones included).", "properties": { "kind": { "const": "sharesAncestryTrait" } }, "required": ["kind"], "additionalProperties": false },
+        { "type": "object", "description": "The character has the named feat.", "properties": { "kind": { "const": "characterHasFeat" }, "name": { "type": "string", "minLength": 1 } }, "required": ["kind", "name"], "additionalProperties": false },
+        { "type": "object", "description": "The resource carries the character's class trait ($.class).", "properties": { "kind": { "const": "sharesClassTrait" } }, "required": ["kind"], "additionalProperties": false }
       ]
     }
   }

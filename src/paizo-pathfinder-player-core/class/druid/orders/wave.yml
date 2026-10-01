@@ -12,14 +12,37 @@ description: 'Water is the source of life, and you''ve learned to shape how it f
   (this doesn''t force you to take action against potential water pollution or to
   sacrifice yourself against an obviously superior foe).'
 level: 1
-mechanicsScope: mixed
+mechanicsScope: builder
 name: wave order
+rules:
+- effectReference:
+    kindID: me.atkn.omen.pf2e.playercore/effect/add-skill-increase
+    revision: 1
+  id: 0ff8df83-7482-5090-89af-ee2307ceb364
+  inputRecipes:
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload:
+            kind: medicine
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/skill
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/skill
+    inputName: skill
+  - expectedValue:
+      source:
+        kind: literal
+        value:
+          payload: 2
+          revision: 1
+          typeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+      valueTypeID: me.atkn.omen.pf2e.playercore/value/proficiency-rank
+    inputName: proficiencyCap
+  startLevel: 1
 source:
   book: Pathfinder Player Core
   publisher: paizo
 sourceID: FuUXyv2yBs7zRgqT
 traits:
 - druid
-unsupportedReason: 'ActiveEffectLike at position 0 has an unsupported conditional
-  builder payload. Resource: omen://class/druid/features/wave-order?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, GrantItem].'
