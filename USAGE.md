@@ -238,10 +238,12 @@ the choice), and spellcasting and focus rules keep their semantic IDs without a 
 proposals use their explicit key when present; otherwise they receive a random UUID. When an edited
 keyed rule is written, its ID is derived from the actual record path.
 
-The character's traits come from three effects: `add-character-trait` (a plain trait),
+The character's traits come from `add-character-trait` (a plain trait) and
 `add-character-ancestry-trait` (an ancestry or lineage trait: it counts for `hasTrait` and opens
-that ancestry's feats) and `add-character-adopted-ancestry-trait` (it only opens the feats). The
-ancestry's own trait is added from the ancestry record; don't author it.
+that ancestry's feats). The ancestry's own trait is added from the ancestry record; don't author
+it. The ancestries whose feats an ancestry feat slot offers are the list `$.ancestry.feat-ancestries`:
+the character's real ancestry traits, and the ancestries `add-feat-ancestry` adds. The effect only
+opens the feats; the character doesn't become that ancestry, so no prerequisite sees it.
 
 To gate a rule on the chosen ancestry's vision, use `hasAncestryVision: low-light-vision` (or
 `normal`, `darkvision`). Don't gate on the character's senses: a rule gated on derived state can

@@ -31,8 +31,8 @@ rules:
     - {value: human}
     - {value: leshy}
     - {value: orc}
-- id: 961318fd-9341-5c78-b88a-34b10e50661c
-  key: adopted-trait
-  effect: core/add-character-adopted-ancestry-trait
+- id: cc119f75-c680-5b2c-8d2f-5db3ef2f701d
+  key: feat-ancestry
+  effect: core/add-feat-ancestry
   inputs:
-    trait: {choice: $.feat.adopted-ancestry.ancestry}
+    ancestry: {choice: $.feat.adopted-ancestry.ancestry}
