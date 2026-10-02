@@ -292,9 +292,17 @@ options:
 `all` and `any` take lists of filters. A leaf has one key: `type`, `rarity`, `level` (exact),
 `maxLevel`, `name`, `trait`, `id` (a record reference), `excludesIds`, `pathPrefix` (a collection
 such as `@class.witch.patrons`), `sharesAncestryTrait`, `sharesClassTrait`, `characterHasFeat`,
+`hasChoiceAncestryTrait` (the ancestry trait a choice picked, `$.feat.adopted-ancestry.ancestry`),
 `everything`, or a metadata key written with its dot (`spell.category: cantrip`). `not` takes one
 `trait` leaf (`{not: {trait: uncommon}}`); no other negation exists yet. A filter that fits in 56
 characters stays on one line; a longer one puts each item of its `all`/`any` list on its own line.
+
+A character can count as a member of something it didn't pick: the `core/add-membership` effect
+adds a feature to a named list (`$.druid.order-memberships`, `$.bard.muse-memberships`). The
+class's own order or muse adds its pick, and Order Explorer and Multifarious Muse add theirs, so a
+prerequisite asks `hasChoice: {name: $.druid.order-memberships, contains: '@class.druid.orders.leaf'}`
+and the pick (`$.druid.order`) stays the character's own. Lists are derived at every level and
+never saved.
 
 ### Archive format 4
 
@@ -727,12 +735,10 @@ Use only source-backed root fields. Do not infer progression or configuration ru
 from feat names; add those fields only when the source provides them.
 
 The Player Core historical path map, including ticket 0055 and batch 0162/0163/0146,
-is recorded in `docs/migrations/player-core-0055-v1.0.0.json`. From the `OmenArchive` directory,
-run `./scripts/player_core_0055_migration.py --check` to verify mapped destinations,
-record UUIDs, and the eight source-backed roots. The script reads the corresponding
-class descriptions from the workspace's `pf2e/` source checkout. Artifact version 2
-requires the coordinated batch migration and gated refresh. The legacy `--apply`
-command refuses that artifact because file moves alone cannot migrate saved identities.
+is recorded in `docs/migrations/player-core-0055-v1.0.0.json`. OmenDBBuild's import plan reads
+it, and the workspace's `tools/generate-batch-6-migration.rb` turns it into OmenCore's
+`PlayerCoreIdentityMigration`, which opens characters saved under the old identities. The map is
+frozen; new moves go through the migration tool and a gated refresh.
 
 ## Mechanics coverage
 
