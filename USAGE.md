@@ -5,12 +5,13 @@ OmenArchive is the human-edited source repository for Omen character resources.
 It has two jobs:
 
 1. Define the YAML/JSON-schema contract for resources.
-2. Store curated resource files that can be imported into OmenDatabase by OmenScribe.
+2. Store the curated resource files that OmenDB is built from.
 
-OmenArchive is the **source of truth** for curated game data. OmenDatabase is generated/published runtime state.
+OmenArchive is the **source of truth** for curated game data. OmenDB, the store the apps read, is
+always rebuilt from it (by OmenScribe, or headless by `omendb-build`) and never edited.
 
 ```text
-Foundry JSON → OmenScribe staging → OmenArchive YAML → OmenScribe import → OmenDatabase
+Foundry JSON → OmenScribe staging and review → OmenArchive YAML → rebuild → OmenDB
 ```
 
 ## Repository layout
@@ -334,7 +335,7 @@ Ambition leaves out feats of books the archive lacks) is declared in `publicatio
 `externalRecords`, as full `omen://…?source=…` paths; any other reference that doesn't resolve is an
 error. Quote references in YAML, since `@` can't start a plain scalar.
 
-Archive format 3 derives record paths from storage slugs, not display names. For example,
+Record paths come from storage slugs, not display names. For example,
 `class/fighter/features/armor-expertise.yml` maps to
 `omen://class/fighter/features/armor-expertise`. The YAML `level` field carries the level;
 the filename has no level prefix. Bundle roots use the enclosing directory slug.
@@ -343,7 +344,7 @@ Plain `omen://` URIs remain in fields that hold a path as text (`entryFeat`, `gr
 An explicit `source` query limits resolution to one publication. Without `source`, all matching
 publication versions are candidates; consumers that require one value use the newest publication
 date. Equal latest dates require an explicit publication qualifier. Malformed or dangling references
-must be fixed before Archive-to-OmenDB export.
+must be fixed before an OmenDB rebuild.
 
 ### Traits and enums
 
@@ -782,12 +783,10 @@ compatibility seam between the two — a Kit release declares the format
 versions it understands and fails with a distinct diagnostic outside that
 range.
 
-Format version 2 also declares resource identity beside each layout: a family
-sets its OmenPath host and whether its layout owner is part of identity, and
-each bundle child or custom group names its owned collection. OmenArchiveKit
-continues to read version 1 manifests with the historical identity mapping.
-Grouped heritage identity omits its ancestry directory, so an inverse storage
-path lookup needs that directory as explicit context.
+The manifest also declares resource identity beside each layout: a family sets
+its OmenPath host and whether its layout owner is part of identity, and each
+bundle child or custom group names its owned collection. A heritage's identity
+includes its ancestry (`omen://ancestry/elf/heritages/seer-elf`).
 
 Optional local hook:
 
@@ -795,16 +794,15 @@ Optional local hook:
 ./scripts/install-pre-commit.sh
 ```
 
-Run these checks before importing into OmenDatabase:
+Check before a rebuild:
 
 - All YAML files are UTF-8.
 - YAML parses.
 - Files decode into their OmenTome types.
 - OmenScribe reports zero `ArchiveLoadFailure`s.
-- Directory path matches the resource category and slug.
-- `source.book` is present.
-- `rarity` is explicit when not common.
-- Cross-resource references make sense, e.g. heritage ancestry exists.
+- Directory path matches the resource family, owner and slug.
+- No `source` block (see "Source and attribution").
+- `@` references and `omen://` paths resolve, e.g. a heritage's ancestry exists.
 
 ## Editing rules
 
@@ -812,5 +810,5 @@ Run these checks before importing into OmenDatabase:
 - Prefer explicit data over prose when a schema field exists.
 - Do not store raw Foundry JSON in OmenArchive YAML.
 - Do not use app/database IDs as resource identity.
-- Use stable slugs and source metadata for identity.
+- Identity is the publication-qualified OmenPath from the file's path; filename slugs stay stable.
 - If a file cannot be represented cleanly, add a TODO/comment in the PR/commit, not an invalid schema workaround in the YAML.
