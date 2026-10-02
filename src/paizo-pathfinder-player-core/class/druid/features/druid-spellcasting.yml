@@ -40,155 +40,25 @@ description: 'The power of the wild world flows through you. You are a spellcast
   3rd rank.'
 mechanicsScope: builder
 foundryID: b8pnRxGuNzG0buuh
-rules:
-- id: ac14bde0-55e8-5f91-bb16-f09be94eb689
-  effect: spellcasting/configure-source
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    sourceName: Druid Spellcasting
-    castingKind: prepared
-    tradition: primal
-    attribute: wis
-- id: eb18601f-c12c-5f99-bc57-0fe25d7f38af
-  effect: spellcasting/increase-source-proficiency
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    proficiency: 2
-- id: dfcb5c2b-f4cc-5fa7-85cc-5b87d4b63b77
-  effect: spellcasting/grant-slot
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 0
-    count: 5
-- id: 2bc1fece-d6ca-5b64-89b8-e79037c4b6ab
-  effect: spellcasting/grant-slot
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 1
-    count: 2
-- id: ce816d74-a7d4-5831-a352-baf7988341a2
-  effect: spellcasting/grant-slot
-  level: 2
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 1
-    count: 1
-- id: d63ec10d-8bac-5427-98b0-43ed1abe4446
-  effect: spellcasting/grant-slot
-  level: 3
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 2
-    count: 2
-- id: 336ec416-0940-5377-ae9f-12f04c6ceb40
-  effect: spellcasting/grant-slot
-  level: 4
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 2
-    count: 1
-- id: 4c1976ec-d522-54e5-a5ec-8b970a837de4
-  effect: spellcasting/grant-slot
-  level: 5
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 3
-    count: 2
-- id: 5556774e-eaf2-580c-87d1-2152b4c0f53e
-  effect: spellcasting/grant-slot
-  level: 6
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 3
-    count: 1
-- id: 733d8d5c-c65a-573b-b3e0-c11a14de307e
-  effect: spellcasting/grant-slot
-  level: 7
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 4
-    count: 2
-- id: f512ce6e-ed52-5731-8f4a-eed7dbf4309f
-  effect: spellcasting/grant-slot
-  level: 8
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 4
-    count: 1
-- id: 2cec877f-54be-5ea7-921a-e248599e498e
-  effect: spellcasting/grant-slot
-  level: 9
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 5
-    count: 2
-- id: de532422-aab5-5355-8546-7824dc51da84
-  effect: spellcasting/grant-slot
-  level: 10
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 5
-    count: 1
-- id: 01763b9c-1f0e-5ec6-8606-240b1054cc8a
-  effect: spellcasting/grant-slot
-  level: 11
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 6
-    count: 2
-- id: 3bfb9c61-a081-50f2-a093-2297641ce119
-  effect: spellcasting/grant-slot
-  level: 12
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 6
-    count: 1
-- id: fdfe179a-79ff-5667-8796-a05106b60ca3
-  effect: spellcasting/grant-slot
-  level: 13
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 7
-    count: 2
-- id: 245c69eb-6c69-5096-8e8c-39b0ea7fd84c
-  effect: spellcasting/grant-slot
-  level: 14
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 7
-    count: 1
-- id: 3f77564c-6c01-5cb3-9b7b-4b2e44d4759c
-  effect: spellcasting/grant-slot
-  level: 15
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 8
-    count: 2
-- id: fcdd53be-5216-588f-8a09-27b6389f1276
-  effect: spellcasting/grant-slot
-  level: 16
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 8
-    count: 1
-- id: fcfdd72d-cd2d-5e94-849d-e82cf2f42d23
-  effect: spellcasting/grant-slot
-  level: 17
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 9
-    count: 2
-- id: 09791e2b-6e4d-5fd3-970c-db6e106fd254
-  effect: spellcasting/grant-slot
-  level: 18
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 9
-    count: 1
-- id: 6f9cf463-6089-556d-8f70-544155809385
-  effect: spellcasting/grant-slot
-  level: 19
-  inputs:
-    sourceId: 07979a9a-87e9-57c5-a5ea-b7e350edfc07
-    spellRank: 10
-    count: 1
+spellcasting:
+  source: {kind: prepared, tradition: primal, attribute: wis}
+  slots:
+    1: [5, 2]
+    2: [5, 3]
+    3: [5, 3, 2]
+    4: [5, 3, 3]
+    5: [5, 3, 3, 2]
+    6: [5, 3, 3, 3]
+    7: [5, 3, 3, 3, 2]
+    8: [5, 3, 3, 3, 3]
+    9: [5, 3, 3, 3, 3, 2]
+    10: [5, 3, 3, 3, 3, 3]
+    11: [5, 3, 3, 3, 3, 3, 2]
+    12: [5, 3, 3, 3, 3, 3, 3]
+    13: [5, 3, 3, 3, 3, 3, 3, 2]
+    14: [5, 3, 3, 3, 3, 3, 3, 3]
+    15: [5, 3, 3, 3, 3, 3, 3, 3, 2]
+    16: [5, 3, 3, 3, 3, 3, 3, 3, 3]
+    17: [5, 3, 3, 3, 3, 3, 3, 3, 3, 2]
+    18: [5, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    19: [5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1]

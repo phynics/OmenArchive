@@ -25,6 +25,12 @@ grantedSpells:
   spell: omen://spell/hand-of-the-apprentice?source=paizo-pathfinder-player-core
 mechanicsScope: builder
 foundryID: xYYhJtGhFSWNifcO
+spellcasting:
+  source: '@class.wizard.features.wizard-spellcasting'
+  tradition: arcane
+  ids: schools
+  spellbook:
+    1: {rank-1: 1}
 rules:
 - id: f3d6eca7-3f0a-5c49-b817-6bb7492b2dff
   effect: spellcasting/configure-source
@@ -44,20 +50,3 @@ rules:
     castFrequency: {kind: focus}
 - id: a7a8831a-7d25-5f33-9bc9-cc5c97b67a97
   effect: spellcasting/add-focus-point
-- id: eb584990-de54-5145-9881-26a58edf5868
-  effect: spellcasting/add-known-spell
-  inputs:
-    sourceId: c78cb906-1cd7-57cc-b713-288becbb7f90
-    entryId: d2b6a6b3-1a35-5ce8-befb-e0202bafd63d
-    spellId:
-      selection:
-        lookupName: known-spell
-        distinctWithin: known-spells/c78cb906-1cd7-57cc-b713-288becbb7f90
-        options:
-          filter:
-            all:
-            - {type: spell}
-            - {spell.category: spell}
-            - {spell.tradition: arcane}
-            - {rarity: common}
-            - {level: 1}

@@ -285,6 +285,39 @@ prerequisite asks `hasChoice: {name: $.druid.order-memberships, contains: '@clas
 and the pick (`$.druid.order`) stays the character's own. Lists are derived at every level and
 never saved.
 
+### Spellcasting tables
+
+A caster's class feature writes its slots and spell picks once, as the book's table, in a
+`spellcasting:` block. It is authoring shorthand: reading the archive expands it into the feature's
+first rules (`configure-source`, `increase-source-proficiency`, then `grant-slot` and
+`add-known-spell` by level), and writing turns rules that are exactly such an expansion back into
+the block. A block names no UUID: rule IDs are derived from the record's path and the rule's key
+(`<path>#rule-slot-3-2`).
+
+```yaml
+spellcasting:
+  source: {kind: prepared, tradition: arcane, attribute: int}
+  slots:                       # cumulative, as the book prints them: cantrips, then ranks 1-10
+    1: [5, 2]
+    2: [5, 3]
+    3: [5, 3, 2]               # a level with no row repeats the row before it
+  spellbook:                   # picks into the spellbook or repertoire, by level or range
+    1: {cantrips: 10, rank-1: 5}
+    2-20: {any-rank: 2}        # or {new-slots: true}: one per new slot, {rank-10: n} for the 10th-rank slot
+```
+
+- Cleric and druid have `slots` only: they prepare from the whole list.
+- A record that adds to another's source names the feature that defines it instead of a map:
+  `source: '@class.wizard.features.wizard-spellcasting'`. A wizard school writes
+  `spellbook: {from: curriculum}`, which reads the record's own `curriculum:` (an extra slot and
+  the listed spells for each rank, uncommon spells included). A record that adds a pick from a
+  tradition list also names `tradition:`; `ids: <folder>` names the folder the rule IDs derive from
+  when it is not `features`.
+- Expert, Master and Legendary Spellcaster stay separate features. Focus and innate spells stay
+  as rules.
+- A slot row can't have fewer slots than the row before it; the block's rules come first among the
+  record's own `rules:`, and a `rules:` entry can't reuse an ID the block's expansion makes.
+
 ### Archive format 4
 
 Format 4 is a spelling of the same data: reading a file gives the same rules and records as
