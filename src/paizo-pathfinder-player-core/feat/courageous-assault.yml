@@ -11,8 +11,8 @@ traits:
 prerequisites:
 - text: warrior muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.warrior'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.warrior'}
 action:
   count: one_action
 description: With a mighty shout, you can stir an ally to attack. If your next action

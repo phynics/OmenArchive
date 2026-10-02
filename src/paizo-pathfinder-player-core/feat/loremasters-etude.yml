@@ -9,8 +9,8 @@ traits:
 prerequisites:
 - text: enigma muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: You magically unlock memories, making them easier to recall. You learn
   the Loremaster's Etude composition spell.
 mechanicsScope: encounter

@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: polymath muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 description: You can flexibly cast all of your spells, granting a dizzying array of
   possible options. All of the spells in your repertoire are signature spells for
   you.

@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: leaf order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.leaf'}
 description: You call a minor spirit of nature into a plant body, creating a leshy
   companion to aid you in your spellcasting. You gain a familiar, which has your choice
   of either the plant or fungus familiar ability; this doesn't count against your

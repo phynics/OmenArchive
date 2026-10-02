@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: maestro muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 description: You learn the Uplifting Overture composition cantrip, which aids your
   allies' skills with the inspiring nature of your performance.
 mechanicsScope: encounter

@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: maestro muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 description: The world is a stage upon which you are always playing. You are permanently
   Quickened; you can use your extra action only to cast a composition cantrip that
   requires 1 action to cast. While in exploration mode, you can declare that you are

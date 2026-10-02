@@ -14,6 +14,9 @@ description: 'You feel a kinship with flames and can use them for succor and des
   Anathema Allowing unnatural fires to spread or preventing natural fires from occurring
   in a way that harms the environment. (this doesn''t prevent you from using fire
   destructively or force you to combat a controlled or natural fire).'
+grantedSpells:
+- grant: focus
+  spell: omen://spell/wildfire?source=paizo-pathfinder-secrets-of-magic
 mechanicsScope: builder
 foundryID: NdeFvIXdHwKYLiUj
 rules:
@@ -22,3 +25,21 @@ rules:
   inputs:
     skill: {kind: acrobatics}
     proficiencyCap: 2
+- id: 97c56c70-e35c-5bfc-b896-0c57f562154d
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    sourceName: Druid Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: wis
+- id: ade92246-6ab9-5b32-b0c7-4d0096cb51b9
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    grantId: 2c1bc4de-ba06-50f1-8e1f-9666d6221393
+    spellId: '@spell.wildfire?source=paizo-pathfinder-secrets-of-magic'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: feaae05e-aeb7-5fbd-9c03-397c148237fa
+  effect: spellcasting/add-focus-point

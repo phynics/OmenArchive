@@ -10,8 +10,8 @@ traits:
 prerequisites:
 - text: maestro muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 action:
   count: one_action
 description: 'You attune your great skill in performing to another, granting them

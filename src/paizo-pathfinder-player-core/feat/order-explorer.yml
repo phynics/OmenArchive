@@ -6,7 +6,9 @@ type: class
 traits:
 - druid
 repeatPolicy:
-  duplicateSelectionRules: []
+  duplicateSelectionRules:
+  - lookupName: $.feat.order-explorer.orders
+    valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
   instanceLevelGates: []
   maxCount: null
 description: You have learned the secrets of another druidic order, passing whatever
@@ -18,8 +20,67 @@ description: You have learned the secrets of another druidic order, passing what
   You don't gain any of the other benefits of the order you chose.
 specialText: You can take this feat multiple times. Each time you do, you must choose
   a different order other than your own.
-mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/order-explorer?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet,
-  GrantItem].'
+mechanicsScope: builder
 foundryID: 9onf3uGvZRnNLPR6
+rules:
+- id: 04c3164c-de61-53d8-91a0-a81bd9433e1c
+  key: choice-feat-order-explorer-orders
+  choice:
+    name: $.feat.order-explorer.orders
+    label: Order
+    distinctFrom:
+    - $.druid.order
+    type: core/feature-id
+    cases:
+    - key: animal
+      value: '@class.druid.orders.animal'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: 3076bb1d-1498-5f90-8bdc-7e5543973a19
+          featId: '@feat.animal-companion'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.druid.order-memberships
+          value: '@class.druid.orders.animal'
+    - key: leaf
+      value: '@class.druid.orders.leaf'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: 2d144296-79fe-5dec-8116-20ef361b3958
+          featId: '@feat.leshy-familiar'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.druid.order-memberships
+          value: '@class.druid.orders.leaf'
+    - key: storm
+      value: '@class.druid.orders.storm'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: 276f5969-499c-5d31-9270-dcf299ff4f80
+          featId: '@feat.storm-born'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.druid.order-memberships
+          value: '@class.druid.orders.storm'
+    - key: untamed
+      value: '@class.druid.orders.untamed'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: 7b430d91-4407-542b-b041-bae3b9eea4dc
+          featId: '@feat.untamed-form'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.druid.order-memberships
+          value: '@class.druid.orders.untamed'

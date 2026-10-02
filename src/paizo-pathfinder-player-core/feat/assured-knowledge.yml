@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: enigma muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: 'You can procure information with confidence. Whenever you Recall Knowledge
   using any skill (including Bardic Lore), you can forgo rolling your check to instead
   receive a result of 10 + your proficiency bonus (don''t apply any other bonuses,

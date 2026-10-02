@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: leaf order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.leaf'}
 description: You can make your skin take on the woody endurance of an ancient tree
   and have your familiar follow suit. You can cast Oaken Resilience at will as an
   innate primal spell with a spell rank one lower than the highest rank of spells

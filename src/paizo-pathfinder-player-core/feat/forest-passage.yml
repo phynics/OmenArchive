@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: leaf order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.leaf'}
 description: You can always find a path, almost as if foliage parted before you. You
   ignore any difficult terrain caused by plants and fungi, such as bushes, vines,
   and undergrowth.

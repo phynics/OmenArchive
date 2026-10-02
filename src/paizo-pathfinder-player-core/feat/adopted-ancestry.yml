@@ -11,8 +11,28 @@ description: You're fully immersed in another ancestry's culture and traditions,
   You can select ancestry feats from the ancestry you chose, in addition to your character's
   own ancestry, as long as the ancestry feats don't require any physiological feature
   that you lack, as determined by the GM.
-mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/adopted-ancestry?source=paizo-pathfinder-player-core. Foundry keys:
-  [ChoiceSet, ActiveEffectLike, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: ihN8gkHSdPG9Trte
+rules:
+- id: 0e34cea6-afb6-53b1-b7a8-fb531bf295bc
+  key: choice-feat-adopted-ancestry-ancestry
+  choice:
+    name: $.feat.adopted-ancestry.ancestry
+    label: Ancestry
+    distinctFrom:
+    - $.ancestry.name
+    type: core/string
+    cases:
+    - {value: dwarf}
+    - {value: elf}
+    - {value: gnome}
+    - {value: goblin}
+    - {value: halfling}
+    - {value: human}
+    - {value: leshy}
+    - {value: orc}
+- id: 961318fd-9341-5c78-b88a-34b10e50661c
+  key: adopted-trait
+  effect: core/add-character-adopted-ancestry-trait
+  inputs:
+    trait: {choice: $.feat.adopted-ancestry.ancestry}

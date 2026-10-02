@@ -30,3 +30,9 @@ rules:
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.bard.muse}
+- id: c434cb16-10de-538b-82f9-1358bbbcbf7e
+  key: choice-set-2
+  effect: core/add-membership
+  inputs:
+    list: \$.bard.muse-memberships
+    value: {choice: $.bard.muse}

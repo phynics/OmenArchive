@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: storm order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.storm'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.storm'}
 - text: tempest surge order spell
   hasChoice:
     name: $.druid.order

@@ -14,6 +14,9 @@ description: 'Water is the source of life, and you''ve learned to shape how it f
   Anathema Polluting water or allowing those who pollute water sources to go unpunished.
   (this doesn''t force you to take action against potential water pollution or to
   sacrifice yourself against an obviously superior foe).'
+grantedSpells:
+- grant: focus
+  spell: omen://spell/rising-surf?source=paizo-pathfinder-secrets-of-magic
 mechanicsScope: builder
 foundryID: FuUXyv2yBs7zRgqT
 rules:
@@ -22,3 +25,21 @@ rules:
   inputs:
     skill: {kind: medicine}
     proficiencyCap: 2
+- id: 1ad1fc4d-2058-5e19-8ad2-70f14fe527e5
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    sourceName: Druid Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: wis
+- id: 2d04e10b-fa0c-584b-b558-ba1a64f22d0c
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    grantId: 50b8c899-369e-5012-9422-27a370673124
+    spellId: '@spell.rising-surf?source=paizo-pathfinder-secrets-of-magic'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 075352ba-accf-5191-b168-61c2568c8021
+  effect: spellcasting/add-focus-point

@@ -186,7 +186,7 @@
           "description": "Left out when it is the key's words capitalized"
         },
         "value": {
-          "description": "A bare literal of the choice's type; a record is an @ reference"
+          "description": "A bare literal of the choice's type; a record is an @ reference. With effects, it is what the choice reads as (an order record whose feat and membership the effects add); then every case has one."
         },
         "effects": {
           "type": "array",
@@ -196,7 +196,7 @@
           }
         }
       },
-      "oneOf": [
+      "anyOf": [
         {
           "required": [
             "value"
@@ -209,19 +209,8 @@
         },
         {
           "required": [
-            "effects"
-          ],
-          "not": {
-            "required": [
-              "value"
-            ]
-          },
-          "anyOf": [
-            {
-              "required": [
-                "key"
-              ]
-            }
+            "effects",
+            "key"
           ]
         }
       ],

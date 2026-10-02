@@ -6,7 +6,9 @@ type: class
 traits:
 - bard
 repeatPolicy:
-  duplicateSelectionRules: []
+  duplicateSelectionRules:
+  - lookupName: $.feat.multifarious-muse.muses
+    valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
   instanceLevelGates: []
   maxCount: 3
 description: Your muse doesn't fall into a single label. Choose a type of muse other
@@ -16,8 +18,67 @@ description: Your muse doesn't fall into a single label. Choose a type of muse o
   chose.
 specialText: You can take this feat multiple times. Each time you do, you must choose
   a different type of muse other than that of your own.
-mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/multifarious-muse?source=paizo-pathfinder-player-core. Foundry keys:
-  [ChoiceSet, ChoiceSet, GrantItem, RollOption].'
+mechanicsScope: builder
 foundryID: a898miJnjgD93ZsX
+rules:
+- id: a6f4fc1d-53fd-5f11-a18a-388e79d32c2a
+  key: choice-feat-multifarious-muse-muses
+  choice:
+    name: $.feat.multifarious-muse.muses
+    label: Muse
+    distinctFrom:
+    - $.bard.muse
+    type: core/feature-id
+    cases:
+    - key: enigma
+      value: '@class.bard.muses.enigma'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: b8817a50-039d-5977-93d2-b03dfee514ac
+          featId: '@feat.bardic-lore'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.bard.muse-memberships
+          value: '@class.bard.muses.enigma'
+    - key: maestro
+      value: '@class.bard.muses.maestro'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: 700d0277-4de9-5855-a697-4346ba3de79e
+          featId: '@feat.lingering-composition'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.bard.muse-memberships
+          value: '@class.bard.muses.maestro'
+    - key: polymath
+      value: '@class.bard.muses.polymath'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: 5bc13797-83f0-57fb-beb0-381610dcb39e
+          featId: '@feat.versatile-performance'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.bard.muse-memberships
+          value: '@class.bard.muses.polymath'
+    - key: warrior
+      value: '@class.bard.muses.warrior'
+      effects:
+      - key: grant-feat
+        effect: core/add-feat@2
+        inputs:
+          selectionId: 947b340e-192a-5423-bd56-8a1c15ebd52e
+          featId: '@feat.martial-performance'
+      - key: add-membership
+        effect: core/add-membership
+        inputs:
+          list: \$.bard.muse-memberships
+          value: '@class.bard.muses.warrior'

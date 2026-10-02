@@ -64,3 +64,9 @@ rules:
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.druid.order}
+- id: bd80c384-9f6d-5a1f-90e7-1d8829f04cda
+  key: choice-set-2
+  effect: core/add-membership
+  inputs:
+    list: \$.druid.order-memberships
+    value: {choice: $.druid.order}

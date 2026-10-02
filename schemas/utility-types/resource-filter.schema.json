@@ -241,6 +241,20 @@
     {
       "type": "object",
       "properties": {
+        "hasChoiceAncestryTrait": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "hasChoiceAncestryTrait"
+      ],
+      "additionalProperties": false,
+      "description": "The resource carries the ancestry trait the named choice picked ($.feat.adopted-ancestry.ancestry); nothing matches while it is unanswered."
+    },
+    {
+      "type": "object",
+      "properties": {
         "metadata": {
           "type": "object",
           "properties": {

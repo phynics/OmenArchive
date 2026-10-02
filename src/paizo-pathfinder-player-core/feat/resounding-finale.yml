@@ -9,8 +9,8 @@ traits:
 prerequisites:
 - text: maestro muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 action:
   count: reaction
   trigger: You or an ally benefiting from your composition spell would take sonic

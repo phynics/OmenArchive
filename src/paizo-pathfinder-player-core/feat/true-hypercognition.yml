@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: enigma muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: Your mind works at an incredible pace. You instantly use up to five Recall
   Knowledge actions. If you have any special abilities or free actions that would
   normally be triggered when you Recall Knowledge, you can't use them for these actions.

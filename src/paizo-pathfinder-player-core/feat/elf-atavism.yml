@@ -15,8 +15,17 @@ description: Your elven blood runs particularly strong, granting you features fa
   different benefit.
 specialText: You can take this feat only at 1st level, and you can't retrain out of
   this feat or into this feat.
-mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/elf-atavism?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet,
-  GrantItem].'
+mechanicsScope: builder
 foundryID: 7BVl9lFf0wuTjBgM
+rules:
+- id: b4b9df6f-1ac4-5529-b068-45590d64a014
+  key: choice-feat-elf-atavism-heritage
+  choice:
+    name: $.feat.elf-atavism.heritage
+    label: Elf Heritage
+    records: {filter: {pathPrefix: '@ancestry.elf.heritages'}, type: core/heritage-id}
+- id: db093715-1067-55e6-82ba-d905400a1a3e
+  key: grant-heritage
+  effect: core/add-heritage-by-id
+  inputs:
+    heritageId: {choice: $.feat.elf-atavism.heritage}

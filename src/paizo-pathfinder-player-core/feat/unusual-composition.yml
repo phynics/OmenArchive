@@ -11,8 +11,8 @@ traits:
 prerequisites:
 - text: polymath muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 action:
   count: one_action
 description: You can translate the emotion and power of a composition to other mediums.

@@ -11,8 +11,8 @@ traits:
 prerequisites:
 - text: storm order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.storm'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.storm'}
 action:
   count: one_action
 description: The howling wind and precipitation of your magic turn to thick snow.

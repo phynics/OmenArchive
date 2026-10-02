@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: enigma muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 - text: expert in Occultism
   hasSkillProficiency: {skill: occultism, proficiency: expert}
 description: Careful research into the art of rituals has made you better at performing

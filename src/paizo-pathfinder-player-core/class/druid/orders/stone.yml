@@ -14,6 +14,9 @@ description: 'You''re as enduring as stone, and you take comfort in its steadfas
 
   Anathema Poisoning or polluting the land and heedlessly carving the earth to plunder
   its natural resources. (this doesn''t prevent you from responsibly digging or mining).'
+grantedSpells:
+- grant: focus
+  spell: omen://spell/crushing-ground?source=paizo-pathfinder-secrets-of-magic
 mechanicsScope: builder
 foundryID: fKTewWlYgFuhl4KA
 rules:
@@ -22,3 +25,21 @@ rules:
   inputs:
     skill: {kind: crafting}
     proficiencyCap: 2
+- id: f2703df5-3dec-5581-99fa-9a87dcbda862
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    sourceName: Druid Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: wis
+- id: b6ad56f6-22c6-55c1-9013-33fcc4237c89
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
+    grantId: 550ff366-77cc-56d4-9d17-3664dedb5548
+    spellId: '@spell.crushing-ground?source=paizo-pathfinder-secrets-of-magic'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 72e607d6-20e6-5932-8533-d9374ce29715
+  effect: spellcasting/add-focus-point

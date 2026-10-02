@@ -9,8 +9,8 @@ prerequisites:
 - text: leaf order or Untamed Form
   anyOf:
   - hasChoice:
-      name: $.druid.order
-      equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
+      name: $.druid.order-memberships
+      contains: {type: core/feature-id, value: '@class.druid.orders.leaf'}
   - hasResourceWithName: untamed form
 description: 'You can take the shape of a plant creature. If you don''t have untamed
   form, you can cast Plant Form once per day, heightened to the same rank as your

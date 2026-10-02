@@ -10,8 +10,8 @@ traits:
 prerequisites:
 - text: leaf order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.leaf'}
 action:
   count: one_action
 description: 'If your next action is to Cast a Spell with the fungus or plant trait,

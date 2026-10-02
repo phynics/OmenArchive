@@ -9,8 +9,8 @@ traits:
 prerequisites:
 - text: enigma muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: 'Bard - When you succeed at a check to Recall Knowledge, you gain additional
   information or context. When you critically succeed at a check to Recall Knowledge,
   you get additional information or context or can ask an additional follow-up question

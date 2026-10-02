@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: warrior muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.warrior'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.warrior'}
 description: Your performances inspire strength in your allies to aid them at physical
   tasks. You learn the Song of Strength composition cantrip.
 mechanicsScope: encounter

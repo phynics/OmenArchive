@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: maestro muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.maestro'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.maestro'}
 description: By adding a flourish, you make your compositions last longer. You learn
   the Lingering Composition focus spell.
 mechanicsScope: encounter

@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: polymath muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.polymath'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.polymath'}
 description: 'You keep a book of occult spells, similar to a wizard''s spellbook,
   and can use its spells to supplement your spell repertoire. Add all the spells in
   your repertoire to this book for free. You can use the Occultism skill to Learn

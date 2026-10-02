@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: leaf order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.leaf'}
 description: You can fill an area with devastating briars. You gain the Impaling Briars
   order spell.
 mechanicsScope: encounter

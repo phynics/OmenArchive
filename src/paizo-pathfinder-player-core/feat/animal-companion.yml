@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: animal order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.animal'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.animal'}
 description: You gain the service of a young animal companion that travels with you
   on your adventures and obeys any simple commands you give it to the best of its
   abilities.

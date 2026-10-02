@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: storm order
   hasChoice:
-    name: $.druid.order
-    equals: {type: core/feature-id, value: '@class.druid.orders.storm'}
+    name: $.druid.order-memberships
+    contains: {type: core/feature-id, value: '@class.druid.orders.storm'}
 description: You are at home out in the elements, reveling in the power of nature
   unleashed. You do not take circumstance penalties to ranged spell attacks or Perception
   checks caused by weather, and your targeted spells don't require a flat check to

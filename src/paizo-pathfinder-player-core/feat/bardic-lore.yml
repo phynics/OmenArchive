@@ -8,8 +8,8 @@ traits:
 prerequisites:
 - text: enigma muse
   hasChoice:
-    name: $.bard.muse
-    equals: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+    name: $.bard.muse-memberships
+    contains: {type: core/feature-id, value: '@class.bard.muses.enigma'}
 description: Your studies make you informed on every subject. You are trained in Bardic
   Lore, a special Lore skill that can be used only to Recall Knowledge, but on any
   topic. If you have legendary proficiency in Occultism, you gain expert proficiency
