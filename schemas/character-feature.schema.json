@@ -120,6 +120,13 @@
         "ids": {
           "type": "string",
           "description": "The folder whose name the rule IDs derive from, when it is not features"
+        },
+        "choose": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "One more spellbook pick, from exactly these spells (@ references)"
         }
       },
       "required": [

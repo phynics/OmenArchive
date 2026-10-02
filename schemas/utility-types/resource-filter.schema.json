@@ -255,6 +255,20 @@
     {
       "type": "object",
       "properties": {
+        "hasSourceTradition": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "hasSourceTradition"
+      ],
+      "additionalProperties": false,
+      "description": "The resource is of the tradition of the character's spellcasting source with this ID; nothing matches while the source is not configured."
+    },
+    {
+      "type": "object",
+      "properties": {
         "metadata": {
           "type": "object",
           "properties": {

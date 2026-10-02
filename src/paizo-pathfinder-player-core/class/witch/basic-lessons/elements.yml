@@ -18,6 +18,13 @@ grantedSpells:
   spell: omen://spell/pummeling-rubble?source=paizo-pathfinder-player-core
 mechanicsScope: builder
 foundryID: FuOHRoEU8nHOXZnk
+spellcasting:
+  source: '@class.witch.features.witch-spellcasting'
+  choose:
+  - '@spell.breathe-fire'
+  - '@spell.air-bubble'
+  - '@spell.hydraulic-push'
+  - '@spell.pummeling-rubble'
 rules:
 - id: 10942a6d-a47e-5cfa-88b0-a2c9764b3a75
   effect: spellcasting/grant-spell
@@ -29,19 +36,3 @@ rules:
     castFrequency: {kind: focus}
 - id: 4a5e5e03-02fb-5d7d-a3d6-99756f975ffd
   effect: spellcasting/add-focus-point
-- id: d5357d0a-e8bd-54e1-b7ed-e4ed45993c7b
-  effect: spellcasting/add-known-spell
-  inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
-    entryId: fec03b01-1489-5b57-a922-13b554f7b4ad
-    spellId:
-      selection:
-        lookupName: known-spell
-        distinctWithin: known-spells/0835758c-a3b1-57be-bafd-0a18c240f441
-        options:
-          filter:
-            any:
-            - {id: '@spell.breathe-fire'}
-            - {id: '@spell.air-bubble'}
-            - {id: '@spell.hydraulic-push'}
-            - {id: '@spell.pummeling-rubble'}
