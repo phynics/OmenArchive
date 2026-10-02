@@ -201,8 +201,8 @@ A rule has these keys, in this order:
 
 An input value is **bare** when it is a literal: the effect's descriptor says its type, so there is
 no type ID, revision or namespace (`proficiencyCap: 2`, `skill: {kind: deception}`). The explicit
-forms are `{choice: $.cleric.divine-font}` (read a named choice), `{selection: …}`,
-`{lookup: name}` and `{literal: …}` (with an optional `type: core/skill`, for a payload that looks
+forms are `{choice: $.cleric.divine-font}` (read a named choice), `{selection: …}`
+and `{literal: …}` (with an optional `type: core/skill`, for a payload that looks
 like one of the explicit forms). A string literal that starts with `$`, `@` or `(`, or with `[[`, is
 written with a leading backslash (`\$5`): those prefixes are reserved for character values,
 references, expressions and sheet values. Expressions (`(max 1 (divide $.level 2))`) and `$` values have no wire
@@ -313,6 +313,10 @@ spellcasting:
   the listed spells for each rank, uncommon spells included). A record that adds a pick from a
   tradition list also names `tradition:`; `ids: <folder>` names the folder the rule IDs derive from
   when it is not `features`.
+- The witch's table is one block on Witch Spellcasting with `source: patron`: each patron
+  configures the source's tradition, and the spellbook offers the spells of that tradition. A lesson
+  or patron that gives one more pick from a short list writes `choose:` with the spells' `@spell`
+  references.
 - Expert, Master and Legendary Spellcaster stay separate features. Focus and innate spells stay
   as rules.
 - A slot row can't have fewer slots than the row before it; the block's rules come first among the
