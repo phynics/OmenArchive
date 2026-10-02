@@ -8,9 +8,8 @@ on:
 
 jobs:
   validate:
-    # Apple platforms only; Swift 6.4 / Xcode 27 is the toolchain floor (ADR 0004 in the
-    # workspace repo). The tooling is checked out at the commits in
-    # .github/workspace.lock.json, which tools/workspace-lock.sh writes (ticket 0084).
+    # Apple platforms only; Swift 6.4 / Xcode 27 is the toolchain floor. The tooling is checked
+    # out at the commits pinned in .github/workspace.lock.json.
     runs-on: macos-26
 
     steps:

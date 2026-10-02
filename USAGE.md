@@ -8,10 +8,10 @@ It has two jobs:
 2. Store the curated resource files that OmenDB is built from.
 
 OmenArchive is the **source of truth** for curated game data. OmenDB, the store the apps read, is
-always rebuilt from it (by OmenScribe, or headless by `omendb-build`) and never edited.
+always rebuilt from it and never edited.
 
 ```text
-Foundry JSON → OmenScribe staging and review → OmenArchive YAML → rebuild → OmenDB
+Foundry JSON → conversion and review → OmenArchive YAML → rebuild → OmenDB
 ```
 
 ## Repository layout
@@ -88,45 +88,26 @@ data. A refresh updates those fields from the new conversion.
 
 The archive owns reviewed mechanics. Preserve existing `rules`, `mechanicsScope` and
 `unsupportedReason` when a Foundry record is regenerated. A feat's `prerequisites` (the text and the
-typed form and diagnostic beside it) are generated from its prerequisite text (0143): a refresh
-replaces them, so fix a prerequisite in the converter, not in the file. New records may take the converter's initial values for these fields; later reviewed
-edits take precedence. If source identity changes or a field cannot be assigned to one owner,
+typed form and diagnostic beside it) are generated from its prerequisite text: a refresh replaces
+them, so fix a prerequisite in the converter, not in the file. New records may take the converter's
+initial values for these fields; later reviewed edits take precedence. If source identity changes or a field cannot be assigned to one owner,
 show the conflict for review before writing. A hand-authored file with no staged counterpart is
 an explicit removal candidate and must be reviewed before it can be deleted.
 
-A refresh compares what files mean, not how they are spelled: both versions are read to their
-wire form (see "Archive format 4" below) before they are compared, so a difference in key order,
-quoting or `@` spelling alone is never a divergence.
-
-When a refresh finds a reviewed rule whose non-identity content no longer matches the generated
-rule, it preserves the archive rule and creates a review item. It never silently drops a reviewed
-mechanic. A generated rule may be added automatically only when every reviewed rule still matches.
-The matcher ignores what identifies a rule rather than what it does: `id`, `key`, a choice's
-`legacySelections`, and the identity inputs the converter derives from the rule (`selectionId`,
-`grantId`, `entryId`, a roll modifier's `uuid`). A matched rule without a key stays exactly as
-reviewed, since its released IDs can't be rederived; a matched keyed rule takes the generated ID
-(derived from the current path) and keeps the archive's legacy selections. A reviewed key the
-converter no longer produces is a divergence. A record the converter has no rules for keeps its
-hand-authored rules without a review item.
-
-`omendb-build player-core stage` lists the diverged records and writes the converter's own output
-for each under `review/generated/` in the staging folder, outside what the gate hashes and Apply
-copies. After comparing, restage with `--adopt-generated <file,…>` (or `@list`, one archive-relative
-path per line) to take the generated mechanics for those records. Adoption still keeps the identity
-of every rule that says what a reviewed rule says, gives a changed rule the ID and identity inputs
-of the unkeyed reviewed rule with the same effect, and keeps each choice's legacy selections.
+A refresh never silently drops a reviewed mechanic: when a reviewed rule no longer matches what
+the converter generates, the archive rule is kept and the record goes to review. Differences in
+spelling alone (key order, quoting, `@` form) are not divergences.
 
 The schemas declare this ownership. An archive-owned property carries
-`"x-omen-ownership": "archive"`, and a property without the annotation is generated. OmenScribe reads
-the annotation (through `ArchiveFormat.archiveOwnedFields(for:)`) to decide which fields a refresh
-keeps, so a new reviewed field must be annotated in its schema. The validator accepts the annotation
+`"x-omen-ownership": "archive"`, and a property without the annotation is generated. A refresh
+keeps the archive-owned fields, so a new reviewed field must be annotated in its schema. The validator accepts the annotation
 only on a property schema, with the value `archive` or `generated`.
 
 ### Encoding
 
 All YAML files must be **UTF-8** text.
 
-Do not save files as UTF-16. Some macOS editors can do this accidentally. UTF-16 YAML breaks normal tooling and OmenScribe import.
+Do not save files as UTF-16. Some macOS editors can do this accidentally. UTF-16 YAML breaks normal tooling and import.
 
 Quick check:
 
@@ -223,8 +204,8 @@ no type ID, revision or namespace (`proficiencyCap: 2`, `skill: {kind: deception
 forms are `{choice: $.cleric.divine-font}` (read a named choice), `{selection: …}`,
 `{lookup: name}` and `{literal: …}` (with an optional `type: core/skill`, for a payload that looks
 like one of the explicit forms). A string literal that starts with `$`, `@` or `(`, or with `[[`, is
-written with a leading backslash (`\$5`): Proposal K reserves those for character values, references,
-expressions and sheet values. Expressions (`(max 1 (divide $.level 2))`) and `$` values have no wire
+written with a leading backslash (`\$5`): those prefixes are reserved for character values,
+references, expressions and sheet values. Expressions (`(max 1 (divide $.level 2))`) and `$` values have no wire
 form yet and are rejected.
 
 A **record** input (a feat, action, feature or spell ID) takes a reference, never a UUID:
@@ -255,7 +236,7 @@ inserted or reordered Foundry rule of another kind moves no other key. Rules the
 for a purpose rather than from one Foundry rule get a key naming it (`choice-bard-muse`, named after
 the choice), and spellcasting and focus rules keep their semantic IDs without a key. New authoring
 proposals use their explicit key when present; otherwise they receive a random UUID. When an edited
-keyed rule is written, OmenScribe derives its ID from the actual record path.
+keyed rule is written, its ID is derived from the actual record path.
 
 The character's traits come from three effects: `add-character-trait` (a plain trait),
 `add-character-ancestry-trait` (an ancestry or lineage trait: it counts for `hasTrait` and opens
@@ -306,8 +287,8 @@ never saved.
 
 ### Archive format 4
 
-Format 4 (0152, 0153, 0154, 0156) is a spelling of the same data: reading a file gives the same
-rules and records as format 3 did, and OmenDB is built from the same records. What changed:
+Format 4 is a spelling of the same data: reading a file gives the same rules and records as
+format 3 did. What changed:
 
 - Rules use `effect` and `inputs`, with bare literals (above); filters are flat; choice rules are
   compact.
@@ -321,13 +302,12 @@ rules and records as format 3 did, and OmenDB is built from the same records. Wh
   writer, and scalars are written the way the writers always wrote them.
 
 `omen-archive migrate-format-4 <archive-root> [--write]` rewrites a format 3 archive, and writes
-nothing unless every file reads back as the same document. The grammar fixtures under
-`OmenArchiveKit/Tests/Fixtures/format-4` pair every construct in both formats.
+nothing unless every file reads back as the same document.
 
 ### Resource references
 
 A record is written `@family.name`, steps joined by dots, with an optional `#member` and then
-`?source=` (Proposal K):
+`?source=`:
 
 ```yaml
 featId: '@feat.lie-to-me'                       # this publication's record
@@ -435,10 +415,8 @@ the description is rules text for readers, while diagnostics explain conversion 
 The Player Core corpus manifest (`docs/player-core-corpus-manifest.json`) accounts for the
 spells with every other Player Core record: all 488 source spells are archived. Each generated
 payload retains Foundry's stable `foundryID` for source-aware rebuilds. Spells are refreshed with
-the rest of the corpus, and `make player-core-check` in OmenBuilder verifies that a refresh
-reproduces them. `docs/player-core-spell-import-manifest.json` is the older spell-only accounting
-from the Python importer (0026). Nothing regenerates it; OmenScribe's Python-parity tests still
-read it.
+the rest of the corpus. `docs/player-core-spell-import-manifest.json` is an older, spell-only
+accounting that is no longer regenerated.
 
 ### Ancestries
 
@@ -711,7 +689,7 @@ typed in full or not at all. Record values in a typed form are `{type: core/feat
 Rules:
 
 - Keep prerequisites human-readable but consistent.
-- OmenScribe currently parses common prerequisite strings into typed runtime prerequisites.
+- The converter parses common prerequisite strings into their typed form.
 - Use `relatedArchetype` for archetype-associated feats.
 
 ### Archetypes
@@ -734,11 +712,9 @@ entryFeat: omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-p
 Use only source-backed root fields. Do not infer progression or configuration rules
 from feat names; add those fields only when the source provides them.
 
-The Player Core historical path map, including ticket 0055 and batch 0162/0163/0146,
-is recorded in `docs/migrations/player-core-0055-v1.0.0.json`. OmenDBBuild's import plan reads
-it, and the workspace's `tools/generate-batch-6-migration.rb` turns it into OmenCore's
-`PlayerCoreIdentityMigration`, which opens characters saved under the old identities. The map is
-frozen; new moves go through the migration tool and a gated refresh.
+The Player Core historical path map is recorded in `docs/migrations/player-core-0055-v1.0.0.json`.
+Characters saved under the old identities are opened through it. The map is frozen; new moves go
+through the migration tool and a reviewed refresh.
 
 ## Mechanics coverage
 
@@ -768,8 +744,8 @@ Rules:
 
 - Keep schema `$id` values stable and pointing at the raw GitHub URL.
 - Shared concepts belong under `schemas/utility-types/`.
-- If the YAML convention changes, update schema, OmenTome Codable model, and OmenScribe import tests together.
-- Schema defaults must be mirrored by OmenTome decoders when OmenScribe needs to decode files directly.
+- A YAML convention changes through the schema first; the validator and the tools that read the
+  archive change with it.
 
 ## Validation checklist before import
 
@@ -804,8 +780,7 @@ Check before a rebuild:
 
 - All YAML files are UTF-8.
 - YAML parses.
-- Files decode into their OmenTome types.
-- OmenScribe reports zero `ArchiveLoadFailure`s.
+- `./scripts/validate.sh` passes.
 - Directory path matches the resource family, owner and slug.
 - No `source` block (see "Source and attribution").
 - `@` references and `omen://` paths resolve, e.g. a heritage's ancestry exists.
