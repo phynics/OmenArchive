@@ -310,6 +310,20 @@
     {
       "type": "object",
       "properties": {
+        "hasChoiceTradition": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "hasChoiceTradition"
+      ],
+      "additionalProperties": false,
+      "description": "The resource is a spell of the tradition the named choice picked. Nothing matches while the choice is unanswered."
+    },
+    {
+      "type": "object",
+      "properties": {
         "knownBySource": {
           "type": "string",
           "minLength": 1

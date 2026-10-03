@@ -48,12 +48,13 @@
     "write": {
       "type": "object",
       "properties": {
-        "domain": { "enum": ["path", "sense", "skill", "saving-throw", "feature", "feat", "trait", "signature-spell"] },
+        "domain": { "enum": ["path", "sense", "skill", "saving-throw", "feature", "feat", "trait", "signature-spell", "innate-tradition"] },
         "nameInput": { "type": "string", "description": "The input whose literal value names the state." },
         "nameMember": { "type": "string", "description": "For an object-valued input, the member holding the name." },
         "namePrefix": { "type": "string" },
         "fixedName": { "type": "string", "description": "A name that doesn't depend on an input." },
-        "rankInput": { "type": "string", "description": "The input whose literal value is the proficiency rank written." }
+        "rankInput": { "type": "string", "description": "The input whose literal value is the proficiency rank written." },
+        "modification": { "type": "boolean", "description": "The effect changes this state on records other rules made, so a rule prerequisite can't read it." }
       },
       "required": ["domain"],
       "additionalProperties": false

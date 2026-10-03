@@ -277,7 +277,8 @@ options:
 such as `@class.witch.patrons`), `sharesAncestryTrait`, `sharesClassTrait`, `characterHasFeat`,
 `hasChoiceAncestryTrait` (the ancestry trait a choice picked, `$.feat.adopted-ancestry.ancestry`),
 `knownBySource` (a spell the spellcasting source with that ID knows; with `level` it picks one
-rank's spell from a repertoire), `everything`, or a metadata key written with its dot (`spell.category: cantrip`). `not` takes one
+rank's spell from a repertoire), `hasChoiceTradition` (a spell of the tradition a choice picked,
+`$.gnome.wellspring-tradition`; nothing matches while it is unanswered), `everything`, or a metadata key written with its dot (`spell.category: cantrip`). `not` takes one
 `trait` leaf (`{not: {trait: uncommon}}`); no other negation exists yet. A filter that fits in 56
 characters stays on one line; a longer one puts each item of its `all`/`any` list on its own line.
 
@@ -292,6 +293,18 @@ A value an engine provides (`$.level`, `$.attributes.<ability>`, `$.<slot>.name`
 `$.ancestry.feat-ancestries`) is read, never defined: no choice may take its name. A name is either
 a choice or a list rules add to, never both. A rule's prerequisite can't be negated, and a
 prerequisite on a sense, proficiency, trait or feature the same record's rules grant is reported.
+
+A record can change the tradition of innate spells that other records grant, without those records
+knowing: `spellcasting/modify-innate-sources` takes `grantedBy` (a filter over the record whose rule
+made the grant, such as a gnome ancestry feat), `tradition` (the tradition to match, `primal`) and
+`setTradition` (a literal or a `{choice: $.…}` read). Wellspring Gnome uses it. The tradition a
+source ends up with, and the spell proficiency that follows, are worked out when read, so the order
+the records were gained in doesn't matter; two modifiers that disagree on one source are reported.
+
+A feat that grants another feat can pass its own choice on in the grant's `with` settings:
+`{kind: choice, name: $.…}` passes the answer, and `as: lore` turns a text answer into a Lore skill
+that a skill choice accepts (Gnome Obsession's Lore reaches Additional Lore as text and Assurance
+as a skill).
 
 ### Spellcasting tables
 

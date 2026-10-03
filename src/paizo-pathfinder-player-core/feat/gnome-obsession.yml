@@ -12,13 +12,21 @@ description: You might have a flighty nature, but when a topic captures your att
 mechanicsScope: builder
 foundryID: mxhGH4FVYXJwb0BC
 rules:
+- id: 199bb4de-6c7f-5879-aa4a-b1a3b37cf65e
+  key: choice-feat-gnome-obsession-lore
+  choice:
+    name: $.feat.gnome-obsession.lore
+    label: Lore
+    freeText: core/string
 - id: e742eefd-4bcd-5455-963a-8b94d272ac73
   effect: core/add-feat@2
   inputs:
     selectionId: e3911cdc-2cf4-5df6-994b-aeeb52538932
     featId: '@feat.additional-lore'
+    with: {$.feat.additional-lore.lores: {kind: choice, name: $.feat.gnome-obsession.lore}}
 - id: d794a0e3-7139-5242-9271-bff626ea90fa
   effect: core/add-feat@2
   inputs:
     selectionId: 2182bf09-e03b-5b49-9a3f-87c447b4f42b
     featId: '@feat.assurance'
+    with: {$.feat.assurance.skills: {as: lore, kind: choice, name: $.feat.gnome-obsession.lore}}

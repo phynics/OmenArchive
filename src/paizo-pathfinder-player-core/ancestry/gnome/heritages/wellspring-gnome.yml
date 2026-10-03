@@ -13,3 +13,59 @@ description: 'Some other source of magic has a greater hold on you than the prim
   rounded up. Whenever you gain a primal innate spell from a gnome ancestry feat,
   change its tradition from primal to your chosen tradition.'
 mechanicsScope: builder
+rules:
+- id: 3f2a70d1-7f40-5464-b697-80b6f4d877e4
+  key: choice-gnome-wellspring-tradition
+  choice:
+    name: $.gnome.wellspring-tradition
+    label: Tradition
+    type: spellcasting/tradition
+    cases:
+    - {value: arcane}
+    - {value: divine}
+    - {value: occult}
+- id: 02f33242-2a2b-5764-aadb-ef17839a8b88
+  key: choice-gnome-wellspring-cantrip
+  choice:
+    name: $.gnome.wellspring-cantrip
+    label: Cantrip
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - {spell.category: cantrip}
+        - {hasChoiceTradition: $.gnome.wellspring-tradition}
+      type: spellcasting/spell-id
+- id: d88e425e-5bd7-50ea-a07b-36e686d8b8ec
+  key: grant-wellspring-cantrip
+  effect: spellcasting/grant-innate-spell
+  inputs:
+    sourceId: a80746e6-295b-5a25-954c-25ee59fbd755
+    sourceName: Wellspring Gnome
+    grantId: 6e168ff3-e966-537f-973c-3e0313351a8c
+    spellId: {choice: $.gnome.wellspring-cantrip}
+    tradition: {choice: $.gnome.wellspring-tradition}
+    attribute: cha
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: atWill}
+- id: 26dc0912-452c-5762-a982-b436b4e4a457
+  key: modify-innate-sources
+  effect: spellcasting/modify-innate-sources
+  inputs:
+    grantedBy:
+      kind: intersection
+      values:
+      - kind: single
+        value:
+          kind: hasType
+          type: feat
+      - kind: single
+        value:
+          kind: hasTrait
+          trait: systemTrait-ancestry
+      - kind: single
+        value:
+          kind: hasTrait
+          trait: ancestryTrait-gnome
+    tradition: primal
+    setTradition: {choice: $.gnome.wellspring-tradition}
