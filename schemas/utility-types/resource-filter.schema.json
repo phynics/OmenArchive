@@ -306,6 +306,20 @@
       "minProperties": 1,
       "maxProperties": 1,
       "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "knownBySource": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "knownBySource"
+      ],
+      "additionalProperties": false,
+      "description": "The resource is in this spellcasting source's known spells. Combine with level to select one rank."
     }
   ]
 }

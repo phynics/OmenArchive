@@ -276,7 +276,8 @@ options:
 `maxLevel`, `name`, `trait`, `id` (a record reference), `excludesIds`, `pathPrefix` (a collection
 such as `@class.witch.patrons`), `sharesAncestryTrait`, `sharesClassTrait`, `characterHasFeat`,
 `hasChoiceAncestryTrait` (the ancestry trait a choice picked, `$.feat.adopted-ancestry.ancestry`),
-`everything`, or a metadata key written with its dot (`spell.category: cantrip`). `not` takes one
+`knownBySource` (a spell the spellcasting source with that ID knows; with `level` it picks one
+rank's spell from a repertoire), `everything`, or a metadata key written with its dot (`spell.category: cantrip`). `not` takes one
 `trait` leaf (`{not: {trait: uncommon}}`); no other negation exists yet. A filter that fits in 56
 characters stays on one line; a longer one puts each item of its `all`/`any` list on its own line.
 
@@ -286,6 +287,11 @@ class's own order or muse adds its pick, and Order Explorer and Multifarious Mus
 prerequisite asks `hasChoice: {name: $.druid.order-memberships, contains: '@class.druid.orders.leaf'}`
 and the pick (`$.druid.order`) stays the character's own. Lists are derived at every level and
 never saved.
+
+A value an engine provides (`$.level`, `$.attributes.<ability>`, `$.<slot>.name` and `.path`,
+`$.ancestry.feat-ancestries`) is read, never defined: no choice may take its name. A name is either
+a choice or a list rules add to, never both. A rule's prerequisite can't be negated, and a
+prerequisite on a sense, proficiency, trait or feature the same record's rules grant is reported.
 
 ### Spellcasting tables
 
@@ -323,6 +329,10 @@ spellcasting:
   as rules.
 - A slot row can't have fewer slots than the row before it; the block's rules come first among the
   record's own `rules:`, and a `rules:` entry can't reuse an ID the block's expansion makes.
+- A bard's Signature Spells has one choice per rank, `$.bard.signature-spells.rank-N`
+  ("Rank N signature spell"), whose options are the spells of that rank in the bard's repertoire
+  (`knownBySource` with `level`), each followed by `spellcasting/mark-signature-spell` for the
+  pick. A choice unlocks at the level the bard first has slots of that rank.
 
 ### Archive format 4
 

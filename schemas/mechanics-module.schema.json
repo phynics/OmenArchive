@@ -39,9 +39,23 @@
       "properties": {
         "reference": { "$ref": "#/$defs/effectReference" },
         "inputDescriptors": { "type": "array", "items": { "$ref": "#/$defs/inputDescriptor" } },
-        "inputRecipes": { "type": "array" }
+        "inputRecipes": { "type": "array" },
+        "writes": { "type": "array", "items": { "$ref": "#/$defs/write" }, "description": "The character state the effect writes, in terms of its inputs." }
       },
       "required": ["reference", "inputDescriptors", "inputRecipes"],
+      "additionalProperties": false
+    },
+    "write": {
+      "type": "object",
+      "properties": {
+        "domain": { "enum": ["path", "sense", "skill", "saving-throw", "feature", "feat", "trait", "signature-spell"] },
+        "nameInput": { "type": "string", "description": "The input whose literal value names the state." },
+        "nameMember": { "type": "string", "description": "For an object-valued input, the member holding the name." },
+        "namePrefix": { "type": "string" },
+        "fixedName": { "type": "string", "description": "A name that doesn't depend on an input." },
+        "rankInput": { "type": "string", "description": "The input whose literal value is the proficiency rank written." }
+      },
+      "required": ["domain"],
       "additionalProperties": false
     },
     "effectReference": {
