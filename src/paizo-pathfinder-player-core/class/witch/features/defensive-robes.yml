@@ -9,5 +9,13 @@ traits:
 description: The flow of magic and your defensive training combine to help you get
   out of the way before an attack. Your proficiency rank in unarmored defense increases
   to expert.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: gU7epgcPSm0TD1UK
+rules:
+- id: d577cb93-a49d-5972-9c49-53b545b608db
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false

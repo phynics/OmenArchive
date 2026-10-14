@@ -20,8 +20,18 @@ description: 'You prefer the direct approach: strong-arming or intimidation. You
   in medium armor, and when you gain light armor mastery, you also gain master proficiency
   in medium armor.'
 mechanicsScope: mixed
-unsupportedReason: 'ActiveEffectLike at position 2 has an unsupported conditional
-  builder payload. Resource: omen://class/rogue/features/ruffian?source=paizo-pathfinder-player-core.
-  Foundry keys: [ItemAlteration, ActiveEffectLike, ActiveEffectLike, ActiveEffectLike,
-  CriticalSpecialization].'
 foundryID: 3KPZ7svIO6kmmEKH
+rules:
+- id: 6bd37d1e-d423-5be8-a7cb-a9a973e02f44
+  key: generated-6
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: medium, kind: type}
+    proficiencyRank: 2
+    selfScaling: true
+- id: a38b6658-94ae-57de-bf84-0dad9effc3d0
+  key: active-effect-like-1
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2

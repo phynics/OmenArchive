@@ -10,5 +10,20 @@ traits:
 - swashbuckler
 description: You've learned how to dodge while wearing light or no armor. Your proficiency
   ranks for light armor and unarmored defense increase to expert.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: pZYkb12t5DSwtts7
+rules:
+- id: 2da266c0-ae7e-59b1-ac39-c7517174ce9a
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: light, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 4ef40f06-a510-51ee-bf23-68cc7fa70bbc
+  key: generated-2
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false

@@ -10,5 +10,27 @@ traits:
 - ranger
 description: You've learned to defend yourself better against attacks. Your proficiency
   ranks for light armor, medium armor, and unarmored defense increase to expert.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: FCEp9jjxxgRJDJV3
+rules:
+- id: 6af43231-ddb1-5ad5-ad59-ca7a985be141
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: light, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 3ac0fb84-7b20-5c7a-a45d-c70b754bd8e8
+  key: generated-2
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: medium, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 3e93c1af-0f95-522b-84c6-24a90bc23c9b
+  key: generated-3
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false

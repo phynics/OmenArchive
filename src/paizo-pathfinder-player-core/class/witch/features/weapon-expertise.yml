@@ -1,6 +1,6 @@
 ---
 name: weapon expertise
-level: 5
+level: 11
 traits:
 - champion
 - druid
@@ -38,8 +38,20 @@ description: 'Champion, Exemplar, Investigator, Magus You''ve dedicated yourself
   Witch, Wizard Through sheer experience, you''ve improved your technique with your
   weapons. Your proficiency ranks for simple weapons and unarmed attacks increase
   to expert.'
-mechanicsScope: mixed
-unsupportedReason: 'ActiveEffectLike at position 0 has an unsupported conditional
-  builder payload. Resource: omen://class/witch/features/weapon-expertise?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, CriticalSpecialization, ItemAlteration, ItemAlteration].'
+mechanicsScope: builder
 foundryID: 9XLUh9iMepZesdmc
+rules:
+- id: 932bf88a-a373-5875-8da4-9d0e3a08e7d9
+  key: generated-5
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 2b87d3d5-e0f3-59bf-8fd8-c856ccec97eb
+  key: generated-6
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    proficiencyRank: 4
+    selfScaling: false

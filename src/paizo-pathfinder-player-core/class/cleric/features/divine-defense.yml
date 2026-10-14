@@ -5,5 +5,13 @@ traits:
 - cleric
 description: Your training and your deity protect you from harm. Your proficiency
   rank in unarmored defense increases to expert.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: 0mJTp4LdEHBLInoe
+rules:
+- id: 26eee6a1-1ee6-5ea4-8c1c-b16acdedf0c3
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false

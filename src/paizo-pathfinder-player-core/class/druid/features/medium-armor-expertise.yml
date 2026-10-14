@@ -1,6 +1,6 @@
 ---
 name: medium armor expertise
-level: 11
+level: 13
 traits:
 - alchemist
 - barbarian
@@ -10,5 +10,27 @@ traits:
 - ranger
 description: You've learned to defend yourself better against attacks. Your proficiency
   ranks for light armor, medium armor, and unarmored defense increase to expert.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: FCEp9jjxxgRJDJV3
+rules:
+- id: 681001d4-23c9-511b-b19b-858ae8e0fc5a
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: light, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 61c44291-9867-5ed5-8c6d-591fbe84a8e4
+  key: generated-2
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: medium, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: efeb8287-6fa8-5121-878f-2f5f5cfc4c4f
+  key: generated-3
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false

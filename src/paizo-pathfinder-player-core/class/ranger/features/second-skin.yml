@@ -7,5 +7,27 @@ description: Your armor has become akin to a second skin for you. Your proficien
   ranks for light armor, medium armor, and unarmored defense increase to master. When
   wearing light or medium armor, you can rest normally, rather than receiving poor
   rest that leaves you fatigued.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: phwQ2MrDZ13D2HxC
+rules:
+- id: 525407d7-a714-56ba-9acb-5494d7eda03c
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: light, kind: type}
+    proficiencyRank: 6
+    selfScaling: false
+- id: 76d3da0f-7045-53a2-810e-8aef5d987026
+  key: generated-2
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: medium, kind: type}
+    proficiencyRank: 6
+    selfScaling: false
+- id: 381ab5ca-769e-5533-ab8a-fd39c1b935a5
+  key: generated-3
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 6
+    selfScaling: false

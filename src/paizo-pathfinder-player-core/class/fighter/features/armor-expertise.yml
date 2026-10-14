@@ -1,6 +1,6 @@
 ---
 name: armor expertise
-level: 7
+level: 11
 traits:
 - champion
 - fighter
@@ -9,8 +9,33 @@ description: You have spent so much time in armor that you know how to make the 
   well as for unarmored defense, increase to expert. You gain the armor specialization
   effects of medium and heavy armor.
 mechanicsScope: mixed
-unsupportedReason: 'Resistance at position 0 has an unsupported conditional predicate.
-  Resource: omen://class/fighter/features/armor-expertise?source=paizo-pathfinder-player-core.
-  Foundry keys: [Resistance, Resistance, Resistance, Resistance, Resistance, Resistance,
-  Resistance, Resistance].'
 foundryID: x5jaCJxsmD5sx3KB
+rules:
+- id: f8f401a2-3b0b-5c70-8700-7165f5ae1b04
+  key: generated-9
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: heavy, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 68dea19f-ff1d-5b8a-8350-8481e9eac3ea
+  key: generated-10
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: light, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: c284a8a9-7069-5445-ad1c-202437cbdf9c
+  key: generated-11
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: medium, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 09da488f-cdc7-5675-bea0-400f987886f9
+  key: generated-12
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
