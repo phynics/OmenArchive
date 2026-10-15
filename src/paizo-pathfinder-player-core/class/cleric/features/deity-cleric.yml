@@ -44,19 +44,60 @@ description: 'As a cleric, you are a mortal servitor of a deity you revere above
 mechanicsScope: builder
 foundryID: DutW12WMFPHBoLTH
 rules:
-- id: 1491e9ee-f6eb-5b91-b646-405a577e9a5c
-  key: choice-deity
+- id: 9106dba8-75b7-5c49-864d-f8b4c2c1b061
+  key: choice-deity-name
   choice:
-    name: $.deity
-    label: Deity
-    legacySelections:
-    - inputName: featureId
-      lookupName: deity
-      ruleID: 4d35a879-0974-5345-a98b-97f4626507a1
-      sourceID: 633c6777-bb3b-5017-b936-e5046a4d0757
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
-    records: {filter: {pathPrefix: '@class.cleric.deities'}, type: core/feature-id}
-- id: 4d35a879-0974-5345-a98b-97f4626507a1
-  effect: core/add-feature-by-id
+    name: $.deity.name
+    label: Deity's name
+    freeText: core/string
+- id: 744fbcc9-e4a3-5f81-b577-79d37eb9b9d0
+  key: choice-deity-sanctification
+  choice:
+    name: $.deity.sanctification
+    label: Sanctification
+    type: core/string
+    cases:
+    - key: holy
+      value: holy
+      effects:
+      - key: add-holy-trait
+        effect: core/add-character-trait
+        inputs:
+          trait: holy
+    - key: unholy
+      value: unholy
+      effects:
+      - key: add-unholy-trait
+        effect: core/add-character-trait
+        inputs:
+          trait: unholy
+    - {value: none}
+- id: 47cdf58a-1f9c-53d9-85ce-e60def8adff6
+  key: choice-deity-divine-skill
+  choice:
+    name: $.deity.divine-skill
+    label: Divine skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: {kind: acrobatics}}
+    - {key: arcana, value: {kind: arcana}}
+    - {key: athletics, value: {kind: athletics}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: deception, value: {kind: deception}}
+    - {key: diplomacy, value: {kind: diplomacy}}
+    - {key: intimidation, value: {kind: intimidation}}
+    - {key: medicine, value: {kind: medicine}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: performance, value: {kind: performance}}
+    - {key: religion, value: {kind: religion}}
+    - {key: society, value: {kind: society}}
+    - {key: stealth, value: {kind: stealth}}
+    - {key: survival, value: {kind: survival}}
+    - {key: thievery, value: {kind: thievery}}
+- id: 959c216d-6c98-5489-acf6-9f390b22985e
+  key: deity-divine-skill-4
+  effect: core/add-skill-increase
   inputs:
-    featureId: {choice: $.deity}
+    skill: {choice: $.deity.divine-skill}
+    proficiencyCap: 2
