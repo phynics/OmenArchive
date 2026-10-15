@@ -19,7 +19,11 @@ Foundry JSON → conversion and review → OmenArchive YAML → rebuild → Omen
 ```text
 schemas/
   character-*.schema.json       # Resource schemas
+  collection.schema.json        # Collection files
   utility-types/*.schema.json   # Shared schema fragments
+
+collections/
+  {collection}.yml            # a named, ordered group of books
 
 src/
   {publication}/
@@ -61,6 +65,35 @@ mechanicsModules:
 The manifest owns the publication qualifier. Its `id` must equal the canonical encoding of
 `publisher` and `title`, joined with a hyphen. The title may contain punctuation because the
 canonical OmenPath encoding removes punctuation consistently.
+
+### Collections
+
+A collection is a named, ordered group of books, such as the four books of the game's mechanical
+core. It is a file at the top level of the archive, outside `src/`, named for its `id`:
+
+```yaml
+# collections/pathfinder-core.yml
+id: pathfinder-core
+title: Pathfinder Core
+description: The four books of the game's mechanical core.
+publications:
+- paizo-pathfinder-player-core
+- paizo-pathfinder-player-core-2
+- paizo-pathfinder-gm-core
+- paizo-pathfinder-monster-core
+```
+
+- `publications` lists publication ids in display order. A collection has no other meaning: it
+  does not merge or override records, and a book does not name the collections it belongs to. A
+  book can be in several collections.
+- A member is either a publication the archive holds (a `src/{publication}` directory) or one
+  that `schemas/archive-format.json` lists under `declaredPublications`, with its `id`, `title`
+  and `publisher` (and `published` when known). Declaring a book lets a collection name it before
+  its records are imported. The validator reports a declared member that isn't imported as a
+  note, not an error, and a member that is neither imported nor declared as an error, so a typo is
+  caught. Once a book is imported, remove its entry from `declaredPublications`.
+- The schema is `schemas/collection.schema.json`. A collection's file name must be its `id`, and
+  a publication can be listed once per collection.
 
 ## General resource rules
 
