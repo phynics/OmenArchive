@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: scoundrel racket
-  unsupported: Unsupported prerequisite for source Xdmz09kzLjIxWz9C "scoundrel racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.scoundrel'}
 - text: Debilitating Strike
   hasResourceWithName: debilitating strike
 description: "You learn new debilitations that grant you tactical advantages against

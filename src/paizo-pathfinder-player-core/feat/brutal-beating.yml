@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: ruffian racket
-  unsupported: Unsupported prerequisite for source DYUlMxh7TDgEh9xB "ruffian racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.ruffian'}
 description: Your critical hits shakes your foes' confidence. Whenever your Strike
   is a critical hit and deals damage, the target is Frightened 1.
 mechanicsScope: encounter

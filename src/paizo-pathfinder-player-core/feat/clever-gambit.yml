@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: mastermind racket
-  unsupported: Unsupported prerequisite for source D1o7GUraoFFzjaub "mastermind racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.mastermind'}
 action:
   count: reaction
   trigger: Your Strike critically hits and deals damage to a creature you've identified

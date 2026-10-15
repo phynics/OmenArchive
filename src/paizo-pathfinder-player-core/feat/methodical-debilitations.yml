@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: mastermind racket
-  unsupported: Unsupported prerequisite for source CkK7WwaWnrLXK9sW "mastermind racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.mastermind'}
 - text: Debilitating Strike
   hasResourceWithName: debilitating strike
 description: "You strategically craft your debilitations to lessen or negate an enemy's

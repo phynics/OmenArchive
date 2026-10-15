@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: thief racket
-  unsupported: Unsupported prerequisite for source 4f65nrWVzTG8Njj8 "thief racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.thief'}
 description: Interweaving attacks, you unbalance your foes. Whenever your Strike is
   a critical hit and deals damage, the target is Off-Guard against your attacks until
   the end of your next turn.

@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: scoundrel racket
-  unsupported: Unsupported prerequisite for source hLYoIjH8gPEVXyWG "scoundrel racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.scoundrel'}
 description: Your Feints are far more distracting than normal. While a creature is
   Off-Guard by your Feint, it also takes a –2 circumstance penalty to Perception checks
   and Reflex saves.

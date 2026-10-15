@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: thief racket
-  unsupported: Unsupported prerequisite for source wvJBIzgS298ZRp6w "thief racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.thief'}
 - text: Debilitating Strike
   hasResourceWithName: debilitating strike
 description: "You attack with great precision. Add the following debilitations to

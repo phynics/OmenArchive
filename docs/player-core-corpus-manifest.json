@@ -5229,11 +5229,11 @@
     {
       "canonicalPath" : "omen:\/\/class\/ranger\/features\/hunters-edge?source=paizo-pathfinder-player-core",
       "conversionDiagnostics" : [
-        "ChoiceSet at position 0 has no supported typed options. Resource: omen:\/\/class\/ranger\/features\/hunters-edge?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "mzkkj9LEWjJPBhaq",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Hunter's Edge",
       "prerequisiteShapes" : [
 
@@ -5248,8 +5248,7 @@
         "GrantItem"
       ],
       "sourceHash" : "59f35e8c1bacd44ae2fb982bab293d7a51e840fc1e59866390a0ef8c6e5a618e",
-      "sourcePath" : "packs\/classfeatures\/hunters-edge.json",
-      "unsupportedReason" : "ChoiceSet at position 0 has no supported typed options. Resource: omen:\/\/class\/ranger\/features\/hunters-edge?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet, GrantItem]."
+      "sourcePath" : "packs\/classfeatures\/hunters-edge.json"
     },
     {
       "canonicalPath" : "omen:\/\/class\/wizard\/features\/improved-familiar-attunement?source=paizo-pathfinder-player-core",
@@ -6482,11 +6481,11 @@
     {
       "canonicalPath" : "omen:\/\/class\/rogue\/features\/rogues-racket?source=paizo-pathfinder-player-core",
       "conversionDiagnostics" : [
-        "ChoiceSet at position 0 has no supported typed options. Resource: omen:\/\/class\/rogue\/features\/rogues-racket?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "uGuCGQvUmioFV2Bd",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Rogue's Racket",
       "prerequisiteShapes" : [
 
@@ -6501,8 +6500,7 @@
         "GrantItem"
       ],
       "sourceHash" : "e8ff535a1e53c22a7ebbe466b334d033ddaa1ad5c5d7cfc9f2edd29d78b91b9f",
-      "sourcePath" : "packs\/classfeatures\/rogues-racket.json",
-      "unsupportedReason" : "ChoiceSet at position 0 has no supported typed options. Resource: omen:\/\/class\/rogue\/features\/rogues-racket?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet, GrantItem]."
+      "sourcePath" : "packs\/classfeatures\/rogues-racket.json"
     },
     {
       "canonicalPath" : "omen:\/\/class\/rogue\/features\/ruffian?source=paizo-pathfinder-player-core",
@@ -21877,7 +21875,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Brutal Beating",
       "prerequisiteShapes" : [
-        "unsupported"
+        "choice"
       ],
       "prerequisiteText" : [
         "ruffian racket"
@@ -21927,7 +21925,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Clever Gambit",
       "prerequisiteShapes" : [
-        "unsupported"
+        "choice"
       ],
       "prerequisiteText" : [
         "mastermind racket"
@@ -22095,7 +22093,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Distracting Feint",
       "prerequisiteShapes" : [
-        "unsupported"
+        "choice"
       ],
       "prerequisiteText" : [
         "scoundrel racket"
@@ -22481,7 +22479,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Methodical Debilitations",
       "prerequisiteShapes" : [
-        "unsupported",
+        "choice",
         "resource-reference"
       ],
       "prerequisiteText" : [
@@ -22773,7 +22771,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Precise Debilitations",
       "prerequisiteShapes" : [
-        "unsupported",
+        "choice",
         "resource-reference"
       ],
       "prerequisiteText" : [
@@ -23282,7 +23280,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Tactical Debilitations",
       "prerequisiteShapes" : [
-        "unsupported",
+        "choice",
         "resource-reference"
       ],
       "prerequisiteText" : [
@@ -23456,7 +23454,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Unbalancing Blow",
       "prerequisiteShapes" : [
-        "unsupported"
+        "choice"
       ],
       "prerequisiteText" : [
         "thief racket"
@@ -23504,7 +23502,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Vicious Debilitations",
       "prerequisiteShapes" : [
-        "unsupported",
+        "choice",
         "resource-reference"
       ],
       "prerequisiteText" : [
@@ -46693,15 +46691,15 @@
       "skill" : 106
     },
     "byOutcome" : {
-      "converted" : 574,
+      "converted" : 576,
       "encounter-only" : 1291,
-      "unsupported" : 73
+      "unsupported" : 71
     },
     "byPrerequisiteShape" : {
       "all-of" : 1,
       "any-of" : 29,
       "attribute-modifier" : 15,
-      "choice" : 50,
+      "choice" : 58,
       "feat-reference" : 4,
       "resource-reference" : 204,
       "saving-throw-proficiency" : 5,
@@ -46709,7 +46707,7 @@
       "skill-proficiency" : 139,
       "spellcasting" : 1,
       "trait" : 2,
-      "unsupported" : 50
+      "unsupported" : 42
     },
     "byResourceType" : {
       "action" : 107,

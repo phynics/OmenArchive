@@ -7,8 +7,9 @@ traits:
 - rogue
 prerequisites:
 - text: ruffian racket
-  unsupported: Unsupported prerequisite for source zt5CWn3UrPViwaB3 "ruffian racket".
-  diagnostic: true
+  hasChoice:
+    name: $.rogue.racket
+    equals: {type: core/feature-id, value: '@class.rogue.rackets.ruffian'}
 - text: Debilitating Strike
   hasResourceWithName: debilitating strike
 description: "The debilitations you dish out seriously impair your foes. Add the following
