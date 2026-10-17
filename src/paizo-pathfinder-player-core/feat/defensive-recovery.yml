@@ -7,15 +7,6 @@ traits:
 - cleric
 - concentrate
 - spellshape
-prerequisites:
-- text: harmful font or healing font
-  anyOf:
-  - hasChoice:
-      name: $.cleric.divine-font
-      equals: {type: spellcasting/spell-id, value: '@spell.harm'}
-  - hasChoice:
-      name: $.cleric.divine-font
-      equals: {type: spellcasting/spell-id, value: '@spell.heal'}
 action:
   count: one_action
 description: Your faith provides temporary protection in addition to healing. If the

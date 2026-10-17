@@ -6,7 +6,8 @@ traits:
 - oracle
 - psychic
 - sorcerer
-description: Experience allows you to cast some spells more flexibly. For each spell
+- summoner
+description: You've learned to cast some of your spells more flexibly. For each spell
   rank you have access to, choose one spell of that rank to be a signature spell.
   You don't need to learn heightened versions of signature spells separately; instead,
   you can heighten these spells freely. If you've learned a signature spell at a higher
@@ -28,13 +29,13 @@ rules:
       filter:
         all:
         - {level: 1}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: f915693d-f194-52bb-baf7-8cc21a423cbe
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-1}
 - id: eda0355e-3eb2-577b-9d8a-a02f93ee30dd
   level: 3
@@ -45,13 +46,13 @@ rules:
       filter:
         all:
         - {level: 2}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: d50db117-c107-5897-8c2c-862f003ce4b7
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-2}
 - id: c7d539c9-c22d-5ae5-93f7-5fbca99c5a97
   level: 5
@@ -62,13 +63,13 @@ rules:
       filter:
         all:
         - {level: 3}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: ad2086f6-9a9c-53d7-a51a-5dba738529e5
   effect: spellcasting/mark-signature-spell
   level: 5
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-3}
 - id: 11c92810-44dd-583e-b40a-679fa47c1d69
   level: 7
@@ -79,13 +80,13 @@ rules:
       filter:
         all:
         - {level: 4}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: 5fd35426-6e31-56b2-83ac-a65c62daba88
   effect: spellcasting/mark-signature-spell
   level: 7
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-4}
 - id: 0496b411-68cf-5dc8-bfb3-54f5a7a4199b
   level: 9
@@ -96,13 +97,13 @@ rules:
       filter:
         all:
         - {level: 5}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: 2ca1e825-743a-50f7-8e37-1b8176ec7d17
   effect: spellcasting/mark-signature-spell
   level: 9
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-5}
 - id: 3a375e1f-c486-5594-b503-5d17be8cbc99
   level: 11
@@ -113,13 +114,13 @@ rules:
       filter:
         all:
         - {level: 6}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: c631f85b-ed6d-55ee-8bed-f735c9ddec99
   effect: spellcasting/mark-signature-spell
   level: 11
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-6}
 - id: fd0226cb-2b8d-5942-981d-af935c2345c5
   level: 13
@@ -130,13 +131,13 @@ rules:
       filter:
         all:
         - {level: 7}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: 606062c0-7108-5da0-9ae4-d6a889d8c0f6
   effect: spellcasting/mark-signature-spell
   level: 13
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-7}
 - id: c642d6a1-c599-51f5-b3eb-f8bca2636a71
   level: 15
@@ -147,13 +148,13 @@ rules:
       filter:
         all:
         - {level: 8}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: d87af1a0-af0b-5109-91fe-94f733bb68cb
   effect: spellcasting/mark-signature-spell
   level: 15
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-8}
 - id: 43b3ff70-94c2-56c2-b697-3fd7f59f2c63
   level: 17
@@ -164,13 +165,13 @@ rules:
       filter:
         all:
         - {level: 9}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: 526a62a5-5bed-5819-ba6b-103bb895c939
   effect: spellcasting/mark-signature-spell
   level: 17
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-9}
 - id: 15cc671f-6263-50f6-a71b-3ae973dfdd9e
   level: 19
@@ -181,11 +182,11 @@ rules:
       filter:
         all:
         - {level: 10}
-        - {knownBySource: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f}
+        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
 - id: 3eb018c5-41c3-5df7-8b74-b94db75a6b12
   effect: spellcasting/mark-signature-spell
   level: 19
   inputs:
-    sourceId: 9f1c3e87-44cc-5036-90ab-8e78a0ba047f
+    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
     spellId: {choice: $.bard.signature-spells.rank-10}

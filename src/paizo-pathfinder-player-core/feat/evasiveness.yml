@@ -1,13 +1,15 @@
 ---
-name: evasiveness (rogue)
+name: evasiveness
 level: 12
 rarity: common
 type: archetype
 traits:
 - archetype
 prerequisites:
-- text: Rogue Dedication
-  hasResourceWithName: rogue dedication
+- text: Rogue Dedication or Swashbuckler Dedication
+  unsupported: Unsupported prerequisite for source VD446AflrQ3kO1al "Rogue Dedication
+    or Swashbuckler Dedication".
+  diagnostic: true
 - text: expert in Reflex saves
   hasSavingThrowProficiency: {savingThrow: reflex, proficiency: expert}
 description: Your proficiency rank for Reflex saves increases to master.

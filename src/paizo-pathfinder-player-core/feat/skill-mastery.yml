@@ -1,13 +1,15 @@
 ---
-name: skill mastery (rogue)
+name: skill mastery
 level: 8
 rarity: common
 type: archetype
 traits:
 - archetype
 prerequisites:
-- text: Rogue Dedication
-  hasResourceWithName: rogue dedication
+- text: Rogue Dedication or Investigator Dedication
+  unsupported: Unsupported prerequisite for source c9rhGmKft1BVT4JO "Rogue Dedication
+    or Investigator Dedication".
+  diagnostic: true
 - text: trained in at least one skill and expert in at least one skill
   allOf:
   - anyOf:
@@ -48,12 +50,17 @@ repeatPolicy:
   duplicateSelectionRules: []
   instanceLevelGates: []
   maxCount: 5
-description: Increase your proficiency rank in one of your skills from expert to master
-  and in another of your skills from trained to expert. You gain a skill feat associated
-  with one of the skills you chose; you must meet all its prerequisites.
+description: 'Rogue: Increase your proficiency rank in one of your skills from expert
+  to master and in another of your skills from trained to expert. You gain a skill
+  feat associated with one of the skills you chose; you must meet all its prerequisites.
+
+  Investigator: Increase your proficiency rank in one of your skills from expert to
+  master and in another of your skills from trained to expert. You gain a skill feat
+  associated with one of the skills you chose.'
 specialText: You can select this feat up to five times.
 mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet at position 4 has no supported typed options. Resource:
-  omen://feat/skill-mastery-rogue?source=paizo-pathfinder-player-core. Foundry keys:
-  [ChoiceSet, ChoiceSet, ActiveEffectLike, ActiveEffectLike, ChoiceSet, GrantItem].'
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/skill-mastery?source=paizo-pathfinder-player-core.
+  Foundry keys: [ChoiceSet, ChoiceSet, ActiveEffectLike, ActiveEffectLike, ChoiceSet,
+  GrantItem, ItemAlteration].'
 foundryID: c9rhGmKft1BVT4JO
