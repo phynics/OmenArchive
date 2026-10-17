@@ -380,24 +380,30 @@ spellcasting:
   (`knownBySource` with `level`), each followed by `spellcasting/mark-signature-spell` for the
   pick. A choice unlocks at the level the bard first has slots of that rank.
 
-### Archive format 4
+### Archive format
 
-Format 4 is a spelling of the same data: reading a file gives the same rules and records as
-format 3 did. What changed:
+`schemas/archive-format.json` declares `epoch: 2` and `version: 1`. A reader accepts exactly that
+pair and fails with a clear message on a manifest without an epoch or with another one. Older
+archives (formats 1 to 4 before epochs) are not read, and there is no tool that upgrades them.
+
+**Migrating a reader or a copy of the data.** Take a new copy from this repository. In it:
 
 - Rules use `effect` and `inputs`, with bare literals (above); filters are flat; choice rules are
-  compact.
+  compact. Choice cases carry values and effects directly; the old `legacySelections` key is gone,
+  and a file that still has it is rejected.
 - Records are named by `@` reference, not UUID; no rule holds a record UUID. Rule IDs and the other
-  identities (`selectionId`, `grantId`, `sourceId`, `legacySelections`) stay UUIDs, since they are
-  identities, not references.
+  identities (`selectionId`, `grantId`, `sourceId`) stay UUIDs, since they are identities, not
+  references.
 - No `source` block, no empty `action`, `foundryID` for `sourceID`, and a feat's `prerequisites`,
   `typedPrerequisites` and `prerequisiteDiagnostics` are one list (see "Feats").
 - Keys follow a fixed order per family (a feat: `name`, `level`, `rarity`, `type`, `traits`,
   `prerequisites`, `action`, `description`, …, `foundryID`, `attribution`, `rules` last) in every
   writer, and scalars are written the way the writers always wrote them.
+- The grouped (format 1 and 2) layouts are not read. Each family's files sit in the layout the
+  manifest declares.
 
-`omen-archive migrate-format-4 <archive-root> [--write]` rewrites a format 3 archive, and writes
-nothing unless every file reads back as the same document.
+OmenDB bundles built from this archive carry the same epoch in their manifest; a bundle without
+it is rejected.
 
 ### Resource references
 
@@ -855,9 +861,8 @@ implementation of the archive format. It resolves the Kit from
 `OMEN_ARCHIVE_KIT_ROOT` when set (use this for local Kit development),
 otherwise from a checkout at `../OmenArchiveKit`. The schemas stay in this
 repository; `schemas/archive-format.json`'s `version` field is the
-compatibility seam between the two — a Kit release declares the format
-versions it understands and fails with a distinct diagnostic outside that
-range.
+compatibility seam between the two — a Kit release declares the epoch and
+version it understands and fails with a distinct diagnostic otherwise.
 
 The manifest also declares resource identity beside each layout: a family sets
 its OmenPath host and whether its layout owner is part of identity, and each

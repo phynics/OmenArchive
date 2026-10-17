@@ -112,13 +112,6 @@
             "$ref": "#/$defs/choiceName"
           }
         },
-        "legacySelections": {
-          "description": "Original slot coordinates used only for one-time character package migration.",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/legacySelection"
-          }
-        },
         "type": {
           "$ref": "#/$defs/typeName"
         },
@@ -216,38 +209,8 @@
       ],
       "additionalProperties": false
     },
-    "legacySelection": {
-      "type": "object",
-      "properties": {
-        "ruleID": {
-          "type": "string",
-          "format": "uuid"
-        },
-        "inputName": {
-          "type": "string",
-          "minLength": 1
-        },
-        "lookupName": {
-          "$ref": "#/$defs/legacyLookupName"
-        },
-        "valueTypeID": {
-          "$ref": "#/$defs/valueTypeID"
-        },
-        "sourceID": {
-          "type": "string",
-          "format": "uuid"
-        }
-      },
-      "required": [
-        "ruleID",
-        "inputName",
-        "lookupName",
-        "valueTypeID"
-      ],
-      "additionalProperties": false
-    },
     "choiceName": {
-      "description": "A choice read path: a namespaced content path, the shared deity group, or a supported engine read.",
+      "description": "A choice read path: a namespaced content path, or a supported engine read.",
       "type": "string",
       "anyOf": [
         {
@@ -255,36 +218,13 @@
         },
         {
           "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
-        },
-        {
-          "const": "$.deity"
         }
       ]
-    },
-    "legacyChoiceName": {
-      "description": "A deprecated hasChoice name retained for unrevised resources; new choice reads use a namespaced choiceName.",
-      "anyOf": [
-        {
-          "$ref": "#/$defs/choiceName"
-        },
-        {
-          "type": "string",
-          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
-        }
-      ]
-    },
-    "legacyLookupName": {
-      "description": "A legacy lookup/selection name. These names are retained only while archive resources are rewritten to named-choice paths.",
-      "type": "string",
-      "minLength": 1
     },
     "choiceDefinitionName": {
-      "description": "A namespaced content choice definition, except the shared `$.deity` group; engine roots are reserved for reads.",
+      "description": "A namespaced content choice definition; engine roots are reserved for reads.",
       "type": "string",
       "anyOf": [
-        {
-          "const": "$.deity"
-        },
         {
           "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
         }
@@ -617,7 +557,7 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "$ref": "#/$defs/legacyChoiceName"
+                  "$ref": "#/$defs/choiceName"
                 },
                 "isSet": {
                   "const": true
@@ -1434,7 +1374,7 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "$ref": "#/$defs/legacyChoiceName"
+                  "$ref": "#/$defs/choiceName"
                 },
                 "isSet": {
                   "const": true
