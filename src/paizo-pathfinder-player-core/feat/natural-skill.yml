@@ -15,11 +15,6 @@ rules:
   choice:
     name: $.feat.natural-skill.skill-one
     label: Skill One
-    legacySelections:
-    - inputName: skill
-      lookupName: skill-one
-      ruleID: febd46e5-784e-5a47-a8a9-d2d6a5bb3bb3
-      valueTypeID: org.openomen.pf2e.core/value/skill
     type: core/skill
     cases:
     - {key: acrobatics, value: {kind: acrobatics}}
@@ -48,11 +43,6 @@ rules:
   choice:
     name: $.feat.natural-skill.skill-two
     label: Skill Two
-    legacySelections:
-    - inputName: skill
-      lookupName: skill-two
-      ruleID: 6a0a295e-bf25-5ab1-a05c-a3a652465b44
-      valueTypeID: org.openomen.pf2e.core/value/skill
     type: core/skill
     cases:
     - {key: acrobatics, value: {kind: acrobatics}}

@@ -27,12 +27,6 @@ rules:
   choice:
     name: $.wizard.thesis
     label: Thesis
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: ebb03c21-9135-567e-975b-33089f58a46f
-      sourceID: 97e3793e-9674-5d2f-85b8-8b46399735ec
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
     records: {filter: {pathPrefix: '@class.wizard.theses'}, type: core/feature-id}
 - id: ebb03c21-9135-567e-975b-33089f58a46f
   effect: core/add-feature-by-id

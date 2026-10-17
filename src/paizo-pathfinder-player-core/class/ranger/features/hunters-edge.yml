@@ -14,11 +14,6 @@ rules:
   choice:
     name: $.ranger.hunters-edge
     label: Hunter's Edge
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: 543a3a21-e881-56b7-aea0-3f8b4fa85123
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
     records: {filter: {pathPrefix: '@class.ranger.hunters-edge'}, type: core/feature-id}
 - id: 543a3a21-e881-56b7-aea0-3f8b4fa85123
   key: choice-set-1

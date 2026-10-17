@@ -52,12 +52,6 @@ rules:
   choice:
     name: $.druid.order
     label: Order
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: 963736db-6723-552c-809e-ef49960032a5
-      sourceID: 145c3edc-1fa7-5188-b9f9-3be5b1dde220
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
     records: {filter: {pathPrefix: '@class.druid.orders'}, type: core/feature-id}
 - id: b7b77c1a-78d8-5368-8a54-e221cf391ff9
   key: choice-set-1

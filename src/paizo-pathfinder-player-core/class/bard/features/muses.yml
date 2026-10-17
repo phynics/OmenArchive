@@ -18,12 +18,6 @@ rules:
   choice:
     name: $.bard.muse
     label: Muse
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: 93924d16-c77c-58eb-a1e2-1e2128dc5250
-      sourceID: 44973dfc-6dbb-55c9-8ded-0f9304ede08a
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
     records: {filter: {pathPrefix: '@class.bard.muses'}, type: core/feature-id}
 - id: dbd18ef8-6157-50a5-8fe2-7f40e4fffd07
   key: choice-set-1

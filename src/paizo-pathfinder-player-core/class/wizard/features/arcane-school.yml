@@ -20,12 +20,6 @@ rules:
   choice:
     name: $.wizard.school
     label: School
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: f6121f43-96cb-5cc7-8894-6b9c17786cb3
-      sourceID: 0c05d786-194d-50be-9057-b8948be3da15
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
     records: {filter: {pathPrefix: '@class.wizard.schools'}, type: core/feature-id}
 - id: f6121f43-96cb-5cc7-8894-6b9c17786cb3
   effect: core/add-feature-by-id

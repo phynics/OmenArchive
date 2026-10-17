@@ -15,12 +15,6 @@ rules:
   choice:
     name: $.cleric.doctrine
     label: Doctrine
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: 09a664d3-ec2b-5197-9a50-bfbcc2de82b7
-      sourceID: 29512908-28d9-5b91-b37f-2b830c8f1c10
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
     records: {filter: {pathPrefix: '@class.cleric.doctrines'}, type: core/feature-id}
 - id: 09a664d3-ec2b-5197-9a50-bfbcc2de82b7
   effect: core/add-feature-by-id

@@ -24,11 +24,6 @@ rules:
   choice:
     name: $.feat.additional-lore.lores
     label: Lore name
-    legacySelections:
-    - inputName: loreName
-      lookupName: additional-lore-name
-      ruleID: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
-      valueTypeID: org.openomen.pf2e.core/value/string
     freeText: core/string
 - id: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
   effect: core/add-lore-skill-increase

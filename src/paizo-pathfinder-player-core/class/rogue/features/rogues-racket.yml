@@ -24,11 +24,6 @@ rules:
   choice:
     name: $.rogue.racket
     label: Racket
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: b92194f8-3521-5aa2-a166-74ae8857ced1
-      valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
     records: {filter: {pathPrefix: '@class.rogue.rackets'}, type: core/feature-id}
 - id: b92194f8-3521-5aa2-a166-74ae8857ced1
   key: choice-set-1

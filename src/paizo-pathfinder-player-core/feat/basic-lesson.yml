@@ -16,11 +16,6 @@ rules:
   choice:
     name: $.feat.basic-lesson.lesson
     label: Lesson
-    legacySelections:
-    - inputName: featureId
-      lookupName: lesson
-      ruleID: c8692669-590c-5977-8264-c04efbfcfbf4
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
     records: {filter: {pathPrefix: '@class.witch.basic-lessons'}, type: core/feature-id}
 - id: 22653d6d-4696-5dff-8635-bf6afe37e270
   key: choice-set-1

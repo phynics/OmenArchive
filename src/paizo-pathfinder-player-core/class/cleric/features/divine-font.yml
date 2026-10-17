@@ -35,12 +35,6 @@ rules:
   choice:
     name: $.cleric.divine-font
     label: Divine Font
-    legacySelections:
-    - inputName: spellId
-      lookupName: divine-font
-      ruleID: 280473ab-f966-5827-9a9f-8e04ecf34058
-      sourceID: 3d5ec27d-a622-500f-8c0a-027bdcfb0694
-      valueTypeID: org.openomen.pf2e.spellcasting/value/spell-id
     type: spellcasting/spell-id
     cases:
     - {value: '@spell.heal'}

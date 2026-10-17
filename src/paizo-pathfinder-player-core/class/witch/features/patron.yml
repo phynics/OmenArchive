@@ -27,12 +27,6 @@ rules:
   choice:
     name: $.witch.patron
     label: Patron
-    legacySelections:
-    - inputName: featureId
-      lookupName: class-option
-      ruleID: 78c4ed8d-20fa-5769-88a3-7c6dfb66cda5
-      sourceID: b2cd901f-8bec-5eaa-929d-ba033a592334
-      valueTypeID: org.openomen.pf2e.core/value/feature-id
     records: {filter: {pathPrefix: '@class.witch.patrons'}, type: core/feature-id}
 - id: 78c4ed8d-20fa-5769-88a3-7c6dfb66cda5
   effect: core/add-feature-by-id
