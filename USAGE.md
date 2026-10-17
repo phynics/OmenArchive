@@ -508,10 +508,9 @@ that the source-independent spell model does not represent. Keep it distinct fro
 the description is rules text for readers, while diagnostics explain conversion limits.
 
 The Player Core corpus manifest (`docs/player-core-corpus-manifest.json`) accounts for the
-spells with every other Player Core record: all 488 source spells are archived. Each generated
+spells with every other Player Core record: all 489 source spells are archived. Each generated
 payload retains Foundry's stable `foundryID` for source-aware rebuilds. Spells are refreshed with
-the rest of the corpus. `docs/player-core-spell-import-manifest.json` is an older, spell-only
-accounting that is no longer regenerated.
+the rest of the corpus.
 
 ### Ancestries
 
