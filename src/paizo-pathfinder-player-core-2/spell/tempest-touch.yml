@@ -1,0 +1,60 @@
+---
+name: tempest touch
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- cold
+- focus
+- manipulate
+- oracle
+- water
+traditions: []
+time: '1'
+action:
+  count: one_action
+range: touch
+target: 1 creature
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 1d4
+    kinds:
+    - damage
+    type: bludgeoning
+  fl86wl21hskrqrcy:
+    formula: 1d4
+    kinds:
+    - damage
+    type: cold
+heightening:
+  damage:
+    0: 1d4
+    fl86wl21hskrqrcy: 1d4
+  interval: 1
+  type: interval
+description: 'Your touch calls forth a churning mass of icy water that clings to your
+  target, dealing 1d4 bludgeoning damage and 1d4 cold damage. The target must attempt
+  a Fortitude save.
+
+
+  Critical Success The target is unaffected.
+
+
+  Success The target takes half damage and a –5-foot circumstance penalty to its Speeds
+  until the end of your next turn.
+
+
+  Failure The target takes full damage and a –10-foot circumstance penalty to its
+  Speeds until the end of your next turn.
+
+
+  Critical Failure As failure, but the target takes double damage.
+
+
+  Heightened (+1) The bludgeoning and cold damage each increase by 1d4.'
+mechanicsScope: encounter
+foundryID: EzB9i7R6aBRAtJCh

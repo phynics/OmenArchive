@@ -1,0 +1,44 @@
+---
+name: guise of the smirking devil
+level: 9
+rarity: common
+type: equipment
+traits:
+- auditory
+- invested
+- magical
+- void
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 700 gp
+  quantity: 1
+  size: med
+  usage: wornmask
+details:
+  equipment: {}
+description: 'This ice-blue half-mask is adorned with a wicked silver grin that covers
+  the wearer''s mouth, leaving the rest of the face uncovered. You gain a +2 item
+  bonus to Intimidation checks.
+
+  Activate—Hideous Wail 2 (concentrate, manipulate)
+
+  Effect The mask emits a soul-chilling scream that deals 6d10[void]|options:area-damage
+  damage to each living creature in a emanation (fortitude|dc:25|basic|options:area-effect
+  save).'
+mechanicsScope: builder
+foundryID: tr2eOlJMmBKBZtI9
+rules:
+- id: cce06e18-ca73-5606-bf8d-aaeb92493555
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 88fec053-ad7c-5124-bf08-3292c3b028c0
+    target:
+      description:
+      - skill:
+          '_0':
+            intimidation: {}
+    description: 'Guise of the Smirking Devil: +2 item bonus to Intimidation checks.'
+    numeric: {literal: {amount: 2, applicability: {kind: always}, type: item}}

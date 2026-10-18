@@ -1,0 +1,35 @@
+---
+name: weapon expertise (swashbuckler)
+level: 5
+traits:
+- swashbuckler
+description: 'You''ve dedicated yourself to learning the intricacies of your weapons.
+  Your proficiency ranks for simple weapons, martial weapons, and unarmed attacks
+  increase to expert.
+
+  You gain access to the critical specialization effects of all weapons for which
+  you have expert proficiency.'
+mechanicsScope: mixed
+foundryID: F5BHEav90oOJ2LwN
+rules:
+- id: 81c39970-e5ac-56d1-a76f-8abb9fe31b27
+  key: generated-2
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 54b0e934-3d36-5581-9451-1bedd42319a2
+  key: generated-3
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 175dc83e-7d52-5c0f-8276-40d6d407a0de
+  key: generated-4
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    proficiencyRank: 4
+    selfScaling: false

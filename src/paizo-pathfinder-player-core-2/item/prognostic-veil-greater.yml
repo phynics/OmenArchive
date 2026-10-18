@@ -1,0 +1,46 @@
+---
+name: prognostic veil (greater)
+level: 18
+rarity: common
+type: equipment
+traits:
+- focused
+- invested
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 21000 gp
+  quantity: 1
+  size: med
+  usage: wornmask
+details:
+  equipment: {}
+description: 'This gauzy purple veil is embroidered with symbols of divinatory significance.
+  As your curse worsens, the veil ripples in an ever-increasing unseen wind. You gain
+  a +3 item bonus to Religion checks.
+
+  Activate—Remember the Future f (concentrate)
+
+  Effect You gain 1 Focus Point, which you can spend only to cast a revelation spell.
+  If you don''t spend this Focus Point by the end of this turn, it''s lost.
+
+  Activate—Twist the Skeins of Fate r (concentrate)
+
+  Effect The ally gains a status bonus to the saving throw or attack roll equal to
+  the value of your cursebound condition.'
+mechanicsScope: builder
+foundryID: 2FlazfdJE2XPRba8
+rules:
+- id: a3952e86-e214-5543-a2a8-b5c77b2f5ba6
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 2953cf1c-2fa6-5be1-be64-04b7e3676d57
+    target:
+      description:
+      - skill:
+          '_0':
+            religion: {}
+    description: 'Prognostic Veil (Greater): +3 item bonus to Religion checks.'
+    numeric: {literal: {amount: 3, applicability: {kind: always}, type: item}}

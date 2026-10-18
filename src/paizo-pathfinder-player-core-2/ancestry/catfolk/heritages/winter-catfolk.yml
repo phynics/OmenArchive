@@ -1,0 +1,16 @@
+---
+name: winter catfolk
+ancestry: catfolk
+rarity: common
+description: You have a thick coat of fur that protects you from the cold. You gain
+  cold resistance equal to half your level (minimum 1). You treat environmental cold
+  effects as if they were one step less extreme (incredible cold becomes extreme,
+  extreme cold becomes severe, and so on).
+mechanicsScope: builder
+rules:
+- id: c54e0f7e-d254-54a2-8fef-00b0d45bbe83
+  effect: core/add-resistance@2
+  inputs:
+    type: cold
+    value: \[[(max 1 (divide $.level 2))]]
+    exceptions: ''

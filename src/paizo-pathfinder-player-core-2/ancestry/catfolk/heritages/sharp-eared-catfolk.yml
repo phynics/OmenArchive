@@ -1,0 +1,24 @@
+---
+name: sharp-eared catfolk
+ancestry: catfolk
+rarity: common
+description: You were born with big, expressive ears that move with your moods and
+  perk up at any unexpected sound. You gain a +2 circumstance bonus to locate undetected
+  creatures that you could hear within 30 feet with a Seek action. As long as you're
+  aware of a creature via sound, once per round, your ears can help you Point Out
+  the creature to all allies as a free action.
+mechanicsScope: builder
+rules:
+- id: 369321b8-c71e-5659-992d-0a20e3d7e790
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 7ebe7d74-bddf-5c0c-ae79-19c91a67e1c4
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    description: 'Sharp-Eared Catfolk: +2 circumstance bonus to Perception checks
+      (Seek).'
+    numeric: {literal: {amount: 2, applicability: {description: Seek, kind: situational},
+        type: circumstance}}

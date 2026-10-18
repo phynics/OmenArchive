@@ -1,0 +1,22 @@
+---
+name: predator's pounce
+level: 12
+rarity: common
+type: class
+traits:
+- barbarian
+- flourish
+- rage
+prerequisites:
+- text: animal instinct
+  hasChoice:
+    name: $.barbarian.instinct
+    equals: {type: core/feature-id, value: '@class.barbarian.instincts.animal-instinct'}
+action:
+  count: one_action
+  requirements: You are unarmored or wearing light armor
+description: You close the distance to your prey in a blur, pouncing on the creature
+  before it can react. You Stride up to your Speed and make a Strike at the end of
+  your movement.
+mechanicsScope: mixed
+foundryID: aFUxNGur3Hma8DKy

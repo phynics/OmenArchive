@@ -1,0 +1,17 @@
+---
+name: smokeworker hobgoblin
+ancestry: hobgoblin
+rarity: common
+description: Your family have been alchemists, engineers, and scientists for generations,
+  laboring on projects that bring smoke and fire to the field of battle. You gain
+  fire resistance equal to half your level (minimum 1). You automatically succeed
+  at the DC 5 flat check to target a Concealed creature if that creature is concealed
+  only by smoke.
+mechanicsScope: builder
+rules:
+- id: d6dd3e3d-0e6f-58ec-9ff5-d9e9ab488f46
+  effect: core/add-resistance@2
+  inputs:
+    type: fire
+    value: \[[(max 1 (divide $.level 2))]]
+    exceptions: ''

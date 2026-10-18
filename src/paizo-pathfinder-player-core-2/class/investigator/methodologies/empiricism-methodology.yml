@@ -1,0 +1,42 @@
+---
+name: empiricism methodology
+level: 1
+traits:
+- investigator
+description: 'Everything comes down to data. Calculating statistics, running numbers,
+  and using inductive reasoning allows you to determine the most likely outcome of
+  any scenario, and anything out of place draws your keen attention.
+
+  You are trained in one Intelligence-based skill of your choice. You gain the That''s
+  Odd investigator feat, and you gain the Expeditious Inspection free action.'
+mechanicsScope: builder
+foundryID: g3mNzNphtVxyR9Xr
+rules:
+- id: 8ec70449-bfc4-5ce7-a6b2-bbe5ed9548f4
+  key: grant-item-1
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 18fb6e84-469c-5b47-b372-e3c59343eb4d
+    featId: '@feat.thats-odd'
+- id: 9a93f5b5-28c0-56a4-9727-263cc350eb8b
+  key: grant-item-2
+  effect: core/add-action
+  inputs:
+    actionId: '@action.expeditious-inspection'
+- id: 7ed57f14-0381-56ff-a7d7-8f22efc6c06f
+  key: choice-investigator-empiricism-skill
+  choice:
+    name: $.investigator.empiricism.skill
+    label: Intelligence skill
+    type: core/skill
+    cases:
+    - {key: arcana, value: {kind: arcana}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: society, value: {kind: society}}
+- id: 0efbbc0e-800a-5c11-8cfb-4a07d4abd54f
+  key: active-effect-like-1
+  effect: core/add-skill-increase
+  inputs:
+    skill: {choice: $.investigator.empiricism.skill}
+    proficiencyCap: 2

@@ -1,0 +1,66 @@
+---
+name: ring of maniacal devices
+level: 11
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 1175 gp
+  quantity: 1
+  size: med
+  usage: worn
+details:
+  equipment: {}
+description: 'This magic ring seems like simple tarnished brass, but it enhances your
+  curiosity about traps and devices of all kinds.
+
+  You can use an Interact action to pull a Thieves'' Toolkit from the ring. This toolkit
+  appears in your hand and any part of it folds back into the ring if they would leave
+  your possession.
+
+  They grant you a +2 item bonus to Thievery checks to Disable a Device and to Pick
+  a Lock, and the ring''s insights grant you the same bonus to Crafting checks to
+  Craft and Repair snares and traps.
+
+  Activate—Fireball Trap 10 minutes (manipulate)
+
+  Effect You create the effects of a Rune Trap trap ritual containing Fireball. You
+  can have only one trapped rune from a ring of maniacal devices active at a time,
+  even if you have multiple rings, and the rune disappears if you lose your investiture
+  in the ring.'
+mechanicsScope: builder
+foundryID: nLvP7U50hLqz26Uy
+rules:
+- id: ef8c4a3d-98ba-5e37-b376-b173bff7d9f3
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: ce243784-9d70-5bb8-abc8-8973e2cab5ea
+    target:
+      description:
+      - skill:
+          '_0':
+            thievery: {}
+    description: 'Ring of Maniacal Devices: +2 item bonus to Thievery checks (Disable
+      a Device or Pick a Lock).'
+    numeric: {literal: {amount: 2, applicability: {description: Disable a Device or
+            Pick a Lock, kind: situational}, type: item}}
+- id: 8673f998-caa2-5aef-8a55-3283101d32d5
+  key: flat-modifier-2
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 8f9832e4-c52a-5fc2-96d7-dcec3cab18c1
+    target:
+      description:
+      - skill:
+          '_0':
+            crafting: {}
+    description: 'Ring of Maniacal Devices: +2 item bonus to Crafting checks (Craft
+      or Repair).'
+    numeric: {literal: {amount: 2, applicability: {description: Craft or Repair, kind: situational},
+        type: item}}

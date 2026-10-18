@@ -1,0 +1,22 @@
+---
+name: inner strength
+level: 6
+rarity: common
+type: class
+traits:
+- barbarian
+- concentrate
+- rage
+prerequisites:
+- text: spirit instinct
+  hasChoice:
+    name: $.barbarian.instinct
+    equals: {type: core/feature-id, value: '@class.barbarian.instincts.spirit-instinct'}
+action:
+  count: one_action
+description: 'Your strength is part of your rage. As long as your anger remains, you
+  can gather your strength and rage to overcome any sort of enfeeblement.
+
+  You reduce your Enfeebled condition''s value by 1.'
+mechanicsScope: mixed
+foundryID: OY1Ewg0dbCp52Hl5

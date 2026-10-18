@@ -1,0 +1,25 @@
+---
+name: scars of steel
+level: 4
+rarity: common
+type: class
+traits:
+- barbarian
+- rage
+prerequisites:
+- text: Fury Instinct
+  hasChoice:
+    name: $.barbarian.instinct
+    equals: {type: core/feature-id, value: '@class.barbarian.instincts.fury-instinct'}
+action:
+  count: reaction
+  frequency: once per day
+  trigger: An opponent critically hits you with an attack that deals physical damage.
+description: When you are struck with the mightiest of blows, you can flex your muscles
+  to turn aside some of the damage. You gain resistance to the triggering attack equal
+  to your Constitution modifier plus half your level.
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/scars-of-steel?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [RollOption, Resistance].'
+foundryID: j8ycCi7ghTtpRjEW

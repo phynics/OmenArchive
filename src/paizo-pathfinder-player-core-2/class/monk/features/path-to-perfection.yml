@@ -1,0 +1,43 @@
+---
+name: path to perfection
+level: 7
+traits:
+- monk
+description: You have progressed along your own path to enlightenment. Choose your
+  Fortitude, Reflex, or Will saving throw. Your proficiency rank for the chosen saving
+  throw increases to master. When you roll a success on the chosen saving throw, you
+  get a critical success instead.
+mechanicsScope: builder
+foundryID: 1K6m6AVmn3r8XZ9d
+rules:
+- id: d0db8f3f-23c1-5f06-832a-a4c2da7f6000
+  key: choice-monk-path-to-perfection-save
+  choice:
+    name: $.monk.path-to-perfection.save
+    label: Saving Throw
+    type: core/saving-throw
+    cases:
+    - key: fortitude
+      value: fortitude
+      effects:
+      - key: raise-fortitude-to-master
+        effect: core/add-saving-throw
+        inputs:
+          savingThrow: fortitude
+          proficiencyRank: 6
+    - key: reflex
+      value: reflex
+      effects:
+      - key: raise-reflex-to-master
+        effect: core/add-saving-throw
+        inputs:
+          savingThrow: reflex
+          proficiencyRank: 6
+    - key: will
+      value: will
+      effects:
+      - key: raise-will-to-master
+        effect: core/add-saving-throw
+        inputs:
+          savingThrow: will
+          proficiencyRank: 6

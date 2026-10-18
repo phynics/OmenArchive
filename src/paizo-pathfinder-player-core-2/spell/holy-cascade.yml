@@ -1,0 +1,46 @@
+---
+name: holy cascade
+rank: 4
+rarity: common
+category: spell
+traits:
+- concentrate
+- holy
+- manipulate
+- water
+traditions:
+- divine
+time: '2'
+action:
+  count: two_actions
+  requirements: one vial of holy water
+range: 500 feet
+area: '20'
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 3d6
+    kinds:
+    - damage
+    type: bludgeoning
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
+requirements: one vial of holy water
+description: 'You call upon sacred energy to amplify a vial of Holy Water, tossing
+  it an incredible distance. It explodes in an enormous burst that deals 3d6 bludgeoning
+  damage to creatures in the area from the cascade of water. The water deals an additional
+  ((spell rank*2)-2)d6[spirit] damage to creatures with the unholy trait in the area.
+
+
+  Heightened (+1) The bludgeoning damage increases by 1d6, and the additional spirit
+  damage increases by 2d6.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: DZ9bzXYqMjAK9TzC

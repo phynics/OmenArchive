@@ -1,0 +1,32 @@
+---
+name: longsnout rat
+ancestry: ratfolk
+rarity: common
+description: 'Your long snout gives you a keener sense of smell than most ratfolk.
+  You gain imprecise scent with a range of 30 feet. This means you can use your sense
+  of smell to determine a creature''s location. The GM will usually double the range
+  if you''re downwind from the creature or halve the range if you''re upwind.
+
+  In addition, you gain a +2 circumstance bonus to Perception checks to Seek a creature
+  or object within the range of your scent.'
+mechanicsScope: builder
+rules:
+- id: ca0c071b-5ce0-5ac8-b40d-1f55736983a0
+  key: sense-1
+  effect: core/add-sense
+  inputs:
+    selector: scent
+    acuity: imprecise
+    range: 30
+- id: c3038c3c-d5da-5880-8684-262ffdafca03
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 0747233a-f85a-5950-9e62-9a6fb64b0281
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    description: 'Longsnout Rat: +2 circumstance bonus to Perception checks (Seek).'
+    numeric: {literal: {amount: 2, applicability: {description: Seek, kind: situational},
+        type: circumstance}}

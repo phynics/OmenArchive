@@ -1,0 +1,48 @@
+---
+name: hellfire plume
+rank: 5
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- fire
+- focus
+- manipulate
+- sorcerer
+- spirit
+traditions: []
+time: '2'
+action:
+  count: two_actions
+range: 60 feet; 10-foot radius, 60-foot tall cylinder
+area: '10'
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 4d6
+    kinds:
+    - damage
+    type: fire
+  1:
+    formula: 4d6
+    kinds:
+    - damage
+    type: spirit
+heightening:
+  damage:
+    0: 1d6
+    1: 1d6
+  interval: 1
+  type: interval
+description: 'You call forth a plume of hellfire that erupts from below, dealing 4d6
+  fire damage and 4d6 spirit damage.
+
+
+  Heightened (+1) The fire and spirit damage each increase by 1d6.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: 9LHr9SuDLTicdbXs

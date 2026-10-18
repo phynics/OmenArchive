@@ -1,0 +1,25 @@
+---
+name: witch kholo
+ancestry: kholo
+rarity: common
+description: You're a shaggy, dark-furred kholo capable of making some truly uncanny
+  sounds. You can cast the Figment cantrip as an occult innate spell at will. A cantrip
+  is heightened to a spell rank equal to half your level rounded up. In addition,
+  you gain a +1 circumstance bonus to checks to Create a Diversion and Impersonate
+  when using only your voice.
+mechanicsScope: mixed
+rules:
+- id: 615b4649-3e72-5ba5-924d-43d7c52e7f96
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 41eb55d8-0483-5cac-a675-07a9d42cc6fa
+    target:
+      description:
+      - skill:
+          '_0':
+            deception: {}
+    description: 'Witch Kholo: +1 circumstance bonus to Deception checks (Impersonate
+      or Create A Diversion).'
+    numeric: {literal: {amount: 1, applicability: {description: Impersonate or Create
+            A Diversion, kind: situational}, type: circumstance}}

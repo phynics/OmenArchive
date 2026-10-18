@@ -1,0 +1,52 @@
+---
+name: soul siphon
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- focus
+- manipulate
+- oracle
+- void
+traditions: []
+time: '1'
+action:
+  count: one_action
+range: 30 feet
+target: 1 living creature
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 1d4
+    kinds:
+    - damage
+    type: void
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
+description: 'You siphon off a portion of the target''s soul to bolster your own vitality.
+  The target must attempt a Fortitude save or take 1d4 void damage. You gain temporary
+  Hit Points equal to the total amount of HP the target loses, including the HP lost
+  from becoming Drained.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage.
+
+
+  Failure The creature takes full damage and becomes Drained 1.
+
+
+  Critical Failure The creature takes double damage and becomes Drained 2.
+
+
+  Heightened (+1) Increase the damage by 1d4.'
+mechanicsScope: encounter
+foundryID: D6T17BdazhNy3KPm

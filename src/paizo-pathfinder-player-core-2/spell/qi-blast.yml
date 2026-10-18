@@ -1,0 +1,61 @@
+---
+name: qi blast
+rank: 3
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- focus
+- force
+- manipulate
+- monk
+traditions: []
+time: 1 to 3
+action:
+  count: one_to_three_actions
+area: '15'
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 2d6
+    kinds:
+    - damage
+    type: force
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
+description: 'You unleash your qi as a powerful blast that deals 2d6 force damage.
+  If you use 2 actions to cast qi blast, increase the size of the cone to 30 feet
+  and the damage to 3d6. If you use 3 actions to cast qi blast, increase the cone
+  to 60 feet and the damage to 4d6. Each creature in the area must attempt a Fortitude
+  save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage.
+
+
+  Failure The creature takes full damage and is pushed 5 feet.
+
+
+  Critical Failure The creature takes double damage and is pushed 10 feet.
+
+
+  Heightened (+1) The damage increases by 1d6, or by 2d6 if you use 2 or 3 actions.'
+mechanicsScope: mixed
+unsupportedReason: non-empty Foundry overlays are not supported yet; non-empty Foundry
+  rule elements are not supported yet
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- 'Foundry rule elements not imported: RollOption, DamageAlteration, ItemAlteration,
+  ItemAlteration'
+- 'Foundry spell rule elements are preserved for external review at omen://spell/qi-blast?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [RollOption, DamageAlteration, ItemAlteration, ItemAlteration].'
+foundryID: oo7YcRC2gcez81PV

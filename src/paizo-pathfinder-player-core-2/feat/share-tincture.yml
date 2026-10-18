@@ -1,0 +1,20 @@
+---
+name: share tincture
+level: 12
+rarity: common
+type: class
+traits:
+- investigator
+prerequisites:
+- text: alchemical sciences methodology
+  hasChoice:
+    name: $.investigator.methodology
+    equals: {type: core/feature-id, value: '@class.investigator.methodologies.alchemical-sciences-methodology'}
+action:
+  count: one_action
+description: You use Quick Tincture, and the item you create remains potent until
+  the start of your next turn. Then you can Interact to pass the item to another creature.
+  If you pass it by throwing it, your ranged attack automatically succeeds. You must
+  have a versatile vial to use Quick Tincture, as normal.
+mechanicsScope: mixed
+foundryID: HCjPsXAYBqDhQSVW

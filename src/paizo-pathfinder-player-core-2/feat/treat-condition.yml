@@ -1,0 +1,32 @@
+---
+name: treat condition
+level: 4
+rarity: common
+type: skill
+traits:
+- archetype
+- healing
+- manipulate
+- skill
+prerequisites:
+- text: Medic Dedication
+  unsupported: Unsupported prerequisite for source rfnEcjxIFqwlJwJT "Medic Dedication".
+  diagnostic: true
+action:
+  count: two_actions
+  criticalFailure: Increase the condition value by 1.
+  criticalSuccess: Reduce the condition value by 2.
+  requirements: You are holding healer's tools, or you are wearing them and have a
+    hand free.
+  success: Reduce the condition value by 1.
+description: You treat an adjacent creature in an attempt to reduce the Clumsy, Enfeebled,
+  or Sickened condition. If a creature has multiple conditions from this list, choose
+  one. Attempt a counteract check against the condition using your medicine|options:counteract
+  modifier as your counteract modifier and the condition's source to determine the
+  DC. You can't treat a condition that came from an artifact or effect above 20th
+  level unless you have Legendary Medic; even if you do, the counteract DC increases
+  by 10. Treating a Condition that is continually applied under certain circumstances
+  (for instance, the enfeebled condition a holy character gains from carrying a weapon
+  with the unholy rune) has no effect as long as the circumstances continue.
+mechanicsScope: mixed
+foundryID: rfnEcjxIFqwlJwJT

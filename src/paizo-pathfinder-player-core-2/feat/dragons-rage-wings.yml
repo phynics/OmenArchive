@@ -1,0 +1,26 @@
+---
+name: dragon's rage wings
+level: 12
+rarity: common
+type: class
+traits:
+- barbarian
+- morph
+- rage
+prerequisites:
+- text: dragon instinct
+  hasChoice:
+    name: $.barbarian.instinct
+    equals: {type: core/feature-id, value: '@class.barbarian.instincts.dragon-instinct'}
+action:
+  count: one_action
+description: You sprout dragon wings from your back of the same color as your chosen
+  dragon. While you are raging, you gain a fly Speed equal to your land Speed. If
+  you are flying when your rage ends, you start to fall, but your transformation doesn't
+  revert until the last moment, so you take no damage from the fall and land standing
+  up. This action gains the trait of your dragon instinct's tradition.
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/dragons-rage-wings?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [ItemAlteration].'
+foundryID: bqZkAFS6eq9TKXMO

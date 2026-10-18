@@ -1,0 +1,56 @@
+---
+name: glamorous buckler
+level: 2
+rarity: common
+type: shield
+traits:
+- magical
+physical:
+  bulk: L
+  hardness: 3
+  hitPoints: 6
+  price: 35 gp
+  quantity: 1
+  size: med
+details:
+  shield:
+    acBonus: 1
+    hardness: 3
+    hitPoints: 6
+    speedPenalty: 0
+description: 'A glamorous buckler (Hardness 3, HP 6, BT 3) is lavishly decorated with
+  gilding and inset gemstones that glitter in the light. While you have it raised,
+  the glamorous buckler grants you a +1 item bonus to Deception checks to Feint.
+
+  Activate—Dazzling Feint f (concentrate)
+
+  Effect As you Feint, the glamorous buckler sparkles mightily. On a successful Feint,
+  the target is Dazzled for 1 round.
+
+  Hardness
+
+  HP
+
+  BT
+
+  3
+
+  6
+
+  3'
+mechanicsScope: builder
+foundryID: IxuDS3POB6EH8TVN
+rules:
+- id: 815276b6-bbcd-5f77-945b-19431886d490
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: b3484d31-c885-5bcd-bd58-fe64e2f02aad
+    target:
+      description:
+      - skill:
+          '_0':
+            deception: {}
+    description: 'Glamorous Buckler: +1 item bonus to Deception checks (Feint).'
+    numeric: {literal: {amount: 1, applicability: {description: Feint, kind: situational},
+        type: item}}

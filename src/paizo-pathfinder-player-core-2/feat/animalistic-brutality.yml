@@ -1,0 +1,24 @@
+---
+name: animalistic brutality
+level: 8
+rarity: common
+type: class
+traits:
+- barbarian
+- concentrate
+- morph
+- primal
+- rage
+prerequisites:
+- text: Animal Instinct
+  hasChoice:
+    name: $.barbarian.instinct
+    equals: {type: core/feature-id, value: '@class.barbarian.instincts.animal-instinct'}
+action:
+  count: one_action
+description: 'You deepen the connection into your animal instincts. Your unarmed attack
+  from bestial rage gains one of the following traits until you stop raging: backswing,
+  forceful, parry, razing, or sweep. You can''t use this ability again until the next
+  time you Rage. You can choose a different trait each time you use Animalistic Brutality.'
+mechanicsScope: mixed
+foundryID: L1fnOLZQX68kTmHF

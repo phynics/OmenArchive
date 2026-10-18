@@ -1,0 +1,18 @@
+---
+name: elementheart kobold
+ancestry: kobold
+rarity: common
+description: 'When you hatched, you imprinted on a creature strongly associated with
+  one of the Elemental Planes, such as an elemental or genie. Choose air, earth, fire,
+  metal, water, or wood for your elemental benefactor. You gain resistance equal to
+  half your level (minimum 1) to the damage type associated with your elemental benefactor:
+  cold for air, electricity for earth, fire for fire, sonic for metal, acid for water,
+  or poison for wood.'
+mechanicsScope: builder
+rules:
+- id: c8d0a15e-09db-5310-b25e-de153ad54d09
+  effect: core/add-resistance@2
+  inputs:
+    type: '{item|flags.system.rulesSelections.element}'
+    value: \[[(max 1 (divide $.level 2))]]
+    exceptions: ''

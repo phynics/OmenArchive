@@ -1,0 +1,22 @@
+---
+name: alchemical discoveries
+level: 4
+rarity: common
+type: class
+traits:
+- investigator
+prerequisites:
+- text: alchemical sciences methodology
+  hasChoice:
+    name: $.investigator.methodology
+    equals: {type: core/feature-id, value: '@class.investigator.methodologies.alchemical-sciences-methodology'}
+description: You've devoted extra time in the lab to improve your knowledge of alchemy.
+  You learn the formulas for two alchemical items each time you level up instead of
+  one; these must still be elixirs or tools. The number of versatile vials you can
+  create each day increases by one if you're an expert in Crafting, two if you're
+  a master, or three if you're legendary.
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/alchemical-discoveries?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [ActiveEffectLike].'
+foundryID: 0FNLI8APwj9NsBDa

@@ -1,0 +1,17 @@
+---
+name: graceful mastery
+level: 13
+traits:
+- monk
+description: You move with perpetual grace, turning aside blows. Your proficiency
+  rank for unarmored defense increases to master.
+mechanicsScope: builder
+foundryID: 95LI24ZSx0d4qfKX
+rules:
+- id: fea6f500-a681-59b8-b6dc-8a21815461d4
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 6
+    selfScaling: false

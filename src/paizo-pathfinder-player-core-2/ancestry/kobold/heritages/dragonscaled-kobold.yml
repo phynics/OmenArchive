@@ -1,0 +1,27 @@
+---
+name: dragonscaled kobold
+ancestry: kobold
+rarity: common
+description: Thanks to your warren's association with a dragon, your scales are sturdier
+  than other kobolds'. You gain 10 Hit Points from your ancestry instead of 6. You
+  gain a +1 circumstance bonus to saves against dragon breath, effects with the sleep
+  trait, and effects that would make you Paralyzed.
+mechanicsScope: builder
+rules:
+- id: 85bfd754-2527-59d7-9db9-9ac2ccc039ea
+  key: active-effect-like-1
+  effect: core/set-ancestry-hit-points
+  inputs:
+    hitPoints: 10
+- id: 8dab2e3f-004b-56b3-9c7c-b619da76b145
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 61951b0e-fab0-522a-8de6-5bb197a184c3
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    description: 'Dragonscaled Kobold: +1 circumstance bonus to saving throws (Breath
+      Weapon).'
+    numeric: {literal: {amount: 1, applicability: {description: Breath Weapon, kind: situational},
+        type: circumstance}}

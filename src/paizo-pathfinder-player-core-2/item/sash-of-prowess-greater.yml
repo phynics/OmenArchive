@@ -1,0 +1,51 @@
+---
+name: sash of prowess (greater)
+level: 17
+rarity: common
+type: equipment
+traits:
+- focused
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 13000 gp
+  quantity: 1
+  size: med
+  usage: worn
+details:
+  equipment: {}
+description: 'This humble sash can be worn around the waist or across the chest. A
+  sash of prowess often bears a coloration or a pattern that represents the monastery
+  in which you trained but can also sport religious symbology, such as the open hand
+  of Irori. You gain a +3 item bonus to Acrobatics and Athletics skill checks.
+
+  Activate—Effortless Mastery f (concentrate)
+
+  Effect You critically succeed instead.
+
+  Activate—Reserves of Inner Strength f (concentrate)
+
+  Effect You gain 1 Focus Point, which you can spend only to cast a qi spell. If you
+  don''t spend this Focus Point by the end of this turn, it''s lost.'
+mechanicsScope: builder
+foundryID: uj09q6x8wPAZcMs9
+rules:
+- id: dcb2c22f-17a7-528e-8216-c29bd26b4185
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 38062d6c-3f83-5f1b-a09f-04af352a260b
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+      - skill:
+          '_0':
+            acrobatics: {}
+    description: 'Sash of Prowess (Greater): +3 item bonus to Athletics checks and
+      Acrobatics checks.'
+    numeric: {literal: {amount: 3, applicability: {kind: always}, type: item}}

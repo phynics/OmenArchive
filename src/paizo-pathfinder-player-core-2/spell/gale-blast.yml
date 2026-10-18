@@ -1,0 +1,55 @@
+---
+name: gale blast
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- air
+- cantrip
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
+action:
+  count: two_actions
+area: '5'
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 1d6
+    kinds:
+    - damage
+    type: bludgeoning
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
+description: 'Wind flows from your outstretched hands and whirls around you in a 5-foot
+  emanation. Each creature in the area takes 1d6 bludgeoning damage, with a Fortitude
+  save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage.
+
+
+  Failure The creature takes full damage and is pushed 5 feet away from you.
+
+
+  Critical Failure The creature takes double damage and is pushed 10 feet away from
+  you.
+
+
+  Heightened (+1) The damage increases by 1d6.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: dDiOnjcsBFbAvP6t

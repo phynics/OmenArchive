@@ -1,0 +1,45 @@
+---
+name: mariner's splint
+level: 5
+rarity: uncommon
+type: armor
+traits:
+- invested
+- magical
+physical:
+  bulk: '3'
+  hardness: 0
+  hitPoints: 0
+  price: 180 gp
+  quantity: 1
+  size: med
+details:
+  armor:
+    acBonus: 5
+    category: heavy
+    checkPenalty: -3
+    dexterityCap: 1
+    speedPenalty: -10
+    strength: 3
+description: This suit of +1 splint mail is worn by veteran sailors aboard warships
+  who want as much protection as possible but still need to remain mobile enough to
+  climb up rigging or swim should the need arise. The plates are arranged for maximum
+  flexibility and the undercoat of padded armor is often no more than a cotton shrift.
+  The armor grants you a +1 item bonus to Athletics checks to Climb or Swim and increases
+  the distance you move when you successfully Climb or Swim by 5 feet.
+mechanicsScope: builder
+foundryID: YfRwH0wIEmuNDL7I
+rules:
+- id: 3a9390b2-9522-5935-a251-9b8e5a5a41fc
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: b1fa18bc-149c-5170-a0aa-6937689eadbb
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    description: 'Mariner''s Splint: +1 item bonus to Athletics checks (Swim or Climb).'
+    numeric: {literal: {amount: 1, applicability: {description: Swim or Climb, kind: situational},
+        type: item}}

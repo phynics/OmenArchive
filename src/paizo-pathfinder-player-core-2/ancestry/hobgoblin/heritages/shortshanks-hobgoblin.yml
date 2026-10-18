@@ -1,0 +1,17 @@
+---
+name: shortshanks hobgoblin
+ancestry: hobgoblin
+rarity: common
+description: You have a longer torso and broader shoulders than most hobgoblins, making
+  your legs seem short by comparison. This gives you a strong, muscular core and lowers
+  your center of gravity—features that assist you in riding and climbing—and you've
+  trained at riding in a saddle from an extremely early age. You gain the Ride feat.
+  Additionally, you are not Off-Guard while you Climb.
+mechanicsScope: builder
+rules:
+- id: 94be85c3-fc0d-5535-84c4-08aeebba4c7f
+  key: grant-item-1
+  effect: core/add-feat@2
+  inputs:
+    selectionId: cb31966c-c0b6-5c23-8126-eb035dcfdf0b
+    featId: '@feat.ride?source=paizo-pathfinder-player-core'

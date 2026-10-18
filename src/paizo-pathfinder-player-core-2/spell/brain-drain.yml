@@ -1,0 +1,44 @@
+---
+name: brain drain
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- focus
+- manipulate
+- mental
+- oracle
+traditions: []
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+target: 1 creature
+defense:
+  basic: true
+  counteraction: false
+  save: will
+damage:
+  0:
+    formula: 1d8
+    kinds:
+    - damage
+    type: mental
+heightening:
+  damage:
+    0: 1d8
+  interval: 1
+  type: interval
+description: 'You probe the target''s mind to glean knowledge. This deals 1d8 mental
+  damage with a basic Will save.
+
+
+  If the target fails the save, you sort through the stolen memories to attempt a
+  single check to Recall Knowledge. Choose a skill that has the Recall Knowledge action,
+  and use the target''s skill modifier for the check.
+
+
+  Heightened (+1) The mental damage increases by 1d8.'
+mechanicsScope: encounter
+foundryID: k2QrUk7jWMAWozMh

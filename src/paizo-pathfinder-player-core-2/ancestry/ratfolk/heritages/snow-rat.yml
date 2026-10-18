@@ -1,0 +1,16 @@
+---
+name: snow rat
+ancestry: ratfolk
+rarity: common
+description: You have a thicker coat and bulkier frame to defend against the cold,
+  granting you cold resistance equal to half your level (minimum 1). You treat environmental
+  cold effects as if they were one step less extreme (incredible cold becomes extreme,
+  extreme cold becomes severe, and so on).
+mechanicsScope: builder
+rules:
+- id: b65aa969-445f-5396-b5a5-7e794da05ed7
+  effect: core/add-resistance@2
+  inputs:
+    type: cold
+    value: \[[(max 1 (divide $.level 2))]]
+    exceptions: ''

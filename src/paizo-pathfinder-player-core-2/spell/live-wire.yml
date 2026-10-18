@@ -1,0 +1,59 @@
+---
+name: live wire
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- attack
+- cantrip
+- concentrate
+- electricity
+- manipulate
+- metal
+traditions:
+- arcane
+- primal
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+target: 1 creature
+damage:
+  6jB29A0HYmZ5Sndk:
+    formula: 1d4
+    kinds:
+    - damage
+    type: slashing
+  u8FtIoasOdjfSdy4:
+    formula: 1d4
+    kinds:
+    - damage
+    type: electricity
+heightening:
+  damage:
+    6jB29A0HYmZ5Sndk: 1d4
+    u8FtIoasOdjfSdy4: 1d4
+  interval: 2
+  type: interval
+description: 'You conjure up a length of sharp copper filament humming with electrical
+  current that strikes out at your foe. The wire deals 1d4 slashing damage and 1d4
+  electricity damage, depending on your spell attack roll against the target''s AC.
+
+
+  Critical Success The target takes double damage and (ceil(spell rank / 2))d4[persistent,electricity]
+  damage.
+
+
+  Success The target takes full damage.
+
+
+  Failure The target takes the electricity damage, but not the slashing damage.
+
+
+  Critical Failure The target is unaffected.
+
+
+  Heightened (+2) The slashing damage, initial electricity damage, and persistent
+  electricity damage on a critical hit each increase by 1d4.'
+mechanicsScope: encounter
+foundryID: Vbj8bTQ1nwrOBbYF

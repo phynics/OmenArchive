@@ -1,0 +1,54 @@
+---
+name: shadow's web
+rank: 7
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- focus
+- manipulate
+- monk
+traditions: []
+time: '2'
+action:
+  count: two_actions
+  requirements: You are in clinging shadow stance.
+area: '30'
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 14d4
+    kinds:
+    - damage
+    type: void
+heightening:
+  damage:
+    0: 2d4
+  interval: 1
+  type: interval
+requirements: You are in clinging shadow stance.
+description: 'Grasping darkness surges from you, dealing 14d4 void damage. Each creature
+  in the area must attempt a Fortitude save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage and is Enfeebled 1 for 1 round.
+
+
+  Failure The creature takes full damage and is Enfeebled 2 for 1 round.
+
+
+  Critical Failure The creature takes double damage, is Stunned 1, and enfeebled 2
+  for 1 round, and Immobilized for 1 round or until it Escapes, whichever comes first.
+
+
+  Heightened (+1) The void damage increases by 2d4.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: n8eEXXAtguoErW0y

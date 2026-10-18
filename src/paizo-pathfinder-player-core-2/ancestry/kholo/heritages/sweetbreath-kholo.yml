@@ -1,0 +1,30 @@
+---
+name: sweetbreath kholo
+ancestry: kholo
+rarity: common
+description: You're a striped, pale-furred kholo with oddly pleasant breath, which
+  you can use to entrance your prey. You are trained in Diplomacy (or another skill
+  if you were already trained in Diplomacy). You also gain a +1 circumstance bonus
+  to checks to Make an Impression if the target can smell your breath.
+mechanicsScope: builder
+rules:
+- id: d6a828f7-7efc-5d42-b17f-f1ba5d536884
+  key: active-effect-like-1
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: diplomacy}
+    proficiencyCap: 2
+- id: d9e8c1a9-94ed-5d37-8749-e664e805c40f
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: b2f5339f-5a0e-5f1c-9f4d-ee254384a609
+    target:
+      description:
+      - skill:
+          '_0':
+            diplomacy: {}
+    description: 'Sweetbreath Kholo: +1 circumstance bonus to Diplomacy checks (Make
+      An Impression).'
+    numeric: {literal: {amount: 1, applicability: {description: Make An Impression,
+          kind: situational}, type: circumstance}}

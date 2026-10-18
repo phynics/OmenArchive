@@ -1,290 +1,312 @@
 {
-  "epoch": 2,
-  "version": 1,
-  "publication": {
-    "path": "src/{publication}/publication.yml",
-    "schema": "publication.schema.json"
+  "collections" : {
+    "path" : "collections/{collection}.yml",
+    "schema" : "collection.schema.json"
   },
-  "collections": {
-    "path": "collections/{collection}.yml",
-    "schema": "collection.schema.json"
-  },
-  "declaredPublications": [
+  "customGroups" : [
     {
-      "id": "paizo-pathfinder-player-core-2",
-      "title": "Pathfinder Player Core 2",
-      "publisher": "Paizo"
-    },
-    {
-      "id": "paizo-pathfinder-gm-core",
-      "title": "Pathfinder GM Core",
-      "publisher": "Paizo"
-    },
-    {
-      "id": "paizo-pathfinder-monster-core",
-      "title": "Pathfinder Monster Core",
-      "publisher": "Paizo"
-    }
-  ],
-  "families": [
-    {
-      "id": "action",
-      "directory": "action",
-      "layout": "flat",
-      "schema": "character-action.schema.json",
-      "identity": {
-        "host": "action",
-        "includesOwner": false
-      }
-    },
-    {
-      "id": "spell",
-      "directory": "spell",
-      "layout": "flat",
-      "schema": "character-spell.schema.json",
-      "identity": {
-        "host": "spell",
-        "includesOwner": false
-      }
-    },
-    {
-      "id": "item",
-      "directory": "item",
-      "layout": "flat",
-      "schema": "character-item.schema.json",
-      "identity": {
-        "host": "item",
-        "includesOwner": false
-      }
-    },
-    {
-      "id": "background",
-      "directory": "background",
-      "layout": "flat",
-      "schema": "character-background.schema.json",
-      "identity": {
-        "host": "background",
-        "includesOwner": false
-      }
-    },
-    {
-      "id": "feat",
-      "directory": "feat",
-      "layout": "flat",
-      "schema": "character-feat.schema.json",
-      "identity": {
-        "host": "feat",
-        "includesOwner": false
-      }
-    },
-    {
-      "id": "ancestry",
-      "directory": "ancestry",
-      "layout": "bundle",
-      "schema": "character-ancestry.schema.json",
-      "children": [
-        {
-          "directory": "features",
-          "layout": "flat",
-          "schema": "character-feature.schema.json",
-          "collection": "features"
-        },
-        {
-          "directory": "heritages",
-          "layout": "flat",
-          "schema": "character-heritage.schema.json",
-          "collection": "heritages"
-        }
+      "collection" : "instincts",
+      "directory" : "instincts",
+      "familyID" : "class",
+      "ownerPath" : [
+        "barbarian"
       ],
-      "identity": {
-        "host": "ancestry",
-        "includesOwner": true
-      }
+      "schema" : "character-feature.schema.json"
     },
     {
-      "id": "class",
-      "directory": "class",
-      "layout": "bundle",
-      "schema": "character-class.schema.json",
-      "children": [
-        {
-          "directory": "features",
-          "layout": "flat",
-          "schema": "character-feature.schema.json",
-          "collection": "features"
-        }
-      ],
-      "identity": {
-        "host": "class",
-        "includesOwner": true
-      }
-    },
-    {
-      "id": "archetype",
-      "directory": "archetype",
-      "layout": "bundle",
-      "schema": "character-archetype.schema.json",
-      "children": [
-        {
-          "directory": "feats",
-          "layout": "flat",
-          "schema": "character-feat.schema.json",
-          "collection": "feats"
-        }
-      ],
-      "identity": {
-        "host": "archetype",
-        "includesOwner": true
-      }
-    },
-    {
-      "id": "domain",
-      "directory": "domain",
-      "layout": "flat",
-      "schema": "character-domain.schema.json",
-      "identity": {
-        "host": "domain",
-        "includesOwner": false
-      }
-    },
-    {
-      "id": "companion",
-      "directory": "companion",
-      "layout": "flat",
-      "schema": "character-companion.schema.json",
-      "identity": {
-        "host": "companion",
-        "includesOwner": false
-      }
-    },
-    {
-      "id": "versatile-heritage",
-      "directory": "versatile-heritage",
-      "layout": "flat",
-      "schema": "character-heritage.schema.json",
-      "identity": {
-        "host": "versatile-heritage",
-        "includesOwner": false
-      }
-    }
-  ],
-  "customGroups": [
-    {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "muses",
+      "directory" : "muses",
+      "familyID" : "class",
+      "ownerPath" : [
         "bard"
       ],
-      "directory": "muses",
-      "schema": "character-feature.schema.json",
-      "collection": "muses"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "doctrines",
+      "directory" : "doctrines",
+      "familyID" : "class",
+      "ownerPath" : [
         "cleric"
       ],
-      "directory": "doctrines",
-      "schema": "character-feature.schema.json",
-      "collection": "doctrines"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "doctrine-features",
+      "directory" : "doctrine-features",
+      "familyID" : "class",
+      "ownerPath" : [
         "cleric"
       ],
-      "directory": "doctrine-features",
-      "schema": "character-feature.schema.json",
-      "collection": "doctrine-features"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "deities",
+      "directory" : "deities",
+      "familyID" : "class",
+      "ownerPath" : [
         "cleric"
       ],
-      "directory": "deities",
-      "schema": "character-feature.schema.json",
-      "collection": "deities"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "orders",
+      "directory" : "orders",
+      "familyID" : "class",
+      "ownerPath" : [
         "druid"
       ],
-      "directory": "orders",
-      "schema": "character-feature.schema.json",
-      "collection": "orders"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "methodologies",
+      "directory" : "methodologies",
+      "familyID" : "class",
+      "ownerPath" : [
+        "investigator"
+      ],
+      "schema" : "character-feature.schema.json"
+    },
+    {
+      "collection" : "styles",
+      "directory" : "styles",
+      "familyID" : "class",
+      "ownerPath" : [
+        "swashbuckler"
+      ],
+      "schema" : "character-feature.schema.json"
+    },
+    {
+      "collection" : "hunters-edge",
+      "directory" : "hunters-edge",
+      "familyID" : "class",
+      "ownerPath" : [
         "ranger"
       ],
-      "directory": "hunters-edge",
-      "schema": "character-feature.schema.json",
-      "collection": "hunters-edge"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "rackets",
+      "directory" : "rackets",
+      "familyID" : "class",
+      "ownerPath" : [
         "rogue"
       ],
-      "directory": "rackets",
-      "schema": "character-feature.schema.json",
-      "collection": "rackets"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "basic-lessons",
+      "directory" : "basic-lessons",
+      "familyID" : "class",
+      "ownerPath" : [
         "witch"
       ],
-      "directory": "basic-lessons",
-      "schema": "character-feature.schema.json",
-      "collection": "basic-lessons"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "greater-lessons",
+      "directory" : "greater-lessons",
+      "familyID" : "class",
+      "ownerPath" : [
         "witch"
       ],
-      "directory": "greater-lessons",
-      "schema": "character-feature.schema.json",
-      "collection": "greater-lessons"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "major-lessons",
+      "directory" : "major-lessons",
+      "familyID" : "class",
+      "ownerPath" : [
         "witch"
       ],
-      "directory": "major-lessons",
-      "schema": "character-feature.schema.json",
-      "collection": "major-lessons"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "patrons",
+      "directory" : "patrons",
+      "familyID" : "class",
+      "ownerPath" : [
         "witch"
       ],
-      "directory": "patrons",
-      "schema": "character-feature.schema.json",
-      "collection": "patrons"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "schools",
+      "directory" : "schools",
+      "familyID" : "class",
+      "ownerPath" : [
         "wizard"
       ],
-      "directory": "schools",
-      "schema": "character-feature.schema.json",
-      "collection": "schools"
+      "schema" : "character-feature.schema.json"
     },
     {
-      "familyID": "class",
-      "ownerPath": [
+      "collection" : "theses",
+      "directory" : "theses",
+      "familyID" : "class",
+      "ownerPath" : [
         "wizard"
       ],
-      "directory": "theses",
-      "schema": "character-feature.schema.json",
-      "collection": "theses"
+      "schema" : "character-feature.schema.json"
     }
-  ]
+  ],
+  "declaredPublications" : [
+    {
+      "id" : "paizo-pathfinder-gm-core",
+      "publisher" : "Paizo",
+      "title" : "Pathfinder GM Core"
+    },
+    {
+      "id" : "paizo-pathfinder-monster-core",
+      "publisher" : "Paizo",
+      "title" : "Pathfinder Monster Core"
+    }
+  ],
+  "epoch" : 2,
+  "families" : [
+    {
+      "directory" : "action",
+      "id" : "action",
+      "identity" : {
+        "host" : "action",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-action.schema.json"
+    },
+    {
+      "directory" : "spell",
+      "id" : "spell",
+      "identity" : {
+        "host" : "spell",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-spell.schema.json"
+    },
+    {
+      "directory" : "item",
+      "id" : "item",
+      "identity" : {
+        "host" : "item",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-item.schema.json"
+    },
+    {
+      "directory" : "background",
+      "id" : "background",
+      "identity" : {
+        "host" : "background",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-background.schema.json"
+    },
+    {
+      "directory" : "feat",
+      "id" : "feat",
+      "identity" : {
+        "host" : "feat",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-feat.schema.json"
+    },
+    {
+      "children" : [
+        {
+          "collection" : "features",
+          "directory" : "features",
+          "layout" : "flat",
+          "schema" : "character-feature.schema.json"
+        },
+        {
+          "collection" : "heritages",
+          "directory" : "heritages",
+          "layout" : "flat",
+          "schema" : "character-heritage.schema.json"
+        }
+      ],
+      "directory" : "ancestry",
+      "id" : "ancestry",
+      "identity" : {
+        "host" : "ancestry",
+        "includesOwner" : true
+      },
+      "layout" : "bundle",
+      "schema" : "character-ancestry.schema.json"
+    },
+    {
+      "children" : [
+        {
+          "collection" : "features",
+          "directory" : "features",
+          "layout" : "flat",
+          "schema" : "character-feature.schema.json"
+        }
+      ],
+      "directory" : "class",
+      "id" : "class",
+      "identity" : {
+        "host" : "class",
+        "includesOwner" : true
+      },
+      "layout" : "bundle",
+      "schema" : "character-class.schema.json"
+    },
+    {
+      "children" : [
+        {
+          "collection" : "feats",
+          "directory" : "feats",
+          "layout" : "flat",
+          "schema" : "character-feat.schema.json"
+        }
+      ],
+      "directory" : "archetype",
+      "id" : "archetype",
+      "identity" : {
+        "host" : "archetype",
+        "includesOwner" : true
+      },
+      "layout" : "bundle",
+      "schema" : "character-archetype.schema.json"
+    },
+    {
+      "directory" : "domain",
+      "id" : "domain",
+      "identity" : {
+        "host" : "domain",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-domain.schema.json"
+    },
+    {
+      "directory" : "companion",
+      "id" : "companion",
+      "identity" : {
+        "host" : "companion",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-companion.schema.json"
+    },
+    {
+      "directory" : "versatile-heritage",
+      "id" : "versatile-heritage",
+      "identity" : {
+        "host" : "versatile-heritage",
+        "includesOwner" : false
+      },
+      "layout" : "flat",
+      "schema" : "character-heritage.schema.json"
+    }
+  ],
+  "publication" : {
+    "path" : "src/{publication}/publication.yml",
+    "schema" : "publication.schema.json"
+  },
+  "version" : 1
 }

@@ -1,0 +1,20 @@
+---
+name: iron command
+traits:
+- champion
+- divine
+- emotion
+- mental
+count: reaction
+trigger: An enemy in your champion's aura damages you
+description: "Effect You put an impertinent foe who dared harm you in their proper
+  place. You command your enemy to kneel before you in obedience. If they dare to
+  refuse, they must pay the price in pain and anguish. The enemy must choose one of
+  the following options.\n\t•\tKneel The enemy drops Prone as a free action.\n\t•\tRefuse
+  You deal (ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6[mental]
+  damage to the enemy. This damage increases to 2d6 at 5th level, 3d6 at 9th level,
+  4d6 at 12th level, 5d6 at 16th level, and 6d6 at 19th level.\nRegardless of which
+  option the enemy chose, your Strikes against it deal 1 extra spirit damage until
+  the end of your next turn. This extra damage increases to 2 at 9th level and 3 at
+  16th level."
+mechanicsScope: encounter

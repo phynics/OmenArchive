@@ -1,0 +1,37 @@
+---
+name: third path to perfection
+level: 15
+traits:
+- monk
+description: You have made great progress in your personal studies of enlightenment.
+  Choose one of the saving throws you selected for path to perfection or second path
+  to perfection. Your proficiency rank for the chosen type of save increases to legendary.
+  When you roll a critical failure on the chosen type of save, you get a failure instead.
+  When you roll a failure on the chosen type of save against an effect that deals
+  damage, you take half damage.
+mechanicsScope: builder
+foundryID: haoTkr2U5k7kaAKN
+rules:
+- id: 22d66ebb-e0a6-518e-8dee-eb3fad9790c1
+  key: choice-monk-third-path-to-perfection-path
+  choice:
+    name: $.monk.third-path-to-perfection.path
+    label: Path to Perfection
+    prerequisites:
+    - $.monk.path-to-perfection.save
+    - $.monk.second-path-to-perfection.save
+    cases:
+    - key: first-path
+      effects:
+      - key: raise-first-path-save
+        effect: core/add-saving-throw
+        inputs:
+          savingThrow: {choice: $.monk.path-to-perfection.save}
+          proficiencyRank: 8
+    - key: second-path
+      effects:
+      - key: raise-second-path-save
+        effect: core/add-saving-throw
+        inputs:
+          savingThrow: {choice: $.monk.second-path-to-perfection.save}
+          proficiencyRank: 8

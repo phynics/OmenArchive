@@ -1,0 +1,28 @@
+---
+name: light armor mastery
+level: 19
+traits:
+- investigator
+- kineticist
+- rogue
+- swashbuckler
+description: Your skill with light armor improves, increasing your ability to dodge
+  blows. Your proficiency ranks for light armor and unarmored defense increase to
+  master.
+mechanicsScope: builder
+foundryID: SHpjmM4A3Sw4GgDz
+rules:
+- id: a1da52ec-ae68-5043-9a01-588ef5f79b74
+  key: generated-1
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: light, kind: type}
+    proficiencyRank: 6
+    selfScaling: false
+- id: 81830a8e-d6ea-5d70-a27e-6c01061ad2f1
+  key: generated-2
+  effect: core/add-armor-proficiency
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 6
+    selfScaling: false

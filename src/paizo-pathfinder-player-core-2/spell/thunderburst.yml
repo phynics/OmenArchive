@@ -1,0 +1,62 @@
+---
+name: thunderburst
+rank: 3
+rarity: uncommon
+category: focus
+traits:
+- air
+- concentrate
+- focus
+- manipulate
+- oracle
+- sonic
+traditions: []
+time: '2'
+action:
+  count: two_actions
+range: 100 feet
+area: '20'
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 2d6
+    kinds:
+    - damage
+    type: bludgeoning
+  1:
+    formula: 2d6
+    kinds:
+    - damage
+    type: sonic
+heightening:
+  damage:
+    0: 2d6
+    1: 2d6
+  interval: 2
+  type: interval
+description: 'You create a powerful blast of air and a loud peal of thunder, dealing
+  2d6 bludgeoning damage and 2d6 sonic damage. Each creature in the area must attempt
+  a Fortitude save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage.
+
+
+  Failure The creature takes full damage and is Deafened for 1 minute.
+
+
+  Critical Failure The creature takes double damage and is deafened for 1 hour.
+
+
+  Heightened (+2) Each type of damage increases by 2d6, and the area increases by
+  5 feet.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: LFSwMtQVP05EzlZe

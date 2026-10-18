@@ -1,0 +1,41 @@
+---
+name: crashing wave
+rank: 3
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+- water
+traditions:
+- arcane
+- primal
+time: '2'
+action:
+  count: two_actions
+area: '30'
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 6d6
+    kinds:
+    - damage
+    type: bludgeoning
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
+description: 'You summon a crashing wave that sweeps away from you. You deal 6d6 bludgeoning
+  damage to creatures in the area. The water also extinguishes non-magical fires in
+  the area.
+
+
+  Heightened (+1) The damage increases by 2d6.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: T4QKmtYPeCgYxVGe

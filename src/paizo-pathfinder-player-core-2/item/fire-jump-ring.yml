@@ -1,0 +1,45 @@
+---
+name: fire-jump ring
+level: 10
+rarity: uncommon
+type: equipment
+traits:
+- fire
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 940 gp
+  quantity: 1
+  size: med
+  usage: worn
+details:
+  equipment: {}
+description: 'This black, metal ring is inset with rubies that occasionally give off
+  wisps of smoke. It grants you a +2 item bonus to Athletics checks.
+
+  Activate—Fire Jump 2 (concentrate, manipulate, teleportation)
+
+  Effect You Stride (or Burrow or Fly, if you have the corresponding Speed) into any
+  fire large enough to contain you, including magical fires. You vanish into the fire
+  and take no damage from it. You can sense all sufficiently large fires within 100
+  feet of where you vanish, and you reemerge from any of those fires, either within
+  the fire or adjacent to it. If you end your movement in the fire, it affects you
+  as normal.'
+mechanicsScope: builder
+foundryID: 64mxKuxc9k98FkUi
+rules:
+- id: 57f0b8f3-68cf-5608-8a46-14e4c49810bd
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 89498cf3-0543-576e-b252-8cc2e2a20297
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    description: 'Fire-Jump Ring: +2 item bonus to Athletics checks.'
+    numeric: {literal: {amount: 2, applicability: {kind: always}, type: item}}

@@ -1,0 +1,53 @@
+---
+name: spray of stars
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- fire
+- focus
+- light
+- manipulate
+- oracle
+traditions: []
+time: '2'
+action:
+  count: two_actions
+area: '15'
+defense:
+  basic: false
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 2d4
+    kinds:
+    - damage
+    type: fire
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
+description: 'You fling a spray of tiny shooting stars, dealing 2d4 fire damage. Each
+  creature in the area must attempt a Reflex save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The creature takes half damage and is Dazzled for 1 round.
+
+
+  Failure The creature takes full damage and is dazzled for 3 rounds.
+
+
+  Critical Failure The creature takes double damage and is dazzled for 1 minute.
+
+
+  Heightened (+1) Increase the damage by 1d4.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: mlNYROcFrUF8nFgk

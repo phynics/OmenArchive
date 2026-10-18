@@ -1,0 +1,47 @@
+---
+name: interstellar void
+rank: 3
+rarity: uncommon
+category: focus
+traits:
+- cold
+- concentrate
+- focus
+- manipulate
+- oracle
+traditions: []
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+target: 1 creature
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 3d6
+    kinds:
+    - damage
+    type: cold
+heightening:
+  damage:
+    0: 1d6
+  interval: 1
+  type: interval
+description: 'You call upon the frigid depths of outer space to bring a terrible chill
+  to your enemy. The target is cloaked in the freezing void, which deals 3d6 cold
+  damage immediately and the first time each round you Sustain the Spell on future
+  turns, with a basic Fortitude save.
+
+
+  The target is Fatigued for as long as the effect persists.
+
+
+  Heightened (+1) The cold damage increases by 1d6.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry sustained duration flag is not supported yet
+foundryID: L37RTc7K79OUpZ7X

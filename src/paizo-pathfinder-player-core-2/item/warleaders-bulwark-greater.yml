@@ -1,0 +1,66 @@
+---
+name: warleader's bulwark (greater)
+level: 18
+rarity: common
+type: armor
+traits:
+- invested
+- magical
+physical:
+  bulk: '2'
+  hardness: 0
+  hitPoints: 0
+  price: 22000 gp
+  quantity: 1
+  size: med
+details:
+  armor:
+    acBonus: 4
+    category: medium
+    checkPenalty: -3
+    dexterityCap: 1
+    speedPenalty: -5
+    strength: 3
+description: 'This +2 resilient breastplate is made from shining bronze overlaid with
+  reinforcing golden panels emblazoned with images of loyal soldiers. Wearing this
+  breastplate grants you a commanding aura. You gain a +3 item bonus to Diplomacy
+  checks, but you take a -3 item penalty to Stealth checks to Hide and Sneak and Deception
+  checks to Impersonate.
+
+  Activate—Command Bravery 1 (concentrate)
+
+  Effect You grant allies within 100 feet a +2 status bonus to saves against fear
+  effects for 1 minute. When you activate this ability, each affected ally who''s
+  Frightened reduces their frightened value by 1.'
+mechanicsScope: builder
+foundryID: XKON66YXYLXlGPPg
+rules:
+- id: 691ad8a6-8695-5c03-99c1-f5fef1f49392
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: a970e01f-370f-57a4-87ad-9fb538ed7a40
+    target:
+      description:
+      - skill:
+          '_0':
+            diplomacy: {}
+    description: 'Warleader''s Bulwark (Greater): +3 item bonus to Diplomacy checks.'
+    numeric: {literal: {amount: 3, applicability: {kind: always}, type: item}}
+- id: 1e3e4779-d092-55b7-af5b-bbd75683c24c
+  key: flat-modifier-2
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: e3077b8a-0138-5ce4-97d0-ce7188acb6d1
+    target:
+      description:
+      - skill:
+          '_0':
+            deception: {}
+      - skill:
+          '_0':
+            stealth: {}
+    description: 'Warleader''s Bulwark (Greater): -3 item bonus to Deception checks
+      and Stealth checks (Hide or Sneak or Impersonate).'
+    numeric: {literal: {amount: -3, applicability: {description: Hide or Sneak or
+            Impersonate, kind: situational}, type: item}}

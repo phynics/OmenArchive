@@ -14,7 +14,33 @@ description: 'You rely on your intellect to craft intricate schemes, planning 10
   You''re trained in Society and one of the following skills of your choice: Arcana,
   Nature, Occultism, or Religion. You can choose Intelligence as your key attribute.'
 mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet mastermind is not paired with a deterministic builder
-  effect. Resource: omen://class/rogue/features/mastermind?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, ChoiceSet, ActiveEffectLike].'
 foundryID: RyOkmu0W9svavuAB
+rules:
+- id: 6dffc3c5-c28f-504e-b4fd-266d6caf16ed
+  key: key-attribute
+  effect: core/extend-class-key-attribute
+  inputs:
+    attribute: int
+- id: e1926cf9-5a37-53d3-9f3b-441df52832b6
+  key: trained-skill-0
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: society}
+    proficiencyCap: 2
+- id: 89e22a3c-2fe7-5cae-ab16-45ff410b6a6c
+  key: choice-rogue-mastermind-skill
+  choice:
+    name: $.rogue.mastermind.skill
+    label: Mastermind skill
+    type: core/skill
+    cases:
+    - {key: arcana, value: {kind: arcana}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: religion, value: {kind: religion}}
+- id: f4dd356f-57a2-5614-913d-24b9dd877a19
+  key: mastermind-skill
+  effect: core/add-skill-increase
+  inputs:
+    skill: {choice: $.rogue.mastermind.skill}
+    proficiencyCap: 2

@@ -1,0 +1,20 @@
+---
+name: furious vengeance
+level: 16
+rarity: common
+type: class
+traits:
+- barbarian
+- rage
+prerequisites:
+- text: fury instinct
+  hasChoice:
+    name: $.barbarian.instinct
+    equals: {type: core/feature-id, value: '@class.barbarian.instincts.fury-instinct'}
+action:
+  count: reaction
+  trigger: An enemy within your melee reach critically hits you with a melee Strike.
+description: Your enemy's blow fuels your rage and provokes your immediate retaliation.
+  Make a melee Strike against the triggering enemy.
+mechanicsScope: encounter
+foundryID: Oyml3OGNy468z3XI

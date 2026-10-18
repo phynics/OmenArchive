@@ -1,0 +1,64 @@
+---
+name: staff of providence (major)
+level: 14
+rarity: common
+type: weapon
+traits:
+- magical
+- staff
+- two-hand-d8
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 4100 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+details:
+  weapon:
+    category: simple
+    damage: 1d4 bludgeoning
+    group: club
+    reload: ''
+description: "A large, stylized symbol of an eye adorns the top of this wooden staff,
+  representing the watchful eye of the divine powers. The bearer of the staff can
+  guide and protect, seeing bounties and tragedies that could befall them in the future.
+  When wielding this staff, you gain a +1 item bonus to Survival checks to Sense Direction
+  or Subsist and to Religion checks to Recall Knowledge.\nActivate Cast a Spell\nEffect
+  You expend a number of charges from the staff to cast a spell from its list.\n\t•\tCantrip
+  Guidance\n\t•\t1st Bless, Create Water\n\t•\t2nd Augury, Create Food, See the Unseen,
+  Status\n\t•\t3rd Safe Passage, Wanderer's Guide\n\t•\t4th Cleanse Affliction, Dispelling
+  Globe, Status\n\t•\t5th Dispelling Globe, Scouting Eye, See the Unseen\n\t•\t6th
+  Dispelling Globe, Scintillating Safeguard, Truesight"
+mechanicsScope: builder
+foundryID: U8vVCE2ePjyca666
+rules:
+- id: fba25856-4a6f-52ac-8594-36332d967f3e
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 2eb127ac-6b88-5488-a82f-6d9d4a6d9f2a
+    target:
+      description:
+      - skill:
+          '_0':
+            survival: {}
+    description: 'Staff of Providence (Major): +1 item bonus to Survival checks (Sense
+      Direction or Subsist).'
+    numeric: {literal: {amount: 1, applicability: {description: Sense Direction or
+            Subsist, kind: situational}, type: item}}
+- id: 4137ebb4-ecec-55dd-be65-1b2bf1a87911
+  key: flat-modifier-2
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 7ade34b2-7dcc-5d93-8cd3-ed0123eef3fc
+    target:
+      description:
+      - skill:
+          '_0':
+            religion: {}
+    description: 'Staff of Providence (Major): +1 item bonus to Religion checks (Recall
+      Knowledge).'
+    numeric: {literal: {amount: 1, applicability: {description: Recall Knowledge,
+          kind: situational}, type: item}}

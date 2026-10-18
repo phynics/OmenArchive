@@ -1,0 +1,32 @@
+---
+name: brutality
+level: 5
+traits:
+- barbarian
+description: Your fury makes your weapons lethal. Your proficiency ranks for simple
+  weapons, martial weapons, and unarmed attacks increase to expert. While raging,
+  you have the critical specialization benefits for melee weapons and unarmed attacks.
+mechanicsScope: mixed
+foundryID: EEUTd0jAyfwTLzjk
+rules:
+- id: aab7b402-074c-556e-aca5-9bf0f9669c0d
+  key: generated-2
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 275ce488-955b-5467-9e17-03bd7c1a6da9
+  key: generated-3
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 92eea017-fc54-54ad-bd52-28fbcb7537df
+  key: generated-4
+  effect: core/add-weapon-proficiency
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    proficiencyRank: 4
+    selfScaling: false

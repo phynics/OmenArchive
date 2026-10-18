@@ -1,0 +1,54 @@
+---
+name: puff of poison
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- cantrip
+- concentrate
+- manipulate
+- poison
+traditions:
+- arcane
+- primal
+time: '2'
+action:
+  count: two_actions
+range: 10 feet
+target: 1 creature
+defense:
+  basic: false
+  counteraction: false
+  save: fortitude
+damage:
+  0:
+    formula: 1d4
+    kinds:
+    - damage
+    type: poison
+heightening:
+  damage:
+    0: 1d4
+  interval: 2
+  type: interval
+description: 'You exhale a shimmering cloud of toxic breath at an enemy''s face. The
+  target takes 1d4 poison damage and (ceil(spell rank/2))d4[persistent,poison], depending
+  on its Fortitude save.
+
+
+  Critical Success The creature is unaffected.
+
+
+  Success The target takes half initial damage and no persistent damage.
+
+
+  Failure The target takes full initial and persistent damage.
+
+
+  Critical Failure The target takes double initial and persistent damage.
+
+
+  Heightened (+2) The initial poison damage increases by 1d4, and the persistent poison
+  damage increases by 1d4.'
+mechanicsScope: encounter
+foundryID: D7ZEhTNIDWDLC2J4

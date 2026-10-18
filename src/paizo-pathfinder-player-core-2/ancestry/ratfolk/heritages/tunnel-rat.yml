@@ -1,0 +1,16 @@
+---
+name: tunnel rat
+ancestry: ratfolk
+rarity: common
+description: You can easily compress your body and squeeze through gaps. You gain
+  the Quick Squeeze feat as a bonus feat, even if you aren't trained in Acrobatics.
+  Tight spaces not tight enough to require the Squeeze action aren't difficult terrain
+  for you.
+mechanicsScope: builder
+rules:
+- id: db8d16ce-c410-5643-864a-e7c6e5423fde
+  key: grant-item-1
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 9a2c015d-bdc7-5b19-964e-fab566a84656
+    featId: '@feat.quick-squeeze?source=paizo-pathfinder-player-core'

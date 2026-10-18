@@ -656,7 +656,31 @@ Rules:
 
 - `rarity` defaults to `common`; include it explicitly when uncommon/rare/unique.
 - Use `variants` when the choice changes granted skill or feat.
-- Avoid empty strings when possible. Prefer a real lore slug once known.
+- `skillOption` describes one trained-skill grant. Use a scalar for a fixed skill or a list when
+  the player chooses one skill from alternatives. Omit it when the background grants no skill.
+- `skillOptions` describes two or more separate trained-skill grants. Each entry is a scalar for
+  one fixed skill or a list of alternatives for that grant. For example, Feral Child grants two
+  fixed skills:
+
+  ```yaml
+  skillOptions: [nature, survival]
+  ```
+
+- Omit `loreSkill` when the background grants no Lore. Use an empty string when the player or GM
+  chooses the Lore, and a Lore slug when it is fixed. For example, Blessed grants a chosen Lore:
+
+  ```yaml
+  loreSkill: ""
+  ```
+
+- `attributes.chooseFrom` may be empty when all boosts are free. `freeBoosts` supports up to three.
+  Amnesiac uses three free boosts and no constrained boost:
+
+  ```yaml
+  attributes:
+    freeBoosts: 3
+    chooseFrom: []
+  ```
 
 ### Classes
 

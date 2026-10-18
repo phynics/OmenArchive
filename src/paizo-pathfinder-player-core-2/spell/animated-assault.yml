@@ -1,0 +1,47 @@
+---
+name: animated assault
+rank: 2
+rarity: common
+category: spell
+traits:
+- concentrate
+- manipulate
+traditions:
+- arcane
+- occult
+time: '2'
+action:
+  count: two_actions
+range: 120 feet
+area: '10'
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 2d10
+    kinds:
+    - damage
+    type: bludgeoning
+heightening:
+  damage:
+    0: 2d10
+  interval: 2
+  type: interval
+description: 'You use your mind to manipulate unattended objects in the area, temporarily
+  animating them to attack. The objects hover in the air, then hurl themselves at
+  nearby creatures in a chaotic flurry of debris. This assault deals 2d10 bludgeoning
+  damage (basic Reflex save) to each creature in the area. On subsequent rounds, the
+  first time each round you Sustain this Spell, it deals (floor(spell rank/2))d10[bludgeoning]
+  damage (basic Reflex save) to each creature in the area.
+
+
+  Heightened (+2) The initial damage increases by 2d10 and the subsequent damage increases
+  by 1d10.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- Foundry sustained duration flag is not supported yet
+foundryID: WqPhJNzLa8vSjrH6

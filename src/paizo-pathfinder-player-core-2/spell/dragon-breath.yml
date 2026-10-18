@@ -1,0 +1,44 @@
+---
+name: dragon breath
+rank: 3
+rarity: uncommon
+category: focus
+traits:
+- concentrate
+- focus
+- manipulate
+- sorcerer
+traditions: []
+time: '2'
+action:
+  count: two_actions
+area: '30'
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 5d6
+    kinds:
+    - damage
+    type: untyped
+heightening:
+  damage:
+    0: 2d6
+  interval: 1
+  type: interval
+description: 'You spew energy from your mouth, dealing 5d6 damage with a basic Reflex
+  save. The damage type depends on the magical tradition related to the dragon that
+  influenced your bloodline.
+
+
+  Heightened (+1) The damage increases by 2d6.'
+mechanicsScope: mixed
+unsupportedReason: non-empty Foundry rule elements are not supported yet
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- 'Foundry rule elements not imported: DamageAlteration'
+- 'Foundry spell rule elements are preserved for external review at omen://spell/dragon-breath?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [DamageAlteration].'
+foundryID: JcobNl4iE9HmMYtE

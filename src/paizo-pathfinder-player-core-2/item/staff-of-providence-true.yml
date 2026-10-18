@@ -1,0 +1,66 @@
+---
+name: staff of providence (true)
+level: 20
+rarity: common
+type: weapon
+traits:
+- magical
+- staff
+- two-hand-d8
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 64000 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+details:
+  weapon:
+    category: simple
+    damage: 1d4 bludgeoning
+    group: club
+    reload: ''
+description: "A large, stylized symbol of an eye adorns the top of this wooden staff,
+  representing the watchful eye of the divine powers. The bearer of the staff can
+  guide and protect, seeing bounties and tragedies that could befall them in the future.
+  When wielding this staff, you gain a +1 item bonus to Survival checks to Sense Direction
+  or Subsist and to Religion checks to Recall Knowledge.\nActivate Cast a Spell\nEffect
+  You expend a number of charges from the staff to cast a spell from its list.\n\t•\tCantrip
+  Guidance\n\t•\t1st Bless, Create Water\n\t•\t2nd Augury, Create Food, See the Unseen,
+  Status\n\t•\t3rd Safe Passage, Wanderer's Guide\n\t•\t4th Cleanse Affliction, Dispelling
+  Globe, Status\n\t•\t5th Dispelling Globe, Scouting Eye, See the Unseen\n\t•\t6th
+  Dispelling Globe, Scintillating Safeguard, Truesight\n\t•\t7th Dispelling Globe,
+  Energy Aegis\n\t•\t8th Dispelling Globe, Divine Inspiration\n\t•\t9th Dispelling
+  Globe, Foresight, Overwhelming Presence"
+mechanicsScope: builder
+foundryID: pIagOwW8EFBaKW3k
+rules:
+- id: 2eee2dc8-d497-500f-9ede-5c7ffe66f494
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 7bc7bc6a-98f1-5e6d-b818-bdafd258e653
+    target:
+      description:
+      - skill:
+          '_0':
+            survival: {}
+    description: 'Staff of Providence (True): +1 item bonus to Survival checks (Sense
+      Direction or Subsist).'
+    numeric: {literal: {amount: 1, applicability: {description: Sense Direction or
+            Subsist, kind: situational}, type: item}}
+- id: 6c7abbf9-8272-5cb2-b166-8b841820f640
+  key: flat-modifier-2
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: a54939e0-87e7-5ffb-926a-e1ed2d9991e2
+    target:
+      description:
+      - skill:
+          '_0':
+            religion: {}
+    description: 'Staff of Providence (True): +1 item bonus to Religion checks (Recall
+      Knowledge).'
+    numeric: {literal: {amount: 1, applicability: {description: Recall Knowledge,
+          kind: situational}, type: item}}

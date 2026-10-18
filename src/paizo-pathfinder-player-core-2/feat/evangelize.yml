@@ -1,0 +1,35 @@
+---
+name: evangelize
+level: 7
+rarity: common
+type: skill
+traits:
+- auditory
+- general
+- linguistic
+- mental
+- skill
+prerequisites:
+- text: master in Diplomacy
+  hasSkillProficiency: {skill: diplomacy, proficiency: master}
+- text: follower of a specific religion or philosophy
+  unsupported: Unsupported prerequisite for source YgbcLfAEdi4xxvX5 "follower of a
+    specific religion or philosophy".
+  diagnostic: true
+action:
+  count: one_action
+  criticalSuccess: The target is Stupefied 2 for 1 round.
+  failure: The target is unaffected.
+  success: The target is Stupefied 1 for 1 round.
+description: You point out a detail that incontrovertibly supports your faith, causing
+  a listener's mind to whirl. Attempt a diplomacy|against:will check and compare the
+  result to the Will DC of a single target that can hear you and understands your
+  language; that target is then temporarily immune to Evangelize with respect to your
+  deity or philosophy for 1 day. A creature that already agrees with you is unaffected,
+  and at the GM's discretion, a target that genuinely changes its perspective to support
+  your faith as a result of the argument is also otherwise unaffected.
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/evangelize?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [Note, Note, Note, Note].'
+foundryID: YgbcLfAEdi4xxvX5

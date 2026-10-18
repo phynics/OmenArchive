@@ -1,0 +1,49 @@
+---
+name: spout
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- cantrip
+- concentrate
+- manipulate
+- water
+traditions:
+- arcane
+- primal
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+area: '5'
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 2d4
+    kinds:
+    - damage
+    type: bludgeoning
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
+description: 'Water blasts upward, coming out of the ground, rising from a pool, or
+  even manifesting from thin air. Any creatures in the area take 2d4 bludgeoning damage,
+  with a basic Reflex saving throw. A creature that critically fails its save is disoriented
+  by the explosion of water, becoming Off-Guard until the end of your next turn.
+
+
+  You can change this spell''s area to a burst, provided you center the burst in a
+  body of water. This body of water can be as small as a pond or creek, but not as
+  small as a puddle or bathtub.
+
+
+  Heightened (+1) The damage increases by 1d4.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: eSL5hVT9gXrnRLtd

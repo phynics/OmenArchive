@@ -1,0 +1,25 @@
+---
+name: liminal catfolk
+ancestry: catfolk
+rarity: common
+description: You've inherited a closeness to the far corners of the world, where the
+  boundaries between dimensions grow thin. You can cast the Detect Magic cantrip as
+  an occult innate spell at will. A cantrip is heightened to half your level rounded
+  up. You also gain a +1 circumstance bonus to Occultism checks to Recall Knowledge
+  about creatures that originated on planes other than the Universe.
+mechanicsScope: builder
+rules:
+- id: ecf4b6dd-a9e3-5081-9cb0-428e14994f83
+  key: flat-modifier-1
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: 1cc8d986-d198-5f10-9423-10f80bc039fe
+    target:
+      description:
+      - skill:
+          '_0':
+            occultism: {}
+    description: 'Liminal Catfolk: +1 circumstance bonus to Occultism checks (Recall
+      Knowledge).'
+    numeric: {literal: {amount: 1, applicability: {description: Recall Knowledge,
+          kind: situational}, type: circumstance}}

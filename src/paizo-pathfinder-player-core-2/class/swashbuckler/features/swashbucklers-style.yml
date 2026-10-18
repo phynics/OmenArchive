@@ -1,0 +1,22 @@
+---
+name: swashbuckler's style
+level: 1
+traits:
+- swashbuckler
+description: Your own distinctive style lets you gracefully handle any situation.
+  Choose a swashbuckler's style. This style determines the additional actions you
+  use to gain panache and makes you trained in the skill related to that action.
+mechanicsScope: builder
+foundryID: beW1OqibVQ3fBvRw
+rules:
+- id: 116a6271-e5c0-5a54-a01b-e03c9e7d0ef1
+  key: choice-swashbuckler-style
+  choice:
+    name: $.swashbuckler.style
+    label: Style
+    records: {filter: {pathPrefix: '@class.swashbuckler.styles'}, type: core/feature-id}
+- id: ccff4b32-738c-53a8-9e54-3182e44e19f9
+  key: choice-set-1
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.swashbuckler.style}

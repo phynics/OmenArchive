@@ -1,0 +1,63 @@
+---
+name: life link
+rank: 1
+rarity: uncommon
+category: focus
+traits:
+- focus
+- healing
+- manipulate
+- oracle
+- vitality
+traditions: []
+time: '1'
+action:
+  count: one_action
+range: 30 feet
+target: 1 creature other than you
+duration: 1 minute
+damage:
+  wmKl5ucMQTyXMxz1:
+    formula: 1d4
+    kinds:
+    - healing
+    type: vitality
+heightening:
+  levels:
+    3:
+      target: 2 creatures other than you
+    6:
+      target: 3 creatures other than you
+    9:
+      target: 4 creatures other than you
+  type: fixed
+description: 'You forge a connection of life energy between you and your target, distributing
+  harm between both of you. When you first Cast the Spell, the target recovers 1d4
+  Hit Points.
+
+
+  The first time each round that the target takes damage, reduce the damage it takes
+  by 3 (to a minimum of 0 damage). You lose 3 Hit Points each time, or the total damage
+  dealt, if less than 3; this damage ignores any immunities or resistances you have
+  and can''t otherwise be mitigated in any way.
+
+
+  The spell ends immediately if you fall Unconscious. You can Dismiss the spell.
+
+
+  Heightened (3rd) You can target 2 creatures other than you. The initial healing
+  increases to 3d4 Hit Points and the maximum damage reduced and Hit Points lost increases
+  to 5.
+
+
+  Heightened (6th) You can target 3 creatures other than you. The initial healing
+  increases to 6d4 Hit Points and the maximum damage reduced and Hit Points lost increases
+  to 10.
+
+
+  Heightened (9th) You can target 4 creatures other than you. The initial healing
+  increases to 9d4 Hit Points and the maximum damage reduced and Hit Points lost increases
+  to 15.'
+mechanicsScope: mixed
+unsupportedReason: 'fixed heightening fields are not supported yet: damage'
+foundryID: 2gQYrCPwBmwau26O

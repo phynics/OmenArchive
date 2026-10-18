@@ -1,0 +1,31 @@
+---
+name: lethal finisher
+level: 18
+rarity: common
+type: class
+traits:
+- death
+- finisher
+- swashbuckler
+prerequisites:
+- text: precise strike 6d6
+  unsupported: Unsupported prerequisite for source XfCPAoNdF2XMnH7K "precise strike
+    6d6".
+  diagnostic: true
+action:
+  count: one_action
+  criticalFailure: You deal 18d6 precision damage.
+  criticalSuccess: You deal 6 precision damage.
+  failure: You deal 12d6 precision damage.
+  success: You deal 6d6 precision damage.
+description: 'You stab your foe in a vital organ, possibly killing them outright.
+  Make a Strike. On a success, you forego your precise strike damage from the finisher.
+
+  Instead, your target takes additional precision damage based on a fortitude|against:swashbuckler
+  save against your class DC. If your Strike was a critical hit, the target''s saving
+  throw outcome is one degree worse.'
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/lethal-finisher?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [RollOption, Note].'
+foundryID: XfCPAoNdF2XMnH7K

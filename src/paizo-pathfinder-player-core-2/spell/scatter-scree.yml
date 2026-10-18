@@ -1,0 +1,48 @@
+---
+name: scatter scree
+rank: 0
+rarity: common
+category: cantrip
+traits:
+- cantrip
+- concentrate
+- earth
+- manipulate
+traditions:
+- arcane
+- primal
+time: '2'
+action:
+  count: two_actions
+range: 30 feet
+area: '10'
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 2d4
+    kinds:
+    - damage
+    type: bludgeoning
+heightening:
+  damage:
+    0: 1d4
+  interval: 1
+  type: interval
+description: 'A jumble of rocks cascades into the area. The scattering rocks deal
+  2d4 bludgeoning damage (basic Reflex save). The ground in the area becomes difficult
+  terrain for the duration of the spell. A creature can Interact to clear a square
+  of this scree.
+
+
+  If you cast this spell again, any previous scatter scree you''ve cast ends.
+
+
+  Heightened (+1) The damage increases by 1d4.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+foundryID: zA0jNIBRgLsyTpbm

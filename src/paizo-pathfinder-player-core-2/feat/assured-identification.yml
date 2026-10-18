@@ -1,0 +1,24 @@
+---
+name: assured identification
+level: 2
+rarity: common
+type: skill
+traits:
+- general
+- skill
+prerequisites:
+- text: expert in Arcana, Nature, Occultism, or Religion
+  anyOf:
+  - hasSkillProficiency: {skill: arcana, proficiency: expert}
+  - hasSkillProficiency: {skill: nature, proficiency: expert}
+  - hasSkillProficiency: {skill: occultism, proficiency: expert}
+  - hasSkillProficiency: {skill: religion, proficiency: expert}
+description: You rarely misidentify an item. When using Arcana, Nature, Occultism,
+  or Religion checks to Identify Magic, if you roll a critical failure, you get a
+  failure instead. If you would misidentify a cursed item because you roll a success
+  but not a critical success, you simply can't identify it instead.
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/assured-identification?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [AdjustDegreeOfSuccess, Note].'
+foundryID: XmF4q4rzKWg55vG4

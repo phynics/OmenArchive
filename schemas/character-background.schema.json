@@ -5,6 +5,22 @@
   "description": "Schema for a character background in the game",
   "type": "object",
   "$defs": {
+    "trainedSkill": {
+      "oneOf": [
+        {
+          "$ref": "utility-types/skill.schema.json",
+          "description": "A fixed skill grant"
+        },
+        {
+          "type": "array",
+          "description": "A choice of one skill for this grant",
+          "items": {
+            "$ref": "utility-types/skill.schema.json"
+          },
+          "minItems": 1
+        }
+      ]
+    },
     "backgroundVariant": {
       "type": "object",
       "description": "A variant of a character background",
@@ -21,7 +37,7 @@
             "freeBoosts": {
               "type": "integer",
               "minimum": 0,
-              "maximum": 2,
+              "maximum": 3,
               "default": 0,
               "description": "Number of free attribute boosts available"
             },
@@ -30,32 +46,26 @@
               "description": "Attributes that can be chosen for modification",
               "items": {
                 "$ref": "utility-types/attribute.schema.json"
-              },
-              "minItems": 1
+              }
             }
           },
           "required": ["chooseFrom"]
         },
         "skillOption": {
-          "oneOf": [
-            {
-              "$ref": "utility-types/skill.schema.json",
-              "description": "A single skill option"
-            },
-            {
-              "type": "array",
-              "description": "Multiple skills to choose from",
-              "items": {
-                "$ref": "utility-types/skill.schema.json"
-              },
-              "minItems": 1
-            }
-          ],
-          "description": "Either a single skill or a list of skills to choose from"
+          "$ref": "#/$defs/trainedSkill",
+          "description": "One trained skill grant, fixed or chosen from a list"
+        },
+        "skillOptions": {
+          "type": "array",
+          "description": "Multiple trained skill grants, each fixed or chosen from a list",
+          "items": {
+            "$ref": "#/$defs/trainedSkill"
+          },
+          "minItems": 2
         },
         "loreSkill": {
           "type": "string",
-          "description": "The specific lore skill granted by this background variant"
+          "description": "A fixed Lore, an empty string for a chosen Lore, or omitted when no Lore is granted"
         },
         "skillFeat": {
           "type": "string",
@@ -64,10 +74,11 @@
       },
       "required": [
         "attributes",
-        "skillOption",
-        "loreSkill",
         "skillFeat"
-      ]
+      ],
+      "not": {
+        "required": ["skillOption", "skillOptions"]
+      }
     }
   },
   "allOf": [

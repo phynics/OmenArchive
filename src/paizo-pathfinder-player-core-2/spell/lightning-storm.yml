@@ -1,0 +1,47 @@
+---
+name: lightning storm
+rank: 5
+rarity: common
+category: spell
+traits:
+- concentrate
+- electricity
+- manipulate
+traditions:
+- primal
+time: '3'
+action:
+  count: three_actions
+range: 120 feet
+area: '20'
+duration: 1 minute
+defense:
+  basic: true
+  counteraction: false
+  save: reflex
+damage:
+  0:
+    formula: 4d12
+    kinds:
+    - damage
+    type: electricity
+heightening:
+  damage:
+    0: 1d12
+  interval: 2
+  type: interval
+description: 'You create a black, rumbling storm cloud and call down one lightning
+  bolt within the spell''s area. The bolt is a vertical line from the top of the storm
+  cloud to the ground below, dealing 4d12 electricity damage to creatures in the line
+  (basic Reflex save). On subsequent rounds, the first time you Sustain the Spell
+  each round, you can call another lightning bolt within the area. If you Cast this
+  Spell outdoors, you can create two non-overlapping clouds instead of one, though
+  you can still call down only one bolt per turn.
+
+
+  Heightened (+2) The damage of each bolt increases by 1d12.'
+mechanicsScope: encounter
+diagnostics:
+- Foundry area type is not represented when area details are absent
+- Foundry sustained duration flag is not supported yet
+foundryID: JyT346VmGtRLsDnV
