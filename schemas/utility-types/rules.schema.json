@@ -140,6 +140,40 @@
         },
         "freeText": {
           "$ref": "#/$defs/typeName"
+        },
+        "multiple": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "max": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "min"
+          ],
+          "additionalProperties": false,
+          "description": "A confirmed list of distinct answers. max must be at least min."
+        },
+        "optional": {
+          "type": "boolean",
+          "default": false,
+          "description": "An unanswered optional question does not count as open."
+        },
+        "optionsFrom": {
+          "$ref": "#/$defs/choiceName",
+          "description": "Intersects candidates with this named fact's valid values."
+        },
+        "additionalCases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choiceCase"
+          },
+          "description": "Typed alternatives beside records. These cases cannot carry effects."
         }
       },
       "required": [
@@ -691,7 +725,7 @@
       "additionalProperties": false
     },
     "inputs": {
-      "description": "Effect inputs by name. A bare value is a literal typed by the effect's descriptor (a record input takes an @ reference); {choice: $.…}, {selection: …} and {literal: …} (with an optional type:) are the explicit forms.",
+      "description": "Effect inputs by name. Bare values are literals typed by the effect descriptor. Explicit forms are {choice: $.path}, {choiceList: $.path}, {selection: ...}, and {literal: ...}, each with an optional type. A list read requires a confirmed answer.",
       "type": "object",
       "additionalProperties": {}
     },

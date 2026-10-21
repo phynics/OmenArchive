@@ -95,9 +95,59 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 959c216d-6c98-5489-acf6-9f390b22985e
-  key: deity-divine-skill-4
+- id: ec237c97-4385-51d0-ba29-057a889051cd
+  key: deity-divine-skill
   effect: core/add-skill-increase
   inputs:
     skill: {choice: $.deity.divine-skill}
     proficiencyCap: 2
+- id: c1242dcd-d0c9-5ac7-b2b5-60bd34df4dd8
+  key: choice-deity-edicts
+  choice:
+    name: $.deity.edicts
+    label: Edicts
+    optional: true
+    freeText: core/string
+- id: c63bed8f-1058-5b26-b1dc-29e210667495
+  key: choice-deity-anathema
+  choice:
+    name: $.deity.anathema
+    label: Anathema
+    optional: true
+    freeText: core/string
+- id: 0811ec0a-1ca7-53b2-a6ae-267ca5d63e49
+  key: choice-deity-favored-weapon
+  choice:
+    name: $.deity.favored-weapon
+    label: Favored weapon
+    additionalCases:
+    - {value: fist}
+    records: {filter: {all: [{type: item}, {item.kind: weapon}]}, type: core/weapon-reference}
+- id: 760b93ed-b83e-542f-9e55-830035261bbe
+  key: deity-favored-weapon-proficiency
+  effect: core/add-chosen-weapon-proficiency
+  inputs:
+    weapon: {choice: $.deity.favored-weapon}
+    proficiencyRank: 2
+    selfScaling: true
+- id: 7318994a-b32a-5d3c-8e91-0ef9881b2c55
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceName: Cleric Spellcasting
+    castingKind: prepared
+    tradition: divine
+    attribute: wis
+- id: 856308d9-4620-5790-90f5-120c9fde40b4
+  key: choice-deity-spells
+  choice:
+    name: $.deity.spells
+    label: Deity spells
+    multiple: {min: 0}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: 987f714d-7901-514c-89a3-2d7fd54a68d9
+  key: deity-spell-list
+  effect: spellcasting/add-spell-list
+  inputs:
+    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    spells: {choiceList: $.deity.spells}

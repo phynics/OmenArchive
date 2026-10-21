@@ -29,6 +29,20 @@ specialText: You can select this feat multiple times, selecting a different doma
 mechanicsScope: builder
 foundryID: hT4INKGtly4QY8KN
 rules:
+- id: 908bb09f-0af3-5fc9-a08f-e8e0b23ae035
+  key: choice-deity-domains
+  choice:
+    name: $.deity.domains
+    label: Deity's domains
+    multiple: {min: 1, max: 4}
+    records: {filter: {type: domain}, type: core/domain-id}
+- id: 5b253f87-9dbd-54c1-9214-28364325a571
+  key: choice-cleric-domains
+  choice:
+    name: $.cleric.domains
+    label: Domain
+    optionsFrom: $.deity.domains
+    records: {filter: {type: domain}, type: core/domain-id}
 - id: 184f5436-f053-58db-a5d4-317391ae63e6
   effect: spellcasting/configure-source
   inputs:
@@ -37,26 +51,10 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: wis
-- id: a22adb22-507a-5367-8bef-035753a25563
-  key: choice-cleric-domain-spells
-  choice:
-    name: $.cleric.domain-spells
-    label: Domain Spell
-    records:
-      filter:
-        all:
-        - {type: spell}
-        - {spell.category: focus}
-        - {trait: classTrait-cleric}
-        - {level: 1}
-      type: spellcasting/spell-id
-- id: bc13c386-c4f8-5ae1-8290-f5ae806da57c
-  effect: spellcasting/grant-spell
+- id: 144d2a3e-1efa-563c-a13d-997e9e4965cd
+  key: domain-spell
+  effect: spellcasting/grant-domain-spell
   inputs:
     sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
-    grantId: deed40aa-9248-59b4-9bc9-257e988c9d3c
-    spellId: {choice: $.cleric.domain-spells}
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
-- id: 84e64307-9056-5020-aab8-f6f389fb8707
-  effect: spellcasting/add-focus-point
+    domain: {choice: $.cleric.domains}
+    advanced: false

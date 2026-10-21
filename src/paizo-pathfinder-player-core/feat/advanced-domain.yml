@@ -20,6 +20,20 @@ specialText: You can select this feat multiple times. Each time, you must select
 mechanicsScope: builder
 foundryID: uR44wELN9OlU68cL
 rules:
+- id: 8eebcdf2-9c3f-599a-8530-34841778b336
+  key: choice-deity-domains
+  choice:
+    name: $.deity.domains
+    label: Deity's domains
+    multiple: {min: 1, max: 4}
+    records: {filter: {type: domain}, type: core/domain-id}
+- id: 0477d8a1-8e09-5375-88b2-0ca66d824b4e
+  key: choice-cleric-advanced-domains
+  choice:
+    name: $.cleric.advanced-domains
+    label: Advanced domain
+    optionsFrom: $.cleric.domains
+    records: {filter: {type: domain}, type: core/domain-id}
 - id: 1003fc8e-6eb2-56e4-ad19-703747febb20
   effect: spellcasting/configure-source
   inputs:
@@ -28,26 +42,10 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: wis
-- id: 6620c163-3088-508e-839c-a0dcd3f0289f
-  key: choice-cleric-advanced-domain-spells
-  choice:
-    name: $.cleric.advanced-domain-spells
-    label: Advanced Domain Spell
-    records:
-      filter:
-        all:
-        - {type: spell}
-        - {spell.category: focus}
-        - {trait: classTrait-cleric}
-        - {level: 4}
-      type: spellcasting/spell-id
-- id: 66d0436f-a6bd-5c8d-a3ff-33c1789632b1
-  effect: spellcasting/grant-spell
+- id: 8e0f385e-82ac-5892-a18c-21b5a4c5c6de
+  key: advanced-domain-spell
+  effect: spellcasting/grant-domain-spell
   inputs:
     sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
-    grantId: efc56cbe-f2d6-5b97-bd51-c00f2252ab4d
-    spellId: {choice: $.cleric.advanced-domain-spells}
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
-- id: 0aa2d2a4-aeb6-5b9c-bb92-6375717fa92a
-  effect: spellcasting/add-focus-point
+    domain: {choice: $.cleric.advanced-domains}
+    advanced: true

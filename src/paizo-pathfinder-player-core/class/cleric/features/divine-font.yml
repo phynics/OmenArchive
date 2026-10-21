@@ -22,6 +22,16 @@ description: 'Through your deity''s blessing, you gain additional spells that ch
 mechanicsScope: builder
 foundryID: gblTFUOgolqFS9v4
 rules:
+- id: a706a312-88ca-5c0e-8d65-f00c3a6a1e06
+  key: choice-deity-divine-font
+  choice:
+    name: $.deity.divine-font
+    label: Allowed divine fonts
+    type: spellcasting/spell-id-list
+    cases:
+    - {key: heal, value: ['@spell.heal']}
+    - {key: harm, value: ['@spell.harm']}
+    - {key: both, label: Heal or Harm, value: ['@spell.heal', '@spell.harm']}
 - id: e72b5d93-4de5-5477-b09a-b587442c5afb
   effect: spellcasting/configure-source
   inputs:
@@ -35,10 +45,11 @@ rules:
   choice:
     name: $.cleric.divine-font
     label: Divine Font
+    optionsFrom: $.deity.divine-font
     type: spellcasting/spell-id
     cases:
-    - {value: '@spell.heal'}
-    - {value: '@spell.harm'}
+    - {label: Heal, value: '@spell.heal'}
+    - {label: Harm, value: '@spell.harm'}
 - id: 280473ab-f966-5827-9a9f-8e04ecf34058
   effect: spellcasting/grant-spell
   inputs:

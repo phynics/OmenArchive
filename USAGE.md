@@ -234,7 +234,8 @@ A rule has these keys, in this order:
 
 An input value is **bare** when it is a literal: the effect's descriptor says its type, so there is
 no type ID, revision or namespace (`proficiencyCap: 2`, `skill: {kind: deception}`). The explicit
-forms are `{choice: $.cleric.divine-font}` (read a named choice), `{selection: …}`
+forms are `{choice: $.cleric.divine-font}` (read one answer), `{choiceList: $.deity.spells}`
+(read a confirmed list into a declared list type), `{selection: …}`
 and `{literal: …}` (with an optional `type: core/skill`, for a payload that looks
 like one of the explicit forms). A string literal that starts with `$`, `@` or `(`, or with `[[`, is
 written with a leading backslash (`\$5`): those prefixes are reserved for character values,
@@ -262,6 +263,24 @@ One of `cases`, `records` (`{filter, type}`) or `freeText` (a type) gives the op
 `key` is left out when it is the value's own text and its `label` when it is the key's words
 capitalized; a case may instead hold `effects` (rule entries with no `level`) that apply when it is
 picked. A choice's `level` is the rule's, unless it says otherwise.
+
+A choice accepts one answer unless it declares `multiple: {min: 0, max: 4}`. `max` can be
+omitted. A confirmed empty list differs from an unanswered question. Values must be distinct and
+all must fit the options. `optionsFrom: $.deity.domains` restricts the options to the valid answers
+of another choice. A scalar choice whose registered type is a list also supplies those elements.
+An unanswered or invalid dependency offers no options. A previously selected answer that no
+longer fits stays visible for repair and grants nothing.
+
+`optional: true` keeps an unanswered question out of the open-question count. It is useful with
+`freeText: core/string` for notes such as edicts and anathema. A `records` choice can add explicit
+values with `additionalCases`, for example `[{key: fist, label: Fist, value: fist}]` beside a
+`core/weapon-reference` record list. These additional cases cannot carry effects.
+
+The `core/add-chosen-weapon-proficiency` effect takes a `core/weapon-reference`, a proficiency
+rank and a self-scaling flag. The reference names a weapon item or the intrinsic `fist` value.
+`spellcasting/grant-domain-spell` takes a domain reference and an `advanced` flag and grants the
+corresponding focus spell. `spellcasting/add-spell-list` adds a `spellcasting/spell-id-list` to one
+spellcasting source's preparation access. It grants no known spells or casts.
 
 Foundry conversion assigns new keys as `<foundry-rule-key>-<n>`, where `n` is that source key's
 occurrence in the record, counted over the Foundry rules rather than the converted ones, so an
@@ -382,7 +401,7 @@ spellcasting:
 
 ### Archive format
 
-`schemas/archive-format.json` declares `epoch: 2` and `version: 1`. A reader accepts exactly that
+`schemas/archive-format.json` declares `epoch: 2` and `version: 2`. A reader accepts exactly that
 pair and fails with a clear message on a manifest without an epoch or with another one. Older
 archives (formats 1 to 4 before epochs) are not read, and there is no tool that upgrades them.
 
