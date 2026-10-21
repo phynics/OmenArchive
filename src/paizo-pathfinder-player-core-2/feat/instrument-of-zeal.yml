@@ -1,0 +1,46 @@
+---
+name: instrument of zeal
+level: 16
+rarity: common
+type: class
+traits:
+- champion
+prerequisites:
+- text: Blessed Counterstrike feat or Retributive Strike reaction, champion's reaction
+    that grants an ally resistance to an enemy's damage (including the grandeur, justice,
+    liberation, and redemption causes)
+  anyOf:
+  - hasFeatWithName: blessed counterstrike
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.justice'}
+  - anyOf:
+    - hasChoice:
+        name: $.champion.cause
+        equals: {type: core/feature-id, value: '@class.champion.causes.grandeur'}
+    - hasChoice:
+        name: $.champion.cause
+        equals: {type: core/feature-id, value: '@class.champion.causes.justice'}
+    - hasChoice:
+        name: $.champion.cause
+        equals: {type: core/feature-id, value: '@class.champion.causes.liberation'}
+    - hasChoice:
+        name: $.champion.cause
+        equals: {type: core/feature-id, value: '@class.champion.causes.redemption'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.justice'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.liberation'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.redemption'}
+description: Divine energy fills your weapon. Whenever you critically hit an enemy
+  with Blessed Counterstrike or Retributive Strike, your attack deals an extra weapon
+  damage die, and the target is Slowed 1 on its next turn
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/instrument-of-zeal?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [DamageDice, Note].'
+foundryID: h08Vfel5iIAARWdy

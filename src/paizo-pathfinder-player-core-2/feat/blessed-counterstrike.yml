@@ -1,0 +1,37 @@
+---
+name: blessed counterstrike
+level: 12
+rarity: common
+type: class
+traits:
+- champion
+- flourish
+prerequisites:
+- text: champion's reaction that grants an ally resistance to an enemy's damage (including
+    the grandeur, justice, liberation, and redemption causes)
+  anyOf:
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.grandeur'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.justice'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.liberation'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.redemption'}
+action:
+  count: one_action
+  requirements: An enemy triggered your champion's reaction since the end of your
+    last turn.
+description: You call upon divine power and make a weapon or unarmed Strike against
+  the enemy who triggered your champion's reaction. The Strike deals one extra weapon
+  damage die. If this Strike hits, until the start of your next turn, the target gains
+  weakness equal to half your level to all Strikes made by you and your allies.
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/blessed-counterstrike?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [RollOption, DamageDice].'
+foundryID: nSDXAFQKjMROlc2l

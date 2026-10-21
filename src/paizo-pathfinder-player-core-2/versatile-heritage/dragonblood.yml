@@ -11,4 +11,12 @@ description: You're descended in some way from a dragon. Your physical features 
   throw against a fear effect, you get a critical success instead. You can choose
   from dragonblood feats and feats from your ancestry whenever you gain an ancestry
   feat.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: 'Dragonblood''s selected dragon values are not represented by the
+  character rules. Resource: omen://versatile-heritage/dragonblood?source=paizo-pathfinder-player-core-2.'
+rules:
+- id: e5e52dda-0ff1-5196-a983-a82af49a49d3
+  key: grant-heritage-trait
+  effect: core/add-character-ancestry-trait
+  inputs:
+    trait: dragonblood

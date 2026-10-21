@@ -1,0 +1,18 @@
+---
+name: field discovery (toxicologist)
+level: 5
+traits:
+- alchemist
+description: You have handled enough poisons to become inured to their effects. You
+  gain poison resistance equal to half your level.
+mechanicsScope: builder
+foundryID: 6zo2PJGYoig7nFpR
+rules:
+- id: e3f33e55-47e0-570b-8242-d73edaa59eb7
+  key: field-poison-resistance
+  effect: core/add-resistance@2
+  level: 5
+  inputs:
+    type: poison
+    value: \[[(floor (divide $.level 2))]]
+    exceptions: ''

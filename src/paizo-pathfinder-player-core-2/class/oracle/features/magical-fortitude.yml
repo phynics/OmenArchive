@@ -1,0 +1,23 @@
+---
+name: magical fortitude
+level: 9
+traits:
+- oracle
+- sorcerer
+- witch
+- wizard
+description: 'Oracle, Sorcerer, Wizard Magical power has improved your body''s resiliency.
+  Your proficiency rank for Fortitude saves increases to expert.
+
+  Witch Your patron''s power boosts your physical resiliency. Your proficiency rank
+  for Fortitude saves increases to expert.'
+mechanicsScope: builder
+foundryID: 70jqXP2eS4tRZ0Ok
+rules:
+- id: 8178ebdb-6cfc-51f5-a3a5-afa918f160a8
+  key: generated-3
+  effect: core/add-saving-throw
+  level: 9
+  inputs:
+    savingThrow: fortitude
+    proficiencyRank: 4

@@ -1,0 +1,51 @@
+---
+name: bomber
+level: 1
+traits:
+- alchemist
+description: 'You specialize in explosions and other violent reactions.
+
+  Formulas Two common 1st-level alchemical bombs.
+
+  Field Benefit When throwing an alchemical bomb with the splash trait, you can choose
+  to deal splash damage to only your primary target instead of the usual splash area.
+
+  Field Vials When you Strike with a versatile vial, you can choose to have it deal
+  cold, electricity, or fire damage instead of acid damage.
+
+  Field Discovery (5th) You have calculated all the angles to maximize a bomb''s splash.
+  When you throw an alchemical bomb with the splash trait, you can cause the bomb
+  to deal splash damage equal to your Intelligence modifier (minimum 1) instead of
+  the normal amount.
+
+  Advanced Vials (11th) You can mix special ingredients into your vials, such as magical
+  dust or flakes of precious minerals. When you create a versatile vial, you can choose
+  to have it treated as one special material of your choice, chosen from adamantine,
+  cold iron, and dawnsilver. If you''re wearing or wielding an item of a different
+  precious material when you make the vial, you can choose that material instead.
+
+  Greater Field Discovery (13th) You can increase the splash on your bombs to damage
+  creatures within 10 feet, or 15 feet if you have Expanded Splash.'
+mechanicsScope: mixed
+unsupportedReason: The research field's two starting formulas await alchemical formula
+  families and learning. Its selected level-5/11/13 benefits remain active.
+foundryID: 7JbiaZ8bxODM5mzS
+rules:
+- id: 9eac8821-c758-5abd-b51f-2d8c8cd98138
+  key: grant-field-benefits-field-discovery-bomber
+  effect: core/add-feature-by-id
+  level: 5
+  inputs:
+    featureId: '@class.alchemist.field-benefits.field-discovery-bomber'
+- id: 3ac60227-ac99-5631-836c-856c8ed8729c
+  key: grant-field-benefits-advanced-vials-bomber
+  effect: core/add-feature-by-id
+  level: 11
+  inputs:
+    featureId: '@class.alchemist.field-benefits.advanced-vials-bomber'
+- id: 9785641e-cfa0-5caf-99c1-9cefb22feff1
+  key: grant-field-benefits-greater-field-discovery-bomber
+  effect: core/add-feature-by-id
+  level: 13
+  inputs:
+    featureId: '@class.alchemist.field-benefits.greater-field-discovery-bomber'

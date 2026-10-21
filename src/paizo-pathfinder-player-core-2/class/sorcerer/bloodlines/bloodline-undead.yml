@@ -1,0 +1,131 @@
+---
+name: 'bloodline: undead'
+level: 1
+traits:
+- sorcerer
+description: 'The touch of undeath runs through your blood. Your family tree might
+  contain powerful undead, like a vampire.
+
+  Tradition divine
+
+  Bloodline Skills Intimidation, Religion
+
+  Sorcerous Gifts cantrip Void Warp, 1st: Harm, 2nd: See the Unseen, 3rd: Bind Undead,
+  4th: Talking Corpse, 5th: Invoke Spirits, 6th: Vampiric Exsanguination, 7th: Execute,
+  8th: Canticle of Everlasting Grief, 9th: Wails of the Damned
+
+  Bloodline Spells initial: Undeath''s Blessing, advanced: Drain Life, greater: Grasping
+  Grave
+
+  Blood Magic—Stolen Life You can channel the necromantic energy in your blood. Either
+  you gain temporary Hit Points equal to the spell''s rank that last until the start
+  of your next turn, or a target takes 1 void damage per spell rank (if the spell
+  already deals initial void damage, combine this with the spell''s initial damage
+  before determining weaknesses and resistances).'
+mechanicsScope: builder
+foundryID: 7WBZ2kkhZ7JorWu2
+rules:
+- id: a15bd1be-c12f-5ba4-91be-3b2c15699561
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: 50e30340-02f2-58ef-9f34-ce3a704fb6e8
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: 925be71a-8fd5-5f53-84ca-7e9beaa67ad2
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: religion}
+    proficiencyCap: 2
+- id: 5428c7fc-4bb3-5f12-98c7-849191e14734
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: e8dbddc5-2aec-5aaa-9453-30715bd99824
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 2ff21ee4-39e9-535e-aeeb-50f2a9eb2ea9
+    spellId: '@spell.undeaths-blessing'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: df9fe804-9213-5104-b597-4a1d5cf9b627
+  effect: spellcasting/add-focus-point
+- id: eb5fb839-8eae-5779-831b-feac6d3e2638
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: a1b5747a-5d4c-50e1-90f7-20fb0b8b2aa5
+    spellId: '@spell.void-warp?source=paizo-pathfinder-player-core'
+- id: 09015dab-b4aa-522b-9a63-d3a3d00247e2
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: ac4723a0-4912-584c-bedc-fba7a0db7bc0
+    spellId: '@spell.harm?source=paizo-pathfinder-player-core'
+- id: 4c85f048-8c70-5d21-9459-90282b640889
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: aa1416fc-8bdc-5174-bce6-4565ac2603ea
+    spellId: '@spell.see-the-unseen?source=paizo-pathfinder-player-core'
+- id: c3aca884-9c8a-5460-8e2d-71017caae6b4
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: bff7f8b3-2ae2-5c79-9f19-b21289395a62
+    spellId: '@spell.bind-undead?source=paizo-pathfinder-player-core'
+- id: d0e3c3e9-2b20-52aa-91e1-7b69aa1382fc
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 40c9f4e4-98f6-508c-925e-7c8f193e86fa
+    spellId: '@spell.talking-corpse?source=paizo-pathfinder-player-core'
+- id: 0f44ad35-dfdb-56bf-95f7-30fd339dfda6
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 55ab4912-1450-5db9-89cb-d07b0ccd59c8
+    spellId: '@spell.invoke-spirits?source=paizo-pathfinder-player-core'
+- id: 817cfbfa-f248-59bf-bb02-1e50d299b695
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 9379d656-ddd1-5f96-ba46-bbfeac44cf46
+    spellId: '@spell.vampiric-exsanguination?source=paizo-pathfinder-player-core'
+- id: 81ccb8c1-e8a4-5088-8bd5-5211584c076f
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 2376b553-4777-5212-8205-c6c893267d5c
+    spellId: '@spell.execute?source=paizo-pathfinder-player-core'
+- id: d7cd27c0-ab08-5a10-a4b8-28151364a486
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: eda9405f-e72d-5401-9187-e6203ad27a82
+    spellId: '@spell.canticle-of-everlasting-grief?source=paizo-pathfinder-player-core'
+- id: ac121f63-b1d4-5eff-8187-26f7893dcec8
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: b32970b8-5313-530b-bc2f-75f0980b92ba
+    spellId: '@spell.wails-of-the-damned?source=paizo-pathfinder-player-core'

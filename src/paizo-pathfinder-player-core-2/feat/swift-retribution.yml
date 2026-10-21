@@ -1,0 +1,37 @@
+---
+name: swift retribution
+level: 18
+rarity: common
+type: class
+traits:
+- champion
+prerequisites:
+- text: champion's reaction
+  anyOf:
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.grandeur'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.justice'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.liberation'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.redemption'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.iniquity'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.desecration'}
+  - hasChoice:
+      name: $.champion.cause
+      equals: {type: core/feature-id, value: '@class.champion.causes.obedience'}
+description: The transgressions of your enemies fuel you to retaliate with divine
+  speed. When an enemy triggers your champion's reaction, you are Quickened on your
+  next turn. You can use the extra action to move closer to that enemy or to Strike
+  that enemy.
+mechanicsScope: encounter
+foundryID: ZoVC0Ni7QdiWvoIx

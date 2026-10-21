@@ -1,0 +1,84 @@
+---
+name: cause
+level: 1
+traits:
+- champion
+description: 'You devote yourself to a specific cause in your deity''s name. Some
+  are limited to sanctification, as noted in parentheses. Your cause adds to your
+  edicts and anathema and grants you a special reaction called your champion''s reaction,
+  which appears after the divider, along with its upgrades if you gain the relentless
+  reaction and exalted reaction class features at higher levels.
+
+  Desecration (Unholy): You selfishly corrupt and destroy.
+
+  Grandeur (Holy): You exemplify the glory and splendor of the celestial realms.
+
+  Iniquity (Unholy): You destroy, take advantage, and act with dishonor.
+
+  Justice: You follow laws and mete out just punishment.
+
+  Liberation: You oppose tyranny and fight for freedom.
+
+  Obedience: You enforce hierarchies and order.
+
+  Redemption (Holy): You try to redeem those who commit wicked deeds.'
+mechanicsScope: builder
+foundryID: D4k8wuq1ncHFCBZz
+rules:
+- id: f950a38f-b603-5f65-8bf4-1d5fd64d602f
+  key: choice-champion-cause-holy
+  prerequisites:
+  - hasChoice:
+      name: $.deity.sanctification
+      equals: {type: core/string, value: holy}
+  choice:
+    name: $.champion.cause
+    label: Cause
+    prerequisites:
+    - $.deity.sanctification
+    type: core/feature-id
+    cases:
+    - {key: liberation, value: '@class.champion.causes.liberation'}
+    - {key: grandeur, value: '@class.champion.causes.grandeur'}
+    - {key: redemption, value: '@class.champion.causes.redemption'}
+    - {key: justice, value: '@class.champion.causes.justice'}
+    - {key: obedience, value: '@class.champion.causes.obedience'}
+- id: 85f629db-630d-5e28-9f24-7c5ea5f0ac4c
+  key: choice-champion-cause-unholy
+  prerequisites:
+  - hasChoice:
+      name: $.deity.sanctification
+      equals: {type: core/string, value: unholy}
+  choice:
+    name: $.champion.cause
+    label: Cause
+    prerequisites:
+    - $.deity.sanctification
+    type: core/feature-id
+    cases:
+    - {key: liberation, value: '@class.champion.causes.liberation'}
+    - {key: justice, value: '@class.champion.causes.justice'}
+    - {key: iniquity, value: '@class.champion.causes.iniquity'}
+    - {key: desecration, value: '@class.champion.causes.desecration'}
+    - {key: obedience, value: '@class.champion.causes.obedience'}
+- id: ca07ceb2-08c4-5a2e-b788-3631241aede7
+  key: choice-champion-cause-none
+  prerequisites:
+  - hasChoice:
+      name: $.deity.sanctification
+      equals: {type: core/string, value: none}
+  choice:
+    name: $.champion.cause
+    label: Cause
+    prerequisites:
+    - $.deity.sanctification
+    type: core/feature-id
+    cases:
+    - {key: liberation, value: '@class.champion.causes.liberation'}
+    - {key: justice, value: '@class.champion.causes.justice'}
+    - {key: obedience, value: '@class.champion.causes.obedience'}
+- id: 3196d86d-7195-559e-a9f9-334ccdecfe33
+  key: grant-selected-cause
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.champion.cause}

@@ -1,0 +1,30 @@
+---
+name: advanced alchemy
+level: 1
+traits:
+- alchemist
+description: 'During your daily preparations, you spend some time to create alchemical
+  items that can be used over the course of the day.
+
+  You don''t need to attempt a Crafting check to do this, you can use an alchemist''s
+  toolkit instead of an alchemist''s lab, and you ignore both the number of days typically
+  required to create the items and any alchemical raw materials requirements.
+
+  You can Craft a number of alchemical items up to 4 + your Intelligence modifier.
+  Each item must be in your formula book, have an item level equal to or lower than
+  your level, and have the consumable trait.
+
+  These items have the infused trait and remain potent for 24 hours or until your
+  next daily preparations, whichever comes first.'
+mechanicsScope: mixed
+foundryID: Pe0zmIqyTBc2Td0I
+rules:
+- id: dcc10df1-5901-50a2-b461-80313b763602
+  key: advanced-alchemy-crafting
+  effect: core/add-crafting-ability
+  inputs:
+    slug: advanced-alchemy
+    label: Advanced Alchemy
+    maxSlotsExpression: 4 + @actor.system.abilities.int.mod
+    isDailyPreparation: true
+    craftableItems: item:trait:alchemical|item:trait:consumable

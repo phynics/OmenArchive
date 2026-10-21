@@ -1,0 +1,40 @@
+---
+name: bloodline
+level: 1
+traits:
+- sorcerer
+description: "Choose a bloodline that gives you your spellcasting talent. This choice
+  determines the type of spells you cast and the spell list you choose them from,
+  additional spells you learn, and additional trained skills. You also gain Focus
+  Points and special focus spells based on your bloodline. The bloodlines presented
+  are as follows:\n\t•\tAberrant A strange and unknowable influence gives you occult
+  spells.\n\t•\tAngelic Holy grace bestows divine spells upon you.\n\t•\tDemonic A
+  sinful corruption gives you divine spells.\n\t•\tDiabolic A bond with devils gives
+  you divine spells.\n\t•\tDraconic The blood of dragons grants you arcane spells.\n\t•\tElemental
+  The power of the elements manifests in you as primal spells.\n\t•\tFey Influence
+  from the fey gives you primal spells.\n\t•\tGenie Through lineage, magic, or wishes
+  made real, the blood of a noble genie flows through your veins.\n\t•\tHag The blight
+  of a hag has given you occult spells.\n\t•\tHarrow You have a deep connection to
+  the harrow.\n\t•\tImperial An ancient power grants you arcane spells.\n\t•\tNymph
+  One of your ancestors was inspired by a nymph, or perhaps was a nymph themself,
+  and now the beauty of nature lives in you.\n\t•\tPhoenix The healing fire a phoenix's
+  blessing grants you primal spells.\n\t•\tPsychopomp For good or ill, your ancestors'
+  deeds drew the attention of psychopomps, or you might somehow count one in your
+  family tree. The presence of these shepherds of souls and enemies of undeath has
+  left an indelible mark on you.\n\t•\tShadow Whether due to a velstrac's manipulations
+  or a planar jaunt gone horribly wrong, your bloodline was infused with a vein of
+  shadow.\n\t•\tUndead The touch of death gives you divine spells.\n\t•\tWyrmblessed
+  A draconic blessing grants you divine spells."
+mechanicsScope: builder
+foundryID: 2goYo6VNbwC6aKF1
+rules:
+- id: 4b580619-115f-5ce7-b88d-32d0896b9a2d
+  key: choice-sorcerer-bloodline
+  choice:
+    name: $.sorcerer.bloodline
+    label: Bloodline
+    records: {filter: {pathPrefix: '@class.sorcerer.bloodlines'}, type: core/feature-id}
+- id: 60adf1ee-0fb2-5bf9-8d90-4569636d22fc
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.sorcerer.bloodline}

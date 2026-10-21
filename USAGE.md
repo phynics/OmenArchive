@@ -264,6 +264,14 @@ One of `cases`, `records` (`{filter, type}`) or `freeText` (a type) gives the op
 capitalized; a case may instead hold `effects` (rule entries with no `level`) that apply when it is
 picked. A choice's `level` is the rule's, unless it says otherwise.
 
+Declarations of the same `$.` path across resources describe one shared question. Its answer must
+satisfy every active declaration.
+
+A resource can declare the same named choice in conditional rules when every declaration has
+one `hasChoice` prerequisite, all test the same parent name with `equals`, and each tests a distinct
+value. At most one declaration can be active. Overlapping or unconditional duplicate declarations
+are rejected.
+
 A choice accepts one answer unless it declares `multiple: {min: 0, max: 4}`. `max` can be
 omitted. A confirmed empty list differs from an unanswered question. Values must be distinct and
 all must fit the options. `optionsFrom: $.deity.domains` restricts the options to the valid answers
@@ -865,11 +873,11 @@ Resource schemas share the optional `mechanicsScope` and `unsupportedReason`
 fields from `schemas/utility-types/mechanics-support.schema.json`.
 
 - `mechanicsScope` classifies mechanics coverage as `builder`, `encounter`, or `mixed`.
-- `unsupportedReason` is a non-empty explanation when canonical mechanics could not be represented. It requires `mechanicsScope`, and the record must not also contain `rules`.
+- `unsupportedReason` is a non-empty explanation of the mechanics that could not be represented. It requires `mechanicsScope`. A `mixed` record can retain rules for its supported mechanics beside this explanation.
 - `encounter` records cannot contain builder `rules`; `builder` records cannot set `unsupportedReason`.
 
 Use these fields to make support limits explicit. Preserve useful source rules text
-in `description`; do not add partial `rules` to avoid an unsupported classification.
+in `description`. For partial support, use `mixed`, retain the supported rules, and describe only the missing mechanics in `unsupportedReason`.
 
 ### Other items
 

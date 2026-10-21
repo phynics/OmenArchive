@@ -1,0 +1,21 @@
+---
+name: defensive robes
+level: 13
+traits:
+- sorcerer
+- summoner
+- witch
+- wizard
+description: The flow of magic around you increases your ability to avoid attacks.
+  Your proficiency rank in unarmored defense increases to expert.
+mechanicsScope: builder
+foundryID: gU7epgcPSm0TD1UK
+rules:
+- id: 756d929f-1f4d-5a1c-8bb3-6c1e4cac636a
+  key: generated-1
+  effect: core/add-armor-proficiency
+  level: 13
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false

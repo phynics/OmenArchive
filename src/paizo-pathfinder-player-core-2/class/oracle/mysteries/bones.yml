@@ -1,0 +1,85 @@
+---
+name: bones
+level: 1
+traits:
+- oracle
+description: "Your mystery imparts an understanding of death and undeath in all their
+  macabre complexity. You might have had a brush with death yourself—maybe even dying
+  and returning to life—or carry the touch of undeath in your blood. If you commune
+  with deities, you might speak with guardians of death like Pharasma and the psychopomp
+  ushers (the most powerful among creatures that guide souls through the afterlife);
+  a bringer of death like the Mantis God Achaekek or the Horseman of the Apocalypse
+  Charon; or a herald of undeath such as Urgathoa.\nGranted Spells\n\t•\tcantrip:
+  Void Warp\n\t•\t1st: Grim Tendrils\n\t•\t2nd: False Vitality\n\t•\t3rd: Ghostly
+  Weapon\nRevelation Spells\n\t•\tinitial: Soul Siphon\n\t•\tadvanced: Armor of Bones\n\t•\tgreater:
+  Claim Undead\nRelated Domains death, decay, undeath, vigil\nMystery Skill Medicine\nOracle
+  Feat Nudge the Scales\nCurse of the Living Death"
+mechanicsScope: builder
+foundryID: IaxmCkdsPlA52spu
+rules:
+- id: c6d091e1-ee47-5e65-b0c9-ca84fb77ec82
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceName: Oracle Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: 8d9905ae-0f98-5784-88bb-b10fc8045cb0
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: medicine}
+    proficiencyCap: 2
+- id: b1acf6e5-ba2d-5506-a199-b5707347c3e3
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: c357f32c-fea4-5157-8c42-22d004bcbe67
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 5546a75e-ad2d-5648-9c94-b9e33015386f
+    spellId: '@spell.soul-siphon'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 5abb8937-9dfa-51ab-a0ef-3c54c30f4dee
+  effect: spellcasting/add-focus-point
+- id: 18973461-a349-5cd0-87b0-d5648e93bcbb
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: '@class.oracle.curses.curse-of-the-living-death'
+- id: 92482223-a07f-5dab-9fe7-334e1c080674
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 08a182f5-0ee5-57ea-848c-21dac21edd21
+    featId: '@feat.nudge-the-scales'
+- id: 675080d7-52d3-5839-bf5d-d6a1ce7c80e8
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 01568d7e-8f1d-5444-9ac7-e6321809e0e0
+    spellId: '@spell.void-warp?source=paizo-pathfinder-player-core'
+- id: 0cc4c2e0-df6e-561e-b11d-538c4489abac
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 4d9bd86d-37c3-5b6d-8b90-2f1a35808a7b
+    spellId: '@spell.grim-tendrils?source=paizo-pathfinder-player-core'
+- id: d1080130-fa1e-5bc3-ac78-40daef87199e
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 988cd051-a0b6-5c64-8f3f-6e0337210194
+    spellId: '@spell.false-vitality?source=paizo-pathfinder-player-core'
+- id: a4e82e25-f977-597d-8ca0-ce4081a63f04
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 95228064-cd6d-5d6d-94f2-db4dec4b5d2a
+    spellId: '@spell.ghostly-weapon?source=paizo-pathfinder-player-core'

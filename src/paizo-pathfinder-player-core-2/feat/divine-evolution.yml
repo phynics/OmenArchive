@@ -1,0 +1,36 @@
+---
+name: divine evolution
+level: 4
+rarity: common
+type: class
+traits:
+- divine
+- sorcerer
+prerequisites:
+- text: bloodline that grants divine spells
+  anyOf:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.draconic
+        equals: {type: core/string, value: divine}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}
+description: The divine might provided by your bloodline flows through you. You gain
+  an additional spell slot of your highest level, which you can use only to cast your
+  choice of Heal or Harm. You can cast either of these spells using that spell slot,
+  even if they aren't in your spell repertoire.
+mechanicsScope: encounter
+foundryID: WHOCaVobY7N3UTtA

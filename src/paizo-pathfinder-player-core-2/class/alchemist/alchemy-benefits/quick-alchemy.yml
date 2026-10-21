@@ -1,0 +1,17 @@
+---
+name: quick alchemy
+level: 1
+traits:
+- alchemist
+description: You gain the Quick Alchemy action to make the items you need on the fly.
+mechanicsScope: mixed
+unsupportedReason: 'Quick Alchemy''s action is granted. Its vial expenditure and temporary
+  item creation need the versatile-vial lifecycle; no unlimited or daily crafting
+  budget is invented. Follow-up: versatile-vial lifecycle.'
+foundryID: sPtl05wwTpqFI0lL
+rules:
+- id: 57d6b110-054f-5200-9b03-3d3adc41603b
+  key: grant-item-1
+  effect: core/add-action
+  inputs:
+    actionId: '@action.quick-alchemy'

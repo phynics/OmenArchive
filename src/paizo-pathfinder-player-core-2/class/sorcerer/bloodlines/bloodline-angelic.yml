@@ -1,0 +1,128 @@
+---
+name: 'bloodline: angelic'
+level: 1
+traits:
+- sorcerer
+description: 'One of your forebears hailed from a celestial realm, or your ancestors''
+  devotion led to their lineage being blessed.
+
+  Spell List divine
+
+  Bloodline Skills Diplomacy, Religion
+
+  Granted Spells cantrip Light, 1st: Heal, 2nd: Spiritual Armament, 3rd: Holy Light,
+  4th: Divine Wrath, 5th: Divine Immolation, 6th: Blessed Boundary, 7th: Divine Decree,
+  8th: Moment of Renewal, 9th: Foresight
+
+  Bloodline Spells initial: Angelic Halo, advanced: Angelic Wings, greater: Celestial
+  Brand
+
+  Blood Magic—Divine Aura You project a warming aura that protects you or one target,
+  granting a +1 status bonus to saving throws for 1 round'
+mechanicsScope: builder
+foundryID: vhW3glAaEfq2DKrw
+rules:
+- id: d0c00ad4-bf64-5422-b6dd-f43175075c69
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: 71633aa1-8941-5e89-af98-633250f2217a
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: diplomacy}
+    proficiencyCap: 2
+- id: d645c024-b688-5fc9-850c-5b80564700d2
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: religion}
+    proficiencyCap: 2
+- id: e75c8417-a338-5573-94dd-35de36fe6b54
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 9fed95ef-d5c4-5e5d-92a4-d838cdf4c7a4
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 93ba435e-7d67-5b3b-9ca6-8d936fd44803
+    spellId: '@spell.angelic-halo'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: c5854985-8826-5500-a38b-0a0ac599b08c
+  effect: spellcasting/add-focus-point
+- id: 4cf1f299-f3a1-5d64-8dd8-a6f9f61ebbee
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: b6495252-0a60-5289-9161-f0fcd78a0456
+    spellId: '@spell.light?source=paizo-pathfinder-player-core'
+- id: 1ccbf4b9-44f1-5ed9-b6ab-dea66923bf98
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 372461ba-7bee-554c-8f3c-5926223ceada
+    spellId: '@spell.heal?source=paizo-pathfinder-player-core'
+- id: e92b3349-4f00-55ba-8e9d-829f0d1ea464
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: ffd8ea5d-7670-58bf-aa77-0410a5909593
+    spellId: '@spell.spiritual-armament?source=paizo-pathfinder-player-core'
+- id: 820e1934-07f3-564b-af47-79a859077baa
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 7a3f156a-030a-5ad2-9cf7-fa598ddc2c4a
+    spellId: '@spell.holy-light?source=paizo-pathfinder-player-core'
+- id: 7b4ba4dd-151b-5d88-a68f-f2a0c51e6e07
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: f6884abc-879a-5a7d-9a51-df12e453f462
+    spellId: '@spell.divine-wrath?source=paizo-pathfinder-player-core'
+- id: 282860fd-a0a3-5ef1-a523-fcb97fb633ab
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 6d04d091-6167-5d2a-98fe-e06ef9d30af6
+    spellId: '@spell.divine-immolation?source=paizo-pathfinder-player-core'
+- id: 4b09da63-13da-5c52-b05b-7469a4538f82
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: f7cf05cc-47d1-536a-a8e3-923783cb59d9
+    spellId: '@spell.blessed-boundary?source=paizo-pathfinder-player-core'
+- id: 84b0c3e8-5db6-551c-8b8d-da1cba6ae14b
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 217110ce-c9c8-5153-8ca0-4a194039676e
+    spellId: '@spell.divine-decree?source=paizo-pathfinder-player-core'
+- id: 3d938601-8cc3-5a9e-a7ab-9d5dc8b0dab3
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 04c86a2c-2394-5243-9e25-27dcbd1419a5
+    spellId: '@spell.moment-of-renewal?source=paizo-pathfinder-player-core'
+- id: eafd203c-8c4f-574b-8c31-c3a537a0860a
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fd111284-6896-5ba8-be1c-169acc3576eb
+    spellId: '@spell.foresight?source=paizo-pathfinder-player-core'

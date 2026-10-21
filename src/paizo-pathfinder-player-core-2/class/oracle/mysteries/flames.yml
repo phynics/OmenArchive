@@ -1,0 +1,82 @@
+---
+name: flames
+level: 1
+traits:
+- oracle
+description: "Fire lives at the center of the world, the center of the sun, and the
+  center of civilization. You might revere this elemental force, siphon power from
+  the Elemental Plane of Fire, or venerate a collection of deities such as Asmodeus,
+  Sarenrae, the Tian goddess of disasters and volcanoes Lady Nanbyo, or the elemental
+  lord of fire Ymeri.\nGranted Spells\n\t•\tcantrip: Ignition\n\t•\t1st: Breathe Fire\n\t•\t2nd:
+  Blazing Bolt\n\t•\t3rd: Fireball\nRevelation Spells\n\t•\tinitial: Incendiary Aura\n\t•\tadvanced:
+  Whirling Flames\n\t•\tgreater: Flaming Fusillade\nRelated Domains dust, fire, star,
+  sun\nMystery Skill Acrobatics\nOracle Feat Foretell Harm\nCurse of Engulfing Flames"
+mechanicsScope: builder
+foundryID: GTSvbFb36InvuH0w
+rules:
+- id: 4ff5fff6-381f-5e5e-a50a-5d283799218e
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceName: Oracle Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: 26e211cd-5249-5b48-8fbd-59bd71e765a8
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: acrobatics}
+    proficiencyCap: 2
+- id: 9f555440-86bd-582f-85c1-400ca911c302
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 26602f66-18a4-5ad6-8765-6c7538c58aef
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 77fd2bba-9212-58cc-aaf3-d8b9b4ba032a
+    spellId: '@spell.incendiary-aura'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: f58bbcd1-6fc6-53ba-ba3c-d16c81e32699
+  effect: spellcasting/add-focus-point
+- id: a4e8e1ee-a5d6-52db-839e-35b20692d82a
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: '@class.oracle.curses.curse-of-engulfing-flames'
+- id: fd0ea002-5ed3-5688-916d-a66182703667
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 0a708e8b-23ba-557f-881e-61d5bd5eab3d
+    featId: '@feat.foretell-harm'
+- id: 12b20df8-5cbc-5a01-b068-dad08ac88919
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 554c677c-b76a-53f7-9f9f-7516e8fc89b4
+    spellId: '@spell.ignition?source=paizo-pathfinder-player-core'
+- id: 1612e108-319f-5a22-ace8-74d1d9c35ca2
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: af072380-33a3-5762-9d05-5f478dbb9ce1
+    spellId: '@spell.breathe-fire?source=paizo-pathfinder-player-core'
+- id: bda2bf5e-653b-537b-bb4c-2a175dd129f0
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: a400d24d-4b2a-5adf-b18c-c06bf4ccdc97
+    spellId: '@spell.blazing-bolt?source=paizo-pathfinder-player-core'
+- id: f54d9744-d87f-561b-bb6a-0a4374c016ec
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: b78ce4b4-7391-5bc4-bd61-fc7fb9213a54
+    spellId: '@spell.fireball?source=paizo-pathfinder-player-core'

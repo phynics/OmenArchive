@@ -1,0 +1,51 @@
+---
+name: conduit of void and vitality
+level: 16
+rarity: common
+type: class
+traits:
+- cursebound
+- divine
+- oracle
+prerequisites:
+- text: any oracle mystery
+  anyOf:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
+action:
+  count: two_actions
+  requirements: You have Heal or Harm as a signature spell and an available spell
+    slot to cast it with.
+description: You use the unstable energy of your curse to manipulate the most basic
+  of divine magic. You cast a 3-action heal or harm spell, expending the slot as normal.
+  If the spell restores Hit Points to one or more creatures, then one creature healed
+  by this spell regains a number of additional Hit Points equal to 1d8 × your Cursebound
+  value; if the spell damages one or more creatures, then one creature harmed by this
+  spell takes additional damage equal to 1d8 × your cursebound value.
+mechanicsScope: mixed
+unsupportedReason: 'Foundry feat rule elements are preserved for external review.
+  External review required. Resource: omen://feat/conduit-of-void-and-vitality?source=paizo-pathfinder-player-core-2.
+  Foundry keys: [RollOption, ItemAlteration].'
+foundryID: iwBUJ08g0NJ2Emdl

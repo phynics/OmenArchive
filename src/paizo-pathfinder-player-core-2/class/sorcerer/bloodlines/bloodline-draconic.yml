@@ -1,0 +1,710 @@
+---
+name: 'bloodline: draconic'
+level: 1
+traits:
+- sorcerer
+description: "The blood of dragons flows through your veins. These beasts are both
+  fearsome in combat and skilled at magic.\nTradition variable (see Draconic Exemplars
+  below)\nBloodline Skills Intimidation and one other skill (see Draconic Exemplars
+  below)\nSorcerous Gifts cantrip: Shield; 1st: Fear; 2nd: see Draconic Exemplars
+  below; 3rd: Haste; 4th: Fly; 5th: see Draconic Exemplars below; 6th: Dragon Form
+  (dragon must match your draconic exemplar); 7th: Mask of Terror; 8th: see Draconic
+  Exemplars below; 9th: Overwhelming Presence\nBloodline Spells initial: Flurry of
+  Claws; advanced: Dragon Breath; greater: Dragon Wings\nBlood Magic—Scaly Hide Draconic
+  scales grow briefly on you or one target, granting a +1 status bonus to AC for 1
+  round.\nDraconic Exemplars\nAt 1st level, choose the tradition related to the dragon
+  exemplar who influenced your bloodline. You can't change your dragon exemplar later.
+  As noted, this affects both your bloodline's features and your sorcerous gift spells.\n\t•\tArcane—Tradition
+  arcane; Bloodline Skill Arcana; Sorcerous Gifts 2nd: Blazing Bolt; 5th: Subconscious
+  Suggestion; 8th: Quandary\n\t•\tDivine—Tradition divine; Bloodline Skill Religion;
+  Sorcerous Gifts 2nd: Augury; 5th: Divine Immolation; 8th: Divine Inspiration\n\t•\tOccult—Tradition
+  occult; Bloodline Skill Occultism; Sorcerous Gifts 2nd: Blood Vendetta; 5th: Slither;
+  8th: Unrelenting Observation\n\t•\tPrimal—Tradition primal; Bloodline Skill Nature;
+  Sorcerous Gifts 2nd: Shatter; 5th: Howling Blizzard; 8th: Earthquake\nDraconic Sorcerer
+  Bloodlines"
+mechanicsScope: builder
+foundryID: ZHabYxSgYK0XbjhM
+rules:
+- id: 04bf458d-7f46-51ae-bc22-032a34eea2f8
+  key: choice-sorcerer-bloodline-draconic
+  choice:
+    name: $.sorcerer.bloodline.draconic
+    label: Draconic tradition
+    type: core/string
+    cases:
+    - {value: arcane}
+    - {value: divine}
+    - {value: occult}
+    - {value: primal}
+- id: 606980ff-d721-5cd6-bf72-218e92c7feda
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: arcane
+    attribute: cha
+- id: 63952f08-8091-5f12-9f9f-e28f2846108b
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    skill: {kind: arcana}
+    proficiencyCap: 2
+- id: 200f529f-51b6-5b61-ad7b-39c1ded82985
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: e626a7b3-6fa8-5aa5-add9-982c53db429b
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: arcane
+    attribute: cha
+- id: 485bf811-4272-5511-bdb1-92a9eb4e8315
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 22214725-f47f-5d86-b8a4-98e095f130b9
+    spellId: '@spell.flurry-of-claws'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: f634ad12-942a-524f-93d8-9f609e58e049
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+- id: 02c6cc02-a188-5713-b1fe-b735bc147655
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
+    spellId: '@spell.shield?source=paizo-pathfinder-player-core'
+- id: e60d03e3-65be-5dbd-b8a6-7e6662a17956
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
+    spellId: '@spell.fear?source=paizo-pathfinder-player-core'
+- id: 598d356c-93bd-5552-a701-3dad1ebf54e7
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 2d4bda20-36ac-52bb-82ab-89581b5442f5
+    spellId: '@spell.blazing-bolt?source=paizo-pathfinder-player-core'
+- id: 98ed5c5a-ec2e-5bb5-93e0-9d6f57d35aef
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
+    spellId: '@spell.haste?source=paizo-pathfinder-player-core'
+- id: dd884f45-a040-5529-81c4-12be52c4bf30
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
+    spellId: '@spell.fly?source=paizo-pathfinder-player-core'
+- id: 960b130f-e6b6-5370-a063-7329cccf8bf9
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 5c41b3b1-f47f-5647-82fc-ecac8432bd54
+    spellId: '@spell.subconscious-suggestion?source=paizo-pathfinder-player-core'
+- id: 8aae26c5-0019-5f58-9136-b1783afb34f0
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
+    spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
+- id: a520b093-63fd-5a56-9bca-7505fd9766d2
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
+    spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
+- id: a820cac6-4aa4-5079-8bf7-a42b6453c5b7
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: aa032417-4fe5-56ab-96ba-2556b85d3671
+    spellId: '@spell.quandary?source=paizo-pathfinder-player-core'
+- id: cb716600-5386-5504-a39a-c4e987ece089
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: arcane}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
+    spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'
+- id: 57b5e042-aa81-5e03-a424-f66ade7828f1
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: 14e7b72f-7f2b-548a-a178-a7ae304a482b
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: ae39233a-c021-5781-8548-e61573f3578d
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    skill: {kind: religion}
+    proficiencyCap: 2
+- id: f855685b-0bb7-54e8-913d-6af1660f2873
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 98a4713c-d3df-5707-88f9-4460783673c1
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 22214725-f47f-5d86-b8a4-98e095f130b9
+    spellId: '@spell.flurry-of-claws'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: da9c8d13-c2d8-5856-948e-88241fa771f3
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+- id: cbe8fa8f-2781-58f1-b124-3b78efa29624
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
+    spellId: '@spell.shield?source=paizo-pathfinder-player-core'
+- id: 7e93fe63-f945-5ef4-b379-46f8d033ea22
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
+    spellId: '@spell.fear?source=paizo-pathfinder-player-core'
+- id: 60b17410-9bbc-533f-988a-9b6d7da74fe8
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 9c51725d-80bb-5195-bdeb-28ddddc16bd2
+    spellId: '@spell.augury?source=paizo-pathfinder-player-core'
+- id: decff6f1-c76f-5ee0-85c1-776de5d520a3
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
+    spellId: '@spell.haste?source=paizo-pathfinder-player-core'
+- id: 066c98ac-90a5-52b4-9b00-331a848b13d1
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
+    spellId: '@spell.fly?source=paizo-pathfinder-player-core'
+- id: 28d85d3d-6fb2-5d5d-baf1-e5481ba2dbd2
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: bf13ead1-0440-5d13-85fa-23f8cf74347d
+    spellId: '@spell.divine-immolation?source=paizo-pathfinder-player-core'
+- id: 53ab25a4-190e-50f9-bc8e-e7c86de643ac
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
+    spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
+- id: 4627960a-ef24-521f-8df0-0b1134862352
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
+    spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
+- id: 46a2b996-f123-5911-9990-3429cf4e705a
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3d4c2f50-5911-5868-8a79-638588a92d52
+    spellId: '@spell.divine-inspiration?source=paizo-pathfinder-player-core'
+- id: 718b5d1c-eeec-5baf-a0d9-635ca9507dc0
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: divine}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
+    spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'
+- id: d934e126-baf7-50fb-ae22-b99ad64e3acf
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: occult
+    attribute: cha
+- id: 8f012a5d-522f-5ec6-a54d-9864560f0b47
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: 3d0825f0-eaf3-562f-bc15-834759745433
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    skill: {kind: occultism}
+    proficiencyCap: 2
+- id: 98fedc0c-4dd7-55ac-8784-f9a6b1296a97
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: occult
+    attribute: cha
+- id: ecece5ab-2a34-5376-af5f-eb5d605ef023
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 22214725-f47f-5d86-b8a4-98e095f130b9
+    spellId: '@spell.flurry-of-claws'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 87df4650-3959-5b00-bd81-9167810f4ed5
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+- id: e643341e-6c16-5244-b27f-99d483c45ea2
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
+    spellId: '@spell.shield?source=paizo-pathfinder-player-core'
+- id: 3cbf28f9-73ae-54d4-95a5-77d96270ef37
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
+    spellId: '@spell.fear?source=paizo-pathfinder-player-core'
+- id: 62ed9323-5e21-576d-95b0-be2baf50cc91
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 21ba0627-8e56-5c81-92d8-1751efe1af51
+    spellId: '@spell.blood-vendetta?source=paizo-pathfinder-player-core'
+- id: f9f3c478-2c2f-5ce6-b125-70ae85daa647
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
+    spellId: '@spell.haste?source=paizo-pathfinder-player-core'
+- id: 66adcdea-2af2-57be-bc9f-ec6bf620051d
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
+    spellId: '@spell.fly?source=paizo-pathfinder-player-core'
+- id: feb0701f-9f9e-57fc-8412-22bf805b0951
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: bee4b33c-8b7b-5749-b673-5bcb3114414d
+    spellId: '@spell.slither?source=paizo-pathfinder-player-core'
+- id: 84b71e51-7f50-5183-b28d-6ce5d01b4794
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
+    spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
+- id: 2885376a-5d30-5450-b9d7-7adfaa5c2155
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
+    spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
+- id: 9e35c7b8-0aa0-53c6-8656-3c0e610edc35
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: b3a28d26-2a2a-5a5d-9fb1-d062fef81e18
+    spellId: '@spell.unrelenting-observation?source=paizo-pathfinder-player-core'
+- id: 5777966c-9d95-5f18-8301-a1bf4c8042cb
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: occult}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
+    spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'
+- id: c8e5db18-02fd-5eac-b9e4-ac15f7a56d43
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: cha
+- id: 5c1c1bbd-a7eb-56ef-b5bb-e151a2138140
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: 6db8ad0d-b877-53d7-832c-a3d6bea6fca0
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: 10096b24-f13d-55cf-a200-2b58dd1ba018
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: cha
+- id: 19b3c40a-ae1d-5c77-acd9-fb4afb1bfbfb
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 22214725-f47f-5d86-b8a4-98e095f130b9
+    spellId: '@spell.flurry-of-claws'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: df70161c-bbed-589f-b169-9526a4070f84
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+- id: 3b6b1faa-4c28-5936-a048-eb9cb0b7da83
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
+    spellId: '@spell.shield?source=paizo-pathfinder-player-core'
+- id: 6c843e61-aa87-50b4-a298-56fe657ef5a5
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
+    spellId: '@spell.fear?source=paizo-pathfinder-player-core'
+- id: d1c96073-88ae-5557-8645-a2cd1adf21a6
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 20b52f57-cced-571f-afaa-dfecb893a1e8
+    spellId: '@spell.shatter?source=paizo-pathfinder-player-core'
+- id: 1898aa29-10a5-5689-ae09-b06b9ba01acd
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
+    spellId: '@spell.haste?source=paizo-pathfinder-player-core'
+- id: 1c36a1cf-9ab4-5443-86e0-bbb358e82251
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
+    spellId: '@spell.fly?source=paizo-pathfinder-player-core'
+- id: 69d96ff2-86ba-58a4-887e-c456d4a06066
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 1720c4f1-ceb3-538a-9a91-7f4c6d8a3368
+    spellId: '@spell.howling-blizzard?source=paizo-pathfinder-player-core'
+- id: fdaf8d15-1471-5b9a-88c4-87cfd7c1ed80
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
+    spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
+- id: 2978fbb9-2608-51c3-a517-1ae77d8d7e21
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
+    spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
+- id: 84ab0330-bd81-510f-9b78-751473af99f4
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 9afec6eb-ada7-571d-92b0-dabd2fc07648
+    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+- id: 1ec7926d-b9e2-5ba9-9c24-374fcc263b14
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.draconic
+      equals: {type: core/string, value: primal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
+    spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'

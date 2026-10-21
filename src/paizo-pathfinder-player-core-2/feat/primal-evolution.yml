@@ -1,0 +1,69 @@
+---
+name: primal evolution
+level: 4
+rarity: common
+type: class
+traits:
+- primal
+- sorcerer
+prerequisites:
+- text: bloodline that grants primal spells
+  anyOf:
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.draconic
+        equals: {type: core/string, value: primal}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.elemental
+        equals: {type: core/string, value: air}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.elemental
+        equals: {type: core/string, value: earth}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.elemental
+        equals: {type: core/string, value: fire}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.elemental
+        equals: {type: core/string, value: metal}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.elemental
+        equals: {type: core/string, value: water}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.elemental
+        equals: {type: core/string, value: wood}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
+description: You can call upon the creatures of the wild for aid. You gain an additional
+  spell slot of your highest rank, which you can use only to cast Summon Animal or
+  Summon Plant or Fungus. You can cast either of these spells using that spell slot,
+  even if it they aren't in your spell repertoire.
+mechanicsScope: encounter
+foundryID: K3TasgeZLJQ84qtZ

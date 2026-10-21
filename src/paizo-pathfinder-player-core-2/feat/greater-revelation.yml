@@ -1,0 +1,303 @@
+---
+name: greater revelation
+level: 12
+rarity: common
+type: class
+traits:
+- oracle
+prerequisites:
+- text: initial revelation spell
+  anyOf:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
+description: You unlock deeper revelations hidden within your mystery. You gain your
+  mystery's greater revelation spell
+mechanicsScope: builder
+foundryID: HSW3N9pfHhM7upRB
+rules:
+- id: 673d17d8-00a0-5882-91ee-caf61a96d9de
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 05c18b62-6bdf-5b70-85e9-9e30326b6012
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 30aff7fc-a656-50e5-9387-817254d05b95
+    spellId: '@spell.ancestral-form'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 3c919168-9e52-5efe-b7a5-76103407477e
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
+- id: 891d4ffb-5879-527a-92be-f3229600feac
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 3547b5f9-0ac1-5cd5-a6de-1111d765ae26
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 301d3439-38fa-5804-b227-e9afd8e73ccf
+    spellId: '@spell.revel-in-retribution'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 5aa6e14a-e6b5-55dd-b78e-fab2c8174610
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
+- id: 446b000d-bd83-5772-9922-5577042b7d7f
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 43bb0f13-cea2-5224-b9de-8fe59fa8985e
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: a2aa2746-95a5-5311-9871-2e0b41b224bb
+    spellId: '@spell.claim-undead'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: c24a456e-33b6-5475-a913-037a1787d98c
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
+- id: 1f09c4d4-eef8-5ea1-82a8-6f3e880c7ec6
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: ee6fc216-1a36-5f02-807b-4fc9b7a72a7e
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 2ec27264-1be5-5e63-b5b9-2f11eabd9394
+    spellId: '@spell.moonlight-bridge'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 0368c5d4-84f6-58c1-b68f-edc0d7edaa52
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
+- id: bce86d13-1af1-530d-838e-39150f5d86cd
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 81440ab2-b1c0-54c1-a432-7c1aa8b9c5e7
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 99876920-5791-582d-8e9b-b9c7ccefdbc9
+    spellId: '@spell.flaming-fusillade'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 0ef999cc-ce41-5bac-813c-13c531e9637e
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
+- id: 2a4b6851-ba7f-55c9-8d86-e5b7c09c4363
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: a17e6925-72c2-5e3e-b091-d94bfe263bd8
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: e978b481-edca-5f11-bde1-c2c6305349a9
+    spellId: '@spell.life-giving-form'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 8d0301f3-3a30-525f-b4c4-cd6d09d14a5e
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+- id: 4a8573a2-d628-5ac5-8af8-aa7faf8199b0
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: dd2f2183-fd16-5f6c-b8ed-288aa706f338
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 93c3c083-9c3b-5343-8995-c9513d1ebb8a
+    spellId: '@spell.dread-secret'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 94427468-8e99-532d-ab32-a15771131d40
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
+- id: 26d3a3e8-db94-52ce-8270-2cf6b5c98a18
+  effect: spellcasting/configure-source
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: cec053cc-18e9-537f-abcc-b0d193d2e279
+  effect: spellcasting/grant-spell
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: 8b26818a-6b29-5e1b-bcef-50c68f9e67db
+    spellId: '@spell.tempest-form'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: faf5ac7c-2ed2-5eb5-9b2e-28c160927d8a
+  effect: spellcasting/add-focus-point
+  level: 12
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}

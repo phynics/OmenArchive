@@ -1,0 +1,85 @@
+---
+name: cosmos
+level: 1
+traits:
+- oracle
+description: "Celestial bodies great and small exert influence on you, giving you
+  sublime cosmic power. Perhaps you see the glittering stars as a divine blessing,
+  or perhaps you feel drawn to the infinitely dark spaces between. You might uphold
+  deities like Desna, Sarenrae, or the deific lovers Shizuru and Tsukiyo who represent
+  the sun and the moon—or you might draw power from dark entities from beyond the
+  stars, like certain Outer Gods, or destructive gods of the night like Zon-Kuthon
+  or the rat goddess Lao Shu Po.\nGranted Spells\n\t•\tcantrip: Light\n\t•\t1st: Dizzying
+  Colors\n\t•\t2nd: Darkness\n\t•\t5th: Moon Frenzy\nRevelation Spells\n\t•\tinitial:
+  Spray of Stars\n\t•\tadvanced: Interstellar Void\n\t•\tgreater: Moonlight Bridge\nRelated
+  Domains darkness, moon, nothingness, star\nMystery Skill Nature\nOracle Feat Oracular
+  Warning\nCurse of the Sky's Call"
+mechanicsScope: builder
+foundryID: RI2EMRBBPNSoTJXu
+rules:
+- id: aa0030e4-4d9f-5ab4-81a7-e7eeaed5d604
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceName: Oracle Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: 6d95fa26-ecca-5ee8-ac24-c27d0f95328a
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: c5021673-7b3c-529e-9f2b-7034f072fd07
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 3f845153-4504-55bc-8652-50db982446a2
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: d53c88a8-405a-5ef8-bfe6-298c39e476fc
+    spellId: '@spell.spray-of-stars'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: b6d8bca8-6e05-56bb-a112-b15888e78b5b
+  effect: spellcasting/add-focus-point
+- id: 388ed026-b005-5267-833c-5bb663c8a80c
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: '@class.oracle.curses.curse-of-the-skys-call'
+- id: bc30a174-1769-5f3d-af8f-93fe61bdb6c1
+  effect: core/add-feat@2
+  inputs:
+    selectionId: ea6294f6-9c02-5e70-9586-934bb6eac8de
+    featId: '@feat.oracular-warning'
+- id: 1ebe6181-0950-5a07-8e17-af92d0eed99b
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: fb8d6369-4055-5ce5-9c4c-9c022418d4e7
+    spellId: '@spell.light?source=paizo-pathfinder-player-core'
+- id: 6a6d63f5-91a9-57b8-8929-035273116b3e
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 986690c2-0710-5b2c-be35-de7c3b7b03ff
+    spellId: '@spell.dizzying-colors?source=paizo-pathfinder-player-core'
+- id: fed2d947-14cf-5847-9b1d-965234f6208a
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: d0dd372a-3c48-57b8-abf7-64df0df0968a
+    spellId: '@spell.darkness?source=paizo-pathfinder-player-core'
+- id: bcd654bf-99eb-5552-b5fd-6d47dc3ecf34
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: b927fa39-5fb7-505c-a607-74326ad4a365
+    spellId: '@spell.moon-frenzy?source=paizo-pathfinder-player-core'

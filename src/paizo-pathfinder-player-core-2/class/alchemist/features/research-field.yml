@@ -1,0 +1,28 @@
+---
+name: research field
+level: 1
+traits:
+- alchemist
+description: Your inquiries into the alchemical nature of the universe have led you
+  to focus on a particular field of research. At 1st level, you choose your research
+  field. This choice gives you more formulas, a special benefit, other abilities for
+  your versatile vials, and other benefits as you level up.
+mechanicsScope: builder
+foundryID: cU2ofQLj7pg6wTSi
+rules:
+- id: 33fd7bc6-f8b7-59eb-bcd3-2425f06e7c96
+  key: choice-alchemist-research-field
+  choice:
+    name: $.alchemist.research-field
+    label: Research field
+    type: core/feature-id
+    cases:
+    - {key: bomber, value: '@class.alchemist.research-fields.bomber'}
+    - {key: chirurgeon, value: '@class.alchemist.research-fields.chirurgeon'}
+    - {key: mutagenist, value: '@class.alchemist.research-fields.mutagenist'}
+    - {key: toxicologist, value: '@class.alchemist.research-fields.toxicologist'}
+- id: 6f262bbf-dbc4-51a3-873b-4c9da86e13e0
+  key: grant-selected-research-field
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: {choice: $.alchemist.research-field}

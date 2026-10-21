@@ -1,0 +1,41 @@
+---
+name: deity's domain
+level: 1
+rarity: common
+type: class
+traits:
+- champion
+description: You embody an aspect of your deity. Choose one of your deity's domains.
+  You gain the domain's initial domain spell as a devotion spell.
+mechanicsScope: builder
+foundryID: FXKIALDXAzEBfj5A
+rules:
+- id: 81d82cb1-48d1-5c92-b67b-fb953e71995c
+  key: choice-deity-domains
+  choice:
+    name: $.deity.domains
+    label: Deity's domains
+    multiple: {min: 1, max: 4}
+    records: {filter: {type: domain}, type: core/domain-id}
+- id: 07a5ce80-5c26-5625-b3d5-76e5c8a9dd93
+  key: choice-champion-domains
+  choice:
+    name: $.champion.domains
+    label: Domain
+    optionsFrom: $.deity.domains
+    records: {filter: {type: domain}, type: core/domain-id}
+- id: b7a22a77-7974-5fc3-b55f-204d1c0d92ee
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
+    sourceName: Champion Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: c55f4be1-2d7a-53f4-bb3d-426d2a460155
+  key: domain-spell
+  effect: spellcasting/grant-domain-spell
+  inputs:
+    sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
+    domain: {choice: $.champion.domains}
+    advanced: false

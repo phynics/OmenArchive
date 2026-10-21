@@ -1,0 +1,31 @@
+---
+name: hero's defiance
+level: 19
+traits:
+- champion
+description: You can defy fate and continue fighting as long as you have divine energy.
+  You gain the Hero's Defiance devotion spell.
+mechanicsScope: builder
+foundryID: LzB6X9vOaq3wq1FZ
+rules:
+- id: bdd54f9f-0e21-5cb5-ba18-e0b240fd9eec
+  effect: spellcasting/configure-source
+  level: 19
+  inputs:
+    sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
+    sourceName: Champion Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: df514b4c-09d8-5a65-9b55-a02a5d62a913
+  effect: spellcasting/grant-spell
+  level: 19
+  inputs:
+    sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
+    grantId: a256405b-b958-5379-9559-f79a480264b5
+    spellId: '@spell.heros-defiance'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 76102d72-5338-5390-841b-389eecbae8d1
+  effect: spellcasting/add-focus-point
+  level: 19

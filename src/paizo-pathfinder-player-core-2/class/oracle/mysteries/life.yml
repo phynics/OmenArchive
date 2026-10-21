@@ -1,0 +1,83 @@
+---
+name: life
+level: 1
+traits:
+- oracle
+description: "The never-ending flow of life force within living beings is palpable
+  to you. You might uphold the sanctity of life, or perhaps you seek to undermine
+  it. You might draw power from the collective vitality of the world's living creatures,
+  hold some connection to Creation's Forge, or revere a collection of deities including
+  Irori, Pharasma, Sarenrae, and the god of medicine Qi Zhong.\nGranted Spells\n\t•\tcantrip:
+  Vitality Lash\n\t•\t1st: Soothe\n\t•\t2nd: False Vitality\n\t•\t5th: Grisly Growths\nRevelation
+  Spells\n\t•\tinitial: Life Link\n\t•\tadvanced: Delay Affliction\n\t•\tgreater:
+  Life-Giving Form\nRelated Domains death, healing, pain, soul\nMystery Skill Medicine\nOracle
+  Feat Nudge the Scales\nCurse of Outpouring Life"
+mechanicsScope: builder
+foundryID: o1gGG36wpn9mxeop
+rules:
+- id: 6e6cc28c-dcb0-582d-b671-2ad1fafddcdc
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceName: Oracle Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: ee81a09b-3ddf-5779-b14b-395ef46a4f75
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: medicine}
+    proficiencyCap: 2
+- id: 69043bda-4b18-55a6-bdd7-dfbceef2c742
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 8c6fc376-d418-547b-a573-0f37deb15099
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: ec6efacb-8287-552f-bb1c-18ba26443447
+    spellId: '@spell.life-link'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: daf0ca98-d9aa-58bc-85b2-324077cf1965
+  effect: spellcasting/add-focus-point
+- id: 8fc28d27-bbf6-5de6-962c-7a838dcfc2b4
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: '@class.oracle.curses.curse-of-outpouring-life'
+- id: c0d69f35-5f57-517e-87d2-b514855d94cd
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 113dcdf1-764a-59ac-a11c-d5f826b14ee7
+    featId: '@feat.nudge-the-scales'
+- id: 8894d04b-a402-5f21-bf65-28674edfc4a7
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: ae37b68e-1fd7-5349-8b10-11f1873c258f
+    spellId: '@spell.vitality-lash?source=paizo-pathfinder-player-core'
+- id: c66b5732-0ccd-5f76-9475-d95e8dd550f3
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: cefbe9e4-eee6-5d30-b608-6c7b2de1e950
+    spellId: '@spell.soothe?source=paizo-pathfinder-player-core'
+- id: 771e3928-cc1b-580a-94b1-62d1d095a038
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: e5d7dc9e-f5a8-51d0-92ad-96a5cdc15076
+    spellId: '@spell.false-vitality?source=paizo-pathfinder-player-core'
+- id: 582169dd-8441-5746-bb4e-e44ccb30332a
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: f249bc27-e974-5605-8331-bcbbdecaa340
+    spellId: '@spell.grisly-growths'

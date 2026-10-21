@@ -1,0 +1,52 @@
+---
+name: bloodline focus
+level: 12
+rarity: common
+type: class
+traits:
+- sorcerer
+prerequisites:
+- text: bloodline spell
+  anyOf:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.draconic
+        isSet: true
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.elemental
+        isSet: true
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}
+description: By listening to the beating of your heart, your focus recovers faster.
+  Whenever you Refocus, completely refill your focus pool.
+mechanicsScope: encounter
+foundryID: zSTPB1FFWMfA1JPi

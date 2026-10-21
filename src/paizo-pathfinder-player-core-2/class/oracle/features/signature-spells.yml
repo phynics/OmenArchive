@@ -1,0 +1,192 @@
+---
+name: signature spells
+level: 3
+traits:
+- bard
+- oracle
+- psychic
+- sorcerer
+- summoner
+description: You've learned to cast some of your spells more flexibly. For each spell
+  rank you have access to, choose one spell of that rank to be a signature spell.
+  You don't need to learn heightened versions of signature spells separately; instead,
+  you can heighten these spells freely. If you've learned a signature spell at a higher
+  rank than its minimum, you can also cast all its lower-rank versions without learning
+  those separately. If you swap out a signature spell, you can choose a replacement
+  signature spell of the same spell rank at which you learned the previous spell.
+  You can also retrain specifically to change a signature spell to a different spell
+  of that rank without swapping any spells; this takes as much time as retraining
+  a spell normally does.
+mechanicsScope: builder
+foundryID: VKRjmXxBFLrJK01c
+rules:
+- id: 2628108f-24bc-5df7-9b91-c7021e8e5444
+  level: 3
+  choice:
+    name: $.oracle.signature-spells.rank-1
+    label: Rank 1 signature spell
+    records:
+      filter:
+        all:
+        - {level: 1}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: 986bdc6b-e220-5795-a0a1-e1ddc5da82c8
+  effect: spellcasting/mark-signature-spell
+  level: 3
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-1}
+- id: e27eb4e6-55c8-5cd3-bbd0-9e7177a350be
+  level: 3
+  choice:
+    name: $.oracle.signature-spells.rank-2
+    label: Rank 2 signature spell
+    records:
+      filter:
+        all:
+        - {level: 2}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: 428efa34-8456-53ba-8704-5012b7201717
+  effect: spellcasting/mark-signature-spell
+  level: 3
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-2}
+- id: de3d9875-e5c3-5726-8caf-e2d7e430112c
+  level: 5
+  choice:
+    name: $.oracle.signature-spells.rank-3
+    label: Rank 3 signature spell
+    records:
+      filter:
+        all:
+        - {level: 3}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: d1c8031c-0c3d-54ef-9b23-984b19c40fdd
+  effect: spellcasting/mark-signature-spell
+  level: 5
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-3}
+- id: a89b3997-709a-549e-91c4-ac152caf752e
+  level: 7
+  choice:
+    name: $.oracle.signature-spells.rank-4
+    label: Rank 4 signature spell
+    records:
+      filter:
+        all:
+        - {level: 4}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: 6a68a4ba-4163-519d-9756-9f146cd4917d
+  effect: spellcasting/mark-signature-spell
+  level: 7
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-4}
+- id: 0d819474-0523-5517-a1ac-5964706cc590
+  level: 9
+  choice:
+    name: $.oracle.signature-spells.rank-5
+    label: Rank 5 signature spell
+    records:
+      filter:
+        all:
+        - {level: 5}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: 4098dde3-c859-5bc2-b7bd-33de9b73fc1d
+  effect: spellcasting/mark-signature-spell
+  level: 9
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-5}
+- id: 06e4c792-f0b5-5187-aea9-e0d3eade1363
+  level: 11
+  choice:
+    name: $.oracle.signature-spells.rank-6
+    label: Rank 6 signature spell
+    records:
+      filter:
+        all:
+        - {level: 6}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: c405ef8f-48b4-558f-bfd6-c47fd1b4e819
+  effect: spellcasting/mark-signature-spell
+  level: 11
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-6}
+- id: 447ca53a-3cd5-5040-8a4d-4400fd905fd8
+  level: 13
+  choice:
+    name: $.oracle.signature-spells.rank-7
+    label: Rank 7 signature spell
+    records:
+      filter:
+        all:
+        - {level: 7}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: f9f99855-81bf-5954-8e75-e6ada86bca26
+  effect: spellcasting/mark-signature-spell
+  level: 13
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-7}
+- id: e4f71667-c546-5107-a43e-a5ff26345ca7
+  level: 15
+  choice:
+    name: $.oracle.signature-spells.rank-8
+    label: Rank 8 signature spell
+    records:
+      filter:
+        all:
+        - {level: 8}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: ffacf996-4d88-5d7e-9f90-6a2225d3a26a
+  effect: spellcasting/mark-signature-spell
+  level: 15
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-8}
+- id: 646350ae-654a-5428-964a-9303a3ce202b
+  level: 17
+  choice:
+    name: $.oracle.signature-spells.rank-9
+    label: Rank 9 signature spell
+    records:
+      filter:
+        all:
+        - {level: 9}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: 4ffecfeb-eed5-55fc-be3a-70a3ea75c022
+  effect: spellcasting/mark-signature-spell
+  level: 17
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-9}
+- id: 4b0b8fe3-76aa-5c93-8faf-4c8159e60939
+  level: 19
+  choice:
+    name: $.oracle.signature-spells.rank-10
+    label: Rank 10 signature spell
+    records:
+      filter:
+        all:
+        - {level: 10}
+        - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
+      type: spellcasting/spell-id
+- id: 08f98541-c6f5-5e00-818b-bd3eff2dd64c
+  effect: spellcasting/mark-signature-spell
+  level: 19
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spellId: {choice: $.oracle.signature-spells.rank-10}

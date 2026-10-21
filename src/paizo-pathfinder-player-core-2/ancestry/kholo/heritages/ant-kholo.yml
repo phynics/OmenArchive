@@ -11,3 +11,23 @@ description: You're a sharp-featured, big-eared kholo about 3 feet tall. Many ar
 mechanicsScope: mixed
 unsupportedReason: 'A FlatModifier on initiative has no roll target. Foundry rule
   element CreatureSize has no translation. Resource: omen://ancestry/kholo/heritages/ant-kholo?source=paizo-pathfinder-player-core-2.'
+rules:
+- id: ab4c62f9-7a2e-5e5c-a048-e966acf0dcb3
+  key: flat-modifier-2
+  effect: core/add-roll-modifier@2
+  inputs:
+    uuid: be43ba2d-6190-5689-9e81-fa5e3177466a
+    target:
+      description:
+      - skill:
+          '_0':
+            deception: {}
+    description: 'Ant Kholo: +1 circumstance bonus to Deception checks (Lie).'
+    numeric: {literal: {amount: 1, applicability: {description: Lie, kind: situational},
+        type: circumstance}}
+- id: 45b29fff-911d-5e10-8dd5-899a46093055
+  key: active-effect-like-1
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: deception}
+    proficiencyCap: 2

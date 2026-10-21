@@ -8,5 +8,26 @@ description: Thanks to an ancient bargain, your soul has been reborn as a duskwa
   has low-light vision. Neither your body nor your spirit can ever become undead.
   You can select from duskwalker feats and feats from your ancestry whenever you gain
   an ancestry feat.
-mechanicsScope: mixed
-unsupportedReason: 'A conditional sense isn''t translated. Resource: omen://versatile-heritage/duskwalker?source=paizo-pathfinder-player-core-2.'
+mechanicsScope: builder
+rules:
+- id: 4e645d76-38d4-5d3d-9334-af8b8cb126d7
+  key: grant-heritage-trait
+  effect: core/add-character-ancestry-trait
+  inputs:
+    trait: duskwalker
+- id: a03ea570-58f4-5ebd-a864-36a33e71de71
+  key: sense-1
+  effect: core/add-sense
+  inputs:
+    selector: low-light-vision
+    acuity: ''
+    range: -1
+- id: 1f05642a-5b3e-5cde-b4bd-06beff51497c
+  key: sense-2
+  effect: core/add-sense
+  prerequisites:
+  - hasAncestryVision: low-light-vision
+  inputs:
+    selector: darkvision
+    acuity: ''
+    range: -1

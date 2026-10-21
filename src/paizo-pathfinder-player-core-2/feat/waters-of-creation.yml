@@ -1,0 +1,31 @@
+---
+name: waters of creation
+level: 10
+rarity: common
+type: class
+traits:
+- cursebound
+- divine
+- healing
+- oracle
+- vitality
+- water
+prerequisites:
+- text: life or tempest mystery
+  anyOf:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
+action:
+  count: two_actions
+description: Water is the source of life, and you draw upon this primordial force
+  to heal your allies' wounds. A gentle ring ripples out from you in a emanation,
+  restoring (floor(@actor.level/2))d6[healing,vitality]:true Hit Points to creatures
+  in the area. At 12th level and every two levels thereafter, the amount restored
+  increases by 1d6. If you are Cursebound 3 when you use Waters of Creation, the amount
+  healed increases to (floor(@actor.level/2))d8[healing,vitality]:true.
+mechanicsScope: mixed
+foundryID: KGxGE0yv69ND2hct

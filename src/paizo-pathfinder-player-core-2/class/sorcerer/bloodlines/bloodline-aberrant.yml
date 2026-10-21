@@ -1,0 +1,129 @@
+---
+name: 'bloodline: aberrant'
+level: 1
+traits:
+- sorcerer
+description: 'Something ancient and unknowable speaks to you from beyond the stars
+  or below the earth.
+
+  Tradition occult
+
+  Bloodline Skills Intimidation, Occultism
+
+  Sorcerous Gifts cantrip: Daze; 1st: Phantom Pain; 2nd: Stupefy; 3rd: Vampiric Feast;
+  4th: Confusion; 5th: Slither; 6th: Never Mind; 7th: Warp Mind; 8th: Uncontrollable
+  Dance; 9th: Unfathomable Song
+
+  Bloodline Spells initial: Tentacular Limbs; advanced: Aberrant Whispers; greater:
+  Unusual Anatomy
+
+  Blood Magic—Eerie Veil An ominous pall spills from your mind. Either one target
+  takes a –1 status penalty to Will saving throws for 1 round or you gain a +2 status
+  bonus to Will saving throws for 1 round.'
+mechanicsScope: builder
+foundryID: 3qqvnC2U8W26yae7
+rules:
+- id: 1287d8db-74c9-55e3-ac50-3d8ef9cd1e70
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: occult
+    attribute: cha
+- id: 83779a26-f05e-548d-8cc2-c77212b5d5df
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: 6e70cdd7-aed9-5b06-b84d-b29360433d86
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: occultism}
+    proficiencyCap: 2
+- id: 2fc72128-5235-5516-84b7-7b1638ebff4c
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: occult
+    attribute: cha
+- id: ecc1e68a-4fe3-5f2e-b2de-199d57bfb051
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 9eabe4d2-b6d5-5e6e-bca2-85d258825304
+    spellId: '@spell.tentacular-limbs'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 19aeed4e-bdb4-5f9f-aaf4-99e16cfa9428
+  effect: spellcasting/add-focus-point
+- id: ebd29d7b-9295-5d7f-ab80-48c88d7405e4
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fd09f623-bf42-5797-b8d3-f160875dfc7b
+    spellId: '@spell.daze?source=paizo-pathfinder-player-core'
+- id: d28a46cd-c5dc-5a51-90df-79c2bef87978
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e2ca0b84-90db-556b-a99d-404993675ba0
+    spellId: '@spell.phantom-pain?source=paizo-pathfinder-player-core'
+- id: 2ac1e852-6252-5d4c-b88e-bb85d0c6673b
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: dce6570d-7880-5962-bde4-a5d49a0419ed
+    spellId: '@spell.stupefy?source=paizo-pathfinder-player-core'
+- id: 023f7ffa-3fa4-5a90-8d26-451ea73caacb
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: f6db46c3-4a0b-57a5-b2c2-d7445a9bfbdb
+    spellId: '@spell.vampiric-feast?source=paizo-pathfinder-player-core'
+- id: 8c570efd-19e4-58cc-a3cd-e55285a65fcb
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: f85e34f4-716e-5599-ad0f-467a59f5ad72
+    spellId: '@spell.confusion?source=paizo-pathfinder-player-core'
+- id: 810e4cf9-42cd-529b-a40b-acda1cc9c93f
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c362a9fa-eb83-564e-88f8-b97e75501c80
+    spellId: '@spell.slither?source=paizo-pathfinder-player-core'
+- id: a24054e7-3a0f-5757-a263-08171420135f
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 41506d45-c921-5599-895e-8f6951823cb3
+    spellId: '@spell.never-mind?source=paizo-pathfinder-player-core'
+- id: eff2bd1f-31f6-5de2-9299-37a38b5d96a9
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: f0a4251d-bbba-51b8-81f4-e871786c17fe
+    spellId: '@spell.warp-mind?source=paizo-pathfinder-player-core'
+- id: 42e88d50-9251-53e2-b12a-603866bd0c89
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 5f118bb8-4331-5892-bf4f-304b165368fd
+    spellId: '@spell.uncontrollable-dance?source=paizo-pathfinder-player-core'
+- id: 4fcdeb96-42e6-5c21-afdf-3f3f1285e0ab
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 85137358-9875-5b57-a273-77580d0027b6
+    spellId: '@spell.unfathomable-song?source=paizo-pathfinder-player-core'

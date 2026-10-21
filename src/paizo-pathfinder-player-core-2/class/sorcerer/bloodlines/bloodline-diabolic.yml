@@ -1,0 +1,131 @@
+---
+name: 'bloodline: diabolic'
+level: 1
+traits:
+- sorcerer
+description: 'Devils are evil with a silver tongue, and one of your ancestors dallied
+  in darkness or made an infernal pact.
+
+  Spell List divine
+
+  Bloodline Skills Deception, Religion
+
+  Sorcerous Gifts cantrip Ignition, 1st: Charm, 2nd: Floating Flame, 3rd: Enthrall,
+  4th: Suggestion, 5th: Wave of Despair, 6th: Truesight, 7th: Divine Decree, 8th:
+  Divine Inspiration, 9th: Falling Stars
+
+  Bloodline Spells initial: Diabolic Edict, advanced: Embrace the Pit, greater: Hellfire
+  Plume
+
+  Blood Magic—Tongue of Flame Your tongue becomes laced with the fires of Hell, and
+  you can either lash out at a foe with it or swallow it to make your lies more palatable.
+  Either a target takes 1 fire damage per spell rank (if the spell already deals initial
+  fire damage, combine this with the spell''s initial damage before determining weaknesses
+  and resistances), or you gain a +2 status bonus to Deception checks for 1 round.'
+mechanicsScope: builder
+foundryID: o39zQMIdERWtmBSB
+rules:
+- id: 44d814a9-ac97-5a0e-ac10-877c1acab0b6
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: 94277bab-fe19-57c4-8b26-71163921b7d4
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: deception}
+    proficiencyCap: 2
+- id: d1b23974-b36a-5cbf-8199-42c0cde38a0d
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: religion}
+    proficiencyCap: 2
+- id: 4de422eb-352e-5efa-afb3-e8023a0406e9
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: e8c3c8ce-7ed6-5c67-9583-be40143ac09a
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: dc3be68c-dad8-5e1f-901a-1c6144cecce2
+    spellId: '@spell.diabolic-edict'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 69f533be-352f-5b47-a2ce-227a113958b0
+  effect: spellcasting/add-focus-point
+- id: 52c62a0e-5038-566f-bffc-c6a115458dc2
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: ea1e25ef-e06a-56dc-8d8d-81473931617d
+    spellId: '@spell.ignition?source=paizo-pathfinder-player-core'
+- id: e7b88426-d71b-58c4-a392-6ed11b03389f
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: bc251a77-4c26-5c1b-894f-5d2eceb84526
+    spellId: '@spell.charm?source=paizo-pathfinder-player-core'
+- id: 3a328622-0988-5898-ae42-6892f6163d12
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 84226dee-b6b1-5037-8851-039370660676
+    spellId: '@spell.floating-flame?source=paizo-pathfinder-player-core'
+- id: f72e9d75-429b-5ad9-850f-35079d250bb6
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 68de48ec-3f0d-5fe6-9606-ecd6d71743c7
+    spellId: '@spell.enthrall?source=paizo-pathfinder-player-core'
+- id: 7529e836-7224-5b19-bad4-aa856e39fb9c
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 0565033d-34b6-5a0f-b9f7-3ea79ae0fea0
+    spellId: '@spell.suggestion?source=paizo-pathfinder-player-core'
+- id: 4ebb129b-dce0-501f-9eaa-c5f1dba8df78
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e7b75210-3393-53ba-9b56-9c3565861742
+    spellId: '@spell.wave-of-despair?source=paizo-pathfinder-player-core'
+- id: 5836dada-67cb-5eff-ab5b-4a6c83d4fd9e
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 6fb2f2aa-1ca3-5833-98db-3746df28e1c7
+    spellId: '@spell.truesight?source=paizo-pathfinder-player-core'
+- id: 0747149a-7f60-581a-9bf3-490b651dde88
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fc9daf2e-3396-5b1f-b301-a8d2f73bbc67
+    spellId: '@spell.divine-decree?source=paizo-pathfinder-player-core'
+- id: e425d685-2a6e-57af-bec7-d22c8d772f37
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 358bd5f0-800a-540f-8663-c45d461e5ee6
+    spellId: '@spell.divine-inspiration?source=paizo-pathfinder-player-core'
+- id: 36ec4590-5af6-5884-9ce2-e0282de0faab
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c947073e-5b27-5871-80d7-9c80649a7417
+    spellId: '@spell.falling-stars?source=paizo-pathfinder-player-core'

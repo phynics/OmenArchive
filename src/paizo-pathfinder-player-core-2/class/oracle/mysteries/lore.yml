@@ -1,0 +1,85 @@
+---
+name: lore
+level: 1
+traits:
+- oracle
+description: "Knowledge and information come freely to you. You might use this lore
+  to gain power or perhaps to understand the divine mysteries of the multiverse. You
+  might have a conduit to the fabled Akashic Record, maintain a subtle telepathic
+  connection to the collective subconscious of all living creatures, or follow in
+  the footsteps of deities such as Abadar, Irori, Nethys, Irori's scholarly nephew
+  Gruhastha, the fey triune goddess of fate Magdh, or the aeon god figure known as
+  the Monad.\nGranted Spells\n\t•\tcantrip: Read Aura\n\t•\t1st: Mindlink\n\t•\t3rd:
+  Hypercognition\n\t•\t6th: Never Mind\nRevelation Spells\n\t•\tinitial: Brain Drain\n\t•\tadvanced:
+  Access Lore\n\t•\tgreater: Dread Secret\nRelated Domains knowledge, magic, secrecy,
+  truth\nMystery Skill Occultism and one Lore skill of your choice\nOracle Feat Whispers
+  of Weakness\nCurse of Torrential Knowledge"
+mechanicsScope: builder
+foundryID: tZBb3Kh4nJcNoUFI
+rules:
+- id: 3bdc40c4-2e8b-5b8d-bccf-5756857e71c9
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceName: Oracle Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: cha
+- id: ba2b404b-8eb7-5ed5-a009-bfdf476d43e9
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: occultism}
+    proficiencyCap: 2
+- id: 6e097113-053c-5c66-a96b-6ad99c9e0ccc
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    sourceName: Oracle Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: cha
+- id: 5356a2e0-8e69-5008-b76d-4086ebbeddcf
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    grantId: f8c5c05c-0edf-5d34-8eb3-f6fef346bc9f
+    spellId: '@spell.brain-drain'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 7b6d6bc9-bc99-58b3-8303-3de9a9f72d5e
+  effect: spellcasting/add-focus-point
+- id: f01aee45-1b03-5525-8007-2ae24718951a
+  effect: core/add-feature-by-id
+  inputs:
+    featureId: '@class.oracle.curses.curse-of-torrential-knowledge'
+- id: 0991e328-e4f8-5974-bcf4-9acdcfb723d0
+  effect: core/add-feat@2
+  inputs:
+    selectionId: 0462fec0-f054-5863-a02e-2f7ef577106e
+    featId: '@feat.whispers-of-weakness'
+- id: 59126606-5e07-5825-a6cc-b7431d24f051
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 73f60bec-692d-5b1e-9314-a883e5999db8
+    spellId: '@spell.read-aura?source=paizo-pathfinder-player-core'
+- id: 0cebabb1-da18-56b7-9e8c-b3de1f61e579
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 71493d28-de53-5fc5-8f64-5ea2e7e990b6
+    spellId: '@spell.mindlink?source=paizo-pathfinder-player-core'
+- id: 1040552c-a120-560e-8a1e-fa2c4773cef5
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: 495976f8-43fe-5ac4-bb2b-019a94bbb481
+    spellId: '@spell.hypercognition?source=paizo-pathfinder-player-core'
+- id: 66e16845-171b-5363-90b8-4289e7187ae5
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    entryId: ab041060-cca6-5fa8-8a66-1f208c963c43
+    spellId: '@spell.never-mind?source=paizo-pathfinder-player-core'

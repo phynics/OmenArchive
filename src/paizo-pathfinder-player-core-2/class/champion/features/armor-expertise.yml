@@ -1,0 +1,46 @@
+---
+name: armor expertise
+level: 7
+traits:
+- champion
+- commander
+- fighter
+description: You have spent so much time in armor that you know how to make the most
+  of its protection. Your proficiency ranks for light, medium, and heavy armor, as
+  well as for unarmored defense, increase to expert. You gain the armor specialization
+  effects of medium and heavy armor.
+mechanicsScope: mixed
+foundryID: x5jaCJxsmD5sx3KB
+rules:
+- id: 40e47ab0-f125-5fef-a40e-a983ff22c938
+  key: generated-11
+  effect: core/add-armor-proficiency
+  level: 7
+  inputs:
+    armorDesignation: {armorKind: heavy, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: b92e613d-87ed-5f8b-906c-f2238c7a91db
+  key: generated-12
+  effect: core/add-armor-proficiency
+  level: 7
+  inputs:
+    armorDesignation: {armorKind: light, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 6984b68b-b083-50a0-a619-82bd9e97607e
+  key: generated-13
+  effect: core/add-armor-proficiency
+  level: 7
+  inputs:
+    armorDesignation: {armorKind: medium, kind: type}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 3e35879b-0a67-5ece-aabf-6e2a1fb106ec
+  key: generated-14
+  effect: core/add-armor-proficiency
+  level: 7
+  inputs:
+    armorDesignation: {armorKind: unarmored, kind: type}
+    proficiencyRank: 4
+    selfScaling: false

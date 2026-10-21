@@ -1,0 +1,31 @@
+---
+name: occult evolution
+level: 4
+rarity: common
+type: class
+traits:
+- occult
+- sorcerer
+prerequisites:
+- text: bloodline the grants occult spells
+  anyOf:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
+  - allOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+    - hasChoice:
+        name: $.sorcerer.bloodline.draconic
+        equals: {type: core/string, value: occult}
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
+description: Glimpses of the obscure secrets of the universe loan you power. You become
+  trained in one skill of your choice. Additionally, once per day, you can spend 1
+  minute to choose one mental occult spell you don't know and add it to your spell
+  repertoire. You lose this temporary spell the next time you make your daily preparations
+  (though you can use this ability to add it again later).
+mechanicsScope: encounter
+foundryID: lL2fQJ2oRyBgga8Q

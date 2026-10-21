@@ -1,0 +1,128 @@
+---
+name: 'bloodline: imperial'
+level: 1
+traits:
+- sorcerer
+description: 'One of your ancestors was a mortal who mastered magic.
+
+  Tradition arcane
+
+  Bloodline Skills Arcana, Society
+
+  Sorcerous Gifts cantrip Detect Magic, 1st: Force Barrage, 2nd: Dispel Magic, 3rd:
+  Haste, 4th: Translocate, 5th: Scouting Eye, 6th: Disintegrate, 7th: Retrocognition,
+  8th: Quandary, 9th: Implosion
+
+  Bloodline Spells initial: Ancestral Memories, advanced: Extend Blood Magic, greater:
+  Arcane Countermeasure
+
+  Blood Magic—Imperious Defense Raw magic emanates from every cell in your body, protecting
+  you. Until the start of your next turn, you gain your choice of either a +1 status
+  bonus to AC or a +1 status bonus to saving throws.'
+mechanicsScope: builder
+foundryID: ZEtJJ5UOlV5oTWWp
+rules:
+- id: d075662b-82fd-515a-8d99-dac0e0805279
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: arcane
+    attribute: cha
+- id: ecc0f9ff-8160-5973-acef-2b79970ed733
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: arcana}
+    proficiencyCap: 2
+- id: dcd014fa-4cd1-5b58-bd8f-7a98775c3719
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: society}
+    proficiencyCap: 2
+- id: fd4f2554-83dd-5065-a29d-e89f57fa5ea6
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: arcane
+    attribute: cha
+- id: 52031dac-47e0-5654-9e27-38f02a6cbc92
+  effect: spellcasting/grant-spell
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: 32cd0b84-6b3a-56b9-b3ea-5a9aceb72ac8
+    spellId: '@spell.ancestral-memories'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 48d1c6b9-6fcd-5ff1-8a31-3f42f1fc3453
+  effect: spellcasting/add-focus-point
+- id: 987604f7-6b93-5b02-a2f7-ea99764667d6
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: f24d9d4c-2d55-5462-83ea-30ecfa6add3b
+    spellId: '@spell.detect-magic?source=paizo-pathfinder-player-core'
+- id: 1b8163b7-9f90-5afb-8213-fc018029ff4c
+  effect: spellcasting/add-known-spell
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 5e0fb9d4-79af-5d9f-95b9-52f4337095a0
+    spellId: '@spell.force-barrage?source=paizo-pathfinder-player-core'
+- id: fc853ec7-12e5-53f2-85b6-44b758544e1d
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 1e885266-6261-5bbd-a411-df4679aec8e5
+    spellId: '@spell.dispel-magic?source=paizo-pathfinder-player-core'
+- id: bd7bb3c9-f6da-5775-ae46-928b697593fd
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e9ace6ad-1b8b-581e-9bcf-770713d7f2d3
+    spellId: '@spell.haste?source=paizo-pathfinder-player-core'
+- id: ab32404b-0daf-57dd-a4ef-dd5ea03f3a60
+  effect: spellcasting/add-known-spell
+  level: 7
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 99865304-896a-53ac-af9b-91b8e21e1e01
+    spellId: '@spell.translocate?source=paizo-pathfinder-player-core'
+- id: 32985b88-8e54-5287-aa54-5cdd51bc7ca8
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: cd864625-f805-5a5b-9aab-f496cbb932d2
+    spellId: '@spell.scouting-eye?source=paizo-pathfinder-player-core'
+- id: 93afc472-2d60-554f-b7e7-b77d29657f01
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: a7d31791-eda7-5880-b21c-652b43389428
+    spellId: '@spell.disintegrate?source=paizo-pathfinder-player-core'
+- id: c9a4d251-2bce-5fde-b104-6b77928aa152
+  effect: spellcasting/add-known-spell
+  level: 13
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 7ae95100-ac07-5f0e-b4ec-28627ca77c71
+    spellId: '@spell.retrocognition?source=paizo-pathfinder-player-core'
+- id: 9a300704-ab05-54b1-a468-56e3c7d15bab
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 48697a4c-8b7a-55cf-bcfe-5104b56689ea
+    spellId: '@spell.quandary?source=paizo-pathfinder-player-core'
+- id: 998bad56-a22a-53fa-99dc-77c88c7918bd
+  effect: spellcasting/add-known-spell
+  level: 17
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 19f7e1cc-7a26-5e45-8ba4-47272667225e
+    spellId: '@spell.implosion?source=paizo-pathfinder-player-core'

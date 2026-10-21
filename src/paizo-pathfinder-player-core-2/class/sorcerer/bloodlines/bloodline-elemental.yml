@@ -1,0 +1,1056 @@
+---
+name: 'bloodline: elemental'
+level: 1
+traits:
+- sorcerer
+description: "An elemental influence has imbued your blood with primal fury. You are
+  granted different sorcerous gift spells and damage type from blood magic depending
+  on which element affected your bloodline (see Elemental Influences below).\nTradition
+  primal\nBloodline Skills Intimidation, Nature\nSorcerous Gifts cantrip: see Elemental
+  Influences below; 1st: see Elemental Influences below; 2nd: Resist Energy; 3rd:
+  see Elemental Influences below; 4th: Unfettered Movement; 5th: Elemental Form (elemental
+  influence only); 6th :see Elemental Influences below; 7th: Energy Aegis; 8th: Earthquake;
+  9th: Wrathful Storm\nBloodline Spells initial: Elemental Toss; advanced: Elemental
+  Motion; greater: Elemental Blast\nBlood Magic—Elemental Fury Elemental energy wreathes
+  your form and infuses your magic. Either you gain a +2 status bonus to Intimidation
+  checks for 1 round, or a target takes 1 damage per spell rank; this damage type
+  is listed under your elemental influence. If the spell already deals that type of
+  damage, combine it with the spell's initial damage before determining weaknesses
+  and resistances.\nElemental Influences\nAt 1st level, choose the type of elemental
+  that influenced your bloodline: air, earth, fire, metal, water, or wood. You can't
+  change this later. You are granted different spells at certain ranks according to
+  this influence.\n\t•\tAir—Sorcerous Gifts cantrip: Gale Blast; 1st: Tailwind; 3rd:
+  Wall of Wind; 6th: Chain Lightning; Blood Magic Damage slashing\n\t•\tEarth—Sorcerous
+  Gifts cantrip: Scatter Scree; 1st: Pummeling Rubble; 3rd: Earthbind; 6th: Petrify;
+  Blood Magic Damage bludgeoning\n\t•\tFire—Sorcerous Gifts cantrip: Ignition, 1st:
+  Breathe Fire; 3rd: Fireball; 6th: Tree of Seasons (all pods are summer); Blood Magic
+  Damage fire\n\t•\tMetal—Sorcerous Gifts cantrip Electric Arc; 1st: Thunderstrike;
+  3rd: Lightning Bolt; 6th: Chain Lightning; Blood Magic Damage piercing\n\t•\tWater—Sorcerous
+  Gifts cantrip: Frostbite; 1st: Hydraulic Push; 3rd: Aqueous Orb; 6th: Scintillating
+  Safeguard; Blood Magic Damage bludgeoning\n\t•\tWood—Sorcerous Gifts cantrip: Tangle
+  Vine; 1st: Cleanse Cuisine; 3rd: Wall of Thorns; 6th: Tangling Creepers; Blood Magic
+  Damage bludgeoning"
+mechanicsScope: builder
+foundryID: RXRnJcG4XSabZ35a
+rules:
+- id: edbb3902-8545-59ed-b24b-7e8d9cf9b354
+  key: choice-sorcerer-bloodline-elemental
+  choice:
+    name: $.sorcerer.bloodline.elemental
+    label: Elemental bloodline
+    type: core/string
+    cases:
+    - {value: air}
+    - {value: earth}
+    - {value: fire}
+    - {value: metal}
+    - {value: water}
+    - {value: wood}
+- id: 7eb4d3c0-632f-590a-9be3-ec6ee8d8483b
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: cha
+- id: a4cae590-d3b6-5f1c-8cb7-e0f301ab9e13
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: e45599cb-2fa7-5c6c-bc7c-8c9d7f333888
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: babab08c-5732-542a-8636-37f30686a6fe
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: cha
+- id: 283f237d-ef2a-53e3-861b-991cffb65b0c
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: a32dd040-c18f-5ccb-bc0c-7ad17b8a7d99
+    spellId: '@spell.elemental-toss'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: c5e56426-cee2-5959-b7cc-633c824765be
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+- id: 4c981652-e264-5396-8168-58cf93a92ad3
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 68682382-aa97-58d0-aef6-75c7f84c3f3d
+    spellId: '@spell.gale-blast'
+- id: 8adcb69b-164c-5ad4-855e-00f8f4f101ba
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: ed4d2618-0433-5b3f-82de-190230f515ee
+    spellId: '@spell.tailwind?source=paizo-pathfinder-player-core'
+- id: 3af629cd-96ff-5781-b6a5-54f9972f01ad
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
+    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+- id: e0264491-0288-583a-8e90-2e0fa77aae16
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 0f27ec80-15eb-5691-8974-57f926bdad91
+    spellId: '@spell.wall-of-wind?source=paizo-pathfinder-player-core'
+- id: 2feac287-8fd6-57d7-8b46-cfc0a5db4d57
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
+    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+- id: 8d2b4a61-f6e4-5e52-8292-84bb6c7d0c0f
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
+    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+- id: 511081fb-f213-5d9f-b575-8faf4e8dd20e
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 0fcf6ca8-bb00-596d-ae84-f7a2c858d706
+    spellId: '@spell.chain-lightning?source=paizo-pathfinder-player-core'
+- id: d48b069c-0d06-594d-a939-aa5d052583d7
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
+    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+- id: 2c877150-a3b6-5e16-8013-f8fa6708f21e
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
+    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+- id: 039f74fa-1803-585c-a087-0a727ae32bc4
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: air}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
+    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+- id: ede31b90-d3fb-56c4-9e3c-d8b4162b78a2
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: cha
+- id: 405fa8e7-069f-5498-b2ea-d0d37cfd7d75
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: ccdf9ec5-2061-551f-a589-836cf90a876c
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: f5109255-4c11-5523-8a47-75b0c2ab1335
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: cha
+- id: 8f6b863a-8d26-5c26-87cb-8733377ae26e
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: a32dd040-c18f-5ccb-bc0c-7ad17b8a7d99
+    spellId: '@spell.elemental-toss'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 9d70e537-c690-56ba-a7b7-103591582845
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+- id: f9f43771-31a7-549a-8558-e2cc238f38e4
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 40115c7f-f27f-5add-9231-9e8d88974a8b
+    spellId: '@spell.scatter-scree'
+- id: bf490a88-9ffc-55f9-a24b-0f647467dde8
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3512fffe-b054-58cd-a562-0fccb4283f26
+    spellId: '@spell.pummeling-rubble?source=paizo-pathfinder-player-core'
+- id: 2ef1f5b6-94c2-5d52-88f2-88177517fd4d
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
+    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+- id: a944623f-1509-52ff-9de6-2f506331aff8
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: b5e5da02-e6ce-5081-9e2b-0c05722f9a14
+    spellId: '@spell.earthbind?source=paizo-pathfinder-player-core'
+- id: 0d123c6e-d823-5673-b0bc-2694b7525f73
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
+    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+- id: 375410bc-960f-5284-b8b4-bbf2a83ba9e1
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
+    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+- id: 66a2801c-45ba-59fb-a9c0-41193d9ebb26
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 78de65ea-6b9f-5798-b7b9-d3a768aa4421
+    spellId: '@spell.petrify?source=paizo-pathfinder-player-core'
+- id: 16c57b6a-9224-5259-93b3-0a26ca65bdad
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
+    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+- id: 1bb43e39-a2b7-57ec-9ade-91471c591211
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
+    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+- id: 52822c30-5054-5a11-bf41-42343128a72e
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: earth}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
+    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+- id: bd111ea1-8c31-527a-9307-780cf6024f42
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: cha
+- id: 05d0c585-5d03-557a-abe4-69cbb36792dd
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: 3210d79b-b8e8-548e-b6f5-a55ac1e275c3
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: 968356a1-0fe8-5779-85f1-3c2ee2b56a1b
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: cha
+- id: b9685ce4-59ef-5810-a6f3-be262a974b00
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: a32dd040-c18f-5ccb-bc0c-7ad17b8a7d99
+    spellId: '@spell.elemental-toss'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: ceedd573-29f9-5803-9d57-789dee9938dd
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+- id: f1b454e1-84ba-5de5-ac0c-fe6efd8b36ae
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c00a4453-e6df-5988-bfdd-0903e51f7a23
+    spellId: '@spell.ignition?source=paizo-pathfinder-player-core'
+- id: a4fbba6c-3647-5aab-a6a3-0e5c69c46745
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 5a56f9ec-24fd-5c4d-94e1-4a2e48b08fd0
+    spellId: '@spell.breathe-fire?source=paizo-pathfinder-player-core'
+- id: 53c6f3aa-9e71-5ff4-ba05-24b3c6f4eadd
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
+    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+- id: ed1aa39c-a784-57fa-bcde-ca509e650a0a
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 539797bb-e1cb-5018-8b79-195d9642f65c
+    spellId: '@spell.fireball?source=paizo-pathfinder-player-core'
+- id: 8e9ddf68-1b5a-523e-a295-4751c18047d9
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
+    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+- id: c9e6dc82-b652-56e3-8881-54d045911c47
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
+    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+- id: 2b5f703e-f37e-5968-8425-f67529968fff
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 0190e8a6-6026-5cd1-8279-cbfba61c041a
+    spellId: '@spell.tree-of-seasons?source=paizo-pathfinder-player-core'
+- id: f8fa9d3d-95d0-5c4d-a183-af669ae90fe6
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
+    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+- id: fcb059be-f8f3-50f4-9117-4b902de2bbb2
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
+    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+- id: e7ed7355-e421-5a30-b98a-88d5305d141e
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: fire}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
+    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+- id: 50e08722-5e03-53a0-aa77-c12aad92a54c
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: cha
+- id: 63cd7600-2bba-544a-b0de-e2bd749f0b1e
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: 87e1a265-8527-5069-befc-7432b77ed156
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: e3322f6d-0a1b-5e91-87ba-2b7135f3d843
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: cha
+- id: 21eac79e-56b9-5ebe-b577-ad35623effbc
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: a32dd040-c18f-5ccb-bc0c-7ad17b8a7d99
+    spellId: '@spell.elemental-toss'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 89cf1bcd-ce2c-5c7c-9c11-fe711b23655a
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+- id: fb32f0b6-8829-5d37-9173-471884719345
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 8a1bbf4c-6b26-5872-8fd0-26aa9ac2df44
+    spellId: '@spell.electric-arc?source=paizo-pathfinder-player-core'
+- id: 7ad0bfc8-3b81-5b7e-ab0d-8445f8d79e6a
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 2740d1ea-c7aa-5bbe-9b8a-7eaf668cf072
+    spellId: '@spell.thunderstrike?source=paizo-pathfinder-player-core'
+- id: 7d386b73-8fdb-5d69-8957-3575d93955eb
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
+    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+- id: 373372de-fe0b-50c7-937e-a16b6fa1fafb
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: d2b2f4ec-6972-5cbe-ab68-9a17bdc5e67b
+    spellId: '@spell.lightning-bolt?source=paizo-pathfinder-player-core'
+- id: 8e29342a-fd92-53e7-b52d-e09ca888c8f8
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
+    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+- id: 1a45f758-1075-56c5-8c9f-743e532a54f3
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
+    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+- id: 4a6f705e-a464-5b78-a62d-0177eafe5107
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 0fcf6ca8-bb00-596d-ae84-f7a2c858d706
+    spellId: '@spell.chain-lightning?source=paizo-pathfinder-player-core'
+- id: 6636f8f3-fb31-5c2e-a6c7-f945e5b75e2e
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
+    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+- id: 9e9e3794-db49-5d79-b854-e54e8c4fc055
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
+    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+- id: 072e543f-c8f2-563d-bfbb-e349c5eda786
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: metal}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
+    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+- id: 3eaa796f-9cda-5282-8e02-64400ccdfe8e
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: cha
+- id: 64b154e2-c187-50d6-a536-961f4d6c622f
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: a855924a-f106-5e97-86ac-7296f94191be
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: 838df264-72a6-55da-9c3e-3b9595cda761
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: cha
+- id: 6b8599b8-8c49-56c7-858d-8550a841ddc4
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: a32dd040-c18f-5ccb-bc0c-7ad17b8a7d99
+    spellId: '@spell.elemental-toss'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 75c603c9-4a6d-55fb-b8ed-a2eaec05b058
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+- id: fc94c0cc-3ccd-5961-974d-ebf0716a317e
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 11ae19b3-49e6-59ae-92ea-475f7ef47cb9
+    spellId: '@spell.frostbite?source=paizo-pathfinder-player-core'
+- id: 45dfbdce-9ca1-5359-ad90-52b853f42175
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 0c6131d2-8aa3-5b12-8a28-63730f01805f
+    spellId: '@spell.hydraulic-push?source=paizo-pathfinder-player-core'
+- id: 381d40f0-fe34-5e69-844f-e01dc8d60e5a
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
+    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+- id: 7ccd4fba-f373-5eca-a667-2b9ac78a64ba
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 17f35b16-88d1-54c1-ad00-c8b736c64cf7
+    spellId: '@spell.aqueous-orb?source=paizo-pathfinder-player-core'
+- id: eb878bb7-99a2-5af1-942a-b71429f130f8
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
+    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+- id: 13a3cbc4-d862-5a1f-9661-771cd25f7ad3
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
+    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+- id: 88fea249-0aea-57cd-ae45-416a728fe989
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c0413aee-2fde-55a3-ad1c-bc197665b72d
+    spellId: '@spell.scintillating-safeguard'
+- id: fa398328-eee7-5770-ba7f-ed2dd98600bc
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
+    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+- id: 7422d526-d3c1-548d-982a-6acb090ffda9
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
+    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+- id: f48a1c75-7230-52ff-b7fb-b3ab702f1ea7
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: water}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
+    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+- id: 395b6f5b-69e9-5b46-8913-e1c2f7da5e79
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: cha
+- id: eeaea775-67bf-50d1-af42-45486de526de
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    skill: {kind: intimidation}
+    proficiencyCap: 2
+- id: 69595ebc-d84d-5f2c-b3a3-a60b9b49ffa3
+  effect: core/add-skill-increase
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    skill: {kind: nature}
+    proficiencyCap: 2
+- id: 484b517a-f6d6-54e3-9119-84a59ff40247
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: cha
+- id: 8fa319de-8107-5343-8d75-4cf21c0b4716
+  effect: spellcasting/grant-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    grantId: a32dd040-c18f-5ccb-bc0c-7ad17b8a7d99
+    spellId: '@spell.elemental-toss'
+    rankPolicy: {kind: cantrip}
+    castFrequency: {kind: focus}
+- id: 1158d4e5-5478-5be2-a3d0-3e92faab10bc
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+- id: e4832ee4-0947-5e21-b65e-f5ff566b3fc7
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 33360c4f-b714-5b42-b00f-2addd0186961
+    spellId: '@spell.tangle-vine?source=paizo-pathfinder-player-core'
+- id: c18f2113-975c-5293-ba3e-d5dfc234d4b1
+  effect: spellcasting/add-known-spell
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: a34f76cc-2214-508b-850f-a99c5f04c52f
+    spellId: '@spell.cleanse-cuisine?source=paizo-pathfinder-player-core'
+- id: b2cea122-c0a3-5aa2-9b2a-d4f12ca793a3
+  effect: spellcasting/add-known-spell
+  level: 3
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
+    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+- id: 09efb7fe-3c2a-5e18-ae5c-ff5f587c104b
+  effect: spellcasting/add-known-spell
+  level: 5
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 2d88d944-e2b7-52b2-bb22-cebc1fdfecf0
+    spellId: '@spell.wall-of-thorns?source=paizo-pathfinder-player-core'
+- id: 58585235-e506-5191-80a7-e02a6c8485e3
+  effect: spellcasting/add-known-spell
+  level: 7
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
+    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+- id: b6f97398-f752-511c-aca3-a7d81e57ac64
+  effect: spellcasting/add-known-spell
+  level: 9
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
+    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+- id: e01b23ac-d08b-5c00-b588-06168efc67cc
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 91a09ec8-fad8-580c-8502-b925c7c7ffb7
+    spellId: '@spell.tangling-creepers?source=paizo-pathfinder-player-core'
+- id: fdc24051-1fe5-5a8f-aefe-d4d09115b6e5
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
+    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+- id: 3309c535-a788-5c3a-a497-b0849c743a89
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
+    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+- id: 93cdbbb5-84ab-5b25-b034-c58942964448
+  effect: spellcasting/add-known-spell
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline.elemental
+      equals: {type: core/string, value: wood}
+  inputs:
+    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
+    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
