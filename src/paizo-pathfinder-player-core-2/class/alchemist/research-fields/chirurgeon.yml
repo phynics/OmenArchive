@@ -30,10 +30,7 @@ description: 'You concentrate on healing others with alchemy.
   Greater Field Discovery (13th) When you use Quick Alchemy to create any type of
   elixir of life, the creature healed by the item regains the maximum Hit Points possible,
   instead of rolling to determine the number of Hit Points regained.'
-mechanicsScope: mixed
-unsupportedReason: 'Chirurgeon''s Crafting rank must satisfy Medicine prerequisites,
-  and its Crafting modifier must replace Medicine checks. No current effect expresses
-  that substitution. Follow-up: Chirurgeon skill substitution.'
+mechanicsScope: builder
 foundryID: eNZnx4LISDNftbx2
 rules:
 - id: 2ad20e41-6c2b-5075-9512-907fc6a7d80a
@@ -76,3 +73,9 @@ rules:
   effect: core/add-formulas
   inputs:
     items: {choiceList: $.alchemist.formulas.field}
+- id: 6e63d7be-f580-5d6f-8674-53da124ed7fc
+  key: chirurgeon-crafting-for-medicine
+  effect: core/substitute-skill
+  inputs:
+    skill: {kind: medicine}
+    substitute: {kind: crafting}

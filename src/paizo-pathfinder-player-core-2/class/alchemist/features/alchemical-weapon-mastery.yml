@@ -5,10 +5,7 @@ traits:
 - alchemist
 description: You've mastered full capability with your weapons. Your proficiency ranks
   for simple weapons, alchemical bombs, and unarmed attacks increase to master.
-mechanicsScope: mixed
-unsupportedReason: 'The simple-weapon and unarmed increases are active. Alchemical-bomb
-  proficiency needs a weapon-base designation; existing weapon kinds, groups and exact
-  names cannot represent every alchemical bomb. Follow-up: alchemical-bomb proficiency.'
+mechanicsScope: builder
 foundryID: basYH3RUrT7omPQk
 rules:
 - id: 5db1d023-ed54-5396-880c-64f21a1c40e8
@@ -25,5 +22,13 @@ rules:
   level: 15
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    proficiencyRank: 6
+    selfScaling: false
+- id: 69458e69-6b7f-5c45-80ed-01728468c01c
+  key: alchemical-weapons-bomb
+  effect: core/add-weapon-proficiency
+  level: 15
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: bomb, weaponKind: any}
     proficiencyRank: 6
     selfScaling: false

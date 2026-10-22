@@ -6,10 +6,7 @@ traits:
 description: You've trained to more effectively wield the weapons you find in your
   lab. Your proficiency ranks for simple weapons, alchemical bombs, and unarmed attacks
   increase to expert.
-mechanicsScope: mixed
-unsupportedReason: 'The simple-weapon and unarmed increases are active. Alchemical-bomb
-  proficiency needs a weapon-base designation; existing weapon kinds, groups and exact
-  names cannot represent every alchemical bomb. Follow-up: alchemical-bomb proficiency.'
+mechanicsScope: builder
 foundryID: 4ocPy4O0OCLY0XCM
 rules:
 - id: 950ace5e-9dc2-5334-8dfa-8b478a79e0a6
@@ -26,5 +23,13 @@ rules:
   level: 7
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    proficiencyRank: 4
+    selfScaling: false
+- id: 9447dd0a-91f5-5bc6-a555-e07965037b2d
+  key: alchemical-weapons-bomb
+  effect: core/add-weapon-proficiency
+  level: 7
+  inputs:
+    weaponDesignation: {kind: filter, weaponGroup: bomb, weaponKind: any}
     proficiencyRank: 4
     selfScaling: false
