@@ -1,0 +1,28 @@
+---
+name: resuscitate
+level: 16
+rarity: common
+type: archetype
+traits:
+- archetype
+- healing
+- manipulate
+relatedArchetype: medic
+prerequisites:
+- text: Medic Dedication
+  unsupported: Unsupported prerequisite for source lleedxE6fTDSK6og "Medic Dedication".
+  diagnostic: true
+- text: legendary in Medicine
+  hasSkillProficiency: {skill: medicine, proficiency: legendary}
+action:
+  count: three_actions
+  requirements: You are holding healer's tools or are wearing them and have a hand
+    free.
+description: You resuscitate the dead. Attempt a medicine|dc:40|showDC:all check to
+  revive a dead creature who has been dead for no more than 3 rounds and whose body
+  is mostly intact. If you succeed, the target returns to life with the effects of
+  Raise Dead, except it still has the wounded condition it had before dying, increased
+  by 1 (or Wounded 1 if it wasn't wounded before dying). Whether you succeed or fail,
+  the target is temporarily immune to Resuscitate for 1 day.
+mechanicsScope: mixed
+foundryID: lleedxE6fTDSK6og

@@ -1,0 +1,31 @@
+---
+name: tumbling strike
+level: 8
+rarity: common
+type: archetype
+traits:
+- archetype
+- flourish
+- move
+relatedArchetype: acrobat
+prerequisites:
+- text: Acrobat Dedication
+  unsupported: Unsupported prerequisite for source jfsmtOx4QgXB19BL "Acrobat Dedication".
+  diagnostic: true
+action:
+  count: one_action
+  criticalFailure: You neither move nor Strike.
+  criticalSuccess: You move through the enemy's space to an unoccupied space on the
+    other side of the enemy from your starting position. This movement doesn't trigger
+    reactions. You can't move farther than your Speed, and you must end your movement
+    adjacent to the enemy whose space you moved through. After moving, you make a
+    melee Strike against the enemy whose space you moved through, and the enemy is
+    Off-Guard against that Strike.
+  failure: You remain in your original space but can still Strike.
+  requirements: You are adjacent to an enemy.
+  success: As critical success, but the enemy isn't off-guard against the Strike.
+description: You deftly dive through a gap left by a foe to deliver an advantageous
+  blow. Attempt an Acrobatics check against the Reflex DC of an enemy adjacent to
+  you.
+mechanicsScope: mixed
+foundryID: jfsmtOx4QgXB19BL
