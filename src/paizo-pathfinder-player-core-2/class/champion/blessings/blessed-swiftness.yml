@@ -7,9 +7,19 @@ description: You gain a +5-foot status bonus to Speed. If you're mounted, your m
   gains the bonus instead. In addition, when the movement of one of your allies triggers
   an enemy's reaction while the ally is in your champion's aura, the ally gains a
   +2 status bonus to all defenses against that reaction.
-mechanicsScope: mixed
-unsupportedReason: 'Blessed Swiftness grants a +5-foot status bonus to the champion''s
-  Speed, or the mount''s Speed while mounted. The speed effect cannot express its
-  bonus type and recipient. Aura defenses remain descriptive. Follow-up: conditional
-  typed speed bonuses.'
+mechanicsScope: builder
 foundryID: Z6E1O8X7CFcyczB1
+rules:
+- id: 6bdebdca-dcf0-50cc-9028-0fa425ef9003
+  key: blessed-swiftness
+  effect: core/add-roll-modifier@2
+  level: 3
+  inputs:
+    uuid: 8533ef36-3549-586e-8659-9f3c235ad867
+    target:
+      description:
+      - speed: {}
+    description: 'Blessed Swiftness: +5-foot status bonus to Speed, or to the mount''s
+      Speed while mounted.'
+    numeric: {literal: {amount: 5, applicability: {description: 'Your Speed, or your
+            mount''s Speed while you are mounted', kind: situational}, type: status}}
