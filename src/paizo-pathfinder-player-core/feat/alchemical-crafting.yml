@@ -12,5 +12,25 @@ prerequisites:
 description: You can use the Craft activity to create alchemical items. When you select
   this feat, you immediately add the formulas for four common 1st-level alchemical
   items to your formula book.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: is3Oz9wt11lNq62K
+rules:
+- id: 94b46dea-fb35-554e-8857-8863a4639e84
+  key: choice-feat-alchemical-crafting-formulas
+  choice:
+    name: $.feat.alchemical-crafting.formulas
+    label: Alchemical Crafting formulas
+    multiple: {min: 4, max: 4}
+    records:
+      filter:
+        all:
+        - {type: item}
+        - {trait: alchemical}
+        - {rarity: common}
+        - {level: 1}
+      type: core/item-id
+- id: 95ffbdb9-1820-528b-93b9-ba35824dee38
+  key: learn-choice-feat-alchemical-crafting-formulas
+  effect: core/add-formulas
+  inputs:
+    items: {choiceList: $.feat.alchemical-crafting.formulas}

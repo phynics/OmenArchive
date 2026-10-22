@@ -37,9 +37,7 @@ description: 'You specialize in toxins and venoms of all types.
   adjacent to it. The attacker who caused the injury chooses which creature, if there''s
   more than one, and can choose to forgo this effect. That creature is exposed to
   the poison. The second creature doesn''t spread the poison further.'
-mechanicsScope: mixed
-unsupportedReason: The research field's two starting formulas await alchemical formula
-  families and learning. Its selected level-5/11/13 benefits remain active.
+mechanicsScope: builder
 foundryID: P9quO9XZi3OWFe1k
 rules:
 - id: 00316e37-1302-5999-a533-2655f453b588
@@ -60,3 +58,24 @@ rules:
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-toxicologist'
+- id: 7bd86597-f3cd-5d6e-8e1f-9af662bf7856
+  key: choice-alchemist-formulas-field
+  choice:
+    name: $.alchemist.formulas.field
+    label: Research field formulas
+    optional: true
+    multiple: {min: 0, max: 2}
+    records:
+      filter:
+        all:
+        - {type: item}
+        - {trait: alchemical}
+        - {rarity: common}
+        - {level: 1}
+        - {trait: poison}
+      type: core/item-id
+- id: 6821ff73-8460-50c9-8cfc-a0679b14287b
+  key: learn-choice-alchemist-formulas-field
+  effect: core/add-formulas
+  inputs:
+    items: {choiceList: $.alchemist.formulas.field}

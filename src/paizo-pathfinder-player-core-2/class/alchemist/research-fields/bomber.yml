@@ -26,9 +26,7 @@ description: 'You specialize in explosions and other violent reactions.
 
   Greater Field Discovery (13th) You can increase the splash on your bombs to damage
   creatures within 10 feet, or 15 feet if you have Expanded Splash.'
-mechanicsScope: mixed
-unsupportedReason: The research field's two starting formulas await alchemical formula
-  families and learning. Its selected level-5/11/13 benefits remain active.
+mechanicsScope: builder
 foundryID: 7JbiaZ8bxODM5mzS
 rules:
 - id: 9eac8821-c758-5abd-b51f-2d8c8cd98138
@@ -49,3 +47,24 @@ rules:
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-bomber'
+- id: 8cbff7e0-9578-5184-beaa-73e8cad100c8
+  key: choice-alchemist-formulas-field
+  choice:
+    name: $.alchemist.formulas.field
+    label: Research field formulas
+    optional: true
+    multiple: {min: 0, max: 2}
+    records:
+      filter:
+        all:
+        - {type: item}
+        - {trait: alchemical}
+        - {rarity: common}
+        - {level: 1}
+        - {trait: bomb}
+      type: core/item-id
+- id: 13b35717-3801-597f-aecd-485ad0c2386c
+  key: learn-choice-alchemist-formulas-field
+  effect: core/add-formulas
+  inputs:
+    items: {choiceList: $.alchemist.formulas.field}

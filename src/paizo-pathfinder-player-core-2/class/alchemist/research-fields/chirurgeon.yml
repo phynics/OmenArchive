@@ -31,11 +31,9 @@ description: 'You concentrate on healing others with alchemy.
   elixir of life, the creature healed by the item regains the maximum Hit Points possible,
   instead of rolling to determine the number of Hit Points regained.'
 mechanicsScope: mixed
-unsupportedReason: 'The research field''s two starting formulas await alchemical formula
-  families and learning. Its selected level-5/11/13 benefits remain active. Chirurgeon''s
-  Crafting rank must satisfy Medicine prerequisites, and its Crafting modifier must
-  replace Medicine checks. No current effect expresses that substitution. Follow-up:
-  Chirurgeon skill substitution.'
+unsupportedReason: 'Chirurgeon''s Crafting rank must satisfy Medicine prerequisites,
+  and its Crafting modifier must replace Medicine checks. No current effect expresses
+  that substitution. Follow-up: Chirurgeon skill substitution.'
 foundryID: eNZnx4LISDNftbx2
 rules:
 - id: 2ad20e41-6c2b-5075-9512-907fc6a7d80a
@@ -56,3 +54,25 @@ rules:
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-chirurgeon'
+- id: 9b15c3e1-1337-50b3-aa31-60d0826b94d6
+  key: choice-alchemist-formulas-field
+  choice:
+    name: $.alchemist.formulas.field
+    label: Research field formulas
+    optional: true
+    multiple: {min: 0, max: 2}
+    records:
+      filter:
+        all:
+        - {type: item}
+        - {trait: alchemical}
+        - {rarity: common}
+        - {level: 1}
+        - {trait: elixir}
+        - {trait: healing}
+      type: core/item-id
+- id: 669a0267-8234-55ea-b20f-8c2ec0f4bd7b
+  key: learn-choice-alchemist-formulas-field
+  effect: core/add-formulas
+  inputs:
+    items: {choiceList: $.alchemist.formulas.field}

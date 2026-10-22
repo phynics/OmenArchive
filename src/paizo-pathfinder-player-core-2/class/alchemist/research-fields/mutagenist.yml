@@ -36,9 +36,7 @@ description: 'You focus on bizarre mutagenic transformations that sacrifice one 
   the effects of two mutagens and you come under the effect of a non-mutagen polymorph
   effect, you lose the benefits of the mutagens while retaining the drawbacks of both.
   Your field vial benefit applies to one mutagen of your choice.'
-mechanicsScope: mixed
-unsupportedReason: The research field's two starting formulas await alchemical formula
-  families and learning. Its selected level-5/11/13 benefits remain active.
+mechanicsScope: builder
 foundryID: tvdb1jkjl2bRZjSp
 rules:
 - id: f476d38b-e7d0-562c-b15b-52d7b4aef384
@@ -59,3 +57,24 @@ rules:
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-mutagenist'
+- id: a7b7322c-bc40-56ab-a938-449a8a353274
+  key: choice-alchemist-formulas-field
+  choice:
+    name: $.alchemist.formulas.field
+    label: Research field formulas
+    optional: true
+    multiple: {min: 0, max: 2}
+    records:
+      filter:
+        all:
+        - {type: item}
+        - {trait: alchemical}
+        - {rarity: common}
+        - {level: 1}
+        - {trait: mutagen}
+      type: core/item-id
+- id: 434060c4-e63d-53a0-9137-89390a576b9f
+  key: learn-choice-alchemist-formulas-field
+  effect: core/add-formulas
+  inputs:
+    items: {choiceList: $.alchemist.formulas.field}

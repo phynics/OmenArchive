@@ -8,6 +8,11 @@
     "name": { "type": "string" },
     "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "foundryID": { "type": "string" },
+    "formulaFamily": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The alchemical formula the item is made from: each grade of an item shares one family. Matching is exact."
+    },
     "type": {
       "type": "string",
       "enum": ["equipment", "weapon", "armor", "shield", "consumable", "container", "treasure", "kit"]
