@@ -9,17 +9,65 @@ prerequisites:
 - text: Qi Spells
   hasResourceWithName: qi spells
 repeatPolicy:
-  duplicateSelectionRules: []
+  duplicateSelectionRules:
+  - lookupName: $.feat.master-qi-spells.spell
+    valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
   instanceLevelGates: []
   maxCount: null
 description: You have achieved near-total mastery of your qi. You gain Medusa's Wrath,
   Touch of Death, or another 8th-rank qi spell you have access to.
 specialText: You can select this feat more than once, choosing a different spell each
   time.
-mechanicsScope: mixed
-unsupportedReason: 'The focus-spell model requires a magical tradition, but Player
-  Core 2 does not assign one to monk qi spells. Follow-up: support traditionless focus
-  sources before converting this qi-spell grant. External review required. Resource:
-  omen://feat/master-qi-spells?source=paizo-pathfinder-player-core-2. Foundry keys:
-  [].'
+mechanicsScope: builder
 foundryID: DAFF7zJphhDPcAws
+rules:
+- id: 0771eee3-b3e6-530e-8071-4df5c6839dbb
+  key: choice-qi-tradition
+  choice:
+    name: $.qi.tradition
+    label: Qi tradition
+    type: spellcasting/tradition
+    cases:
+    - {value: divine}
+    - {value: occult}
+- id: 7bb440dc-1df8-5f03-a912-9a228a037daa
+  key: qi-focus-source
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
+    sourceName: Monk Focus Spells
+    castingKind: focus
+    tradition: {choice: $.qi.tradition}
+    attribute: wis
+- id: f0b7be96-ab10-5e2f-87d5-648e53d21b89
+  key: qi-spell-proficiency
+  effect: spellcasting/increase-proficiency
+  inputs:
+    tradition: {choice: $.qi.tradition}
+    proficiency: 2
+- id: 720548af-f80b-5620-bf25-5a929013e02d
+  key: choice-feat-master-qi-spells-spell
+  choice:
+    name: $.feat.master-qi-spells.spell
+    label: Qi spell
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - {spell.category: focus}
+        - {trait: classTrait-monk}
+        - {level: 8}
+      type: spellcasting/spell-id
+- id: b5dc791c-4f73-53a0-98f7-11e3ec31ff1e
+  key: grant-qi-spell
+  effect: spellcasting/grant-focus-spell
+  inputs:
+    sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
+    spellId: {choice: $.feat.master-qi-spells.spell}
+- id: 8c4b7e0e-0e58-5f87-82b2-96c161b01444
+  key: qi-focus-point
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.feat.master-qi-spells.spell
+      isSet: true

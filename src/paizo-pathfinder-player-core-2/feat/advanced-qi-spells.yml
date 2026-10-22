@@ -9,17 +9,65 @@ prerequisites:
 - text: Qi Spells
   hasResourceWithName: qi spells
 repeatPolicy:
-  duplicateSelectionRules: []
+  duplicateSelectionRules:
+  - lookupName: $.feat.advanced-qi-spells.spell
+    valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
   instanceLevelGates: []
   maxCount: null
 description: Your talent at controlling your qi has reached new heights. You gain
   Qi Blast, Shrink the Span, or another 3rd-rank qi spell you have access to.
 specialText: You can select this feat more than once, choosing a different spell each
   time.
-mechanicsScope: mixed
-unsupportedReason: 'The focus-spell model requires a magical tradition, but Player
-  Core 2 does not assign one to monk qi spells. Follow-up: support traditionless focus
-  sources before converting this qi-spell grant. External review required. Resource:
-  omen://feat/advanced-qi-spells?source=paizo-pathfinder-player-core-2. Foundry keys:
-  [].'
+mechanicsScope: builder
 foundryID: 10DbphslCihq8mxQ
+rules:
+- id: adb65304-4b04-5480-abbb-52eb2fc380c9
+  key: choice-qi-tradition
+  choice:
+    name: $.qi.tradition
+    label: Qi tradition
+    type: spellcasting/tradition
+    cases:
+    - {value: divine}
+    - {value: occult}
+- id: 4ad6068b-c6c4-5984-8f1f-35cf80e98e33
+  key: qi-focus-source
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
+    sourceName: Monk Focus Spells
+    castingKind: focus
+    tradition: {choice: $.qi.tradition}
+    attribute: wis
+- id: 6aaaf864-f6df-566f-9073-d99ddbbb7862
+  key: qi-spell-proficiency
+  effect: spellcasting/increase-proficiency
+  inputs:
+    tradition: {choice: $.qi.tradition}
+    proficiency: 2
+- id: cae0fa1d-30f2-5818-894b-e3b6413ab3af
+  key: choice-feat-advanced-qi-spells-spell
+  choice:
+    name: $.feat.advanced-qi-spells.spell
+    label: Qi spell
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - {spell.category: focus}
+        - {trait: classTrait-monk}
+        - {level: 3}
+      type: spellcasting/spell-id
+- id: 70ef6c10-f6a0-5e61-9b4a-51cfc507a0be
+  key: grant-qi-spell
+  effect: spellcasting/grant-focus-spell
+  inputs:
+    sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
+    spellId: {choice: $.feat.advanced-qi-spells.spell}
+- id: 2f929e37-da66-519f-a5ed-22c0c3173eb9
+  key: qi-focus-point
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.feat.advanced-qi-spells.spell
+      isSet: true
