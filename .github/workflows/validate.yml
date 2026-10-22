@@ -8,8 +8,8 @@ on:
 
 jobs:
   validate:
-    # Apple platforms only; Swift 6.4 / Xcode 27 is the toolchain floor. The tooling is checked
-    # out at the commits pinned in .github/workspace.lock.json.
+    # Apple platforms only; Swift 6.4 / Xcode 27 is the toolchain floor. The tooling comes from the
+    # main branch of the private monorepo, which holds OmenArchiveKit and OmenCore.
     runs-on: macos-26
 
     steps:
@@ -25,34 +25,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: OmenArchive
-      - name: Read the workspace lock
-        id: lock
-        run: |
-          lock=OmenArchive/.github/workspace.lock.json
-          for name in OmenArchiveKit OmenCore ADUtilities; do
-            rev=$(sed -n "s/.*\"$name\".*\"rev\": \"\([0-9a-f]*\)\".*/\1/p" "$lock")
-            test -n "$rev" || { echo "::error::$name is missing from $lock"; exit 1; }
-            echo "$name=$rev" >> "$GITHUB_OUTPUT"
-          done
-      - name: Check out OmenArchiveKit
+      - name: Check out the tooling
         uses: actions/checkout@v4
         with:
-          repository: phynics/OmenArchiveKit
-          ref: ${{ steps.lock.outputs.OmenArchiveKit }}
-          path: OmenArchiveKit
-      - name: Check out OmenCore
-        uses: actions/checkout@v4
-        with:
-          repository: phynics/OmenCore
-          ref: ${{ steps.lock.outputs.OmenCore }}
-          path: OmenCore
-          token: ${{ secrets.OMEN_CI_READ_TOKEN || github.token }}
-      - name: Check out ADUtilities
-        uses: actions/checkout@v4
-        with:
-          repository: phynics/ADUtilities
-          ref: ${{ steps.lock.outputs.ADUtilities }}
-          path: ADUtilities
+          repository: phynics/omen-monorepo
+          ref: main
+          path: monorepo
+          token: ${{ secrets.OMEN_CI_READ_TOKEN }}
       - name: Check out the pinned pf2e corpus revision
         uses: actions/checkout@v4
         with:
@@ -60,10 +39,10 @@ jobs:
           ref: 4cbdaa37d6c33e9519561bae2c59a23e0288cbce
           path: pf2e
       - name: Run OmenArchiveKit tests against this archive
-        working-directory: OmenArchiveKit
+        working-directory: monorepo/OmenArchiveKit
         env:
           OMEN_ARCHIVE_ROOT: ${{ github.workspace }}/OmenArchive
         run: swift test
       - name: Validate the complete archive with the omen-archive CLI
-        working-directory: OmenArchiveKit
+        working-directory: monorepo/OmenArchiveKit
         run: swift run omen-archive validate "${{ github.workspace }}/OmenArchive"
