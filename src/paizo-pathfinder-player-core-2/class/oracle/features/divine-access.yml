@@ -1,0 +1,212 @@
+---
+name: divine access
+level: 11
+traits:
+- oracle
+description: Your mystery offers you strange access to spells typically reserved for
+  more conventional worshippers. Choose one deity who grants one of your mystery's
+  granted domains. Add up to three cleric spells of your choice granted by that deity
+  to your spell list, and to your spell repertoire as soon as you can cast spells
+  of the appropriate rank.
+mechanicsScope: builder
+foundryID: iwAzV1IlQ2pMHQoB
+rules:
+- id: 00b20465-06da-57e6-b617-cb5290084623
+  key: choice-deity-spells-rank-1
+  level: 11
+  choice:
+    name: $.deity.spells.rank-1
+    label: Deity spell, rank 1
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: 10045585-3b16-59e0-897d-e73be8f64e80
+  key: choice-deity-spells-rank-2
+  level: 11
+  choice:
+    name: $.deity.spells.rank-2
+    label: Deity spell, rank 2
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: b98870d8-1e77-5d30-8f05-a175fa694487
+  key: choice-deity-spells-rank-3
+  level: 11
+  choice:
+    name: $.deity.spells.rank-3
+    label: Deity spell, rank 3
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: 644f3c9a-2952-5345-8f07-8191cda84b6e
+  key: choice-deity-spells-rank-4
+  level: 11
+  choice:
+    name: $.deity.spells.rank-4
+    label: Deity spell, rank 4
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: 26f17b92-aec7-505b-94fd-f60096d5b5c7
+  key: choice-deity-spells-rank-5
+  level: 11
+  choice:
+    name: $.deity.spells.rank-5
+    label: Deity spell, rank 5
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: f8b9a3bc-864e-5d34-b160-4928505539dd
+  key: choice-deity-spells-rank-6
+  level: 11
+  choice:
+    name: $.deity.spells.rank-6
+    label: Deity spell, rank 6
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: 3294533a-27bb-5778-a004-7aecffbb640c
+  key: choice-deity-spells-rank-7
+  level: 11
+  choice:
+    name: $.deity.spells.rank-7
+    label: Deity spell, rank 7
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: bd7cd44e-9b21-5d00-bd18-254f1d93a1c3
+  key: choice-deity-spells-rank-8
+  level: 11
+  choice:
+    name: $.deity.spells.rank-8
+    label: Deity spell, rank 8
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: 846dfef6-c037-5570-890a-adc58d51904c
+  key: choice-deity-spells-rank-9
+  level: 11
+  choice:
+    name: $.deity.spells.rank-9
+    label: Deity spell, rank 9
+    optional: true
+    multiple: {min: 0, max: 1}
+    records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
+- id: 6efe0cd1-998d-592f-81eb-dfac27790f16
+  key: choice-oracle-divine-access
+  level: 11
+  choice:
+    name: $.oracle.divine-access
+    label: Divine Access spells
+    optional: true
+    multiple: {min: 0, max: 3}
+    type: core/int
+    cases:
+    - {key: rank-1, label: Rank 1 deity spell, value: 1}
+    - {key: rank-2, label: Rank 2 deity spell, value: 2}
+    - {key: rank-3, label: Rank 3 deity spell, value: 3}
+    - {key: rank-4, label: Rank 4 deity spell, value: 4}
+    - {key: rank-5, label: Rank 5 deity spell, value: 5}
+    - {key: rank-6, label: Rank 6 deity spell, value: 6}
+    - {key: rank-7, label: Rank 7 deity spell, value: 7}
+    - {key: rank-8, label: Rank 8 deity spell, value: 8}
+    - {key: rank-9, label: Rank 9 deity spell, value: 9}
+- id: 13a7b673-6f50-5e27-b740-f31b38b69173
+  key: divine-access-rank-1
+  effect: spellcasting/add-known-spell-list
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 1}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-1}
+- id: 658953a8-d4db-59ad-ad66-61fb34595505
+  key: divine-access-rank-2
+  effect: spellcasting/add-known-spell-list
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 2}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-2}
+- id: 3cebf800-c248-58a4-a974-f471835e4c7f
+  key: divine-access-rank-3
+  effect: spellcasting/add-known-spell-list
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 3}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-3}
+- id: 9c68d5eb-4e26-5db7-80f6-4f38d0c7e370
+  key: divine-access-rank-4
+  effect: spellcasting/add-known-spell-list
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 4}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-4}
+- id: 0750cfd7-b643-57cc-93fa-5d30cfb10499
+  key: divine-access-rank-5
+  effect: spellcasting/add-known-spell-list
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 5}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-5}
+- id: c67284fc-0553-5e68-a6fc-77aa158b7ef7
+  key: divine-access-rank-6
+  effect: spellcasting/add-known-spell-list
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 6}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-6}
+- id: 67e683d4-37ef-5462-b0d0-e1186c34f2b9
+  key: divine-access-rank-7
+  effect: spellcasting/add-known-spell-list
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 7}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-7}
+- id: f8cffb55-efd3-5bf0-a760-af453ad507a4
+  key: divine-access-rank-8
+  effect: spellcasting/add-known-spell-list
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 8}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-8}
+- id: 47b85f3f-e20b-5a5d-8f17-6fd5dbb4609a
+  key: divine-access-rank-9
+  effect: spellcasting/add-known-spell-list
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 9}
+  inputs:
+    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    spells: {choiceList: $.deity.spells.rank-9}
