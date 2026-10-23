@@ -14,7 +14,14 @@
         "requires": { "type": "array", "items": { "type": "string" } },
         "excludes": { "type": "array", "items": { "type": "string" } },
         "countsFeatsFrom": { "type": "array", "items": { "type": "string" } },
-        "dedicationLockExceptions": { "type": "array", "items": { "type": "string" } }
+        "dedicationLockExceptions": {
+          "type": "array", "items": { "type": "string" },
+          "description": "Archetypes whose dedication can be taken while this archetype has fewer than three feats."
+        },
+        "dedicationLockChoice": {
+          "type": "string", "pattern": "^\\$\\.",
+          "description": "A choice the dedication asks, whose answer names one more archetype whose dedication can be taken early (a pledge)."
+        }
       },
       "additionalProperties": false
     },

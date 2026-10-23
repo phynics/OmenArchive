@@ -911,6 +911,19 @@ entryFeat: omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-p
 Use only source-backed root fields. Do not infer progression or configuration rules
 from feat names; add those fields only when the source provides them.
 
+A feat in the bundle does not write `relatedArchetype`: the bundle says which archetype it belongs
+to. A feat of an archetype whose dedication is in another book stays flat and writes
+`relatedArchetype`. Player Core 2's roots and bundles come from the converter: each root takes its
+name, source and description from the archetype's dedication feat.
+
+The root's `progression` block says when the character may take another dedication. By default a
+dedication is held back until every archetype the character holds a dedication for has three feats.
+`dedicationLockExceptions` lists archetypes whose dedication may be taken while this one is short,
+`countsFeatsFrom` lists archetypes whose feats count toward its three, and `dedicationLockChoice`
+names a `$` choice, asked by the archetype's dedication, whose answer is one more archetype with
+that exception. Cavalier uses the last: its dedication asks an optional question, "Pledge", and the
+character's answer is the archetype its GM allows (`$.archetype.cavalier.pledge`).
+
 The Player Core historical path map is recorded in `docs/migrations/player-core-0055-v1.0.0.json`.
 Characters saved under the old identities are opened through it. The map is frozen; new moves go
 through the migration tool and a reviewed refresh.
