@@ -16,18 +16,17 @@ description: 'The hold elders taught you your people''s histories, told tales of
 mechanicsScope: builder
 foundryID: 254C4rqrE8APDfCf
 rules:
-- id: d6bc6500-74ee-5f6d-81d9-f9ec701be679
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: athletics}
     proficiencyCap: 2
-- id: 7685350f-b992-5eab-8a24-c122a7c96e41
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
     skill: {kind: survival}
     proficiencyCap: 2
-- id: 43e87335-0489-5071-a6f3-a07b5748cb79
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: d4876e48-6e7e-51f5-828a-efc3589ade76
     featId: '@feat.additional-lore'

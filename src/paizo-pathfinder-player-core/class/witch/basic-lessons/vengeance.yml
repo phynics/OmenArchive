@@ -13,19 +13,18 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: DtmKrCvsmutVLAhH
 rules:
-- id: 57ff3100-4bc0-5d6d-a2b3-21a588a8fdec
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 8255cbe4-4877-509a-8a3a-306410711a6e
     spellId: '@spell.needle-of-vengeance'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 7b8c7267-0672-5a77-b9a4-05904017b1eb
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 099a4403-221f-5b95-9ecd-9370d1ce31d6
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 9c2dc576-32ed-5d00-8fc3-9dcbe0685374
     spellId: '@spell.phantom-pain'

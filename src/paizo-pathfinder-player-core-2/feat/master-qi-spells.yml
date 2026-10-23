@@ -21,8 +21,7 @@ specialText: You can select this feat more than once, choosing a different spell
 mechanicsScope: builder
 foundryID: DAFF7zJphhDPcAws
 rules:
-- id: 0771eee3-b3e6-530e-8071-4df5c6839dbb
-  key: choice-qi-tradition
+- key: choice-qi-tradition
   choice:
     name: $.qi.tradition
     label: Qi tradition
@@ -30,8 +29,7 @@ rules:
     cases:
     - {value: divine}
     - {value: occult}
-- id: 7bb440dc-1df8-5f03-a912-9a228a037daa
-  key: qi-focus-source
+- key: qi-focus-source
   effect: spellcasting/configure-source
   inputs:
     sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
@@ -39,14 +37,12 @@ rules:
     castingKind: focus
     tradition: {choice: $.qi.tradition}
     attribute: wis
-- id: f0b7be96-ab10-5e2f-87d5-648e53d21b89
-  key: qi-spell-proficiency
+- key: qi-spell-proficiency
   effect: spellcasting/increase-proficiency
   inputs:
     tradition: {choice: $.qi.tradition}
     proficiency: 2
-- id: 720548af-f80b-5620-bf25-5a929013e02d
-  key: choice-feat-master-qi-spells-spell
+- key: choice-feat-master-qi-spells-spell
   choice:
     name: $.feat.master-qi-spells.spell
     label: Qi spell
@@ -58,14 +54,12 @@ rules:
         - {trait: classTrait-monk}
         - {level: 8}
       type: spellcasting/spell-id
-- id: b5dc791c-4f73-53a0-98f7-11e3ec31ff1e
-  key: grant-qi-spell
+- key: grant-qi-spell
   effect: spellcasting/grant-focus-spell
   inputs:
     sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
     spellId: {choice: $.feat.master-qi-spells.spell}
-- id: 8c4b7e0e-0e58-5f87-82b2-96c161b01444
-  key: qi-focus-point
+- key: qi-focus-point
   effect: spellcasting/add-focus-point
   prerequisites:
   - hasChoice:

@@ -23,25 +23,25 @@ description: 'Demons debase all they touch. One of your ancestors fell victim to
 mechanicsScope: builder
 foundryID: w5koctOVrEcpxTIq
 rules:
-- id: 7e16ed97-8beb-5edc-80f2-c0d34e925ec6
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: divine
     attribute: cha
-- id: 95ed8d52-ba3e-546c-9c96-9e88f4e90a51
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: intimidation}
     proficiencyCap: 2
-- id: 82cd7d3a-d7fb-5c5f-ae88-9a16b04e52cf
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
     skill: {kind: religion}
     proficiencyCap: 2
-- id: f8594641-c1c9-517b-bb71-b3402f9ff7d4
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
@@ -49,81 +49,80 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 8daa1c01-6d7e-5fc0-948e-99843012476d
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: cbb3f083-b6f0-5a9f-b8a1-78ed17cc61d8
     spellId: '@spell.gluttons-jaws'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: ce517849-59d7-5365-b8e4-890587ac6350
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 3888a18e-71ef-5caa-9164-0406927fc11f
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: d4a8b117-7279-575c-bc05-40df2386cfb5
     spellId: '@spell.caustic-blast?source=paizo-pathfinder-player-core'
-- id: b468069c-3a5c-5a72-b527-afe22f469155
+- key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 689c7e5b-6f4d-5bb8-8db1-053c6fe6c898
     spellId: '@spell.fear?source=paizo-pathfinder-player-core'
-- id: e6f1456a-93a0-564e-9014-09f41a8f91c3
+- key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: e59e3297-8abb-5a27-b005-167b53139a7c
     spellId: '@spell.enlarge?source=paizo-pathfinder-player-core'
-- id: d0132c05-1c58-58ba-a7df-6fe623e542cc
+- key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: e03b749a-68e0-5dec-9d97-72c2e8c062dc
     spellId: '@spell.slow?source=paizo-pathfinder-player-core'
-- id: 6451b2aa-cb9a-5aea-a26d-84c85e18c0b4
+- key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: e8a94fd2-11d9-5694-99e8-44c2c9649592
     spellId: '@spell.divine-wrath?source=paizo-pathfinder-player-core'
-- id: 2ecd7666-52a9-5145-8a94-c15a5b058d08
+- key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 7cc2fd3d-52c6-54e7-85b4-5ec8f1a3f168
     spellId: '@spell.blister'
-- id: 6e458848-c086-56a0-882e-8e5ad6f91309
+- key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: eff64b6a-bfe3-5969-9929-32b72455f408
     spellId: '@spell.disintegrate?source=paizo-pathfinder-player-core'
-- id: 2a010e9e-3fd8-5c4e-8703-099b9027ced2
+- key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: a1590f45-bbbd-57ee-b5eb-c367a02f6961
     spellId: '@spell.divine-decree?source=paizo-pathfinder-player-core'
-- id: c4fa2abd-572e-5489-b14f-a488d29255a6
+- key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 4e66d24f-1e34-59b6-96ec-70e7d34f54ef
     spellId: '@spell.canticle-of-everlasting-grief?source=paizo-pathfinder-player-core'
-- id: 63ab37a0-dbd2-5a31-8f50-6338a765d6bb
+- key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 038588d4-a545-53c9-8d6d-a68eb1344a6c
     spellId: '@spell.implosion?source=paizo-pathfinder-player-core'

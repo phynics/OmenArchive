@@ -43,13 +43,12 @@ description: "An oracle wields divine power, but not from a single divine being.
 mechanicsScope: builder
 foundryID: PRJYLksQEwT39bTl
 rules:
-- id: f68b45b1-b8fa-5201-9ea1-8c1cbf70dfec
-  key: choice-oracle-mystery
+- key: choice-oracle-mystery
   choice:
     name: $.oracle.mystery
     label: Mystery
     records: {filter: {pathPrefix: '@class.oracle.mysteries'}, type: core/feature-id}
-- id: a6e5d9f0-d718-5eeb-baab-c42ff9be268d
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.oracle.mystery}

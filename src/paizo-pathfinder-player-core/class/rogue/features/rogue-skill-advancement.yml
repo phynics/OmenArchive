@@ -8,8 +8,7 @@ description: A rogue gains an extra skill feat at levels 1, 3, 5, 7, 9, 11, 13, 
   and 20, beyond the skill feats and skill increases every character gets.
 mechanicsScope: builder
 rules:
-- id: 96fa72fa-9f30-5fd8-a69f-ae91467e4a96
-  key: choice-rogue-skill-feat-1
+- key: choice-rogue-skill-feat-1
   choice:
     name: $.rogue.skill-feat-1
     label: Skill Feat
@@ -20,14 +19,11 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 1}
       type: core/feat-id
-- id: 44ce0549-aa94-58be-b914-f045fa8bd8eb
-  key: skill-feat-1
+- key: skill-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 589abe6e-f13b-5163-a135-afa507a76367
     featId: {choice: $.rogue.skill-feat-1}
-- id: 0662b450-261d-5ac8-90b2-d7dfd8bc4c5e
-  key: choice-rogue-skill-feat-3
+- key: choice-rogue-skill-feat-3
   level: 3
   choice:
     name: $.rogue.skill-feat-3
@@ -39,15 +35,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 3}
       type: core/feat-id
-- id: f192fb5b-8a01-5cf2-9d8c-ab68bbcd7324
-  key: skill-feat-3
+- key: skill-feat-3
   effect: core/add-feat@2
   level: 3
   inputs:
-    selectionId: fc14ac72-10cb-53f7-8ba7-714e6e3bf29b
     featId: {choice: $.rogue.skill-feat-3}
-- id: 9b948d5f-b8ba-5668-9993-736478bb8c50
-  key: choice-rogue-skill-feat-5
+- key: choice-rogue-skill-feat-5
   level: 5
   choice:
     name: $.rogue.skill-feat-5
@@ -59,15 +52,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 5}
       type: core/feat-id
-- id: 8caf2e1b-ed97-5d70-8ac1-429af0fa5f4e
-  key: skill-feat-5
+- key: skill-feat-5
   effect: core/add-feat@2
   level: 5
   inputs:
-    selectionId: 2aa6c0a2-09bd-55ad-9bb0-f9b21b1141ad
     featId: {choice: $.rogue.skill-feat-5}
-- id: 89e30470-f625-5919-b15f-a74c67a32f3b
-  key: choice-rogue-skill-feat-7
+- key: choice-rogue-skill-feat-7
   level: 7
   choice:
     name: $.rogue.skill-feat-7
@@ -79,15 +69,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 7}
       type: core/feat-id
-- id: 63545ec0-36eb-5be4-9c8a-1617581c031a
-  key: skill-feat-7
+- key: skill-feat-7
   effect: core/add-feat@2
   level: 7
   inputs:
-    selectionId: 19b6b7e2-ade0-5d2a-baff-5a0168fb535b
     featId: {choice: $.rogue.skill-feat-7}
-- id: 04904a36-9eaa-5332-be63-be5f8da2e8ef
-  key: choice-rogue-skill-feat-9
+- key: choice-rogue-skill-feat-9
   level: 9
   choice:
     name: $.rogue.skill-feat-9
@@ -99,15 +86,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 9}
       type: core/feat-id
-- id: 9f7ca871-5e70-5850-b654-4a9ae4ff13cf
-  key: skill-feat-9
+- key: skill-feat-9
   effect: core/add-feat@2
   level: 9
   inputs:
-    selectionId: c872b01e-c370-5f84-a2f0-fdada233843c
     featId: {choice: $.rogue.skill-feat-9}
-- id: 0018cd56-ef5d-5a0a-bc9b-03c9213032bb
-  key: choice-rogue-skill-feat-11
+- key: choice-rogue-skill-feat-11
   level: 11
   choice:
     name: $.rogue.skill-feat-11
@@ -119,15 +103,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 11}
       type: core/feat-id
-- id: 5b1031c2-c7b5-5465-a319-76ab18e1891f
-  key: skill-feat-11
+- key: skill-feat-11
   effect: core/add-feat@2
   level: 11
   inputs:
-    selectionId: 4b208f2c-a33c-5aa8-8d2e-bbca042d4347
     featId: {choice: $.rogue.skill-feat-11}
-- id: 0d525dfe-dbd6-5393-9c42-3b80b1c01b00
-  key: choice-rogue-skill-feat-13
+- key: choice-rogue-skill-feat-13
   level: 13
   choice:
     name: $.rogue.skill-feat-13
@@ -139,15 +120,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 13}
       type: core/feat-id
-- id: 7e8b327f-e08c-5d1a-9cae-1a76a9dfaa9a
-  key: skill-feat-13
+- key: skill-feat-13
   effect: core/add-feat@2
   level: 13
   inputs:
-    selectionId: 3bd5a8fc-742b-56ad-8b5c-af2adb27fd4a
     featId: {choice: $.rogue.skill-feat-13}
-- id: 8827f6de-a031-52bd-83a1-f703bcdec17c
-  key: choice-rogue-skill-feat-15
+- key: choice-rogue-skill-feat-15
   level: 15
   choice:
     name: $.rogue.skill-feat-15
@@ -159,15 +137,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 15}
       type: core/feat-id
-- id: a54b0ca3-ed6b-57da-a0cd-235db483672d
-  key: skill-feat-15
+- key: skill-feat-15
   effect: core/add-feat@2
   level: 15
   inputs:
-    selectionId: dc3396d2-eb8b-5f33-aaeb-e4264d29f99e
     featId: {choice: $.rogue.skill-feat-15}
-- id: feb353be-6cd4-5857-92ed-8132c551978a
-  key: choice-rogue-skill-feat-17
+- key: choice-rogue-skill-feat-17
   level: 17
   choice:
     name: $.rogue.skill-feat-17
@@ -179,15 +154,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 17}
       type: core/feat-id
-- id: 344e23dc-49e6-5a70-8c1a-605c4e97aec6
-  key: skill-feat-17
+- key: skill-feat-17
   effect: core/add-feat@2
   level: 17
   inputs:
-    selectionId: 7fac1351-512c-51b6-925b-f5b0544ca87b
     featId: {choice: $.rogue.skill-feat-17}
-- id: f192bfe4-abea-59de-b2ec-c2b8be5798d9
-  key: choice-rogue-skill-feat-19
+- key: choice-rogue-skill-feat-19
   level: 19
   choice:
     name: $.rogue.skill-feat-19
@@ -199,15 +171,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 19}
       type: core/feat-id
-- id: 2b782682-ecf3-52c2-8edf-4d82cbbdf50e
-  key: skill-feat-19
+- key: skill-feat-19
   effect: core/add-feat@2
   level: 19
   inputs:
-    selectionId: 99f0811b-e9e0-519e-8a0d-456c728f5f25
     featId: {choice: $.rogue.skill-feat-19}
-- id: 28ff111a-c38b-5d4d-a182-58dff3fd68b2
-  key: choice-rogue-skill-increase-2
+- key: choice-rogue-skill-increase-2
   level: 2
   choice:
     name: $.rogue.skill-increase-2
@@ -230,15 +199,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 04bd2756-fb1a-5579-8819-4051d36f1c40
-  key: skill-increase-2
+- key: skill-increase-2
   effect: core/add-skill-increase
   level: 2
   inputs:
     skill: {choice: $.rogue.skill-increase-2}
     proficiencyCap: 4
-- id: 674fb9af-d96c-5e52-a99d-4ad1b4f9b7c0
-  key: choice-rogue-skill-increase-4
+- key: choice-rogue-skill-increase-4
   level: 4
   choice:
     name: $.rogue.skill-increase-4
@@ -261,15 +228,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 26bf4dcd-2877-5ef6-ae9a-d3924a681e9a
-  key: skill-increase-4
+- key: skill-increase-4
   effect: core/add-skill-increase
   level: 4
   inputs:
     skill: {choice: $.rogue.skill-increase-4}
     proficiencyCap: 4
-- id: 4fef148c-9482-5170-9388-fc0d149e6389
-  key: choice-rogue-skill-increase-6
+- key: choice-rogue-skill-increase-6
   level: 6
   choice:
     name: $.rogue.skill-increase-6
@@ -292,15 +257,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 523caae5-e881-5182-a987-3407cb367e51
-  key: skill-increase-6
+- key: skill-increase-6
   effect: core/add-skill-increase
   level: 6
   inputs:
     skill: {choice: $.rogue.skill-increase-6}
     proficiencyCap: 4
-- id: 6323206f-47da-5557-a46c-6322f522fd69
-  key: choice-rogue-skill-increase-8
+- key: choice-rogue-skill-increase-8
   level: 8
   choice:
     name: $.rogue.skill-increase-8
@@ -323,15 +286,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 9b67b02f-03e6-59eb-8424-0acc008bc9df
-  key: skill-increase-8
+- key: skill-increase-8
   effect: core/add-skill-increase
   level: 8
   inputs:
     skill: {choice: $.rogue.skill-increase-8}
     proficiencyCap: 6
-- id: efc049ff-6e4a-5bcd-a744-742697b02640
-  key: choice-rogue-skill-increase-10
+- key: choice-rogue-skill-increase-10
   level: 10
   choice:
     name: $.rogue.skill-increase-10
@@ -354,15 +315,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 11619442-6ecb-550c-81bf-4e11c125fa6e
-  key: skill-increase-10
+- key: skill-increase-10
   effect: core/add-skill-increase
   level: 10
   inputs:
     skill: {choice: $.rogue.skill-increase-10}
     proficiencyCap: 6
-- id: 64c9de95-8460-5e81-a72e-e8614ee88d33
-  key: choice-rogue-skill-increase-12
+- key: choice-rogue-skill-increase-12
   level: 12
   choice:
     name: $.rogue.skill-increase-12
@@ -385,15 +344,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: e31ba9c6-7c03-59ce-a3e1-23f6fd90a67b
-  key: skill-increase-12
+- key: skill-increase-12
   effect: core/add-skill-increase
   level: 12
   inputs:
     skill: {choice: $.rogue.skill-increase-12}
     proficiencyCap: 6
-- id: ef651bb1-2286-5b96-9ed1-1bb86e9ee51a
-  key: choice-rogue-skill-increase-14
+- key: choice-rogue-skill-increase-14
   level: 14
   choice:
     name: $.rogue.skill-increase-14
@@ -416,15 +373,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 511258a2-1172-5f8e-9f72-ebde046db766
-  key: skill-increase-14
+- key: skill-increase-14
   effect: core/add-skill-increase
   level: 14
   inputs:
     skill: {choice: $.rogue.skill-increase-14}
     proficiencyCap: 6
-- id: 042faeb0-2183-51bf-8959-dee69aa80119
-  key: choice-rogue-skill-increase-16
+- key: choice-rogue-skill-increase-16
   level: 16
   choice:
     name: $.rogue.skill-increase-16
@@ -447,15 +402,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: fe342f4a-eac5-5e16-8675-04b1f30e09de
-  key: skill-increase-16
+- key: skill-increase-16
   effect: core/add-skill-increase
   level: 16
   inputs:
     skill: {choice: $.rogue.skill-increase-16}
     proficiencyCap: 8
-- id: dd4a9445-ac4f-5d1c-8d61-e3895c279662
-  key: choice-rogue-skill-increase-18
+- key: choice-rogue-skill-increase-18
   level: 18
   choice:
     name: $.rogue.skill-increase-18
@@ -478,15 +431,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: a90fdba0-9762-5cba-927d-fee2457a8e25
-  key: skill-increase-18
+- key: skill-increase-18
   effect: core/add-skill-increase
   level: 18
   inputs:
     skill: {choice: $.rogue.skill-increase-18}
     proficiencyCap: 8
-- id: fc8b753c-b3ee-58f9-a2cd-48d3b364acf3
-  key: choice-rogue-skill-increase-20
+- key: choice-rogue-skill-increase-20
   level: 20
   choice:
     name: $.rogue.skill-increase-20
@@ -509,8 +460,7 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 186fae26-1c0c-5b80-a810-b95dc87f6aac
-  key: skill-increase-20
+- key: skill-increase-20
   effect: core/add-skill-increase
   level: 20
   inputs:

@@ -14,21 +14,19 @@ description: Through your conviction, you have glimpsed the deeper secrets of yo
 mechanicsScope: builder
 foundryID: JHJBmiyILzWdFRJO
 rules:
-- id: 015e885e-ec85-5d8d-9c5e-13c7f0dfc74e
-  key: choice-deity-domains
+- key: choice-deity-domains
   choice:
     name: $.deity.domains
     label: Deity's domains
     multiple: {min: 1, max: 4}
     records: {filter: {type: domain}, type: core/domain-id}
-- id: 59475d94-5212-5560-a0db-3e497b38c3ad
-  key: choice-champion-advanced-domains
+- key: choice-champion-advanced-domains
   choice:
     name: $.champion.advanced-domains
     label: Advanced domain
     optionsFrom: $.champion.domains
     records: {filter: {type: domain}, type: core/domain-id}
-- id: 91325b58-04eb-5f92-9904-ec4d47666f65
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
@@ -36,8 +34,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 2d93975a-c6ac-5f92-9808-1c80b912d193
-  key: advanced-domain-spell
+- key: advanced-domain-spell
   effect: spellcasting/grant-domain-spell
   inputs:
     sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea

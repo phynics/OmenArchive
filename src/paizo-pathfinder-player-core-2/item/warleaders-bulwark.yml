@@ -35,11 +35,9 @@ description: 'This +1 resilient breastplate is made from shining bronze overlaid
 mechanicsScope: builder
 foundryID: RUEAV5LMUGFHcXcW
 rules:
-- id: c0e30821-a383-5164-a671-d102505be3db
-  key: flat-modifier-1
+- key: flat-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 39a892c0-e14e-5781-9566-ba7fba5de126
     target:
       description:
       - skill:
@@ -47,11 +45,9 @@ rules:
             diplomacy: {}
     description: 'Warleader''s Bulwark: +2 item bonus to Diplomacy checks.'
     numeric: {literal: {amount: 2, applicability: {kind: always}, type: item}}
-- id: 93cfa9f2-9a1a-5cd3-b40d-77c061a6f243
-  key: flat-modifier-2
+- key: flat-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 25009391-1507-57f9-9665-b618e3401941
     target:
       description:
       - skill:

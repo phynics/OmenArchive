@@ -22,19 +22,16 @@ description: 'You prefer the direct approach: strong-arming or intimidation. You
 mechanicsScope: mixed
 foundryID: 3KPZ7svIO6kmmEKH
 rules:
-- id: 7c59fccb-a3a0-5c38-9553-5c4eafa65ed9
-  key: key-attribute
+- key: key-attribute
   effect: core/extend-class-key-attribute
   inputs:
     attribute: str
-- id: 5aa17a1d-73db-598d-8497-8ac9c3de51ec
-  key: trained-skill-0
+- key: trained-skill-0
   effect: core/add-skill-increase
   inputs:
     skill: {kind: intimidation}
     proficiencyCap: 2
-- id: a3f6a8ea-85f4-5418-aecf-625e5af7d0ae
-  key: medium-armor
+- key: medium-armor
   effect: core/add-armor-proficiency
   inputs:
     armorDesignation: {armorKind: medium, kind: type}

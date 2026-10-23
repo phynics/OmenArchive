@@ -28,13 +28,12 @@ description: "Choose a bloodline that gives you your spellcasting talent. This c
 mechanicsScope: builder
 foundryID: 2goYo6VNbwC6aKF1
 rules:
-- id: 4b580619-115f-5ce7-b88d-32d0896b9a2d
-  key: choice-sorcerer-bloodline
+- key: choice-sorcerer-bloodline
   choice:
     name: $.sorcerer.bloodline
     label: Bloodline
     records: {filter: {pathPrefix: '@class.sorcerer.bloodlines'}, type: core/feature-id}
-- id: 60adf1ee-0fb2-5bf9-8d90-4569636d22fc
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.sorcerer.bloodline}

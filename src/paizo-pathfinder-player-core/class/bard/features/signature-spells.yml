@@ -20,7 +20,7 @@ description: You've learned to cast some of your spells more flexibly. For each 
 mechanicsScope: builder
 foundryID: VKRjmXxBFLrJK01c
 rules:
-- id: d7ec47b0-aac1-57fe-b099-4a591a007bf8
+- key: choice-1
   level: 3
   choice:
     name: $.bard.signature-spells.rank-1
@@ -31,13 +31,13 @@ rules:
         - {level: 1}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: f915693d-f194-52bb-baf7-8cc21a423cbe
+- key: mark-signature-spell-1
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-1}
-- id: eda0355e-3eb2-577b-9d8a-a02f93ee30dd
+- key: choice-2
   level: 3
   choice:
     name: $.bard.signature-spells.rank-2
@@ -48,13 +48,13 @@ rules:
         - {level: 2}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: d50db117-c107-5897-8c2c-862f003ce4b7
+- key: mark-signature-spell-2
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-2}
-- id: c7d539c9-c22d-5ae5-93f7-5fbca99c5a97
+- key: choice-3
   level: 5
   choice:
     name: $.bard.signature-spells.rank-3
@@ -65,13 +65,13 @@ rules:
         - {level: 3}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: ad2086f6-9a9c-53d7-a51a-5dba738529e5
+- key: mark-signature-spell-3
   effect: spellcasting/mark-signature-spell
   level: 5
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-3}
-- id: 11c92810-44dd-583e-b40a-679fa47c1d69
+- key: choice-4
   level: 7
   choice:
     name: $.bard.signature-spells.rank-4
@@ -82,13 +82,13 @@ rules:
         - {level: 4}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: 5fd35426-6e31-56b2-83ac-a65c62daba88
+- key: mark-signature-spell-4
   effect: spellcasting/mark-signature-spell
   level: 7
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-4}
-- id: 0496b411-68cf-5dc8-bfb3-54f5a7a4199b
+- key: choice-5
   level: 9
   choice:
     name: $.bard.signature-spells.rank-5
@@ -99,13 +99,13 @@ rules:
         - {level: 5}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: 2ca1e825-743a-50f7-8e37-1b8176ec7d17
+- key: mark-signature-spell-5
   effect: spellcasting/mark-signature-spell
   level: 9
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-5}
-- id: 3a375e1f-c486-5594-b503-5d17be8cbc99
+- key: choice-6
   level: 11
   choice:
     name: $.bard.signature-spells.rank-6
@@ -116,13 +116,13 @@ rules:
         - {level: 6}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: c631f85b-ed6d-55ee-8bed-f735c9ddec99
+- key: mark-signature-spell-6
   effect: spellcasting/mark-signature-spell
   level: 11
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-6}
-- id: fd0226cb-2b8d-5942-981d-af935c2345c5
+- key: choice-7
   level: 13
   choice:
     name: $.bard.signature-spells.rank-7
@@ -133,13 +133,13 @@ rules:
         - {level: 7}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: 606062c0-7108-5da0-9ae4-d6a889d8c0f6
+- key: mark-signature-spell-7
   effect: spellcasting/mark-signature-spell
   level: 13
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-7}
-- id: c642d6a1-c599-51f5-b3eb-f8bca2636a71
+- key: choice-8
   level: 15
   choice:
     name: $.bard.signature-spells.rank-8
@@ -150,13 +150,13 @@ rules:
         - {level: 8}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: d87af1a0-af0b-5109-91fe-94f733bb68cb
+- key: mark-signature-spell-8
   effect: spellcasting/mark-signature-spell
   level: 15
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-8}
-- id: 43b3ff70-94c2-56c2-b697-3fd7f59f2c63
+- key: choice-9
   level: 17
   choice:
     name: $.bard.signature-spells.rank-9
@@ -167,13 +167,13 @@ rules:
         - {level: 9}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: 526a62a5-5bed-5819-ba6b-103bb895c939
+- key: mark-signature-spell-9
   effect: spellcasting/mark-signature-spell
   level: 17
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-9}
-- id: 15cc671f-6263-50f6-a71b-3ae973dfdd9e
+- key: choice-10
   level: 19
   choice:
     name: $.bard.signature-spells.rank-10
@@ -184,9 +184,9 @@ rules:
         - {level: 10}
         - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
       type: spellcasting/spell-id
-- id: 3eb018c5-41c3-5df7-8b74-b94db75a6b12
+- key: mark-signature-spell-10
   effect: spellcasting/mark-signature-spell
   level: 19
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     spellId: {choice: $.bard.signature-spells.rank-10}

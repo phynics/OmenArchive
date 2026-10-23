@@ -12,8 +12,7 @@ description: Hours spent training with your preferred weapons, learning and deve
 mechanicsScope: mixed
 foundryID: gApJtAdNb9ST4Ms9
 rules:
-- id: 0f617ee8-09f1-551b-9a23-407ee2563a1b
-  key: choice-fighter-weapon-mastery-group
+- key: choice-fighter-weapon-mastery-group
   level: 5
   choice:
     name: $.fighter.weapon-mastery-group
@@ -33,16 +32,14 @@ rules:
     - {value: pick}
     - {value: shield}
     - {value: bow}
-- id: 803819ae-3451-59bd-aa1f-64e42a0be00f
-  key: martial-proficiency-1
+- key: martial-proficiency-1
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-mastery-group}
     proficiencyRank: 6
     includeAdvanced: false
     selfScaling: false
-- id: ce4dc7c6-cfc7-52ca-8fe8-7a39ce41b163
-  key: martial-proficiency-2
+- key: martial-proficiency-2
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-mastery-group}

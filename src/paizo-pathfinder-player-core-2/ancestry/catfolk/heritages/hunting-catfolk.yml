@@ -12,11 +12,9 @@ description: 'You come from a long line of skilled hunters and trackers and have
   smelled it before.'
 mechanicsScope: builder
 rules:
-- id: eb82ba72-8d9a-55ef-86d4-102e210ad44a
-  key: flat-modifier-1
+- key: flat-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: f3b36640-f5b8-5271-b9bc-61aaf7cdb8c0
     target:
       description:
       - skill:
@@ -25,8 +23,7 @@ rules:
     description: 'Hunting Catfolk: +2 circumstance bonus to Survival checks (Track).'
     numeric: {literal: {amount: 2, applicability: {description: Track, kind: situational},
         type: circumstance}}
-- id: 25e8ac8c-ee80-5b0f-9fe9-ee8f41fbe836
-  key: sense-1
+- key: sense-1
   effect: core/add-sense
   inputs:
     selector: scent

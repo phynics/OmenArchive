@@ -51,7 +51,7 @@ description: You draw more power from your bloodline. You gain the advanced bloo
 mechanicsScope: builder
 foundryID: eZrftEihfuJBldG5
 rules:
-- id: 60da88b1-7db2-5e43-8987-550d7d7e04e5
+- key: configure-source-1
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -64,7 +64,7 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: cha
-- id: 0e1704df-7ad2-5268-a164-80b67082f317
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -73,18 +73,17 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: d3918fec-2f45-5729-b462-cb36cb426ab1
     spellId: '@spell.aberrant-whispers'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 3458dc1d-a666-5c58-9922-4fd2877a3734
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
-- id: 8cf1676f-8a3a-55ff-9e3d-498474e9d7eb
+- key: configure-source-2
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -97,7 +96,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: bbbdae88-9a95-5be7-8b66-f2575172613b
+- key: grant-spell-2
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -106,18 +105,17 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 2ad8da16-d3ba-5d13-bc8d-e89425760006
     spellId: '@spell.angelic-wings'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: f82bc3a6-1469-5724-94b5-60c069862bb8
+- key: add-focus-point-2
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
-- id: ee42214f-31ea-5fdd-a93e-5076fa20d0e7
+- key: configure-source-3
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -130,7 +128,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 69a2d916-4747-5f9e-a860-d024072239ca
+- key: grant-spell-3
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -139,18 +137,17 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: c73cda84-6ebd-517e-89ca-87f99b2ea16d
     spellId: '@spell.swamp-of-sloth'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 1304eb44-ba5f-51d6-90d8-7ea004b4906a
+- key: add-focus-point-3
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
-- id: 22d48b65-e26c-503c-a6eb-d06c3db03bca
+- key: configure-source-4
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -163,7 +160,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: b10f25f6-246f-5121-b91b-58aa8433a039
+- key: grant-spell-4
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -172,18 +169,17 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: fdb8ff44-0625-5b07-b8d1-c5d820276fba
     spellId: '@spell.embrace-the-pit'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 0847ce58-906d-587e-93c6-82fa57976d08
+- key: add-focus-point-4
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
-- id: 3c953d91-c365-5c95-bb61-f314450c9956
+- key: configure-source-5
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -199,7 +195,7 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: cha
-- id: 499f4706-a0aa-574f-a729-a7ab8ce38acd
+- key: grant-spell-5
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -211,11 +207,10 @@ rules:
       equals: {type: core/string, value: arcane}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: c42d7c9f-6d6c-5b3a-bf77-2e38b27bcd53
     spellId: '@spell.dragon-breath'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 47b82e4c-f085-5deb-8416-3e881b6834b1
+- key: add-focus-point-5
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -225,7 +220,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
-- id: 846c9811-4ee6-5f9b-9463-9ffe5b047383
+- key: configure-source-6
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -241,7 +236,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 893a1bff-06b1-5015-9290-df3caed9a238
+- key: grant-spell-6
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -253,11 +248,10 @@ rules:
       equals: {type: core/string, value: divine}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: c42d7c9f-6d6c-5b3a-bf77-2e38b27bcd53
     spellId: '@spell.dragon-breath'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 2b6b1a03-748b-5453-a633-af819e9a01c3
+- key: add-focus-point-6
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -267,7 +261,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
-- id: 64f8e6ba-12d5-54d9-81d3-a78523b190f3
+- key: configure-source-7
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -283,7 +277,7 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: cha
-- id: 7260d229-1b55-5a68-be1a-c23a82e250bf
+- key: grant-spell-7
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -295,11 +289,10 @@ rules:
       equals: {type: core/string, value: occult}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: c42d7c9f-6d6c-5b3a-bf77-2e38b27bcd53
     spellId: '@spell.dragon-breath'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 5cc52331-0ff7-5e72-8f80-61f3c6f58b88
+- key: add-focus-point-7
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -309,7 +302,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
-- id: ff542b8b-5dc2-56ff-9b0a-1df9a6fb5bd0
+- key: configure-source-8
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -325,7 +318,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: 0371fe5a-5cf3-5920-82a6-1b4d9ea81b92
+- key: grant-spell-8
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -337,11 +330,10 @@ rules:
       equals: {type: core/string, value: primal}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: c42d7c9f-6d6c-5b3a-bf77-2e38b27bcd53
     spellId: '@spell.dragon-breath'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 0fe8ed62-d197-5ab1-a6a5-c1ff6c95aac2
+- key: add-focus-point-8
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -351,7 +343,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
-- id: e1487b35-cdc3-5c5c-833a-434e3e7e46bd
+- key: configure-source-9
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -367,7 +359,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: 85d1dfa8-dd0e-5252-8f8d-a220c50c51aa
+- key: grant-spell-9
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -379,11 +371,10 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 3f9dae43-cd96-517b-a47d-3490bd4501be
     spellId: '@spell.elemental-motion'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: ff413c79-0eb1-545c-a2fb-a8f87a33cb54
+- key: add-focus-point-9
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -393,7 +384,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: air}
-- id: c341d8ce-fe49-5f63-a291-83ee6286eb40
+- key: configure-source-10
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -409,7 +400,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: 75f1a52c-cf35-57df-a271-bd93a4a511e3
+- key: grant-spell-10
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -421,11 +412,10 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 3f9dae43-cd96-517b-a47d-3490bd4501be
     spellId: '@spell.elemental-motion'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: a64ca8aa-4c04-53ae-b159-fa7688106d8f
+- key: add-focus-point-10
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -435,7 +425,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: earth}
-- id: 38e37c4f-1df2-5ee3-8652-ab0e80b49f42
+- key: configure-source-11
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -451,7 +441,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: e0dd01d4-f8af-5cd2-bb55-68350320eb46
+- key: grant-spell-11
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -463,11 +453,10 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 3f9dae43-cd96-517b-a47d-3490bd4501be
     spellId: '@spell.elemental-motion'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 554d684d-42c6-5915-b078-36729f9ef80b
+- key: add-focus-point-11
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -477,7 +466,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: fire}
-- id: 87052eb8-09d1-554b-846b-5bef118f5e0c
+- key: configure-source-12
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -493,7 +482,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: 8e626f90-5003-54ac-9701-b182926d05a4
+- key: grant-spell-12
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -505,11 +494,10 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 3f9dae43-cd96-517b-a47d-3490bd4501be
     spellId: '@spell.elemental-motion'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 6b172ce6-18e2-5eb0-a838-05b3c4a8c6d9
+- key: add-focus-point-12
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -519,7 +507,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: metal}
-- id: e6cefe03-ac69-5f4a-97d5-0e39133b8ec9
+- key: configure-source-13
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -535,7 +523,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: 24ec59d9-2636-5c1d-8833-d0d3a991bc80
+- key: grant-spell-13
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -547,11 +535,10 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 3f9dae43-cd96-517b-a47d-3490bd4501be
     spellId: '@spell.elemental-motion'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 5458f09f-a781-5551-a17d-7f8f135fb9a2
+- key: add-focus-point-13
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -561,7 +548,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: water}
-- id: 8ecb0e8b-d09f-5f93-b041-1b480c573e1f
+- key: configure-source-14
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -577,7 +564,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: a2bec3ab-bfef-5c9c-83ce-a3ccbed63d6f
+- key: grant-spell-14
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -589,11 +576,10 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 3f9dae43-cd96-517b-a47d-3490bd4501be
     spellId: '@spell.elemental-motion'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 5c3b74cd-ca4a-513f-9388-22c585e69fd4
+- key: add-focus-point-14
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
@@ -603,7 +589,7 @@ rules:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: wood}
-- id: 72712db4-ccdc-5916-bca0-1dfe1f08589f
+- key: configure-source-15
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -616,7 +602,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: 07d2fde1-2679-5894-b738-18d02075ce0c
+- key: grant-spell-15
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -625,18 +611,17 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 4896ffce-98fc-5b9c-868a-a81fdface367
     spellId: '@spell.fey-disappearance'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: a2b5a98e-494f-56d4-9901-2d8c70e7b59b
+- key: add-focus-point-15
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
-- id: ed69ee6d-e0d4-5ddc-b7a7-793df89e870f
+- key: configure-source-16
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -649,7 +634,7 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: cha
-- id: 1900d5ab-0f81-567b-8189-c4a13cb5fa35
+- key: grant-spell-16
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -658,18 +643,17 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 2bf0e2c7-0f18-5d6c-814f-f7beadd0d6fe
     spellId: '@spell.horrific-visage'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: d06cdb21-bd64-5c64-a38c-88731c8fe248
+- key: add-focus-point-16
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
-- id: 3e513ee8-b8ec-5484-bbc2-a73d5a3bb591
+- key: configure-source-17
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -682,7 +666,7 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: cha
-- id: 334d7119-aae9-56cf-9550-cb96898ba745
+- key: grant-spell-17
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -691,18 +675,17 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: c046b5c0-32eb-5e0d-a3d5-2d158fbcd114
     spellId: '@spell.extend-blood-magic'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: fae8a315-82f4-5a3b-bcc4-2771b897253d
+- key: add-focus-point-17
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
-- id: f14306f9-7fc1-5f17-b248-39674f1e266d
+- key: configure-source-18
   effect: spellcasting/configure-source
   level: 6
   prerequisites:
@@ -715,7 +698,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 2645ff28-d2bd-5ec3-a7b3-8e5a1dee8550
+- key: grant-spell-18
   effect: spellcasting/grant-spell
   level: 6
   prerequisites:
@@ -724,11 +707,10 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 2bddd9db-7a5a-5926-bf53-9584ae787543
     spellId: '@spell.drain-life'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: ee4cb513-5053-57a4-b270-5e991a3702c8
+- key: add-focus-point-18
   effect: spellcasting/add-focus-point
   level: 6
   prerequisites:

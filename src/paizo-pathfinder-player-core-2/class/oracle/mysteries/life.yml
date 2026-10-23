@@ -15,20 +15,20 @@ description: "The never-ending flow of life force within living beings is palpab
 mechanicsScope: builder
 foundryID: o1gGG36wpn9mxeop
 rules:
-- id: 6e6cc28c-dcb0-582d-b671-2ad1fafddcdc
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     sourceName: Oracle Spellcasting
     castingKind: spontaneous
     tradition: divine
     attribute: cha
-- id: ee81a09b-3ddf-5779-b14b-395ef46a4f75
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: medicine}
     proficiencyCap: 2
-- id: 69043bda-4b18-55a6-bdd7-dfbceef2c742
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
@@ -36,48 +36,46 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 8c6fc376-d418-547b-a573-0f37deb15099
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
-    grantId: ec6efacb-8287-552f-bb1c-18ba26443447
     spellId: '@spell.life-link'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: daf0ca98-d9aa-58bc-85b2-324077cf1965
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 8fc28d27-bbf6-5de6-962c-7a838dcfc2b4
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: '@class.oracle.curses.curse-of-outpouring-life'
-- id: c0d69f35-5f57-517e-87d2-b514855d94cd
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 113dcdf1-764a-59ac-a11c-d5f826b14ee7
     featId: '@feat.nudge-the-scales'
-- id: 8894d04b-a402-5f21-bf65-28674edfc4a7
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: ae37b68e-1fd7-5349-8b10-11f1873c258f
     spellId: '@spell.vitality-lash?source=paizo-pathfinder-player-core'
-- id: c66b5732-0ccd-5f76-9475-d95e8dd550f3
+- key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: cefbe9e4-eee6-5d30-b608-6c7b2de1e950
     spellId: '@spell.soothe?source=paizo-pathfinder-player-core'
-- id: 771e3928-cc1b-580a-94b1-62d1d095a038
+- key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: e5d7dc9e-f5a8-51d0-92ad-96a5cdc15076
     spellId: '@spell.false-vitality?source=paizo-pathfinder-player-core'
-- id: 582169dd-8441-5746-bb4e-e44ccb30332a
+- key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: f249bc27-e974-5605-8331-bcbbdecaa340
     spellId: '@spell.grisly-growths'

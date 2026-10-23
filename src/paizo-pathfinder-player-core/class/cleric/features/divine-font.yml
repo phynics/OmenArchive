@@ -22,8 +22,7 @@ description: 'Through your deity''s blessing, you gain additional spells that ch
 mechanicsScope: builder
 foundryID: gblTFUOgolqFS9v4
 rules:
-- id: a706a312-88ca-5c0e-8d65-f00c3a6a1e06
-  key: choice-deity-divine-font
+- key: choice-deity-divine-font
   choice:
     name: $.deity.divine-font
     label: Allowed divine fonts
@@ -32,16 +31,15 @@ rules:
     - {key: heal, value: ['@spell.heal']}
     - {key: harm, value: ['@spell.harm']}
     - {key: both, label: Heal or Harm, value: ['@spell.heal', '@spell.harm']}
-- id: e72b5d93-4de5-5477-b09a-b587442c5afb
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     sourceName: Cleric Spellcasting
     castingKind: prepared
     tradition: divine
     attribute: wis
-- id: 7be6e4c7-d7c1-570e-8c0c-dc5dfe5c0c7e
-  key: choice-cleric-divine-font
+- key: choice-cleric-divine-font
   choice:
     name: $.cleric.divine-font
     label: Divine Font
@@ -50,29 +48,26 @@ rules:
     cases:
     - {label: Heal, value: '@spell.heal'}
     - {label: Harm, value: '@spell.harm'}
-- id: 280473ab-f966-5827-9a9f-8e04ecf34058
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
-    grantId: 3a600f71-f9cb-5fd4-98be-43da4fc0a17c
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spellId: {choice: $.cleric.divine-font}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: perDay, uses: 4}
-- id: ab6447a1-5732-5cbe-a505-59d7b695c7c3
+- key: grant-spell-2
   effect: spellcasting/grant-spell
   level: 5
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
-    grantId: a941a0a6-2d3f-5b53-afd9-78137271ef02
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spellId: {choice: $.cleric.divine-font}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: perDay, uses: 1}
-- id: 5662a48d-ec52-57ba-b573-f9ee4012c8d1
+- key: grant-spell-3
   effect: spellcasting/grant-spell
   level: 15
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
-    grantId: 31244bb1-a55a-5969-a850-4eaf4da5d62e
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spellId: {choice: $.cleric.divine-font}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: perDay, uses: 1}

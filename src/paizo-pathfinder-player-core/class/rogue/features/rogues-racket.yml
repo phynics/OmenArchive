@@ -19,14 +19,12 @@ description: 'You''ve begun to develop your techniques and approach to a job, wh
 mechanicsScope: builder
 foundryID: uGuCGQvUmioFV2Bd
 rules:
-- id: 0b0cd940-1560-5d58-ab98-d52a8a22d25e
-  key: choice-rogue-racket
+- key: choice-rogue-racket
   choice:
     name: $.rogue.racket
     label: Racket
     records: {filter: {pathPrefix: '@class.rogue.rackets'}, type: core/feature-id}
-- id: b92194f8-3521-5aa2-a166-74ae8857ced1
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.rogue.racket}

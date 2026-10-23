@@ -22,7 +22,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: acqqlYmti8D9QJi0
 rules:
-- id: da083bd2-ed0a-50c9-9d15-a76f14b2ab0d
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
@@ -30,23 +30,21 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: wis
-- id: 3aa23a05-c14d-55f5-83a9-34e61c23b782
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
-    grantId: e0009e18-f5b0-51e7-b2f6-de294171ba87
     spellId: '@spell.tempest-surge'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: ff2ee62b-4996-5729-bec1-bf476fb77608
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: f21356ec-fce3-5762-af78-6fab851e4154
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: acrobatics}
     proficiencyCap: 2
-- id: 816f809d-17c5-54af-a2b9-7914a5250212
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: be9dad80-1e52-5723-9faf-e46e34eded11
     featId: '@feat.storm-born'

@@ -9,14 +9,12 @@ description: Your own distinctive style lets you gracefully handle any situation
 mechanicsScope: builder
 foundryID: beW1OqibVQ3fBvRw
 rules:
-- id: 116a6271-e5c0-5a54-a01b-e03c9e7d0ef1
-  key: choice-swashbuckler-style
+- key: choice-swashbuckler-style
   choice:
     name: $.swashbuckler.style
     label: Style
     records: {filter: {pathPrefix: '@class.swashbuckler.styles'}, type: core/feature-id}
-- id: ccff4b32-738c-53a8-9e54-3182e44e19f9
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.swashbuckler.style}

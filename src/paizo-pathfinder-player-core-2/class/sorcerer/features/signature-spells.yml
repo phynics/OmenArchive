@@ -20,7 +20,7 @@ description: You've learned to cast some of your spells more flexibly. For each 
 mechanicsScope: builder
 foundryID: VKRjmXxBFLrJK01c
 rules:
-- id: 5d41743c-8fc4-5be6-b8c7-531fc57d65a8
+- key: choice-1
   level: 3
   choice:
     name: $.sorcerer.signature-spells.rank-1
@@ -31,13 +31,13 @@ rules:
         - {level: 1}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: 7dce8ff4-5c22-5115-bd1a-17444494e78b
+- key: mark-signature-spell-1
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-1}
-- id: 2ace2552-3a58-5a69-8e90-c94f8ef3a2ad
+- key: choice-2
   level: 3
   choice:
     name: $.sorcerer.signature-spells.rank-2
@@ -48,13 +48,13 @@ rules:
         - {level: 2}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: 0fed2360-5631-53ff-a136-907407bbcdb4
+- key: mark-signature-spell-2
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-2}
-- id: 17a70e16-bbfd-5653-a8aa-9ed6e99d586e
+- key: choice-3
   level: 5
   choice:
     name: $.sorcerer.signature-spells.rank-3
@@ -65,13 +65,13 @@ rules:
         - {level: 3}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: e8ba94e9-5110-515d-9650-33e29fc2cf01
+- key: mark-signature-spell-3
   effect: spellcasting/mark-signature-spell
   level: 5
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-3}
-- id: 7b645c9d-0ef6-512c-a5ae-0e30abc732e8
+- key: choice-4
   level: 7
   choice:
     name: $.sorcerer.signature-spells.rank-4
@@ -82,13 +82,13 @@ rules:
         - {level: 4}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: cf53e669-8b4b-5778-8a59-f0458cf0f232
+- key: mark-signature-spell-4
   effect: spellcasting/mark-signature-spell
   level: 7
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-4}
-- id: c8a2e78d-c013-5d0d-9df6-884a79dca01e
+- key: choice-5
   level: 9
   choice:
     name: $.sorcerer.signature-spells.rank-5
@@ -99,13 +99,13 @@ rules:
         - {level: 5}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: 0d9ad82b-be7b-5abf-b065-9b26ae649efb
+- key: mark-signature-spell-5
   effect: spellcasting/mark-signature-spell
   level: 9
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-5}
-- id: 4ac8a571-6bf2-5490-9e8f-dce894837522
+- key: choice-6
   level: 11
   choice:
     name: $.sorcerer.signature-spells.rank-6
@@ -116,13 +116,13 @@ rules:
         - {level: 6}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: fe601286-c743-5499-b24b-79523be6b07a
+- key: mark-signature-spell-6
   effect: spellcasting/mark-signature-spell
   level: 11
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-6}
-- id: 86869acb-e0f2-5faf-b1a1-52f604bee9d4
+- key: choice-7
   level: 13
   choice:
     name: $.sorcerer.signature-spells.rank-7
@@ -133,13 +133,13 @@ rules:
         - {level: 7}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: d4fe6ccb-398b-50d4-a80c-35d03bac5d79
+- key: mark-signature-spell-7
   effect: spellcasting/mark-signature-spell
   level: 13
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-7}
-- id: 9b6582b3-90cf-576c-8f6f-1cf927c0b5f5
+- key: choice-8
   level: 15
   choice:
     name: $.sorcerer.signature-spells.rank-8
@@ -150,13 +150,13 @@ rules:
         - {level: 8}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: e40b5013-05e5-505e-abea-560ea0e8d37e
+- key: mark-signature-spell-8
   effect: spellcasting/mark-signature-spell
   level: 15
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-8}
-- id: ae2026a0-bfb1-52ce-8b23-cc20d0cbb884
+- key: choice-9
   level: 17
   choice:
     name: $.sorcerer.signature-spells.rank-9
@@ -167,13 +167,13 @@ rules:
         - {level: 9}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: f86eb689-2a91-5dc7-8a6e-f5dfd2601007
+- key: mark-signature-spell-9
   effect: spellcasting/mark-signature-spell
   level: 17
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-9}
-- id: 46920382-be37-5634-94c1-7cbb4fab0d12
+- key: choice-10
   level: 19
   choice:
     name: $.sorcerer.signature-spells.rank-10
@@ -184,9 +184,9 @@ rules:
         - {level: 10}
         - {knownBySource: f53548c3-b3c7-5ca2-8687-afc0c6268877}
       type: spellcasting/spell-id
-- id: 16a00117-deb4-5bfd-963a-3dd343467e9d
+- key: mark-signature-spell-10
   effect: spellcasting/mark-signature-spell
   level: 19
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     spellId: {choice: $.sorcerer.signature-spells.rank-10}

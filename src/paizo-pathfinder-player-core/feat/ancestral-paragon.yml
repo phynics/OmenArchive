@@ -10,8 +10,7 @@ description: Whether through instinct, study, or magic, you feel a deeper connec
 mechanicsScope: builder
 foundryID: m7KjpkAAh9PptJsY
 rules:
-- id: d3b5c226-4c0a-56b0-aef9-a1395772d37e
-  key: choice-feat-ancestral-paragon-feat
+- key: choice-feat-ancestral-paragon-feat
   choice:
     name: $.feat.ancestral-paragon.feat
     label: Ancestry Feat
@@ -24,9 +23,7 @@ rules:
         - {sharesAncestryTrait: true}
         - {not: {trait: lineage}}
       type: core/feat-id
-- id: f9fdccc6-a163-5758-8a84-17b36c6a8fd5
-  key: grant-item-1
+- key: grant-item-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 6dba2ba5-0b16-55a5-aed2-cedd4e579e81
     featId: {choice: $.feat.ancestral-paragon.feat}

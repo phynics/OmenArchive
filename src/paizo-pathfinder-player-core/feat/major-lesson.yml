@@ -18,8 +18,7 @@ specialText: You can select this feat a second time if you're 14th level or high
 mechanicsScope: builder
 foundryID: ZFkCMl63ogK55Otq
 rules:
-- id: 309bf70d-de3c-5b1e-bf66-14559051dca3
-  key: choice-feat-major-lesson-lessons
+- key: choice-feat-major-lesson-lessons
   choice:
     name: $.feat.major-lesson.lessons
     label: Lesson
@@ -30,8 +29,7 @@ rules:
         - {pathPrefix: '@class.witch.greater-lessons'}
         - {pathPrefix: '@class.witch.major-lessons'}
       type: core/feature-id
-- id: 0bbc031e-c756-574c-a1d8-46a62e8e3b17
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.feat.major-lesson.lessons}

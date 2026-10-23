@@ -22,7 +22,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: POBvoXifa9HaejAg
 rules:
-- id: 8e5024d8-053e-5e1c-854e-66de30036540
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
@@ -30,23 +30,21 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: wis
-- id: 9be7e59b-e74f-58d8-af75-76604472f8a5
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
-    grantId: 89e8fd02-8086-59bd-a626-87b48e66f24e
     spellId: '@spell.heal-animal'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 659d30f3-b208-5708-bdfa-a925bd541bc4
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 20504b27-ba1e-534e-b538-c1960ec137ed
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: athletics}
     proficiencyCap: 2
-- id: b5275881-dc7f-5492-b794-c06999a91a4b
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: cec3a688-f309-5801-96fe-8de29c3600fa
     featId: '@feat.animal-companion'

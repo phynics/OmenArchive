@@ -14,18 +14,17 @@ description: 'You''ve studied traditional elven arts, learning about arcane magi
 mechanicsScope: builder
 foundryID: zki5qdM5IQcAiscM
 rules:
-- id: 51ba6915-a593-5d56-b5be-37ab2015efb8
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: arcana}
     proficiencyCap: 2
-- id: 2e0d5308-6717-5f82-9f9a-2f2d39d80322
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
     skill: {kind: nature}
     proficiencyCap: 2
-- id: f81e2d7c-6872-55eb-aef7-b6d3c0553191
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: d7a11ec3-5b18-5608-8c1f-658acb05b63f
     featId: '@feat.additional-lore'

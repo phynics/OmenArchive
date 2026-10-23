@@ -16,7 +16,7 @@
             "key": {
               "type": "string",
               "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-              "description": "Readable stable member identity for a rule; its id is derived from the record path and this key"
+              "description": "Readable stable member identity for a rule. Its id is derived from the record path and this key, so a rule written in this format does not carry one."
             },
             "level": {
               "type": "integer",
@@ -38,7 +38,7 @@
             }
           },
           "required": [
-            "id",
+            "key",
             "effect"
           ],
           "additionalProperties": false
@@ -52,7 +52,7 @@
             "key": {
               "type": "string",
               "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-              "description": "Readable stable member identity for a rule; its id is derived from the record path and this key"
+              "description": "Readable stable member identity for a rule. Its id is derived from the record path and this key, so a rule written in this format does not carry one."
             },
             "level": {
               "type": "integer",
@@ -71,7 +71,7 @@
             }
           },
           "required": [
-            "id",
+            "key",
             "choice"
           ],
           "additionalProperties": false
@@ -79,7 +79,7 @@
       ]
     },
     "recordReference": {
-      "description": "A record: @family.name[.collection.name]*, then an optional #member and ?source=. Without ?source= it is the file's own publication's record. A raw UUID passes the schema but not the validator: the archive names records by reference; a converter's draft may hold UUIDs until it is made canonical.",
+      "description": "A record: @family.name[.collection.name]*, then an optional #member and ?source=. Without ?source= it is the file's own publication's record. A raw UUID passes the schema but not the validator: the archive names records by reference, and a writer that stages into an archive without the record keeps the UUID until the record exists.",
       "type": "string",
       "pattern": "^(?:@[^\\s#?]+(?:#[^\\s?]+)?(?:\\?source=[a-z0-9-]+)?|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
     },

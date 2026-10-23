@@ -8,17 +8,14 @@ description: You're a striped, pale-furred kholo with oddly pleasant breath, whi
   to checks to Make an Impression if the target can smell your breath.
 mechanicsScope: builder
 rules:
-- id: d6a828f7-7efc-5d42-b17f-f1ba5d536884
-  key: active-effect-like-1
+- key: active-effect-like-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: diplomacy}
     proficiencyCap: 2
-- id: d9e8c1a9-94ed-5d37-8749-e664e805c40f
-  key: flat-modifier-1
+- key: flat-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: b2f5339f-5a0e-5f1c-9f4d-ee254384a609
     target:
       description:
       - skill:

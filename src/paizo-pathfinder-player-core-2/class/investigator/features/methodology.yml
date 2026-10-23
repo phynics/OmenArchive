@@ -10,14 +10,12 @@ description: "Your studies have made you savvy in many areas, but one in particu
 mechanicsScope: builder
 foundryID: uhHg9BXBiHpL5ndS
 rules:
-- id: 137eba7e-3744-5604-a621-3eb99911c9dc
-  key: choice-investigator-methodology
+- key: choice-investigator-methodology
   choice:
     name: $.investigator.methodology
     label: Methodology
     records: {filter: {pathPrefix: '@class.investigator.methodologies'}, type: core/feature-id}
-- id: 7c744bd3-5902-5138-a247-3201ba2ab835
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.investigator.methodology}

@@ -21,8 +21,7 @@ description: 'Your deity''s power grants you special divine spells called devoti
 mechanicsScope: builder
 foundryID: Q1VfQZp49hkhY0HY
 rules:
-- id: df443234-6da5-5222-80df-93b4e14a8914
-  key: choice-deity-divine-font
+- key: choice-deity-divine-font
   choice:
     name: $.deity.divine-font
     label: Allowed divine fonts
@@ -32,7 +31,7 @@ rules:
     - {key: harm, value: ['@spell.harm?source=paizo-pathfinder-player-core']}
     - {key: both, label: Heal or Harm, value: ['@spell.heal?source=paizo-pathfinder-player-core',
         '@spell.harm?source=paizo-pathfinder-player-core']}
-- id: c729d21b-4d47-5e9c-b6e6-cbc138c3b8fb
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
@@ -40,13 +39,12 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 26458799-8b5e-5d4e-885f-5095e0a8f402
+- key: increase-source-proficiency-1
   effect: spellcasting/increase-source-proficiency
   inputs:
     sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
     proficiency: 2
-- id: 034bb0f9-9efc-5f51-ba5d-fcc1a067f97b
-  key: choice-champion-devotion-spell-heal
+- key: choice-champion-devotion-spell-heal
   prerequisites:
   - hasChoice:
       name: $.deity.divine-font
@@ -60,8 +58,7 @@ rules:
     cases:
     - {key: shields-of-the-spirit, value: '@spell.shields-of-the-spirit'}
     - {key: lay-on-hands, value: '@spell.lay-on-hands'}
-- id: 30607188-2a01-5da9-b7fe-baea7fafe9ee
-  key: choice-champion-devotion-spell-harm
+- key: choice-champion-devotion-spell-harm
   prerequisites:
   - hasChoice:
       name: $.deity.divine-font
@@ -75,8 +72,7 @@ rules:
     cases:
     - {key: shields-of-the-spirit, value: '@spell.shields-of-the-spirit'}
     - {key: touch-of-the-void, value: '@spell.touch-of-the-void'}
-- id: 889fde38-f81d-5c49-9e29-cb1a82454feb
-  key: choice-champion-devotion-spell-both
+- key: choice-champion-devotion-spell-both
   prerequisites:
   - hasChoice:
       name: $.deity.divine-font
@@ -92,17 +88,14 @@ rules:
     - {key: shields-of-the-spirit, value: '@spell.shields-of-the-spirit'}
     - {key: lay-on-hands, value: '@spell.lay-on-hands'}
     - {key: touch-of-the-void, value: '@spell.touch-of-the-void'}
-- id: 37792a5e-1087-5fa2-ae5c-91a3e03784f5
-  key: grant-devotion-spell
+- key: grant-devotion-spell
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
-    grantId: 2fa119ad-6d5b-5f02-8862-30ad6df9b2c7
     spellId: {choice: $.champion.devotion-spell}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 93b1c402-e2c3-5de2-af8f-d3de9c35763f
-  key: devotion-focus-point
+- key: devotion-focus-point
   effect: spellcasting/add-focus-point
   prerequisites:
   - hasChoice:

@@ -14,8 +14,7 @@ description: 'You''ve learned to split your focus between multiple classes with 
 mechanicsScope: builder
 foundryID: C80vQCKQBGRaqcmq
 rules:
-- id: 393b3a6e-583c-53f1-b1ed-5b612fc632ff
-  key: choice-feat-multitalented-dedication
+- key: choice-feat-multitalented-dedication
   choice:
     name: $.feat.multitalented.dedication
     label: Multiclass Dedication
@@ -27,9 +26,7 @@ rules:
         - {trait: dedication}
         - {trait: systemTrait-multiclassDedication}
       type: core/feat-id
-- id: 5dbd661e-f6a7-5610-9361-2d617ad1cb48
-  key: grant-item-1
+- key: grant-item-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 744b3264-0b88-5c5f-9935-b37d17f7b84a
     featId: {choice: $.feat.multitalented.dedication}

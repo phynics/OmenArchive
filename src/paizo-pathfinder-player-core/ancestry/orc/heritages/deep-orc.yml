@@ -8,15 +8,13 @@ description: Your calloused hands and red eyes speak to a life spent in the deep
   and the Combat Climber skill feat.
 mechanicsScope: builder
 rules:
-- id: 89532fd6-cdee-5657-bca4-92d12a9f437a
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 682ec925-7d67-5830-868f-069f17f658d3
     featId: '@feat.terrain-expertise'
     with: {$.feat.terrain-expertise.terrains: {kind: fixed, value: {payload: underground,
           revision: 1, typeID: me.atkn.omen.pf2e.playercore/value/terrain}}}
-- id: 5ee787d5-be23-5a6c-b014-e0c898546151
+- key: add-feat-2
   effect: core/add-feat@2
   inputs:
-    selectionId: f135f10f-ae05-5c58-baf1-b33439bbd626
     featId: '@feat.combat-climber'

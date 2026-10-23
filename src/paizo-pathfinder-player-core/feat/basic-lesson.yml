@@ -11,14 +11,12 @@ description: Your patron grants you a special lesson, revealing a hidden facet o
 mechanicsScope: builder
 foundryID: wsq8nncD25Q1fRn2
 rules:
-- id: b32bac00-34f6-5654-90da-f73cdca7a9fc
-  key: choice-feat-basic-lesson-lesson
+- key: choice-feat-basic-lesson-lesson
   choice:
     name: $.feat.basic-lesson.lesson
     label: Lesson
     records: {filter: {pathPrefix: '@class.witch.basic-lessons'}, type: core/feature-id}
-- id: 22653d6d-4696-5dff-8635-bf6afe37e270
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.feat.basic-lesson.lesson}

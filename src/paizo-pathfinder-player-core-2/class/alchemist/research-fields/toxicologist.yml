@@ -40,26 +40,22 @@ description: 'You specialize in toxins and venoms of all types.
 mechanicsScope: builder
 foundryID: P9quO9XZi3OWFe1k
 rules:
-- id: 00316e37-1302-5999-a533-2655f453b588
-  key: grant-field-benefits-field-discovery-toxicologist
+- key: grant-field-benefits-field-discovery-toxicologist
   effect: core/add-feature-by-id
   level: 5
   inputs:
     featureId: '@class.alchemist.field-benefits.field-discovery-toxicologist'
-- id: a6990d6d-8f49-52a7-947a-613182c70183
-  key: grant-field-benefits-advanced-vials-toxicologist
+- key: grant-field-benefits-advanced-vials-toxicologist
   effect: core/add-feature-by-id
   level: 11
   inputs:
     featureId: '@class.alchemist.field-benefits.advanced-vials-toxicologist'
-- id: 49d0b56c-0bfb-5c73-8e08-7d8922cbd6c5
-  key: grant-field-benefits-greater-field-discovery-toxicologist
+- key: grant-field-benefits-greater-field-discovery-toxicologist
   effect: core/add-feature-by-id
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-toxicologist'
-- id: 7bd86597-f3cd-5d6e-8e1f-9af662bf7856
-  key: choice-alchemist-formulas-field
+- key: choice-alchemist-formulas-field
   choice:
     name: $.alchemist.formulas.field
     label: Research field formulas
@@ -74,8 +70,7 @@ rules:
         - {level: 1}
         - {trait: poison}
       type: core/item-id
-- id: 6821ff73-8460-50c9-8cfc-a0679b14287b
-  key: learn-choice-alchemist-formulas-field
+- key: learn-choice-alchemist-formulas-field
   effect: core/add-formulas
   inputs:
     items: {choiceList: $.alchemist.formulas.field}

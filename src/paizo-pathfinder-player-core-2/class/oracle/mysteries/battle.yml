@@ -18,20 +18,20 @@ description: "Warlike forces fill you with physical might and tactical knowledge
 mechanicsScope: builder
 foundryID: gjOGOR30Czpnx3tM
 rules:
-- id: c963053c-cfb5-5dba-ad7d-273ce4bb6270
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     sourceName: Oracle Spellcasting
     castingKind: spontaneous
     tradition: divine
     attribute: cha
-- id: a970c695-2e08-517a-9345-c7f0a12a1ee3
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: athletics}
     proficiencyCap: 2
-- id: 118b2c24-215f-5d28-956c-003634149ec1
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
@@ -39,48 +39,46 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 8747c2b9-6867-5959-b446-a1df73fcae0d
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
-    grantId: 054d4221-aaf0-5128-ae4d-60a7e60efab7
     spellId: '@spell.weapon-trance'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 1c336d09-83d3-56e2-9d70-f1d309ed1477
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: ed75e92e-6806-56c5-bafb-81b12d9ef395
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: '@class.oracle.curses.curse-of-the-mortal-warrior'
-- id: 7b296d7f-2cf2-5799-b9c3-6a0398816d5a
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: c35fb9f6-b7b0-5ac3-9735-029c6681ecd0
     featId: '@feat.oracular-warning'
-- id: 16a66f6e-4e43-5262-a55d-d332297ad472
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: 77777abe-c670-5754-9868-e78de3f5b20d
     spellId: '@spell.shield?source=paizo-pathfinder-player-core'
-- id: 2251076e-8f23-5dcb-9cd5-7401682f876f
+- key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: b79945e8-ab04-53c1-9f89-a9fea80f8643
     spellId: '@spell.sure-strike?source=paizo-pathfinder-player-core'
-- id: fed7c6cf-6eb0-5b7c-afff-3990d16aa184
+- key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: 3db64ba3-57d5-5755-a483-efc3240bedb8
     spellId: '@spell.telekinetic-maneuver?source=paizo-pathfinder-player-core'
-- id: 93644562-f271-5f06-b778-ee79bce989aa
+- key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: a4a50859-45a0-5ced-8d24-f034c05dd9b8
     spellId: '@spell.weapon-storm?source=paizo-pathfinder-player-core'

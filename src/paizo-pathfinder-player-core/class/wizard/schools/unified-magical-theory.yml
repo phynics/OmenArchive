@@ -32,7 +32,7 @@ spellcasting:
   spellbook:
     1: {rank-1: 1}
 rules:
-- id: f3d6eca7-3f0a-5c49-b817-6bb7492b2dff
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
@@ -40,13 +40,12 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: int
-- id: bce25f47-3cd4-5303-b646-bc9d8dee1c3e
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
-    grantId: 1ea7be35-b259-56e3-9c3f-bf96ab1d2918
     spellId: '@spell.hand-of-the-apprentice'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: a7a8831a-7d25-5f33-9bc9-cc5c97b67a97
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point

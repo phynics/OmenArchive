@@ -39,26 +39,22 @@ description: 'You focus on bizarre mutagenic transformations that sacrifice one 
 mechanicsScope: builder
 foundryID: tvdb1jkjl2bRZjSp
 rules:
-- id: f476d38b-e7d0-562c-b15b-52d7b4aef384
-  key: grant-field-benefits-field-discovery-mutagenist
+- key: grant-field-benefits-field-discovery-mutagenist
   effect: core/add-feature-by-id
   level: 5
   inputs:
     featureId: '@class.alchemist.field-benefits.field-discovery-mutagenist'
-- id: af027730-d939-5441-9830-0f1ab8c0de99
-  key: grant-field-benefits-advanced-vials-mutagenist
+- key: grant-field-benefits-advanced-vials-mutagenist
   effect: core/add-feature-by-id
   level: 11
   inputs:
     featureId: '@class.alchemist.field-benefits.advanced-vials-mutagenist'
-- id: 0a469de3-1584-5169-af95-6d4f724d1eb3
-  key: grant-field-benefits-greater-field-discovery-mutagenist
+- key: grant-field-benefits-greater-field-discovery-mutagenist
   effect: core/add-feature-by-id
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-mutagenist'
-- id: a7b7322c-bc40-56ab-a938-449a8a353274
-  key: choice-alchemist-formulas-field
+- key: choice-alchemist-formulas-field
   choice:
     name: $.alchemist.formulas.field
     label: Research field formulas
@@ -73,8 +69,7 @@ rules:
         - {level: 1}
         - {trait: mutagen}
       type: core/item-id
-- id: 434060c4-e63d-53a0-9137-89390a576b9f
-  key: learn-choice-alchemist-formulas-field
+- key: learn-choice-alchemist-formulas-field
   effect: core/add-formulas
   inputs:
     items: {choiceList: $.alchemist.formulas.field}

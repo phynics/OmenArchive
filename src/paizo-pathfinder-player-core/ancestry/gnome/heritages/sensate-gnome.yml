@@ -12,10 +12,9 @@ description: 'You see all colors as brighter, hear all sounds as richer, and esp
   trying to locate an undetected creature that is within the range of your scent.'
 mechanicsScope: builder
 rules:
-- id: 700fa535-2e6f-5895-bba7-56631bf6df69
+- key: add-roll-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 860e337d-ab31-5195-96c6-69f6ddba1ca7
     target:
       description:
       - savingThrow:
@@ -23,7 +22,7 @@ rules:
     description: 'Sensate Gnome: +2 circumstance bonus to Perception checks (Seek).'
     numeric: {literal: {amount: 2, applicability: {description: Seek, kind: situational},
         type: circumstance}}
-- id: 79b5c51d-65ac-5efe-ac1d-4d3ca9d10c1d
+- key: add-sense-1
   effect: core/add-sense
   inputs:
     selector: scent

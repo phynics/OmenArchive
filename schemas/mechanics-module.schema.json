@@ -214,6 +214,10 @@
         "optional": {
           "type": "boolean",
           "description": "The input may be left out of a rule. Optional inputs come after the required ones."
+        },
+        "identity": {
+          "enum": ["rule", "source"],
+          "description": "The input is an identity an author leaves out: a rule's own (derived from its key) or a spellcasting source's. A uuid input called selectionId, grantId or uuid is a rule's, and sourceId a source's, without saying so."
         }
       },
       "required": [

@@ -31,7 +31,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: FdLx4VODZEYLGOK9
 rules:
-- id: deceefec-c812-557d-bb40-475ffdd788b1
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
@@ -39,22 +39,20 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: int
-- id: 35d41446-eed8-5e05-9939-dfa0afaf2fb5
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 7a597d5d-c69b-59fb-983a-f0b4780bed46
     spellId: '@spell.discern-secrets'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: atWill}
-- id: d0933fcd-d554-5073-8612-0a00d1264267
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 45563fdc-3b04-5a54-9767-53a43898fb35
     spellId: '@spell.runic-weapon'
-- id: 33ee4e60-9ab4-5c23-bcc1-f1795f6074c9
-  key: choice-witch-patron-first-hex
+- key: choice-witch-patron-first-hex
   choice:
     name: $.witch.patron.first-hex
     label: First Hex
@@ -64,25 +62,24 @@ rules:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
       type: spellcasting/spell-id
-- id: b21121e0-ec72-5471-b191-581b5fcf1d56
+- key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 754fe5f2-907d-5e0e-a4f8-917fc9fbb9c7
     spellId: {choice: $.witch.patron.first-hex}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: cb42e2db-c4f6-58b6-90fb-25fb1791e170
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 1675aec2-aa14-5233-ae6f-5530db6802bf
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     sourceName: Witch Spellcasting
     castingKind: prepared
     tradition: arcane
     attribute: int
-- id: a311044c-b5d2-581a-b3a7-fe9b4d57bbe8
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: arcana}

@@ -18,11 +18,9 @@ description: 'You died and miraculously returned with knowledge of the realms be
   You gain the Diehard feat and the Additional Lore feat for Boneyard Lore.'
 mechanicsScope: builder
 rules:
-- id: 8ea33c5d-daf7-5c35-8fa8-6d8bdc3eb4bd
-  key: background-item-additional-lore-1
+- key: background-item-additional-lore-1
   effect: core/add-feat@2
   inputs:
-    selectionId: d4211853-d34e-5fa4-b112-f83f50938640
     featId: '@feat.additional-lore?source=paizo-pathfinder-player-core'
     with: {$.feat.additional-lore.lores: {kind: fixed, value: {payload: Boneyard Lore,
           revision: 1, typeID: me.atkn.omen.pf2e.playercore/value/string}}}

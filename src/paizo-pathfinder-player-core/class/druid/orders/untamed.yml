@@ -24,7 +24,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: v0EjtiwdeMj8ykI0
 rules:
-- id: 81ff84bd-ac6f-5eeb-8887-23ae0c82fb90
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
@@ -32,23 +32,21 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: wis
-- id: 790b1736-bf7e-5910-8ff9-8a7506099201
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
-    grantId: e19bbcd7-06cc-5ef5-b01a-53bf69426588
     spellId: '@spell.untamed-shift'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: c3df4fee-8592-5630-bb8f-1b47591d15f9
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 3827241a-5b04-5dc5-a684-e76dfdcee6e3
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: intimidation}
     proficiencyCap: 2
-- id: ab55d617-12f7-5551-914f-7c1f6dcfe29c
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: acaa6c70-9f29-5f66-a022-2a2f1feca093
     featId: '@feat.untamed-form'

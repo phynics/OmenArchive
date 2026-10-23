@@ -22,13 +22,12 @@ description: 'You weren''t born with the power to cast spells, nor have you spen
 mechanicsScope: builder
 foundryID: KPtF29AaeX2sJW0K
 rules:
-- id: a2ecc265-825b-53b0-a9c2-f745b691f735
-  key: choice-witch-patron
+- key: choice-witch-patron
   choice:
     name: $.witch.patron
     label: Patron
     records: {filter: {pathPrefix: '@class.witch.patrons'}, type: core/feature-id}
-- id: 78c4ed8d-20fa-5769-88a3-7c6dfb66cda5
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.witch.patron}

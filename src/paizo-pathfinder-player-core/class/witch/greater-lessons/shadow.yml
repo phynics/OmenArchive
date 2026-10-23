@@ -13,19 +13,18 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: YSxymsAe2Dvq47f2
 rules:
-- id: c3092a5c-29bd-53a5-ac05-7aed00ef9b3d
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: e0b95116-bb48-5932-a2a4-d2ee7e48e761
     spellId: '@spell.malicious-shadow'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: a851fa0f-7307-55cb-a49b-9749a26c5526
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 94e39ed6-213f-5664-aee4-9a2209ecb33d
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 45825dc2-02e3-55df-9293-4b53e0d0e7cc
     spellId: '@spell.chilling-darkness'

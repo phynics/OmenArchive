@@ -7,16 +7,13 @@ description: Your thick leathery skin resembles that of a toad. You gain 8 Hit P
   diseases and poisons.
 mechanicsScope: builder
 rules:
-- id: 9e7cd4f8-08c5-5e38-adc3-167cd082fdfd
-  key: active-effect-like-1
+- key: active-effect-like-1
   effect: core/set-ancestry-hit-points
   inputs:
     hitPoints: 8
-- id: 59dc1b12-de6a-5025-8d8b-f82bdd689402
-  key: flat-modifier-1
+- key: flat-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 66d0a01b-de4b-5b5a-9973-04a45fb9d377
     target:
       description:
       - anyNonPerceptionSavingThrow: {}

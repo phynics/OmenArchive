@@ -6,12 +6,11 @@ description: You descend from a line of terrifying battlefield commanders. You b
   trained in Intimidation, and you gain the Intimidating Glare skill feat.
 mechanicsScope: builder
 rules:
-- id: a3067fa7-271a-5066-983d-07a6304db411
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: ec0b7962-7df0-56aa-909d-ce43aefb13a4
     featId: '@feat.intimidating-glare'
-- id: b1fea2bb-d2cc-5f4a-bfb3-63acdecf5754
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: intimidation}

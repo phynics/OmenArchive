@@ -23,25 +23,25 @@ description: 'Fey whimsy or a tryst in a moonlit grove put the bewitching magic 
 mechanicsScope: builder
 foundryID: eW3cfCH7Wpx2vik2
 rules:
-- id: 840699ad-8896-5a69-b713-bd5fb3db906b
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: primal
     attribute: cha
-- id: 17f79273-941e-5aec-a21f-72ae7e0df287
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: deception}
     proficiencyCap: 2
-- id: 6e6ed738-3aef-508a-afcb-c1e031a14d52
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
     skill: {kind: nature}
     proficiencyCap: 2
-- id: a38da73d-aacd-58f0-bb71-6e6e6a61613a
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
@@ -49,81 +49,80 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- id: 6d6a5f17-6c36-508c-8276-44e89191740b
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
-    grantId: 64ad843f-ddc2-581b-8da4-d9ac2aa1b1ff
     spellId: '@spell.faerie-dust'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 95182945-c763-5640-b838-72049444644d
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 3e165b3e-3885-57ef-adfe-55d46080e836
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 3fa07338-abb9-5574-8748-2b49e3832695
     spellId: '@spell.figment?source=paizo-pathfinder-player-core'
-- id: 0e74a774-7512-548a-b41a-de2582dfa533
+- key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: ff380dfe-4d73-5d42-9af9-10f3dcfb8a5a
     spellId: '@spell.charm?source=paizo-pathfinder-player-core'
-- id: 0999abf8-01f6-51a2-bc19-f779634c89fe
+- key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: b12fa523-e17e-597d-8ada-53a3f0b8a26b
     spellId: '@spell.laughing-fit?source=paizo-pathfinder-player-core'
-- id: 00d2810e-2154-5542-9161-097d3402fa6b
+- key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: c11630b2-0b10-528b-b2f7-380d27705e8c
     spellId: '@spell.enthrall?source=paizo-pathfinder-player-core'
-- id: c17cdfbd-f1cd-5387-99ee-75cf4080eb81
+- key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 9d10b194-d3c9-5173-9c5d-aa31c11069dd
     spellId: '@spell.suggestion?source=paizo-pathfinder-player-core'
-- id: baef00f4-f398-5c54-8da1-b554bbce9d5a
+- key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 32574d5e-3bbf-5b7e-8af8-cfc03e5f56e5
     spellId: '@spell.hallucination?source=paizo-pathfinder-player-core'
-- id: 9fc62a9d-22a1-5e6a-a713-fb523716d1c4
+- key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 636e4742-2f56-5a53-8ca5-28b3f7164b05
     spellId: '@spell.mislead?source=paizo-pathfinder-player-core'
-- id: 565d5772-0878-5f75-86c0-01c3148094ac
+- key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 27655bd9-e834-5fe1-9aa3-3e6dde249205
     spellId: '@spell.visions-of-danger'
-- id: 59051366-7276-5a19-9b8c-64caea68c7ae
+- key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 6d63f1ee-d66b-500f-95be-67ff12689cfa
     spellId: '@spell.uncontrollable-dance?source=paizo-pathfinder-player-core'
-- id: 90a62e97-e818-5fd9-b912-56bdd2271987
+- key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
   inputs:
-    sourceId: f53548c3-b3c7-5ca2-8687-afc0c6268877
+    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
     entryId: 65a78165-940e-56eb-9012-efd075e58822
     spellId: '@spell.metamorphosis?source=paizo-pathfinder-player-core'

@@ -10,13 +10,12 @@ description: "Even among followers of the same deity, approaches vary. At 1st le
 mechanicsScope: builder
 foundryID: tyrBwBTzo5t9Zho7
 rules:
-- id: d8e3fa6e-8dbb-5f7a-b1df-9683ba65c1b5
-  key: choice-cleric-doctrine
+- key: choice-cleric-doctrine
   choice:
     name: $.cleric.doctrine
     label: Doctrine
     records: {filter: {pathPrefix: '@class.cleric.doctrines'}, type: core/feature-id}
-- id: 09a664d3-ec2b-5197-9a50-bfbcc2de82b7
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.cleric.doctrine}

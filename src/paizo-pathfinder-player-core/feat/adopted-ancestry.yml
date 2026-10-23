@@ -14,8 +14,7 @@ description: You're fully immersed in another ancestry's culture and traditions,
 mechanicsScope: builder
 foundryID: ihN8gkHSdPG9Trte
 rules:
-- id: 0e34cea6-afb6-53b1-b7a8-fb531bf295bc
-  key: choice-feat-adopted-ancestry-ancestry
+- key: choice-feat-adopted-ancestry-ancestry
   choice:
     name: $.feat.adopted-ancestry.ancestry
     label: Ancestry
@@ -31,8 +30,7 @@ rules:
     - {value: human}
     - {value: leshy}
     - {value: orc}
-- id: cc119f75-c680-5b2c-8d2f-5db3ef2f701d
-  key: feat-ancestry
+- key: feat-ancestry
   effect: core/add-feat-ancestry
   inputs:
     ancestry: {choice: $.feat.adopted-ancestry.ancestry}

@@ -25,8 +25,7 @@ description: 'You devote yourself to a specific cause in your deity''s name. Som
 mechanicsScope: builder
 foundryID: D4k8wuq1ncHFCBZz
 rules:
-- id: f950a38f-b603-5f65-8bf4-1d5fd64d602f
-  key: choice-champion-cause-holy
+- key: choice-champion-cause-holy
   prerequisites:
   - hasChoice:
       name: $.deity.sanctification
@@ -43,8 +42,7 @@ rules:
     - {key: redemption, value: '@class.champion.causes.redemption'}
     - {key: justice, value: '@class.champion.causes.justice'}
     - {key: obedience, value: '@class.champion.causes.obedience'}
-- id: 85f629db-630d-5e28-9f24-7c5ea5f0ac4c
-  key: choice-champion-cause-unholy
+- key: choice-champion-cause-unholy
   prerequisites:
   - hasChoice:
       name: $.deity.sanctification
@@ -61,8 +59,7 @@ rules:
     - {key: iniquity, value: '@class.champion.causes.iniquity'}
     - {key: desecration, value: '@class.champion.causes.desecration'}
     - {key: obedience, value: '@class.champion.causes.obedience'}
-- id: ca07ceb2-08c4-5a2e-b788-3631241aede7
-  key: choice-champion-cause-none
+- key: choice-champion-cause-none
   prerequisites:
   - hasChoice:
       name: $.deity.sanctification
@@ -77,8 +74,7 @@ rules:
     - {key: liberation, value: '@class.champion.causes.liberation'}
     - {key: justice, value: '@class.champion.causes.justice'}
     - {key: obedience, value: '@class.champion.causes.obedience'}
-- id: 3196d86d-7195-559e-a9f9-334ccdecfe33
-  key: grant-selected-cause
+- key: grant-selected-cause
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.champion.cause}

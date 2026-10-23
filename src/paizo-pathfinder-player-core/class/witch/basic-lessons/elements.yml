@@ -26,13 +26,12 @@ spellcasting:
   - '@spell.hydraulic-push'
   - '@spell.pummeling-rubble'
 rules:
-- id: 10942a6d-a47e-5cfa-88b0-a2c9764b3a75
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 78c925d7-0583-585e-b6ef-aa64c0e577a2
     spellId: '@spell.elemental-betrayal'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 4a5e5e03-02fb-5d7d-a3d6-99756f975ffd
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point

@@ -22,14 +22,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: YMBsi4bndRAk5CX4
 rules:
-- id: de37fabc-175a-59ce-8538-baa6da21f6b0
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 0adab70e-0ea1-504e-851e-50bf0281d618
     featId: '@feat.lingering-composition'
-- id: c2d0c676-90d6-5e73-b19b-c3edb731801a
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     entryId: 28811215-ea21-5e36-8e22-09abff1ea4a7
     spellId: '@spell.soothe'

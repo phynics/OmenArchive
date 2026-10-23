@@ -12,19 +12,18 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: evKUM58ymuuypRn9
 rules:
-- id: 6279138c-7ec8-52be-8fc2-8b4d43987337
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 694cb2af-f052-5d07-b451-6e249e69305b
     spellId: '@spell.veil-of-dreams'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: c5a8e346-2389-50fd-921f-8cfa60b3ab1c
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: e789a7bc-2736-5adb-ace7-2410a3388858
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 0ab6e4e1-399b-5e6c-abe2-3f39e23d179d
     spellId: '@spell.sleep'

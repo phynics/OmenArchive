@@ -10,14 +10,12 @@ description: Your rage wells up from a dominant instinct—one you learned from 
 mechanicsScope: builder
 foundryID: dU7xRpg4kFd01hwZ
 rules:
-- id: 5bcda2ee-27b9-5397-abb4-ae0cff9da374
-  key: choice-barbarian-instinct
+- key: choice-barbarian-instinct
   choice:
     name: $.barbarian.instinct
     label: Instinct
     records: {filter: {pathPrefix: '@class.barbarian.instincts'}, type: core/feature-id}
-- id: 53ce7412-75b7-5e1d-b31f-f995d0b9a3e3
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.barbarian.instinct}

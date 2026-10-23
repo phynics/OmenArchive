@@ -11,23 +11,20 @@ description: You zealously bear your deity's favored weapon. If it's an unarmed 
 mechanicsScope: builder
 foundryID: FeBsYn2mHfMVDZvw
 rules:
-- id: a8fa5766-f0c7-5930-b085-fccb7ceae96d
-  key: choice-deity-favored-weapon
+- key: choice-deity-favored-weapon
   choice:
     name: $.deity.favored-weapon
     label: Favored weapon
     additionalCases:
     - {value: fist}
     records: {filter: {all: [{type: item}, {item.kind: weapon}]}, type: core/weapon-reference}
-- id: dceb5d17-1a43-565a-ad5a-25068520ab3b
-  key: deity-favored-weapon-proficiency
+- key: deity-favored-weapon-proficiency
   effect: core/add-chosen-weapon-proficiency
   inputs:
     weapon: {choice: $.deity.favored-weapon}
     proficiencyRank: 2
     selfScaling: true
-- id: 44360cbd-111d-5443-89b0-5602a2a0946f
-  key: deity-favored-weapon-die
+- key: deity-favored-weapon-die
   effect: core/add-weapon-die-step
   inputs:
     weapon: {choice: $.deity.favored-weapon}

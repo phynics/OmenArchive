@@ -7,8 +7,7 @@ description: A swashbuckler gains an extra skill feat at levels 3, 7, and 15, be
   the skill feats and skill increases every character gets.
 mechanicsScope: builder
 rules:
-- id: fd44678b-90af-5935-b138-3e2bb271da23
-  key: choice-swashbuckler-skill-feat-3
+- key: choice-swashbuckler-skill-feat-3
   level: 3
   choice:
     name: $.swashbuckler.skill-feat-3
@@ -20,15 +19,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 3}
       type: core/feat-id
-- id: f1b081e8-d29f-55d6-b407-22c1a83ef148
-  key: skill-feat-3
+- key: skill-feat-3
   effect: core/add-feat@2
   level: 3
   inputs:
-    selectionId: 1ef0c2e0-5256-57f8-b8e9-49cb3b652c19
     featId: {choice: $.swashbuckler.skill-feat-3}
-- id: 4ce61269-e1f3-58ff-91a1-459cca7cfd9c
-  key: choice-swashbuckler-skill-feat-7
+- key: choice-swashbuckler-skill-feat-7
   level: 7
   choice:
     name: $.swashbuckler.skill-feat-7
@@ -40,15 +36,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 7}
       type: core/feat-id
-- id: 558d6320-73db-526f-8689-a3a42baf2a19
-  key: skill-feat-7
+- key: skill-feat-7
   effect: core/add-feat@2
   level: 7
   inputs:
-    selectionId: bce7249b-5dbc-5edc-987b-b20406695fab
     featId: {choice: $.swashbuckler.skill-feat-7}
-- id: db5ecc48-5432-5c00-bc68-61592948ab91
-  key: choice-swashbuckler-skill-feat-15
+- key: choice-swashbuckler-skill-feat-15
   level: 15
   choice:
     name: $.swashbuckler.skill-feat-15
@@ -60,10 +53,8 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 15}
       type: core/feat-id
-- id: e3e8dd58-86b8-5034-a22b-ca7f3eb306cf
-  key: skill-feat-15
+- key: skill-feat-15
   effect: core/add-feat@2
   level: 15
   inputs:
-    selectionId: fd7a4375-6dce-5cdc-8b76-7fc742de7723
     featId: {choice: $.swashbuckler.skill-feat-15}

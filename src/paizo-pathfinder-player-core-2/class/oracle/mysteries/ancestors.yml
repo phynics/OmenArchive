@@ -20,20 +20,20 @@ description: "The voices of generations past speak to you, and you hear their wo
 mechanicsScope: builder
 foundryID: qvRlih3u7vK3FYUR
 rules:
-- id: 5de17a12-b79e-51d1-b922-92d34603b808
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     sourceName: Oracle Spellcasting
     castingKind: spontaneous
     tradition: divine
     attribute: cha
-- id: 9c66ed7f-564b-5703-908c-d0c9c9256578
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: society}
     proficiencyCap: 2
-- id: de38c7fa-2240-5530-a970-1d6ab2fb645b
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
@@ -41,48 +41,46 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: ceed28ac-dfab-5e5a-92ed-21f0d66a3349
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
-    grantId: 7b3db88b-df89-5127-8a2f-879efe7d991a
     spellId: '@spell.ancestral-touch'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: f1c69b01-b81a-53d0-94f1-a390b23d8d6f
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 1bb3fd84-366c-5c52-9dec-b3cef68f1d68
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: '@class.oracle.curses.curse-of-ancestral-meddling'
-- id: d77bd8d7-9389-5e21-8753-af0ad81be1a6
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 3e02ed30-caaf-5b41-a63e-2c4198ba7b2b
     featId: '@feat.whispers-of-weakness'
-- id: 47457b8b-a25d-5d2a-8f9e-c23d97530602
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: 51faeddb-c640-503e-b4ed-b2334442978e
     spellId: '@spell.guidance?source=paizo-pathfinder-player-core'
-- id: 34dcb643-b29b-53e9-a0c6-c01cf7c21865
+- key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: ef8ee0b3-4059-5489-9e54-3960b6fd587d
     spellId: '@spell.ill-omen?source=paizo-pathfinder-player-core'
-- id: 2f32ffbe-4b9e-57ed-b6ae-831eee70dff9
+- key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: 98b7724c-1f29-539f-bcb2-1be4f8bf8549
     spellId: '@spell.ghostly-carrier?source=paizo-pathfinder-player-core'
-- id: 7a7285dc-3728-5fc7-b320-5299eec83cc1
+- key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: f051f3e1-96e1-5a7c-9f4c-3c72b7ad78c1
     spellId: '@spell.dreaming-potential?source=paizo-pathfinder-player-core'

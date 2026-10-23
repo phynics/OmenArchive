@@ -29,7 +29,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: r2ZPRAw9c3VGZi8A
 rules:
-- id: c6c284e1-32ac-5148-ae57-e0b810382bc6
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
@@ -37,22 +37,20 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: int
-- id: d5d1c1d1-63e6-515c-99bf-93beead39070
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: ecd2886a-0073-5ae4-93b8-bca9b20d4230
     spellId: '@spell.shroud-of-night'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: atWill}
-- id: 626d81be-6e1b-5acc-9802-87d181ce2682
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 2594c174-f90b-54d1-87ec-0957c11f715d
     spellId: '@spell.fear'
-- id: 8a992941-5ca8-5f89-ad55-fb45d0d8d690
-  key: choice-witch-patron-first-hex
+- key: choice-witch-patron-first-hex
   choice:
     name: $.witch.patron.first-hex
     label: First Hex
@@ -62,25 +60,24 @@ rules:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
       type: spellcasting/spell-id
-- id: 5fcc2787-5034-560d-91ba-65e298f0c788
+- key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 324b9e02-711e-5d6a-9b49-dc4451d9817a
     spellId: {choice: $.witch.patron.first-hex}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 7f558993-b410-5504-860d-70e8edc33be4
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 2fcba1d8-f4a5-55dc-9e28-54f16c716782
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     sourceName: Witch Spellcasting
     castingKind: prepared
     tradition: occult
     attribute: int
-- id: 15bce704-074a-5694-b360-053d5d0c4df0
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: occultism}

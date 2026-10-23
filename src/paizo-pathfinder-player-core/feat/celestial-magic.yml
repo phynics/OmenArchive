@@ -21,8 +21,7 @@ description: 'You possess celestial magic. Choose two of the following spells: C
 mechanicsScope: builder
 foundryID: esKk5XrnlqRayDPG
 rules:
-- id: df8c5375-ec3f-5c49-810b-17060553ab7c
-  key: choice-feat-celestial-magic-spell-one
+- key: choice-feat-celestial-magic-spell-one
   choice:
     name: $.feat.celestial-magic.spell-one
     label: First Spell
@@ -38,8 +37,7 @@ rules:
           - {name: humanoid form}
           - {name: everlight}
       type: spellcasting/spell-id
-- id: f40b3533-c4c6-5eb0-bae5-9ea6fa8a890c
-  key: choice-feat-celestial-magic-spell-two
+- key: choice-feat-celestial-magic-spell-two
   choice:
     name: $.feat.celestial-magic.spell-two
     label: Second Spell
@@ -57,25 +55,21 @@ rules:
           - {name: humanoid form}
           - {name: everlight}
       type: spellcasting/spell-id
-- id: 44c0b95f-aa84-5bcf-8671-56f273cdc767
-  key: innate-spell-1
+- key: innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: 8489e194-bc95-5401-bf6c-c2fe1ee5bf9c
     sourceName: Celestial Magic
-    grantId: 509fa672-ba95-52bf-938c-cc6cc83916de
     spellId: {choice: $.feat.celestial-magic.spell-one}
     tradition: divine
     attribute: cha
     rankPolicy: {kind: fixed, rank: 2}
     castFrequency: {kind: perDay, uses: 1}
-- id: f6193526-7762-5612-8834-183cb721e775
-  key: innate-spell-2
+- key: innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: 8489e194-bc95-5401-bf6c-c2fe1ee5bf9c
     sourceName: Celestial Magic
-    grantId: 71a03a05-2997-5d47-9550-0b4994cd4bd9
     spellId: {choice: $.feat.celestial-magic.spell-two}
     tradition: divine
     attribute: cha

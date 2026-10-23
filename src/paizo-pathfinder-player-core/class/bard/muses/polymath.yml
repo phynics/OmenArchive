@@ -23,14 +23,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: y0jGimYdMGDJWrEq
 rules:
-- id: 1dc70ff2-468b-58b0-9b1e-6194f3c08691
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 50e057fc-efea-5668-bd73-73e20b0d8e7e
     featId: '@feat.versatile-performance'
-- id: 035c0b87-64d9-5bbe-86a1-6bc98818315b
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     entryId: 391accd6-b16f-5405-9256-7fc80fef11b9
     spellId: '@spell.phantasmal-minion'

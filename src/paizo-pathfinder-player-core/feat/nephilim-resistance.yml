@@ -15,8 +15,7 @@ description: 'You resist energy like your extraplanar predecessors. Choose one o
 mechanicsScope: builder
 foundryID: 8CSewrCVEmL8sjnk
 rules:
-- id: 0968f704-6234-59d0-9815-e2309e4e71d0
-  key: choice-feat-nephilim-resistance-damage-type
+- key: choice-feat-nephilim-resistance-damage-type
   choice:
     name: $.feat.nephilim-resistance.damage-type
     label: Damage Type
@@ -27,7 +26,7 @@ rules:
     - {value: cold}
     - {value: sonic}
     - {value: electricity}
-- id: 19a41923-d992-5e15-8597-133c4b2d700d
+- key: add-resistance-1
   effect: core/add-resistance@2
   inputs:
     type: {choice: $.feat.nephilim-resistance.damage-type}

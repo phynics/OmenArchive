@@ -15,13 +15,12 @@ description: 'Most wizards acquire their knowledge of spells from a formal educa
 mechanicsScope: builder
 foundryID: 7nbKDBGvwSx9T27G
 rules:
-- id: 1e2fd909-5612-5e82-bf63-793d0501d44d
-  key: choice-wizard-school
+- key: choice-wizard-school
   choice:
     name: $.wizard.school
     label: School
     records: {filter: {pathPrefix: '@class.wizard.schools'}, type: core/feature-id}
-- id: f6121f43-96cb-5cc7-8894-6b9c17786cb3
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.wizard.school}

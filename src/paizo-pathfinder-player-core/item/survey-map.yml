@@ -22,10 +22,9 @@ description: Maps are uncommon. Most maps you can find are simple and functional
 mechanicsScope: builder
 foundryID: UhcRWtnjU2WLSClx
 rules:
-- id: 9b33fb74-c82d-5e8d-b17a-08513332e1b2
+- key: add-roll-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 4167aac3-a761-5d6e-b3f6-277a89e8c0f2
     target:
       description:
       - skill:
@@ -34,10 +33,9 @@ rules:
     description: 'Survey Map: +1 item bonus to Survival checks (mapped area).'
     numeric: {literal: {amount: 1, applicability: {description: mapped area, kind: situational},
         type: item}}
-- id: 126d92b7-ec70-5337-9bdc-83cbdb8f691f
+- key: add-roll-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: b4739301-ecce-5225-930b-2877074b88c5
     target:
       description:
       - anySkill: {}

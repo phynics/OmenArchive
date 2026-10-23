@@ -10,18 +10,17 @@ description: You gain expert proficiency with your deity's favored weapon, simpl
 mechanicsScope: builder
 foundryID: vxOf4LXZcqUG3P7a
 rules:
-- id: 186153c0-77eb-5c0b-b91f-2180fb0b0431
+- key: add-weapon-critical-specialization-1
   effect: core/add-weapon-critical-specialization
   inputs:
-    uuid: 1fa39fdf-9691-5eb5-accc-81e381f31365
     weaponGroup: any
-- id: 52ef3cb3-57c7-5682-b4c5-5c60ee528a5c
+- key: add-weapon-proficiency-1
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
     proficiencyRank: 4
     selfScaling: false
-- id: cec9a72b-6885-57d2-abc5-c2d19d289a77
+- key: add-weapon-proficiency-2
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}

@@ -13,19 +13,16 @@ description: "As a bard, you select one muse at 1st level. This muse leads you t
 mechanicsScope: builder
 foundryID: AIOBWGOS4nkfH3kW
 rules:
-- id: 730df36e-d7f3-59d2-a3f9-7659e7b3f1f2
-  key: choice-bard-muse
+- key: choice-bard-muse
   choice:
     name: $.bard.muse
     label: Muse
     records: {filter: {pathPrefix: '@class.bard.muses'}, type: core/feature-id}
-- id: dbd18ef8-6157-50a5-8fe2-7f40e4fffd07
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.bard.muse}
-- id: c434cb16-10de-538b-82f9-1358bbbcbf7e
-  key: choice-set-2
+- key: choice-set-2
   effect: core/add-membership
   inputs:
     list: \$.bard.muse-memberships

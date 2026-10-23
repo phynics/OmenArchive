@@ -17,20 +17,20 @@ description: "Celestial bodies great and small exert influence on you, giving yo
 mechanicsScope: builder
 foundryID: RI2EMRBBPNSoTJXu
 rules:
-- id: aa0030e4-4d9f-5ab4-81a7-e7eeaed5d604
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     sourceName: Oracle Spellcasting
     castingKind: spontaneous
     tradition: divine
     attribute: cha
-- id: 6d95fa26-ecca-5ee8-ac24-c27d0f95328a
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: nature}
     proficiencyCap: 2
-- id: c5021673-7b3c-529e-9f2b-7034f072fd07
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
@@ -38,48 +38,46 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 3f845153-4504-55bc-8652-50db982446a2
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
-    grantId: d53c88a8-405a-5ef8-bfe6-298c39e476fc
     spellId: '@spell.spray-of-stars'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: b6d8bca8-6e05-56bb-a112-b15888e78b5b
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 388ed026-b005-5267-833c-5bb663c8a80c
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: '@class.oracle.curses.curse-of-the-skys-call'
-- id: bc30a174-1769-5f3d-af8f-93fe61bdb6c1
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: ea6294f6-9c02-5e70-9586-934bb6eac8de
     featId: '@feat.oracular-warning'
-- id: 1ebe6181-0950-5a07-8e17-af92d0eed99b
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: fb8d6369-4055-5ce5-9c4c-9c022418d4e7
     spellId: '@spell.light?source=paizo-pathfinder-player-core'
-- id: 6a6d63f5-91a9-57b8-8929-035273116b3e
+- key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: 986690c2-0710-5b2c-be35-de7c3b7b03ff
     spellId: '@spell.dizzying-colors?source=paizo-pathfinder-player-core'
-- id: fed2d947-14cf-5847-9b1d-965234f6208a
+- key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: d0dd372a-3c48-57b8-abf7-64df0df0968a
     spellId: '@spell.darkness?source=paizo-pathfinder-player-core'
-- id: bcd654bf-99eb-5552-b5fd-6d47dc3ecf34
+- key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: b927fa39-5fb7-505c-a607-74326ad4a365
     spellId: '@spell.moon-frenzy?source=paizo-pathfinder-player-core'

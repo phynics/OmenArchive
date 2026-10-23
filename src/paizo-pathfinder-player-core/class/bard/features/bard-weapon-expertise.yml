@@ -11,24 +11,23 @@ description: You have become thoroughly adept with bardic weapons. Your proficie
 mechanicsScope: mixed
 foundryID: 4lp8oG9A3zuqhPBS
 rules:
-- id: 70f80bff-a142-5505-9f0a-4dcf4924438b
+- key: add-weapon-critical-specialization-1
   effect: core/add-weapon-critical-specialization
   inputs:
-    uuid: ea792747-7ba7-5f12-9ee2-92f99b080feb
     weaponGroup: any
-- id: 5148fb45-f3f5-550a-80f3-b528d57f8707
+- key: add-weapon-proficiency-1
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
     proficiencyRank: 4
     selfScaling: false
-- id: 75bc2891-1ca2-563c-942d-d3e79b728361
+- key: add-weapon-proficiency-2
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
     proficiencyRank: 4
     selfScaling: false
-- id: d3bf7a8e-1f33-53d2-885f-4614075a7bd7
+- key: add-weapon-proficiency-3
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}

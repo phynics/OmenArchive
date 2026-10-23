@@ -9,10 +9,9 @@ description: You were born in a rain forest with only tangles of trees providing
   bonus to saving throws against diseases.
 mechanicsScope: builder
 rules:
-- id: 3ded115e-2f60-5707-9205-d2bb51549837
+- key: add-roll-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 8d7f1320-95cc-512c-8d1b-95d74d4197f4
     target:
       description:
       - skill:
@@ -22,10 +21,9 @@ rules:
       Swim).'
     numeric: {literal: {amount: 2, applicability: {description: Climb or Swim, kind: situational},
         type: circumstance}}
-- id: 8ea45514-5365-5b76-91a5-c7af943c4926
+- key: add-roll-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 32e63df8-763e-5530-9c55-64bc232b2ec8
     target:
       description:
       - anyNonPerceptionSavingThrow: {}

@@ -17,8 +17,7 @@ specialText: You can select this feat multiple times, choosing a different feat 
 mechanicsScope: builder
 foundryID: Ht6b8H9DpA9lWzAg
 rules:
-- id: 0b23a6b7-16cf-57a1-868f-83b3d1019356
-  key: choice-feat-advanced-general-training-feats
+- key: choice-feat-advanced-general-training-feats
   choice:
     name: $.feat.advanced-general-training.feats
     label: General Feat
@@ -29,9 +28,7 @@ rules:
         - {maxLevel: 7}
         - {trait: systemTrait-general}
       type: core/feat-id
-- id: f369a53e-9a65-5aa7-958f-17f2c78d18e5
-  key: grant-item-1
+- key: grant-item-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 0d1f7873-f52d-5f63-a68a-6104f51009fc
     featId: {choice: $.feat.advanced-general-training.feats}

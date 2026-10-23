@@ -7,8 +7,7 @@ description: You gain your choice of the Animal Empathy or Plant Empathy druid f
 mechanicsScope: builder
 foundryID: d5BFFHXFJYKs5LXr
 rules:
-- id: da9d942d-fe06-5e1a-a0ff-38fede6efea2
-  key: choice-druid-voice-of-nature-feat
+- key: choice-druid-voice-of-nature-feat
   choice:
     name: $.druid.voice-of-nature.feat
     label: Level 1 Class Feat
@@ -18,9 +17,7 @@ rules:
         - {id: '@feat.animal-empathy'}
         - {id: '@feat.plant-empathy'}
       type: core/feat-id
-- id: dcc4bc17-64fe-5462-8b60-68913867f412
-  key: grant-item-1
+- key: grant-item-1
   effect: core/add-feat@2
   inputs:
-    selectionId: ac08060d-ef53-5afd-b5a3-13e0e86da78d
     featId: {choice: $.druid.voice-of-nature.feat}

@@ -14,18 +14,17 @@ description: 'All too aware of your true nature, you''ve studied hags and their 
 mechanicsScope: builder
 foundryID: 4mLlHpD41101H0Iy
 rules:
-- id: f4b65f6f-1b2a-50b9-83e9-b30da59d4948
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: deception}
     proficiencyCap: 2
-- id: 1a42e487-f0fa-5882-8cd8-b3fa5eac10ce
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
     skill: {kind: occultism}
     proficiencyCap: 2
-- id: b7e7a0d3-5e6f-55cc-b505-b8c1e13c9918
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 76eb13c7-0fd1-5c5b-bbb6-033941f7dd9a
     featId: '@feat.additional-lore'

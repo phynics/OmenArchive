@@ -44,14 +44,12 @@ description: 'As a cleric, you are a mortal servitor of a deity you revere above
 mechanicsScope: builder
 foundryID: DutW12WMFPHBoLTH
 rules:
-- id: 9106dba8-75b7-5c49-864d-f8b4c2c1b061
-  key: choice-deity-name
+- key: choice-deity-name
   choice:
     name: $.deity.name
     label: Deity's name
     freeText: core/string
-- id: 744fbcc9-e4a3-5f81-b577-79d37eb9b9d0
-  key: choice-deity-sanctification
+- key: choice-deity-sanctification
   choice:
     name: $.deity.sanctification
     label: Sanctification
@@ -72,8 +70,7 @@ rules:
         inputs:
           trait: unholy
     - {value: none}
-- id: 47cdf58a-1f9c-53d9-85ce-e60def8adff6
-  key: choice-deity-divine-skill
+- key: choice-deity-divine-skill
   choice:
     name: $.deity.divine-skill
     label: Divine skill
@@ -95,172 +92,149 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: ec237c97-4385-51d0-ba29-057a889051cd
-  key: deity-divine-skill
+- key: deity-divine-skill
   effect: core/add-skill-increase
   inputs:
     skill: {choice: $.deity.divine-skill}
     proficiencyCap: 2
-- id: c1242dcd-d0c9-5ac7-b2b5-60bd34df4dd8
-  key: choice-deity-edicts
+- key: choice-deity-edicts
   choice:
     name: $.deity.edicts
     label: Edicts
     optional: true
     freeText: core/string
-- id: c63bed8f-1058-5b26-b1dc-29e210667495
-  key: choice-deity-anathema
+- key: choice-deity-anathema
   choice:
     name: $.deity.anathema
     label: Anathema
     optional: true
     freeText: core/string
-- id: 0811ec0a-1ca7-53b2-a6ae-267ca5d63e49
-  key: choice-deity-favored-weapon
+- key: choice-deity-favored-weapon
   choice:
     name: $.deity.favored-weapon
     label: Favored weapon
     additionalCases:
     - {value: fist}
     records: {filter: {all: [{type: item}, {item.kind: weapon}]}, type: core/weapon-reference}
-- id: 760b93ed-b83e-542f-9e55-830035261bbe
-  key: deity-favored-weapon-proficiency
+- key: deity-favored-weapon-proficiency
   effect: core/add-chosen-weapon-proficiency
   inputs:
     weapon: {choice: $.deity.favored-weapon}
     proficiencyRank: 2
     selfScaling: true
-- id: 7318994a-b32a-5d3c-8e91-0ef9881b2c55
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     sourceName: Cleric Spellcasting
     castingKind: prepared
     tradition: divine
     attribute: wis
-- id: 26266841-fff6-5db1-99cc-fd2c183acbdb
-  key: choice-deity-spells-rank-1
+- key: choice-deity-spells-rank-1
   choice:
     name: $.deity.spells.rank-1
     label: Deity spell, rank 1
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: c3187f4c-4be3-57a5-ab3e-dc02862943b7
-  key: choice-deity-spells-rank-2
+- key: choice-deity-spells-rank-2
   choice:
     name: $.deity.spells.rank-2
     label: Deity spell, rank 2
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: 03fe30cd-7f9b-54a9-bff5-7135055e55fa
-  key: choice-deity-spells-rank-3
+- key: choice-deity-spells-rank-3
   choice:
     name: $.deity.spells.rank-3
     label: Deity spell, rank 3
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: eaa0f03c-a037-5d02-98d0-bb29093d9525
-  key: choice-deity-spells-rank-4
+- key: choice-deity-spells-rank-4
   choice:
     name: $.deity.spells.rank-4
     label: Deity spell, rank 4
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: 362c8f58-5f67-5e6a-b7cf-472560700bbb
-  key: choice-deity-spells-rank-5
+- key: choice-deity-spells-rank-5
   choice:
     name: $.deity.spells.rank-5
     label: Deity spell, rank 5
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: 11d55009-ebd9-58f2-a417-aa4c9451e9b7
-  key: choice-deity-spells-rank-6
+- key: choice-deity-spells-rank-6
   choice:
     name: $.deity.spells.rank-6
     label: Deity spell, rank 6
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: c0ca6984-15f0-515e-9ec9-542291de0939
-  key: choice-deity-spells-rank-7
+- key: choice-deity-spells-rank-7
   choice:
     name: $.deity.spells.rank-7
     label: Deity spell, rank 7
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: 0ca72217-9f91-558d-901d-dbcf983916ad
-  key: choice-deity-spells-rank-8
+- key: choice-deity-spells-rank-8
   choice:
     name: $.deity.spells.rank-8
     label: Deity spell, rank 8
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: d18d1e01-6390-542a-8b4e-10708d281649
-  key: choice-deity-spells-rank-9
+- key: choice-deity-spells-rank-9
   choice:
     name: $.deity.spells.rank-9
     label: Deity spell, rank 9
     optional: true
     multiple: {min: 0, max: 1}
     records: {filter: {all: [{type: spell}, {spell.category: spell}]}, type: spellcasting/spell-id}
-- id: 70dfd251-979e-5737-a120-e0450e072c54
-  key: deity-spell-list-rank-1
+- key: deity-spell-list-rank-1
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-1}
-- id: 88bcafdb-7f8f-5452-9301-2d3949a3b8b9
-  key: deity-spell-list-rank-2
+- key: deity-spell-list-rank-2
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-2}
-- id: 676dd300-e32b-57b0-a924-9994492be2af
-  key: deity-spell-list-rank-3
+- key: deity-spell-list-rank-3
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-3}
-- id: 889b825b-7245-5e22-a39d-9e05c4e8f966
-  key: deity-spell-list-rank-4
+- key: deity-spell-list-rank-4
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-4}
-- id: 6ee04c7d-d2d8-5d9e-9b98-95efb592d37b
-  key: deity-spell-list-rank-5
+- key: deity-spell-list-rank-5
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-5}
-- id: 43616f3c-9bac-5d05-a577-edf464336ffd
-  key: deity-spell-list-rank-6
+- key: deity-spell-list-rank-6
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-6}
-- id: fc362cfc-8a6a-5c1f-a881-b812b1c2d917
-  key: deity-spell-list-rank-7
+- key: deity-spell-list-rank-7
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-7}
-- id: 6230b2c9-ed4f-5312-ba14-d299d1b2e279
-  key: deity-spell-list-rank-8
+- key: deity-spell-list-rank-8
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-8}
-- id: 8349407e-ff2a-5061-aa44-de25c68aee85
-  key: deity-spell-list-rank-9
+- key: deity-spell-list-rank-9
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: 857012ac-fcc0-54ec-8e2a-7ff86f2b2491
+    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spells: {choiceList: $.deity.spells.rank-9}

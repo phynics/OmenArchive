@@ -29,10 +29,9 @@ description: 'Maps are uncommon. Most maps you can find are simple and functiona
 mechanicsScope: builder
 foundryID: 1M4SSDuTv2SwBltC
 rules:
-- id: 03dd1bf6-0c57-5fa3-a6a2-022bfd95ba6c
+- key: add-roll-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 20b47bee-0e8a-5284-a73c-5f539833a558
     target:
       description:
       - skill:
@@ -41,10 +40,9 @@ rules:
     description: 'Survey Map (Atlas): +1 item bonus to Survival checks (mapped area).'
     numeric: {literal: {amount: 1, applicability: {description: mapped area, kind: situational},
         type: item}}
-- id: 1dfdd7b4-9a41-5cda-ba51-3a962c917bed
+- key: add-roll-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 750269ed-5e15-5b86-bbe5-8a8fa6e77d75
     target:
       description:
       - anySkill: {}

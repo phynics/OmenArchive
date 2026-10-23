@@ -19,8 +19,7 @@ specialText: You can select this feat multiple times, choosing a new skill to be
 mechanicsScope: builder
 foundryID: P6icK2DbRoZ3H6kc
 rules:
-- id: b0f974e9-59a8-5f99-9a38-c2d61fb5caf0
-  key: choice-feat-skill-training-skills
+- key: choice-feat-skill-training-skills
   choice:
     name: $.feat.skill-training.skills
     label: Skill
@@ -42,7 +41,7 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: e7fee549-73f4-58ca-a96c-3729ea0795c7
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {choice: $.feat.skill-training.skills}

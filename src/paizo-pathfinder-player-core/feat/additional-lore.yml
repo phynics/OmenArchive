@@ -19,30 +19,29 @@ specialText: You can select this feat more than once. Each time you must select 
 mechanicsScope: builder
 foundryID: BocFD2KV0qgUC76x
 rules:
-- id: 0cdaf71e-6897-5421-8cd4-afc138149ca4
-  key: choice-feat-additional-lore-lores
+- key: choice-feat-additional-lore-lores
   choice:
     name: $.feat.additional-lore.lores
     label: Lore name
     freeText: core/string
-- id: 8a32bd1d-ff1a-5a5f-b46d-94be48ad8fe0
+- key: add-lore-skill-increase-1
   effect: core/add-lore-skill-increase
   inputs:
     loreName: {choice: $.feat.additional-lore.lores}
     proficiencyCap: 2
-- id: 76e1381f-f692-5dc5-8556-02b4fb9875bd
+- key: add-lore-skill-increase-2
   effect: core/add-lore-skill-increase
   level: 3
   inputs:
     loreName: {choice: $.feat.additional-lore.lores}
     proficiencyCap: 4
-- id: 158af683-b149-5a2e-a5d9-e5d4ba28fa27
+- key: add-lore-skill-increase-3
   effect: core/add-lore-skill-increase
   level: 7
   inputs:
     loreName: {choice: $.feat.additional-lore.lores}
     proficiencyCap: 6
-- id: 64a24b99-b575-5246-af08-ff1b960d920c
+- key: add-lore-skill-increase-4
   effect: core/add-lore-skill-increase
   level: 15
   inputs:

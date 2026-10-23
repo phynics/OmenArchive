@@ -19,8 +19,7 @@ description: 'You possess fiendish magic. Choose two of the following spells: Di
 mechanicsScope: builder
 foundryID: UKYO5kiOnCY1hgCD
 rules:
-- id: 39b75ef0-061e-5e93-b7e0-7875ff3a811a
-  key: choice-feat-fiendish-magic-spell-one
+- key: choice-feat-fiendish-magic-spell-one
   choice:
     name: $.feat.fiendish-magic.spell-one
     label: First Spell
@@ -36,8 +35,7 @@ rules:
           - {name: false vitality}
           - {name: invisibility}
       type: spellcasting/spell-id
-- id: c8881bc7-499b-5c1e-a946-bc0406bf3668
-  key: choice-feat-fiendish-magic-spell-two
+- key: choice-feat-fiendish-magic-spell-two
   choice:
     name: $.feat.fiendish-magic.spell-two
     label: Second Spell
@@ -55,25 +53,21 @@ rules:
           - {name: false vitality}
           - {name: invisibility}
       type: spellcasting/spell-id
-- id: abaa7337-ec12-508b-84af-b07f18560aa6
-  key: innate-spell-1
+- key: innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: d3b0e1fd-c5df-5faf-b809-39c4c12ec10a
     sourceName: Fiendish Magic
-    grantId: 24d66b69-c68b-5963-8aa2-359c4dc6dbbe
     spellId: {choice: $.feat.fiendish-magic.spell-one}
     tradition: divine
     attribute: cha
     rankPolicy: {kind: fixed, rank: 2}
     castFrequency: {kind: perDay, uses: 1}
-- id: eceb252d-979e-55ff-ac2e-b0c86d848e66
-  key: innate-spell-2
+- key: innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: d3b0e1fd-c5df-5faf-b809-39c4c12ec10a
     sourceName: Fiendish Magic
-    grantId: 2b1eb757-984b-559f-b8b1-c6cdb99a8807
     spellId: {choice: $.feat.fiendish-magic.spell-two}
     tradition: divine
     attribute: cha

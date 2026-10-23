@@ -37,7 +37,7 @@ spellcasting:
   - '@spell.summon-animal'
   - '@spell.summon-plant-or-fungus'
 rules:
-- id: a54cd709-6e69-5793-89ff-d301ed37f99a
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
@@ -45,16 +45,14 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: int
-- id: 50bb89df-3f71-5a71-9deb-809a819d1f46
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 2b2d8355-974f-5281-96c2-2d7044680012
     spellId: '@spell.wilding-word'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: atWill}
-- id: 2e021126-404d-5690-ae74-b196df98d6d6
-  key: choice-witch-patron-first-hex
+- key: choice-witch-patron-first-hex
   choice:
     name: $.witch.patron.first-hex
     label: First Hex
@@ -64,25 +62,24 @@ rules:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
       type: spellcasting/spell-id
-- id: 0a2fa4ca-f0a8-5db1-8eff-1303483606a0
+- key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 3c1cecb1-a59a-5867-9882-dff2289c5dd1
     spellId: {choice: $.witch.patron.first-hex}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: d1ce4de5-1c1f-5d0e-9bc8-8735f1c7914f
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 254314c0-4a47-550b-a076-74a5b9211840
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     sourceName: Witch Spellcasting
     castingKind: prepared
     tradition: primal
     attribute: int
-- id: b65624f0-17c7-5acb-9f20-4d1348e562a7
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: nature}

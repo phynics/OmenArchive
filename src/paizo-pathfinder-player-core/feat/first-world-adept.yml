@@ -16,23 +16,21 @@ description: Over time your fey magic has grown stronger. You gain Invisibility 
 mechanicsScope: mixed
 foundryID: WUVNZoIZvr9XFv2x
 rules:
-- id: a0c6e8e8-724d-5fdb-be65-07957cd67941
+- key: grant-innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: f0cbda3b-2317-5d56-9406-6de65af13136
     sourceName: First World Adept
-    grantId: 81c9e640-2a9c-503d-8bf1-9e38661cc911
     spellId: '@spell.invisibility'
     tradition: primal
     attribute: cha
     rankPolicy: {kind: fixed, rank: 2}
     castFrequency: {kind: perDay, uses: 1}
-- id: a6bfac4f-0301-5bb2-a194-5bf59dc92e4d
+- key: grant-innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: f0cbda3b-2317-5d56-9406-6de65af13136
     sourceName: First World Adept
-    grantId: 46c40d00-6614-52fe-8cb8-d74634fcb658
     spellId: '@spell.revealing-light'
     tradition: primal
     attribute: cha

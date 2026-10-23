@@ -20,21 +20,19 @@ specialText: You can select this feat multiple times. Each time, you must select
 mechanicsScope: builder
 foundryID: uR44wELN9OlU68cL
 rules:
-- id: 8eebcdf2-9c3f-599a-8530-34841778b336
-  key: choice-deity-domains
+- key: choice-deity-domains
   choice:
     name: $.deity.domains
     label: Deity's domains
     multiple: {min: 1, max: 4}
     records: {filter: {type: domain}, type: core/domain-id}
-- id: 0477d8a1-8e09-5375-88b2-0ca66d824b4e
-  key: choice-cleric-advanced-domains
+- key: choice-cleric-advanced-domains
   choice:
     name: $.cleric.advanced-domains
     label: Advanced domain
     optionsFrom: $.cleric.domains
     records: {filter: {type: domain}, type: core/domain-id}
-- id: 1003fc8e-6eb2-56e4-ad19-703747febb20
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
@@ -42,8 +40,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: wis
-- id: 8e0f385e-82ac-5892-a18c-21b5a4c5c6de
-  key: advanced-domain-spell
+- key: advanced-domain-spell
   effect: spellcasting/grant-domain-spell
   inputs:
     sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56

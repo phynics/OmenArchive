@@ -10,8 +10,7 @@ description: Your patron grants you greater knowledge. Choose a greater or basic
 mechanicsScope: builder
 foundryID: qDfTqetM9UEpp8ty
 rules:
-- id: 70f4eaa2-511e-51ee-886b-4db01b867837
-  key: choice-feat-greater-lesson-lesson
+- key: choice-feat-greater-lesson-lesson
   choice:
     name: $.feat.greater-lesson.lesson
     label: Lesson
@@ -21,8 +20,7 @@ rules:
         - {pathPrefix: '@class.witch.basic-lessons'}
         - {pathPrefix: '@class.witch.greater-lessons'}
       type: core/feature-id
-- id: f55af4b5-dfe4-5028-b629-cdaf6f27a72f
-  key: choice-set-1
+- key: choice-set-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.feat.greater-lesson.lesson}

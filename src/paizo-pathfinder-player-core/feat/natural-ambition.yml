@@ -12,8 +12,7 @@ description: You were raised to be ambitious and always reach for the stars, lea
 mechanicsScope: builder
 foundryID: PodajLVxqYSAqVox
 rules:
-- id: e75adc63-b7d9-5c97-acc6-70f6c84f99ac
-  key: choice-feat-natural-ambition-feat
+- key: choice-feat-natural-ambition-feat
   choice:
     name: $.feat.natural-ambition.feat
     label: Class Feat
@@ -30,9 +29,7 @@ rules:
             '@feat.steadying-stone', '@feat.storm-born', '@feat.versatile-performance',
             '@feat.untamed-form']}
       type: core/feat-id
-- id: 800ea6f7-3ef6-5875-afc1-3df602a08c2a
-  key: grant-item-1
+- key: grant-item-1
   effect: core/add-feat@2
   inputs:
-    selectionId: e4a2d602-7f51-5a0e-85fb-16509afb6096
     featId: {choice: $.feat.natural-ambition.feat}

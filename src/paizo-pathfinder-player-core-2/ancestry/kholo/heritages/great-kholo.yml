@@ -7,11 +7,9 @@ description: You're an imposing, powerful kholo, with tawny fur and brown spots 
   circumstance bonus to Athletics checks to Reposition, Shove, or Trip.
 mechanicsScope: builder
 rules:
-- id: c3e29ac8-a264-5608-8afc-90b98d02125e
-  key: flat-modifier-1
+- key: flat-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 0ff03efb-cb8f-5f1f-bf01-f45fdfcc800f
     target:
       description:
       - skill:
@@ -21,8 +19,7 @@ rules:
       Trip or Reposition).'
     numeric: {literal: {amount: 1, applicability: {description: Shove or Trip or Reposition,
           kind: situational}, type: circumstance}}
-- id: ac60e949-c478-5e88-b0b7-2a6b33cb2291
-  key: active-effect-like-1
+- key: active-effect-like-1
   effect: core/set-ancestry-hit-points
   inputs:
     hitPoints: 10

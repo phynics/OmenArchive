@@ -211,7 +211,7 @@ Leave the key out when there are no rules; do not add empty arrays to unchanged 
 
 ```yaml
 rules:
-- id: 11111111-1111-1111-1111-111111111111
+- key: add-language-1
   effect: core/add-language
   level: 3                 # left out when 1
   prerequisites:
@@ -222,10 +222,16 @@ rules:
 
 A rule has these keys, in this order:
 
-- `id` is a stable UUID for the rule instance. It is always written. A keyed rule's ID is
-  `uuid5("<record-path>#rule/<key>")` and the validator rejects one that disagrees.
-- `key` is an optional readable kebab-case member name. Keys are unique within a resource and rule
-  IDs are unique across the archive.
+- `key` is the rule's readable kebab-case member name. Every rule has one, and keys are unique
+  within a resource. The rule's ID is derived from it, `uuid5("<record-path>#rule/<key>")`, so a
+  rule does not write one. The ID of the rule `grant-1` of `omen://feat/example` is the same in
+  every copy of the archive. Renaming a key makes a new rule, because saved choices are kept
+  under the old ID.
+- The inputs that identify the rule itself are derived too, from the rule's key and the input's
+  name: a `selectionId`, `grantId` or `uuid` input is left out, and the effect's descriptor says
+  which inputs those are (`identity: rule`). A `sourceId` names a spellcasting source and is
+  written as a reference to the record that defines it
+  (`'@class.wizard.features.wizard-spellcasting#spellcasting-source'`).
 - `effect` is `<module alias>/<effect>`, with `@<revision>` for a revision other than 1
   (`core/add-feat@2`). The aliases are declared once, in `publication.yml`'s `mechanicsModules`.
 - `level` is the level at which the rule becomes active; 1 when left out.
@@ -248,8 +254,7 @@ A **record** input (a feat, action, feature or spell ID) takes a reference, neve
 A **choice** is a rule with `choice:` in place of `effect:` and `inputs:`:
 
 ```yaml
-- id: 7be6e4c7-d7c1-570e-8c0c-dc5dfe5c0c7e
-  key: choice-cleric-divine-font
+- key: choice-cleric-divine-font
   choice:
     name: $.cleric.divine-font
     label: Divine Font
@@ -298,9 +303,10 @@ Foundry conversion assigns new keys as `<foundry-rule-key>-<n>`, where `n` is th
 occurrence in the record, counted over the Foundry rules rather than the converted ones, so an
 inserted or reordered Foundry rule of another kind moves no other key. Rules the converter builds
 for a purpose rather than from one Foundry rule get a key naming it (`choice-bard-muse`, named after
-the choice), and spellcasting and focus rules keep their semantic IDs without a key. New authoring
-proposals use their explicit key when present; otherwise they receive a random UUID. When an edited
-keyed rule is written, its ID is derived from the actual record path.
+the choice); one built without a key is keyed by its effect and its place among that effect's rules
+(`add-feat-2`). A spellcasting block's rules keep the IDs the block derives (see "Spellcasting
+blocks"). When a rule is written, its ID and identity inputs are derived from the actual record
+path.
 
 The character's traits come from `add-character-trait` (a plain trait) and
 `add-character-ancestry-trait` (an ancestry or lineage trait: it counts for `hasTrait` and opens
@@ -420,11 +426,12 @@ archives (formats 1 to 4 before epochs) are not read, and there is no tool that 
 **Migrating a reader or a copy of the data.** Take a new copy from this repository. In it:
 
 - Rules use `effect` and `inputs`, with bare literals (above); filters are flat; choice rules are
-  compact. Choice cases carry values and effects directly; the old `legacySelections` key is gone,
+  compact. Choice cases carry values and effects directly; the old `legacySelections` key is gone
   and a file that still has it is rejected.
-- Records are named by `@` reference, not UUID; no rule holds a record UUID. Rule IDs and the other
-  identities (`selectionId`, `grantId`, `sourceId`) stay UUIDs, since they are identities, not
-  references.
+- Records are named by `@` reference, not UUID; no rule holds a record UUID. A rule has a `key`
+  and no `id`, and its `selectionId`, `grantId` and `uuid` inputs are derived from it. A `sourceId`
+  is a reference to the record that defines the spellcasting source. Other identities, such as an `entryId`, stay UUIDs. Migrating: `omen-archive derive-identities <archive> --write` keys every rule and
+  derives its identities.
 - No `source` block, no empty `action`, `foundryID` for `sourceID`, and a feat's `prerequisites`,
   `typedPrerequisites` and `prerequisiteDiagnostics` are one list (see "Feats").
 - Keys follow a fixed order per family (a feat: `name`, `level`, `rarity`, `type`, `traits`,

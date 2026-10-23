@@ -15,18 +15,17 @@ description: 'You eagerly absorbed the old stories and traditions of your ancest
 mechanicsScope: builder
 foundryID: 9bnkx6VgcO5mOk5b
 rules:
-- id: a469d3e4-c36c-58cc-9afb-a117744fcea0
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: crafting}
     proficiencyCap: 2
-- id: 580ed93a-b72b-5aaf-9449-c1c29aa6a2a4
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
     skill: {kind: religion}
     proficiencyCap: 2
-- id: 5208e770-6fff-5d68-a48f-a9f767fbebe3
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 9c0f3d5b-31ad-517b-8515-7535c6bed777
     featId: '@feat.additional-lore'

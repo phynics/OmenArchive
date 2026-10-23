@@ -21,10 +21,9 @@ description: 'You earned a living wrenching precious minerals from the lightless
   Expertise skill feat with underground terrain.'
 mechanicsScope: builder
 rules:
-- id: ed4694b0-5abd-58c2-b284-7bd607fbe8b1
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 6f056724-f318-573c-9475-f8d295f673b3
     featId: '@feat.terrain-expertise'
     with: {$.feat.terrain-expertise.terrains: {kind: fixed, value: {payload: underground,
           revision: 1, typeID: me.atkn.omen.pf2e.playercore/value/terrain}}}

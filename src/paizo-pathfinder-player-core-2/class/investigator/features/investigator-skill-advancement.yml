@@ -8,8 +8,7 @@ description: A investigator gains an extra skill feat at levels 3, 5, 7, 9, 11, 
   18, and 20, beyond the skill feats and skill increases every character gets.
 mechanicsScope: builder
 rules:
-- id: 52e4e285-8e47-55bd-b616-a98c2be79b83
-  key: choice-investigator-skill-feat-3
+- key: choice-investigator-skill-feat-3
   level: 3
   choice:
     name: $.investigator.skill-feat-3
@@ -21,15 +20,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 3}
       type: core/feat-id
-- id: 16144c9b-d988-54e9-9690-57c9fe9b8e79
-  key: skill-feat-3
+- key: skill-feat-3
   effect: core/add-feat@2
   level: 3
   inputs:
-    selectionId: 99cd33c4-4211-56d7-ac9d-f1fe83dc0c8d
     featId: {choice: $.investigator.skill-feat-3}
-- id: 6674da63-2be6-567d-937c-5bdd1b7f5036
-  key: choice-investigator-skill-feat-5
+- key: choice-investigator-skill-feat-5
   level: 5
   choice:
     name: $.investigator.skill-feat-5
@@ -41,15 +37,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 5}
       type: core/feat-id
-- id: c382bd9b-efe7-5a1e-864b-2df32e2ae7c7
-  key: skill-feat-5
+- key: skill-feat-5
   effect: core/add-feat@2
   level: 5
   inputs:
-    selectionId: 67cb8b4f-c524-5cf7-8ceb-c1fc368c00f9
     featId: {choice: $.investigator.skill-feat-5}
-- id: f0aa2a32-1457-54dd-8d30-2d3eb158a174
-  key: choice-investigator-skill-feat-7
+- key: choice-investigator-skill-feat-7
   level: 7
   choice:
     name: $.investigator.skill-feat-7
@@ -61,15 +54,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 7}
       type: core/feat-id
-- id: b99d1d59-fa21-5435-91e3-2b6fbb76d092
-  key: skill-feat-7
+- key: skill-feat-7
   effect: core/add-feat@2
   level: 7
   inputs:
-    selectionId: d8aa276b-79fe-5d5b-a0a6-38840708602a
     featId: {choice: $.investigator.skill-feat-7}
-- id: 2af7b7a2-d06c-5a2a-aae9-399a26734977
-  key: choice-investigator-skill-feat-9
+- key: choice-investigator-skill-feat-9
   level: 9
   choice:
     name: $.investigator.skill-feat-9
@@ -81,15 +71,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 9}
       type: core/feat-id
-- id: b3372098-bd40-57ac-bf80-8710a4aaf2b0
-  key: skill-feat-9
+- key: skill-feat-9
   effect: core/add-feat@2
   level: 9
   inputs:
-    selectionId: 406f68fa-212c-5429-9b3a-bab7c5441411
     featId: {choice: $.investigator.skill-feat-9}
-- id: dd95fae2-08f3-59aa-bdfe-0dab978b2d12
-  key: choice-investigator-skill-feat-11
+- key: choice-investigator-skill-feat-11
   level: 11
   choice:
     name: $.investigator.skill-feat-11
@@ -101,15 +88,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 11}
       type: core/feat-id
-- id: fedd5908-9152-51fe-82be-b1d5ba64c900
-  key: skill-feat-11
+- key: skill-feat-11
   effect: core/add-feat@2
   level: 11
   inputs:
-    selectionId: 5cc21dce-05df-56aa-83f9-947de8a86bb7
     featId: {choice: $.investigator.skill-feat-11}
-- id: d662ba1b-cff6-53c6-8ee9-81b35ca70ca6
-  key: choice-investigator-skill-feat-13
+- key: choice-investigator-skill-feat-13
   level: 13
   choice:
     name: $.investigator.skill-feat-13
@@ -121,15 +105,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 13}
       type: core/feat-id
-- id: af57b901-fca3-5eb7-9908-687449300e5c
-  key: skill-feat-13
+- key: skill-feat-13
   effect: core/add-feat@2
   level: 13
   inputs:
-    selectionId: 143f0313-769a-5e55-ba94-73ffec408356
     featId: {choice: $.investigator.skill-feat-13}
-- id: 7fb0d844-ea71-57cf-a44c-20014162e330
-  key: choice-investigator-skill-feat-15
+- key: choice-investigator-skill-feat-15
   level: 15
   choice:
     name: $.investigator.skill-feat-15
@@ -141,15 +122,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 15}
       type: core/feat-id
-- id: 1da47407-362c-5665-8728-3f2ad9ed8214
-  key: skill-feat-15
+- key: skill-feat-15
   effect: core/add-feat@2
   level: 15
   inputs:
-    selectionId: 50dcd209-1336-5802-97c1-53d94677ffae
     featId: {choice: $.investigator.skill-feat-15}
-- id: 3f83ca7c-32d0-5572-b666-4725401b35dc
-  key: choice-investigator-skill-feat-17
+- key: choice-investigator-skill-feat-17
   level: 17
   choice:
     name: $.investigator.skill-feat-17
@@ -161,15 +139,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 17}
       type: core/feat-id
-- id: ac90b9a6-e8ff-5f36-bd7f-6d7136895d13
-  key: skill-feat-17
+- key: skill-feat-17
   effect: core/add-feat@2
   level: 17
   inputs:
-    selectionId: 34af465c-ec33-5c16-8620-7017fc7c4fd4
     featId: {choice: $.investigator.skill-feat-17}
-- id: c5ae9213-30c5-5d59-b077-f292c4b32dca
-  key: choice-investigator-skill-feat-19
+- key: choice-investigator-skill-feat-19
   level: 19
   choice:
     name: $.investigator.skill-feat-19
@@ -181,15 +156,12 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 19}
       type: core/feat-id
-- id: 0ff257fb-efee-59b0-935f-eccbb84dfa6a
-  key: skill-feat-19
+- key: skill-feat-19
   effect: core/add-feat@2
   level: 19
   inputs:
-    selectionId: 38cf815d-2e4b-542c-8078-af71665f12d5
     featId: {choice: $.investigator.skill-feat-19}
-- id: 3d704339-4421-5fa8-a8a2-dd39dc741879
-  key: choice-investigator-skill-increase-2
+- key: choice-investigator-skill-increase-2
   level: 2
   choice:
     name: $.investigator.skill-increase-2
@@ -212,15 +184,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: bffe2268-6066-59a9-9532-8c6c806ea624
-  key: skill-increase-2
+- key: skill-increase-2
   effect: core/add-skill-increase
   level: 2
   inputs:
     skill: {choice: $.investigator.skill-increase-2}
     proficiencyCap: 4
-- id: c3dc7e10-4c69-5d4d-a766-af67179e6d08
-  key: choice-investigator-skill-increase-4
+- key: choice-investigator-skill-increase-4
   level: 4
   choice:
     name: $.investigator.skill-increase-4
@@ -243,15 +213,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 7c5570dc-fa24-5ed4-b01f-8ffa87cba5da
-  key: skill-increase-4
+- key: skill-increase-4
   effect: core/add-skill-increase
   level: 4
   inputs:
     skill: {choice: $.investigator.skill-increase-4}
     proficiencyCap: 4
-- id: b67f1627-ae7d-5622-9230-0e884a398623
-  key: choice-investigator-skill-increase-6
+- key: choice-investigator-skill-increase-6
   level: 6
   choice:
     name: $.investigator.skill-increase-6
@@ -274,15 +242,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: ff82606b-e6f2-5c9c-b86f-976c420a32b8
-  key: skill-increase-6
+- key: skill-increase-6
   effect: core/add-skill-increase
   level: 6
   inputs:
     skill: {choice: $.investigator.skill-increase-6}
     proficiencyCap: 4
-- id: 726b2363-2961-5735-9cb0-81a0de426976
-  key: choice-investigator-skill-increase-8
+- key: choice-investigator-skill-increase-8
   level: 8
   choice:
     name: $.investigator.skill-increase-8
@@ -305,15 +271,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 8b767c2b-2ed2-51d0-b0b4-756e38f7577d
-  key: skill-increase-8
+- key: skill-increase-8
   effect: core/add-skill-increase
   level: 8
   inputs:
     skill: {choice: $.investigator.skill-increase-8}
     proficiencyCap: 6
-- id: 465d26f8-7e09-53fd-989d-d4437c8d01d9
-  key: choice-investigator-skill-increase-10
+- key: choice-investigator-skill-increase-10
   level: 10
   choice:
     name: $.investigator.skill-increase-10
@@ -336,15 +300,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 1ec20056-a0ee-56c0-b72b-1063bc00825b
-  key: skill-increase-10
+- key: skill-increase-10
   effect: core/add-skill-increase
   level: 10
   inputs:
     skill: {choice: $.investigator.skill-increase-10}
     proficiencyCap: 6
-- id: 413af032-a2c9-5388-b554-64d6349b5c19
-  key: choice-investigator-skill-increase-12
+- key: choice-investigator-skill-increase-12
   level: 12
   choice:
     name: $.investigator.skill-increase-12
@@ -367,15 +329,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: eb1a18d4-eadf-5049-9689-f9c403455c8d
-  key: skill-increase-12
+- key: skill-increase-12
   effect: core/add-skill-increase
   level: 12
   inputs:
     skill: {choice: $.investigator.skill-increase-12}
     proficiencyCap: 6
-- id: 35f541aa-de7c-5151-96b8-4cca31aea907
-  key: choice-investigator-skill-increase-14
+- key: choice-investigator-skill-increase-14
   level: 14
   choice:
     name: $.investigator.skill-increase-14
@@ -398,15 +358,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: f1970009-4c7e-5726-88e7-b2393f9ac61b
-  key: skill-increase-14
+- key: skill-increase-14
   effect: core/add-skill-increase
   level: 14
   inputs:
     skill: {choice: $.investigator.skill-increase-14}
     proficiencyCap: 6
-- id: cf4433ff-e9af-58c0-b2ae-7ccac4c8aecf
-  key: choice-investigator-skill-increase-16
+- key: choice-investigator-skill-increase-16
   level: 16
   choice:
     name: $.investigator.skill-increase-16
@@ -429,15 +387,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: a99e8f76-4830-57c7-9ef6-27339e144154
-  key: skill-increase-16
+- key: skill-increase-16
   effect: core/add-skill-increase
   level: 16
   inputs:
     skill: {choice: $.investigator.skill-increase-16}
     proficiencyCap: 8
-- id: 8d74fce6-1851-586f-8504-48d8a7701bb2
-  key: choice-investigator-skill-increase-18
+- key: choice-investigator-skill-increase-18
   level: 18
   choice:
     name: $.investigator.skill-increase-18
@@ -460,15 +416,13 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: dba45f52-c737-5aaa-9669-b0b81b22f3e7
-  key: skill-increase-18
+- key: skill-increase-18
   effect: core/add-skill-increase
   level: 18
   inputs:
     skill: {choice: $.investigator.skill-increase-18}
     proficiencyCap: 8
-- id: 4ab81133-de94-5c11-86f9-76ff4c57c70f
-  key: choice-investigator-skill-increase-20
+- key: choice-investigator-skill-increase-20
   level: 20
   choice:
     name: $.investigator.skill-increase-20
@@ -491,8 +445,7 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 9f367c1b-c1c7-570b-b24d-762f7907e573
-  key: skill-increase-20
+- key: skill-increase-20
   effect: core/add-skill-increase
   level: 20
   inputs:

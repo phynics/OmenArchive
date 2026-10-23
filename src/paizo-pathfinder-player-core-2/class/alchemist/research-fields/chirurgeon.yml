@@ -33,26 +33,22 @@ description: 'You concentrate on healing others with alchemy.
 mechanicsScope: builder
 foundryID: eNZnx4LISDNftbx2
 rules:
-- id: 2ad20e41-6c2b-5075-9512-907fc6a7d80a
-  key: grant-field-benefits-field-discovery-chirurgeon
+- key: grant-field-benefits-field-discovery-chirurgeon
   effect: core/add-feature-by-id
   level: 5
   inputs:
     featureId: '@class.alchemist.field-benefits.field-discovery-chirurgeon'
-- id: a0ba538f-6500-5612-b775-8f9a6eee1e1e
-  key: grant-field-benefits-advanced-vials-chirurgeon
+- key: grant-field-benefits-advanced-vials-chirurgeon
   effect: core/add-feature-by-id
   level: 11
   inputs:
     featureId: '@class.alchemist.field-benefits.advanced-vials-chirurgeon'
-- id: eba3c400-50ec-5340-8eff-58ad16f9ca85
-  key: grant-field-benefits-greater-field-discovery-chirurgeon
+- key: grant-field-benefits-greater-field-discovery-chirurgeon
   effect: core/add-feature-by-id
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-chirurgeon'
-- id: 9b15c3e1-1337-50b3-aa31-60d0826b94d6
-  key: choice-alchemist-formulas-field
+- key: choice-alchemist-formulas-field
   choice:
     name: $.alchemist.formulas.field
     label: Research field formulas
@@ -68,13 +64,11 @@ rules:
         - {trait: elixir}
         - {trait: healing}
       type: core/item-id
-- id: 669a0267-8234-55ea-b20f-8c2ec0f4bd7b
-  key: learn-choice-alchemist-formulas-field
+- key: learn-choice-alchemist-formulas-field
   effect: core/add-formulas
   inputs:
     items: {choiceList: $.alchemist.formulas.field}
-- id: 6e63d7be-f580-5d6f-8674-53da124ed7fc
-  key: chirurgeon-crafting-for-medicine
+- key: chirurgeon-crafting-for-medicine
   effect: core/substitute-skill
   inputs:
     skill: {kind: medicine}

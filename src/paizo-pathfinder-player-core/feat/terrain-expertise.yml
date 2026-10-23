@@ -22,8 +22,7 @@ specialText: You can select this feat more than once, choosing a different type 
 mechanicsScope: mixed
 foundryID: 4tTkRyOQ0VuRBac3
 rules:
-- id: 33cce07a-795d-5095-be7f-d7d1aacfbd07
-  key: choice-feat-terrain-expertise-terrains
+- key: choice-feat-terrain-expertise-terrains
   choice:
     name: $.feat.terrain-expertise.terrains
     label: Terrain Expertise Terrain
@@ -38,7 +37,7 @@ rules:
     - {value: sky}
     - {value: swamp}
     - {value: underground}
-- id: c073d2f4-24fa-5aa3-a164-2e9aeff84148
+- key: add-terrain-expertise-1
   effect: core/add-terrain-expertise
   inputs:
     terrain: {choice: $.feat.terrain-expertise.terrains}

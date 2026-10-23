@@ -14,20 +14,20 @@ description: "The fury of the wind and waves pounds in your heart, whether your 
 mechanicsScope: builder
 foundryID: W9cF7wZztLDb1WGY
 rules:
-- id: 4544b2fd-e857-599b-a136-ddf92ec33784
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     sourceName: Oracle Spellcasting
     castingKind: spontaneous
     tradition: divine
     attribute: cha
-- id: b4f145e7-d302-5ee5-9ea8-49223037baf9
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: nature}
     proficiencyCap: 2
-- id: 41e64498-654c-5904-96a7-001fed10b814
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
@@ -35,48 +35,46 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- id: 24ea9e89-d682-52cd-800b-e8a36c8523b5
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
-    grantId: c219989b-8f7a-5700-9660-04a3b5627dcf
     spellId: '@spell.tempest-touch'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 33702397-ca55-50ef-a5ac-c2f6ff962797
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: d00e440d-0200-5e30-8acf-6536f5cc866f
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: '@class.oracle.curses.curse-of-inclement-headwinds'
-- id: 978aec98-3c16-57b9-8c84-2596ec08d783
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: dce57959-ff59-5e26-8c9e-7b63dbfef101
     featId: '@feat.foretell-harm'
-- id: 81ff6fa3-3d4e-57b4-9321-eafbed3c28b9
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: cd45723d-3326-57be-81e9-48fc8b536145
     spellId: '@spell.electric-arc?source=paizo-pathfinder-player-core'
-- id: 3b2acb44-43a8-558b-96b5-d07f57465f76
+- key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: eccfe510-8c2a-555f-8261-1d6d9ced9e24
     spellId: '@spell.thunderstrike?source=paizo-pathfinder-player-core'
-- id: 7bd33fa0-b36d-544f-8e36-d4fc21367fca
+- key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: 80c0da63-cde6-5137-94d7-e588904713e2
     spellId: '@spell.hydraulic-torrent?source=paizo-pathfinder-player-core'
-- id: a2a6a02f-8827-5665-b6fc-5e7ed8c07d51
+- key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     entryId: ef0d8e70-70cf-54a4-9e18-dd307a9e3585
     spellId: '@spell.chain-lightning?source=paizo-pathfinder-player-core'

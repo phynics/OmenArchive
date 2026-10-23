@@ -14,18 +14,17 @@ description: 'You''ve picked up skills and tales from your goblin community. You
 mechanicsScope: builder
 foundryID: sm6Y3fTcltxE8N0p
 rules:
-- id: 991e31e9-3922-5b04-bf03-2ed9eea06052
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: nature}
     proficiencyCap: 2
-- id: ce461ae1-a3d9-588c-8c6e-aaf687836ab4
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
     skill: {kind: stealth}
     proficiencyCap: 2
-- id: d0191fd3-e38e-5b4f-8ad9-cd1467f269d5
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: d73b5643-b9b9-5270-9369-a002c1d9af3c
     featId: '@feat.additional-lore'

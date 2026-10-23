@@ -10,14 +10,13 @@ description: Your body is made from hardy roots that attach you firmly to the gr
   you or knock you Prone.
 mechanicsScope: builder
 rules:
-- id: 2bfe7ad8-e38c-5abd-859d-16a3dafd773b
+- key: set-ancestry-hit-points-1
   effect: core/set-ancestry-hit-points
   inputs:
     hitPoints: 10
-- id: f5445a7f-6cd8-5979-b568-00e06890061a
+- key: add-roll-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: a8853edf-3aae-53db-ba3c-30514de35789
     target:
       description:
       - savingThrow:

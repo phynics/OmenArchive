@@ -24,8 +24,7 @@ description: 'Through your heritage, you can replicate a hag''s magic. Choose on
 mechanicsScope: builder
 foundryID: t6GBBIwX7hvvxYyV
 rules:
-- id: b8e260ee-5659-5f44-9ede-6fd3ba98ca6d
-  key: choice-feat-hag-magic-spell
+- key: choice-feat-hag-magic-spell
   choice:
     name: $.feat.hag-magic.spell
     label: Spell
@@ -62,31 +61,26 @@ rules:
             - {characterHasFeat: virga may}
             - {any: [{name: hydraulic torrent}]}
       type: spellcasting/spell-id
-- id: ce22b57a-594d-54e2-986a-b928708466a5
-  key: choice-feat-hag-magic-other-spell
+- key: choice-feat-hag-magic-other-spell
   choice:
     name: $.feat.hag-magic.other-spell
     label: Other Coven Spell
     records: {filter: {all: [{type: spell}, {maxLevel: 4}, {rarity: common}]}, type: spellcasting/spell-id}
-- id: 464e8f2d-07b8-5efa-89f2-c05586ca8667
-  key: innate-spell-1
+- key: innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: b6ba6d8f-8f38-5897-886c-4f953d83650c
     sourceName: Hag Magic
-    grantId: d9867e39-26a1-5bb0-881d-8e5f15e0e071
     spellId: {choice: $.feat.hag-magic.spell}
     tradition: occult
     attribute: cha
     rankPolicy: {kind: fixed, rank: 4}
     castFrequency: {kind: perDay, uses: 1}
-- id: de09d040-0e44-583b-a3fb-72bbc819c3de
-  key: innate-spell-2
+- key: innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
     sourceId: b6ba6d8f-8f38-5897-886c-4f953d83650c
     sourceName: Hag Magic
-    grantId: 034eaac0-0c13-53d6-b33a-f236964ef4ae
     spellId: {choice: $.feat.hag-magic.other-spell}
     tradition: occult
     attribute: cha

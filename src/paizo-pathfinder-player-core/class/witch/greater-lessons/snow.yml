@@ -13,19 +13,18 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: rECRfbkVwHuG06vO
 rules:
-- id: a5afc68a-7dc9-5ea6-b21f-aa3bd64529df
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: e98c1e2f-5c09-5f42-b816-d2298105486e
     spellId: '@spell.personal-blizzard'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 1fe1a374-1f13-5085-95fc-e944af753403
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: ffecb3da-35cd-5dc4-bcdf-f1249f62c27c
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 8286cca4-bd96-5d93-b3e2-6c5cb9f4c4e6
     spellId: '@spell.wall-of-wind'

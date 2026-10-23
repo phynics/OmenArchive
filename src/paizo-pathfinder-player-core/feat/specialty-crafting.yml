@@ -72,8 +72,7 @@ specialText: ty
 mechanicsScope: mixed
 foundryID: QLeMH5mQgh28sa5o
 rules:
-- id: 07f3e466-20b9-5572-bf0c-e13e2fabb34e
-  key: choice-feat-specialty-crafting-specialty
+- key: choice-feat-specialty-crafting-specialty
   choice:
     name: $.feat.specialty-crafting.specialty
     label: Specialty Crafting Specialty
@@ -91,7 +90,7 @@ rules:
     - {value: tailoring}
     - {value: weaving}
     - {value: woodworking}
-- id: bcc320be-915f-5b50-bc71-d4194635aff2
+- key: add-specialty-crafting-1
   effect: core/add-specialty-crafting
   inputs:
     specialty: {choice: $.feat.specialty-crafting.specialty}

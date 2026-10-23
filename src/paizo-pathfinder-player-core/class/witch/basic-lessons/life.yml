@@ -12,19 +12,18 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: HbREpzudMXPscgCj
 rules:
-- id: 460e6dff-0ece-51d6-8f86-6f0cd79ef846
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 5263fe54-a7c5-51d2-bfc5-f6c426e28f10
     spellId: '@spell.life-boost'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 4c73b5c4-b107-5f80-bb2f-556a11fb8c0e
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: d8be7afa-ddf8-5e94-9b6d-b8f81f512219
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 5893f6ef-7151-590f-a03a-1b0a3649ad94
     spellId: '@spell.spirit-link'

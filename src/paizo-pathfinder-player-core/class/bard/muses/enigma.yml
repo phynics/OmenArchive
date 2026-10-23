@@ -21,14 +21,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: 4ripp6EfdVpS0d60
 rules:
-- id: 92d56603-7399-5625-a1ff-cc4b52b86960
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: db26806e-3df1-5d0f-a503-04e927fb7b15
     featId: '@feat.bardic-lore'
-- id: 36f48ed7-34bc-5970-b561-5d150fa34762
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     entryId: 35cacd1f-e3ff-5b72-b73b-cf2245faf897
     spellId: '@spell.sure-strike'

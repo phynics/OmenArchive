@@ -20,7 +20,7 @@ description: You've learned to cast some of your spells more flexibly. For each 
 mechanicsScope: builder
 foundryID: VKRjmXxBFLrJK01c
 rules:
-- id: 2628108f-24bc-5df7-9b91-c7021e8e5444
+- key: choice-1
   level: 3
   choice:
     name: $.oracle.signature-spells.rank-1
@@ -31,13 +31,13 @@ rules:
         - {level: 1}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: 986bdc6b-e220-5795-a0a1-e1ddc5da82c8
+- key: mark-signature-spell-1
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-1}
-- id: e27eb4e6-55c8-5cd3-bbd0-9e7177a350be
+- key: choice-2
   level: 3
   choice:
     name: $.oracle.signature-spells.rank-2
@@ -48,13 +48,13 @@ rules:
         - {level: 2}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: 428efa34-8456-53ba-8704-5012b7201717
+- key: mark-signature-spell-2
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-2}
-- id: de3d9875-e5c3-5726-8caf-e2d7e430112c
+- key: choice-3
   level: 5
   choice:
     name: $.oracle.signature-spells.rank-3
@@ -65,13 +65,13 @@ rules:
         - {level: 3}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: d1c8031c-0c3d-54ef-9b23-984b19c40fdd
+- key: mark-signature-spell-3
   effect: spellcasting/mark-signature-spell
   level: 5
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-3}
-- id: a89b3997-709a-549e-91c4-ac152caf752e
+- key: choice-4
   level: 7
   choice:
     name: $.oracle.signature-spells.rank-4
@@ -82,13 +82,13 @@ rules:
         - {level: 4}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: 6a68a4ba-4163-519d-9756-9f146cd4917d
+- key: mark-signature-spell-4
   effect: spellcasting/mark-signature-spell
   level: 7
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-4}
-- id: 0d819474-0523-5517-a1ac-5964706cc590
+- key: choice-5
   level: 9
   choice:
     name: $.oracle.signature-spells.rank-5
@@ -99,13 +99,13 @@ rules:
         - {level: 5}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: 4098dde3-c859-5bc2-b7bd-33de9b73fc1d
+- key: mark-signature-spell-5
   effect: spellcasting/mark-signature-spell
   level: 9
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-5}
-- id: 06e4c792-f0b5-5187-aea9-e0d3eade1363
+- key: choice-6
   level: 11
   choice:
     name: $.oracle.signature-spells.rank-6
@@ -116,13 +116,13 @@ rules:
         - {level: 6}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: c405ef8f-48b4-558f-bfd6-c47fd1b4e819
+- key: mark-signature-spell-6
   effect: spellcasting/mark-signature-spell
   level: 11
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-6}
-- id: 447ca53a-3cd5-5040-8a4d-4400fd905fd8
+- key: choice-7
   level: 13
   choice:
     name: $.oracle.signature-spells.rank-7
@@ -133,13 +133,13 @@ rules:
         - {level: 7}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: f9f99855-81bf-5954-8e75-e6ada86bca26
+- key: mark-signature-spell-7
   effect: spellcasting/mark-signature-spell
   level: 13
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-7}
-- id: e4f71667-c546-5107-a43e-a5ff26345ca7
+- key: choice-8
   level: 15
   choice:
     name: $.oracle.signature-spells.rank-8
@@ -150,13 +150,13 @@ rules:
         - {level: 8}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: ffacf996-4d88-5d7e-9f90-6a2225d3a26a
+- key: mark-signature-spell-8
   effect: spellcasting/mark-signature-spell
   level: 15
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-8}
-- id: 646350ae-654a-5428-964a-9303a3ce202b
+- key: choice-9
   level: 17
   choice:
     name: $.oracle.signature-spells.rank-9
@@ -167,13 +167,13 @@ rules:
         - {level: 9}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: 4ffecfeb-eed5-55fc-be3a-70a3ea75c022
+- key: mark-signature-spell-9
   effect: spellcasting/mark-signature-spell
   level: 17
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-9}
-- id: 4b0b8fe3-76aa-5c93-8faf-4c8159e60939
+- key: choice-10
   level: 19
   choice:
     name: $.oracle.signature-spells.rank-10
@@ -184,9 +184,9 @@ rules:
         - {level: 10}
         - {knownBySource: 7d62d58f-4df1-5985-8de6-35a844ea3993}
       type: spellcasting/spell-id
-- id: 08f98541-c6f5-5e00-818b-bd3eff2dd64c
+- key: mark-signature-spell-10
   effect: spellcasting/mark-signature-spell
   level: 19
   inputs:
-    sourceId: 7d62d58f-4df1-5985-8de6-35a844ea3993
+    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
     spellId: {choice: $.oracle.signature-spells.rank-10}

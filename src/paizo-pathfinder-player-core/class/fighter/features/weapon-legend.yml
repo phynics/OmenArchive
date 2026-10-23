@@ -14,36 +14,31 @@ description: 'You''ve learned fighting techniques that apply to all armaments, a
 mechanicsScope: builder
 foundryID: F5VenhIQMDkeGvmV
 rules:
-- id: de7cdeb5-5975-55c1-b179-fbe9af4b35fc
-  key: generated-4
+- key: generated-4
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: advanced}
     proficiencyRank: 4
     selfScaling: false
-- id: 3af89d27-f5c1-5e7c-9a52-396f18af930e
-  key: generated-5
+- key: generated-5
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
     proficiencyRank: 6
     selfScaling: false
-- id: 1fd32290-8e06-59ca-84f6-eeeada498217
-  key: generated-6
+- key: generated-6
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
     proficiencyRank: 6
     selfScaling: false
-- id: aa3dccbd-6ee4-5696-91c3-585313a4d071
-  key: generated-7
+- key: generated-7
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
     proficiencyRank: 6
     selfScaling: false
-- id: 36c6fb27-ea8e-589e-a903-d4b2b84b9fbe
-  key: choice-fighter-weapon-legend-group
+- key: choice-fighter-weapon-legend-group
   level: 13
   choice:
     name: $.fighter.weapon-legend-group
@@ -63,16 +58,14 @@ rules:
     - {value: pick}
     - {value: shield}
     - {value: bow}
-- id: 2107adfb-60d5-52e4-8188-b7aa9ef7d19b
-  key: martial-proficiency-1
+- key: martial-proficiency-1
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-legend-group}
     proficiencyRank: 8
     includeAdvanced: false
     selfScaling: false
-- id: 22d10497-a662-5819-bfe1-e89a3672de6f
-  key: martial-proficiency-2
+- key: martial-proficiency-2
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-legend-group}

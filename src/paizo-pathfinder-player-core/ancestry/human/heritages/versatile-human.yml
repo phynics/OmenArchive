@@ -8,8 +8,7 @@ description: Humanity's versatility and ambition have fueled its ascendance to b
   feat, you can select this general feat at any point during character creation).
 mechanicsScope: builder
 rules:
-- id: 63135a18-68e3-5b89-8be4-64c54de49132
-  key: choice-heritage-feat
+- key: choice-heritage-feat
   choice:
     name: $.heritage.feat
     label: Heritage Feat
@@ -20,8 +19,7 @@ rules:
         - {maxLevel: 1}
         - {trait: systemTrait-general}
       type: core/feat-id
-- id: ce05e332-2417-5450-a867-67570e5df6e5
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: 04eec7cb-eddf-5a61-9bc2-4146d4ec4ff0
     featId: {choice: $.heritage.feat}

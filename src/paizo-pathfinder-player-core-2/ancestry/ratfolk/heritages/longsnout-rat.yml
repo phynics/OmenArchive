@@ -11,18 +11,15 @@ description: 'Your long snout gives you a keener sense of smell than most ratfol
   or object within the range of your scent.'
 mechanicsScope: builder
 rules:
-- id: ca0c071b-5ce0-5ac8-b40d-1f55736983a0
-  key: sense-1
+- key: sense-1
   effect: core/add-sense
   inputs:
     selector: scent
     acuity: imprecise
     range: 30
-- id: c3038c3c-d5da-5880-8684-262ffdafca03
-  key: flat-modifier-1
+- key: flat-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
-    uuid: 0747233a-f85a-5950-9e62-9a6fb64b0281
     target:
       description:
       - savingThrow:

@@ -29,26 +29,22 @@ description: 'You specialize in explosions and other violent reactions.
 mechanicsScope: builder
 foundryID: 7JbiaZ8bxODM5mzS
 rules:
-- id: 9eac8821-c758-5abd-b51f-2d8c8cd98138
-  key: grant-field-benefits-field-discovery-bomber
+- key: grant-field-benefits-field-discovery-bomber
   effect: core/add-feature-by-id
   level: 5
   inputs:
     featureId: '@class.alchemist.field-benefits.field-discovery-bomber'
-- id: 3ac60227-ac99-5631-836c-856c8ed8729c
-  key: grant-field-benefits-advanced-vials-bomber
+- key: grant-field-benefits-advanced-vials-bomber
   effect: core/add-feature-by-id
   level: 11
   inputs:
     featureId: '@class.alchemist.field-benefits.advanced-vials-bomber'
-- id: 9785641e-cfa0-5caf-99c1-9cefb22feff1
-  key: grant-field-benefits-greater-field-discovery-bomber
+- key: grant-field-benefits-greater-field-discovery-bomber
   effect: core/add-feature-by-id
   level: 13
   inputs:
     featureId: '@class.alchemist.field-benefits.greater-field-discovery-bomber'
-- id: 8cbff7e0-9578-5184-beaa-73e8cad100c8
-  key: choice-alchemist-formulas-field
+- key: choice-alchemist-formulas-field
   choice:
     name: $.alchemist.formulas.field
     label: Research field formulas
@@ -63,8 +59,7 @@ rules:
         - {level: 1}
         - {trait: bomb}
       type: core/item-id
-- id: 13b35717-3801-597f-aecd-485ad0c2386c
-  key: learn-choice-alchemist-formulas-field
+- key: learn-choice-alchemist-formulas-field
   effect: core/add-formulas
   inputs:
     items: {choiceList: $.alchemist.formulas.field}

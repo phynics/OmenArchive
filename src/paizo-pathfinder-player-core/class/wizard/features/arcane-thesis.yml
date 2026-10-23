@@ -22,13 +22,12 @@ description: 'During your studies to become a full-fledged wizard, you produced 
 mechanicsScope: builder
 foundryID: M89l9FOnjHe63wD7
 rules:
-- id: 9049adb1-2634-53dc-80f8-d89702902565
-  key: choice-wizard-thesis
+- key: choice-wizard-thesis
   choice:
     name: $.wizard.thesis
     label: Thesis
     records: {filter: {pathPrefix: '@class.wizard.theses'}, type: core/feature-id}
-- id: ebb03c21-9135-567e-975b-33089f58a46f
+- key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
     featureId: {choice: $.wizard.thesis}

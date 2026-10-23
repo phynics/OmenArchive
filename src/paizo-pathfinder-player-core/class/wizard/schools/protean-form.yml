@@ -65,7 +65,7 @@ spellcasting:
   source: '@class.wizard.features.wizard-spellcasting'
   spellbook: {from: curriculum}
 rules:
-- id: 8bcf5d78-5d82-59af-afb1-d867644c396d
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
@@ -73,13 +73,12 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: int
-- id: 85dd929e-de19-5241-946a-8c48e0eff7eb
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
-    grantId: f6540f73-7485-5b0d-b118-239d834d6941
     spellId: '@spell.scramble-body'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 100dfcae-fa9a-59df-a05a-fb9d787c2c18
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point

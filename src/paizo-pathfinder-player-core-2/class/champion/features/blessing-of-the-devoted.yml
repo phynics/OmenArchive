@@ -28,8 +28,7 @@ description: 'Your deity blesses your service with a boon. This might come in th
 mechanicsScope: builder
 foundryID: ERwuazupczhUSZ73
 rules:
-- id: 0593a336-342a-534d-9c5b-9d4a7969902f
-  key: choice-champion-blessing
+- key: choice-champion-blessing
   level: 3
   choice:
     name: $.champion.blessing
@@ -39,8 +38,7 @@ rules:
     - {key: blessed-armament, value: '@class.champion.blessings.blessed-armament'}
     - {key: blessed-shield, value: '@class.champion.blessings.blessed-shield'}
     - {key: blessed-swiftness, value: '@class.champion.blessings.blessed-swiftness'}
-- id: cadd9253-96f6-511e-b7f0-72efb5d36a5b
-  key: grant-selected-blessing
+- key: grant-selected-blessing
   effect: core/add-feature-by-id
   level: 3
   inputs:

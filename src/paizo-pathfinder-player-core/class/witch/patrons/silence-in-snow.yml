@@ -28,7 +28,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: 9c57R18pfgfqlBCD
 rules:
-- id: 2467201c-df96-5fca-9acc-2f8a198bd07b
+- key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
@@ -36,22 +36,20 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: int
-- id: d0234cfa-26da-5aea-b279-2ea5bfeb5e17
+- key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 6e81516a-a324-5aaf-97fa-619529355c2c
     spellId: '@spell.clinging-ice'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: atWill}
-- id: 52576dc4-9dbc-5eaf-8ea4-ab30880beff6
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     entryId: 7f7f55c8-651f-538c-b883-59e47a9d9e1f
     spellId: '@spell.gust-of-wind'
-- id: 23c9748b-3ffb-5b8c-8343-46a0d4675a1e
-  key: choice-witch-patron-first-hex
+- key: choice-witch-patron-first-hex
   choice:
     name: $.witch.patron.first-hex
     label: First Hex
@@ -61,25 +59,24 @@ rules:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
       type: spellcasting/spell-id
-- id: 81948fd8-2e85-5482-8f1e-52947fb35d4a
+- key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
-    grantId: 56f6bb78-5ee7-5b94-a7f0-d14b3b5108d3
     spellId: {choice: $.witch.patron.first-hex}
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}
-- id: 1bcb3483-6b95-5805-9e43-e781e0ec1e2e
+- key: add-focus-point-1
   effect: spellcasting/add-focus-point
-- id: 6b2d3267-a384-5acd-bb0c-5972fc332483
+- key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 0835758c-a3b1-57be-bafd-0a18c240f441
+    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
     sourceName: Witch Spellcasting
     castingKind: prepared
     tradition: primal
     attribute: int
-- id: 8682dd87-a726-5a04-b1fd-0080b2db97a4
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {kind: nature}

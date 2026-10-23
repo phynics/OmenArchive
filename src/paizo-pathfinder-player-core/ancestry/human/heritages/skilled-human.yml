@@ -7,8 +7,7 @@ description: Your ingenuity allows you to train in a wide variety of skills. You
   skill.
 mechanicsScope: builder
 rules:
-- id: 238451c6-3892-531e-84c9-6fd394ddb877
-  key: choice-heritage-skill
+- key: choice-heritage-skill
   choice:
     name: $.heritage.skill
     label: Skill
@@ -30,12 +29,12 @@ rules:
     - {key: stealth, value: {kind: stealth}}
     - {key: survival, value: {kind: survival}}
     - {key: thievery, value: {kind: thievery}}
-- id: 2850c923-0d8f-5ad7-b603-7773153dceff
+- key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
     skill: {choice: $.heritage.skill}
     proficiencyCap: 2
-- id: 4d6d706b-542d-5899-a417-3edc99928555
+- key: add-skill-increase-2
   effect: core/add-skill-increase
   level: 5
   inputs:

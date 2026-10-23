@@ -24,14 +24,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: N03BtRvjX9TeHRa4
 rules:
-- id: e930c758-094a-54ea-b6da-d353aa46213f
+- key: add-feat-1
   effect: core/add-feat@2
   inputs:
-    selectionId: e5d06bf0-0446-5547-aebc-a7437c5f8d02
     featId: '@feat.martial-performance'
-- id: 1e42979a-4a49-56c3-8a8f-c7c344363f1c
+- key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: d5fb3de0-9ae5-527d-8670-a51d29cf66aa
+    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
     entryId: fe037758-b6aa-53e6-97fd-014de3f3bdcf
     spellId: '@spell.fear'
