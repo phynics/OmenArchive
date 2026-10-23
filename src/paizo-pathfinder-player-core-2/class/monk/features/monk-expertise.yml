@@ -1,0 +1,20 @@
+---
+name: monk expertise
+level: 9
+traits:
+- monk
+description: Your proficiency rank for your monk class DC increases to expert. If
+  you have qi spells, your proficiency rank for spell attacks and spell DCs increases
+  to expert.
+mechanicsScope: builder
+foundryID: lxImO5D0qWp0gXFB
+rules:
+- key: active-effect-like-1
+  effect: spellcasting/increase-proficiency
+  prerequisites:
+  - hasChoice:
+      name: $.qi.tradition
+      isSet: true
+  inputs:
+    tradition: {choice: $.qi.tradition}
+    proficiency: 4

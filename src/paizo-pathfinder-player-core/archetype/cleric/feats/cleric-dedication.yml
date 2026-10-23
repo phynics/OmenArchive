@@ -23,7 +23,77 @@ description: 'You cast spells like a cleric. You gain the Cast a Spell activity.
 
   Cleric'
 mechanicsScope: mixed
-unsupportedReason: 'Selectable class feature reference at position 0 did not resolve
-  canonically. Resource: omen://feat/cleric-dedication?source=paizo-pathfinder-player-core.
-  Foundry keys: [GrantItem, ActiveEffectLike].'
+unsupportedReason: The deity facts and training in Religion are modeled. The divine
+  spellcasting is not yet.
 foundryID: smCDaPlpRDA47xjK
+rules:
+- key: choice-deity-name
+  choice:
+    name: $.deity.name
+    label: Deity's name
+    freeText: core/string
+- key: choice-deity-sanctification
+  choice:
+    name: $.deity.sanctification
+    label: Sanctification
+    type: core/string
+    cases:
+    - key: holy
+      value: holy
+      effects:
+      - key: add-holy-trait
+        effect: core/add-character-trait
+        inputs:
+          trait: holy
+    - key: unholy
+      value: unholy
+      effects:
+      - key: add-unholy-trait
+        effect: core/add-character-trait
+        inputs:
+          trait: unholy
+    - {value: none}
+- key: choice-deity-divine-skill
+  choice:
+    name: $.deity.divine-skill
+    label: Divine skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: {kind: acrobatics}}
+    - {key: arcana, value: {kind: arcana}}
+    - {key: athletics, value: {kind: athletics}}
+    - {key: crafting, value: {kind: crafting}}
+    - {key: deception, value: {kind: deception}}
+    - {key: diplomacy, value: {kind: diplomacy}}
+    - {key: intimidation, value: {kind: intimidation}}
+    - {key: medicine, value: {kind: medicine}}
+    - {key: nature, value: {kind: nature}}
+    - {key: occultism, value: {kind: occultism}}
+    - {key: performance, value: {kind: performance}}
+    - {key: religion, value: {kind: religion}}
+    - {key: society, value: {kind: society}}
+    - {key: stealth, value: {kind: stealth}}
+    - {key: survival, value: {kind: survival}}
+    - {key: thievery, value: {kind: thievery}}
+- key: deity-divine-skill
+  effect: core/add-skill-increase
+  inputs:
+    skill: {choice: $.deity.divine-skill}
+    proficiencyCap: 2
+- key: choice-deity-edicts
+  choice:
+    name: $.deity.edicts
+    label: Edicts
+    optional: true
+    freeText: core/string
+- key: choice-deity-anathema
+  choice:
+    name: $.deity.anathema
+    label: Anathema
+    optional: true
+    freeText: core/string
+- key: dedication-religion
+  effect: core/add-skill-increase
+  inputs:
+    skill: {kind: religion}
+    proficiencyCap: 2
