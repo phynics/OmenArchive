@@ -473,6 +473,43 @@ publication versions are candidates; consumers that require one value use the ne
 date. Equal latest dates require an explicit publication qualifier. Malformed or dangling references
 must be fixed before an OmenDB rebuild.
 
+### Links in descriptions
+
+A description can link to another record with a CommonMark inline link whose destination is an
+`omen://` path:
+
+```yaml
+description: |
+  You [Trip](omen://action/trip) a creature and it falls
+  [prone](omen://condition/prone). Your
+  [spellbook](omen://class/wizard/features/arcane-spellcasting#spellbook) holds …
+```
+
+- The destination is the path a reference field holds: a family, steps, an optional `#member`
+  and an optional `?source=`. It resolves as "Resource references" says: without `?source=` it
+  is the file's own publication's record.
+- The `@` spelling is for reference fields only. A Markdown destination must be a URL, so prose
+  links use `omen://`.
+- The label is the text the reader sees, in the book's words and case (`frightened 1`, `Trip`). It
+  is not derived from the target and may differ from the record's name.
+- `https://` links are allowed, for attribution. `omen-character://` is for the app only and is
+  rejected, like any other scheme.
+- Markdown in a description is inline only: emphasis (`*…*`, `_…_`), code spans, links and
+  backslash escapes are syntax, and headings and lists are not parsed.
+
+`omen-archive validate` checks the links in every `description`, with the references' issue
+kinds. A link to a family the archive does not have is malformed. A record no publication holds
+(and `externalRecords` does not declare) and a `#rule/<key>` member the record does not have are
+dangling. A record found only in another publication is a warning, and a record found in several
+publications without `?source=` is an error. An empty label, an `@` destination and a scheme
+other than `omen://` and `https://` are malformed.
+
+Until the apps render Markdown, a description's text shows as written, so descriptions do not
+carry links or escapes yet. When the converter starts writing them, `*` and `_` in plain text are
+escaped (`\*`). Thirteen record files contain a `*` today: raw Foundry roll formulas such as
+`(2*(1+@actor.level))[healing]` are a converter defect, fixed in the converter rather than
+escaped, and the rest (a footnote marker, a bullet, a multiplication) take an escape.
+
 ### Traits and enums
 
 Use lowercase enum/string values:
