@@ -36,6 +36,15 @@
       "items": {
         "$ref": "#/$defs/stateKey"
       }
+    },
+    "sharedChoiceRoots": {
+      "type": "array",
+      "description": "First steps of $ names that are one question for the whole character, however many rules declare them. Omitted when empty.",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
     }
   },
   "required": [
