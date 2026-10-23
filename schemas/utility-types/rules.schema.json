@@ -112,6 +112,11 @@
             "$ref": "#/$defs/choiceName"
           }
         },
+        "distinctWithin": {
+          "description": "A group name. A choice in a group leaves out the picks of the choices in the same group that come before it, such as the spells of one repertoire. A later pick never removes an earlier one.",
+          "type": "string",
+          "minLength": 1
+        },
         "type": {
           "$ref": "#/$defs/typeName"
         },
@@ -725,7 +730,7 @@
       "additionalProperties": false
     },
     "inputs": {
-      "description": "Effect inputs by name. Bare values are literals typed by the effect descriptor. Explicit forms are {choice: $.path}, {choiceList: $.path}, {selection: ...}, and {literal: ...}, each with an optional type. A list read requires a confirmed answer.",
+      "description": "Effect inputs by name. Bare values are literals typed by the effect descriptor. Explicit forms are {choice: $.path}, {choiceList: $.path}, and {literal: ...}, each with an optional type. A list read requires a confirmed answer.",
       "type": "object",
       "additionalProperties": {}
     },

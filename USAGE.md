@@ -235,7 +235,7 @@ A rule has these keys, in this order:
 An input value is **bare** when it is a literal: the effect's descriptor says its type, so there is
 no type ID, revision or namespace (`proficiencyCap: 2`, `skill: {kind: deception}`). The explicit
 forms are `{choice: $.cleric.divine-font}` (read one answer), `{choiceList: $.deity.spells}`
-(read a confirmed list into a declared list type), `{selection: …}`
+(read a confirmed list into a declared list type)
 and `{literal: …}` (with an optional `type: core/skill`, for a payload that looks
 like one of the explicit forms). A string literal that starts with `$`, `@` or `(`, or with `[[`, is
 written with a leading backslash (`\$5`): those prefixes are reserved for character values,
@@ -278,6 +278,10 @@ all must fit the options. `optionsFrom: $.deity.domains` restricts the options t
 of another choice. A scalar choice whose registered type is a list also supplies those elements.
 An unanswered or invalid dependency offers no options. A previously selected answer that no
 longer fits stays visible for repair and grants nothing.
+
+`distinctWithin: <group>` puts a choice in a group: it leaves out the picks of the choices in the
+same group that come before it in the rules, such as the spells of one spellbook. A later pick
+never removes an earlier one.
 
 `optional: true` keeps an unanswered question out of the open-question count. It is useful with
 `freeText: core/string` for notes such as edicts and anathema. A `records` choice can add explicit
