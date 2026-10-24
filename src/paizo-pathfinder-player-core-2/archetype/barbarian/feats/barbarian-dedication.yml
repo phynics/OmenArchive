@@ -24,8 +24,12 @@ description: 'You become trained in Athletics; if you were already trained in At
 
   Barbarian'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/barbarian-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ChoiceSet, GrantItem, GrantItem, FlatModifier,
-  ActiveEffectLike].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: WVU0c8rgcpGSRqSi
+rules:
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: barbarian
+    keyAttribute: str

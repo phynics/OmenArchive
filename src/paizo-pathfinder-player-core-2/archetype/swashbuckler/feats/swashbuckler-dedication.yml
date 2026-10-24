@@ -22,7 +22,12 @@ description: 'Choose a swashbuckler''s style. You gain the Panache and Stylish C
 
   Swashbuckler'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/swashbuckler-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ChoiceSet, GrantItem, ChoiceSet, ActiveEffectLike, GrantItem, GrantItem].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: eAlrvPVb8qt8Lruw
+rules:
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: swashbuckler
+    keyAttribute: dex

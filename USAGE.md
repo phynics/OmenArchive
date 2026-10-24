@@ -361,7 +361,9 @@ and the pick (`$.druid.order`) stays the character's own. Lists are derived at e
 never saved.
 
 A value an engine provides (`$.level`, `$.attributes.<ability>`, `$.<slot>.name` and `.path`,
-`$.ancestry.feat-ancestries`) is read, never defined: no choice may take its name. A name is either
+`$.ancestry.feat-ancestries`, `$.class.dc` for the character's own class DC and
+`$.class.<name>.dc` for the DC of any class the character holds, a class a dedication added
+included) is read, never defined: no choice may take its name. A name is either
 a choice or a list rules add to, never both. A rule's prerequisite can't be negated, and a
 prerequisite on a sense, proficiency, trait or feature the same record's rules grant is reported.
 

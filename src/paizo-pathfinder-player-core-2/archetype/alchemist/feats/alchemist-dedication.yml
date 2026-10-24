@@ -20,8 +20,12 @@ description: 'You put your alchemical interest into practice. You become trained
 
   Alchemist'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/alchemist-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, SpecialResource, CraftingAbility,
-  GrantItem, GrantItem].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: CJMkxlxHiHZQYDCz
+rules:
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: alchemist
+    keyAttribute: int

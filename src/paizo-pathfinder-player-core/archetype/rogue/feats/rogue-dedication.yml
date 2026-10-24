@@ -18,7 +18,12 @@ description: 'You gain a skill feat and the rogue''s Surprise Attack class featu
 
   Rogue'
 mechanicsScope: mixed
-unsupportedReason: 'Selectable class feature reference at position 2 did not resolve
-  canonically. Resource: omen://feat/rogue-dedication?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, ActiveEffectLike, GrantItem, ChoiceSet, GrantItem].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: bCWieNDC1CD35tin
+rules:
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: rogue
+    keyAttribute: dex

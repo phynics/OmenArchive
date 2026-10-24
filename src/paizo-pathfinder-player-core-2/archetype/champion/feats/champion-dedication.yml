@@ -32,8 +32,8 @@ description: 'Choose a deity. You are bound by your deity''s anathema and gain t
 
   Champion'
 mechanicsScope: mixed
-unsupportedReason: The deity facts and training in Religion are modeled. The cause,
-  the champion DC and the armor training are not yet.
+unsupportedReason: The deity facts, training in Religion and the class DC are modeled.
+  The cause and the armor training are not yet.
 foundryID: 0YjetnLVIUz9zQt5
 rules:
 - key: choice-deity-name
@@ -106,3 +106,17 @@ rules:
   inputs:
     skill: {kind: religion}
     proficiencyCap: 2
+- key: choice-champion-class-dc-attribute
+  choice:
+    name: $.champion.class-dc-attribute
+    label: Champion class DC attribute
+    type: core/attribute
+    cases:
+    - {value: str}
+    - {value: dex}
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: champion
+    keyAttribute: {choice: $.champion.class-dc-attribute}

@@ -18,7 +18,12 @@ description: 'You gain the On the Case class feature, which grants you both the 
 
   Investigator'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/investigator-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: CZXhJS55rG5H6PpB
+rules:
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: investigator
+    keyAttribute: int

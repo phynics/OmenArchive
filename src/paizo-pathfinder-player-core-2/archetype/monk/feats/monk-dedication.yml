@@ -19,8 +19,20 @@ description: 'You become trained in unarmed attacks and gain the Powerful Fist c
 
   Monk'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/monk-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem, ChoiceSet, ActiveEffectLike, ChoiceSet,
-  ActiveEffectLike].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: renUpSO6MJXPSXow
+rules:
+- key: choice-monk-class-dc-attribute
+  choice:
+    name: $.monk.class-dc-attribute
+    label: Monk class DC attribute
+    type: core/attribute
+    cases:
+    - {value: str}
+    - {value: dex}
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: monk
+    keyAttribute: {choice: $.monk.class-dc-attribute}

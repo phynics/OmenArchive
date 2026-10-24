@@ -18,8 +18,20 @@ description: 'You become trained in Survival; if you were already trained in Sur
 
   Ranger'
 mechanicsScope: mixed
-unsupportedReason: 'ActiveEffectLike at position 5 has an unsupported conditional
-  builder payload. Resource: omen://feat/ranger-dedication?source=paizo-pathfinder-player-core.
-  Foundry keys: [GrantItem, RollOption, ActiveEffectLike, ActiveEffectLike, ChoiceSet,
-  ActiveEffectLike].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: R00qiDE5pBctgtyU
+rules:
+- key: choice-ranger-class-dc-attribute
+  choice:
+    name: $.ranger.class-dc-attribute
+    label: Ranger class DC attribute
+    type: core/attribute
+    cases:
+    - {value: str}
+    - {value: dex}
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: ranger
+    keyAttribute: {choice: $.ranger.class-dc-attribute}

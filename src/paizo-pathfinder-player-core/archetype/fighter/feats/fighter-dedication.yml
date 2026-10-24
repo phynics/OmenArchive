@@ -19,7 +19,20 @@ description: 'You become trained in martial weapons. You become trained in your 
 
   Fighter'
 mechanicsScope: mixed
-unsupportedReason: 'ActiveEffectLike at position 2 has an unsupported conditional
-  builder payload. Resource: omen://feat/fighter-dedication?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, ChoiceSet, ActiveEffectLike].'
+unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
 foundryID: mvNa9KfQooHYEXoA
+rules:
+- key: choice-fighter-class-dc-attribute
+  choice:
+    name: $.fighter.class-dc-attribute
+    label: Fighter class DC attribute
+    type: core/attribute
+    cases:
+    - {value: str}
+    - {value: dex}
+- key: dedication-class-dc
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 2
+    className: fighter
+    keyAttribute: {choice: $.fighter.class-dc-attribute}
