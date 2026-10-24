@@ -5,5 +5,10 @@ traits:
 - fighter
 description: Your practiced techniques have made you even more formidable. Your proficiency
   rank for your fighter class DC increases to expert.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: bAaI7h937Nr3g93U
+rules:
+- key: generated-1
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 4

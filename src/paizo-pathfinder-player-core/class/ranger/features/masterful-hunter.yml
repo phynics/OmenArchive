@@ -33,8 +33,13 @@ description: 'You have honed your abilities as a hunter to incredible levels. Yo
   2d8 precision damage, and your third hit in a round against your hunted prey deals
   1d8 precision damage.'
 mechanicsScope: mixed
-unsupportedReason: 'Selectable class feature reference at position 2 did not resolve
-  canonically. Resource: omen://class/ranger/features/masterful-hunter?source=paizo-pathfinder-player-core.
-  Foundry keys: [FlatModifier, FlatModifier, GrantItem, GrantItem, GrantItem, RollOption,
-  ActiveEffectLike].'
+unsupportedReason: 'Foundry class-feature rule elements are preserved for external
+  review. External review required. Resource: omen://class/ranger/features/masterful-hunter?source=paizo-pathfinder-player-core.
+  Foundry keys: [AdjustModifier, RollOption, ActiveEffectLike, GrantItem, GrantItem,
+  GrantItem].'
 foundryID: RVZC4wVy5B5W2OeS
+rules:
+- key: generated-7
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 6

@@ -7,5 +7,10 @@ description: Your Strikes are so devastating that you hardly care about resistan
   and your barbarian abilities are unparalleled. Your proficiency rank for your barbarian
   class DC increases to master. Your melee Strikes ignore up to 10 resistance to the
   physical damage they deal.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: VLiT503OLOM3vaDx
+rules:
+- key: generated-1
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 6

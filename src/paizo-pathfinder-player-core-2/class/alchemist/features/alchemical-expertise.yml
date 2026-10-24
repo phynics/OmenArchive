@@ -7,5 +7,11 @@ description: Constant practice has increased the effectiveness of your concoctio
   Your proficiency rank for your alchemist class DC increases to expert. In addition,
   when you gather reagents during exploration mode, you can regain three vials instead
   of two.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: 3e1PlMXmlSwKoc6d
+rules:
+- key: generated-1
+  effect: core/add-class-dc
+  level: 9
+  inputs:
+    proficiencyRank: 4

@@ -5,5 +5,10 @@ traits:
 - rogue
 description: Your techniques are now harder to resist. Your proficiency rank for your
   rogue class DC increases to expert.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: f3Dh32EU4VsHu01b
+rules:
+- key: generated-1
+  effect: core/add-class-dc
+  inputs:
+    proficiencyRank: 4

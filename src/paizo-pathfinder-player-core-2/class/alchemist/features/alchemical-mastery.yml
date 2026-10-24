@@ -5,5 +5,11 @@ traits:
 - alchemist
 description: Your concoctions are incredibly effective. Your proficiency rank for
   your alchemist class DC increases to master.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: eG7FBDjCdEFzW9V9
+rules:
+- key: generated-1
+  effect: core/add-class-dc
+  level: 17
+  inputs:
+    proficiencyRank: 6
