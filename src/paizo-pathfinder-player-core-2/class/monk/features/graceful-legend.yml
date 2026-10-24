@@ -17,13 +17,8 @@ rules:
     proficiencyRank: 8
     selfScaling: false
 - key: active-effect-like-1
-  effect: spellcasting/increase-proficiency
-  prerequisites:
-  - hasChoice:
-      name: $.qi.tradition
-      isSet: true
+  effect: spellcasting/increase-spell-proficiency
   inputs:
-    tradition: {choice: $.qi.tradition}
     proficiency: 6
 - key: generated-2
   effect: core/add-class-dc

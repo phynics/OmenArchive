@@ -10,13 +10,8 @@ mechanicsScope: builder
 foundryID: lxImO5D0qWp0gXFB
 rules:
 - key: active-effect-like-1
-  effect: spellcasting/increase-proficiency
-  prerequisites:
-  - hasChoice:
-      name: $.qi.tradition
-      isSet: true
+  effect: spellcasting/increase-spell-proficiency
   inputs:
-    tradition: {choice: $.qi.tradition}
     proficiency: 4
 - key: generated-2
   effect: core/add-class-dc

@@ -16,5 +16,12 @@ description: 'You are touched by a deity and gifted with the ability to alleviat
   attribute is Charisma.
 
   Blessed One'
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: What the dedication trains (class DC, spell attack and DC) is modeled.
+  The rest of it is not yet.
 foundryID: eBdajOzs8kiJDic2
+rules:
+- key: dedication-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency
+  inputs:
+    proficiency: 2

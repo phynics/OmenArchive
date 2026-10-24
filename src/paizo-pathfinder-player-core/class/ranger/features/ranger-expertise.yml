@@ -6,12 +6,13 @@ traits:
 description: You've gained techniques that improve your cunning and skill. Your proficiency
   rank for your ranger DC increases to expert. If you have warden spells, your proficiency
   rank for spell attacks and spell DCs increases to expert.
-mechanicsScope: mixed
-unsupportedReason: 'Foundry class-feature rule elements are preserved for external
-  review. External review required. Resource: omen://class/ranger/features/ranger-expertise?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: 5likl5SAxQPrQ3KF
 rules:
+- key: active-effect-like-1
+  effect: spellcasting/increase-spell-proficiency
+  inputs:
+    proficiency: 4
 - key: generated-2
   effect: core/add-class-dc
   inputs:

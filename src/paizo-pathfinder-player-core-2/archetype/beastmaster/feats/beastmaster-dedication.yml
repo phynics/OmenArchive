@@ -34,7 +34,11 @@ description: 'You gain the service of a young animal companion that travels with
 
   Beastmaster'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/beastmaster-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+unsupportedReason: What the dedication trains (class DC, spell attack and DC) is modeled.
+  The rest of it is not yet.
 foundryID: wdmUH6hdat7jpEWt
+rules:
+- key: dedication-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency
+  inputs:
+    proficiency: 2

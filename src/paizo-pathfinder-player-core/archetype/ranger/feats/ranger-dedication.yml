@@ -18,7 +18,8 @@ description: 'You become trained in Survival; if you were already trained in Sur
 
   Ranger'
 mechanicsScope: mixed
-unsupportedReason: The class DC is modeled. The rest of the dedication is not yet.
+unsupportedReason: What the dedication trains (class DC, spell attack and DC) is modeled.
+  The rest of it is not yet.
 foundryID: R00qiDE5pBctgtyU
 rules:
 - key: choice-ranger-class-dc-attribute
@@ -35,3 +36,7 @@ rules:
     proficiencyRank: 2
     className: ranger
     keyAttribute: {choice: $.ranger.class-dc-attribute}
+- key: dedication-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency
+  inputs:
+    proficiency: 2
