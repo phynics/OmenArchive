@@ -39,6 +39,7 @@ src/
     archetype/               # archetype bundles and owned feats
     companion/
     domain/
+    condition/               # conditions (frightened, off-guard, prone)
 ```
 
 `{publication}` is a slug for a book/source package, for example:
@@ -644,6 +645,35 @@ Rules:
 - Keep base ancestry data in `{ancestry}.yml`.
 - Put ancestry features in `features/` as `character-feature` YAML.
 - Feature names should not duplicate the ancestry name unless the book does so.
+
+### Conditions
+
+Path:
+
+```text
+src/{publication}/condition/{slug}.yml
+```
+
+Schema:
+
+```text
+schemas/character-condition.schema.json
+```
+
+A condition is a rules record a description can link to (`omen://condition/frightened`). The
+record holds the text and the facts the apps show; what holding the condition does belongs to the
+play runtime, not the record. The refresh writes these records from Foundry's conditions pack, so
+don't edit their text by hand.
+
+```yaml
+name: frightened
+valued: true
+description: |
+  ...
+```
+
+`valued` is true when the condition carries a value (frightened 2). `group` names the family the
+source puts it in (attitudes, detection, senses). `traits` and `rarity` are optional.
 
 ### Heritages
 
