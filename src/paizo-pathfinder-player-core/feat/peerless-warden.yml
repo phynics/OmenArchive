@@ -9,7 +9,9 @@ prerequisites:
 - text: Initiate Warden
   hasResourceWithName: initiate warden
 repeatPolicy:
-  duplicateSelectionRules: []
+  duplicateSelectionRules:
+  - lookupName: $.feat.peerless-warden.spell
+    valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
   instanceLevelGates: []
   maxCount: null
 description: 'Your mastery of primal magic has given you access to the greatest secrets
@@ -21,5 +23,45 @@ description: 'Your mastery of primal magic has given you access to the greatest 
   Terrain Transposition'
 specialText: You can take this feat multiple times, choosing a different peerless
   warden spell each time.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: W7aT1UJOVFkYdQti
+rules:
+- key: warden-focus-source
+  effect: spellcasting/configure-source
+  inputs:
+    sourceId: ad075a6c-56ec-5561-ae46-5a8565022188
+    sourceName: Ranger Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: wis
+- key: choice-feat-peerless-warden-spell
+  choice:
+    name: $.feat.peerless-warden.spell
+    label: Warden spell
+    records:
+      filter:
+        all:
+        - {type: spell}
+        - {spell.category: focus}
+        - {trait: classTrait-ranger}
+        - {level: 5}
+      type: spellcasting/spell-id
+- key: grant-warden-spell
+  effect: spellcasting/grant-focus-spell
+  inputs:
+    sourceId: ad075a6c-56ec-5561-ae46-5a8565022188
+    spellId: {choice: $.feat.peerless-warden.spell}
+- key: warden-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency
+  prerequisites:
+  - hasChoice:
+      name: $.feat.peerless-warden.spell
+      isSet: true
+  inputs:
+    proficiency: 2
+- key: warden-focus-point
+  effect: spellcasting/add-focus-point
+  prerequisites:
+  - hasChoice:
+      name: $.feat.peerless-warden.spell
+      isSet: true
