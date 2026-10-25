@@ -10,10 +10,13 @@ prerequisites:
 - text: Debilitating Strike
   hasResourceWithName: debilitating strike
 action:
-  criticalFailure: The target is Paralyzed until the end of your next turn.
+  criticalFailure: The target is [Paralyzed](omen://condition/paralyzed?source=paizo-pathfinder-player-core)
+    until the end of your next turn.
   criticalSuccess: The target is unaffected.
-  failure: The target is Slowed 2 until the end of your next turn.
-  success: The target is Slowed 1 until the end of your next turn.
+  failure: The target is [Slowed 2](omen://condition/slowed?source=paizo-pathfinder-player-core)
+    until the end of your next turn.
+  success: The target is [Slowed 1](omen://condition/slowed?source=paizo-pathfinder-player-core)
+    until the end of your next turn.
 description: Your debilitations are especially effective on your most powerful attacks.
   Whenever you critically succeed at an attack roll against an enemy and use Debilitating
   Strike, add the following debilitation to the list you can choose from.

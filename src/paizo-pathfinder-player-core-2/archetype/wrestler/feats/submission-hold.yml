@@ -10,13 +10,15 @@ prerequisites:
   hasResourceWithName: wrestler dedication
 action:
   count: one_action
-  criticalSuccess: The target is Enfeebled 2 until the end of its next turn and Enfeebled
-    1 for 1 minute.
-  requirements: You have a creature Grabbed or Restrained.
+  criticalSuccess: The target is [Enfeebled 2](omen://condition/enfeebled?source=paizo-pathfinder-player-core)
+    until the end of its next turn and [Enfeebled 1](omen://condition/enfeebled?source=paizo-pathfinder-player-core)
+    for 1 minute.
+  requirements: You have a creature [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+    or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
   success: The target is enfeebled 1 until the end of its next turn.
 description: Your iron grip saps your opponent's strength. Attempt an Athletics check
-  to Grapple the creature you have grabbed or restrained, with the following additional
-  effects if you succeed.
+  to [Grapple](omen://action/grapple?source=paizo-pathfinder-player-core) the creature
+  you have grabbed or restrained, with the following additional effects if you succeed.
 mechanicsScope: mixed
 unsupportedReason: 'Foundry feat rule elements are preserved for external review.
   External review required. Resource: omen://feat/submission-hold?source=paizo-pathfinder-player-core-2.

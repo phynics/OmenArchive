@@ -12,8 +12,9 @@ action:
   count: one_action
   criticalSuccess: You knock one held item out of the creature's grasp. It falls to
     the ground in the creature's space.
-  requirements: You have a creature Grabbed or Restrained.
-  success: You weaken your target's grasp on the item. Further attempts to Disarm
+  requirements: You have a creature [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+    or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
+  success: You weaken your target's grasp on the item. Further attempts to [Disarm](omen://action/disarm?source=paizo-pathfinder-player-core)
     the target of that item gain a +2 circumstance bonus, and the target takes a –2
     circumstance penalty to attacks with the item or other checks requiring a firm
     grasp on the item. The creature can end the effect by Interacting to change its

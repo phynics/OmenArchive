@@ -6,8 +6,10 @@ traits:
 count: two_actions
 frequency: once per day
 description: Effect You can curse another creature with clumsiness. This curse has
-  a range of 30 feet, and you must be able to see your target. The target gets a will|against:class-spell
+  a range of 30 feet, and you must be able to see your target. The target gets a Will
   saving throw against your class DC or spell DC, whichever is higher.
 success: The target is unaffected and temporarily immune for 24 hours.
-failure: The target is Clumsy 1 for 1 minute.
-criticalFailure: The target is Clumsy 2 for 1 minute.
+failure: The target is [Clumsy 1](omen://condition/clumsy?source=paizo-pathfinder-player-core)
+  for 1 minute.
+criticalFailure: The target is [Clumsy 2](omen://condition/clumsy?source=paizo-pathfinder-player-core)
+  for 1 minute.

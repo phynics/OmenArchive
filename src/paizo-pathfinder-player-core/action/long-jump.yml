@@ -3,10 +3,12 @@ name: long jump
 traits:
 - move
 count: two_actions
-description: You Stride, then attempt a DC 15 Athletics check to make a long jump
-  in the direction you were Striding. If you didn't Stride at least 10 feet, you automatically
-  fail your check. The GM might increase or decrease this DC depending on the situation.
-success: You Leap up to a distance equal to your check result rounded down to the
-  nearest 5 feet. You can't jump farther than your land Speed.
+description: You Stride, then attempt a DC 15 [Athletics](omen://action/long-jump?source=paizo-pathfinder-player-core)
+  check to make a long jump in the direction you were Striding. If you didn't Stride
+  at least 10 feet, you automatically fail your check. The GM might increase or decrease
+  this DC depending on the situation.
+success: You [Leap](omen://action/leap?source=paizo-pathfinder-player-core) up to
+  a distance equal to your check result rounded down to the nearest 5 feet. You can't
+  jump farther than your land Speed.
 failure: You make a normal horizontal Leap.
-criticalFailure: You make a normal horizontal Leap, then fall and land Prone.
+criticalFailure: You make a normal horizontal Leap, then fall and land [Prone](omen://condition/prone?source=paizo-pathfinder-player-core).

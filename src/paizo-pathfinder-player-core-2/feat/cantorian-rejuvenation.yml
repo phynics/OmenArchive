@@ -11,8 +11,8 @@ action:
   count: two_actions
   frequency: once per day
 description: The life-giving energy that flows in your blood revitalizes you. You
-  recover ternary(gte(@actor.level,15),6,4)d6[healing] Hit Points and gain 10 temporary
-  Hit Points for 1 minute. At 15th level, you instead recover 6d6 HP and gain 15 temporary
-  HP.
+  recover \(if your level ≥ 15, then 6; otherwise 4\)d6 healing Hit Points and gain
+  10 temporary Hit Points for 1 minute. At 15th level, you instead recover 6d6 HP
+  and gain 15 temporary HP.
 mechanicsScope: mixed
 foundryID: 56HvICglqH7uR3AY

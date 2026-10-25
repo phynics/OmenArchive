@@ -33,12 +33,12 @@ heightening:
   type: interval
 description: 'You fling a large glob of acid that immediately detonates, spraying
   nearby creatures. Creatures in the area take 1d8 acid damage with a basic Reflex
-  save; on a critical failure, the creature also takes (1+floor((spell rank -1)/2))[persistent,acid]
-  damage.
+  save; on a critical failure, the creature also takes 1 + \(spell rank − 1\) ÷ 2
+  rounded down persistent acid damage.
 
 
-  Heightened (+2) The initial damage increases by 1d8, and the persistent damage on
-  a critical failure increases by 1.'
+  Heightened \(+2\) The initial damage increases by 1d8, and the persistent damage
+  on a critical failure increases by 1.'
 mechanicsScope: encounter
 diagnostics:
 - Foundry area type is not represented when area details are absent

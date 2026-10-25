@@ -9,12 +9,15 @@ traits:
 action:
   count: free_action
   frequency: once per day
-  requirements: You are Unconscious and have the Dying condition.
+  requirements: You are [Unconscious](omen://condition/unconscious?source=paizo-pathfinder-player-core)
+    and have the [Dying](omen://condition/dying?source=paizo-pathfinder-player-core)
+    condition.
   trigger: Your turn begins.
 description: The crossroads between life and death is a place that can reveal many
-  secrets. You gain the effects of an Augury spell in a strange, near-death vision.
-  Empowered by the realization, you then lose the dying condition (becoming Wounded
-  1 or increasing your wounded value by 1, as normal), regain 2*@actor.level[healing]
+  secrets. You gain the effects of an [Augury](omen://spell/augury?source=paizo-pathfinder-player-core)
+  spell in a strange, near-death vision. Empowered by the realization, you then lose
+  the dying condition \(becoming [Wounded 1](omen://condition/wounded?source=paizo-pathfinder-player-core)
+  or increasing your wounded value by 1, as normal\), regain 2 × your level healing
   Hit Points, and can Stand.
 mechanicsScope: encounter
 foundryID: Fzb20MxhHMmKHVtn

@@ -10,16 +10,19 @@ prerequisites:
   hasResourceWithName: wrestler dedication
 action:
   count: one_action
-  requirements: You have a creature Grabbed or Restrained.
+  requirements: You have a creature [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+    or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
 description: You squeeze the breath out of your foe. Make an unarmed melee Strike
-  against the creature you have Grabbed or Restrained. On a success, you gain a circumstance
-  bonus to damage equal to the number of weapon damage dice, and the target can barely
-  speak until the start of your next turn or until it Escapes, whichever comes first.
-  While it can barely speak, the target can't vocalize above a hoarse whisper, and
-  it must succeed at a flat|dc:10 or lose any action that requires speech. For an
-  action requiring speech that is also a manipulate action, like Casting a Spell with
-  the concentrate and manipulate trait, the target just rolls a single DC 10 flat
-  check, rather than an additional DC 5 flat check for being grabbed.
+  against the creature you have [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+  or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
+  On a success, you gain a circumstance bonus to damage equal to the number of weapon
+  damage dice, and the target can barely speak until the start of your next turn or
+  until it Escapes, whichever comes first. While it can barely speak, the target can't
+  vocalize above a hoarse whisper, and it must succeed at a DC 10 Flat check or lose
+  any action that requires speech. For an action requiring speech that is also a manipulate
+  action, like [Casting a Spell](omen://action/cast-a-spell?source=paizo-pathfinder-player-core)
+  with the concentrate and manipulate trait, the target just rolls a single DC 10
+  flat check, rather than an additional DC 5 flat check for being grabbed.
 mechanicsScope: mixed
 unsupportedReason: 'Foundry feat rule elements are preserved for external review.
   External review required. Resource: omen://feat/strangle?source=paizo-pathfinder-player-core-2.

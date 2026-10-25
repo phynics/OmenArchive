@@ -10,12 +10,14 @@ prerequisites:
   hasResourceWithName: wrestler dedication
 action:
   count: one_action
-  criticalSuccess: The target is Clumsy 2 until the end of its next turn and Clumsy
-    1 for 1 minute.
-  requirements: You have a creature Grabbed or Restrained.
+  criticalSuccess: The target is [Clumsy 2](omen://condition/clumsy?source=paizo-pathfinder-player-core)
+    until the end of its next turn and [Clumsy 1](omen://condition/clumsy?source=paizo-pathfinder-player-core)
+    for 1 minute.
+  requirements: You have a creature [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+    or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
   success: The target is clumsy 1 until the end of its next turn.
 description: You squeeze your opponent in a vicious bear hug, putting intense pressure
-  on their nerves, joints, or other pain points. Attempt an Athletics check to Grapple
+  on their nerves, joints, or other pain points. Attempt an Athletics check to [Grapple](omen://action/grapple?source=paizo-pathfinder-player-core)
   a creature you have grabbed or restrained, with the following additional effects
   if you succeed.
 mechanicsScope: mixed

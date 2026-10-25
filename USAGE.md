@@ -500,18 +500,16 @@ description: |
 - Markdown in a description is inline only: emphasis (`*…*`, `_…_`), code spans, links and
   backslash escapes are syntax, and headings and lists are not parsed.
 
-`omen-archive validate` checks the links in every `description`, with the references' issue
-kinds. A link to a family the archive does not have is malformed. A record no publication holds
-(and `externalRecords` does not declare) and a `#rule/<key>` member the record does not have are
-dangling. A record found only in another publication is a warning, and a record found in several
-publications without `?source=` is an error. An empty label, an `@` destination and a scheme
-other than `omen://` and `https://` are malformed.
+`omen-archive validate` checks links in `description`, `specialText`, `trigger`, `requirements`,
+`frequency`, and the four action outcome fields, with the references' issue kinds.
+A link to a family the archive does not have is malformed. A record no publication holds
+(and the referencing publication's `externalRecords` does not declare) and a `#rule/<key>` member
+the record does not have are dangling. A record found only in another publication is a warning,
+and a record found in several publications without `?source=` is an error. An empty label, an `@`
+destination and a scheme other than `omen://` and `https://` are malformed.
 
-Until the apps render Markdown, a description's text shows as written, so descriptions do not
-carry links or escapes yet. When the converter starts writing them, `*` and `_` in plain text are
-escaped (`\*`). Thirteen record files contain a `*` today: raw Foundry roll formulas such as
-`(2*(1+@actor.level))[healing]` are a converter defect, fixed in the converter rather than
-escaped, and the rest (a footnote marker, a bullet, a multiplication) take an escape.
+Escape Markdown punctuation in plain text when it would change the formatting, such as `\*`
+for a literal `*`. Convert source roll expressions to readable rules text before writing them.
 
 ### Traits and enums
 

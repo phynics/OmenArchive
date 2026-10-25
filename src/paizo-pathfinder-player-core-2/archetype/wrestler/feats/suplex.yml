@@ -10,13 +10,14 @@ prerequisites:
   hasResourceWithName: wrestler dedication
 action:
   count: one_action
-  requirements: You have a creature Grabbed or Restrained.
+  requirements: You have a creature [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+    or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
 description: Flexing your entire body, you heave your opponent over your head and
   slam them into the ground. Make an unarmed melee Strike against the creature you
-  have grabbed or restrained; on a success, the target lands Prone, and on a critical
-  success, the target lands prone and takes an additional 2d6[bludgeoning] damage.
-  Regardless of whether the Strike is successful, you immediately release your hold
-  on the target.
+  have grabbed or restrained; on a success, the target lands [Prone](omen://condition/prone?source=paizo-pathfinder-player-core),
+  and on a critical success, the target lands prone and takes an additional 2d6 bludgeoning
+  damage. Regardless of whether the Strike is successful, you immediately release
+  your hold on the target.
 mechanicsScope: mixed
 unsupportedReason: 'Foundry feat rule elements are preserved for external review.
   External review required. Resource: omen://feat/suplex?source=paizo-pathfinder-player-core-2.

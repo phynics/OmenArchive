@@ -8,13 +8,13 @@ traits:
 - swashbuckler
 action:
   count: one_action
-  criticalFailure: The target is Stunned 3.
+  criticalFailure: The target is [Stunned 3](omen://condition/stunned?source=paizo-pathfinder-player-core).
   criticalSuccess: The target is unaffected.
-  failure: The target is Stunned 1.
+  failure: The target is [Stunned 1](omen://condition/stunned?source=paizo-pathfinder-player-core).
   success: The target can't use reactions until its next turn.
 description: You attempt a dizzying blow. Make a melee Strike. If you hit, your foe
-  must attempt a fortitude|against:swashbuckler|traits:incapacitation save against
-  your class DC with the following results; the save has the incapacitation trait.
+  must attempt a Fortitude save against your class DC with the following results;
+  the save has the incapacitation trait.
 mechanicsScope: mixed
 unsupportedReason: 'Foundry feat rule elements are preserved for external review.
   External review required. Resource: omen://feat/stunning-finisher?source=paizo-pathfinder-player-core-2.

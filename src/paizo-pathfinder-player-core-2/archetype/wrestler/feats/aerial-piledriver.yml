@@ -15,8 +15,9 @@ action:
     prone, and the target is no longer grabbed or restrained by you.
   failure: You lose your grip on the target, and it is no longer grabbed or restrained
     by you.
-  requirements: You have a creature Grabbed or Restrained.
-  success: The target lands Prone.
+  requirements: You have a creature [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+    or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
+  success: The target lands [Prone](omen://condition/prone?source=paizo-pathfinder-player-core).
 description: Heaving both yourself and your opponent into the air, you bring them
   crashing to the ground. Make an unarmed melee Strike against the creature you have
   grabbed or restrained. This Strike deals 1d6 additional damage per weapon damage

@@ -8,10 +8,11 @@ traits:
 - rage
 action:
   count: one_action
-  requirements: You have an enemy Grabbed or Restrained.
+  requirements: You have an enemy [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+    or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core).
 description: You thrash your foe around. An enemy you have grabbed or restrained takes
   bludgeoning damage equal to your Strength modifier plus your weapon specialization
-  damage plus your Rage damage, with a fortitude|against:barbarian|basic save against
-  your class DC.
+  damage plus your [Rage](omen://action/rage?source=paizo-pathfinder-player-core-2)
+  damage, with a basic Fortitude save against your class DC.
 mechanicsScope: mixed
 foundryID: rMPL11JRcmlutvRi

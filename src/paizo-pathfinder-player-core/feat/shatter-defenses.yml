@@ -8,9 +8,10 @@ traits:
 - press
 action:
   count: one_action
-  requirements: A Frightened creature is in your melee reach.
+  requirements: A [Frightened](omen://condition/frightened?source=paizo-pathfinder-player-core)
+    creature is in your melee reach.
 description: Your offense exploits your enemy's fear. Make a melee Strike against
-  a frightened creature. If you hit and deal damage, the target becomes Off-Guard
+  a frightened creature. If you hit and deal damage, the target becomes [Off-Guard](omen://condition/off-guard?source=paizo-pathfinder-player-core)
   until its frightened condition ends. If the target was already off-guard to you
   when you damaged it with this Strike, it can't reduce its frightened value below
   1 until the start of your next turn.

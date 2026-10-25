@@ -18,10 +18,10 @@ description: 'If your next action is to Cast a Spell with the fungus or plant tr
   a garland of plants grows in a burst in the spell''s range. The plants are difficult
   terrain and hazardous terrain, covered in your choice of thorns or poisonous vines.
   Any creature that moves into one of these squares or ends its turn in one takes
-  2d6 damage ((ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[piercing]|options:area-damage
-  damage for thorns or (ternary(gte(@actor.level,20),4,ternary(gte(@actor.level,16),3,2)))d6[poison]|options:area-damage
-  for vines). A creature can take this damage only once per turn. You and your familiar
-  are immune to this damage.
+  2d6 damage \(\(if your level ≥ 20, then 4; otherwise if your level ≥ 16, then 3;
+  otherwise 2\)d6 piercing damage for thorns or \(if your level ≥ 20, then 4; otherwise
+  if your level ≥ 16, then 3; otherwise 2\)d6 poison for vines\). A creature can take
+  this damage only once per turn. You and your familiar are immune to this damage.
 
   The plants last for 1 minute or until you cast another Garland Spell, whichever
   comes first.

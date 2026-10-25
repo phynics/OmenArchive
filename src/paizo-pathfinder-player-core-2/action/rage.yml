@@ -6,16 +6,18 @@ traits:
 - emotion
 - mental
 count: one_action
-requirements: You aren't Fatigued or raging.
+requirements: You aren't [Fatigued](omen://condition/fatigued?source=paizo-pathfinder-player-core)
+  or raging.
 description: "You tap into your inner fury and begin raging. You gain a number of
   temporary Hit Points equal to your level plus your Constitution modifier. While
   you are raging:\n\t•\tYou deal 2 additional damage on melee Strikes. This additional
   damage is halved if your weapon or unarmed attack is agile.\n\t•\tYou can't use
   actions with the concentrate trait unless they also have the rage trait. You can
-  Seek while raging.\nRage lasts for 1 minute, until you fall Unconscious, or until
-  the encounter ends, whichever comes first. You can't voluntarily stop raging. When
-  you stop raging, you lose any remaining temporary Hit Points from Rage, and can't
-  gain temporary Hit Points from using the Rage action again for 1 minute."
+  [Seek](omen://action/seek?source=paizo-pathfinder-player-core) while raging.\nRage
+  lasts for 1 minute, until you fall [Unconscious](omen://condition/unconscious?source=paizo-pathfinder-player-core),
+  or until the encounter ends, whichever comes first. You can't voluntarily stop raging.
+  When you stop raging, you lose any remaining temporary Hit Points from Rage, and
+  can't gain temporary Hit Points from using the Rage action again for 1 minute."
 mechanicsScope: mixed
 unsupportedReason: 'Foundry action rule elements are preserved for external review
   at omen://action/rage?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier,

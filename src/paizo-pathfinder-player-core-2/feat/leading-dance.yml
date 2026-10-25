@@ -12,16 +12,17 @@ prerequisites:
   hasSkillProficiency: {skill: performance, proficiency: trained}
 action:
   count: one_action
-  criticalFailure: You stumble, falling Prone in your space.
+  criticalFailure: You stumble, falling [Prone](omen://condition/prone?source=paizo-pathfinder-player-core)
+    in your space.
   criticalSuccess: Your foe is swept up in your dance. You both move up to 10 feet
     in the same direction, remaining adjacent to one another. Your movement doesn't
-    trigger reactions from the target (and the target's movement doesn't trigger reactions
-    because it's forced movement).
+    trigger reactions from the target \(and the target's movement doesn't trigger
+    reactions because it's forced movement\).
   failure: The foe doesn't follow your steps. You can move 5 feet if you choose, but
     this movement triggers reactions normally.
   requirements: You are adjacent to an enemy.
   success: As critical success, but you both move only 5 feet.
-description: You sweep your foe into your dance. Attempt a performance|defense:will
-  check against an adjacent enemy's Will DC.
+description: You sweep your foe into your dance. Attempt a Performance check against
+  an adjacent enemy's Will DC.
 mechanicsScope: mixed
 foundryID: ZHPSASbvbbshq1zG

@@ -11,10 +11,10 @@ action:
   count: two_actions
   frequency: once per hour
 description: 'You let out an ear-piercing screech. Each creature in a emanation takes
-  ceil(@actor.level/2)d6[sonic]|options:area-damage damage, with a fortitude|against:class-spell|basic|options:area-effect
-  saving throw against the higher of your class DC or spell DC. You then Stride, and
-  this movement doesn''t trigger reactions from any creature that failed or critically
-  failed its saving throw.
+  \(your level ÷ 2 rounded up\)d6 sonic damage, with a basic Fortitude saving throw
+  against the higher of your class DC or spell DC. You then Stride, and this movement
+  doesn''t trigger reactions from any creature that failed or critically failed its
+  saving throw.
 
   At 11th level and every 2 levels thereafter, the damage increases by 1d6.'
 mechanicsScope: mixed
