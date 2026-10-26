@@ -1,0 +1,31 @@
+name: Missing Record
+description: Report a record missing from a publication in the archive
+title: "[Missing Record]: "
+labels: ["missing-record"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template if a feat, spell, item, action, or other game element is missing from an archived publication.
+  - type: input
+    id: publication
+    attributes:
+      label: Publication
+      description: The publication in which the record appears (e.g. Pathfinder Player Core, Player Core 2).
+      placeholder: Pathfinder Player Core
+    validations:
+      required: true
+  - type: input
+    id: record-name
+    attributes:
+      label: Record Name & Type
+      description: The name and type (e.g., "Sudden Charge", 1st-level Fighter Feat).
+    validations:
+      required: true
+  - type: textarea
+    id: citation
+    attributes:
+      label: Citation & Description
+      description: Page number and rules text from the official published book under the ORC license.
+    validations:
+      required: true

@@ -2,41 +2,73 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 96,
     "yaml.schemas": {
-        "./schemas/character-class.schema.json": [
-            "class/*/*.json",
-            "class/*/*.yaml",
-            "class/*/*.yml",
+        "./schemas/publication.schema.json": [
+            "src/*/publication.yml",
+            "src/*/publication.yaml"
         ],
-        "./schemas/character-ancestry.schema.json": [
-            "ancestry/*/*.json",
-            "ancestry/*/*.yaml",
-            "ancestry/*/*.yml",
+        "./schemas/collection.schema.json": [
+            "collections/*.yml",
+            "collections/*.yaml"
         ],
         "./schemas/character-action.schema.json": [
-            "action/*.json",
-            "action/*.yaml",
-            "action/*.yml"
+            "src/*/action/*.yml",
+            "src/*/action/*.yaml"
+        ],
+        "./schemas/character-ancestry.schema.json": [
+            "src/*/ancestry/*/*.yml",
+            "src/*/ancestry/*/*.yaml"
+        ],
+        "./schemas/character-archetype.schema.json": [
+            "src/*/archetype/*/*.yml",
+            "src/*/archetype/*/*.yaml"
         ],
         "./schemas/character-background.schema.json": [
-            "background/*.json",
-            "background/*.yaml",
-            "background/*.yml",
+            "src/*/background/*.yml",
+            "src/*/background/*.yaml"
         ],
-        "./schemas/character-heritage.schema.json": [
-            "heritage/*/*.json",
-            "heritage/*/*.yaml",
-            "heritage/*/*.yml",
+        "./schemas/character-class.schema.json": [
+            "src/*/class/*/*.yml",
+            "src/*/class/*/*.yaml"
+        ],
+        "./schemas/character-companion.schema.json": [
+            "src/*/companion/*.yml",
+            "src/*/companion/*.yaml"
+        ],
+        "./schemas/character-condition.schema.json": [
+            "src/*/condition/*.yml",
+            "src/*/condition/*.yaml"
+        ],
+        "./schemas/character-domain.schema.json": [
+            "src/*/domain/*.yml",
+            "src/*/domain/*.yaml"
+        ],
+        "./schemas/character-feat.schema.json": [
+            "src/*/feat/*.yml",
+            "src/*/feat/*.yaml",
+            "src/*/archetype/*/feats/*.yml",
+            "src/*/archetype/*/feats/*.yaml"
         ],
         "./schemas/character-feature.schema.json": [
-            "class/*/*/*.json",
-            "class/*/*/*.yaml",
-            "class/*/*/*.yml",
-            "ancestry/*/features/*.json",
-            "ancestry/*/features/*.yaml",
-            "ancestry/*/features/*.yml",
-            "other-items/*/*.json",
-            "other-items/*/*.yaml",
-            "other-items/*/*.yml"
+            "src/*/ancestry/*/features/*.yml",
+            "src/*/ancestry/*/features/*.yaml",
+            "src/*/class/*/features/*.yml",
+            "src/*/class/*/features/*.yaml",
+            "src/*/class/*/*/*.yml",
+            "src/*/class/*/*/*.yaml"
+        ],
+        "./schemas/character-heritage.schema.json": [
+            "src/*/ancestry/*/heritages/*.yml",
+            "src/*/ancestry/*/heritages/*.yaml",
+            "src/*/versatile-heritage/*.yml",
+            "src/*/versatile-heritage/*.yaml"
+        ],
+        "./schemas/character-item.schema.json": [
+            "src/*/item/*.yml",
+            "src/*/item/*.yaml"
+        ],
+        "./schemas/character-spell.schema.json": [
+            "src/*/spell/*.yml",
+            "src/*/spell/*.yaml"
         ]
     }
 }

@@ -1,18 +1,79 @@
 # OmenArchive
-PF2e resource archive with schemas
 
-See [USAGE.md](USAGE.md) for repository conventions, resource layout, and editing rules.
+**OmenArchive** is an open-source, human-edited archive of Pathfinder 2e Remaster game data. It stores game content as structured, clean YAML files designed for version control, collaborative editing, and high-performance character builders and virtual tabletops.
 
-Validation:
+---
 
-- Run `./scripts/validate.sh` to validate the whole archive with the authoritative
-  Swift validator, [OmenArchiveKit](https://github.com/phynics/OmenArchiveKit).
-  The script resolves the Kit from `OMEN_ARCHIVE_KIT_ROOT` when set, otherwise
-  from a checkout at `../OmenArchiveKit`.
-- Run `./scripts/install-pre-commit.sh` to install the repo-local pre-commit hook.
+## What Is in the Archive?
 
-The archive layout contract is recorded in `schemas/archive-format.json`.
-Owner-scoped bundle custom groups are declared there alongside their schemas.
-Archetypes are bundles with owned `feats`; domains and companions are flat
-families. `OmenArchiveKit` is the authoritative validator for the repository's
-schemas, mechanics and records.
+The archive contains comprehensive game records curated from official Paizo Remaster publications under the Open RPG Creative (ORC) License:
+
+- **Publications**:
+  - *Pathfinder Player Core* (`paizo-pathfinder-player-core`)
+  - *Pathfinder Player Core 2* (`paizo-pathfinder-player-core-2`)
+- **13 Resource Families**:
+  - `action`: Basic, skill, and specialized combat actions.
+  - `ancestry`: Character ancestries, physical traits, features, and heritages.
+  - `archetype`: Multiclass and specialized archetypes and their dedication feats.
+  - `background`: Character backgrounds with attribute boosts, trained skills, and feats.
+  - `class`: Core classes, progressions, proficiencies, and subclass options.
+  - `companion`: Animal companions and familiars.
+  - `condition`: Game conditions and status effects.
+  - `domain`: Cleric deity domains and associated domain spells.
+  - `feat`: General, skill, ancestry, class, and archetype feats.
+  - `item`: Weapons, armor, shields, adventuring gear, and alchemical items.
+  - `spell`: Cantrips, ranked spells, focus spells, and rituals across all 4 traditions.
+  - `versatile-heritage`: Lineage heritages selectable across any ancestry.
+- **Curated Collections**:
+  - Multi-publication groupings under `collections/` (such as `collections/pathfinder-core.yml`).
+
+---
+
+## Contributing to OmenArchive
+
+We welcome community contributions! Most contributions fall into three categories:
+
+1. **Typo and Descriptive Text Fixes**: Correcting typos, clarification notes, or Remaster wording adjustments. See [How-To: Fix a Typo](docs/how-to/fix-a-typo.md).
+2. **Adding or Updating Records**: Adding a missing feat, spell, item, or action. See [How-To: Add a Feat](docs/how-to/add-a-feat.md) or [How-To: Add a Spell](docs/how-to/add-a-spell.md).
+3. **Mechanics and Rule Interactions**: Authoring or refining interactive builder rules, attribute bonuses, or character choices. See [How-To: Add a Rule](docs/how-to/add-a-rule.md).
+
+For step-by-step instructions on setting up your environment, running validation, and opening pull requests, please read [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## Documentation Quick Links
+
+| Guide | Description |
+| :--- | :--- |
+| [**CONTRIBUTING.md**](CONTRIBUTING.md) | Contributor workflows, editor setup, licensing rules, and CI validation. |
+| [**How-To Guides**](docs/how-to/) | Step-by-step guides for fixing typos, adding feats, spells, rules, and publications. |
+| [**Reference Manual**](docs/reference/) | In-depth specifications for layout, `@` references, rules, filters, and families. |
+| [**Converter Ownership**](docs/converter-ownership.md) | How automated upstream refreshes work and what fields the archive owns. |
+| [**Mechanics Catalog**](docs/mechanics.docc/) | Native DocC catalog documenting all registered game engine effects and inputs. |
+| [**Glossary**](docs/glossary.md) | Definitions of archive terminology and data model concepts. |
+| [**Troubleshooting**](docs/troubleshooting.md) | Common schema validation errors and how to resolve them. |
+| [**Usage Index**](USAGE.md) | Comprehensive index of archive rules and conventions. |
+
+---
+
+## Quick Validation
+
+You can validate YAML files locally using standard Node.js without compiling Swift:
+
+```bash
+# Validate the entire archive against schemas
+npm run check-schemas
+
+# Or check a specific file
+node scripts/check-schemas.mjs src/paizo-pathfinder-player-core/feat/fleet.yml
+
+# Verify documentation links
+bash scripts/check-links.sh
+```
+
+---
+
+## License
+
+- Content derived from the Pathfinder Roleplaying Game is licensed under the [Open RPG Creative (ORC) License](https://paizo.com/orclicense).
+- Archive schemas, validation tools, and scripts are licensed under the MIT License.

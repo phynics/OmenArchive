@@ -1,0 +1,25 @@
+name: Schema Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install validation dependencies
+        run: npm install --no-save ajv@^8.17.1 ajv-formats@^3.0.1 yaml@^2.7.0
+
+      - name: Run schema validation
+        run: node scripts/check-schemas.mjs

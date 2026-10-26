@@ -1,0 +1,36 @@
+name: Data Error / Typo
+description: Report an error or typo in an existing record in the archive
+title: "[Data Error]: "
+labels: ["data-error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an error in OmenArchive! Please check that the error is in this repository's source files.
+  - type: input
+    id: record-path
+    attributes:
+      label: Record Path or URI
+      description: The file path in `src/` or URI (e.g. `src/paizo-pathfinder-player-core/feat/example.yml` or `omen://feat/example`).
+      placeholder: src/paizo-pathfinder-player-core/feat/...
+    validations:
+      required: true
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: What the archive currently says.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-content
+    attributes:
+      label: Expected Content & Source Citation
+      description: What it should say, citing the published book (e.g., Pathfinder Player Core, page 123).
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context or links.

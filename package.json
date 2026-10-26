@@ -1,0 +1,16 @@
+{
+  "name": "omen-archive",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PF2e resource archive with schemas",
+  "type": "module",
+  "scripts": {
+    "check-schemas": "node scripts/check-schemas.mjs",
+    "check-links": "bash scripts/check-links.sh"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.7.0"
+  }
+}
