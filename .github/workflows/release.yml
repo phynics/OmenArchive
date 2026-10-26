@@ -1,0 +1,65 @@
+name: Release Artifacts
+
+# When an OmenArchive release is published, build and attach wire export artifacts
+# (JSONL and SQLite) so third-party consumers can query the archive without Swift.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag or release to attach artifacts to'
+        required: false
+        default: 'latest'
+
+jobs:
+  export:
+    runs-on: macos-26
+    steps:
+      - name: Select Xcode 27
+        run: |
+          xcode=$(ls -d /Applications/Xcode_27*.app 2>/dev/null | sort -V | tail -1)
+          if [ -z "$xcode" ]; then
+            echo "::error::No Xcode 27 on this runner. Installed:"; ls -d /Applications/Xcode*.app; exit 1
+          fi
+          sudo xcode-select -s "$xcode"
+          swift --version
+      - name: Check out OmenArchive
+        uses: actions/checkout@v4
+        with:
+          path: OmenArchive
+      - name: Check out the tooling
+        uses: actions/checkout@v4
+        with:
+          repository: phynics/omen-monorepo
+          ref: main
+          path: monorepo
+          token: ${{ secrets.OMEN_CI_READ_TOKEN }}
+      - name: Export JSONL and SQLite
+        working-directory: monorepo/OmenArchiveKit
+        run: |
+          mkdir -p "${{ github.workspace }}/dist"
+          swift run omen-archive wire "${{ github.workspace }}/OmenArchive" "${{ github.workspace }}/dist/wire" \
+            --jsonl "${{ github.workspace }}/dist/omen-archive.jsonl" \
+            --sqlite "${{ github.workspace }}/dist/omen-archive.sqlite"
+          cd "${{ github.workspace }}/dist"
+          gzip -k omen-archive.jsonl
+          gzip -k omen-archive.sqlite
+      - name: Upload Release Assets
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          gh release upload "$TAG" \
+            "${{ github.workspace }}/dist/omen-archive.jsonl.gz" \
+            "${{ github.workspace }}/dist/omen-archive.sqlite.gz" \
+            "${{ github.workspace }}/dist/omen-archive.jsonl" \
+            "${{ github.workspace }}/dist/omen-archive.sqlite" \
+            --clobber
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wire-exports
+          path: ${{ github.workspace }}/dist/omen-archive.*

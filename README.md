@@ -29,6 +29,17 @@ The archive contains comprehensive game records curated from official Paizo Rema
 
 ---
 
+## Consuming the Archive
+
+Building a character builder, virtual tabletop (VTT), or reference tool? OmenArchive releases attach pre-built, decoded distribution artifacts for third-party consumption:
+
+- **Release SQLite Database (`omen-archive.sqlite.gz`)**: Full relational database with typed JSON extraction, indexes, and views per family.
+- **Release JSONL Stream (`omen-archive.jsonl.gz`)**: One complete record per line, ideal for streaming ingest and search indexing.
+
+See the [Consuming the Archive](docs/consuming-the-archive.md) guide for details on versioning promises, schema extraction, Python/Node.js examples, and SQL queries.
+
+---
+
 ## Contributing to OmenArchive
 
 We welcome community contributions! Most contributions fall into three categories:
@@ -45,6 +56,7 @@ For step-by-step instructions on setting up your environment, running validation
 
 | Guide | Description |
 | :--- | :--- |
+| [**Consuming the Archive**](docs/consuming-the-archive.md) | Guide for third parties using the archive as a database (JSONL, SQLite, Python, Node.js). |
 | [**CONTRIBUTING.md**](CONTRIBUTING.md) | Contributor workflows, editor setup, licensing rules, and CI validation. |
 | [**How-To Guides**](docs/how-to/) | Step-by-step guides for fixing typos, adding feats, spells, rules, and publications. |
 | [**Reference Manual**](docs/reference/) | In-depth specifications for layout, `@` references, rules, filters, and families. |
@@ -75,5 +87,5 @@ bash scripts/check-links.sh
 
 ## License
 
-- Content derived from the Pathfinder Roleplaying Game is licensed under the [Open RPG Creative (ORC) License](https://paizo.com/orclicense).
-- Archive schemas, validation tools, and scripts are licensed under the MIT License.
+- Content derived from the Pathfinder Roleplaying Game is licensed under the [Open RPG Creative (ORC) License](https://azoralaw.com/orclicense/). See [NOTICE](NOTICE) and [LICENSE.md](LICENSE.md).
+- Archive schemas, validation tools, and scripts are licensed under the [MIT License](LICENSE.md).
