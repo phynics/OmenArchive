@@ -108,6 +108,10 @@
         "reference": {
           "$ref": "#/$defs/effectReference"
         },
+        "summary": {
+          "type": "string",
+          "description": "Explains what the effect does to the character, what each input means, and when to use it."
+        },
         "inputDescriptors": {
           "type": "array",
           "items": {
@@ -127,6 +131,7 @@
       },
       "required": [
         "reference",
+        "summary",
         "inputDescriptors",
         "inputRecipes"
       ],

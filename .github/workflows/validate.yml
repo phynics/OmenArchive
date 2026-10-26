@@ -46,3 +46,8 @@ jobs:
       - name: Validate the complete archive with the omen-archive CLI
         working-directory: monorepo/OmenArchiveKit
         run: swift run omen-archive validate "${{ github.workspace }}/OmenArchive"
+      - name: Verify DocC mechanics catalog is up to date
+        working-directory: monorepo/OmenArchiveKit
+        run: |
+          swift run omen-archive docc "${{ github.workspace }}/OmenArchive" "${{ github.workspace }}/OmenArchive/docs/mechanics.docc"
+          git -C "${{ github.workspace }}/OmenArchive" diff --exit-code docs/mechanics.docc
