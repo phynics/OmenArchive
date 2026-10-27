@@ -134,7 +134,7 @@ rules:
 * **Evaluation Engine:** The archive provides data definitions and authoring-level mechanics contracts. It deliberately does not publish a proprietary rules engine.
 * **Runtime Dispatch:** Calculation order, bonus stacking rules (e.g. largest status bonus applies), and trigger condition dispatch must be evaluated according to the Pathfinder 2e Remaster rules by your own engine or application.
 
-For detailed documentation on all available mechanics effects and their inputs, see the [DocC Mechanics Catalog](https://phynics.github.io/OmenArchive/documentation/omenmechanics) (or browse source in [mechanics.docc](mechanics.docc)) or [Rules and Inputs](reference/rules-and-inputs.md).
+For detailed documentation on all available mechanics effects and their inputs, see the [DocC Mechanics Catalog](https://phynics.github.io/OmenArchive/documentation/index) (or browse source in [mechanics.docc](mechanics.docc)) or [Rules and Inputs](reference/rules-and-inputs.md).
 
 ---
 

@@ -61,7 +61,7 @@ For step-by-step instructions on setting up your environment, running validation
 | [**How-To Guides**](docs/how-to/) | Step-by-step guides for fixing typos, adding feats, spells, rules, and publications. |
 | [**Reference Manual**](docs/reference/) | In-depth specifications for layout, `@` references, rules, filters, and families. |
 | [**Converter Ownership**](docs/converter-ownership.md) | How automated upstream refreshes work and what fields the archive owns. |
-| [**Mechanics Catalog**](https://phynics.github.io/OmenArchive/documentation/omenmechanics) | Native DocC catalog documenting all registered game engine effects and inputs (or browse source in [`docs/mechanics.docc/`](docs/mechanics.docc/)). |
+| [**Mechanics Catalog**](https://phynics.github.io/OmenArchive/documentation/index) | Native DocC catalog documenting all registered game engine effects and inputs (or browse source in [`docs/mechanics.docc/`](docs/mechanics.docc/)). |
 | [**Glossary**](docs/glossary.md) | Definitions of archive terminology and data model concepts. |
 | [**Troubleshooting**](docs/troubleshooting.md) | Common schema validation errors and how to resolve them. |
 | [**Usage Index**](USAGE.md) | Comprehensive index of archive rules and conventions. |
