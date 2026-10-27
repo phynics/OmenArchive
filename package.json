@@ -5,6 +5,7 @@
   "description": "PF2e resource archive with schemas",
   "type": "module",
   "scripts": {
+    "build:docs": "bash scripts/build-docs.sh",
     "check-schemas": "node scripts/check-schemas.mjs",
     "check-links": "bash scripts/check-links.sh",
     "test": "node scripts/check-schemas.mjs && bash scripts/check-links.sh"
