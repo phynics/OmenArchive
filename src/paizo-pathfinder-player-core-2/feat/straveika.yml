@@ -14,7 +14,18 @@ description: You descend from one of the truly ancient vampires, a nosferatu cur
   and Perception DCs against attempts to [Lie](omen://action/lie?source=paizo-pathfinder-player-core)
   to you.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/straveika?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: PVkAEBlRSJHe3JCz
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Straveika
+    slug: perception
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Sense Motive or Lie

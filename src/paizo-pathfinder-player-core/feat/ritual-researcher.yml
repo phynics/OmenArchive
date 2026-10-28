@@ -15,5 +15,18 @@ prerequisites:
 description: Careful research into the art of rituals has made you better at performing
   them. You gain a +2 circumstance bonus to all primary and secondary checks you attempt
   as part of casting a ritual.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: DUuCOQ9FiZf7vS5b
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Ritual Researcher
+    slug: skill-check
+    target:
+      description:
+      - anySkill: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: ritual; primary check or secondary check

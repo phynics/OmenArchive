@@ -10,5 +10,39 @@ description: You trace your lineage to archons, guardians of the seven-tiered mo
   of Heaven and nurturers of law and virtue within mortals. You gain a +1 circumstance
   bonus to saves against emotion effects, and if you roll a success on a save against
   an emotion effect, you get a critical success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: g3oJlWGHc74qX2z5
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Lawbringer
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: emotion
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Lawbringer
+    slug: note
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a save against an emotion effect, you get a critical
+      success instead.
+    condition: emotion
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Lawbringer
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: emotion

@@ -8,6 +8,8 @@ description: Your ability to elude danger is matchless. Your proficiency rank fo
   save, you get a failure instead. When you roll a failure on a Reflex save against
   a damaging effect, you take half damage.
 mechanicsScope: mixed
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.SaveCriticalFailureToFailure.FailureHalfDamage.Reflex,
+  which the pack doesn''t carry.'
 foundryID: syEkISIi0F9946zo
 rules:
 - key: generated-3
@@ -15,3 +17,15 @@ rules:
   inputs:
     savingThrow: reflex
     proficiencyRank: 8
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Assured Evasion
+    slug: degree
+    target:
+      description:
+      - savingThrow:
+          '_0': reflex
+    text: When you roll a critical failure on a Reflex save, the result is one degree
+      better.
+    condition: ''

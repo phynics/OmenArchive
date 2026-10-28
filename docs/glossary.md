@@ -9,7 +9,7 @@ A character's biological, hereditary, or cultural origin (e.g. Elf, Dwarf, Human
 A collection of thematic feats taken in place of class feats, gated by a dedication feat. Authored as a bundle containing an archetype root record and child feats.
 
 ### Archive Format
-The structural contract declared in `schemas/archive-format.json` with an explicit `epoch` and `version` (currently `epoch: 2, version: 2`).
+The structural contract declared in `schemas/archive-format.json` with an explicit `epoch` and `version` (currently `epoch: 2, version: 3`).
 
 ### Bare Literal
 An input value written as a direct scalar or dictionary without dynamic evaluation markers (e.g. `proficiencyCap: 2`).

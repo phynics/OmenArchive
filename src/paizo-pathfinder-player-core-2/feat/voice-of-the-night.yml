@@ -10,7 +10,20 @@ description: You hear and understand the words of creatures you share the darkne
   with bats, rats, and wolves. You also gain a +1 circumstance bonus to [Make an Impression](omen://action/make-an-impression?source=paizo-pathfinder-player-core)
   on such animals.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/voice-of-the-night?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: 5VkVWZq7ZqH6RaAW
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Voice of the Night
+    slug: diplomacy
+    target:
+      description:
+      - skill:
+          '_0':
+            diplomacy: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Make An Impression; the target is tag bat or the target is tag rat
+      or the target is tag wolf

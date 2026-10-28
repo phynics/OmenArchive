@@ -11,5 +11,20 @@ description: Your spilled blood is sanctified, with effects similar to those of 
   attack, that creature takes 1d6 spirit damage with the holy trait. You gain a +4
   circumstance bonus to Crafting checks to [Craft](omen://action/craft?source=paizo-pathfinder-player-core)
   holy water using your blood as one of the ingredients.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: BuaOQzmRNgIhGsfN
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Blessed Blood (Nephilim)
+    slug: crafting
+    target:
+      description:
+      - skill:
+          '_0':
+            crafting: {}
+    amount: 4
+    bonusType: circumstance
+    mode: add
+    condition: Craft; item holy water; own blood

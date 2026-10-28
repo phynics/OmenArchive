@@ -15,3 +15,15 @@ rules:
   inputs:
     savingThrow: reflex
     proficiencyRank: 6
+- key: annotation-1
+  effect: core/add-play-note
+  level: 15
+  inputs:
+    source: Explosion Dodger
+    slug: degree
+    target:
+      description:
+      - savingThrow:
+          '_0': reflex
+    text: When you roll a success on a Reflex save, the result is one degree better.
+    condition: ''

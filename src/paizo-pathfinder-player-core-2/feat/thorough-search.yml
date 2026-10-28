@@ -16,7 +16,18 @@ description: You take your time searching to ensure you find everything. When Se
   to notice something, you gain a +2 circumstance bonus to that Perception check and
   if you succeed, you get a critical success instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/thorough-search?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: 9QQnv7nFpsNCGE89
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Thorough Search
+    slug: perception
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Seek; thorough search

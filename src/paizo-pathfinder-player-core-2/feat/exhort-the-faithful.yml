@@ -22,7 +22,47 @@ description: 'Your knowledge of the tenets of your faith gives you insight into 
   and you gain a +2 circumstance bonus to the check. On a critically failed attempt
   to make a Request, the target''s attitude toward you doesn''t worsen.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/exhort-the-faithful?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, FlatModifier, FlatModifier].'
 foundryID: QvBIYW6aAqoiyim3
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Exhort the Faithful
+    slug: diplomacy
+    target:
+      description:
+      - skill:
+          '_0':
+            diplomacy: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Request; member of your faith
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: Exhort the Faithful
+    slug: intimidation
+    target:
+      description:
+      - skill:
+          '_0':
+            intimidation: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Coerce; member of your faith
+- key: annotation-3
+  effect: core/add-play-modifier
+  inputs:
+    source: Exhort the Faithful
+    slug: religion
+    target:
+      description:
+      - skill:
+          '_0':
+            religion: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: member of your faith; Request or Coerce

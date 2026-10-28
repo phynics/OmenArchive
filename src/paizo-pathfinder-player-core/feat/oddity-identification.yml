@@ -17,5 +17,24 @@ description: When you become aware of a magical effect or see a spell being cast
   or [Recall Knowledge](omen://action/recall-knowledge?source=paizo-pathfinder-player-core)
   to learn more about these effects, you can always use Occultism without penalty
   and gain a +2 circumstance bonus.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: hDGosy2ZTwnyctEP
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Oddity Identification
+    slug: occultism
+    target:
+      description:
+      - skill:
+          '_0':
+            occultism: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: with a magical item; Identify Magic or Recall Knowledge; the effect
+      has the detection trait or the effect has the fortune trait or the effect has
+      the mental trait or the effect has the misfortune trait or the effect has the
+      prediction trait or the effect has the revelation trait or the effect has the
+      scrying trait

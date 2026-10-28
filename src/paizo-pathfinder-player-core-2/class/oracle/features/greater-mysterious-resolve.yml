@@ -9,6 +9,8 @@ description: Your time spent in contemplation of the mysteries of creation has g
   When you roll a critical failure on a Will save, you get a failure instead. When
   you fail a Will save against a damaging effect, you take half damage.
 mechanicsScope: mixed
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.SaveCriticalFailureToFailure.FailureHalfDamage.Will,
+  which the pack doesn''t carry.'
 foundryID: Kj59CmXnMJDKXKWx
 rules:
 - key: generated-3
@@ -17,3 +19,16 @@ rules:
   inputs:
     savingThrow: will
     proficiencyRank: 8
+- key: annotation-1
+  effect: core/add-play-note
+  level: 17
+  inputs:
+    source: Greater Mysterious Resolve
+    slug: degree
+    target:
+      description:
+      - savingThrow:
+          '_0': will
+    text: When you roll a critical failure on a Will save, the result is one degree
+      better.
+    condition: ''

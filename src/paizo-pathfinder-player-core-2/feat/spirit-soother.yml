@@ -11,7 +11,17 @@ description: You are attuned to the minute sounds and sensations of restless spi
   You still need to meet any other requirements to find the haunt. You gain a +1 circumstance
   bonus to checks to disable haunts.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/spirit-soother?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: 2RmsQrLySNYQ4uIn
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Spirit Soother
+    slug: skill-check
+    target:
+      description:
+      - anySkill: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the source is trait haunt

@@ -18,5 +18,19 @@ description: 'You throw yourself into a roll to escape imminent danger. You can 
   up to 10 feet as part of the reaction. If you do, the reaction gains the move trait.
   You can use Nimble Roll while Flying or Swimming instead of Striding if you have
   the corresponding movement type.'
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: F6ZAceuDpiM9bUiF
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Nimble Roll
+    slug: reflex
+    target:
+      description:
+      - savingThrow:
+          '_0': reflex
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: nimble dodge

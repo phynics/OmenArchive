@@ -18,7 +18,18 @@ description: 'You can use [Flashy Dodge](omen://feat/flashy-dodge?source=paizo-p
   You can use Flashy Roll while Flying or Swimming instead of Striding if you have
   the corresponding movement type.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/flashy-roll?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: DfSe0BFocS9AuJTP
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Flashy Roll
+    slug: reflex
+    target:
+      description:
+      - savingThrow:
+          '_0': reflex
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: flashy dodge

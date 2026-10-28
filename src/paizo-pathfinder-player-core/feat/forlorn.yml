@@ -9,5 +9,30 @@ description: Watching your friends age and die fills you with moroseness that pr
   you against harmful emotions. You gain a +1 circumstance bonus to saving throws
   against emotion effects. If you roll a success on a saving throw against an emotion
   effect, you get a critical success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.Emotion.Note,
+  which the pack doesn''t carry.'
 foundryID: AogIo1gHLdz7DyHx
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Forlorn
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: emotion
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Forlorn
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: emotion

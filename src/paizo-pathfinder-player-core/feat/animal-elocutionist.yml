@@ -10,5 +10,20 @@ description: You hear animal sounds as conversations instead of unintelligent no
   use the Diplomacy skill with animals. In most cases, wild animals will give you
   time to make your case. You gain a +1 circumstance bonus to [Make an Impression](omen://action/make-an-impression?source=paizo-pathfinder-player-core)
   on animals.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: evwCimenReYvcruj
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Animal Elocutionist
+    slug: diplomacy
+    target:
+      description:
+      - skill:
+          '_0':
+            diplomacy: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the target has the animal trait; Make An Impression

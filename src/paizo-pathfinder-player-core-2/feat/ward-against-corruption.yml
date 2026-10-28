@@ -11,7 +11,20 @@ description: Your soul is warded against the power of undeath and plague, as wel
   or sahkils. This bonus increases to +2 against an undead or sahkil's death effect
   or disease.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/ward-against-corruption?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, AdjustModifier].'
+unsupportedReason: 'AdjustModifier at position 2: Only an upgrade or downgrade to
+  a fixed number is translated.'
 foundryID: NFsQOa3ynthYLVj6
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Ward Against Corruption
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the effect has the death trait or the effect has the disease trait
+      or the source is mode undead or the source is trait sakhil

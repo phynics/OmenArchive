@@ -10,5 +10,101 @@ description: Your blood sings with the liberating power of the azatas, living em
   of freedom from the wild realm of Elysium. You gain a +1 circumstance bonus to [Escape](omen://action/escape?source=paizo-pathfinder-player-core).
   When you roll a critical failure on a check to Escape, you get a failure instead,
   and when you roll a success, you get a critical success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: eSP2938INGUG9b3w
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Musetouched
+    slug: attack-acrobatics-athletics
+    target:
+      description:
+      - anyAttack: {}
+      - skill:
+          '_0':
+            acrobatics: {}
+      - skill:
+          '_0':
+            athletics: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Escape
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Musetouched
+    slug: degree
+    target:
+      description:
+      - anyAttack: {}
+    text: When you roll a success on an attack roll, the result is one degree better.
+      When you roll a critical failure on an attack roll, the result is one degree
+      better.
+    condition: Escape
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Musetouched
+    slug: note
+    target:
+      description:
+      - anyAttack: {}
+    text: When you roll a critical failure on a check to Escape, you get a failure
+      instead, and when you roll a success, you get a critical success instead.
+    condition: Escape
+- key: annotation-4
+  effect: core/add-play-note
+  inputs:
+    source: Musetouched
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    text: When you roll a success on an Athletics check, the result is one degree
+      better. When you roll a critical failure on an Athletics check, the result is
+      one degree better.
+    condition: Escape
+- key: annotation-5
+  effect: core/add-play-note
+  inputs:
+    source: Musetouched
+    slug: note
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    text: When you roll a critical failure on a check to Escape, you get a failure
+      instead, and when you roll a success, you get a critical success instead.
+    condition: Escape
+- key: annotation-6
+  effect: core/add-play-note
+  inputs:
+    source: Musetouched
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            acrobatics: {}
+    text: When you roll a success on an Acrobatics check, the result is one degree
+      better. When you roll a critical failure on an Acrobatics check, the result
+      is one degree better.
+    condition: Escape
+- key: annotation-7
+  effect: core/add-play-note
+  inputs:
+    source: Musetouched
+    slug: note
+    target:
+      description:
+      - skill:
+          '_0':
+            acrobatics: {}
+    text: When you roll a critical failure on a check to Escape, you get a failure
+      instead, and when you roll a success, you get a critical success instead.
+    condition: Escape

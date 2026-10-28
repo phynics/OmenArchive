@@ -14,7 +14,17 @@ description: The spells of those you have [Demoralize](omen://action/demoralize?
   24 hours you gain a +1 circumstance bonus to saving throws against that creature's
   spells.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/terrifying-resistance?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: iDimfGmQHacwxeh2
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Terrifying Resistance
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: demoralized by you; item type spell

@@ -8,5 +8,30 @@ traits:
 description: Your spirit has endured many challenges over its long existence. You
   gain a +1 circumstance bonus to saves against emotion effects. If you roll a success
   on a saving throw against an emotion effect, you get a critical success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.Emotion.Note,
+  which the pack doesn''t carry.'
 foundryID: 1RygexXEjCKuR3Ps
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Undaunted
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: emotion
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Undaunted
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: emotion

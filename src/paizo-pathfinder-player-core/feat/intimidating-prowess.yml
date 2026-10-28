@@ -16,5 +16,35 @@ description: In situations where you can physically menace the target when you [
   gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty
   for not sharing a language. If your Strength modifier is +5 or higher and you are
   a master in Intimidation, this bonus increases to +2.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: XFJiGllNZp8Xebda
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Intimidating Prowess
+    slug: intimidating-prowess
+    target:
+      description:
+      - skill:
+          '_0':
+            intimidation: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the target is physically menaced; Coerce or Demoralize
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: Intimidating Prowess
+    slug: intimidating-prowess
+    target:
+      description:
+      - skill:
+          '_0':
+            intimidation: {}
+    amount: 2
+    bonusType: untyped
+    mode: upgrade
+    condition: ''
+    requires: \[[(and (gte $.attributes.str 5) (gte $.skills.intimidation.rank 3))]]

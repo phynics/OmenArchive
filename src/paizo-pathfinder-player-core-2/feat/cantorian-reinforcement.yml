@@ -13,7 +13,15 @@ description: The life energy that helped create the first hobgoblins is particul
   fighter class feature\), if you roll a critical failure on the save you get a failure
   instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/cantorian-reinforcement?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [AdjustDegreeOfSuccess].'
 foundryID: 0qshtd4mBcjFAxA8
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Cantorian Reinforcement
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: the effect has the disease trait or the effect has the poison trait

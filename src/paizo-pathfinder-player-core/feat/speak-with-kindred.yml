@@ -11,5 +11,20 @@ description: You have a connection with creatures that share your physiology. Yo
   of your kind. Generally, fungus leshies get this bonus with mushrooms and fungi;
   gourd leshies with gourds, melons, and similar fruiting plants; leaf leshies with
   deciduous trees; and vine leshies with vines and climbing plants.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: KYKK1vLqGIxXH5Tu
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Speak with Kindred
+    slug: diplomacy
+    target:
+      description:
+      - skill:
+          '_0':
+            diplomacy: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: speak with kindred

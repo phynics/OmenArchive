@@ -13,5 +13,18 @@ description: You make a telegraphed attack to learn about your foe. Make a melee
   about the target. On a critical hit, you gain a +2 circumstance bonus to the check
   to Recall Knowledge. The target is temporarily immune to Combat Assessment for 1
   day.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: 5FyvwI24mnROzh61
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Combat Assessment
+    slug: combat-assessment
+    target:
+      description:
+      - anySkill: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Recall Knowledge; critical assessment

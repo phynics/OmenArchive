@@ -9,7 +9,19 @@ description: You've mastered the art of composure, even in the face of fear. You
   a +1 circumstance bonus to saves against effects with the fear trait and a +2 circumstance
   bonus to your Will DC against Intimidation skill actions, such as [Demoralize](omen://action/demoralize?source=paizo-pathfinder-player-core).
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/stone-face?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, FlatModifier].'
+unsupportedReason: 'FlatModifier at position 2: The selector will-dc is not a roll
+  the sheet shows.'
 foundryID: Nn80wBZYJZxcuKsJ
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Stone Face
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the effect has the fear trait

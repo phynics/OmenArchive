@@ -12,5 +12,32 @@ description: Your mother was a sea hag, granting you one sea-green or blue eye. 
   you get a critical success instead. If you end your turn in water without having
   succeeded at a Swim action that round, you don't sink \(but you might still be moved
   by the current\).
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: jEJ6AWCctirMT7p0
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Brine May
+    slug: note
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    text: When you roll a success on an Athletics check to swim, you get a critical
+      success instead.
+    condition: Swim
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Brine May
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    text: When you roll a success on an Athletics check, the result is one degree
+      better.
+    condition: Swim

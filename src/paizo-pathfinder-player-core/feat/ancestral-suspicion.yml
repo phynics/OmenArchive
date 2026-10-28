@@ -15,5 +15,42 @@ description: Long-lived elves have seen civilizations rise and fall, often at th
   when trying to determine if a creature is under the influence of such an effect.
   When you roll a success on a saving throw against such an effect, you get a critical
   success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: scNrNhnGTgPIzoj7
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Ancestral Suspicion
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: inflicts controlled
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: Ancestral Suspicion
+    slug: perception
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Sense Motive; ancestral suspicion
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Ancestral Suspicion
+    slug: note
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw against an effect that would make
+      you controlled, you get a critical success instead.
+    condition: inflicts controlled

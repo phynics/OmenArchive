@@ -9,7 +9,20 @@ description: Your mastery over your body is perfect enough to hold back the rava
   of time. You cease aging, though you still die when your time is up. In addition,
   you gain a +2 status bonus to Fortitude and Will saving throws.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/peerless-form?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: GsXKThvUN2Mi9eNk
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Peerless Form
+    slug: fortitude-will
+    target:
+      description:
+      - savingThrow:
+          '_0': fortitude
+      - savingThrow:
+          '_0': will
+    amount: 2
+    bonusType: status
+    mode: add
+    condition: ''

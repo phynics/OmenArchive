@@ -15,5 +15,42 @@ description: 'You know that the greatest treasures often look like refuse. You g
   using Society or Survival at the same time while you Subsist, without spending any
   additional days of downtime. You also gain a +1 circumstance bonus to this check.'
 specialText: If you have the irongut goblin heritage, increase the bonuses to +2.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: 'AdjustModifier at position 3: It names no selector. AdjustModifier
+  at position 4: It names no selector.'
 foundryID: g388ImzpenYBoiEF
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: City Scavenger
+    slug: scavenger-subsist
+    target:
+      description:
+      - skill:
+          '_0':
+            society: {}
+      - skill:
+          '_0':
+            survival: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Subsist
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: City Scavenger
+    slug: scavenger-earn
+    target:
+      description:
+      - skill:
+          '_0':
+            society: {}
+      - skill:
+          '_0':
+            survival: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Earn Income; with subsist

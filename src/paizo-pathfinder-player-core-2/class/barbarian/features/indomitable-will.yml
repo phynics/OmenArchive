@@ -14,3 +14,14 @@ rules:
   inputs:
     savingThrow: will
     proficiencyRank: 6
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Indomitable Will
+    slug: degree
+    target:
+      description:
+      - savingThrow:
+          '_0': will
+    text: When you roll a success on a Will save, the result is one degree better.
+    condition: ''

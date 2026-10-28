@@ -12,7 +12,27 @@ description: You are fastidious about keeping clean. You gain a +2 circumstance 
   fighter class feature\), if you roll a critical failure on the save you get a failure
   instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/well-groomed?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, AdjustDegreeOfSuccess].'
 foundryID: h11M3QrIHKLj2ezy
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Well-Groomed
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the effect has the disease trait
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Well-Groomed
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: the effect has the disease trait

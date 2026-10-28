@@ -78,7 +78,10 @@ Rules refer to it with the alias `core`, declared in a publication's `mechanicsM
 - <doc:core-add-lore-skill-increase>
 - <doc:core-add-membership>
 - <doc:core-add-placeholder>
+- <doc:core-add-play-modifier>
+- <doc:core-add-play-note>
 - <doc:core-add-resistance-2>
+- <doc:core-add-resource-pool>
 - <doc:core-add-roll-modifier-2>
 - <doc:core-add-saving-throw>
 - <doc:core-add-sense>

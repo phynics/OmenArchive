@@ -12,7 +12,18 @@ description: You are adept at dodging roots, foliage, and other jungle obstacles
   and when you roll a success at one of these Acrobatics checks, you get a critical
   success instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/jungle-strider?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [AdjustDegreeOfSuccess].'
 foundryID: M41PGiFlLE2tByUL
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Jungle Strider
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            acrobatics: {}
+    text: When you roll a success on an Acrobatics check, the result is one degree
+      better.
+    condition: Balance; terrain foliage or terrain forest

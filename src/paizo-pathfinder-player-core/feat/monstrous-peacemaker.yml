@@ -13,5 +13,22 @@ description: Your dual human and orc nature has given you a unique perspective, 
   goblins, kobolds, and orcs\). You also gain this bonus on Perception checks to [Sense
   the Motives](omen://action/sense-motive?source=paizo-pathfinder-player-core) of
   such creatures.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: ZZzgqFTOtUgnzSLZ
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Monstrous Peacemaker
+    slug: diplomacy-perception
+    target:
+      description:
+      - skill:
+          '_0':
+            diplomacy: {}
+      - savingThrow:
+          '_0': perception
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: monstrous peacemaker

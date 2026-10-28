@@ -9,5 +9,27 @@ description: You are easily able to ward off attempts to play on your fears and 
   When you roll a success on a saving throw against an emotion effect, you get a critical
   success instead. If your heritage is gutsy halfling, when you roll a critical failure
   on a saving throw against an emotion effect, you get a failure instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: cRMUYCnkkE9lSEhh
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Irrepressible (Halfling)
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: the effect has the emotion trait
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Irrepressible (Halfling)
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a critical failure on a saving throw, the result is one degree
+      better.
+    condition: the effect has the emotion trait; you heritage gutsy halfling

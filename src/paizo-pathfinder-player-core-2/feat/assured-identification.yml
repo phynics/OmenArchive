@@ -18,7 +18,18 @@ description: You rarely misidentify an item. When using Arcana, Nature, Occultis
   failure instead. If you would misidentify a cursed item because you roll a success
   but not a critical success, you simply can't identify it instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/assured-identification?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [AdjustDegreeOfSuccess, Note].'
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.AssuredIdentification.CursedItem,
+  which the pack doesn''t carry.'
 foundryID: XmF4q4rzKWg55vG4
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Assured Identification
+    slug: degree
+    target:
+      description:
+      - anySkill: {}
+    text: When you roll a critical failure on a skill check, the result is one degree
+      better.
+    condition: Identify Magic

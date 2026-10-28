@@ -25,7 +25,41 @@ description: 'You''re adept at noticing the tells of a liar—sweat, flushing, a
   If you would gain your Pursue a Lead investigation bonus to any of the above checks,
   that bonus increases by 1 instead of you gaining the +1 bonus listed.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/lie-detector?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, FlatModifier].'
 foundryID: I10dkdvL6kAnqZWA
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Lie Detector
+    slug: perception
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Sense Motive
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: Lie Detector
+    slug: deception-diplomacy-intimidation-performance
+    target:
+      description:
+      - skill:
+          '_0':
+            deception: {}
+      - skill:
+          '_0':
+            diplomacy: {}
+      - skill:
+          '_0':
+            intimidation: {}
+      - skill:
+          '_0':
+            performance: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: known liar

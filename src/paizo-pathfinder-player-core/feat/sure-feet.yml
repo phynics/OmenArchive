@@ -10,5 +10,35 @@ description: Whether keeping your balance or climbing, your feet easily find pur
   or an Athletics check to [Climb](omen://action/climb?source=paizo-pathfinder-player-core),
   you get a critical success instead. You're not [Off-Guard](omen://condition/off-guard?source=paizo-pathfinder-player-core)
   when you attempt to Balance or Climb.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: 'Note at position 1: The text is the localization key PF2E.SpecificRule.Halfling.SureFeet.BalanceNote,
+  which the pack doesn''t carry. Note at position 2: The text is the localization
+  key PF2E.SpecificRule.Halfling.SureFeet.ClimbNote, which the pack doesn''t carry.'
 foundryID: ehvHedIwPcxq9cRt
+rules:
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Sure Feet
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            acrobatics: {}
+    text: When you roll a success on an Acrobatics check, the result is one degree
+      better.
+    condition: Balance
+- key: annotation-4
+  effect: core/add-play-note
+  inputs:
+    source: Sure Feet
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    text: When you roll a success on an Athletics check, the result is one degree
+      better.
+    condition: Climb

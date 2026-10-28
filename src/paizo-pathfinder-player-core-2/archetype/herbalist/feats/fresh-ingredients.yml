@@ -16,7 +16,33 @@ description: It is amazing the difference fresh herbs can make. When using [Natu
   the +2 circumstance bonus from having fresh ingredients, even if not in wilderness.
   If you do this in the wilderness, you gain a +4 circumstance bonus instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/fresh-ingredients?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, FlatModifier].'
 foundryID: cmuvvPJvt2R16vGe
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Fresh Ingredients
+    slug: fresh-herbs-wild
+    target:
+      description:
+      - skill:
+          '_0':
+            nature: {}
+    amount: 4
+    bonusType: circumstance
+    mode: add
+    condition: Treat Wounds; natural medicine; terrain wilderness
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: Fresh Ingredients
+    slug: fresh-herbs
+    target:
+      description:
+      - skill:
+          '_0':
+            nature: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Treat Wounds; natural medicine

@@ -11,5 +11,17 @@ description: Your powerful ego makes it harder for others to order you around. I
   on a check to [Coerce](omen://action/coerce?source=paizo-pathfinder-player-core)
   you using Intimidation, it gets a critical failure instead \(so it can't try to
   Coerce you again for 1 week\).
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: RmiMUZlae6yGUyXY
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Haughty Obstinacy
+    slug: degree
+    target:
+      description:
+      - savingThrow:
+          '_0': will
+    text: When you roll a success on a Will save, the result is one degree better.
+    condition: mental; inflicts controlled

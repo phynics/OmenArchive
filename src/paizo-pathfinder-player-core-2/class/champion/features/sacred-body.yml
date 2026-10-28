@@ -16,3 +16,15 @@ rules:
   inputs:
     savingThrow: fortitude
     proficiencyRank: 6
+- key: annotation-1
+  effect: core/add-play-note
+  level: 9
+  inputs:
+    source: Sacred Body
+    slug: degree
+    target:
+      description:
+      - savingThrow:
+          '_0': fortitude
+    text: When you roll a success on a Fortitude save, the result is one degree better.
+    condition: ''

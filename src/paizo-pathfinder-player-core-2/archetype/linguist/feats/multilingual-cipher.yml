@@ -18,7 +18,28 @@ description: 'You use multiple languages to create and break codes. You gain a +
   If another creature attempts to Decipher Writing you encoded, they take a -2 circumstance
   penalty unless they speak all the languages you used when you created the writing.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/multilingual-cipher?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: B4nuabUvA1rk7Hej
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Multilingual Cipher
+    slug: arcana-occultism-religion-society
+    target:
+      description:
+      - skill:
+          '_0':
+            arcana: {}
+      - skill:
+          '_0':
+            occultism: {}
+      - skill:
+          '_0':
+            religion: {}
+      - skill:
+          '_0':
+            society: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Decipher Writing

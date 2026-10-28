@@ -11,7 +11,19 @@ prerequisites:
 description: You bully foes across the battlefield. While raging, you gain a +2 circumstance
   bonus to Athletics checks for attack actions.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/furious-bully?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: cA1IIy6UEsgETXiX
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Furious Bully
+    slug: athletics
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: you effect rage; attack

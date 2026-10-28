@@ -10,5 +10,18 @@ prerequisites:
   hasSkillProficiency: {skill: stealth, proficiency: master}
 description: It's almost impossible to spot you. When you roll a failure on a [Sneak](omen://action/sneak?source=paizo-pathfinder-player-core)
   action, you get a success instead. You can still critically fail.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: 2Nu4ZdKQM8hx8x5D
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Sneak Adept
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            stealth: {}
+    text: When you roll a failure on a Stealth check, you get a success instead.
+    condition: Sneak

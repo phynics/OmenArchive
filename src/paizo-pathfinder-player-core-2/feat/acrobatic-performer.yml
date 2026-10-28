@@ -15,7 +15,21 @@ description: You're an incredible acrobat, evoking wonder and enrapturing audien
   action. If you are trained in both Acrobatics and Performance, you gain a +1 circumstances
   bonus on Acrobatics checks made to Perform.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/acrobatic-performer?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: f0faBEUPtspdutKx
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Acrobatic Performer
+    slug: acrobatics
+    target:
+      description:
+      - skill:
+          '_0':
+            acrobatics: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: Perform
+    requires: \[[(and (gte $.skills.acrobatics.rank 1) (gte $.skills.performance.rank
+      1))]]

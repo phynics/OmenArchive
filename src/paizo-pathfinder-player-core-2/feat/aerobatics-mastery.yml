@@ -22,7 +22,19 @@ description: 'You move with grace in flight and can perform amazing aerial stunt
   move farther than your [Fly](omen://action/fly?source=paizo-pathfinder-player-core)
   Speed.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/aerobatics-mastery?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: pKnX7MGZayqZui0Z
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Aerobatics Mastery
+    slug: acrobatics
+    target:
+      description:
+      - skill:
+          '_0':
+            acrobatics: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Maneuver In Flight

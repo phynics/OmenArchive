@@ -23,7 +23,17 @@ description: 'You have refined your palate and have a discerning sense of taste 
   to identify something, and if the taste would provide relevant additional information
   \(at the GM''s discretion\), you gain a +2 circumstance bonus to your check.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/supertaster?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: fOIUmDGa9gkeCHA0
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Supertaster
+    slug: skill-check
+    target:
+      description:
+      - anySkill: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: taste; Recall Knowledge or Investigate

@@ -16,5 +16,31 @@ description: 'Your enhanced fey connection \(either through your blood or via pr
   to the check. If you fail, you can engage in 1 minute of conversation and attempt
   a new check at the end of that time rather than accepting the failure or critical
   failure result.'
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: FWCULKnVXhSPL0ST
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Fey Fellowship
+    slug: perception
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: the target has the fey trait
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: Fey Fellowship
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: the source is trait fey

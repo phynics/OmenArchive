@@ -23,5 +23,18 @@ description: 'Learning spells comes easily to you. When you succeed at Learning 
   with the tradition''s associated skill, but instead of gaining money, you choose
   a spell available to you to learn and gain a discount on learning it, learning it
   for free if your earned income equals or exceeds its cost.'
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.MagicalShorthand.Note,
+  which the pack doesn''t carry.'
 foundryID: v7Bt6hjmzYnLFLeG
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Magical Shorthand
+    slug: degree
+    target:
+      description:
+      - anySkill: {}
+    text: When you roll a success on a skill check, the result is one degree better.
+    condition: Learn A Spell

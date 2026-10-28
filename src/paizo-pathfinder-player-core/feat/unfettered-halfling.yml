@@ -14,5 +14,36 @@ description: You were either pressed into indentured servitude or shackled in a 
   condition on you, you get a critical success instead. Whenever a creature rolls
   a failure on a check to [Grapple](omen://action/grapple?source=paizo-pathfinder-player-core)
   you, it gets a critical failure instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: uuD8Z9jUG61GmenX
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Unfettered Halfling
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: inflicts grabbed or inflicts immobilized or inflicts restrained
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Unfettered Halfling
+    slug: degree
+    target:
+      description:
+      - anySkill: {}
+    text: When you roll a success on a skill check, the result is one degree better.
+    condition: Escape
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Unfettered Halfling
+    slug: degree
+    target:
+      description:
+      - anyAttack: {}
+    text: When you roll a success on an attack roll, the result is one degree better.
+    condition: Escape

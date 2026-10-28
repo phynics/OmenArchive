@@ -10,7 +10,18 @@ description: You're always on the lookout for supplies and valuables. You gain a
   search for within 30 feet with a [Seek](omen://action/seek?source=paizo-pathfinder-player-core)
   action.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/scavengers-search?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: zaGD9Og2p8Opa0oJ
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Scavenger's Search
+    slug: perception
+    target:
+      description:
+      - savingThrow:
+          '_0': perception
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: item tag object

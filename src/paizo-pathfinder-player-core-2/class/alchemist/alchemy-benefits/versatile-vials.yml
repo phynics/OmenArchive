@@ -21,9 +21,12 @@ description: 'You know how to prepare fast-acting chemicals into versatile vials
   You can store all your versatile vials within your [Alchemist''s Toolkit](omen://item/alchemists-toolkit?source=paizo-pathfinder-player-core),
   with no increase to its Bulk. Though versatile vials are physical objects, they
   can''t be duplicated or preserved in any way.'
-mechanicsScope: mixed
-unsupportedReason: 'Versatile Vials needs a 2 + Intelligence maximum, two-vial replenishment
-  per 10 exploration minutes, expenditure, daily expiry and highest eligible item
-  tier. Static item grants and daily crafting budgets cannot represent this resource.
-  Follow-up: versatile-vial lifecycle.'
+mechanicsScope: builder
 foundryID: PBQh0amk1FlomV0r
+rules:
+- key: versatile-vials-pool
+  effect: core/add-resource-pool
+  inputs:
+    name: versatile-vials
+    maximum: \[[(add 2 $.attributes.int)]]
+    itemLevel: \[[$.level]]

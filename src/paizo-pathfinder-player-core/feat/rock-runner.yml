@@ -12,5 +12,21 @@ description: Your innate connection to stone makes you adept at moving across un
   narrow surfaces or uneven ground made of stone or earth, you aren't [Off-Guard](omen://condition/off-guard?source=paizo-pathfinder-player-core),
   and when you roll a success at one of these Acrobatics checks, you get a critical
   success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.Dwarf.RockRunner.Note,
+  which the pack doesn''t carry.'
 foundryID: NIUSBGMmdqhkYtmo
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Rock Runner
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            acrobatics: {}
+    text: When you roll a success on an Acrobatics check, the result is one degree
+      better.
+    condition: Balance; terrain stone or terrain earth

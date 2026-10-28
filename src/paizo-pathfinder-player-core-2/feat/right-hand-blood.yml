@@ -13,7 +13,20 @@ description: It's said that the flesh of the right side of a hyena can heal dise
   in either case, you don't need a healer's toolkit, and you gain a +1 item bonus
   to your check. Blood from your left side causes the check to critically fail automatically.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/right-hand-blood?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: hrITlxkBqHvaiiRS
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Right-Hand Blood
+    slug: medicine
+    target:
+      description:
+      - skill:
+          '_0':
+            medicine: {}
+    amount: 1
+    bonusType: item
+    mode: add
+    condition: right hand blood; Treat Wounds or Treat Disease or Administer First
+      Aid

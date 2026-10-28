@@ -17,3 +17,18 @@ description: You capitalize on the distraction provided by an ally. You [Sneak](
   foe succeeds, you can make a melee Strike against that foe at the end of your Sneak.
 mechanicsScope: mixed
 foundryID: eoDDjIGAA67Z7rQt
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Underhanded Assault
+    slug: stealth
+    target:
+      description:
+      - skill:
+          '_0':
+            stealth: {}
+    amount: -2
+    bonusType: untyped
+    mode: add
+    condition: Sneak; underhanded assault

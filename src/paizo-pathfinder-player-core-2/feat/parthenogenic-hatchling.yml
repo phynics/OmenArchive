@@ -17,7 +17,27 @@ description: 'You were hatched from an unfertilized egg during hard times for yo
   rather than every hour and every day.'
 specialText: You can select this feat only at 1st level.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/parthenogenic-hatchling?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [AdjustDegreeOfSuccess, FlatModifier].'
 foundryID: U12Sh43QuY85Prdm
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Parthenogenic Hatchling
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: the effect has the disease trait
+- key: annotation-2
+  effect: core/add-play-modifier
+  inputs:
+    source: Parthenogenic Hatchling
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the effect has the disease trait

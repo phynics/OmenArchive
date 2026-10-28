@@ -12,5 +12,19 @@ prerequisites:
 - text: Specialty Crafting
   hasResourceWithName: specialty crafting
 description: ''
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: PiUe3tpv7UVtnfvS
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Impeccable Crafting
+    slug: note
+    target:
+      description:
+      - skill:
+          '_0':
+            crafting: {}
+    text: Whenever you roll a success at a Crafting check to make an item of the type
+      you chose with Specialty Crafting, you get a critical success instead.
+    condition: Craft; speciality

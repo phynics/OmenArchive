@@ -13,7 +13,27 @@ description: Your unusual physiology has developed in a way that makes it diffic
   fighter class feature\), if you roll a critical failure on the save you get a failure
   instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/necromantic-physiology?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, AdjustDegreeOfSuccess].'
 foundryID: GgerQCCsGibaGWq0
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Necromantic Physiology
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: the effect has the disease trait
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Necromantic Physiology
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: the effect has the disease trait

@@ -9,5 +9,17 @@ description: You have developed a soul-deep bond with your comrades and maintain
   even greater degree of cooperation with them. If you are at least an expert in the
   skill you are [Aiding](omen://action/aid?source=paizo-pathfinder-player-core), when
   you roll a failure or critical failure to Aid a skill check, you get a success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: Z2EiYMtGoNnwW6Tk
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Cooperative Soul
+    slug: degree
+    target:
+      description:
+      - anySkill: {}
+    text: When you roll a failure on a skill check, you get a success instead. When
+      you roll a critical failure on a skill check, you get a success instead.
+    condition: Aid; proficiency expert or proficiency master or proficiency legendary

@@ -10,5 +10,40 @@ description: You've heard the Call, and by resisting it, you've developed a bulw
   saving throws against mental effects. If you roll a success on your saving throw
   against a mental effect that would make you [Controlled](omen://condition/controlled?source=paizo-pathfinder-player-core),
   you get a critical success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: 2vlQ09QIBli5u9Gz
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Called
+    slug: will
+    target:
+      description:
+      - savingThrow:
+          '_0': will
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: mental
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Called
+    slug: note
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on an saving throw against a mental effect that
+      would make you controlled, you get a critical success instead.
+    condition: mental; inflicts controlled
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Called
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+    condition: mental; inflicts controlled

@@ -10,7 +10,15 @@ description: You have a keen sense for avoiding spurious lines of inquiry. When 
   related to a question about one of your active investigations, you get a failure
   instead.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/eliminate-red-herrings?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [AdjustDegreeOfSuccess].'
 foundryID: wNr02jsG5nRF23YO
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Eliminate Red Herrings
+    slug: degree
+    target:
+      description:
+      - anySkill: {}
+    text: When you roll a critical failure on a skill check, you get a failure instead.
+    condition: pursue a lead; Recall Knowledge

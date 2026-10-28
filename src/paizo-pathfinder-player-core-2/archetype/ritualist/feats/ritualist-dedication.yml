@@ -24,7 +24,17 @@ description: 'You have begun to master the difficult art of casting rituals. You
 
   [Ritualist](omen://archetype/ritualist?source=paizo-pathfinder-player-core-2)'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/ritualist-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: kU4K9jj9qnktoAaQ
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Ritualist Dedication
+    slug: skill-check
+    target:
+      description:
+      - anySkill: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: primaryRitualCheck

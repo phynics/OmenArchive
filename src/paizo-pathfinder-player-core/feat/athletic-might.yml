@@ -9,5 +9,32 @@ description: Surviving in hostile terrain has given you a great talent for mobil
   Whenever you roll a success on an Athletics check to [Climb](omen://action/climb?source=paizo-pathfinder-player-core)
   or [Swim](omen://action/swim?source=paizo-pathfinder-player-core), you get a critical
   success instead.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: Wwr8VilSybQgVtin
+rules:
+- key: annotation-1
+  effect: core/add-play-note
+  inputs:
+    source: Athletic Might
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    text: When you roll a success on an Athletics check, the result is one degree
+      better.
+    condition: Climb or Swim
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Athletic Might
+    slug: note
+    target:
+      description:
+      - skill:
+          '_0':
+            athletics: {}
+    text: Whenever you roll a success on an Athletics check to Climb or Swim, you
+      get a critical success instead.
+    condition: Climb or Swim

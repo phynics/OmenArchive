@@ -14,7 +14,17 @@ prerequisites:
 description: Few can sway you from your goals while the fury of combat fills you.
   While raging, you gain a +2 status bonus to saving throws against emotion effects.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/draconic-arrogance?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier].'
 foundryID: EOmTf95t03y4IGdp
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Draconic Arrogance
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 2
+    bonusType: status
+    mode: add
+    condition: you effect rage; the effect has the emotion trait

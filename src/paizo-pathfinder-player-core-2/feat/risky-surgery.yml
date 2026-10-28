@@ -17,7 +17,33 @@ description: 'Your surgery can bring a patient back from the brink of death, but
   If you do, you gain a +2 circumstance bonus to your Medicine check to Treat Wounds,
   and if you roll a success, you get a critical success instead.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/risky-surgery?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, Note, AdjustDegreeOfSuccess].'
+unsupportedReason: 'Note at position 2: The text is the localization key PF2E.SpecificRule.Feat.RiskySurgery.Note,
+  which the pack doesn''t carry.'
 foundryID: bkZgWFSFV4cAf5Ot
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Risky Surgery
+    slug: medicine
+    target:
+      description:
+      - skill:
+          '_0':
+            medicine: {}
+    amount: 2
+    bonusType: circumstance
+    mode: add
+    condition: Treat Wounds; risky surgery
+- key: annotation-3
+  effect: core/add-play-note
+  inputs:
+    source: Risky Surgery
+    slug: degree
+    target:
+      description:
+      - skill:
+          '_0':
+            medicine: {}
+    text: When you roll a success on a Medicine check, the result is one degree better.
+    condition: risky surgery; Treat Wounds

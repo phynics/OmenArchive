@@ -17,7 +17,18 @@ description: 'As kin to dragonkind, you project unflappable confidence \(that co
   a foe of your level or lower, you gain a +1 circumstance bonus to the Intimidation
   check.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/dragons-presence?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, AdjustDegreeOfSuccess].'
+unsupportedReason: 'FlatModifier at position 1: The predicate uses lte, which is not
+  translated.'
 foundryID: SPyvwsiSghySIEw2
+rules:
+- key: annotation-2
+  effect: core/add-play-note
+  inputs:
+    source: Dragon's Presence
+    slug: degree
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    text: When you roll a success on a saving throw, the result is one degree better.
+      When you roll a failure on a saving throw, the result is one degree worse.
+    condition: the effect has the fear trait

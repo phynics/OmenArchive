@@ -10,5 +10,18 @@ prerequisites:
   hasSkillProficiency: {skill: occultism, proficiency: expert}
 description: Your study of occult practices has shown you how to best defend against
   them. You gain a +1 circumstance bonus to all saving throws against occult effects.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: zPJ2NyMv97AfkN3P
+rules:
+- key: annotation-1
+  effect: core/add-play-modifier
+  inputs:
+    source: Occult Resistance
+    slug: saving-throw
+    target:
+      description:
+      - anyNonPerceptionSavingThrow: {}
+    amount: 1
+    bonusType: circumstance
+    mode: add
+    condition: the effect has the occult trait
