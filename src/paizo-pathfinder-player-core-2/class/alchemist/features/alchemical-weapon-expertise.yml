@@ -15,18 +15,15 @@ rules:
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
     proficiencyRank: 4
-    selfScaling: false
 - key: alchemical-weapons-unarmed
   effect: core/add-weapon-proficiency
   level: 7
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
     proficiencyRank: 4
-    selfScaling: false
 - key: alchemical-weapons-bomb
   effect: core/add-weapon-proficiency
   level: 7
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: bomb, weaponKind: any}
     proficiencyRank: 4
-    selfScaling: false

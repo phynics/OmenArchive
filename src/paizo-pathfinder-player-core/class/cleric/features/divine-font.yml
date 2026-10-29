@@ -54,21 +54,21 @@ rules:
   inputs:
     sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spellId: {choice: $.cleric.divine-font}
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: perDay, uses: 4}
+    rankPolicy: cantrip
+    castFrequency: {perDay: 4}
 - key: grant-spell-2
   effect: spellcasting/grant-spell
   level: 5
   inputs:
     sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spellId: {choice: $.cleric.divine-font}
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: cantrip
+    castFrequency: {perDay: 1}
 - key: grant-spell-3
   effect: spellcasting/grant-spell
   level: 15
   inputs:
     sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
     spellId: {choice: $.cleric.divine-font}
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: cantrip
+    castFrequency: {perDay: 1}

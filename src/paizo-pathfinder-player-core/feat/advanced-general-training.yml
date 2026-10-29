@@ -5,10 +5,7 @@ rarity: common
 type: ancestry
 traits:
 - human
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: Over the long course of your adventuring life, your adaptability has
   let you pick up numerous useful abilities. You gain a general feat of 7th level
   or lower. You must meet the feat's prerequisites.
@@ -21,13 +18,13 @@ rules:
   choice:
     name: $.feat.advanced-general-training.feats
     label: General Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {maxLevel: 7}
         - {trait: systemTrait-general}
-      type: core/feat-id
 - key: grant-item-1
   effect: core/add-feat@2
   inputs:

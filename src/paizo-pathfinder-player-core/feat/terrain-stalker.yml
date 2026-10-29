@@ -9,10 +9,7 @@ traits:
 prerequisites:
 - text: trained in Stealth
   hasSkillProficiency: {skill: stealth, proficiency: trained}
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: 'Select one type of difficult terrain from the following list: rubble,
   snow, or underbrush. While [Undetected](omen://condition/undetected?source=paizo-pathfinder-player-core)
   by all non-allies in that type of terrain, you can [Sneak](omen://action/sneak?source=paizo-pathfinder-player-core)
@@ -33,10 +30,7 @@ rules:
     name: $.feat.terrain-stalker.terrains
     label: Terrain Stalker Terrain
     type: core/string
-    cases:
-    - {value: rubble}
-    - {value: snow}
-    - {value: underbrush}
+    cases: [rubble, snow, underbrush]
 - key: add-terrain-stalker-1
   effect: core/add-terrain-stalker
   inputs:

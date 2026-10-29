@@ -42,11 +42,7 @@ rules:
     name: $.sorcerer.bloodline.draconic
     label: Draconic tradition
     type: core/string
-    cases:
-    - {value: arcane}
-    - {value: divine}
-    - {value: occult}
-    - {value: primal}
+    cases: [arcane, divine, occult, primal]
 - key: configure-source-1
   effect: spellcasting/configure-source
   prerequisites:
@@ -66,7 +62,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    skill: {kind: arcana}
+    skill: arcana
     proficiencyCap: 2
 - key: add-skill-increase-2
   effect: core/add-skill-increase
@@ -75,7 +71,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: configure-source-2
   effect: spellcasting/configure-source
@@ -98,8 +94,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.flurry-of-claws'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-1
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -233,7 +229,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-4
   effect: core/add-skill-increase
@@ -242,7 +238,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    skill: {kind: religion}
+    skill: religion
     proficiencyCap: 2
 - key: configure-source-4
   effect: spellcasting/configure-source
@@ -265,8 +261,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.flurry-of-claws'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-2
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -400,7 +396,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-6
   effect: core/add-skill-increase
@@ -409,7 +405,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    skill: {kind: occultism}
+    skill: occultism
     proficiencyCap: 2
 - key: configure-source-6
   effect: spellcasting/configure-source
@@ -432,8 +428,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.flurry-of-claws'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-3
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -567,7 +563,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-8
   effect: core/add-skill-increase
@@ -576,7 +572,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-8
   effect: spellcasting/configure-source
@@ -599,8 +595,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.flurry-of-claws'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-4
   effect: spellcasting/add-focus-point
   prerequisites:

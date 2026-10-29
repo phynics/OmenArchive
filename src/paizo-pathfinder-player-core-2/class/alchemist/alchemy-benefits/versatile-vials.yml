@@ -28,5 +28,5 @@ rules:
   effect: core/add-resource-pool
   inputs:
     name: versatile-vials
-    maximum: \[[(add 2 $.attributes.int)]]
-    itemLevel: \[[$.level]]
+    maximum: (add 2 $.attributes.int)
+    itemLevel: $.level

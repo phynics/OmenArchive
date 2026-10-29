@@ -18,7 +18,8 @@ rules:
   choice:
     name: $.bard.muse
     label: Muse
-    records: {filter: {pathPrefix: '@class.bard.muses'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.bard.muses'}}
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

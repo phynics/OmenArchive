@@ -19,30 +19,28 @@ rules:
     label: Weapon group
     type: core/weapon-group
     cases:
-    - {value: sword}
-    - {value: brawling}
-    - {value: flail}
-    - {value: knife}
-    - {value: club}
-    - {value: dart}
-    - {value: spear}
-    - {value: axe}
-    - {value: polearm}
-    - {value: hammer}
-    - {value: pick}
-    - {value: shield}
-    - {value: bow}
+    - sword
+    - brawling
+    - flail
+    - knife
+    - club
+    - dart
+    - spear
+    - axe
+    - polearm
+    - hammer
+    - pick
+    - shield
+    - bow
 - key: martial-proficiency-1
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-mastery-group}
     proficiencyRank: 6
     includeAdvanced: false
-    selfScaling: false
 - key: martial-proficiency-2
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-mastery-group}
     proficiencyRank: 4
     includeAdvanced: true
-    selfScaling: false

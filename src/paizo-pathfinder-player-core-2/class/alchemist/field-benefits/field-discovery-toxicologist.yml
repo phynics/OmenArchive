@@ -13,5 +13,4 @@ rules:
   level: 5
   inputs:
     type: poison
-    value: \[[(floor (divide $.level 2))]]
-    exceptions: ''
+    value: (floor (divide $.level 2))

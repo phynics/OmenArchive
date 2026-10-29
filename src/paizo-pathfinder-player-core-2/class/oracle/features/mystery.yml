@@ -49,7 +49,8 @@ rules:
   choice:
     name: $.oracle.mystery
     label: Mystery
-    records: {filter: {pathPrefix: '@class.oracle.mysteries'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.oracle.mysteries'}}
 - key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:

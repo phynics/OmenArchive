@@ -19,21 +19,18 @@ rules:
     name: $.gnome.wellspring-tradition
     label: Tradition
     type: spellcasting/tradition
-    cases:
-    - {value: arcane}
-    - {value: divine}
-    - {value: occult}
+    cases: [arcane, divine, occult]
 - key: choice-gnome-wellspring-cantrip
   choice:
     name: $.gnome.wellspring-cantrip
     label: Cantrip
+    type: spellcasting/spell-id
     records:
       filter:
         all:
         - {type: spell}
         - {spell.category: cantrip}
         - {hasChoiceTradition: $.gnome.wellspring-tradition}
-      type: spellcasting/spell-id
 - key: grant-wellspring-cantrip
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -42,25 +39,15 @@ rules:
     spellId: {choice: $.gnome.wellspring-cantrip}
     tradition: {choice: $.gnome.wellspring-tradition}
     attribute: cha
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: atWill}
+    rankPolicy: cantrip
+    castFrequency: atWill
 - key: modify-innate-sources
   effect: spellcasting/modify-innate-sources
   inputs:
     grantedBy:
-      kind: intersection
-      values:
-      - kind: single
-        value:
-          kind: hasType
-          type: feat
-      - kind: single
-        value:
-          kind: hasTrait
-          trait: systemTrait-ancestry
-      - kind: single
-        value:
-          kind: hasTrait
-          trait: ancestryTrait-gnome
+      all:
+      - {type: feat}
+      - {trait: systemTrait-ancestry}
+      - {trait: ancestryTrait-gnome}
     tradition: primal
     setTradition: {choice: $.gnome.wellspring-tradition}

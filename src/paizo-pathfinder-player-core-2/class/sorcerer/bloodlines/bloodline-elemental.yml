@@ -58,13 +58,7 @@ rules:
     name: $.sorcerer.bloodline.elemental
     label: Elemental bloodline
     type: core/string
-    cases:
-    - {value: air}
-    - {value: earth}
-    - {value: fire}
-    - {value: metal}
-    - {value: water}
-    - {value: wood}
+    cases: [air, earth, fire, metal, water, wood]
 - key: configure-source-1
   effect: spellcasting/configure-source
   prerequisites:
@@ -84,7 +78,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: air}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-2
   effect: core/add-skill-increase
@@ -93,7 +87,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: air}
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-2
   effect: spellcasting/configure-source
@@ -116,8 +110,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.elemental-toss'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-1
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -251,7 +245,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: earth}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-4
   effect: core/add-skill-increase
@@ -260,7 +254,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: earth}
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-4
   effect: spellcasting/configure-source
@@ -283,8 +277,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.elemental-toss'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-2
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -418,7 +412,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: fire}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-6
   effect: core/add-skill-increase
@@ -427,7 +421,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: fire}
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-6
   effect: spellcasting/configure-source
@@ -450,8 +444,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.elemental-toss'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-3
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -585,7 +579,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: metal}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-8
   effect: core/add-skill-increase
@@ -594,7 +588,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: metal}
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-8
   effect: spellcasting/configure-source
@@ -617,8 +611,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.elemental-toss'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-4
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -752,7 +746,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: water}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-10
   effect: core/add-skill-increase
@@ -761,7 +755,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: water}
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-10
   effect: spellcasting/configure-source
@@ -784,8 +778,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.elemental-toss'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-5
   effect: spellcasting/add-focus-point
   prerequisites:
@@ -919,7 +913,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: wood}
   inputs:
-    skill: {kind: intimidation}
+    skill: intimidation
     proficiencyCap: 2
 - key: add-skill-increase-12
   effect: core/add-skill-increase
@@ -928,7 +922,7 @@ rules:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: wood}
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-12
   effect: spellcasting/configure-source
@@ -951,8 +945,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.elemental-toss'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-6
   effect: spellcasting/add-focus-point
   prerequisites:

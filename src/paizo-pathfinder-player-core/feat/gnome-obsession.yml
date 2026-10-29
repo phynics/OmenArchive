@@ -17,14 +17,17 @@ rules:
   choice:
     name: $.feat.gnome-obsession.lore
     label: Lore
-    freeText: core/string
+    type: core/string
+    freeText: true
 - key: add-feat-1
   effect: core/add-feat@2
   inputs:
     featId: '@feat.additional-lore'
-    with: {$.feat.additional-lore.lores: {kind: choice, name: $.feat.gnome-obsession.lore}}
+    with:
+      $.feat.additional-lore.lores: {choice: $.feat.gnome-obsession.lore}
 - key: add-feat-2
   effect: core/add-feat@2
   inputs:
     featId: '@feat.assurance'
-    with: {$.feat.assurance.skills: {as: lore, kind: choice, name: $.feat.gnome-obsession.lore}}
+    with:
+      $.feat.assurance.skills: {choice: $.feat.gnome-obsession.lore, as: lore}

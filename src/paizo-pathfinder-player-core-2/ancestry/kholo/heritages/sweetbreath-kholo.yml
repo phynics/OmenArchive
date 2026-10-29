@@ -12,7 +12,7 @@ rules:
 - key: active-effect-like-1
   effect: core/add-skill-increase
   inputs:
-    skill: {kind: diplomacy}
+    skill: diplomacy
     proficiencyCap: 2
 - key: flat-modifier-1
   effect: core/add-roll-modifier@2
@@ -24,5 +24,5 @@ rules:
             diplomacy: {}
     description: 'Sweetbreath Kholo: +1 circumstance bonus to Diplomacy checks (Make
       An Impression).'
-    numeric: {literal: {amount: 1, applicability: {description: Make An Impression,
-          kind: situational}, type: circumstance}}
+    numeric: {amount: 1, applicability: {description: Make An Impression, kind: situational},
+      type: circumstance}

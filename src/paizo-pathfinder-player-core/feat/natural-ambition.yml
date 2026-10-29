@@ -16,6 +16,7 @@ rules:
   choice:
     name: $.feat.natural-ambition.feat
     label: Class Feat
+    type: core/feat-id
     records:
       filter:
         all:
@@ -28,7 +29,6 @@ rules:
             '@feat.leshy-familiar', '@feat.martial-performance', '@feat.shore-step',
             '@feat.steadying-stone', '@feat.storm-born', '@feat.versatile-performance',
             '@feat.untamed-form']}
-      type: core/feat-id
 - key: grant-item-1
   effect: core/add-feat@2
   inputs:

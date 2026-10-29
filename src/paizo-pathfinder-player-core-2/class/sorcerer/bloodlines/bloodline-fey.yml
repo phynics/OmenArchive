@@ -41,12 +41,12 @@ rules:
 - key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
-    skill: {kind: deception}
+    skill: deception
     proficiencyCap: 2
 - key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:
-    skill: {kind: nature}
+    skill: nature
     proficiencyCap: 2
 - key: configure-source-2
   effect: spellcasting/configure-source
@@ -61,8 +61,8 @@ rules:
   inputs:
     sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
     spellId: '@spell.faerie-dust'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-1
   effect: spellcasting/add-focus-point
 - key: add-known-spell-1

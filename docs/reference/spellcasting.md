@@ -49,5 +49,5 @@ A witch's spellcasting source tradition depends on their patron:
 ## Innate Spells vs. Spellcasting Sources
 
 - **Innate Spells**: Handled as inline rules using `spellcasting/grant-innate-spell` or `grant-focus-spell`. Do not model innate spells as class spellcasting slots.
-- **Cantrips**: Innate cantrips use `rankPolicy: { kind: cantrip }` and `castFrequency: { kind: atWill }`.
-- **Daily Innate Spells**: Use `{ kind: fixed, rank: N }` and `{ kind: perDay, uses: N }`.
+- **Cantrips**: Innate cantrips use `rankPolicy: cantrip` and `castFrequency: atWill`.
+- **Daily Innate Spells**: Use `rankPolicy: { fixed: N }` and `castFrequency: { perDay: N }`.

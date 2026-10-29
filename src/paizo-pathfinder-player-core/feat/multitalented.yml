@@ -18,6 +18,7 @@ rules:
   choice:
     name: $.feat.multitalented.dedication
     label: Multiclass Dedication
+    type: core/feat-id
     records:
       filter:
         all:
@@ -25,7 +26,6 @@ rules:
         - {level: 2}
         - {trait: dedication}
         - {trait: systemTrait-multiclassDedication}
-      type: core/feat-id
 - key: grant-item-1
   effect: core/add-feat@2
   inputs:

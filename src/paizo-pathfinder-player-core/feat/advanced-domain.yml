@@ -8,10 +8,7 @@ traits:
 prerequisites:
 - text: Domain Initiate
   hasResourceWithName: domain initiate
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: Your prayers have unlocked deeper secrets of your deity's domain. You
   gain an advanced domain spell from one of your domains for which you have an initial
   domain spell.
@@ -25,13 +22,14 @@ rules:
     name: $.deity.domains
     label: Deity's domains
     multiple: {min: 1, max: 4}
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}}
 - key: choice-cleric-advanced-domains
   choice:
     name: $.cleric.advanced-domains
     label: Advanced domain
-    optionsFrom: $.cleric.domains
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}, from: $.cleric.domains}
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:

@@ -20,7 +20,6 @@ details:
     category: simple
     damage: 1d4 bludgeoning
     group: club
-    reload: ''
 description: "A large, stylized symbol of an eye adorns the top of this wooden staff,
   representing the watchful eye of the divine powers. The bearer of the staff can
   guide and protect, seeing bounties and tragedies that could befall them in the future.
@@ -64,8 +63,8 @@ rules:
             survival: {}
     description: 'Staff of Providence (True): +1 item bonus to Survival checks (Sense
       Direction or Subsist).'
-    numeric: {literal: {amount: 1, applicability: {description: Sense Direction or
-            Subsist, kind: situational}, type: item}}
+    numeric: {amount: 1, applicability: {description: Sense Direction or Subsist,
+        kind: situational}, type: item}
 - key: flat-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
@@ -76,5 +75,5 @@ rules:
             religion: {}
     description: 'Staff of Providence (True): +1 item bonus to Religion checks (Recall
       Knowledge).'
-    numeric: {literal: {amount: 1, applicability: {description: Recall Knowledge,
-          kind: situational}, type: item}}
+    numeric: {amount: 1, applicability: {description: Recall Knowledge, kind: situational},
+      type: item}

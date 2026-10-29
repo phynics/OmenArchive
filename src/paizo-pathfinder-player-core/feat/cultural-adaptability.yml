@@ -22,6 +22,7 @@ rules:
     label: Ancestry Feat
     prerequisites:
     - $.feat.adopted-ancestry.ancestry
+    type: core/feat-id
     records:
       filter:
         all:
@@ -29,7 +30,6 @@ rules:
         - {trait: systemTrait-ancestry}
         - {level: 1}
         - {hasChoiceAncestryTrait: $.feat.adopted-ancestry.ancestry}
-      type: core/feat-id
 - key: grant-item-2
   effect: core/add-feat@2
   inputs:

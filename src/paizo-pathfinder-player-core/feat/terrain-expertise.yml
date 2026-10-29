@@ -9,10 +9,7 @@ traits:
 prerequisites:
 - text: trained in Survival
   hasSkillProficiency: {skill: survival, proficiency: trained}
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: 'Your experience in navigating a certain type of terrain makes you supremely
   confident while doing so. You gain a +1 circumstance bonus to Survival checks in
   one of the following types of terrain, chosen when you select this feat: aquatic,
@@ -28,15 +25,15 @@ rules:
     label: Terrain Expertise Terrain
     type: core/terrain
     cases:
-    - {value: aquatic}
-    - {value: arctic}
-    - {value: desert}
-    - {value: forest}
-    - {value: mountain}
-    - {value: plains}
-    - {value: sky}
-    - {value: swamp}
-    - {value: underground}
+    - aquatic
+    - arctic
+    - desert
+    - forest
+    - mountain
+    - plains
+    - sky
+    - swamp
+    - underground
 - key: add-terrain-expertise-1
   effect: core/add-terrain-expertise
   inputs:

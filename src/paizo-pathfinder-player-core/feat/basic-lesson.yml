@@ -15,7 +15,8 @@ rules:
   choice:
     name: $.feat.basic-lesson.lesson
     label: Lesson
-    records: {filter: {pathPrefix: '@class.witch.basic-lessons'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.witch.basic-lessons'}}
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

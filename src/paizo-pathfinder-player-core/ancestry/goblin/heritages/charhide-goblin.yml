@@ -14,5 +14,4 @@ rules:
   effect: core/add-resistance@2
   inputs:
     type: fire
-    value: \[[(max 1 (divide $.level 2))]]
-    exceptions: ''
+    value: (max 1 (divide $.level 2))

@@ -29,6 +29,7 @@ rules:
   choice:
     name: $.feat.celestial-magic.spell-one
     label: First Spell
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -40,13 +41,13 @@ rules:
           - {name: revealing light}
           - {name: humanoid form}
           - {name: everlight}
-      type: spellcasting/spell-id
 - key: choice-feat-celestial-magic-spell-two
   choice:
     name: $.feat.celestial-magic.spell-two
     label: Second Spell
     distinctFrom:
     - $.feat.celestial-magic.spell-one
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -58,7 +59,6 @@ rules:
           - {name: revealing light}
           - {name: humanoid form}
           - {name: everlight}
-      type: spellcasting/spell-id
 - key: innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -67,8 +67,8 @@ rules:
     spellId: {choice: $.feat.celestial-magic.spell-one}
     tradition: divine
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 2}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 2}
+    castFrequency: {perDay: 1}
 - key: innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -77,5 +77,5 @@ rules:
     spellId: {choice: $.feat.celestial-magic.spell-two}
     tradition: divine
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 2}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 2}
+    castFrequency: {perDay: 1}

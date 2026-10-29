@@ -12,8 +12,7 @@ rules:
   effect: core/add-resistance@2
   inputs:
     type: void
-    value: \[[(max 1 (divide $.level 2))]]
-    exceptions: ''
+    value: (max 1 (divide $.level 2))
 - key: add-roll-modifier-1
   effect: core/add-roll-modifier@2
   inputs:
@@ -21,5 +20,5 @@ rules:
       description:
       - anyNonPerceptionSavingThrow: {}
     description: 'Grave Orc: +1 circumstance bonus to saving throws (in some situations).'
-    numeric: {literal: {amount: 1, applicability: {description: in some situations,
-          kind: situational}, type: circumstance}}
+    numeric: {amount: 1, applicability: {description: in some situations, kind: situational},
+      type: circumstance}

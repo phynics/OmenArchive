@@ -5,10 +5,7 @@ rarity: common
 type: ancestry
 traits:
 - human
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: Your adaptability manifests in your mastery of a range of useful abilities.
   You gain a 1st-level general feat. You must meet the feat's prerequisites, but if
   you select this feat during character creation, you can select the feat later in
@@ -22,13 +19,13 @@ rules:
   choice:
     name: $.feat.general-training.feats
     label: General Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {level: 1}
         - {trait: systemTrait-general}
-      type: core/feat-id
 - key: grant-item-1
   effect: core/add-feat@2
   inputs:

@@ -3,7 +3,6 @@ name: repair toolkit (superb)
 level: 3
 rarity: common
 type: equipment
-traits: []
 physical:
   bulk: '1'
   hardness: 0
@@ -12,8 +11,6 @@ physical:
   quantity: 1
   size: med
   usage: held-in-two-hands
-details:
-  equipment: {}
 description: A repair kit allows you to perform simple repairs while traveling. It
   contains a portable anvil, tongs, woodworking tools, a whetstone, and oils for conditioning
   leather and wood. You can use a repair kit to Repair items using the Crafting skill.
@@ -31,5 +28,5 @@ rules:
           '_0':
             crafting: {}
     description: 'Repair Toolkit (Superb): +1 item bonus to Crafting checks (Repair).'
-    numeric: {literal: {amount: 1, applicability: {description: Repair, kind: situational},
-        type: item}}
+    numeric: {amount: 1, applicability: {description: Repair, kind: situational},
+      type: item}

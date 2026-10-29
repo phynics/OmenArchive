@@ -141,7 +141,6 @@
             "properties": {
               "contents": { "type": "array", "items": { "type": "string" } }
             },
-            "required": ["contents"],
             "additionalProperties": false
           } },
           "required": ["kit"],
@@ -166,7 +165,7 @@
       "minLength": 1
     }
   },
-  "required": ["name", "type", "level", "rarity", "traits", "description", "physical", "details"],
+  "required": ["name", "type", "level", "rarity", "physical"],
   "additionalProperties": false,
   "allOf": [
     {

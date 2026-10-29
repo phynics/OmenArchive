@@ -5,10 +5,7 @@ rarity: common
 type: class
 traits:
 - cleric
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: 'Your deity bestows a special spell related to their powers. Select one
   domain—a subject of particular interest to you within your religion—from your deity''s
   list. You gain an initial domain spell for that domain, a spell unique to the domain
@@ -34,13 +31,14 @@ rules:
     name: $.deity.domains
     label: Deity's domains
     multiple: {min: 1, max: 4}
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}}
 - key: choice-cleric-domains
   choice:
     name: $.cleric.domains
     label: Domain
-    optionsFrom: $.deity.domains
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}, from: $.deity.domains}
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:

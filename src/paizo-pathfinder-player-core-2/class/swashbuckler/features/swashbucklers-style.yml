@@ -13,7 +13,8 @@ rules:
   choice:
     name: $.swashbuckler.style
     label: Style
-    records: {filter: {pathPrefix: '@class.swashbuckler.styles'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.swashbuckler.styles'}}
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

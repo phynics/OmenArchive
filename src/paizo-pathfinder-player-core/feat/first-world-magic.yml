@@ -16,6 +16,7 @@ rules:
   choice:
     name: $.feat.first-world-magic.cantrip
     label: First World Magic Spell
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -23,7 +24,6 @@ rules:
         - {rarity: common}
         - {spell.category: cantrip}
         - {spell.tradition: primal}
-      type: spellcasting/spell-id
 - key: grant-innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -32,5 +32,5 @@ rules:
     spellId: {choice: $.feat.first-world-magic.cantrip}
     tradition: primal
     attribute: cha
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: atWill}
+    rankPolicy: cantrip
+    castFrequency: atWill

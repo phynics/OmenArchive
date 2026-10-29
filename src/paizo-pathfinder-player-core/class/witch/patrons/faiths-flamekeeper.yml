@@ -43,8 +43,8 @@ rules:
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
     spellId: '@spell.stoke-the-heart'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: atWill}
+    rankPolicy: cantrip
+    castFrequency: atWill
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
@@ -55,19 +55,19 @@ rules:
   choice:
     name: $.witch.patron.first-hex
     label: First Hex
+    type: spellcasting/spell-id
     records:
       filter:
         any:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
-      type: spellcasting/spell-id
 - key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
     sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
     spellId: {choice: $.witch.patron.first-hex}
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-1
   effect: spellcasting/add-focus-point
 - key: configure-source-2
@@ -81,5 +81,5 @@ rules:
 - key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
-    skill: {kind: religion}
+    skill: religion
     proficiencyCap: 2

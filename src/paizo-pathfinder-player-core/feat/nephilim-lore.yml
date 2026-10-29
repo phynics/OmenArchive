@@ -18,7 +18,7 @@ rules:
 - key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
-    skill: {kind: religion}
+    skill: religion
     proficiencyCap: 2
 - key: choice-feat-nephilim-lore-skill
   choice:
@@ -26,8 +26,8 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
 - key: add-skill-increase-2
   effect: core/add-skill-increase
   inputs:

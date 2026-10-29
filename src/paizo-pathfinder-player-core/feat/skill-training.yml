@@ -9,10 +9,7 @@ traits:
 prerequisites:
 - text: Intelligence +1
   hasAttributeModifier: {attribute: int, modifier: 1}
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: You become trained in the skill of your choice.
 specialText: You can select this feat multiple times, choosing a new skill to become
   trained in each time.
@@ -25,22 +22,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:

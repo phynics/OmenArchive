@@ -35,7 +35,8 @@ rules:
   choice:
     name: $.sorcerer.bloodline
     label: Bloodline
-    records: {filter: {pathPrefix: '@class.sorcerer.bloodlines'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.sorcerer.bloodlines'}}
 - key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:

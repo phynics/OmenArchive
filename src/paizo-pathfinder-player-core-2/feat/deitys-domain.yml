@@ -15,13 +15,14 @@ rules:
     name: $.deity.domains
     label: Deity's domains
     multiple: {min: 1, max: 4}
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}}
 - key: choice-champion-domains
   choice:
     name: $.champion.domains
     label: Domain
-    optionsFrom: $.deity.domains
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}, from: $.deity.domains}
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:

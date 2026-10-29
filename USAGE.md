@@ -21,6 +21,24 @@ Detailed technical specifications are divided into focused topic guides:
 
 ---
 
+## Writing Values
+
+The mechanics descriptor gives every rule input a type, and a file is written in the plainest value of
+that type ([the full rules](docs/reference/rules-and-inputs.md)):
+
+- Sheet expressions and `$` paths are bare: `maximum: (max 1 (divide $.level 2))`. The backslash escape
+  (`\$.path`) is only for inputs that take text.
+- A kind is a word (`skill: arcana`, `rankPolicy: cantrip`), or a one-key map when it carries a datum
+  (`rankPolicy: { fixed: 4 }`, `castFrequency: { perDay: 1 }`, `skill: { lore: Name }`).
+- A grant setting in `with:` is the value it grants. A bare value is read as a **skill**; any other type is
+  spelled `{ type: core/terrain, value: underground }`. `{ from: [...] }` and `{ choice: $.path }` are the other two.
+- A choice lists its cases as words (`cases: [air, earth]`), names its answer `type:` on the choice, and writes
+  `freeText: true` and `records: { filter: …, from: $.path }`.
+- An input equal to its default, an empty string, an empty list and a null are left out, and the reader puts them back.
+  The check rejects an empty array.
+
+---
+
 ## 13 Content Families Index
 
 - **Actions**: `src/{pub}/action/{slug}.yml` — [Action Conventions](docs/reference/family-conventions.md#1-actions)

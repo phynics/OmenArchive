@@ -19,25 +19,21 @@ rules:
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: advanced}
     proficiencyRank: 4
-    selfScaling: false
 - key: generated-5
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
     proficiencyRank: 6
-    selfScaling: false
 - key: generated-6
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
     proficiencyRank: 6
-    selfScaling: false
 - key: generated-7
   effect: core/add-weapon-proficiency
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
     proficiencyRank: 6
-    selfScaling: false
 - key: choice-fighter-weapon-legend-group
   level: 13
   choice:
@@ -45,30 +41,28 @@ rules:
     label: Weapon group
     type: core/weapon-group
     cases:
-    - {value: sword}
-    - {value: brawling}
-    - {value: flail}
-    - {value: knife}
-    - {value: club}
-    - {value: dart}
-    - {value: spear}
-    - {value: axe}
-    - {value: polearm}
-    - {value: hammer}
-    - {value: pick}
-    - {value: shield}
-    - {value: bow}
+    - sword
+    - brawling
+    - flail
+    - knife
+    - club
+    - dart
+    - spear
+    - axe
+    - polearm
+    - hammer
+    - pick
+    - shield
+    - bow
 - key: martial-proficiency-1
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-legend-group}
     proficiencyRank: 8
     includeAdvanced: false
-    selfScaling: false
 - key: martial-proficiency-2
   effect: core/add-weapon-group-proficiency
   inputs:
     weaponGroup: {choice: $.fighter.weapon-legend-group}
     proficiencyRank: 6
     includeAdvanced: true
-    selfScaling: false

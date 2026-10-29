@@ -3,7 +3,6 @@ name: survey map
 level: 3
 rarity: uncommon
 type: equipment
-traits: []
 physical:
   bulk: L
   hardness: 0
@@ -12,8 +11,6 @@ physical:
   quantity: 1
   size: med
   usage: held-in-one-hand
-details:
-  equipment: {}
 description: Maps are uncommon. Most maps you can find are simple and functional.
   A survey map details a single location in excellent detail. One of these maps gives
   you a +1 item bonus to Survival checks and any skill checks to Recall Knowledge,
@@ -31,8 +28,8 @@ rules:
           '_0':
             survival: {}
     description: 'Survey Map: +1 item bonus to Survival checks (mapped area).'
-    numeric: {literal: {amount: 1, applicability: {description: mapped area, kind: situational},
-        type: item}}
+    numeric: {amount: 1, applicability: {description: mapped area, kind: situational},
+      type: item}
 - key: add-roll-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
@@ -41,5 +38,5 @@ rules:
       - anySkill: {}
     description: 'Survey Map: +1 item bonus to skill checks (Recall knowledge on mapped
       area).'
-    numeric: {literal: {amount: 1, applicability: {description: Recall knowledge on
-            mapped area, kind: situational}, type: item}}
+    numeric: {amount: 1, applicability: {description: Recall knowledge on mapped area,
+        kind: situational}, type: item}

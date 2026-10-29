@@ -20,8 +20,8 @@ rules:
             athletics: {}
     description: 'Rainfall Orc: +2 circumstance bonus to Athletics checks (Climb or
       Swim).'
-    numeric: {literal: {amount: 2, applicability: {description: Climb or Swim, kind: situational},
-        type: circumstance}}
+    numeric: {amount: 2, applicability: {description: Climb or Swim, kind: situational},
+      type: circumstance}
 - key: add-roll-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
@@ -29,5 +29,5 @@ rules:
       description:
       - anyNonPerceptionSavingThrow: {}
     description: 'Rainfall Orc: +1 circumstance bonus to saving throws (in some situations).'
-    numeric: {literal: {amount: 1, applicability: {description: in some situations,
-          kind: situational}, type: circumstance}}
+    numeric: {amount: 1, applicability: {description: in some situations, kind: situational},
+      type: circumstance}

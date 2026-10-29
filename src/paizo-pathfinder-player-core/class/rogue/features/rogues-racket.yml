@@ -23,7 +23,8 @@ rules:
   choice:
     name: $.rogue.racket
     label: Racket
-    records: {filter: {pathPrefix: '@class.rogue.rackets'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.rogue.rackets'}}
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

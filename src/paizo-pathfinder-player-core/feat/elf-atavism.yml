@@ -22,7 +22,8 @@ rules:
   choice:
     name: $.feat.elf-atavism.heritage
     label: Elf Heritage
-    records: {filter: {pathPrefix: '@ancestry.elf.heritages'}, type: core/heritage-id}
+    type: core/heritage-id
+    records: {filter: {pathPrefix: '@ancestry.elf.heritages'}}
 - key: grant-heritage
   effect: core/add-heritage-by-id
   inputs:

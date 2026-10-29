@@ -14,6 +14,7 @@ rules:
   choice:
     name: $.feat.ancestral-paragon.feat
     label: Ancestry Feat
+    type: core/feat-id
     records:
       filter:
         all:
@@ -22,7 +23,6 @@ rules:
         - {trait: systemTrait-ancestry}
         - {sharesAncestryTrait: true}
         - {not: {trait: lineage}}
-      type: core/feat-id
 - key: grant-item-1
   effect: core/add-feat@2
   inputs:

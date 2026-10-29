@@ -46,7 +46,7 @@ rules:
           '_0':
             diplomacy: {}
     description: 'Warleader''s Bulwark: +2 item bonus to Diplomacy checks.'
-    numeric: {literal: {amount: 2, applicability: {kind: always}, type: item}}
+    numeric: {amount: 2, applicability: {kind: always}, type: item}
 - key: flat-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
@@ -60,5 +60,5 @@ rules:
             stealth: {}
     description: 'Warleader''s Bulwark: -2 item bonus to Deception checks and Stealth
       checks (Hide or Sneak or Impersonate).'
-    numeric: {literal: {amount: -2, applicability: {description: Hide or Sneak or
-            Impersonate, kind: situational}, type: item}}
+    numeric: {amount: -2, applicability: {description: Hide or Sneak or Impersonate,
+        kind: situational}, type: item}

@@ -14,8 +14,6 @@ physical:
   quantity: 1
   size: med
   usage: worn
-details:
-  equipment: {}
 description: 'This magic ring seems like simple tarnished brass, but it enhances your
   curiosity about traps and devices of all kinds.
 
@@ -49,8 +47,8 @@ rules:
             thievery: {}
     description: 'Ring of Maniacal Devices: +2 item bonus to Thievery checks (Disable
       a Device or Pick a Lock).'
-    numeric: {literal: {amount: 2, applicability: {description: Disable a Device or
-            Pick a Lock, kind: situational}, type: item}}
+    numeric: {amount: 2, applicability: {description: Disable a Device or Pick a Lock,
+        kind: situational}, type: item}
 - key: flat-modifier-2
   effect: core/add-roll-modifier@2
   inputs:
@@ -61,5 +59,5 @@ rules:
             crafting: {}
     description: 'Ring of Maniacal Devices: +2 item bonus to Crafting checks (Craft
       or Repair).'
-    numeric: {literal: {amount: 2, applicability: {description: Craft or Repair, kind: situational},
-        type: item}}
+    numeric: {amount: 2, applicability: {description: Craft or Repair, kind: situational},
+      type: item}

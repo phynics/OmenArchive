@@ -42,7 +42,7 @@ rules:
       name: $.feat.multilingual.languages
       label: Bonus Language
       type: core/string
-      freeText: core/string
+      freeText: true
 ```
 
 Or a choice over archive records:
@@ -55,10 +55,7 @@ rules:
       label: Domain Selection
       type: core/domain-id
       records:
-        type: domain
-        filter:
-          all:
-            - { type: domain }
+        filter: { type: domain }
 ```
 
 ## 4. Validate

@@ -13,7 +13,8 @@ rules:
   choice:
     name: $.ranger.hunters-edge
     label: Hunter's Edge
-    records: {filter: {pathPrefix: '@class.ranger.hunters-edge'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.ranger.hunters-edge'}}
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

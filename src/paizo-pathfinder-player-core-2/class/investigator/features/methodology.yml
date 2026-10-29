@@ -16,7 +16,8 @@ rules:
   choice:
     name: $.investigator.methodology
     label: Methodology
-    records: {filter: {pathPrefix: '@class.investigator.methodologies'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.investigator.methodologies'}}
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

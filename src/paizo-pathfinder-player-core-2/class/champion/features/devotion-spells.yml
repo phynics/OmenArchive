@@ -94,8 +94,8 @@ rules:
   inputs:
     sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
     spellId: {choice: $.champion.devotion-spell}
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: devotion-focus-point
   effect: spellcasting/add-focus-point
   prerequisites:

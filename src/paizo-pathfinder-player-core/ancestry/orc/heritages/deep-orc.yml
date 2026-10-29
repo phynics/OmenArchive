@@ -13,8 +13,8 @@ rules:
   effect: core/add-feat@2
   inputs:
     featId: '@feat.terrain-expertise'
-    with: {$.feat.terrain-expertise.terrains: {kind: fixed, value: {payload: underground,
-          revision: 1, typeID: me.atkn.omen.pf2e.playercore/value/terrain}}}
+    with:
+      $.feat.terrain-expertise.terrains: {type: core/terrain, value: underground}
 - key: add-feat-2
   effect: core/add-feat@2
   inputs:

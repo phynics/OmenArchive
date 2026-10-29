@@ -53,6 +53,7 @@ rules:
     label: Research field formulas
     optional: true
     multiple: {min: 0, max: 2}
+    type: core/item-id
     records:
       filter:
         all:
@@ -61,7 +62,6 @@ rules:
         - {rarity: common}
         - {level: 1}
         - {trait: bomb}
-      type: core/item-id
 - key: learn-choice-alchemist-formulas-field
   effect: core/add-formulas
   inputs:

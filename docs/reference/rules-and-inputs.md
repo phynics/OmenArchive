@@ -9,7 +9,7 @@ The `rules:` array is used on feats, features, ancestries, heritages, and backgr
 - **Classes**: Classes never define inline `rules:`. All class mechanics reside in dedicated feature files under `features/` or custom group directories.
 - **Ancestries, Heritages, Backgrounds**: Apply inline rules at 1st level.
 - **Feats and Features**: Apply rules at the feat's level or when configured by `level:`.
-- **Omission**: Omit the `rules:` key entirely when a record has no mechanical effects. Do not commit empty arrays (`rules: []`).
+- **Omission**: Omit the `rules:` key entirely when a record has no mechanical effects. Do not commit empty arrays (`rules: []`), here or anywhere in a record: the archive check rejects an empty array, and the reader puts back the empty lists the stored form needs.
 
 ## Rule Structure
 
@@ -40,24 +40,60 @@ Inputs that uniquely identify the rule itself (such as `selectionId`, `grantId`,
 A `sourceId` identifying a spellcasting source is authored as a reference to the defining feature:
 `sourceId: '@class.wizard.features.wizard-spellcasting#spellcasting-source'`.
 
-## Input Values: Bare Literals vs. Explicit Forms
+## Input Values
 
-The schema and mechanics descriptors define the expected input types, allowing most values to be authored as bare literals:
+The mechanics descriptor gives every input a value type, and the reader parses the authored value
+through that type. An input is written as the plainest value of its type; none of the wire form's
+`payload`, `revision`, `typeID` or `kind` wrappers appear.
 
 ```yaml
 inputs:
   proficiencyCap: 2
-  skill: { kind: deception }
+  skill: arcana                             # a skill: a word
+  rankPolicy: {fixed: 4}                    # a kind with one datum: {kind: datum}
+  castFrequency: focus
+  maximum: (max 1 (divide $.level 2))       # a sheet value: a bare expression
+  itemLevel: $.item.level                   #   or a bare $ path
 ```
 
-### Explicit Value Forms
+### Typed values
 
-When an input requires dynamic evaluation or complex data, use the explicit object forms:
-- `{ choice: $.cleric.divine-font }`: Reads the chosen answer from a named character choice.
-- `{ choiceList: $.deity.spells }`: Reads a list of answers from a multi-select choice.
-- `{ literal: ... }`: Escapes a payload that might otherwise resemble an expression or choice path.
+- **Sheet values.** An input whose type is a sheet value (`maximum`, `itemLevel`, a resistance's `value`) takes a
+  bare expression, which starts with `(` and ends with `)`, or a bare `$` path. Numbers are written
+  as numbers.
+- **Kinds without data** are a word: `skill: arcana`, `rankPolicy: cantrip`, `castFrequency: atWill`.
+- **Kinds with one datum** are a one-key map from the kind to the datum: `{lore: Boneyard Lore}`,
+  `{fixed: 4}` (the rank), `{perDay: 1}` (the uses). A list of such values is a list of these
+  (`[arcana, {lore: Y}]`). A type with more than one datum (a weapon or armor designation) keeps
+  its `{kind: filter, weaponGroup: …}` form.
+- **Filters.** An input that takes a resource filter is written like the filters under `choice:`
+  (`{all: [{type: feat}, {trait: gnome}]}`); the wire's `{kind: intersection, values: […]}` wrapper is
+  only read.
+- **Grant settings.** The `with:` input of `core/add-feat@2` maps a `$` path to a setting. A setting
+  is the value it grants: a bare value is a **skill** (`$.feat.assurance.skills: athletics`), and a value of
+  any other type is spelled with its type (`{type: core/terrain, value: underground}`, the same
+  spelling `type:` has anywhere). The two other settings are `{from: [arcana, nature]}`, which
+  offers values, and `{choice: $.feat.gnome-obsession.lore}`, which reads a choice (with
+  `as: lore`, a lore skill named by the answer).
 
-Strings beginning with `$`, `@`, `(`, or `[[` must be escaped with a leading backslash (`\$5`).
+### Left-out inputs
+
+An input that holds its default is left out, and the reader puts it back. The defaults are
+`selfScaling: false` (every proficiency effect), `mode: add` and `condition: ''` (`add-play-modifier`),
+`condition: ''` (`add-play-note`), `exceptions: ''` (`add-resistance`), and `acuity: ''` and `range: -1`
+(`add-sense`, where no `range` means no range).
+
+### Explicit forms and escapes
+
+- `{ choice: $.cleric.divine-font }`: reads the chosen answer from a named character choice.
+- `{ choiceList: $.deity.spells }`: reads a list of answers from a multi-select choice.
+- `{ literal: ... }`: only an escape, for a payload that is itself a map whose keys are all `type` or a
+  source key. A map that merely has a `type` key (`numeric: {amount: 1, type: item}`) is written bare.
+- `{ type: core/skill, … }`: names the input's value type where it isn't the one the descriptor declares.
+
+An input whose type is **text** (`string`, as in `add-membership`'s `list`) takes a `$` path or an
+expression as plain text, so a string that begins with `$`, `@`, `(` or `[[` is escaped with a
+leading backslash (`\$.druid.order-memberships`). No other type needs the backslash.
 
 ## Player Choices (`choice:`)
 
@@ -70,23 +106,23 @@ rules:
       name: $.cleric.divine-font
       label: Divine Font
       type: spellcasting/spell-id
-      cases:
-        - { value: '@spell.heal' }
-        - { value: '@spell.harm' }
+      cases: ['@spell.heal', '@spell.harm']
 ```
 
 ### Choice Properties
 
 - **`name`**: A `$.` path naming the shared question across the character.
 - **`label`**: Human-readable prompt shown in character builders.
-- **`type`**: Registered type of the answers (e.g. `core/skill`, `spellcasting/spell-id`).
+- **`type`**: Registered type of the answers (e.g. `core/skill`, `spellcasting/spell-id`), always on the choice. A choice whose cases carry no value has no type.
 - **Options**: Defined using one of:
-  - `cases`: An explicit list of `{ value: ... }` items. Cases may also carry `effects:` that apply when selected.
-  - `records`: A query object `{ filter: { ... }, type: ... }` dynamically populated from the archive.
-  - `freeText`: Accepts arbitrary text typed by the player (e.g. edicts/anathema).
+  - `cases`: A list of the values: `cases: [strength, dexterity]`. The case's key is the value's text. A case with a label, a different key or `effects:` is a map (`{ key: …, label: …, value: …, effects: […] }`), and then the list is maps.
+  - `records`: A query object `{ filter: { ... } }` dynamically populated from the archive, with the answers' `type:` on the choice. `records: { filter: …, from: $.deity.domains }` limits the options to the values selected in another choice.
+  - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`.
 - **`multiple`**: Specifies multi-selection: `multiple: { min: 1, max: 3 }`.
-- **`optionsFrom`**: Limits options to the values selected in another choice: `optionsFrom: $.deity.domains`.
+- **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`.
 - **`distinctWithin`**: Prevents duplicate picks within a named group (such as spells in a single spellbook).
 - **`optional: true`**: Marks the choice as optional, excluding it from blocking open-question counts.
+
+The older spellings stay readable: `records: { filter: …, type: … }`, `freeText: core/string`, and `optionsFrom` beside `records`.
 
 For complete documentation on all registered effects, see the native DocC catalog in `docs/mechanics.docc/`.

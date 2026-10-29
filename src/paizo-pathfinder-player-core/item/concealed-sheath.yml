@@ -3,7 +3,6 @@ name: concealed sheath
 level: 3
 rarity: common
 type: equipment
-traits: []
 physical:
   bulk: '0'
   hardness: 0
@@ -12,8 +11,6 @@ physical:
   quantity: 1
   size: med
   usage: worn
-details:
-  equipment: {}
 description: 'This leather sheath is large enough to hold an item of up to light Bulk
   and is typically used for daggers, wands, thieves'' tools, and similar objects.
 
@@ -33,5 +30,5 @@ rules:
             stealth: {}
     description: 'Concealed Sheath: +1 item bonus to Stealth checks (hide or conceal
       contents).'
-    numeric: {literal: {amount: 1, applicability: {description: hide or conceal contents,
-          kind: situational}, type: item}}
+    numeric: {amount: 1, applicability: {description: hide or conceal contents, kind: situational},
+      type: item}

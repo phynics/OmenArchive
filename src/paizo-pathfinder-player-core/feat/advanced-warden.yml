@@ -12,8 +12,6 @@ repeatPolicy:
   duplicateSelectionRules:
   - lookupName: $.feat.advanced-warden.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-  instanceLevelGates: []
-  maxCount: null
 description: 'You unlock more powerful primal spells. You gain your choice of one
   warden spell from the advanced warden spells.
 
@@ -41,6 +39,7 @@ rules:
   choice:
     name: $.feat.advanced-warden.spell
     label: Warden spell
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -48,7 +47,6 @@ rules:
         - {spell.category: focus}
         - {trait: classTrait-ranger}
         - {level: 2}
-      type: spellcasting/spell-id
 - key: grant-warden-spell
   effect: spellcasting/grant-focus-spell
   inputs:

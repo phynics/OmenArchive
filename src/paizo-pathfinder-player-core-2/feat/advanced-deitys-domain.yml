@@ -19,13 +19,14 @@ rules:
     name: $.deity.domains
     label: Deity's domains
     multiple: {min: 1, max: 4}
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}}
 - key: choice-champion-advanced-domains
   choice:
     name: $.champion.advanced-domains
     label: Advanced domain
-    optionsFrom: $.champion.domains
-    records: {filter: {type: domain}, type: core/domain-id}
+    type: core/domain-id
+    records: {filter: {type: domain}, from: $.champion.domains}
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:

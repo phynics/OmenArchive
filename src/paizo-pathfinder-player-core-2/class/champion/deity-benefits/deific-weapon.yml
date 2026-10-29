@@ -15,9 +15,10 @@ rules:
   choice:
     name: $.deity.favored-weapon
     label: Favored weapon
+    type: core/weapon-reference
     additionalCases:
     - {value: fist}
-    records: {filter: {all: [{type: item}, {item.kind: weapon}]}, type: core/weapon-reference}
+    records: {filter: {all: [{type: item}, {item.kind: weapon}]}}
 - key: deity-favored-weapon-proficiency
   effect: core/add-chosen-weapon-proficiency
   inputs:

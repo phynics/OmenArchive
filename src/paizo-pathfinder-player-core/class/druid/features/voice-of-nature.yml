@@ -13,12 +13,12 @@ rules:
   choice:
     name: $.druid.voice-of-nature.feat
     label: Level 1 Class Feat
+    type: core/feat-id
     records:
       filter:
         any:
         - {id: '@feat.animal-empathy'}
         - {id: '@feat.plant-empathy'}
-      type: core/feat-id
 - key: grant-item-1
   effect: core/add-feat@2
   inputs:

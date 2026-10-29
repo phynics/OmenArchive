@@ -25,8 +25,8 @@ rules:
     spellId: '@spell.invisibility'
     tradition: primal
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 2}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 2}
+    castFrequency: {perDay: 1}
 - key: grant-innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -35,5 +35,5 @@ rules:
     spellId: '@spell.revealing-light'
     tradition: primal
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 2}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 2}
+    castFrequency: {perDay: 1}

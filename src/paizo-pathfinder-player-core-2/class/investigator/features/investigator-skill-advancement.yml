@@ -13,13 +13,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-3
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 3}
-      type: core/feat-id
 - key: skill-feat-3
   effect: core/add-feat@2
   level: 3
@@ -30,13 +30,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-5
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 5}
-      type: core/feat-id
 - key: skill-feat-5
   effect: core/add-feat@2
   level: 5
@@ -47,13 +47,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-7
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 7}
-      type: core/feat-id
 - key: skill-feat-7
   effect: core/add-feat@2
   level: 7
@@ -64,13 +64,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-9
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 9}
-      type: core/feat-id
 - key: skill-feat-9
   effect: core/add-feat@2
   level: 9
@@ -81,13 +81,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-11
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 11}
-      type: core/feat-id
 - key: skill-feat-11
   effect: core/add-feat@2
   level: 11
@@ -98,13 +98,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-13
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 13}
-      type: core/feat-id
 - key: skill-feat-13
   effect: core/add-feat@2
   level: 13
@@ -115,13 +115,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-15
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 15}
-      type: core/feat-id
 - key: skill-feat-15
   effect: core/add-feat@2
   level: 15
@@ -132,13 +132,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-17
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 17}
-      type: core/feat-id
 - key: skill-feat-17
   effect: core/add-feat@2
   level: 17
@@ -149,13 +149,13 @@ rules:
   choice:
     name: $.investigator.skill-feat-19
     label: Skill Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 19}
-      type: core/feat-id
 - key: skill-feat-19
   effect: core/add-feat@2
   level: 19
@@ -168,22 +168,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-2
   effect: core/add-skill-increase
   level: 2
@@ -197,22 +197,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-4
   effect: core/add-skill-increase
   level: 4
@@ -226,22 +226,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-6
   effect: core/add-skill-increase
   level: 6
@@ -255,22 +255,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-8
   effect: core/add-skill-increase
   level: 8
@@ -284,22 +284,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-10
   effect: core/add-skill-increase
   level: 10
@@ -313,22 +313,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-12
   effect: core/add-skill-increase
   level: 12
@@ -342,22 +342,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-14
   effect: core/add-skill-increase
   level: 14
@@ -371,22 +371,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-16
   effect: core/add-skill-increase
   level: 16
@@ -400,22 +400,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-18
   effect: core/add-skill-increase
   level: 18
@@ -429,22 +429,22 @@ rules:
     label: Skill
     type: core/skill
     cases:
-    - {key: acrobatics, value: {kind: acrobatics}}
-    - {key: arcana, value: {kind: arcana}}
-    - {key: athletics, value: {kind: athletics}}
-    - {key: crafting, value: {kind: crafting}}
-    - {key: deception, value: {kind: deception}}
-    - {key: diplomacy, value: {kind: diplomacy}}
-    - {key: intimidation, value: {kind: intimidation}}
-    - {key: medicine, value: {kind: medicine}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: performance, value: {kind: performance}}
-    - {key: religion, value: {kind: religion}}
-    - {key: society, value: {kind: society}}
-    - {key: stealth, value: {kind: stealth}}
-    - {key: survival, value: {kind: survival}}
-    - {key: thievery, value: {kind: thievery}}
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
 - key: skill-increase-20
   effect: core/add-skill-increase
   level: 20

@@ -24,7 +24,7 @@ rules:
 - key: trained-skill-0
   effect: core/add-skill-increase
   inputs:
-    skill: {kind: society}
+    skill: society
     proficiencyCap: 2
 - key: choice-rogue-mastermind-skill
   choice:
@@ -32,10 +32,10 @@ rules:
     label: Mastermind skill
     type: core/skill
     cases:
-    - {key: arcana, value: {kind: arcana}}
-    - {key: nature, value: {kind: nature}}
-    - {key: occultism, value: {kind: occultism}}
-    - {key: religion, value: {kind: religion}}
+    - {key: arcana, value: arcana}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: religion, value: religion}
 - key: mastermind-skill
   effect: core/add-skill-increase
   inputs:

@@ -6,8 +6,6 @@ type: class
 traits:
 - witch
 repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
   maxCount: 3
 description: Your patron grants you even greater secrets. Choose a major, greater,
   or basic lesson. You gain its associated hex, and your familiar learns the associated
@@ -22,13 +20,13 @@ rules:
   choice:
     name: $.feat.major-lesson.lessons
     label: Lesson
+    type: core/feature-id
     records:
       filter:
         any:
         - {pathPrefix: '@class.witch.basic-lessons'}
         - {pathPrefix: '@class.witch.greater-lessons'}
         - {pathPrefix: '@class.witch.major-lessons'}
-      type: core/feature-id
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

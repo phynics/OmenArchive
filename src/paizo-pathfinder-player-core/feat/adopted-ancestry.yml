@@ -21,15 +21,7 @@ rules:
     distinctFrom:
     - $.ancestry.name
     type: core/string
-    cases:
-    - {value: dwarf}
-    - {value: elf}
-    - {value: gnome}
-    - {value: goblin}
-    - {value: halfling}
-    - {value: human}
-    - {value: leshy}
-    - {value: orc}
+    cases: [dwarf, elf, gnome, goblin, halfling, human, leshy, orc]
 - key: feat-ancestry
   effect: core/add-feat-ancestry
   inputs:

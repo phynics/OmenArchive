@@ -31,7 +31,6 @@ rules:
             intimidation: {}
     amount: 1
     bonusType: circumstance
-    mode: add
     condition: the target is physically menaced; Coerce or Demoralize
 - key: annotation-2
   effect: core/add-play-modifier
@@ -46,5 +45,4 @@ rules:
     amount: 2
     bonusType: untyped
     mode: upgrade
-    condition: ''
-    requires: \[[(and (gte $.attributes.str 5) (gte $.skills.intimidation.rank 3))]]
+    requires: (and (gte $.attributes.str 5) (gte $.skills.intimidation.rank 3))

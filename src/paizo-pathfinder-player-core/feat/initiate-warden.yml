@@ -9,8 +9,6 @@ repeatPolicy:
   duplicateSelectionRules:
   - lookupName: $.feat.initiate-warden.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-  instanceLevelGates: []
-  maxCount: null
 description: 'You''ve trained with one of the ranger sects known as wardens, who practice
   a specialized type of primal magic. You gain your choice of one warden spell from
   these initial warden spells \(or another you have access to\).
@@ -37,6 +35,7 @@ rules:
   choice:
     name: $.feat.initiate-warden.spell
     label: Warden spell
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -44,7 +43,6 @@ rules:
         - {spell.category: focus}
         - {trait: classTrait-ranger}
         - {level: 1}
-      type: spellcasting/spell-id
 - key: grant-warden-spell
   effect: spellcasting/grant-focus-spell
   inputs:

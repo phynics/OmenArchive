@@ -37,6 +37,7 @@ rules:
   choice:
     name: $.feat.hag-magic.spell
     label: Spell
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -69,12 +70,12 @@ rules:
           - all:
             - {characterHasFeat: virga may}
             - {any: [{name: hydraulic torrent}]}
-      type: spellcasting/spell-id
 - key: choice-feat-hag-magic-other-spell
   choice:
     name: $.feat.hag-magic.other-spell
     label: Other Coven Spell
-    records: {filter: {all: [{type: spell}, {maxLevel: 4}, {rarity: common}]}, type: spellcasting/spell-id}
+    type: spellcasting/spell-id
+    records: {filter: {all: [{type: spell}, {maxLevel: 4}, {rarity: common}]}}
 - key: innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -83,8 +84,8 @@ rules:
     spellId: {choice: $.feat.hag-magic.spell}
     tradition: occult
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 4}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 4}
+    castFrequency: {perDay: 1}
 - key: innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -93,5 +94,5 @@ rules:
     spellId: {choice: $.feat.hag-magic.other-spell}
     tradition: occult
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 4}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 4}
+    castFrequency: {perDay: 1}

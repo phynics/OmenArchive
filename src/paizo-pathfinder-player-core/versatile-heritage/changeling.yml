@@ -18,13 +18,9 @@ rules:
   effect: core/add-sense
   inputs:
     selector: low-light-vision
-    acuity: ''
-    range: -1
 - key: add-sense-2
   effect: core/add-sense
   prerequisites:
   - hasAncestryVision: low-light-vision
   inputs:
     selector: darkvision
-    acuity: ''
-    range: -1

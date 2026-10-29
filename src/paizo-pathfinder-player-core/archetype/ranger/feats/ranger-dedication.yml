@@ -27,9 +27,7 @@ rules:
     name: $.ranger.class-dc-attribute
     label: Ranger class DC attribute
     type: core/attribute
-    cases:
-    - {value: str}
-    - {value: dex}
+    cases: [str, dex]
 - key: dedication-class-dc
   effect: core/add-class-dc
   inputs:

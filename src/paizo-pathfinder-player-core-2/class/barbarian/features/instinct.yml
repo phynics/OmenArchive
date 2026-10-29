@@ -14,7 +14,8 @@ rules:
   choice:
     name: $.barbarian.instinct
     label: Instinct
-    records: {filter: {pathPrefix: '@class.barbarian.instincts'}, type: core/feature-id}
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.barbarian.instincts'}}
 - key: choice-set-1
   effect: core/add-feature-by-id
   inputs:

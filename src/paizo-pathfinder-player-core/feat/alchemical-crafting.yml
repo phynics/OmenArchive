@@ -20,6 +20,7 @@ rules:
     name: $.feat.alchemical-crafting.formulas
     label: Alchemical Crafting formulas
     multiple: {min: 4, max: 4}
+    type: core/item-id
     records:
       filter:
         all:
@@ -27,7 +28,6 @@ rules:
         - {trait: alchemical}
         - {rarity: common}
         - {level: 1}
-      type: core/item-id
 - key: learn-choice-feat-alchemical-crafting-formulas
   effect: core/add-formulas
   inputs:

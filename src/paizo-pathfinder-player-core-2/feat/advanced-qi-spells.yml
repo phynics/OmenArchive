@@ -12,8 +12,6 @@ repeatPolicy:
   duplicateSelectionRules:
   - lookupName: $.feat.advanced-qi-spells.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
-  instanceLevelGates: []
-  maxCount: null
 description: Your talent at controlling your qi has reached new heights. You gain
   [Qi Blast](omen://spell/qi-blast?source=paizo-pathfinder-player-core-2), [Shrink
   the Span](omen://spell/shrink-the-span?source=paizo-pathfinder-player-core-2), or
@@ -28,9 +26,7 @@ rules:
     name: $.qi.tradition
     label: Qi tradition
     type: spellcasting/tradition
-    cases:
-    - {value: divine}
-    - {value: occult}
+    cases: [divine, occult]
 - key: qi-focus-source
   effect: spellcasting/configure-source
   inputs:
@@ -48,6 +44,7 @@ rules:
   choice:
     name: $.feat.advanced-qi-spells.spell
     label: Qi spell
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -55,7 +52,6 @@ rules:
         - {spell.category: focus}
         - {trait: classTrait-monk}
         - {level: 3}
-      type: spellcasting/spell-id
 - key: grant-qi-spell
   effect: spellcasting/grant-focus-spell
   inputs:

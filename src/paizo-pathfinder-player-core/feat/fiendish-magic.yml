@@ -26,6 +26,7 @@ rules:
   choice:
     name: $.feat.fiendish-magic.spell-one
     label: First Spell
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -37,13 +38,13 @@ rules:
           - {name: see the unseen}
           - {name: false vitality}
           - {name: invisibility}
-      type: spellcasting/spell-id
 - key: choice-feat-fiendish-magic-spell-two
   choice:
     name: $.feat.fiendish-magic.spell-two
     label: Second Spell
     distinctFrom:
     - $.feat.fiendish-magic.spell-one
+    type: spellcasting/spell-id
     records:
       filter:
         all:
@@ -55,7 +56,6 @@ rules:
           - {name: see the unseen}
           - {name: false vitality}
           - {name: invisibility}
-      type: spellcasting/spell-id
 - key: innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -64,8 +64,8 @@ rules:
     spellId: {choice: $.feat.fiendish-magic.spell-one}
     tradition: divine
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 2}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 2}
+    castFrequency: {perDay: 1}
 - key: innate-spell-2
   effect: spellcasting/grant-innate-spell
   inputs:
@@ -74,5 +74,5 @@ rules:
     spellId: {choice: $.feat.fiendish-magic.spell-two}
     tradition: divine
     attribute: cha
-    rankPolicy: {kind: fixed, rank: 2}
-    castFrequency: {kind: perDay, uses: 1}
+    rankPolicy: {fixed: 2}
+    castFrequency: {perDay: 1}

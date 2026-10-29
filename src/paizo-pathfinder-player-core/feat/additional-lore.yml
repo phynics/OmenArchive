@@ -6,10 +6,7 @@ type: skill
 traits:
 - general
 - skill
-repeatPolicy:
-  duplicateSelectionRules: []
-  instanceLevelGates: []
-  maxCount: null
+repeatPolicy: {}
 description: Your knowledge has expanded to encompass a new field. Choose a Lore skill
   subcategory. You become trained in it. At 3rd, 7th, and 15th levels, you gain an
   additional skill increase you can apply only to the chosen Lore subcategory.
@@ -23,7 +20,8 @@ rules:
   choice:
     name: $.feat.additional-lore.lores
     label: Lore name
-    freeText: core/string
+    type: core/string
+    freeText: true
 - key: add-lore-skill-increase-1
   effect: core/add-lore-skill-increase
   inputs:

@@ -2,6 +2,18 @@
 
 This document specifies directory conventions, schemas, and authoring guidelines for each of the 13 resource families in OmenArchive.
 
+## Fields left out when empty
+
+A file leaves out a field that is empty, and the reader puts the empty value back. The fields are
+`traits` (actions, spells, items, features), `traditions` (spells), `description` (items and feats),
+`grantedSkills` (classes), `languageAccess` (ancestries), `attributes.chooseFrom` (backgrounds),
+`details.weapon.reload` and `details.kit.contents` (items), the three members of a feat's
+`repeatPolicy` (`duplicateSelectionRules`, `instanceLevelGates`, `maxCount`, so a feat with no limit has
+`repeatPolicy: {}`), and `details` of an `equipment` item. A background's `loreSkill` and
+`skillFeat` are not on this list: some backgrounds have neither key and others have them empty, and the
+two mean different things, so an empty one is written `loreSkill: ''`. The archive check rejects an
+empty array.
+
 ---
 
 ## 1. Actions

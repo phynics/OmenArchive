@@ -35,14 +35,14 @@ rules:
   inputs:
     sourceId: 81e74f02-2bec-54d4-9883-4708f5f35ccb
     spellId: '@spell.cornucopia'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    rankPolicy: cantrip
+    castFrequency: focus
 - key: add-focus-point-1
   effect: spellcasting/add-focus-point
 - key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:
-    skill: {kind: diplomacy}
+    skill: diplomacy
     proficiencyCap: 2
 - key: add-feat-1
   effect: core/add-feat@2

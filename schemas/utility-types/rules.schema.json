@@ -124,7 +124,16 @@
           "type": "array",
           "minItems": 1,
           "items": {
-            "$ref": "#/$defs/choiceCase"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "description": "A case that is only its value: the key is the text, the label its words capitalized. Needs the choice's type."
+              },
+              {
+                "$ref": "#/$defs/choiceCase"
+              }
+            ]
           }
         },
         "records": {
@@ -133,18 +142,30 @@
             "filter": {
               "$ref": "resource-filter.schema.json"
             },
+            "from": {
+              "$ref": "#/$defs/choiceName",
+              "description": "Intersects candidates with this named fact's valid values."
+            },
             "type": {
-              "$ref": "#/$defs/typeName"
+              "$ref": "#/$defs/typeName",
+              "description": "The older spelling; the type is written on the choice."
             }
           },
           "required": [
-            "filter",
-            "type"
+            "filter"
           ],
           "additionalProperties": false
         },
         "freeText": {
-          "$ref": "#/$defs/typeName"
+          "description": "true: free text of the choice's type. The older spelling names the type.",
+          "anyOf": [
+            {
+              "const": true
+            },
+            {
+              "$ref": "#/$defs/typeName"
+            }
+          ]
         },
         "multiple": {
           "type": "object",

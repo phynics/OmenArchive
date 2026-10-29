@@ -12,13 +12,13 @@ rules:
   choice:
     name: $.heritage.feat
     label: Heritage Feat
+    type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {maxLevel: 1}
         - {trait: systemTrait-general}
-      type: core/feat-id
 - key: add-feat-1
   effect: core/add-feat@2
   inputs:
