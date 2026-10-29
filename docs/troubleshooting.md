@@ -69,3 +69,4 @@ Full mechanics validation runs in maintainer CI via `./scripts/validate.sh`.
 ### `mechanics [choiceNameRepeatsRecord]`
 - **Cause**: A choice name repeats the enclosing record's slug in its final path segment.
 - **Fix**: Name the choice using plural categories (e.g., `$.feat.terrain-expertise.terrains` instead of `$.feat.terrain-expertise.terrain-expertise-terrain`).
+
