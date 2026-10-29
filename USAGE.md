@@ -27,6 +27,7 @@ Detailed technical specifications are divided into focused topic guides:
 - **Spells**: `src/{pub}/spell/{slug}.yml` — [Spell Conventions](docs/reference/family-conventions.md#2-spells)
 - **Ancestries**: `src/{pub}/ancestry/{ancestry}/{ancestry}.yml` — [Ancestry Conventions](docs/reference/family-conventions.md#3-ancestries)
 - **Conditions**: `src/{pub}/condition/{slug}.yml` — [Condition Conventions](docs/reference/family-conventions.md#4-conditions)
+- **Rules**: `src/{pub}/rule/{slug}.yml` — [Rule Conventions](docs/reference/family-conventions.md#rules)
 - **Backgrounds**: `src/{pub}/background/{slug}.yml` — [Background Conventions](docs/reference/family-conventions.md#5-backgrounds)
 - **Classes**: `src/{pub}/class/{class}/{class}.yml` — [Class Conventions](docs/reference/family-conventions.md#6-classes)
 - **Feats**: `src/{pub}/feat/{slug}.yml` — [Feat Conventions](docs/reference/family-conventions.md#7-feats)

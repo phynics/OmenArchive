@@ -19,6 +19,7 @@ The archive contains comprehensive game records curated from official Paizo Rema
   - `class`: Core classes, progressions, proficiencies, and subclass options.
   - `companion`: Animal companions and familiars.
   - `condition`: Game conditions and status effects.
+  - `rule`: General rules such as cover, flanking and degrees of success.
   - `domain`: Cleric deity domains and associated domain spells.
   - `feat`: General, skill, ancestry, class, and archetype feats.
   - `item`: Weapons, armor, shields, adventuring gear, and alchemical items.

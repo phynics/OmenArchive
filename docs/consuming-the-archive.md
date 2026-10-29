@@ -59,7 +59,7 @@ Each top-level directory under `src/` represents a published book or source. Eve
 
 ### Families (`src/<publication-id>/<family>/`)
 
-Families represent discrete categories of game concepts. The 13 core families are:
+Families represent discrete categories of game concepts. The 14 core families are:
 
 * `action`
 * `ancestry`
@@ -73,6 +73,7 @@ Families represent discrete categories of game concepts. The 13 core families ar
 * `feature`
 * `heritage`
 * `item`
+* `rule`
 * `spell`
 
 Some families use nested directories (custom groups or bundles). For example, class features and options live in subdirectories under the owning class (`src/<pub>/class/<class>/...`).
@@ -146,7 +147,7 @@ The SQLite release asset (`omen-archive.sqlite`) contains a pre-built relational
 
 * **`archive_metadata` (`key TEXT PRIMARY KEY, value TEXT NOT NULL`):** Archive metadata (`epoch`, `version`, `record_count`, `exported_at`).
 * **`records` (`uri TEXT PRIMARY KEY, publication TEXT, family TEXT, slug TEXT, name TEXT, path TEXT, data JSON`):** All records in the archive.
-* **Views per family:** `actions`, `ancestries`, `archetypes`, `backgrounds`, `classes`, `companions`, `conditions`, `domains`, `feats`, `features`, `heritages`, `items`, `spells`.
+* **Views per family:** `actions`, `ancestries`, `archetypes`, `backgrounds`, `classes`, `companions`, `conditions`, `domains`, `feats`, `features`, `heritages`, `items`, `rules`, `spells`.
 
 ### CLI Example
 

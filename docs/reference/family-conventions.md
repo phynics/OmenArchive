@@ -282,3 +282,18 @@ Describes animal companion and familiar templates, basic statistics, attacks, an
 - **Schema**: [`schemas/character-feature.schema.json`](../../schemas/character-feature.schema.json)
 
 Features represent innate, progressing, or granted abilities belonging to an ancestry, class, or custom class group.
+
+## Rules
+
+- **Path**: `src/{pub}/rule/{slug}.yml`
+- **Schema**: [`schemas/character-rule.schema.json`](../../schemas/character-rule.schema.json)
+
+```yaml
+name: cover
+description: Cover is the protection a creature gets from an obstacle...
+```
+
+- A rule is reference text for a general rule (cover, flanking, degrees of success). It has no mechanics.
+- Descriptions link to a rule as `omen://rule/cover`.
+- Rule records are hand-authored from the book's rules text; a refresh doesn't generate or change them.
+
