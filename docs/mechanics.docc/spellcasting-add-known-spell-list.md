@@ -8,8 +8,10 @@ Effect `add-known-spell-list`, revision 1, from module `me.atkn.omen.pf2e.player
 
 | Input | Type | Required |
 |---|---|---|
-| `sourceId` | `uuid` | yes |
+| `source` | `source-key` | yes |
 | `spells` | `spell-id-list` | yes |
+
+`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
 ## Usage in the archive
 
@@ -26,6 +28,6 @@ Example, from `paizo-pathfinder-player-core-2/class/oracle/features/divine-acces
       name: $.oracle.divine-access
       contains: {type: core/int, value: 1}
   inputs:
-    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
+    source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-1}
 ```

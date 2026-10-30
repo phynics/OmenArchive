@@ -26,7 +26,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
+    source: champion-focus-spells
     sourceName: Champion Focus Spells
     castingKind: focus
     tradition: divine
@@ -34,6 +34,6 @@ rules:
 - key: domain-spell
   effect: spellcasting/grant-domain-spell
   inputs:
-    sourceId: 119e72d7-bb0f-5f5d-ac24-abb1d40addea
+    source: champion-focus-spells
     domain: {choice: $.champion.domains}
     advanced: false

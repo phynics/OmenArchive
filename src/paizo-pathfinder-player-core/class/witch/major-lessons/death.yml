@@ -16,7 +16,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: '@spell.curse-of-death'
     rankPolicy: cantrip
     castFrequency: focus
@@ -25,6 +25,6 @@ rules:
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
+    source: witch-spellcasting
     entryId: f41bc630-5536-5368-9204-a62e144798c9
     spellId: '@spell.raise-dead'

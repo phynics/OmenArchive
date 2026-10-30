@@ -33,7 +33,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     sourceName: Witch Focus Spells
     castingKind: focus
     tradition: divine
@@ -41,14 +41,14 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: '@spell.stoke-the-heart'
     rankPolicy: cantrip
     castFrequency: atWill
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
+    source: witch-spellcasting
     entryId: df2c4ff9-1c28-5a7f-b493-9f9914e1456f
     spellId: '@spell.command'
 - key: choice-witch-patron-first-hex
@@ -64,7 +64,7 @@ rules:
 - key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: {choice: $.witch.patron.first-hex}
     rankPolicy: cantrip
     castFrequency: focus
@@ -73,7 +73,7 @@ rules:
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
+    source: witch-spellcasting
     sourceName: Witch Spellcasting
     castingKind: prepared
     tradition: divine

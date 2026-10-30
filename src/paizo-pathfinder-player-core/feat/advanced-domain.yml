@@ -33,7 +33,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
+    source: cleric-focus-spells
     sourceName: Cleric Focus Spells
     castingKind: focus
     tradition: divine
@@ -41,6 +41,6 @@ rules:
 - key: advanced-domain-spell
   effect: spellcasting/grant-domain-spell
   inputs:
-    sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
+    source: cleric-focus-spells
     domain: {choice: $.cleric.advanced-domains}
     advanced: true

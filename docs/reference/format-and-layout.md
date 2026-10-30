@@ -70,10 +70,13 @@ mechanicsModules:
   spellcasting: me.atkn.omen.pf2e.playercore-spellcasting
 externalRecords:
   - omen://action/escape?source=paizo-pathfinder-player-core
+spellcastingSources:
+  ranger-focus-spells: ad075a6c-56ec-5561-ae46-5a8565022188
 ```
 
 - **`id`**: Must match the publication directory name and the canonical publisher/title slug.
 - **`mechanicsModules`**: Maps short module aliases (`core`, `spellcasting`) used in `rules:` blocks to registered mechanics module IDs.
+- **`spellcastingSources`**: Optional. Maps each spellcasting source a publication's rules name to its ID. The key is kebab-case after the source's name (`ranger-focus-spells`, `hag-magic`); a rule writes the key as its `source`. A key is declared once, its ID appears nowhere else in the publication's records, and two source names that give one key are refused. See [Spellcasting Tables and Sources](spellcasting.md#source-keys).
 - **`externalRecords`**: Declares fully qualified references (`omen://...`) to records from publications not yet imported into the archive that are referenced by this publication.
 
 ## Resource Families: Flat vs. Bundle Layouts

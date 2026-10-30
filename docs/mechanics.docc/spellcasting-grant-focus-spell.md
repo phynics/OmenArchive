@@ -8,8 +8,10 @@ Effect `grant-focus-spell`, revision 1, from module `me.atkn.omen.pf2e.playercor
 
 | Input | Type | Required |
 |---|---|---|
-| `sourceId` | `uuid` | yes |
+| `source` | `source-key` | yes |
 | `spellId` | `spell-id` | yes |
+
+`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
 ## Usage in the archive
 
@@ -21,6 +23,6 @@ Example, from `paizo-pathfinder-player-core/feat/masterful-warden.yml`:
 - key: grant-warden-spell
   effect: spellcasting/grant-focus-spell
   inputs:
-    sourceId: ad075a6c-56ec-5561-ae46-5a8565022188
+    source: ranger-focus-spells
     spellId: {choice: $.feat.masterful-warden.spell}
 ```

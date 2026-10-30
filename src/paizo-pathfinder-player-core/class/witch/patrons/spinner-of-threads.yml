@@ -34,7 +34,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     sourceName: Witch Focus Spells
     castingKind: focus
     tradition: occult
@@ -42,14 +42,14 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: '@spell.nudge-fate'
     rankPolicy: cantrip
     castFrequency: atWill
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
+    source: witch-spellcasting
     entryId: 9738b524-f5e2-59e7-9dce-6580ae4b46da
     spellId: '@spell.sure-strike'
 - key: choice-witch-patron-first-hex
@@ -65,7 +65,7 @@ rules:
 - key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: {choice: $.witch.patron.first-hex}
     rankPolicy: cantrip
     castFrequency: focus
@@ -74,7 +74,7 @@ rules:
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
+    source: witch-spellcasting
     sourceName: Witch Spellcasting
     castingKind: prepared
     tradition: occult

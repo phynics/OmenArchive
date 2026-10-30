@@ -50,7 +50,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: arcane
@@ -80,7 +80,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     sourceName: Sorcerer Focus Spells
     castingKind: focus
     tradition: arcane
@@ -92,7 +92,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     spellId: '@spell.flurry-of-claws'
     rankPolicy: cantrip
     castFrequency: focus
@@ -109,7 +109,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
     spellId: '@spell.shield?source=paizo-pathfinder-player-core'
 - key: add-known-spell-2
@@ -119,7 +119,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
     spellId: '@spell.fear?source=paizo-pathfinder-player-core'
 - key: add-known-spell-3
@@ -130,7 +130,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 2d4bda20-36ac-52bb-82ab-89581b5442f5
     spellId: '@spell.blazing-bolt?source=paizo-pathfinder-player-core'
 - key: add-known-spell-4
@@ -141,7 +141,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
     spellId: '@spell.haste?source=paizo-pathfinder-player-core'
 - key: add-known-spell-5
@@ -152,7 +152,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
     spellId: '@spell.fly?source=paizo-pathfinder-player-core'
 - key: add-known-spell-6
@@ -163,7 +163,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 5c41b3b1-f47f-5647-82fc-ecac8432bd54
     spellId: '@spell.subconscious-suggestion?source=paizo-pathfinder-player-core'
 - key: add-known-spell-7
@@ -174,7 +174,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
     spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
 - key: add-known-spell-8
@@ -185,7 +185,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
     spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
 - key: add-known-spell-9
@@ -196,7 +196,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: aa032417-4fe5-56ab-96ba-2556b85d3671
     spellId: '@spell.quandary?source=paizo-pathfinder-player-core'
 - key: add-known-spell-10
@@ -207,7 +207,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
     spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'
 - key: configure-source-3
@@ -217,7 +217,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: divine
@@ -247,7 +247,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     sourceName: Sorcerer Focus Spells
     castingKind: focus
     tradition: divine
@@ -259,7 +259,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     spellId: '@spell.flurry-of-claws'
     rankPolicy: cantrip
     castFrequency: focus
@@ -276,7 +276,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
     spellId: '@spell.shield?source=paizo-pathfinder-player-core'
 - key: add-known-spell-12
@@ -286,7 +286,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
     spellId: '@spell.fear?source=paizo-pathfinder-player-core'
 - key: add-known-spell-13
@@ -297,7 +297,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 9c51725d-80bb-5195-bdeb-28ddddc16bd2
     spellId: '@spell.augury?source=paizo-pathfinder-player-core'
 - key: add-known-spell-14
@@ -308,7 +308,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
     spellId: '@spell.haste?source=paizo-pathfinder-player-core'
 - key: add-known-spell-15
@@ -319,7 +319,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
     spellId: '@spell.fly?source=paizo-pathfinder-player-core'
 - key: add-known-spell-16
@@ -330,7 +330,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: bf13ead1-0440-5d13-85fa-23f8cf74347d
     spellId: '@spell.divine-immolation?source=paizo-pathfinder-player-core'
 - key: add-known-spell-17
@@ -341,7 +341,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
     spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
 - key: add-known-spell-18
@@ -352,7 +352,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
     spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
 - key: add-known-spell-19
@@ -363,7 +363,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 3d4c2f50-5911-5868-8a79-638588a92d52
     spellId: '@spell.divine-inspiration?source=paizo-pathfinder-player-core'
 - key: add-known-spell-20
@@ -374,7 +374,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
     spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'
 - key: configure-source-5
@@ -384,7 +384,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: occult
@@ -414,7 +414,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     sourceName: Sorcerer Focus Spells
     castingKind: focus
     tradition: occult
@@ -426,7 +426,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     spellId: '@spell.flurry-of-claws'
     rankPolicy: cantrip
     castFrequency: focus
@@ -443,7 +443,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
     spellId: '@spell.shield?source=paizo-pathfinder-player-core'
 - key: add-known-spell-22
@@ -453,7 +453,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
     spellId: '@spell.fear?source=paizo-pathfinder-player-core'
 - key: add-known-spell-23
@@ -464,7 +464,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 21ba0627-8e56-5c81-92d8-1751efe1af51
     spellId: '@spell.blood-vendetta?source=paizo-pathfinder-player-core'
 - key: add-known-spell-24
@@ -475,7 +475,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
     spellId: '@spell.haste?source=paizo-pathfinder-player-core'
 - key: add-known-spell-25
@@ -486,7 +486,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
     spellId: '@spell.fly?source=paizo-pathfinder-player-core'
 - key: add-known-spell-26
@@ -497,7 +497,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: bee4b33c-8b7b-5749-b673-5bcb3114414d
     spellId: '@spell.slither?source=paizo-pathfinder-player-core'
 - key: add-known-spell-27
@@ -508,7 +508,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
     spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
 - key: add-known-spell-28
@@ -519,7 +519,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
     spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
 - key: add-known-spell-29
@@ -530,7 +530,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: b3a28d26-2a2a-5a5d-9fb1-d062fef81e18
     spellId: '@spell.unrelenting-observation?source=paizo-pathfinder-player-core'
 - key: add-known-spell-30
@@ -541,7 +541,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
     spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'
 - key: configure-source-7
@@ -551,7 +551,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: primal
@@ -581,7 +581,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     sourceName: Sorcerer Focus Spells
     castingKind: focus
     tradition: primal
@@ -593,7 +593,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     spellId: '@spell.flurry-of-claws'
     rankPolicy: cantrip
     castFrequency: focus
@@ -610,7 +610,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 41365d41-f728-5f4e-8fe0-ef3d7316c584
     spellId: '@spell.shield?source=paizo-pathfinder-player-core'
 - key: add-known-spell-32
@@ -620,7 +620,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: dd4f17ea-40ba-512e-8dbe-09c47f06e50b
     spellId: '@spell.fear?source=paizo-pathfinder-player-core'
 - key: add-known-spell-33
@@ -631,7 +631,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 20b52f57-cced-571f-afaa-dfecb893a1e8
     spellId: '@spell.shatter?source=paizo-pathfinder-player-core'
 - key: add-known-spell-34
@@ -642,7 +642,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 3ba6655f-78b4-5cde-ac47-21f30992d657
     spellId: '@spell.haste?source=paizo-pathfinder-player-core'
 - key: add-known-spell-35
@@ -653,7 +653,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 60593428-6c8c-5a54-a7f4-c7f5cbe1fc48
     spellId: '@spell.fly?source=paizo-pathfinder-player-core'
 - key: add-known-spell-36
@@ -664,7 +664,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 1720c4f1-ceb3-538a-9a91-7f4c6d8a3368
     spellId: '@spell.howling-blizzard?source=paizo-pathfinder-player-core'
 - key: add-known-spell-37
@@ -675,7 +675,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 1f2e536f-2370-5c63-9ed5-6090f3f4903d
     spellId: '@spell.dragon-form?source=paizo-pathfinder-player-core'
 - key: add-known-spell-38
@@ -686,7 +686,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e2aa8918-967a-52c6-a0ab-23755d6150da
     spellId: '@spell.mask-of-terror?source=paizo-pathfinder-player-core'
 - key: add-known-spell-39
@@ -697,7 +697,7 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 9afec6eb-ada7-571d-92b0-dabd2fc07648
     spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
 - key: add-known-spell-40
@@ -708,6 +708,6 @@ rules:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 570c0fac-75f4-55b9-9cda-62aa9be1cd12
     spellId: '@spell.overwhelming-presence?source=paizo-pathfinder-player-core'

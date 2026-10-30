@@ -8,9 +8,11 @@ Effect `grant-domain-spell`, revision 1, from module `me.atkn.omen.pf2e.playerco
 
 | Input | Type | Required |
 |---|---|---|
-| `sourceId` | `uuid` | yes |
+| `source` | `source-key` | yes |
 | `domain` | `domain-id` | yes |
 | `advanced` | `bool` | yes |
+
+`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
 ## Usage in the archive
 
@@ -22,7 +24,7 @@ Example, from `paizo-pathfinder-player-core/feat/advanced-domain.yml`:
 - key: advanced-domain-spell
   effect: spellcasting/grant-domain-spell
   inputs:
-    sourceId: b7e73ea3-1be8-5215-a0c7-055d23080c56
+    source: cleric-focus-spells
     domain: {choice: $.cleric.advanced-domains}
     advanced: true
 ```

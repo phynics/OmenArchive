@@ -8,8 +8,10 @@ Effect `add-spell-list`, revision 1, from module `me.atkn.omen.pf2e.playercore-s
 
 | Input | Type | Required |
 |---|---|---|
-| `sourceId` | `uuid` | yes |
+| `source` | `source-key` | yes |
 | `spells` | `spell-id-list` | yes |
+
+`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
 ## Usage in the archive
 
@@ -21,6 +23,6 @@ Example, from `paizo-pathfinder-player-core/class/cleric/features/deity-cleric.y
 - key: deity-spell-list-rank-1
   effect: spellcasting/add-spell-list
   inputs:
-    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
+    source: cleric-spellcasting
     spells: {choiceList: $.deity.spells.rank-1}
 ```

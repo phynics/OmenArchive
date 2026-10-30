@@ -54,6 +54,17 @@
         "type": "string",
         "pattern": "^omen://[a-z0-9-]+(/[a-z0-9-]+)+\\?source=[a-z0-9-]+$"
       }
+    },
+    "spellcastingSources": {
+      "type": "object",
+      "description": "The spellcasting sources the publication's rules name, each by a key in kebab-case after the source's name (ranger-focus-spells), mapped to the source's ID. A rule writes the key as its source; the wire form and the OmenDB store keep the ID.",
+      "propertyNames": {
+        "pattern": "^(?!patron$)[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+      }
     }
   },
   "required": [

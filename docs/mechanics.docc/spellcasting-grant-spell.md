@@ -8,13 +8,15 @@ Effect `grant-spell`, revision 1, from module `me.atkn.omen.pf2e.playercore-spel
 
 | Input | Type | Required |
 |---|---|---|
-| `sourceId` | `uuid` | yes |
+| `source` | `source-key` | yes |
 | `grantId` | `uuid` | yes |
 | `spellId` | `spell-id` | yes |
 | `rankPolicy` | `rank-policy` | yes |
 | `castFrequency` | `cast-frequency` | yes |
 
 Derived from the rule key, never written: `grantId`.
+
+`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
 ## Usage in the archive
 
@@ -26,7 +28,7 @@ Example, from `paizo-pathfinder-player-core/class/bard/features/composition-spel
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: 82cec964-0fa9-5155-b45a-790771953c07
+    source: bard-focus-spells
     spellId: '@spell.counter-performance'
     rankPolicy: {kind: cantrip}
     castFrequency: {kind: focus}

@@ -35,7 +35,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
+    source: cleric-spellcasting
     sourceName: Cleric Spellcasting
     castingKind: prepared
     tradition: divine
@@ -52,7 +52,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
+    source: cleric-spellcasting
     spellId: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 4}
@@ -60,7 +60,7 @@ rules:
   effect: spellcasting/grant-spell
   level: 5
   inputs:
-    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
+    source: cleric-spellcasting
     spellId: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 1}
@@ -68,7 +68,7 @@ rules:
   effect: spellcasting/grant-spell
   level: 15
   inputs:
-    sourceId: '@class.cleric.features.cleric-spellcasting#spellcasting-source'
+    source: cleric-spellcasting
     spellId: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 1}

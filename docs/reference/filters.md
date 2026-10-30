@@ -36,7 +36,8 @@ Filters fitting within 56 characters may be written inline on a single line. Lon
 | `characterHasFeat` | Tests whether the character has taken a specific feat | `{ characterHasFeat: '@feat.assurance' }` |
 | `hasChoiceAncestryTrait`| Matches records sharing an ancestry chosen by a choice | `{ hasChoiceAncestryTrait: $.feat.adopted-ancestry.ancestry }` |
 | `hasChoiceTradition` | Matches spells of a tradition selected by a choice | `{ hasChoiceTradition: $.gnome.wellspring-tradition }` |
-| `knownBySource` | Matches spells known by a specific spellcasting source | `{ knownBySource: '@class.bard.features.bard-spellcasting#spellcasting-source' }` |
+| `knownBySource` | Matches spells known by a specific spellcasting source | `{ knownBySource: bard-spellcasting }` |
+| `hasSourceTradition` | Matches spells of the tradition a spellcasting source is configured with | `{ hasSourceTradition: witch-spellcasting }` |
 | `everything` | Wildcard match (matches all records) | `{ everything: true }` |
 | `spell.category` | Spell category (`cantrip`, `spell`, `focus`, `ritual`) | `{ spell.category: cantrip }` |
 | `spell.tradition` | Magical tradition (`arcane`, `divine`, `occult`, `primal`) | `{ spell.tradition: arcane }` |

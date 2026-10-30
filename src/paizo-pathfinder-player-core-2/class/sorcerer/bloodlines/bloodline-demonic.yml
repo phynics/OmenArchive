@@ -32,7 +32,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: divine
@@ -50,7 +50,7 @@ rules:
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     sourceName: Sorcerer Focus Spells
     castingKind: focus
     tradition: divine
@@ -58,7 +58,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     spellId: '@spell.gluttons-jaws'
     rankPolicy: cantrip
     castFrequency: focus
@@ -67,68 +67,68 @@ rules:
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: d4a8b117-7279-575c-bc05-40df2386cfb5
     spellId: '@spell.caustic-blast?source=paizo-pathfinder-player-core'
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 689c7e5b-6f4d-5bb8-8db1-053c6fe6c898
     spellId: '@spell.fear?source=paizo-pathfinder-player-core'
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e59e3297-8abb-5a27-b005-167b53139a7c
     spellId: '@spell.enlarge?source=paizo-pathfinder-player-core'
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e03b749a-68e0-5dec-9d97-72c2e8c062dc
     spellId: '@spell.slow?source=paizo-pathfinder-player-core'
 - key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e8a94fd2-11d9-5694-99e8-44c2c9649592
     spellId: '@spell.divine-wrath?source=paizo-pathfinder-player-core'
 - key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 7cc2fd3d-52c6-54e7-85b4-5ec8f1a3f168
     spellId: '@spell.blister'
 - key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: eff64b6a-bfe3-5969-9929-32b72455f408
     spellId: '@spell.disintegrate?source=paizo-pathfinder-player-core'
 - key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: a1590f45-bbbd-57ee-b5eb-c367a02f6961
     spellId: '@spell.divine-decree?source=paizo-pathfinder-player-core'
 - key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 4e66d24f-1e34-59b6-96ec-70e7d34f54ef
     spellId: '@spell.canticle-of-everlasting-grief?source=paizo-pathfinder-player-core'
 - key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 038588d4-a545-53c9-8d6d-a68eb1344a6c
     spellId: '@spell.implosion?source=paizo-pathfinder-player-core'

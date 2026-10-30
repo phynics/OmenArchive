@@ -26,7 +26,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
+    source: oracle-spellcasting
     sourceName: Oracle Spellcasting
     castingKind: spontaneous
     tradition: divine
@@ -39,7 +39,7 @@ rules:
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    source: oracle-focus-spells
     sourceName: Oracle Focus Spells
     castingKind: focus
     tradition: divine
@@ -47,7 +47,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: 7dc60b0b-1736-5c49-8c74-7954fa7784b3
+    source: oracle-focus-spells
     spellId: '@spell.soul-siphon'
     rankPolicy: cantrip
     castFrequency: focus
@@ -64,26 +64,26 @@ rules:
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
+    source: oracle-spellcasting
     entryId: 01568d7e-8f1d-5444-9ac7-e6321809e0e0
     spellId: '@spell.void-warp?source=paizo-pathfinder-player-core'
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
+    source: oracle-spellcasting
     entryId: 4d9bd86d-37c3-5b6d-8b90-2f1a35808a7b
     spellId: '@spell.grim-tendrils?source=paizo-pathfinder-player-core'
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
+    source: oracle-spellcasting
     entryId: 988cd051-a0b6-5c64-8f3f-6e0337210194
     spellId: '@spell.false-vitality?source=paizo-pathfinder-player-core'
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
-    sourceId: '@class.oracle.features.oracle-spellcasting#spellcasting-source'
+    source: oracle-spellcasting
     entryId: 95228064-cd6d-5d6d-94f2-db4dec4b5d2a
     spellId: '@spell.ghostly-weapon?source=paizo-pathfinder-player-core'

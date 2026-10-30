@@ -76,13 +76,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: YZ2XPmx1WHyWtM0g
 spellcasting:
-  source: '@class.wizard.features.wizard-spellcasting'
+  source: wizard-spellcasting
   spellbook: {from: curriculum}
 rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
+    source: wizard-focus-spells
     sourceName: Wizard Focus Spells
     castingKind: focus
     tradition: arcane
@@ -90,7 +90,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: df20e95c-0996-52fa-acbb-6ba6afa79aaf
+    source: wizard-focus-spells
     spellId: '@spell.earthworks'
     rankPolicy: cantrip
     castFrequency: focus

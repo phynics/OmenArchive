@@ -37,8 +37,12 @@ rules:
 Inputs that uniquely identify the rule itself (such as `selectionId`, `grantId`, or `uuid`) are tagged with `identity: rule` in the mechanics descriptor and are **omitted from the authored YAML**. The engine derives them deterministically from the record path and rule key:
 `uuid5("<record-path>#rule/<key>/<input-name>")`.
 
-A `sourceId` identifying a spellcasting source is authored as a reference to the defining feature:
-`sourceId: '@class.wizard.features.wizard-spellcasting#spellcasting-source'`.
+An input that names a spellcasting source is written `source` and takes the source's **key**, such as
+`source: wizard-spellcasting` or `source: ranger-focus-spells`. The key is kebab-case after the source's
+name (the `sourceName` of its `configure-source` rule, or the name of the feature that defines it), and
+the publication declares it in `spellcastingSources` of `publication.yml`, where it is mapped to the
+source's ID. The wire form calls the input `sourceId` and holds that ID; a literal source ID is not
+written in a record. See [Spellcasting Tables and Sources](spellcasting.md#source-keys).
 
 ## Input Values
 

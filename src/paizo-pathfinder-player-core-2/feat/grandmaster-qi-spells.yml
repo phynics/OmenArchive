@@ -30,7 +30,7 @@ rules:
 - key: qi-focus-source
   effect: spellcasting/configure-source
   inputs:
-    sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
+    source: monk-focus-spells
     sourceName: Monk Focus Spells
     castingKind: focus
     tradition: {choice: $.qi.tradition}
@@ -55,7 +55,7 @@ rules:
 - key: grant-qi-spell
   effect: spellcasting/grant-focus-spell
   inputs:
-    sourceId: e2c36678-f83d-5341-8dfc-d600e0a18f71
+    source: monk-focus-spells
     spellId: {choice: $.feat.grandmaster-qi-spells.spell}
 - key: qi-focus-point
   effect: spellcasting/add-focus-point

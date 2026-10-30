@@ -26,16 +26,12 @@ rules:
     name: $.bard.signature-spells.rank-1
     label: Rank 1 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 1}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 1}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-1
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-1}
 - key: choice-2
   level: 3
@@ -43,16 +39,12 @@ rules:
     name: $.bard.signature-spells.rank-2
     label: Rank 2 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 2}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 2}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-2
   effect: spellcasting/mark-signature-spell
   level: 3
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-2}
 - key: choice-3
   level: 5
@@ -60,16 +52,12 @@ rules:
     name: $.bard.signature-spells.rank-3
     label: Rank 3 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 3}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 3}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-3
   effect: spellcasting/mark-signature-spell
   level: 5
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-3}
 - key: choice-4
   level: 7
@@ -77,16 +65,12 @@ rules:
     name: $.bard.signature-spells.rank-4
     label: Rank 4 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 4}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 4}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-4
   effect: spellcasting/mark-signature-spell
   level: 7
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-4}
 - key: choice-5
   level: 9
@@ -94,16 +78,12 @@ rules:
     name: $.bard.signature-spells.rank-5
     label: Rank 5 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 5}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 5}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-5
   effect: spellcasting/mark-signature-spell
   level: 9
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-5}
 - key: choice-6
   level: 11
@@ -111,16 +91,12 @@ rules:
     name: $.bard.signature-spells.rank-6
     label: Rank 6 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 6}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 6}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-6
   effect: spellcasting/mark-signature-spell
   level: 11
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-6}
 - key: choice-7
   level: 13
@@ -128,16 +104,12 @@ rules:
     name: $.bard.signature-spells.rank-7
     label: Rank 7 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 7}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 7}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-7
   effect: spellcasting/mark-signature-spell
   level: 13
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-7}
 - key: choice-8
   level: 15
@@ -145,16 +117,12 @@ rules:
     name: $.bard.signature-spells.rank-8
     label: Rank 8 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 8}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 8}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-8
   effect: spellcasting/mark-signature-spell
   level: 15
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-8}
 - key: choice-9
   level: 17
@@ -162,16 +130,12 @@ rules:
     name: $.bard.signature-spells.rank-9
     label: Rank 9 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 9}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 9}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-9
   effect: spellcasting/mark-signature-spell
   level: 17
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-9}
 - key: choice-10
   level: 19
@@ -179,14 +143,10 @@ rules:
     name: $.bard.signature-spells.rank-10
     label: Rank 10 signature spell
     type: spellcasting/spell-id
-    records:
-      filter:
-        all:
-        - {level: 10}
-        - {knownBySource: d5fb3de0-9ae5-527d-8670-a51d29cf66aa}
+    records: {filter: {all: [{level: 10}, {knownBySource: bard-spellcasting}]}}
 - key: mark-signature-spell-10
   effect: spellcasting/mark-signature-spell
   level: 19
   inputs:
-    sourceId: '@class.bard.features.bard-spellcasting#spellcasting-source'
+    source: bard-spellcasting
     spellId: {choice: $.bard.signature-spells.rank-10}

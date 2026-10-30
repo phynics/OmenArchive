@@ -26,7 +26,7 @@ rules:
 - key: warden-focus-source
   effect: spellcasting/configure-source
   inputs:
-    sourceId: ad075a6c-56ec-5561-ae46-5a8565022188
+    source: ranger-focus-spells
     sourceName: Ranger Focus Spells
     castingKind: focus
     tradition: primal
@@ -46,7 +46,7 @@ rules:
 - key: grant-warden-spell
   effect: spellcasting/grant-focus-spell
   inputs:
-    sourceId: ad075a6c-56ec-5561-ae46-5a8565022188
+    source: ranger-focus-spells
     spellId: {choice: $.feat.masterful-warden.spell}
 - key: warden-spell-proficiency
   effect: spellcasting/increase-spell-proficiency

@@ -33,7 +33,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: e0VhUyjz1clW3sC4
 spellcasting:
-  source: '@class.witch.features.witch-spellcasting'
+  source: witch-spellcasting
   choose:
   - '@spell.summon-animal'
   - '@spell.summon-plant-or-fungus'
@@ -41,7 +41,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     sourceName: Witch Focus Spells
     castingKind: focus
     tradition: primal
@@ -49,7 +49,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: '@spell.wilding-word'
     rankPolicy: cantrip
     castFrequency: atWill
@@ -66,7 +66,7 @@ rules:
 - key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: {choice: $.witch.patron.first-hex}
     rankPolicy: cantrip
     castFrequency: focus
@@ -75,7 +75,7 @@ rules:
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: '@class.witch.features.witch-spellcasting#spellcasting-source'
+    source: witch-spellcasting
     sourceName: Witch Spellcasting
     castingKind: prepared
     tradition: primal

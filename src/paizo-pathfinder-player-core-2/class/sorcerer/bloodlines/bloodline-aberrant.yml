@@ -32,7 +32,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: occult
@@ -50,7 +50,7 @@ rules:
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     sourceName: Sorcerer Focus Spells
     castingKind: focus
     tradition: occult
@@ -58,7 +58,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: f7c09ed1-9ba7-5b68-bfec-910156f41144
+    source: sorcerer-focus-spells
     spellId: '@spell.tentacular-limbs'
     rankPolicy: cantrip
     castFrequency: focus
@@ -67,68 +67,68 @@ rules:
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: fd09f623-bf42-5797-b8d3-f160875dfc7b
     spellId: '@spell.daze?source=paizo-pathfinder-player-core'
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: e2ca0b84-90db-556b-a99d-404993675ba0
     spellId: '@spell.phantom-pain?source=paizo-pathfinder-player-core'
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: dce6570d-7880-5962-bde4-a5d49a0419ed
     spellId: '@spell.stupefy?source=paizo-pathfinder-player-core'
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: f6db46c3-4a0b-57a5-b2c2-d7445a9bfbdb
     spellId: '@spell.vampiric-feast?source=paizo-pathfinder-player-core'
 - key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: f85e34f4-716e-5599-ad0f-467a59f5ad72
     spellId: '@spell.confusion?source=paizo-pathfinder-player-core'
 - key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: c362a9fa-eb83-564e-88f8-b97e75501c80
     spellId: '@spell.slither?source=paizo-pathfinder-player-core'
 - key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 41506d45-c921-5599-895e-8f6951823cb3
     spellId: '@spell.never-mind?source=paizo-pathfinder-player-core'
 - key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: f0a4251d-bbba-51b8-81f4-e871786c17fe
     spellId: '@spell.warp-mind?source=paizo-pathfinder-player-core'
 - key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 5f118bb8-4331-5892-bf4f-304b165368fd
     spellId: '@spell.uncontrollable-dance?source=paizo-pathfinder-player-core'
 - key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
   inputs:
-    sourceId: '@class.sorcerer.features.sorcerer-spellcasting#spellcasting-source'
+    source: sorcerer-spellcasting
     entryId: 85137358-9875-5b57-a273-77580d0027b6
     spellId: '@spell.unfathomable-song?source=paizo-pathfinder-player-core'

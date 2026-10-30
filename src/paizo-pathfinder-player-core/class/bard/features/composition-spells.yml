@@ -40,7 +40,7 @@ rules:
 - key: configure-source-1
   effect: spellcasting/configure-source
   inputs:
-    sourceId: 82cec964-0fa9-5155-b45a-790771953c07
+    source: bard-focus-spells
     sourceName: Bard Focus Spells
     castingKind: focus
     tradition: occult
@@ -48,7 +48,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: 82cec964-0fa9-5155-b45a-790771953c07
+    source: bard-focus-spells
     spellId: '@spell.counter-performance'
     rankPolicy: cantrip
     castFrequency: focus
@@ -57,7 +57,7 @@ rules:
 - key: grant-spell-2
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: 82cec964-0fa9-5155-b45a-790771953c07
+    source: bard-focus-spells
     spellId: '@spell.courageous-anthem'
     rankPolicy: cantrip
     castFrequency: atWill

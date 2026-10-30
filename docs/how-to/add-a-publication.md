@@ -23,6 +23,7 @@ mechanicsModules:
   core: me.atkn.omen.pf2e.playercore
   spellcasting: me.atkn.omen.pf2e.playercore-spellcasting
 externalRecords: []
+spellcastingSources: {}   # optional: key -> ID of each spellcasting source the book's rules name
 ```
 
 ## 3. Create Resource Subdirectories

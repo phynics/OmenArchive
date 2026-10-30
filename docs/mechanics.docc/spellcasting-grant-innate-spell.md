@@ -8,7 +8,7 @@ Effect `grant-innate-spell`, revision 1, from module `me.atkn.omen.pf2e.playerco
 
 | Input | Type | Required |
 |---|---|---|
-| `sourceId` | `uuid` | yes |
+| `source` | `source-key` | yes |
 | `sourceName` | `string` | yes |
 | `grantId` | `uuid` | yes |
 | `spellId` | `spell-id` | yes |
@@ -18,6 +18,8 @@ Effect `grant-innate-spell`, revision 1, from module `me.atkn.omen.pf2e.playerco
 | `castFrequency` | `cast-frequency` | yes |
 
 Derived from the rule key, never written: `grantId`.
+
+`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
 ## Usage in the archive
 
@@ -29,7 +31,7 @@ Example, from `paizo-pathfinder-player-core/feat/first-world-magic.yml`:
 - key: grant-innate-spell-1
   effect: spellcasting/grant-innate-spell
   inputs:
-    sourceId: f9fc550d-e6c9-5b90-9142-c5607ad4e3fd
+    source: first-world-magic
     sourceName: First World Magic
     spellId: {choice: $.feat.first-world-magic.cantrip}
     tradition: primal

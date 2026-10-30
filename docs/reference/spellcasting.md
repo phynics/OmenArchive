@@ -28,14 +28,42 @@ The `slots:` mapping specifies the cumulative spell slots per rank, matching pri
 
 ## Source Linkage and Curricula
 
-When a subclass or archetype adds to an existing spellcasting feature, it references that source rather than redefining it:
+When a subclass or archetype adds to an existing spellcasting feature, it names that source by its key rather than redefining it:
 
 ```yaml
 spellcasting:
-  source: '@class.wizard.features.wizard-spellcasting'
+  source: wizard-spellcasting
   spellbook:
     from: curriculum
 ```
+
+The block's `source` is one of three things: a map (`{kind, tradition, attribute}`) that defines the source, `patron` (the source belongs to a class whose patrons configure it), or the key of a source defined elsewhere.
+
+## Source Keys
+
+Every spellcasting source has a **key**: its name in kebab-case, as the book names it. `Wizard Spellcasting` is `wizard-spellcasting`, `Ranger Focus Spells` is `ranger-focus-spells`, `Hag Magic` is `hag-magic`. A rule names its source by the key, in the input `source`:
+
+```yaml
+- key: grant-warden-spell
+  effect: spellcasting/grant-focus-spell
+  inputs:
+    source: ranger-focus-spells
+    spellId: {choice: $.feat.masterful-warden.spell}
+```
+
+The publication declares each key once, in `spellcastingSources` of its `publication.yml`, with the ID the engine and the OmenDB store know the source by:
+
+```yaml
+spellcastingSources:
+  ranger-focus-spells: ad075a6c-56ec-5561-ae46-5a8565022188
+  wizard-spellcasting: c78cb906-1cd7-57cc-b713-288becbb7f90
+```
+
+- The ID is written here and nowhere else. A record never carries a literal source ID, and the reader refuses a source ID the publication doesn't declare.
+- The key is also what a filter and a pick's `distinctWithin` group name: `{ knownBySource: wizard-spellcasting }`, `{ hasSourceTradition: witch-spellcasting }`, `distinctWithin: known-spells/wizard-spellcasting`. The wire form holds the ID in each place (`known-spells/<id>`).
+- A source is named the same way wherever it appears. The archive check refuses two source names that give one key (`Hag Magic` and `hag  magic`), a source whose key the publication doesn't declare or declares for another ID, and a record that names a key no source defines.
+- A source a `spellcasting:` block defines is declared under the key of its feature's name (`wizard-spellcasting`) with the ID the block derives, so the check holds the two together.
+- To add a source, choose its key, write a new lowercase UUID for it under `spellcastingSources`, and name the key in the rules.
 
 A wizard school providing curriculum spells declares its slots and spells in a `curriculum:` block on the school feature record.
 

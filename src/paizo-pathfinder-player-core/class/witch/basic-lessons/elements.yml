@@ -22,7 +22,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: FuOHRoEU8nHOXZnk
 spellcasting:
-  source: '@class.witch.features.witch-spellcasting'
+  source: witch-spellcasting
   choose:
   - '@spell.breathe-fire'
   - '@spell.air-bubble'
@@ -32,7 +32,7 @@ rules:
 - key: grant-spell-1
   effect: spellcasting/grant-spell
   inputs:
-    sourceId: cc4e5b41-33a6-5f96-8e85-78c3d94071c6
+    source: witch-focus-spells
     spellId: '@spell.elemental-betrayal'
     rankPolicy: cantrip
     castFrequency: focus
