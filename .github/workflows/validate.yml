@@ -10,7 +10,7 @@ jobs:
   validate:
     # Apple platforms only; Swift 6.4 / Xcode 27 is the toolchain floor. The tooling comes from the
     # main branch of the private monorepo, which holds OmenArchiveKit and OmenCore.
-    runs-on: macos-26
+    runs-on: xcode-27
 
     steps:
       - name: Select Xcode 27
