@@ -86,12 +86,8 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: int
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: wizard-focus-spells
     spellId: '@spell.scramble-body'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point

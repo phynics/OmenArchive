@@ -18,18 +18,13 @@ Rules refer to it with the alias `spellcasting`, declared in a publication's `me
 
 ## Effects
 
-- <doc:spellcasting-add-focus-point>
 - <doc:spellcasting-add-known-spell>
-- <doc:spellcasting-add-known-spell-list>
 - <doc:spellcasting-add-spell-list>
 - <doc:spellcasting-configure-source>
-- <doc:spellcasting-grant-domain-spell>
 - <doc:spellcasting-grant-focus-spell>
 - <doc:spellcasting-grant-innate-spell>
 - <doc:spellcasting-grant-slot>
 - <doc:spellcasting-grant-spell>
-- <doc:spellcasting-increase-proficiency>
-- <doc:spellcasting-increase-source-proficiency>
 - <doc:spellcasting-increase-spell-proficiency>
 - <doc:spellcasting-mark-signature-spell>
 - <doc:spellcasting-modify-innate-sources>

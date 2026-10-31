@@ -41,15 +41,11 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.tempest-touch'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
@@ -62,25 +58,21 @@ rules:
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: cd45723d-3326-57be-81e9-48fc8b536145
-    spellId: '@spell.electric-arc?source=paizo-pathfinder-player-core'
+    spells: ['@spell.electric-arc?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: eccfe510-8c2a-555f-8261-1d6d9ced9e24
-    spellId: '@spell.thunderstrike?source=paizo-pathfinder-player-core'
+    spells: ['@spell.thunderstrike?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: oracle-spellcasting
-    entryId: 80c0da63-cde6-5137-94d7-e588904713e2
-    spellId: '@spell.hydraulic-torrent?source=paizo-pathfinder-player-core'
+    spells: ['@spell.hydraulic-torrent?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: oracle-spellcasting
-    entryId: ef0d8e70-70cf-54a4-9e18-dd307a9e3585
-    spellId: '@spell.chain-lightning?source=paizo-pathfinder-player-core'
+    spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']

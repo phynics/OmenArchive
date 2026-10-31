@@ -101,7 +101,7 @@
     },
     "spellcasting": {
       "x-omen-ownership": "archive",
-      "description": "A caster's slots and spell picks, written once, as the book's table. Authoring shorthand: reading the archive expands it into the record's first rules (configure-source, increase-source-proficiency, grant-slot and add-known-spell), with IDs derived from the record's path. `source` is {kind, tradition, attribute} to define a source, or an @ reference to the feature that defines it; `slots` maps a level to its cumulative row (cantrips, then ranks 1-10); `spellbook` maps a level or range (2-20) to its picks (cantrips, rank-N, any-rank, new-slots).",
+      "description": "A caster's slots and spell picks, written once, as the book's table. Authoring shorthand: reading the archive expands it into the record's first rules (configure-source, increase-spell-proficiency, grant-slot and add-known-spell), with IDs derived from the record's path. `source` is {kind, tradition, attribute} to define a source, or an @ reference to the feature that defines it; `slots` maps a level to its cumulative row (cantrips, then ranks 1-10); `spellbook` maps a level or range (2-20) to its picks (cantrips, rank-N, any-rank, new-slots).",
       "type": "object",
       "properties": {
         "source": {

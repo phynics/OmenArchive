@@ -48,8 +48,7 @@ rules:
     tradition: divine
     attribute: wis
 - key: domain-spell
-  effect: spellcasting/grant-domain-spell
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: cleric-focus-spells
-    domain: {choice: $.cleric.domains}
-    advanced: false
+    spellId: $.cleric.domains.domainSpell

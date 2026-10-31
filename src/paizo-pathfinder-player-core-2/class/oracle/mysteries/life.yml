@@ -42,15 +42,11 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.life-link'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
@@ -63,25 +59,21 @@ rules:
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: ae37b68e-1fd7-5349-8b10-11f1873c258f
-    spellId: '@spell.vitality-lash?source=paizo-pathfinder-player-core'
+    spells: ['@spell.vitality-lash?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: cefbe9e4-eee6-5d30-b608-6c7b2de1e950
-    spellId: '@spell.soothe?source=paizo-pathfinder-player-core'
+    spells: ['@spell.soothe?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
-    entryId: e5d7dc9e-f5a8-51d0-92ad-96a5cdc15076
-    spellId: '@spell.false-vitality?source=paizo-pathfinder-player-core'
+    spells: ['@spell.false-vitality?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: oracle-spellcasting
-    entryId: f249bc27-e974-5605-8331-bcbbdecaa340
-    spellId: '@spell.grisly-growths'
+    spells: ['@spell.grisly-growths']

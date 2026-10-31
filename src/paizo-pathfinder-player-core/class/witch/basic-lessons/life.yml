@@ -13,18 +13,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: HbREpzudMXPscgCj
 rules:
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: witch-focus-spells
     spellId: '@spell.life-boost'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
-    entryId: 5893f6ef-7151-590f-a03a-1b0a3649ad94
-    spellId: '@spell.spirit-link'
+    spells: ['@spell.spirit-link']

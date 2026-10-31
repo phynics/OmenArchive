@@ -20,7 +20,7 @@ Derived from the rule key, never written: `grantId`.
 
 ## Usage in the archive
 
-Used by 120 rules.
+Used by 11 rules.
 
 Example, from `paizo-pathfinder-player-core/class/bard/features/composition-spells.yml`:
 
@@ -29,7 +29,7 @@ Example, from `paizo-pathfinder-player-core/class/bard/features/composition-spel
   effect: spellcasting/grant-spell
   inputs:
     source: bard-focus-spells
-    spellId: '@spell.counter-performance'
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: focus}
+    spellId: '@spell.courageous-anthem'
+    rankPolicy: cantrip
+    castFrequency: atWill
 ```

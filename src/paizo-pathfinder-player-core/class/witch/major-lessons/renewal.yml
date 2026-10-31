@@ -13,18 +13,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: 7Y2XDqr4gRisjiAG
 rules:
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: witch-focus-spells
     spellId: '@spell.restorative-moment'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
-    entryId: 6b1bf0f3-ba27-5ea0-ae73-9aa83a30e06e
-    spellId: '@spell.field-of-life'
+    spells: ['@spell.field-of-life']

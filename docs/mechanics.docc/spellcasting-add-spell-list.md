@@ -15,7 +15,7 @@ Effect `add-spell-list`, revision 1, from module `me.atkn.omen.pf2e.playercore-s
 
 ## Usage in the archive
 
-Used by 9 rules.
+Used by 18 rules.
 
 Example, from `paizo-pathfinder-player-core/class/cleric/features/deity-cleric.yml`:
 

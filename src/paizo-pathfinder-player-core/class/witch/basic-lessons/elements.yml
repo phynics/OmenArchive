@@ -29,12 +29,8 @@ spellcasting:
   - '@spell.hydraulic-push'
   - '@spell.pummeling-rubble'
 rules:
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: witch-focus-spells
     spellId: '@spell.elemental-betrayal'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point

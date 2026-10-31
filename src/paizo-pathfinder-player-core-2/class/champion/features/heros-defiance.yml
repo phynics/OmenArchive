@@ -18,14 +18,9 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   level: 19
   inputs:
     source: champion-focus-spells
     spellId: '@spell.heros-defiance'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
-  level: 19

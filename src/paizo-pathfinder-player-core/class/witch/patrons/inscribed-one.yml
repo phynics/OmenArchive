@@ -50,8 +50,7 @@ rules:
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
-    entryId: 45563fdc-3b04-5a54-9767-53a43898fb35
-    spellId: '@spell.runic-weapon'
+    spells: ['@spell.runic-weapon']
 - key: choice-witch-patron-first-hex
   choice:
     name: $.witch.patron.first-hex
@@ -62,15 +61,11 @@ rules:
         any:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
-- key: grant-spell-2
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: witch-focus-spells
     spellId: {choice: $.witch.patron.first-hex}
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:

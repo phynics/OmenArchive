@@ -35,9 +35,8 @@ rules:
     tradition: {choice: $.qi.tradition}
     attribute: wis
 - key: qi-spell-proficiency
-  effect: spellcasting/increase-proficiency
+  effect: spellcasting/increase-spell-proficiency
   inputs:
-    tradition: {choice: $.qi.tradition}
     proficiency: 2
 - key: choice-feat-master-qi-spells-spell
   choice:
@@ -56,9 +55,3 @@ rules:
   inputs:
     source: monk-focus-spells
     spellId: {choice: $.feat.master-qi-spells.spell}
-- key: qi-focus-point
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.feat.master-qi-spells.spell
-      isSet: true

@@ -47,8 +47,7 @@ rules:
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
-    entryId: 7f7f55c8-651f-538c-b883-59e47a9d9e1f
-    spellId: '@spell.gust-of-wind'
+    spells: ['@spell.gust-of-wind']
 - key: choice-witch-patron-first-hex
   choice:
     name: $.witch.patron.first-hex
@@ -59,15 +58,11 @@ rules:
         any:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
-- key: grant-spell-2
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: witch-focus-spells
     spellId: {choice: $.witch.patron.first-hex}
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:

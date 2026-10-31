@@ -1,6 +1,6 @@
 # spellcasting/add-known-spell
 
-Adds a spell to a spontaneous caster's spell repertoire or a prepared caster's spellbook.
+Adds spells to a spontaneous caster's spell repertoire or a prepared caster's spellbook.
 
 Effect `add-known-spell`, revision 1, from module `me.atkn.omen.pf2e.playercore-spellcasting`.
 
@@ -9,14 +9,15 @@ Effect `add-known-spell`, revision 1, from module `me.atkn.omen.pf2e.playercore-
 | Input | Type | Required |
 |---|---|---|
 | `source` | `source-key` | yes |
-| `entryId` | `uuid` | yes |
-| `spellId` | `spell-id` | yes |
+| `spells` | `spell-id-list` | yes |
 
 `source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
+`spells` is a list: one spell is a list of one (`[spell/soothe]`), and a single answered choice is read with `{choiceList: $.spellbook.known-1}`. Each spell gets its own repertoire entry, with an identity derived from the rule and the spell, so replaying the rule adds nothing twice. The effect adds to the repertoire or spellbook only; to also widen the source's spell list, add an `add-spell-list` rule with the same spells.
+
 ## Usage in the archive
 
-Used by 231 rules.
+Used by 240 rules.
 
 Example, from `paizo-pathfinder-player-core/class/bard/muses/polymath.yml`:
 
@@ -25,6 +26,5 @@ Example, from `paizo-pathfinder-player-core/class/bard/muses/polymath.yml`:
   effect: spellcasting/add-known-spell
   inputs:
     source: bard-spellcasting
-    entryId: 391accd6-b16f-5405-9256-7fc80fef11b9
-    spellId: '@spell.phantasmal-minion'
+    spells: ['@spell.phantasmal-minion']
 ```

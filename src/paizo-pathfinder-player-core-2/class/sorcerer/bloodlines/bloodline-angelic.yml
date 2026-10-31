@@ -56,80 +56,66 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.angelic-halo'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
-    entryId: b6495252-0a60-5289-9161-f0fcd78a0456
-    spellId: '@spell.light?source=paizo-pathfinder-player-core'
+    spells: ['@spell.light?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
-    entryId: 372461ba-7bee-554c-8f3c-5926223ceada
-    spellId: '@spell.heal?source=paizo-pathfinder-player-core'
+    spells: ['@spell.heal?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
-    entryId: ffd8ea5d-7670-58bf-aa77-0410a5909593
-    spellId: '@spell.spiritual-armament?source=paizo-pathfinder-player-core'
+    spells: ['@spell.spiritual-armament?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
-    entryId: 7a3f156a-030a-5ad2-9cf7-fa598ddc2c4a
-    spellId: '@spell.holy-light?source=paizo-pathfinder-player-core'
+    spells: ['@spell.holy-light?source=paizo-pathfinder-player-core']
 - key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
-    entryId: f6884abc-879a-5a7d-9a51-df12e453f462
-    spellId: '@spell.divine-wrath?source=paizo-pathfinder-player-core'
+    spells: ['@spell.divine-wrath?source=paizo-pathfinder-player-core']
 - key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
-    entryId: 6d04d091-6167-5d2a-98fe-e06ef9d30af6
-    spellId: '@spell.divine-immolation?source=paizo-pathfinder-player-core'
+    spells: ['@spell.divine-immolation?source=paizo-pathfinder-player-core']
 - key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
-    entryId: f7cf05cc-47d1-536a-a8e3-923783cb59d9
-    spellId: '@spell.blessed-boundary?source=paizo-pathfinder-player-core'
+    spells: ['@spell.blessed-boundary?source=paizo-pathfinder-player-core']
 - key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
-    entryId: 217110ce-c9c8-5153-8ca0-4a194039676e
-    spellId: '@spell.divine-decree?source=paizo-pathfinder-player-core'
+    spells: ['@spell.divine-decree?source=paizo-pathfinder-player-core']
 - key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
-    entryId: 04c86a2c-2394-5243-9e25-27dcbd1419a5
-    spellId: '@spell.moment-of-renewal?source=paizo-pathfinder-player-core'
+    spells: ['@spell.moment-of-renewal?source=paizo-pathfinder-player-core']
 - key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
   inputs:
     source: sorcerer-spellcasting
-    entryId: fd111284-6896-5ba8-be1c-169acc3576eb
-    spellId: '@spell.foresight?source=paizo-pathfinder-player-core'
+    spells: ['@spell.foresight?source=paizo-pathfinder-player-core']

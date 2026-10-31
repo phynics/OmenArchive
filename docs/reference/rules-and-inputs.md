@@ -91,6 +91,17 @@ An input that holds its default is left out, and the reader puts it back. The de
 
 - `{ choice: $.cleric.divine-font }`: reads the chosen answer from a named character choice.
 - `{ choiceList: $.deity.spells }`: reads a list of answers from a multi-select choice.
+- `{ choice: $.cleric.domains, field: domainSpell }`: reads a field of the record the choice holds (here a
+  domain), not the record itself. The field's value must match the input's value type: `domainSpell` and
+  `advancedDomainSpell` are spell references, so they fill a `spell-id` input. The rule waits until the choice
+  is answered; a record without that field applies nothing and reports it. On the wire the source is
+  `{kind: choiceField, name: $.cleric.domains, field: domainSpell}`. `field` is allowed only with `choice`.
+- `$.cleric.domains.domainSpell`: the short form of that field read, for a choice that holds one answer. A
+  bare `$` path on an input that isn't a sheet value is a field read exactly when its last segment is one of
+  the readable field names (`domainSpell`, `advancedDomainSpell`); the path before it names the choice
+  (`$.cleric.advanced-domains.advancedDomainSpell` reads the field of `$.cleric.advanced-domains`). Any other
+  bare `$` path on such an input is an error, and a choice is never named after a readable field. The writer
+  uses the short form where it reads back to the same source, and the long form is always accepted.
 - `{ literal: ... }`: only an escape, for a payload that is itself a map whose keys are all `type` or a
   source key. A map that merely has a `type` key (`numeric: {amount: 1, type: item}`) is written bare.
 - `{ type: core/skill, … }`: names the input's value type where it isn't the one the descriptor declares.

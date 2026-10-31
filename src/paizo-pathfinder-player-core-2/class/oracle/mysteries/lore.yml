@@ -43,15 +43,11 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.brain-drain'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
@@ -64,25 +60,21 @@ rules:
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: 73f60bec-692d-5b1e-9314-a883e5999db8
-    spellId: '@spell.read-aura?source=paizo-pathfinder-player-core'
+    spells: ['@spell.read-aura?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: 71493d28-de53-5fc5-8f64-5ea2e7e990b6
-    spellId: '@spell.mindlink?source=paizo-pathfinder-player-core'
+    spells: ['@spell.mindlink?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: oracle-spellcasting
-    entryId: 495976f8-43fe-5ac4-bb2b-019a94bbb481
-    spellId: '@spell.hypercognition?source=paizo-pathfinder-player-core'
+    spells: ['@spell.hypercognition?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: oracle-spellcasting
-    entryId: ab041060-cca6-5fa8-8a66-1f208c963c43
-    spellId: '@spell.never-mind?source=paizo-pathfinder-player-core'
+    spells: ['@spell.never-mind?source=paizo-pathfinder-player-core']

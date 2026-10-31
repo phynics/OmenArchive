@@ -1,6 +1,6 @@
 # spellcasting/increase-spell-proficiency
 
-Increases general spell attack and spell DC proficiency across all traditions and spellcasting sources.
+Increases the character's spell attack and spell DC proficiency, which every spellcasting source shares.
 
 Effect `increase-spell-proficiency`, revision 1, from module `me.atkn.omen.pf2e.playercore-spellcasting`.
 
@@ -10,9 +10,11 @@ Effect `increase-spell-proficiency`, revision 1, from module `me.atkn.omen.pf2e.
 |---|---|---|
 | `proficiency` | `proficiency-rank` | yes |
 
+A character has one spell attack and spell DC proficiency rank, not one per tradition; each source keeps its own key attribute. The effect raises that rank and never lowers it.
+
 ## Usage in the archive
 
-Used by 12 rules.
+Used by 42 rules.
 
 Example, from `paizo-pathfinder-player-core/archetype/ranger/feats/ranger-dedication.yml`:
 

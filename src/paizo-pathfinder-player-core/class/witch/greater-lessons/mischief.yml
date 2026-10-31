@@ -13,18 +13,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: XBgBh3xZhgGQP7lF
 rules:
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: witch-focus-spells
     spellId: '@spell.deceivers-cloak'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
-    entryId: 8890013f-9478-5c42-8a46-9c8a993e01c8
-    spellId: '@spell.mad-monkeys'
+    spells: ['@spell.mad-monkeys']

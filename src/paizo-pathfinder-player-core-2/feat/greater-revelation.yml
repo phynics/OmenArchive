@@ -50,8 +50,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -60,15 +60,6 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.ancestral-form'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
 - key: configure-source-2
   effect: spellcasting/configure-source
   level: 12
@@ -82,8 +73,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-2
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-2
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -92,15 +83,6 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.revel-in-retribution'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-2
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
 - key: configure-source-3
   effect: spellcasting/configure-source
   level: 12
@@ -114,8 +96,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-3
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-3
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -124,15 +106,6 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.claim-undead'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-3
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
 - key: configure-source-4
   effect: spellcasting/configure-source
   level: 12
@@ -146,8 +119,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-4
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-4
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -156,15 +129,6 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.moonlight-bridge'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-4
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
 - key: configure-source-5
   effect: spellcasting/configure-source
   level: 12
@@ -178,8 +142,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-5
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-5
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -188,15 +152,6 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.flaming-fusillade'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-5
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
 - key: configure-source-6
   effect: spellcasting/configure-source
   level: 12
@@ -210,8 +165,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-6
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-6
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -220,15 +175,6 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.life-giving-form'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-6
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
 - key: configure-source-7
   effect: spellcasting/configure-source
   level: 12
@@ -242,8 +188,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-7
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-7
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -252,15 +198,6 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.dread-secret'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-7
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
 - key: configure-source-8
   effect: spellcasting/configure-source
   level: 12
@@ -274,8 +211,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-8
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-8
+  effect: spellcasting/grant-focus-spell
   level: 12
   prerequisites:
   - hasChoice:
@@ -284,12 +221,3 @@ rules:
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.tempest-form'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-8
-  effect: spellcasting/add-focus-point
-  level: 12
-  prerequisites:
-  - hasChoice:
-      name: $.oracle.mystery
-      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}

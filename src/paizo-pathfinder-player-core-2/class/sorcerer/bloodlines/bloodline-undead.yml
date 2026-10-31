@@ -59,80 +59,66 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.undeaths-blessing'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
-    entryId: a1b5747a-5d4c-50e1-90f7-20fb0b8b2aa5
-    spellId: '@spell.void-warp?source=paizo-pathfinder-player-core'
+    spells: ['@spell.void-warp?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
-    entryId: ac4723a0-4912-584c-bedc-fba7a0db7bc0
-    spellId: '@spell.harm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.harm?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
-    entryId: aa1416fc-8bdc-5174-bce6-4565ac2603ea
-    spellId: '@spell.see-the-unseen?source=paizo-pathfinder-player-core'
+    spells: ['@spell.see-the-unseen?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
-    entryId: bff7f8b3-2ae2-5c79-9f19-b21289395a62
-    spellId: '@spell.bind-undead?source=paizo-pathfinder-player-core'
+    spells: ['@spell.bind-undead?source=paizo-pathfinder-player-core']
 - key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
-    entryId: 40c9f4e4-98f6-508c-925e-7c8f193e86fa
-    spellId: '@spell.talking-corpse?source=paizo-pathfinder-player-core'
+    spells: ['@spell.talking-corpse?source=paizo-pathfinder-player-core']
 - key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
-    entryId: 55ab4912-1450-5db9-89cb-d07b0ccd59c8
-    spellId: '@spell.invoke-spirits?source=paizo-pathfinder-player-core'
+    spells: ['@spell.invoke-spirits?source=paizo-pathfinder-player-core']
 - key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
-    entryId: 9379d656-ddd1-5f96-ba46-bbfeac44cf46
-    spellId: '@spell.vampiric-exsanguination?source=paizo-pathfinder-player-core'
+    spells: ['@spell.vampiric-exsanguination?source=paizo-pathfinder-player-core']
 - key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
-    entryId: 2376b553-4777-5212-8205-c6c893267d5c
-    spellId: '@spell.execute?source=paizo-pathfinder-player-core'
+    spells: ['@spell.execute?source=paizo-pathfinder-player-core']
 - key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
-    entryId: eda9405f-e72d-5401-9187-e6203ad27a82
-    spellId: '@spell.canticle-of-everlasting-grief?source=paizo-pathfinder-player-core'
+    spells: ['@spell.canticle-of-everlasting-grief?source=paizo-pathfinder-player-core']
 - key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
   inputs:
     source: sorcerer-spellcasting
-    entryId: b32970b8-5313-530b-bc2f-75f0980b92ba
-    spellId: '@spell.wails-of-the-damned?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wails-of-the-damned?source=paizo-pathfinder-player-core']

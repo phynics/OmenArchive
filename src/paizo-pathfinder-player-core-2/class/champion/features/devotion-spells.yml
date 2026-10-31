@@ -40,10 +40,9 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: increase-source-proficiency-1
-  effect: spellcasting/increase-source-proficiency
+- key: increase-spell-proficiency-1
+  effect: spellcasting/increase-spell-proficiency
   inputs:
-    source: champion-focus-spells
     proficiency: 2
 - key: choice-champion-devotion-spell-heal
   prerequisites:
@@ -90,15 +89,7 @@ rules:
     - {key: lay-on-hands, value: '@spell.lay-on-hands'}
     - {key: touch-of-the-void, value: '@spell.touch-of-the-void'}
 - key: grant-devotion-spell
-  effect: spellcasting/grant-spell
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: champion-focus-spells
     spellId: {choice: $.champion.devotion-spell}
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: devotion-focus-point
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.champion.devotion-spell
-      isSet: true

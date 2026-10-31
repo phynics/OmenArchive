@@ -32,8 +32,7 @@ rules:
     tradition: divine
     attribute: cha
 - key: domain-spell
-  effect: spellcasting/grant-domain-spell
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: champion-focus-spells
-    domain: {choice: $.champion.domains}
-    advanced: false
+    spellId: $.champion.domains.domainSpell

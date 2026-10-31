@@ -13,18 +13,13 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: rECRfbkVwHuG06vO
 rules:
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: witch-focus-spells
     spellId: '@spell.personal-blizzard'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
-    entryId: 8286cca4-bd96-5d93-b3e2-6c5cb9f4c4e6
-    spellId: '@spell.wall-of-wind'
+    spells: ['@spell.wall-of-wind']

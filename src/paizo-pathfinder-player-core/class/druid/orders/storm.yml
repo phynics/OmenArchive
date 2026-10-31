@@ -30,15 +30,11 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: wis
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: druid-focus-spells
     spellId: '@spell.tempest-surge'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-skill-increase-1
   effect: core/add-skill-increase
   inputs:

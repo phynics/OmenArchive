@@ -43,15 +43,11 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.spray-of-stars'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
@@ -64,25 +60,21 @@ rules:
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: fb8d6369-4055-5ce5-9c4c-9c022418d4e7
-    spellId: '@spell.light?source=paizo-pathfinder-player-core'
+    spells: ['@spell.light?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: 986690c2-0710-5b2c-be35-de7c3b7b03ff
-    spellId: '@spell.dizzying-colors?source=paizo-pathfinder-player-core'
+    spells: ['@spell.dizzying-colors?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
-    entryId: d0dd372a-3c48-57b8-abf7-64df0df0968a
-    spellId: '@spell.darkness?source=paizo-pathfinder-player-core'
+    spells: ['@spell.darkness?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: oracle-spellcasting
-    entryId: b927fa39-5fb7-505c-a607-74326ad4a365
-    spellId: '@spell.moon-frenzy?source=paizo-pathfinder-player-core'
+    spells: ['@spell.moon-frenzy?source=paizo-pathfinder-player-core']

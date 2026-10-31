@@ -110,8 +110,8 @@ rules:
     - {key: rank-7, label: Rank 7 deity spell, value: 7}
     - {key: rank-8, label: Rank 8 deity spell, value: 8}
     - {key: rank-9, label: Rank 9 deity spell, value: 9}
-- key: divine-access-rank-1
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-list-rank-1
+  effect: spellcasting/add-spell-list
   level: 11
   prerequisites:
   - hasChoice:
@@ -120,8 +120,18 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-1}
-- key: divine-access-rank-2
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-rank-1
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 1}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-1}
+- key: divine-access-list-rank-2
+  effect: spellcasting/add-spell-list
   level: 11
   prerequisites:
   - hasChoice:
@@ -130,8 +140,18 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-2}
-- key: divine-access-rank-3
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-rank-2
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 2}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-2}
+- key: divine-access-list-rank-3
+  effect: spellcasting/add-spell-list
   level: 11
   prerequisites:
   - hasChoice:
@@ -140,8 +160,18 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-3}
-- key: divine-access-rank-4
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-rank-3
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 3}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-3}
+- key: divine-access-list-rank-4
+  effect: spellcasting/add-spell-list
   level: 11
   prerequisites:
   - hasChoice:
@@ -150,8 +180,18 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-4}
-- key: divine-access-rank-5
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-rank-4
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 4}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-4}
+- key: divine-access-list-rank-5
+  effect: spellcasting/add-spell-list
   level: 11
   prerequisites:
   - hasChoice:
@@ -160,8 +200,18 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-5}
-- key: divine-access-rank-6
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-rank-5
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 5}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-5}
+- key: divine-access-list-rank-6
+  effect: spellcasting/add-spell-list
   level: 11
   prerequisites:
   - hasChoice:
@@ -170,8 +220,18 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-6}
-- key: divine-access-rank-7
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-rank-6
+  effect: spellcasting/add-known-spell
+  level: 11
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 6}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-6}
+- key: divine-access-list-rank-7
+  effect: spellcasting/add-spell-list
   level: 13
   prerequisites:
   - hasChoice:
@@ -180,8 +240,18 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-7}
-- key: divine-access-rank-8
-  effect: spellcasting/add-known-spell-list
+- key: divine-access-rank-7
+  effect: spellcasting/add-known-spell
+  level: 13
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 7}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-7}
+- key: divine-access-list-rank-8
+  effect: spellcasting/add-spell-list
   level: 15
   prerequisites:
   - hasChoice:
@@ -190,8 +260,28 @@ rules:
   inputs:
     source: oracle-spellcasting
     spells: {choiceList: $.deity.spells.rank-8}
+- key: divine-access-rank-8
+  effect: spellcasting/add-known-spell
+  level: 15
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 8}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-8}
+- key: divine-access-list-rank-9
+  effect: spellcasting/add-spell-list
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.divine-access
+      contains: {type: core/int, value: 9}
+  inputs:
+    source: oracle-spellcasting
+    spells: {choiceList: $.deity.spells.rank-9}
 - key: divine-access-rank-9
-  effect: spellcasting/add-known-spell-list
+  effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
   - hasChoice:

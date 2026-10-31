@@ -56,80 +56,66 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.faerie-dust'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3fa07338-abb9-5574-8748-2b49e3832695
-    spellId: '@spell.figment?source=paizo-pathfinder-player-core'
+    spells: ['@spell.figment?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
-    entryId: ff380dfe-4d73-5d42-9af9-10f3dcfb8a5a
-    spellId: '@spell.charm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.charm?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
-    entryId: b12fa523-e17e-597d-8ada-53a3f0b8a26b
-    spellId: '@spell.laughing-fit?source=paizo-pathfinder-player-core'
+    spells: ['@spell.laughing-fit?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
-    entryId: c11630b2-0b10-528b-b2f7-380d27705e8c
-    spellId: '@spell.enthrall?source=paizo-pathfinder-player-core'
+    spells: ['@spell.enthrall?source=paizo-pathfinder-player-core']
 - key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
-    entryId: 9d10b194-d3c9-5173-9c5d-aa31c11069dd
-    spellId: '@spell.suggestion?source=paizo-pathfinder-player-core'
+    spells: ['@spell.suggestion?source=paizo-pathfinder-player-core']
 - key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
-    entryId: 32574d5e-3bbf-5b7e-8af8-cfc03e5f56e5
-    spellId: '@spell.hallucination?source=paizo-pathfinder-player-core'
+    spells: ['@spell.hallucination?source=paizo-pathfinder-player-core']
 - key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
-    entryId: 636e4742-2f56-5a53-8ca5-28b3f7164b05
-    spellId: '@spell.mislead?source=paizo-pathfinder-player-core'
+    spells: ['@spell.mislead?source=paizo-pathfinder-player-core']
 - key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
-    entryId: 27655bd9-e834-5fe1-9aa3-3e6dde249205
-    spellId: '@spell.visions-of-danger'
+    spells: ['@spell.visions-of-danger']
 - key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
-    entryId: 6d63f1ee-d66b-500f-95be-67ff12689cfa
-    spellId: '@spell.uncontrollable-dance?source=paizo-pathfinder-player-core'
+    spells: ['@spell.uncontrollable-dance?source=paizo-pathfinder-player-core']
 - key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
   inputs:
     source: sorcerer-spellcasting
-    entryId: 65a78165-940e-56eb-9012-efd075e58822
-    spellId: '@spell.metamorphosis?source=paizo-pathfinder-player-core'
+    spells: ['@spell.metamorphosis?source=paizo-pathfinder-player-core']

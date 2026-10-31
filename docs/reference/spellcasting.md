@@ -4,7 +4,7 @@ This document describes the authoring shorthand for spellcasting progression, sp
 
 ## The `spellcasting:` Shorthand Block
 
-A spellcasting class feature defines its progression concisely using a `spellcasting:` block. At compile time, the reader expands this block into explicit rules (`configure-source`, `increase-source-proficiency`, `grant-slot`, and `add-known-spell` by level).
+A spellcasting class feature defines its progression concisely using a `spellcasting:` block. At compile time, the reader expands this block into explicit rules (`configure-source`, `increase-spell-proficiency`, `grant-slot`, and `add-known-spell` by level).
 
 ```yaml
 spellcasting:
@@ -79,3 +79,9 @@ A witch's spellcasting source tradition depends on their patron:
 - **Innate Spells**: Handled as inline rules using `spellcasting/grant-innate-spell` or `grant-focus-spell`. Do not model innate spells as class spellcasting slots.
 - **Cantrips**: Innate cantrips use `rankPolicy: cantrip` and `castFrequency: atWill`.
 - **Daily Innate Spells**: Use `rankPolicy: { fixed: N }` and `castFrequency: { perDay: N }`.
+
+## Focus pool and spell proficiency
+
+- **Focus pool**: derived, never written. A character has one focus point for each focus spell granted (`spellcasting/grant-focus-spell`, which is the only way to grant one), up to 3. A focus cantrip cast at will adds nothing. Domain spells are granted by reading the chosen domain's `domainSpell` or `advancedDomainSpell` field: `spellId: $.cleric.domains.domainSpell` (the short form of `{choice: $.cleric.domains, field: domainSpell}`).
+- **Spell proficiency**: a character has one spell attack and spell DC rank, raised with `spellcasting/increase-spell-proficiency`; each source keeps its own key attribute. A character with an innate source is at least trained.
+- **Known spells and the spell list**: `add-known-spell` adds a list of spells to the repertoire or spellbook; `add-spell-list` adds spells to the source's spell list only. A feature that does both (the oracle's Divine Access) carries one rule of each.

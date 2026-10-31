@@ -64,8 +64,8 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -74,15 +74,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.unusual-anatomy'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
 - key: configure-source-2
   effect: spellcasting/configure-source
   level: 10
@@ -96,8 +87,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-2
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-2
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -106,15 +97,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.celestial-brand'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-2
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
 - key: configure-source-3
   effect: spellcasting/configure-source
   level: 10
@@ -128,8 +110,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-3
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-3
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -138,15 +120,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.chthonian-wrath'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-3
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
 - key: configure-source-4
   effect: spellcasting/configure-source
   level: 10
@@ -160,8 +133,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-4
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-4
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -170,15 +143,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.hellfire-plume'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-4
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
 - key: configure-source-5
   effect: spellcasting/configure-source
   level: 10
@@ -195,8 +159,8 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: cha
-- key: grant-spell-5
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-5
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -208,18 +172,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.dragon-wings'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-5
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
 - key: configure-source-6
   effect: spellcasting/configure-source
   level: 10
@@ -236,8 +188,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-6
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-6
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -249,18 +201,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.dragon-wings'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-6
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
 - key: configure-source-7
   effect: spellcasting/configure-source
   level: 10
@@ -277,8 +217,8 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: cha
-- key: grant-spell-7
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-7
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -290,18 +230,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.dragon-wings'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-7
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
 - key: configure-source-8
   effect: spellcasting/configure-source
   level: 10
@@ -318,8 +246,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-8
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-8
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -331,18 +259,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.dragon-wings'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-8
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
 - key: configure-source-9
   effect: spellcasting/configure-source
   level: 10
@@ -359,8 +275,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-9
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-9
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -372,18 +288,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-blast'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-9
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
 - key: configure-source-10
   effect: spellcasting/configure-source
   level: 10
@@ -400,8 +304,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-10
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-10
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -413,18 +317,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-blast'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-10
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
 - key: configure-source-11
   effect: spellcasting/configure-source
   level: 10
@@ -441,8 +333,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-11
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-11
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -454,18 +346,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-blast'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-11
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
 - key: configure-source-12
   effect: spellcasting/configure-source
   level: 10
@@ -482,8 +362,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-12
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-12
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -495,18 +375,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-blast'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-12
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
 - key: configure-source-13
   effect: spellcasting/configure-source
   level: 10
@@ -523,8 +391,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-13
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-13
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -536,18 +404,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-blast'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-13
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
 - key: configure-source-14
   effect: spellcasting/configure-source
   level: 10
@@ -564,8 +420,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-14
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-14
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -577,18 +433,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-blast'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-14
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
 - key: configure-source-15
   effect: spellcasting/configure-source
   level: 10
@@ -602,8 +446,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-15
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-15
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -612,15 +456,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.fey-glamour'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-15
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
 - key: configure-source-16
   effect: spellcasting/configure-source
   level: 10
@@ -634,8 +469,8 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: cha
-- key: grant-spell-16
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-16
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -644,15 +479,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.youre-mine'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-16
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
 - key: configure-source-17
   effect: spellcasting/configure-source
   level: 10
@@ -666,8 +492,8 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: cha
-- key: grant-spell-17
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-17
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -676,15 +502,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.arcane-countermeasure'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-17
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
 - key: configure-source-18
   effect: spellcasting/configure-source
   level: 10
@@ -698,8 +515,8 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-18
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-18
+  effect: spellcasting/grant-focus-spell
   level: 10
   prerequisites:
   - hasChoice:
@@ -708,12 +525,3 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.grasping-grave'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-18
-  effect: spellcasting/add-focus-point
-  level: 10
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline
-      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}

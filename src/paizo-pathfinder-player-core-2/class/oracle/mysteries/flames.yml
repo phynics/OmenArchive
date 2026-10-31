@@ -40,15 +40,11 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   inputs:
     source: oracle-focus-spells
     spellId: '@spell.incendiary-aura'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
 - key: add-feature-by-id-1
   effect: core/add-feature-by-id
   inputs:
@@ -61,25 +57,21 @@ rules:
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: 554c677c-b76a-53f7-9f9f-7516e8fc89b4
-    spellId: '@spell.ignition?source=paizo-pathfinder-player-core'
+    spells: ['@spell.ignition?source=paizo-pathfinder-player-core']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
-    entryId: af072380-33a3-5762-9d05-5f478dbb9ce1
-    spellId: '@spell.breathe-fire?source=paizo-pathfinder-player-core'
+    spells: ['@spell.breathe-fire?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
-    entryId: a400d24d-4b2a-5adf-b18c-c06bf4ccdc97
-    spellId: '@spell.blazing-bolt?source=paizo-pathfinder-player-core'
+    spells: ['@spell.blazing-bolt?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: oracle-spellcasting
-    entryId: b78ce4b4-7391-5bc4-bd61-fc7fb9213a54
-    spellId: '@spell.fireball?source=paizo-pathfinder-player-core'
+    spells: ['@spell.fireball?source=paizo-pathfinder-player-core']

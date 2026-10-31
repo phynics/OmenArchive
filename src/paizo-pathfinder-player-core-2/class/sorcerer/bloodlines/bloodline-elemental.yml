@@ -101,8 +101,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-1
+  effect: spellcasting/grant-focus-spell
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
@@ -110,14 +110,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-toss'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-1
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -126,8 +118,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 68682382-aa97-58d0-aef6-75c7f84c3f3d
-    spellId: '@spell.gale-blast'
+    spells: ['@spell.gale-blast']
 - key: add-known-spell-2
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -136,8 +127,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: ed4d2618-0433-5b3f-82de-190230f515ee
-    spellId: '@spell.tailwind?source=paizo-pathfinder-player-core'
+    spells: ['@spell.tailwind?source=paizo-pathfinder-player-core']
 - key: add-known-spell-3
   effect: spellcasting/add-known-spell
   level: 3
@@ -147,8 +137,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
-    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
 - key: add-known-spell-4
   effect: spellcasting/add-known-spell
   level: 5
@@ -158,8 +147,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 0f27ec80-15eb-5691-8974-57f926bdad91
-    spellId: '@spell.wall-of-wind?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wall-of-wind?source=paizo-pathfinder-player-core']
 - key: add-known-spell-5
   effect: spellcasting/add-known-spell
   level: 7
@@ -169,8 +157,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
-    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
 - key: add-known-spell-6
   effect: spellcasting/add-known-spell
   level: 9
@@ -180,8 +167,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
-    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
 - key: add-known-spell-7
   effect: spellcasting/add-known-spell
   level: 11
@@ -191,8 +177,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 0fcf6ca8-bb00-596d-ae84-f7a2c858d706
-    spellId: '@spell.chain-lightning?source=paizo-pathfinder-player-core'
+    spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']
 - key: add-known-spell-8
   effect: spellcasting/add-known-spell
   level: 13
@@ -202,8 +187,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
-    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
 - key: add-known-spell-9
   effect: spellcasting/add-known-spell
   level: 15
@@ -213,8 +197,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
-    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
 - key: add-known-spell-10
   effect: spellcasting/add-known-spell
   level: 17
@@ -224,8 +207,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
-    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
 - key: configure-source-3
   effect: spellcasting/configure-source
   prerequisites:
@@ -268,8 +250,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-2
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-2
+  effect: spellcasting/grant-focus-spell
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
@@ -277,14 +259,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-toss'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-2
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
 - key: add-known-spell-11
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -293,8 +267,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 40115c7f-f27f-5add-9231-9e8d88974a8b
-    spellId: '@spell.scatter-scree'
+    spells: ['@spell.scatter-scree']
 - key: add-known-spell-12
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -303,8 +276,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3512fffe-b054-58cd-a562-0fccb4283f26
-    spellId: '@spell.pummeling-rubble?source=paizo-pathfinder-player-core'
+    spells: ['@spell.pummeling-rubble?source=paizo-pathfinder-player-core']
 - key: add-known-spell-13
   effect: spellcasting/add-known-spell
   level: 3
@@ -314,8 +286,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
-    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
 - key: add-known-spell-14
   effect: spellcasting/add-known-spell
   level: 5
@@ -325,8 +296,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: b5e5da02-e6ce-5081-9e2b-0c05722f9a14
-    spellId: '@spell.earthbind?source=paizo-pathfinder-player-core'
+    spells: ['@spell.earthbind?source=paizo-pathfinder-player-core']
 - key: add-known-spell-15
   effect: spellcasting/add-known-spell
   level: 7
@@ -336,8 +306,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
-    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
 - key: add-known-spell-16
   effect: spellcasting/add-known-spell
   level: 9
@@ -347,8 +316,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
-    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
 - key: add-known-spell-17
   effect: spellcasting/add-known-spell
   level: 11
@@ -358,8 +326,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 78de65ea-6b9f-5798-b7b9-d3a768aa4421
-    spellId: '@spell.petrify?source=paizo-pathfinder-player-core'
+    spells: ['@spell.petrify?source=paizo-pathfinder-player-core']
 - key: add-known-spell-18
   effect: spellcasting/add-known-spell
   level: 13
@@ -369,8 +336,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
-    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
 - key: add-known-spell-19
   effect: spellcasting/add-known-spell
   level: 15
@@ -380,8 +346,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
-    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
 - key: add-known-spell-20
   effect: spellcasting/add-known-spell
   level: 17
@@ -391,8 +356,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
-    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
 - key: configure-source-5
   effect: spellcasting/configure-source
   prerequisites:
@@ -435,8 +399,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-3
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-3
+  effect: spellcasting/grant-focus-spell
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
@@ -444,14 +408,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-toss'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-3
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
 - key: add-known-spell-21
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -460,8 +416,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c00a4453-e6df-5988-bfdd-0903e51f7a23
-    spellId: '@spell.ignition?source=paizo-pathfinder-player-core'
+    spells: ['@spell.ignition?source=paizo-pathfinder-player-core']
 - key: add-known-spell-22
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -470,8 +425,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 5a56f9ec-24fd-5c4d-94e1-4a2e48b08fd0
-    spellId: '@spell.breathe-fire?source=paizo-pathfinder-player-core'
+    spells: ['@spell.breathe-fire?source=paizo-pathfinder-player-core']
 - key: add-known-spell-23
   effect: spellcasting/add-known-spell
   level: 3
@@ -481,8 +435,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
-    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
 - key: add-known-spell-24
   effect: spellcasting/add-known-spell
   level: 5
@@ -492,8 +445,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 539797bb-e1cb-5018-8b79-195d9642f65c
-    spellId: '@spell.fireball?source=paizo-pathfinder-player-core'
+    spells: ['@spell.fireball?source=paizo-pathfinder-player-core']
 - key: add-known-spell-25
   effect: spellcasting/add-known-spell
   level: 7
@@ -503,8 +455,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
-    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
 - key: add-known-spell-26
   effect: spellcasting/add-known-spell
   level: 9
@@ -514,8 +465,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
-    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
 - key: add-known-spell-27
   effect: spellcasting/add-known-spell
   level: 11
@@ -525,8 +475,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 0190e8a6-6026-5cd1-8279-cbfba61c041a
-    spellId: '@spell.tree-of-seasons?source=paizo-pathfinder-player-core'
+    spells: ['@spell.tree-of-seasons?source=paizo-pathfinder-player-core']
 - key: add-known-spell-28
   effect: spellcasting/add-known-spell
   level: 13
@@ -536,8 +485,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
-    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
 - key: add-known-spell-29
   effect: spellcasting/add-known-spell
   level: 15
@@ -547,8 +495,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
-    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
 - key: add-known-spell-30
   effect: spellcasting/add-known-spell
   level: 17
@@ -558,8 +505,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
-    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
 - key: configure-source-7
   effect: spellcasting/configure-source
   prerequisites:
@@ -602,8 +548,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-4
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-4
+  effect: spellcasting/grant-focus-spell
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
@@ -611,14 +557,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-toss'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-4
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
 - key: add-known-spell-31
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -627,8 +565,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 8a1bbf4c-6b26-5872-8fd0-26aa9ac2df44
-    spellId: '@spell.electric-arc?source=paizo-pathfinder-player-core'
+    spells: ['@spell.electric-arc?source=paizo-pathfinder-player-core']
 - key: add-known-spell-32
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -637,8 +574,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 2740d1ea-c7aa-5bbe-9b8a-7eaf668cf072
-    spellId: '@spell.thunderstrike?source=paizo-pathfinder-player-core'
+    spells: ['@spell.thunderstrike?source=paizo-pathfinder-player-core']
 - key: add-known-spell-33
   effect: spellcasting/add-known-spell
   level: 3
@@ -648,8 +584,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
-    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
 - key: add-known-spell-34
   effect: spellcasting/add-known-spell
   level: 5
@@ -659,8 +594,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: d2b2f4ec-6972-5cbe-ab68-9a17bdc5e67b
-    spellId: '@spell.lightning-bolt?source=paizo-pathfinder-player-core'
+    spells: ['@spell.lightning-bolt?source=paizo-pathfinder-player-core']
 - key: add-known-spell-35
   effect: spellcasting/add-known-spell
   level: 7
@@ -670,8 +604,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
-    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
 - key: add-known-spell-36
   effect: spellcasting/add-known-spell
   level: 9
@@ -681,8 +614,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
-    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
 - key: add-known-spell-37
   effect: spellcasting/add-known-spell
   level: 11
@@ -692,8 +624,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 0fcf6ca8-bb00-596d-ae84-f7a2c858d706
-    spellId: '@spell.chain-lightning?source=paizo-pathfinder-player-core'
+    spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']
 - key: add-known-spell-38
   effect: spellcasting/add-known-spell
   level: 13
@@ -703,8 +634,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
-    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
 - key: add-known-spell-39
   effect: spellcasting/add-known-spell
   level: 15
@@ -714,8 +644,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
-    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
 - key: add-known-spell-40
   effect: spellcasting/add-known-spell
   level: 17
@@ -725,8 +654,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
-    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
 - key: configure-source-9
   effect: spellcasting/configure-source
   prerequisites:
@@ -769,8 +697,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-5
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-5
+  effect: spellcasting/grant-focus-spell
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
@@ -778,14 +706,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-toss'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-5
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
 - key: add-known-spell-41
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -794,8 +714,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 11ae19b3-49e6-59ae-92ea-475f7ef47cb9
-    spellId: '@spell.frostbite?source=paizo-pathfinder-player-core'
+    spells: ['@spell.frostbite?source=paizo-pathfinder-player-core']
 - key: add-known-spell-42
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -804,8 +723,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 0c6131d2-8aa3-5b12-8a28-63730f01805f
-    spellId: '@spell.hydraulic-push?source=paizo-pathfinder-player-core'
+    spells: ['@spell.hydraulic-push?source=paizo-pathfinder-player-core']
 - key: add-known-spell-43
   effect: spellcasting/add-known-spell
   level: 3
@@ -815,8 +733,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
-    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
 - key: add-known-spell-44
   effect: spellcasting/add-known-spell
   level: 5
@@ -826,8 +743,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 17f35b16-88d1-54c1-ad00-c8b736c64cf7
-    spellId: '@spell.aqueous-orb?source=paizo-pathfinder-player-core'
+    spells: ['@spell.aqueous-orb?source=paizo-pathfinder-player-core']
 - key: add-known-spell-45
   effect: spellcasting/add-known-spell
   level: 7
@@ -837,8 +753,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
-    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
 - key: add-known-spell-46
   effect: spellcasting/add-known-spell
   level: 9
@@ -848,8 +763,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
-    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
 - key: add-known-spell-47
   effect: spellcasting/add-known-spell
   level: 11
@@ -859,8 +773,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c0413aee-2fde-55a3-ad1c-bc197665b72d
-    spellId: '@spell.scintillating-safeguard'
+    spells: ['@spell.scintillating-safeguard']
 - key: add-known-spell-48
   effect: spellcasting/add-known-spell
   level: 13
@@ -870,8 +783,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
-    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
 - key: add-known-spell-49
   effect: spellcasting/add-known-spell
   level: 15
@@ -881,8 +793,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
-    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
 - key: add-known-spell-50
   effect: spellcasting/add-known-spell
   level: 17
@@ -892,8 +803,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
-    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
 - key: configure-source-11
   effect: spellcasting/configure-source
   prerequisites:
@@ -936,8 +846,8 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: cha
-- key: grant-spell-6
-  effect: spellcasting/grant-spell
+- key: grant-focus-spell-6
+  effect: spellcasting/grant-focus-spell
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
@@ -945,14 +855,6 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spellId: '@spell.elemental-toss'
-    rankPolicy: cantrip
-    castFrequency: focus
-- key: add-focus-point-6
-  effect: spellcasting/add-focus-point
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
 - key: add-known-spell-51
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -961,8 +863,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 33360c4f-b714-5b42-b00f-2addd0186961
-    spellId: '@spell.tangle-vine?source=paizo-pathfinder-player-core'
+    spells: ['@spell.tangle-vine?source=paizo-pathfinder-player-core']
 - key: add-known-spell-52
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -971,8 +872,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: a34f76cc-2214-508b-850f-a99c5f04c52f
-    spellId: '@spell.cleanse-cuisine?source=paizo-pathfinder-player-core'
+    spells: ['@spell.cleanse-cuisine?source=paizo-pathfinder-player-core']
 - key: add-known-spell-53
   effect: spellcasting/add-known-spell
   level: 3
@@ -982,8 +882,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: fdcbb1d2-9565-5936-ad45-724d830017b9
-    spellId: '@spell.resist-energy?source=paizo-pathfinder-player-core'
+    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
 - key: add-known-spell-54
   effect: spellcasting/add-known-spell
   level: 5
@@ -993,8 +892,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 2d88d944-e2b7-52b2-bb22-cebc1fdfecf0
-    spellId: '@spell.wall-of-thorns?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wall-of-thorns?source=paizo-pathfinder-player-core']
 - key: add-known-spell-55
   effect: spellcasting/add-known-spell
   level: 7
@@ -1004,8 +902,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c8558f82-8dd9-5e32-840c-417ae630f97d
-    spellId: '@spell.unfettered-movement?source=paizo-pathfinder-player-core'
+    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
 - key: add-known-spell-56
   effect: spellcasting/add-known-spell
   level: 9
@@ -1015,8 +912,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: e47edf9b-22b6-53d6-ba27-e9edee35be57
-    spellId: '@spell.elemental-form?source=paizo-pathfinder-player-core'
+    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
 - key: add-known-spell-57
   effect: spellcasting/add-known-spell
   level: 11
@@ -1026,8 +922,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 91a09ec8-fad8-580c-8502-b925c7c7ffb7
-    spellId: '@spell.tangling-creepers?source=paizo-pathfinder-player-core'
+    spells: ['@spell.tangling-creepers?source=paizo-pathfinder-player-core']
 - key: add-known-spell-58
   effect: spellcasting/add-known-spell
   level: 13
@@ -1037,8 +932,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: be16da5e-8eee-5dca-a264-49f2bc9faaa5
-    spellId: '@spell.energy-aegis?source=paizo-pathfinder-player-core'
+    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
 - key: add-known-spell-59
   effect: spellcasting/add-known-spell
   level: 15
@@ -1048,8 +942,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: c2d61929-9388-51ae-9a05-280d902cb11c
-    spellId: '@spell.earthquake?source=paizo-pathfinder-player-core'
+    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
 - key: add-known-spell-60
   effect: spellcasting/add-known-spell
   level: 17
@@ -1059,5 +952,4 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
-    entryId: 3894b2a7-e746-5f02-b302-d5a89e47dfa7
-    spellId: '@spell.wrathful-storm?source=paizo-pathfinder-player-core'
+    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
