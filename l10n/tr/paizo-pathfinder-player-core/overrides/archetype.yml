@@ -1,0 +1,406 @@
+# tr overrides: archetype
+
+omen://archetype/bard/bard?source=paizo-pathfinder-player-core:
+  name: Ozan
+  description: Sanatın ustası, gizli sırların bilgini ve büyüleyici bir ikna edicisinizdir. Güçlü icralar kullanarak zihinleri etkiler ve ruhları kahramanlığın yeni mertebelerine yükseltirsiniz. Güçlerinizi karizmatik bir lider olmak için kullanabileceğiniz gibi, bunun yerine bir danışman, manipülatör, bilgin, düzenbaz ya da virtüöz de olabilirsiniz. Çok yönlülüğünüz bazılarının sizi aldatıcı bir hayta ve her işe burnunu sokan biri olarak görmesine yol açsa da, hiçbir şeyde usta olmadığınız gerekçesiyle sizi bir kenara atmak tehlikelidir.
+
+omen://archetype/bard/feats/advanced-muses-whispers?source=paizo-pathfinder-player-core:
+  name: Gelişmiş İlham Perisi Fısıltıları
+  description: Bir ozan hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, ozan seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel İlham Perisi Fısıltıları"
+
+omen://archetype/bard/feats/anthemic-performance?source=paizo-pathfinder-player-core:
+  name: Marş İcrası
+  description: Müziğiniz, konuşmanız veya diğer icralarınız müttefiklerinize savaşa atılmaları için ilham verir. Cesaret Marşı kompozisyon kantripini kazanırsınız.
+  prerequisites:
+  - text: "Ozan Yolu"
+
+omen://archetype/bard/feats/bard-dedication?source=paizo-pathfinder-player-core:
+  name: Ozan Yolu
+  description: >
+    Bir ozan gibi büyü yaparsınız ve Büyü Yap aktivitesini kazanırsınız. Okült büyü listesinden iki yaygın kantrip veya öğrendiğiniz ya da keşfettiğiniz diğer herhangi bir okült kantrip ile bir büyü repertuvarı kazanırsınız. Büyü saldırı modifikatörü ve büyü ZD'si istatistiklerinde eğitimlisinizdir. Ozan arketip büyüleri için büyü yapma niteliğiniz Karizma'dır ve bunlar okült ozan büyüleridir. Okültizm ve Gösteri becerilerinde eğitimli olursunuz; hâlihazırda eğitimli olduğunuz bu becerilerin her biri yerine seçtiğiniz bir beceride eğitimli olursunuz. Ozan olsaydınız seçeceğiniz gibi bir ilham perisi seçin. O ilham perisinin hünerlerini alabilirsiniz; ancak ilham perisi seçiminin sağladığı başlangıç hünerini, büyüsünü veya başka hiçbir yeteneği kazanamazsınız.
+
+    Ozan
+  prerequisites:
+  - text: "Karizma +2"
+
+omen://archetype/bard/feats/basic-bard-spellcasting?source=paizo-pathfinder-player-core:
+  name: Temel Ozan Büyücülüğü
+  description: Kantripcülük Hüneri kazanımlarını elde edersiniz. Ozan arketipinden yeni bir derecede büyü slotu kazandığınız her seferde, repertuvarınıza uygun derecede yaygın bir okült büyü veya öğrendiğiniz ya da keşfettiğiniz uygun başka bir okült büyü eklersiniz.
+  prerequisites:
+  - text: "Ozan Yolu"
+
+omen://archetype/bard/feats/basic-muses-whispers?source=paizo-pathfinder-player-core:
+  name: Temel İlham Perisi Fısıltıları
+  description: 1. veya 2. seviye bir ozan hüneri kazanırsınız.
+  prerequisites:
+  - text: "Ozan Yolu"
+
+omen://archetype/bard/feats/counter-perform?source=paizo-pathfinder-player-core:
+  name: Karşı Performans
+  description: "Karşı Performans kompozisyon büyüsünü kazanırsınız. Bu bir odak büyüsüdür; size bir odak havuzu verir veya o havuzu genişletir. İlham perinizi meşgul ederek Odak Yenileyebilirsiniz."
+  prerequisites:
+  - text: "Ozan Yolu"
+
+omen://archetype/bard/feats/expert-bard-spellcasting?source=paizo-pathfinder-player-core:
+  name: Uzman Ozan Büyücülüğü
+  description: Uzman Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Temel Ozan Büyücülüğü"
+  - text: "Usta Okültizm"
+
+omen://archetype/bard/feats/master-bard-spellcasting?source=paizo-pathfinder-player-core:
+  name: Usta Ozan Büyücülüğü
+  description: Usta Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Uzman Ozan Büyücülüğü"
+  - text: "Efsanevi Okültizm"
+
+omen://archetype/bard/feats/occult-breadth?source=paizo-pathfinder-player-core:
+  name: Okült Enginlik
+  description: Repertuvarınız genişler ve her gün daha fazla okült büyü yapabilirsiniz. En yüksek iki büyü slotunuz dışındaki her büyü derecesi için repertuvarınızdaki büyü sayısını ve ozan arketip hünerlerinden kazandığınız büyü slotu sayısını 1 artırın.
+  prerequisites:
+  - text: "Temel Ozan Büyücülüğü"
+
+omen://archetype/cleric/cleric?source=paizo-pathfinder-player-core:
+  name: Rahip
+  description: İlahlar iradelerini dünyaya sonsuz yollarla yansıtır ve siz onların en sadık ölümlü hizmetkârlarından biri olarak hizmet edersiniz. İlahi büyüyle kutsanmış olarak inancınızın ideallerini yaşar, kilisenizin sembolleriyle donanır ve ilahınızın gözde silahını kuşanmak için özenle talim yaparsınız. Büyüleriniz müttefiklerinizi koruyup iyileştirebilir ya da ilahınızın dilediği gibi inancınızın düşmanlarını ve hasımlarını cezalandırabilir. Sizinki hem sözlerinizle hem de eylemlerinizle inancınızın öğretilerini yayan adanmış bir hayattır.
+
+omen://archetype/cleric/feats/advanced-dogma?source=paizo-pathfinder-player-core:
+  name: Gelişmiş Dogma
+  description: Bir rahip hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, rahip seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel Dogma"
+
+omen://archetype/cleric/feats/basic-cleric-spellcasting?source=paizo-pathfinder-player-core:
+  name: Temel Rahip Büyücülüğü
+  description: Kantripcülük Hüneri kazanımlarını elde edersiniz. Rahip arketipinden aldığınız uygun derecedeki büyü slotlarınızda ilahınızın büyülerini hazırlayabilirsiniz.
+  prerequisites:
+  - text: "Rahip Yolu"
+
+omen://archetype/cleric/feats/basic-dogma?source=paizo-pathfinder-player-core:
+  name: Temel Dogma
+  description: 1. veya 2. seviye bir rahip hüneri kazanırsınız.
+  prerequisites:
+  - text: "Rahip Yolu"
+
+omen://archetype/cleric/feats/cleric-dedication?source=paizo-pathfinder-player-core:
+  name: Rahip Yolu
+  description: >
+    Bir rahip gibi büyü yaparsınız. Büyü Yap aktivitesini kazanırsınız. Her gün ilahi büyü listesinden veya erişiminiz olan diğer herhangi bir ilahi kantripten iki yaygın kantrip hazırlayabilirsiniz. Büyü saldırı modifikatörü ve büyü ZD'si istatistiklerinde eğitimlisinizdir. Rahip arketip büyüleri için büyü yapma niteliğiniz Bilgelik'tir ve bunlar ilahi rahip büyüleridir. Bir rahip olsaydınız seçeceğiniz gibi bir ilah seçin. O ilahın yasağına tabi olursunuz ve ilahın ilahi takdisini alabilirsiniz. Din becerisinde ve ilahınızla ilişkili beceride eğitimli olursunuz; hâlihazırda eğitimli olduğunuz bu becerilerin her biri yerine seçtiğiniz bir beceride eğitimli olursunuz. İlah seçiminizden başka bir yetenek kazanamazsınız.
+
+    Rahip
+  prerequisites:
+  - text: "Bilgelik +2"
+
+omen://archetype/cleric/feats/divine-breadth?source=paizo-pathfinder-player-core:
+  name: İlahi Enginlik
+  description: Kavrayışınız arttıkça ilahınız her gün size daha fazla ilahi büyü bahşeder. En yüksek iki rahip büyü slotunuz dışındaki her büyü derecesi için rahip arketip hünerlerinden kazandığınız büyü slotlarını 1 artırın.
+  prerequisites:
+  - text: "Temel Rahip Büyücülüğü"
+
+omen://archetype/cleric/feats/expert-cleric-spellcasting?source=paizo-pathfinder-player-core:
+  name: Uzman Rahip Büyücülüğü
+  description: Uzman Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Temel Rahip Büyücülüğü"
+  - text: "Usta Din"
+
+omen://archetype/cleric/feats/master-cleric-spellcasting?source=paizo-pathfinder-player-core:
+  name: Usta Rahip Büyücülüğü
+  description: Usta Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Uzman Rahip Büyücülüğü"
+  - text: "Efsanevi Din"
+
+omen://archetype/druid/druid?source=paizo-pathfinder-player-core:
+  name: Druid
+  description: Doğanın gücüne karşı koymak imkânsızdır. En sağlam kaleyi dakikalar içinde harabeye çevirebilir, en kudretli eserleri bile enkaza dönüştürebilir, küle çevirebilir, kar çığının altına gömebilir veya dalgaların altında boğabilir. Kendisine saygı duyanlara sonsuz bir bereket ve nefes kesici bir ihtişam sunabilir—onu hafife alanlara ise ızdıraplı bir ölüm getirir. Siz doğanın çağrısını duyanlardansınız. Gücünün heybeti karşısında huşu içinde durur ve kendinizi onun hizmetine adarsınız.
+
+omen://archetype/druid/feats/advanced-wilding?source=paizo-pathfinder-player-core:
+  name: Gelişmiş Yabanilik
+  description: Bir druid hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, druid seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel Yabanilik"
+
+omen://archetype/druid/feats/basic-druid-spellcasting?source=paizo-pathfinder-player-core:
+  name: Temel Druid Büyücülüğü
+  description: Kantripcülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Druid Yolu"
+
+omen://archetype/druid/feats/basic-wilding?source=paizo-pathfinder-player-core:
+  name: Temel Yabanilik
+  description: 1. veya 2. seviye bir druid hüneri kazanırsınız.
+  prerequisites:
+  - text: "Druid Yolu"
+
+omen://archetype/druid/feats/druid-dedication?source=paizo-pathfinder-player-core:
+  name: Druid Yolu
+  description: >
+    Bir druid gibi büyü yaparsınız. Büyü Yap aktivitesini kazanırsınız. Her gün doğa büyü listesinden veya öğrendiğiniz ya da keşfettiğiniz diğer herhangi bir doğa kantripinden iki yaygın kantrip hazırlayabilirsiniz. Büyü saldırı modifikatörü ve büyü ZD'si istatistiklerinde eğitimlisinizdir. Druid arketip büyüleri için büyü yapma niteliğiniz Bilgelik'tir ve bunlar primal druid büyüleridir. Vahşi Şarkı dilini öğrenirsiniz ve druid yasağına tabi olursunuz. Bir druidik düzen seçin. O düzenin üyesi olursunuz ve düzenin hünerlerini almanıza izin verecek şekilde onun özel yasağına da tabi olursunuz. Doğa becerisinde ve düzeninizle ilişkili beceride eğitimli olursunuz; hâlihazırda eğitimli olduğunuz bu becerilerin her biri yerine seçtiğiniz bir beceride eğitimli olursunuz. Düzen seçiminizden başka hiçbir yetenek kazanamazsınız.
+
+    Druid
+  prerequisites:
+  - text: "Bilgelik +2"
+
+omen://archetype/druid/feats/expert-druid-spellcasting?source=paizo-pathfinder-player-core:
+  name: Uzman Druid Büyücülüğü
+  description: Uzman Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Temel Druid Büyücülüğü"
+  - text: "Usta Doğa"
+
+omen://archetype/druid/feats/master-druid-spellcasting?source=paizo-pathfinder-player-core:
+  name: Usta Druid Büyücülüğü
+  description: Usta Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Uzman Druid Büyücülüğü"
+  - text: "Efsanevi Doğa"
+
+omen://archetype/druid/feats/order-spell?source=paizo-pathfinder-player-core:
+  name: Düzen Büyüsü
+  description: "Düzeninizden gelen ilk düzen büyüsünü kazanırsınız. Bu bir odak büyüsüdür; size bir odak havuzu verir veya o havuzu genişletir. Doğayla bir olarak Odak Yenileyebilirsiniz."
+  prerequisites:
+  - text: "Druid Yolu"
+
+omen://archetype/druid/feats/primal-breadth?source=paizo-pathfinder-player-core:
+  name: Doğa Enginliği
+  description: En yüksek iki druid büyü slotunuz dışındaki her büyü derecesi için druid arketip hünerlerinden kazandığınız büyü slotlarını 1 artırın.
+  prerequisites:
+  - text: "Temel Druid Büyücülüğü"
+
+omen://archetype/fighter/feats/advanced-maneuver?source=paizo-pathfinder-player-core:
+  name: Gelişmiş Manevra
+  description: Bir savaşçı hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, savaşçı seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel Manevra"
+
+omen://archetype/fighter/feats/basic-maneuver?source=paizo-pathfinder-player-core:
+  name: Temel Manevra
+  description: 1. veya 2. seviye bir savaşçı hüneri kazanırsınız.
+  prerequisites:
+  - text: "Savaşçı Yolu"
+
+omen://archetype/fighter/feats/diverse-weapon-expert?source=paizo-pathfinder-player-core:
+  name: Çeşitli Silah Uzmanı
+  description: Basit silahlar ve askeri silahlar için yetkinlik dereceleriniz uzmanlığa yükselir, gelişmiş silahlar için yetkinlik dereceniz ise eğitimliye yükselir.
+  prerequisites:
+  - text: "Savaşçı Yolu"
+  - text: "herhangi bir silah türünde veya silahsız saldırıda uzman"
+
+omen://archetype/fighter/feats/fighter-dedication?source=paizo-pathfinder-player-core:
+  name: Savaşçı Yolu
+  description: >
+    Askeri silahlarda eğitimli olursunuz. Akrobasi veya Atletizm becerileri arasından seçtiğiniz birinde eğitimli olursunuz; bu becerilerin her ikisinde de hâlihazırda eğitimliyseniz, bunun yerine seçtiğiniz bir beceride eğitimli olursunuz. Savaşçı sınıf ZD'sinde eğitimli olursunuz.
+
+    Savaşçı
+  prerequisites:
+  - text: "Kuvvet +2"
+  - text: "Çeviklik +2"
+
+omen://archetype/fighter/feats/fighter-resiliency?source=paizo-pathfinder-player-core:
+  name: Savaşçı Direnci
+  description: Sahip olduğunuz her savaşçı arketip sınıf hüneri için 3 ek Can Puanı kazanırsınız. Savaşçı arketip sınıf hünerleri seçmeye devam ettikçe bu şekilde ek Can Puanı kazanmayı sürdürürsünüz.
+  prerequisites:
+  - text: "Savaşçı Yolu"
+  - text: "seviye başına en fazla 8 + Dayanıklılık modifikatörünüz kadar Can Puanı veren sınıf"
+
+omen://archetype/fighter/feats/reactive-striker?source=paizo-pathfinder-player-core:
+  name: Reaktif Vurucu
+  description: Reaktif Vuruş reaksiyonunu kazanırsınız.
+  prerequisites:
+  - text: "Savaşçı Yolu"
+
+omen://archetype/fighter/fighter?source=paizo-pathfinder-player-core:
+  name: Savaşçı
+  description: "Onur, açgözlülük, sadakat ya da sadece savaşın heyecanı için dövüşen, silahlar ve muharebe teknikleri konusunda tartışmasız bir ustasınızdır. Düşmanlarınız savunmalarını düşürecek kadar akılsızlık ettiğinde, açılış hamlelerinin, bitirici vuruşların ve karşı saldırıların zekice kombinasyonlarıyla eylemlerinizi birleştirirsiniz. Bir şövalye, paralı asker, keskin nişancı veya kılıç ustası olun; dövüş sanatlarınızı bir sanat formuna dönüştürdünüz ve düşmanlarınıza yıkıcı kritik saldırılar indirirsiniz."
+
+omen://archetype/ranger/feats/advanced-hunters-trick?source=paizo-pathfinder-player-core:
+  name: Gelişmiş Avcı Numarası
+  description: Bir korucu hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, korucu seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel Avcı Numarası"
+
+omen://archetype/ranger/feats/basic-hunters-trick?source=paizo-pathfinder-player-core:
+  name: Temel Avcı Numarası
+  description: 1. veya 2. seviye bir korucu hüneri kazanırsınız.
+  prerequisites:
+  - text: "Korucu Yolu"
+
+omen://archetype/ranger/feats/master-spotter-ranger?source=paizo-pathfinder-player-core:
+  name: Usta Gözcü (Korucu)
+  description: Dikkat yetkinlik dereceniz ustalığa yükselir.
+  prerequisites:
+  - text: "Korucu Yolu"
+  - text: "Uzman Dikkat"
+
+omen://archetype/ranger/feats/ranger-dedication?source=paizo-pathfinder-player-core:
+  name: Korucu Yolu
+  description: >
+    Hayatta Kalma becerisinde eğitimli olursunuz; Hayatta Kalma becerisinde hâlihazırda eğitimliyseniz, bunun yerine seçtiğiniz başka bir beceride eğitimli olursunuz. Korucu sınıf ZD'sinde eğitimli olursunuz. Bu arketip aracılığıyla bir muhafız büyüsü kazanırsaniz büyü saldırılarında ve büyü ZD'lerinde eğitimli olursunuz. Büyü yapma niteliğiniz Bilgelik'tir. Avı İşaretle eylemini kullanabilirsiniz.
+
+    Korucu
+  prerequisites:
+  - text: "Çeviklik +2"
+
+omen://archetype/ranger/feats/ranger-resiliency?source=paizo-pathfinder-player-core:
+  name: Korucu Direnci
+  description: Sahip olduğunuz her korucu arketip sınıf hüneri için 3 ek Can Puanı kazanırsınız. Korucu arketip sınıf hünerleri seçmeye devam ettikçe bu şekilde ek Can Puanı kazanmayı sürdürürsünüz.
+  prerequisites:
+  - text: "Korucu Yolu"
+  - text: "seviye başına en fazla 8 + Dayanıklılık modifikatörünüz kadar Can Puanı veren sınıf"
+
+omen://archetype/ranger/ranger?source=paizo-pathfinder-player-core:
+  name: Korucu
+  description: "Bazı korucular medeniyetin ruhu yıprattığına ama yine de vahşi yaratıklardan korunması gerektiğine inanır. Diğerleri ise güzelliğini evcilleştirmek ve hazinelerini yağmalamak isteyen açgözlülere karşı doğanın korunması gerektiğini söyler. Bu hedeflerden birini ya da her ikisini birden savunabilirsiniz. Medeniyetin kıyılarında gezinen ya da yaban hayatını keşfeden bir izci, iz sürücü ya da kaçakların veya canavarların avcısı olabilirsiniz. Karada nasıl yaşanacağını bilirsiniz; hem fırsatçı avları hem de nefret edilen düşmanları tespit etme ve alt etme konusunda hünerlisinizdir."
+
+omen://archetype/rogue/feats/advanced-trickery?source=paizo-pathfinder-player-core:
+  name: Gelişmiş Hilekârlık
+  description: Bir hırsız hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, hırsız seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel Hilekârlık"
+
+omen://archetype/rogue/feats/basic-trickery?source=paizo-pathfinder-player-core:
+  name: Temel Hilekârlık
+  description: 1. veya 2. seviye bir hırsız hüneri kazanırsınız.
+  prerequisites:
+  - text: "Düzenbaz Yolu"
+
+omen://archetype/rogue/feats/rogue-dedication?source=paizo-pathfinder-player-core:
+  name: Düzenbaz Yolu
+  description: >
+    Bir beceri hüneri ve hırsızın Baskın Saldırısı sınıf özelliğini kazanırsınız. Hafif zırhta eğitimli olursunuz. Buna ek olarak Gizlilik veya Hırsızlık becerisine ek olarak seçtiğiniz bir beceride daha eğitimli olursunuz; hem Gizlilik hem de Hırsızlık becerisinde hâlihazırda eğitimliyseniz, seçtiğiniz ek bir beceride daha eğitimli olursunuz. Düzenbaz sınıf ZD'sinde eğitimli olursunuz.
+
+    Düzenbaz
+  prerequisites:
+  - text: "Çeviklik +2"
+
+omen://archetype/rogue/feats/sneak-attacker?source=paizo-pathfinder-player-core:
+  name: Sinsi Saldırıcı
+  description: 1d4 hasar vermesi ve 6. seviyede 1d6'ya yükselmesi dışında, Sinsi Saldırı sınıf özelliğini kazanırsınız. Seviye kazandıkça zar sayısını artırmazsınız.
+  prerequisites:
+  - text: "Düzenbaz Yolu"
+
+omen://archetype/rogue/feats/uncanny-dodge?source=paizo-pathfinder-player-core:
+  name: Olağanüstü Sıyrılma
+  description: Avantajı Engelle sınıf özelliğini kazanırsınız.
+  prerequisites:
+  - text: "Düzenbaz Yolu"
+
+omen://archetype/rogue/rogue?source=paizo-pathfinder-player-core:
+  name: Düzenbaz
+  description: Yetenekli ve fırsatçısınızdır. Keskin zekânızı ve hızlı tepkilerinizi kullanarak rakiplerinizin hatalarından yararlanır ve en çok acıtan yere vurursunuz. Heyecan arayarak ve becerilerinizi sınayarak tehlikeli bir oyun oynarsınız ve büyük olasılıkla yolunuza çıkan hiçbir yasayı pek umursamazsınız. Her hırsızın yolu benzersiz ve tehlikelerle dolu olsa da, hepinizin paylaştığı ortak nokta becerilerinizin genişliği ve derinliğidir.
+
+omen://archetype/witch/feats/advanced-witchcraft?source=paizo-pathfinder-player-core:
+  name: Gelişmiş Witch Sanatı
+  description: Bir Witch hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, Witch seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel Witch Sanatı"
+
+omen://archetype/witch/feats/basic-witch-spellcasting?source=paizo-pathfinder-player-core:
+  name: Temel Witch Büyücülüğü
+  description: Kantripcülük Hüneri kazanımlarını elde edersiniz. Witch arketipinden yeni bir derecede büyü slotu kazandığınız her seferde, o derecedeki iki yaygın büyüyü tanıdığınıza eklersiniz.
+  prerequisites:
+  - text: "Witch Yolu"
+
+omen://archetype/witch/feats/basic-witchcraft?source=paizo-pathfinder-player-core:
+  name: Temel Witch Sanatı
+  description: Seçtiğiniz 1. veya 2. seviye bir Witch hüneri kazanırsınız. Ruhdaş Hayvanınız için her gün iki yerine üç ruhdaş hayvan yeteneği seçebilirsiniz.
+  prerequisites:
+  - text: "Witch Yolu"
+
+omen://archetype/witch/feats/expert-witch-spellcasting?source=paizo-pathfinder-player-core:
+  name: Uzman Witch Büyücülüğü
+  description: Uzman Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Temel Witch Büyücülüğü"
+  - text: "haminizin geleneğiyle ilişkili beceride usta"
+
+omen://archetype/witch/feats/master-witch-spellcasting?source=paizo-pathfinder-player-core:
+  name: Usta Witch Büyücülüğü
+  description: Usta Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Uzman Witch Büyücülüğü"
+  - text: "haminizin geleneğiyle ilişkili beceride efsanevi"
+
+omen://archetype/witch/feats/patrons-breadth?source=paizo-pathfinder-player-core:
+  name: Hami Enginliği
+  description: Her gün daha fazla büyü yapabilirsiniz. En yüksek iki büyü dereceniz dışındaki her büyü derecesi için Witch arketip hünerlerinden kazandığınız büyü slotlarını 1 artırın.
+  prerequisites:
+  - text: "Temel Witch Büyücülüğü"
+
+omen://archetype/witch/feats/witch-dedication?source=paizo-pathfinder-player-core:
+  name: Witch Yolu
+  description: >
+    Bir Witch gibi büyü yaparsınız. Bir Hami seçin; seçtiğiniz haminin geleneğinden istediğiniz iki yaygın kantripe sahip bir ruhdaş hayvan kazanırsınız, ancak gelenek dışında haminin normalde sağlayacağı diğer hiçbir etkiyi kazanamazsınız. Ruhdaş Hayvanınız, bir Witch'in ruhdaş hayvanının normalde aldığı yetenekler yerine bir ruhdaş hayvan için normal sayıdaki yetenekleri kazanır.
+
+    Büyü Yap aktivitesini kazanırsınız. Tanıdığınızdan her gün bir kantrip hazırlayabilirsiniz. Büyü saldırı modifikatörü ve büyü ZD'si istatistiklerinde eğitimlisinizdir. Witch arketip büyüleri için büyü yapma niteliğiniz Zekâ'dır ve bunlar haminizin geleneğine ait Witch büyüleridir.
+
+    Haminin geleneğiyle ilişkili beceride eğitimli olursunuz; bu beceride hâlihazırda eğitimliyseniz, bunun yerine seçtiğiniz bir beceride eğitimli olursunuz.
+
+    Witch
+  prerequisites:
+  - text: "Zekâ +2"
+
+omen://archetype/witch/witch?source=paizo-pathfinder-player-core:
+  name: Witch
+  description: "Çalışma ya da adanmışlık yoluyla değil, bizzat kendinizin bile tam olarak anlamadığı dünya dışı bir haminin temsilcisi olarak güçlü büyüye hükmedersiniz. Bu varlık gizli bir ilah, güçlü bir peri, kadim bir ruh veya başka herhangi bir kudretli doğaüstü varlık olabilir—ancak doğası muhtemelen başkaları için olduğu kadar sizin için de bir gizemdir. Özel bir ruhdaş hayvan aracılığıyla haminiz, uygun gördüğünüz şekilde kullanmanız için size çok yönlü büyüler ve güçlü heksler bahşeder; yine de haminizin daha büyük planına yalnızca hizmet edip etmediğinizden asla emin olamazsınız."
+
+omen://archetype/wizard/feats/advanced-arcana?source=paizo-pathfinder-player-core:
+  name: Gelişmiş Mistik İlim
+  description: Bir Wizard hüneri kazanırsınız. Ön koşullarını karşılama amacıyla, Wizard seviyeniz karakter seviyenizin yarısına eşittir.
+  prerequisites:
+  - text: "Temel Mistik İlim"
+
+omen://archetype/wizard/feats/arcane-breadth?source=paizo-pathfinder-player-core:
+  name: Mistik Enginlik
+  description: Kapsamlı çalışmalarınız her gün daha fazla mistik büyü yapmanıza olanak tanır. En yüksek iki Wizard büyü slotunuz dışındaki her büyü derecesi için Wizard arketip hünerlerinden kazandığınız büyü slotlarını 1 artırın.
+  prerequisites:
+  - text: "Temel Wizard Büyücülüğü"
+
+omen://archetype/wizard/feats/arcane-school-spell?source=paizo-pathfinder-player-core:
+  name: Mistik Okul Büyüsü
+  description: Okulunuzun ilk okul büyüsünü kazanırsınız. Hâlihazırda bir tane yoksa 1 Odak Puanlık bir odak havuzu kazanırsınız ve ders çalışarak Odak Yenileyebilirsiniz.
+  prerequisites:
+  - text: "Wizard Yolu"
+
+omen://archetype/wizard/feats/basic-arcana?source=paizo-pathfinder-player-core:
+  name: Temel Mistik İlim
+  description: Seçtiğiniz 1. veya 2. seviye bir Wizard hüneri kazanırsınız.
+  prerequisites:
+  - text: "Wizard Yolu"
+
+omen://archetype/wizard/feats/basic-wizard-spellcasting?source=paizo-pathfinder-player-core:
+  name: Temel Wizard Büyücülüğü
+  description: Kantripcülük Hüneri kazanımlarını elde edersiniz. Wizard arketipinden yeni bir derecede büyü slotu kazandığınız her seferde, o derecedeki iki yaygın büyüyü büyü kitabınıza eklersiniz.
+  prerequisites:
+  - text: "Wizard Yolu"
+
+omen://archetype/wizard/feats/expert-wizard-spellcasting?source=paizo-pathfinder-player-core:
+  name: Uzman Wizard Büyücülüğü
+  description: Uzman Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Temel Wizard Büyücülüğü"
+  - text: "Usta Arkana"
+
+omen://archetype/wizard/feats/master-wizard-spellcasting?source=paizo-pathfinder-player-core:
+  name: Usta Wizard Büyücülüğü
+  description: Usta Büyücülük Hüneri kazanımlarını elde edersiniz.
+  prerequisites:
+  - text: "Uzman Wizard Büyücülüğü"
+  - text: "Efsanevi Arkana"
+
+omen://archetype/wizard/feats/wizard-dedication?source=paizo-pathfinder-player-core:
+  name: Wizard Yolu
+  description: >
+    Seçtiğiniz dört yaygın mistik kantrip içeren bir büyü kitabı edinerek bir Wizard gibi büyü yaparsınız. Büyü Yap aktivitesini kazanırsınız. Her gün büyü kitabınızdan iki kantrip hazırlayabilirsiniz. Büyü saldırı modifikatörü ve büyü ZD'si istatistiklerinde eğitimlisinizdir. Wizard arketip büyüleri için büyü yapma niteliğiniz Zekâ'dır ve bunlar mistik Wizard büyüleridir. Arkana becerisinde eğitimli olursunuz; Arkana becerisinde hâlihazırda eğitimliyseniz, bunun yerine seçtiğiniz bir beceride eğitimli olursunuz. Bir okul seçin; okul seçiminizden hiçbir yetenek kazanmazsınız, ancak bir üye olarak hünerlere hak kazanırsınız.
+
+    Wizard
+  prerequisites:
+  - text: "Zekâ +2"
+
+omen://archetype/wizard/wizard?source=paizo-pathfinder-player-core:
+  name: Wizard
+  description: Güçlü büyüler yapmak için büyü ustalığınızı kullanan, evrenin sırlarının ebedi bir öğrencisisinizdir. Mistik büyüyü keşfetmek ve anlamak için pratik büyücülük üzerine en son metinleri kadim ciltlerle çapraz referanslayarak büyüye bir bilim gibi yaklaşırsınız. Yine de büyü teorisi uçsuzdur ve hepsini incelemenizin hiçbir yolu yoktur. Özellikle azimli araştırmacılar bazen kendi teorilerini bir araya getirseler de, çoğu Wizard müfredatları belirli bir yaklaşıma dayanan resmi bir okul eğitimi aracılığıyla öğrenir.

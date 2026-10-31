@@ -1,0 +1,212 @@
+# tr overrides: action
+
+omen://action/basic-finisher?source=paizo-pathfinder-player-core-2:
+  name: Temel Bitirici Hamle
+  description: "Zarif, ölümcül bir vuruş yaparsınız. Bir Vuruş Yapın; isabet ettirirseniz ve silahınız Hassas Vuruş için uygunsa hassas vuruştan gelen tam 1d6 hasarı verirsiniz."
+
+omen://action/boarding-assault?source=paizo-pathfinder-player-core-2:
+  name: Bordalama Saldırısı
+  description: >
+    Ya iki kez Depar atın ya da bir ip veya benzeri bir nesne üzerinde Hareket Hızınızın iki katına kadar sallanmak için bir Akrobasi testi deneyin (ZD GM tarafından belirlenir, ancak genellikle ZD 20'dir), ardından Vuruş Yapın. Bu hareket sırasında bir tekneye veya benzeri bir araca bindiyseniz ya da araçtan indiyseniz, Vuruş fazladan bir silah hasar zarı verir.
+
+
+omen://action/call-companion?source=paizo-pathfinder-player-core-2:
+  name: Yoldaşı Çağır
+  description: Farklı bir yoldaş hayvan çağırmak için 1 dakika harcayarak aktif yoldaşınızı diğer yoldaş hayvanlarınızdan biriyle değiştirirsiniz.
+
+omen://action/clue-in?source=paizo-pathfinder-player-core-2:
+  name: İpucu Ver
+  description: Tetikleyici yaratıkla bilgi paylaşırsınız. Testlerine, İpucunu Takip Et eyleminden gelen soruşturma bonusunuza eşit bir durumsal bonus kazanırlar. GM, bilgiyi sözlü olarak aktarıyorsanız işitsel ve dilsel gibi duruma bağlı olarak bu reaksiyona ilgili özellikleri ekleyebilir.
+  trigger: Başka bir yaratık, aktif soruşturmalarınızdan birinin merkezindeki soruyu yanıtlamaya yaklaşmanıza yardımcı olabilecek bir test dener.
+  frequency: 10 dakikada bir
+
+omen://action/cobble-together?source=paizo-pathfinder-player-core-2:
+  name: Derme Çatma Üret
+  description: >
+    İlk Zanaat testini gerçekleştirmek için yalnızca 10 dakika harcayarak elinizin altındaki malzemelerle herhangi bir şeyden, herhangi bir yerde geçici bir eşya Üretirsiniz. Geçici eşya ezberlediğiniz veya formülüne sahip olduğunuz bir eşya olmalı; yaygın, büyülü olmayan, seviyenizin yarısı veya daha düşük seviyede olmalı ve bir silah, zırh veya tüketilemez bir macera teçhizatı parçası olmalıdır (tüketilemez macera teçhizatı Player Core'un 291. sayfasında yer almaktadır). Tek bir eşya yerine, tek bir mühimmat türünden 10 adet üretebilirsiniz. Yalnızca fiziksel eşyayı yaratabilirsiniz, herhangi bir bilgi veya büyü değil; bu nedenle örneğin boş bir günlük veya rastgele sayfaları olan bir günlük yaratabilseniz de bunu akademik bir günlük veya dini bir metin olarak kullanamazsınız.
+
+
+omen://action/confident-finisher?source=paizo-pathfinder-player-core-2:
+  name: Kendinden Emin Bitirici Hamle
+  description: Düşmanınızın savunmasını yararak inanılmaz derecede zarif bir vuruş yaparsınız. Aşağıdaki başarısızlık etkisiyle bir Vuruş Yapın.
+  failure: Hedefe Hassas Vuruş hasarınızın yarısını verirsiniz. Bu hasar türü, Saldırı için kullandığınız silahın veya silahsız saldırının hasar türüdür.
+
+omen://action/destructive-vengeance?source=paizo-pathfinder-player-core-2:
+  name: Yıkıcı İntikam
+  description: >
+    Etki: Düşmanınızı unutuluşa doğru sürüklerken kan dökmek yeni kanların dökülmesine yol açar. Aldığınız hasar miktarını (ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6 artırırsınız ve tetikleyici düşmana (ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6[spirit]|options:destructive-vengeance:enemy hasar verirsiniz. Bu reaksiyonu kullandığınızda aldığınız ve verdiğiniz hasar 5. seviyede 2d6'ya, 9. seviyede 3d6'ya, 12. seviyede 4d6'ya, 16. seviyede 5d6'ya ve 19. seviyede 6d6'ya yükselir.
+    Buna ek olarak bir sonraki sıranızın sonuna kadar tetikleyici yaratığa karşı yaptığınız Vuruşlar fazladan 2 ruh hasarı verir. Bu fazladan hasar 9. seviyede 4'e ve 16. seviyede 6'ya yükselir.
+  trigger: Şampiyon auranız içindeki bir düşman size hasar verir
+
+omen://action/devise-a-stratagem?source=paizo-pathfinder-player-core-2:
+  name: Strateji Geliştir
+  description: >
+    Çatışmada bir düşmanın zayıf yönlerini değerlendirir ve bunları bir saldırı planı oluşturmak için kullanırsınız. Görebildiğiniz bir yaratık seçin. O yaratığın aktif soruşturmalarınızdan birinin merkezindeki soruyu yanıtlamaya yardımcı olabileceğinin farkındaysanız Strateji Geliştir eylemini serbest eylem olarak gerçekleştirebilirsiniz. Bir d20 atın, ardından bir saldırı stratejisine veya beceri stratejisine karar verin. Saldırı Stratejisi Bir sonraki sıranızın başlangıcından önce seçilen yaratığa Vuruş Yaparsanız, Vuruşunuz talih özelliğini kazanır ve zar atmak yerine Vuruşunuzun saldırı zarı için d20 atışının sonucunu kullanmalısınız. Bu ikameyi bu tur yaratığa karşı yapacağınız yalnızca ilk Vuruş için yaparsınız, sonraki saldırılar için yapamazsınız. Bu ikameyi yaptığınızda, saldırı zarınıza Kuvvet veya Çeviklik değiştiriciniz yerine Zekâ değiştiricinizi ekleyebilirsiniz. Bir yakın dövüş silahı, yakın dövüş silahsız saldırısı veya fırlatılan silah ile Vuruş Yaparsanız, ikameden faydalanmak için çevik veya zarif özelliğine sahip olmalıdır. Beceri Stratejisi Bir sonraki sıranızın başlangıcına kadar hedefe Vuruş Yapmayı deneyemezsiniz. Bir sonraki sıranızın başlangıcından önce hedefi içeren bir sonraki Zekâ, Bilgelik veya Karizma temelli beceri testinize veya Dikkat testinize +1 durumsal bonus kazanırsınız. Böyle bir teste İpucunu Takip Et soruşturma bonusunuzu kazanacak olsaydınız, listelenen +1 bonusunu kazanmak yerine bu bonus 1 artar.
+
+  frequency: tur başına bir kez
+
+omen://action/eldritch-shot?source=paizo-pathfinder-player-core-2:
+  name: Mistik Atış
+  description: "Etki: 1 veya 2 eylem süren ve büyü saldırı zarı gerektiren bir büyü yaparsınız. Büyünün etkileri hemen gerçekleşmez, ancak kuşandığınız yaya aşılanır. O yay ile bir Vuruş Yapın. Büyünüz mühimmatla birlikte uçar ve hem Saldırının hem de büyünün etkilerini belirlemek için saldırı zarı sonucunuzu kullanır. Bu, çoklu saldırı cezanız için iki saldırı sayılır, ancak cezayı Mistik Atış'ı tamamlayana kadar uygulamazsınız. Dirençler ve zaaflar açısından Vuruş ve büyünün hasarını birleştirin."
+  requirements: Bir yay veya dolu bir kundaklı yay kuşanmış durumdasınız
+
+omen://action/expeditious-inspection?source=paizo-pathfinder-player-core-2:
+  name: Hızlı İnceleme
+  description: Büyük bir hızla çevrenizi gözlemler ve değerlendirirsiniz. Bilgi Hatırlar, Tarar veya Niyetini Tartarsınız.
+  frequency: 10 dakikada bir
+
+omen://action/feys-fortune?source=paizo-pathfinder-player-core-2:
+  name: Peri Talihi
+  description: "Etki: Beceri testini iki kez atın ve daha iyi olan sonucu kullanın"
+  trigger: Bir beceri testi denersiniz ve henüz zar atmamışsınızdır
+  frequency: günde bir kez
+
+omen://action/final-surge?source=paizo-pathfinder-player-core-2:
+  name: Son Atılım
+  description: İki kez Depar atarsınız. Ejderkalbi Mutajeni'nin süresi sona erer.
+
+omen://action/flash-of-grandeur?source=paizo-pathfinder-player-core-2:
+  name: Haşmet Parıltısı
+  description: "Etki: Düşmanınızı sarmalamak için sizden görkemli bir ilahi ışık parlar. Müttefik, tetikleyici hasara karşı 2 + seviyenize eşit tüm hasarlara direnç kazanır. Bir sonraki sıranızın sonuna kadar saldırgan Açığa Çıkaran Işık büyüsünden etkilenir."
+  trigger: Bir düşman müttefikinize hasar verir ve her ikisi de şampiyon auranızın içindedir
+
+omen://action/glimpse-of-redemption?source=paizo-pathfinder-player-core-2:
+  name: Kefaret Parıltısı
+  description: "Etki: Zihin gözünde kefaret görüleri canlanırken düşmanınız günahın ağırlığı altında tereddüt eder. Düşman aşağıdaki etkilerle tövbe etmeyi veya reddetmeyi seçmelidir. Düşman zihinsizse veya başka bir şekilde tövbe edemiyorsa reddetme sonucunu kullanın.  • Tövbe Et Müttefik tetikleyici hasardan zarar görmez.  • Reddet Müttefik, tetikleyici hasara karşı 2 + seviyenize eşit tüm hasarlara direnç kazanır. Hasar verici etki uygulandıktan sonra, düşman bir sonraki sırasının sonuna kadar Güçten Düşmüş 2 olur."
+  trigger: Bir düşman müttefikinize hasar verir ve her ikisi de şampiyon auranızın içindedir
+
+omen://action/influence-rumor?source=paizo-pathfinder-player-core-2:
+  name: Söylentiyi Yönlendir
+  description: "Bir söylentinin gidişatını, tonunu veya içeriğini kendi yararınıza yönlendirmeye çalışarak en az 1 günlük boş zaman harcarsınız. Söylentiyi amaçladığınız şekilde değiştirmek için bir diplomasi testinde başarılı olmanız gerekir. Zorluk, topluluğun büyüklüğüne, sakinlerin göreceli algısına ve diğer dedikoducuların etkisine göre GM tarafından belirlenir; ancak tipik olarak küçük bir köy için ZD 15, bir kasaba için ZD 20, bir şehir için ZD 30 veya bir metropol için ZD 40'tan daha düşük değildir."
+
+omen://action/iron-command?source=paizo-pathfinder-player-core-2:
+  name: Demir Buyruk
+  description: >
+    Etki: Size zarar vermeye cüret eden hadsiz bir düşmana haddini bildirirsiniz. Düşmanınıza itaatle önünüzde diz çökmesini buyurursunuz. Reddetmeye cüret ederse bedelini acı ve ızdırapla ödemelidir. Düşman aşağıdaki seçeneklerden birini seçmelidir. • Diz Çök Düşman bir serbest eylem olarak Yüzüstü yere düşer. • Reddet Düşmana (ternary(gte(@actor.level,19),6,ternary(gte(@actor.level,16),5,ternary(gte(@actor.level,12),4,ternary(gte(@actor.level,9),3,ternary(gte(@actor.level,5),2,1))))))d6[mental] hasar verirsiniz. Bu hasar 5. seviyede 2d6'ya, 9. seviyede 3d6'ya, 12. seviyede 4d6'ya, 16. seviyede 5d6'ya ve 19. seviyede 6d6'ya yükselir.
+    Düşman hangi seçeneği seçerse seçsin, ona karşı yaptığınız Vuruşlar bir sonraki sıranızın sonuna kadar fazladan 1 ruh hasarı verir. Bu fazladan hasar 9. seviyede 2'ye ve 16. seviyede 3'e yükselir.
+  trigger: Şampiyon auranız içindeki bir düşman size hasar verir
+
+omen://action/liberating-step?source=paizo-pathfinder-player-core-2:
+  name: Özgürleştirici Adım
+  description: >
+    Bir müttefiki kısıtlamadan kurtarırsınız. Tetikleyici bir müttefikin hasar almasıysa, müttefik tetikleyici hasara karşı 2 + seviyenize eşit tüm hasarlara direnç kazanır. Müttefik; kendisini kavrayan, Zapt Eden, Hareketsiz Kılan veya Felç Eden etkilerden kurtulmayı deneyebilir. Ya kurtarışa izin veren bu tür bir etkiye karşı yeni bir kurtarış dener ya da serbest eylem olarak bir etkiden Kurtulmayı dener. Hareket edebiliyorsa müttefik, kurtulması gerekmemiş olsa bile serbest eylem olarak bir Adım atabilir.
+
+  trigger: Bir düşman müttefikinize hasar verir, onu kavrar veya zapt eder ve her ikisi de şampiyon auranızın içindedir
+
+omen://action/mark-for-death?source=paizo-pathfinder-player-core-2:
+  name: Ölüm İçin İşaretle
+  description: >
+    Etki: Tek bir yaratığı hedefiniz olarak belirlersiniz. Gizlenmiş veya Konumu Saptanmamış iken Ölüm İçin İşaretle'yi kullanmak sizi Gözlemlenen yapmaz. Ölüm İçin İşaretle, hedef ölene veya siz Ölüm İçin İşaretle'yi tekrar kullanana kadar sürer. Hedefinizi Taramak için yapılan Dikkat testlerine ve hedefinize karşı Sahte Hamle Yapmak için yapılan Aldatma testlerine +2 durumsal bonus kazanırsınız. Hedefiniz sizi Taramak için yapılan tüm Dikkat testlerine –2 durumsal ceza alır. Ek olarak hedefinize saldırırken, 1d4 zayıf nokta hasarı vermesi ve seviye atladıkça zar sayısını artırmamanız dışında Sinsi Saldırı sınıf özelliğine sahip olursunuz. 6. seviyede hasar 1d6'ya yükselir. Zaten sinsi saldırı sınıf özelliğine sahipseniz, hedefinize karşı yapılan sinsi saldırılarınızla bunun yerine fazladan 1 zayıf nokta hasarı verirsiniz ve bu 6. seviyede 2 zayıf nokta hasarına yükselir.
+
+  requirements: İşaretlemeyi düşündüğünüz yaratık sizin tarafınızdan gözlemlenmektedir
+
+omen://action/once-bitten?source=paizo-pathfinder-player-core-2:
+  name: Bir Kez Isırılan
+  description: "Etki: Tetikleyici yaratık yayılan zehre maruz kalır ve zehir etkisiz hâle gelir."
+  trigger: Bitişiğinizdeki bir yaratık yakın dövüş silahsız Vuruşu ile size vurur
+  requirements: Giysilerinizi saldıranları zehirleyecek şekilde hazırlamış durumdasınız
+
+omen://action/opportune-riposte?source=paizo-pathfinder-player-core-2:
+  name: Fırsat Karşı Saldırısı
+  description: Düşmanınızın beceriksiz saldırısından kaynaklanan bir açıktan faydalanırsınız. Ya tetikleyici düşmana karşı bir yakın dövüş Vuruşu yaparsınız ya da Vuruş için kullandığı silahı Silahsızlandırmayı denersiniz.
+  trigger: Erişim alanınız içindeki bir düşman size karşı bir Vuruşta kritik başarısız olur
+
+omen://action/plummeting-roll?source=paizo-pathfinder-player-core-2:
+  name: Düşüş Yuvarlanması
+  description: "Etki: Hareketle birlikte büzülüp yuvarlanırsınız. Ayaklarınızın üzerine inersiniz ve Hareket Hızınızın yarısına kadar Depar atarsınız"
+  trigger: En az 10 fit düşersiniz ve düşüşten hasar almazsınız
+
+omen://action/pointed-question?source=paizo-pathfinder-player-core-2:
+  name: İğneleyici Soru
+  description: >
+    Birini tam olarak doğru şekilde cezbeden veya iğneleyen bir soru sorarsınız. Görebildiğiniz, müttefik olmayan bir yaratığa bir soru sorun. Yaratığın İrade ZD'sine karşı bir test deneyin. Yaratık ardından 1 saat boyunca geçici olarak bağışıklık kazanır. Doğru yanıtlasın ya da yanıtlamasın, beden dilinden bir şeyler çıkarırsınız ve sıranızın sonundan önce ona karşı Strateji Geliştir kullanarak yapacağınız Vuruşa karşı Gafil olur.
+
+  criticalSuccess: Hedef sorunuzu doğrudan yanıtlamalıdır. Doğru yanıtlamak zorunda değildir, ancak yaratık size Yalan Söylemeye çalışırsa Dikkat ZD'nize +4 durumsal bonus kazanırsınız.
+  success: Kritik başarıdaki gibi, ancak Dikkat ZD'nize gelen durumsal bonus +2'dir.
+  failure: Hedef normal şekilde size yanıt vermeyi reddedebilir.
+  criticalFailure: Hedef normal şekilde size yanıt vermeyi reddedebilir ve rahatsız edici ilginiz nedeniyle size karşı tutumu bir basamak düşer.
+
+omen://action/pursue-a-lead?source=paizo-pathfinder-player-core-2:
+  name: İpucunu Takip Et
+  description: >
+    Daha büyük bir gizemin parçası olduğunu düşündüğünüz, tespit ettiğiniz bir ayrıntıyı adlandırır ve ardından onu incelemek için 1 dakika harcarsınız. Ayrıntı tipik olarak ya barizdir ya da Bilgi Hatırla, Niyetini Tart, Bilgi Topla veya benzeri bir eylem kullanarak önceden keşfettiğiniz bir şeydir. Dakika geçtikten sonra GM ya daha büyük bir gizem olduğunu onaylar ya da öğrenilecek başka bir şey olmadığını söyler (ayrıntı önemsizdir veya tüm bilgileri zaten biliyorsunuzdur). Gerçekte oyunda daha büyük bir gizem varsa 10 dakika boyunca tekrar İpucunu Takip Et gerçekleştiremezsiniz, ancak bir soruşturma açmayı seçebilirsiniz. Bunu yapmak için, "Burada asılı olması gereken paha biçilmez sanat eseri nereye götürüldü?" veya "Bu rahibi kim veya ne öldürdü?" gibi gizemin merkezindeki soruyu tanımlayın. Gerekirse soruyu netleştirmek için GM'nizle birlikte çalışın. Ayrıca daha iyi takip edebilmek için soruşturmanıza bir isim de verebilirsiniz ("Kandırılan Goblin Vakası" veya "Deritestere Cinayetleri" gibi). Soruşturma Bonusu Aktif bir soruşturmanın merkezindeki soruyu yanıtlamaya yaklaşmak için ne zaman bir Dikkat testi veya beceri testi denerseniz teste +1 durumsal bonus kazanırsınız. Bunun geçerli olduğu kesin testler, soruşturmak için kullandığınız eylemlere bağlıdır ve GM tarafından belirlenir, ancak soruşturma testleri tipik olarak Zekâ, Bilgelik veya Karizma kullanan Dikkat testleri veya beceri testleridir. Aktif Soruşturmalar Aynı anda iki aktif soruşturma yürütebilirsiniz. Bundan sonra başka bir İpucunu Takip Ederseniz, vaka mevcut soruşturmalarınızdan farklı olmalıdır (farkında olduğunuz kadarıyla) ve seçtiğiniz mevcut bir soruşturmadan vazgeçersiniz. Bir soruşturmanın takibinden vazgeçtiğinizde, bir sonraki günlük hazırlıklarınızı yapana kadar o soruşturmada tekrar İpucunu Takip Et gerçekleştiremezsiniz. Bir Soruşturmayı Çözmek Soruşturmanızın merkezindeki soruyu yanıtlarsanız GM bunu başardığınızı söyler. Tekrar İpucunu Takip Ederek veya kendi isteğinizle İptal Ederek soruşturmayı kapatmayı seçene kadar bonusu veya diğer faydaları kaybetmezsiniz. Keşfettiğiniz şey daha da büyük bir gizeme işaret ediyorsa, soruyu ve soruşturmanın adını yeni bilgilere uyarlamak için GM ile birlikte çalışabilirsiniz.
+
+  frequency: 10 dakikada bir
+
+omen://action/quick-alchemy?source=paizo-pathfinder-player-core-2:
+  name: Hızlı Simya
+  description: "Anında başka bir simyasal tüketilebilir üretmek için ya bir çok yönlü şişe harcayabilir ya da özellikle kısa ömürlü bir çok yönlü şişe yaratabilirsiniz. Hızlı Simya ile yapılan bir eşyanın yarattığı ve süresi 10 dakikadan uzun sürecek herhangi bir etki, bunun yerine 10 dakika sürer.  • Tüketilebilir Yarat Formül kitabınızda bulunan, seviyenizde veya daha düşük seviyede tek bir simyasal tüketilebilir eşya yaratmak için çok yönlü şişelerinizden birini harcarsınız. Simyasal ham maddelere normal parasal maliyeti harcamanız veya bir Zanaat testi denemeniz gerekmez. Bu eşya aşılanmış özelliğine sahiptir, ancak yalnızca bir sonraki sıranızın başlangıcına kadar etkisini korur. (Normalde olduğu gibi, bir eşyanın herhangi bir seviyesini yaratmak için o eşyaya ait yalnızca bir formüle ihtiyacınız vardır.)  • Hızlı Şişe Yalnızca bir bomba olarak veya araştırma alanınızdan gelen çok yönlü şişe seçeneği için kullanılabilecek bir çok yönlü şişe yaratırsınız (örneğin bir tüketilebilir yaratmak için kullanılamaz). Bu eşya aşılanmış özelliğine sahiptir, ancak yalnızca mevcut sıranızın sonuna kadar etkisini korur."
+  requirements: Bir Simyacı Alet Takımı tutuyor veya kuşanıyorsunuz ve bir eliniz boşta.
+
+omen://action/quick-tempered?source=paizo-pathfinder-player-core-2:
+  name: Çabuk Parlayan
+  description: Özgürce hareket edebildiğiniz sürece öfkeniz içgüdüsel ve anlıktır. Öfkelenirsiniz.
+  trigger: İnisiyatif zarı atarsınız.
+  requirements: Aşırı Yüklü değilsiniz veya ağır zırh giymiyorsunuz.
+
+omen://action/quick-tincture?source=paizo-pathfinder-player-core-2:
+  name: Hızlı Tentür
+  description: >
+    Maliyet 1 çok yönlü şişe Kısa ömürlü bir tentürü hızla demlersiniz. Simyasal reaktiflere normal parasal maliyeti harcamanız veya bir Zanaat testi denemeniz gerekmeden seviyenizde veya daha düşük seviyede tek bir simyasal iksir veya alet yaratırsınız. Bu eşya aşılanmış özelliğine sahiptir, ancak yalnızca mevcut sıranızın sonuna kadar etkisini korur.
+
+  requirements: Yarattığınız simyasal eşyanın formülünü biliyorsunuz, bir simyacı alet takımı tutuyor veya kuşanıyorsunuz ve bir eliniz boşta.
+
+omen://action/rage?source=paizo-pathfinder-player-core-2:
+  name: Öfke
+  description: >
+    İçinizdeki hiddete dokunur ve öfkelenmeye başlarsınız. Seviyeniz artı Dayanıklılık değiştiricinize eşit sayıda geçici Can Puanı kazanırsınız. Öfkeliyken:  • Yakın dövüş Vuruşlarında 2 ek hasar verirsiniz. Silahınız veya silahsız saldırınız çevik ise bu ek hasar yarıya iner.  • Ayrıca öfke özelliğine sahip olmadıkça odaklanma özelliğine sahip eylemleri kullanamazsınız. Öfkeliyken Tarayabilirsiniz. Öfke; 1 dakika, Bilinçsiz düşene kadar veya karşılaşma sona erene kadar (hangisi önce gelirse) sürer. Kendi isteğinizle öfkelenmeyi durduramazsınız. Öfkelenmeyi bıraktığınızda, Öfke'den kalan tüm geçici Can Puanlarını kaybedersiniz ve 1 dakika boyunca Öfke eylemini tekrar kullanarak geçici Can Puanı kazanamazsınız.
+
+  requirements: Bitkin veya öfkeli değilsiniz.
+
+omen://action/resist-elf-magic?source=paizo-pathfinder-player-core-2:
+  name: Elf Büyüsüne Diren
+  description: Büyüye karşı atasal direnciniz sizi korur. Tetikleyici kurtarışa +1 durumsal bonus kazanırsınız. Tetikleyici etki arkan ise bunun yerine +2 durumsal bonus kazanırsınız.
+  trigger: Büyülü bir etkiye karşı bir kurtarış denersiniz ancak henüz zar atmamışsınızdır
+
+omen://action/retributive-strike?source=paizo-pathfinder-player-core-2:
+  name: Misilleme Saldırısı
+  description: "Etki: Müttefikinizi korur ve düşmanınıza vurursunuz. Müttefik, tetikleyici hasara karşı 2 + seviyenize eşit tüm hasarlara direnç kazanır. Düşman erişim alanınız içindeyse ona karşı bir yakın dövüş Vuruşu yapın."
+  trigger: Bir düşman müttefikinize hasar verir ve her ikisi de şampiyon auranızın içindedir
+
+omen://action/selfish-shield?source=paizo-pathfinder-player-core-2:
+  name: Bencil Kalkan
+  description: >
+    Etki: Kişisel çıkarınız sizi güvende tutar. Hasar türü ne olursa olsun, tetikleyici hasara karşı 2 + seviyenizin yarısına eşit direnç kazanırsınız. Ek olarak, tetikleyici yaratığa karşı Vuruşlarınız bir sonraki sıranızın sonuna kadar 1 fazladan ruh hasarı verir. Bu ekstra hasar 9. seviyede 2'ye ve 16. seviyede 3'e yükselir.
+
+  trigger: Şampiyon auranız içindeki bir düşman size hasar verir
+
+omen://action/tail-toxin?source=paizo-pathfinder-player-core-2:
+  name: Kuyruk Zehri
+  description: Kuyruğunuzun zehrini delici veya kesici bir silaha uygularsınız. Bir sonraki sıranızın sonundan önce o silahla yapacağınız bir sonraki Vuruş isabet eder ve hasar verirse hedefe seviyenize eşit süren zehir hasarı verirsiniz.
+  requirements: Bir delici veya kesici silah kuşanmış durumdasınız
+  frequency: günde bir kez
+
+omen://action/threatening-approach?source=paizo-pathfinder-player-core-2:
+  name: Tehditkâr Yaklaşım
+  description: Bir düşmanın bitişiğinde olacak şekilde Depar atarsınız ve o düşmana Gözdağı Verirsiniz. Başarılı olursanız düşman Korkmuş 1 yerine Korkmuş 2 olur.
+
+omen://action/toxic-skin?source=paizo-pathfinder-player-core-2:
+  name: Zehirli Ten
+  description: "Etki: Ölümcül bir toksin salgılarsınız. Tetikleyici yaratık (ceil(@actor.level/2))d4[poison] hasar alır (sınıf ZD'niz veya büyü ZD'nizden hangisi daha yüksekse onu kullanan bir fortitude|against:class-spell|basic kurtarışı). 3. seviyede ve sonrasındaki her 2 seviyede bir hasar 1d4 artar."
+  trigger: Bir yaratık sizi Kavrayarak, silahsız bir saldırıyla size başarıyla vurarak veya size karşı dokunma menzilli bir büyü kullanarak size dokunur
+  frequency: saatte bir kez
+
+omen://action/transform-ammunition?source=paizo-pathfinder-player-core-2:
+  name: Mühimmatı Dönüştür
+  description: >
+    Etki: Üzerinizdeki büyülü olmayan bir oku veya kundak okunu, Büyülü Mühimmat hüneri için seçtiğiniz bir türde büyülü bir mühimmat parçasına dönüştürürsünüz. Mühimmatı sıranızın sonundan önce fırlatmalısınız, aksi takdirde büyü dağılır. Mühimmatın bir Etkinleştir girdisi varsa, mühimmatı fırlatmadan önce etkinleştirmek için gereken eylemleri yine de harcamanız gerekir. Tipik olarak kullandığınız mühimmat türü için mevcut olmayan bir büyülü mühimmat türü seçebilirsiniz—örneğin, bu büyülü mühimmat normalde yalnızca kundak oklarında bulunsa bile bir ok üzerinde Tırmanış Kundak Oku kullanabilirsiniz.
+
+  frequency: tur başına bir kez
+
+omen://action/upstage?source=paizo-pathfinder-player-core-2:
+  name: Rol Çal
+  description: Düşmanınız elinden gelenin en iyisini yaptıktan sonra herkese işin aslında nasıl yapıldığını gösterirsiniz. Bu reaksiyonu tetikleyen aynı beceriyi kullanarak bir test deneyin.
+  trigger: Bir düşman bir beceri testi dener ve kritik başarı elde edemez
+  criticalSuccess: Bir sonraki sıranızın sonuna kadar saldırı zarlarına, Dikkat testlerine, kurtarışlara ve beceri testlerine +1 statü bonusu kazanırsınız.
+  success: Kritik başarıdaki gibi, ancak tetikleyici yaratık beceri testinde başarısız olduysa faydaları kazanırsınız.
+
+omen://action/warding-sign?source=paizo-pathfinder-player-core-2:
+  name: Koruyucu İşaret
+  description: "Etki: Kişisel, mistik bir koruma işaretinin gücünü çağırırsınız; bu işaret yavaşça solmadan önce parlak bir şekilde alevlenir. Tetikleyici kurtarışa +2 durumsal bonus veya etki bir lanet ise +3 durumsal bonus kazanırsınız."
+  trigger: Büyülü bir etkiye karşı bir kurtarış denersiniz, ancak henüz zar atmamışsınızdır
+  frequency: dakikada bir

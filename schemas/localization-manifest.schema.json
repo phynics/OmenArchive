@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/localization-manifest.schema.json",
+  "title": "OmenArchive Localization Manifest",
+  "description": "Metadata, licensing, attribution, and coverage for a translation pack.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Unique identifier of the translation pack, usually matching the publication ID."
+    },
+    "locale": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(?:-[A-Za-z0-9]+)*$",
+      "description": "BCP 47 language tag (e.g. tr, de, fr, pt-BR)."
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable display title of the translation pack."
+    },
+    "publicationID": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "The publication in src/ that this pack provides translations for."
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["seed", "in_progress", "complete", "maintenance"]
+        },
+        "translatedCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "totalCount": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": ["status", "translatedCount", "totalCount"],
+      "additionalProperties": false
+    },
+    "license": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "string",
+          "description": "License covering adapted rules text, e.g. Open RPG Creative (ORC) License."
+        },
+        "ipPolicy": {
+          "type": "string",
+          "description": "Intellectual property policy covering Paizo trademarks and setting lore."
+        },
+        "software": {
+          "type": "string",
+          "description": "Optional license covering tooling or script code."
+        }
+      },
+      "required": ["data", "ipPolicy"],
+      "additionalProperties": false
+    },
+    "attribution": {
+      "type": "object",
+      "properties": {
+        "lead": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "contact": { "type": "string" },
+              "url": { "type": "string" }
+            },
+            "required": ["name"],
+            "additionalProperties": false
+          }
+        },
+        "upstreamSources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string" },
+              "commit": { "type": "string" }
+            },
+            "required": ["name", "url"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["authors"],
+      "additionalProperties": false
+    },
+    "legalNotice": {
+      "type": "string",
+      "description": "Required legal notice or disclaimer for distribution."
+    }
+  },
+  "required": [
+    "id",
+    "locale",
+    "title",
+    "publicationID",
+    "coverage",
+    "license",
+    "attribution",
+    "legalNotice"
+  ],
+  "additionalProperties": false
+}

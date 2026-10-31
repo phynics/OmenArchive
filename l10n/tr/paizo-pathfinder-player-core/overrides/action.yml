@@ -1,0 +1,847 @@
+# tr overrides: action
+
+omen://action/administer-first-aid?source=paizo-pathfinder-player-core:
+  name: İlk Yardım Uygula
+  description: >
+    Ölmekte veya Kanama durumundaki bitişiğinizdeki bir yaratığa ilk yardım uygularsınız. Bir yaratık hem ölmekte hem de kanıyorsa, zar atmadan önce hangi rahatsızlığı tedavi etmeye çalıştığınızı seçin. Diğer etkiyi gidermeye çalışmak için tekrar İlk Yardım Uygula eylemini kullanabilirsiniz.
+     • Dengele 0 Can Puanına ve ölmekte durumuna sahip bir yaratık üzerinde bir Tıp testi yapın. ZD, 5 + o yaratığın toparlanma denemesi ZD'sine eşittir (genellikle 15 + ölmekte değeri).
+     • Kanamayı Durdur Süren kanama hasarı alan bir yaratık üzerinde bir Tıp testi yapın. ZD genellikle kanamaya neden olan etkinin ZD'sidir.
+
+  requirements: Üzerinizde veya elinizde bir Şifacı Alet Takımı bulunmalıdır.
+  success: Dengelemeye çalışıyorsanız hedef ölmekte durumunu kaybeder (ancak Bilinçsiz kalmaya devam eder). Kanamayı durdurmaya çalışıyorsanız hedef, özellikle uygun yardım için düşürülmüş ZD ile destekli toparlanmadan yararlanır.
+  criticalFailure: Dengelemeye çalıştıysanız hedefin ölmekte değeri 1 artar. Kanamayı durdurmaya çalıştıysanız hedef, anında süren kanama hasarına eşit miktarda hasar alır.
+
+omen://action/aid?source=paizo-pathfinder-player-core:
+  name: Yardım
+  description: >
+    Müttefikinize bir görevde yardımcı olmaya çalışırsınız. Bu reaksiyonu kullanmak için öncelikle kendi sıranızda genellikle 1 eylem harcayarak hazırlık yapmış olmanız gerekir. Oyun Yöneticisine (GM) nasıl yardım edeceğinizi tam olarak açıklarsınız ve GM yardım edip edemeyeceğinize karar verir. Yardım reaksiyonunu kullandığınızda GM tarafından belirlenen bir beceri testi veya saldırı zarı atarsınız. Tipik Zorluk Derecesi (ZD) 15'tir.
+
+  trigger: Bir müttefikiniz bir beceri testi veya saldırı zarı gerektiren bir eylem kullanmak üzeredir.
+  requirements: Müttefikiniz yardımınızı kabul etmeye gönüllüdür ve siz kendi sıranızda yardım etmek için hazırlık yapmışsınızdır.
+  criticalSuccess: >
+    Müttefikinize tetikleyici zar için +2 durumsal bonus sağlarsınız. Eğer denediğiniz zarda usta yetkinliğe sahipseniz bonus +3, efsaneviyseniz +4 olur.
+
+  success: >
+    Müttefikinize tetikleyici zar için +1 durumsal bonus sağlarsınız.
+
+  criticalFailure: >
+    Müttefikiniz tetikleyici zar için -1 durumsal ceza alır.
+
+
+omen://action/anchor?source=paizo-pathfinder-player-core:
+  name: Kök Sal
+  description: "Etki: Köklerinizi toprağın içine veya boyunca salarak tökezlemenizi zorlaştırırsınız. Hareket edene kadar, sizi Yerinden Oynatma, İtme veya Çelme Takma girişimlerine karşı Beden veya Refleks ZD'nize +2 durumsal bonus kazanırsınız (bir kök leshy iseniz +4 durumsal bonus). Bu bonus ayrıca sizi hareket ettirmeye veya Yüzüstü yere sermeye çalışan büyülere ya da etkilere karşı kurtarışlara da uygulanır. Bir etki sizi hareket etmeye zorlarsa, çabanın bir kısmı kökleri koparmaya gittiğinden normal mesafenin yalnızca yarısı kadar hareket edersiniz."
+  requirements: Sağlam bir zemin üzerinde bulunmalısınız
+
+omen://action/arrest-a-fall?source=paizo-pathfinder-player-core:
+  name: Düşüşü Durdur
+  description: Düşüşünüzü yavaşlatmak için bir Akrobasi testi veya Refleks kurtarışı denersiniz. ZD genellikle 15'tir, ancak hava türbülansı veya diğer koşullar nedeniyle daha yüksek olabilir.
+  trigger: Düşersiniz.
+  requirements: Uçma Hareket Hızına sahip olmalısınız.
+  success: Düşüşten hasar almazsınız.
+
+omen://action/avert-gaze?source=paizo-pathfinder-player-core:
+  name: Bakış Kaçır
+  description: Bir medusanın bakışı gibi bir tehlikeden bakışınızı kaçırırsınız. Bir medusanın taşlaştıran bakışı gibi bir yaratığa veya nesneye bakmanızı gerektiren görsel yeteneklere karşı kurtarışlarında +2 durumsal bonus kazanırsınız. Bakışınız bir sonraki sıranızın başlangıcına kadar kaçırılmış olarak kalır.
+
+omen://action/avoid-notice?source=paizo-pathfinder-player-core:
+  name: Fark Edilmekten Kaçın
+  description: Yarı hızda seyahat ederken fark edilmekten kaçınmak için bir Gizlilik testi denersiniz. Bir karşılaşmanın başında Fark Edilmekten Kaçınıyorsanız, hem inisiyatifinizi belirlemek hem de düşmanların sizi fark edip etmediğini görmek için genellikle Dikkat testi yerine bir Gizlilik testi atarsınız (inisiyatif testi sonuçlarından bağımsız olarak, Sessizce İlerle için normal olduğu gibi düşmanların Dikkat ZD'lerine göre).
+
+omen://action/balance?source=paizo-pathfinder-player-core:
+  name: Dengede Kal
+  description: >
+    Dar bir yüzey veya engebeli zemin üzerinde hareket ederek Dengede Kalma ZD'sine karşı bir Akrobasi testi denersiniz. Dar bir yüzeyde veya engebeli zemindeyken Savunmasız kalırsınız. Örnek Dengede Kalma Görevleri
+     • Eğitimsiz sarmaşık kökleri, düzensiz parke taşları
+     • Eğitimli ahşap kiriş
+     • Uzman derin, gevşek çakıl
+     • Usta ip üstünde yürüme, pürüzsüz buz tabakası
+     • Efsanevi jilet sırtı, havada düşen zemin parçaları
+
+  requirements: Dar bir yüzey, engebeli zemin veya benzer bir özellik içeren bir karede bulunmalısınız.
+  criticalSuccess: Hızınız kadar hareket edersiniz.
+  success: Zorlu arazi muamelesi yaparak Hızınız kadar hareket edersiniz (her 5 fit, 10 fitlik hareket harcar).
+  failure: Dengenizi korumak için hareketsiz kalmalısınız (eylemi boşa harcarsınız) veya düşersiniz. Düşerseniz sıranız sona erer.
+  criticalFailure: Düşersiniz ve sıranız sona erer.
+
+omen://action/borrow-an-arcane-spell?source=paizo-pathfinder-player-core:
+  name: Mistik Büyü Ödünç Al
+  description: "Büyü kitabından hazırlık yapan mistik bir büyücüyseniz, başka birinin büyü kitabından bir büyü hazırlamayı deneyebilirsiniz. GM, testin ZD'sini büyünün derecesine ve nadirliğine göre belirler; genellikle Büyü Öğren eyleminden biraz daha kolaydır."
+  success: Ödünç alınan büyüyü normal büyü hazırlığınızın bir parçası olarak hazırlarsınız.
+  failure: Büyüyü hazırlamayı başaramazsınız, ancak büyü slotu farklı bir büyü hazırlamanız için kullanılabilir kalır. Bir sonraki büyü hazırlama vaktinize kadar bu büyüyü hazırlamayı deneyemezsiniz.
+
+omen://action/burrow?source=paizo-pathfinder-player-core:
+  name: Kazma
+  description: Toprak, kum veya benzeri gevşek materyallerin arasından kazma Hareket Hızınıza kadar kazarak ilerlersiniz. Bunu yapmanıza izin veren bir yeteneğiniz olmadığı sürece kayaların veya topraktan daha yoğun diğer maddelerin içinden kazarak ilerleyemezsiniz.
+  requirements: Kazma Hareket Hızına sahip olmalısınız.
+
+omen://action/call-on-ancient-blood?source=paizo-pathfinder-player-core:
+  name: Kadim Kanı Çağır
+  description: Atalarınızın büyüye karşı doğuştan gelen direnci aniden yükselir ve ardından yavaşça diner. Bu sıranın sonuna kadar tetikleyici kurtarışa ve büyülü etkilere karşı diğer kurtarışlara +1 durumsal bonus kazanırsınız.
+  trigger: Büyülü bir etkiye karşı kurtarış denersiniz, ancak henüz zar atmamışsınızdır
+
+omen://action/cast-a-spell?source=paizo-pathfinder-player-core:
+  name: Büyü Yap
+  description: >
+    Büyüler, büyü istatistik bloğunda gösterildiği gibi harcadıkları eylem sayısı bakımından farklılık gösterebilir. Kantripleri, büyü slotlarındaki büyüleri ve odak büyülerini aynı süreci kullanarak yaparsınız; ancak bir büyü slotundan büyü yaparken büyüyü harcamalı, bir odak büyüsü yaparken ise 1 Odak Puanı harcamalısınız. Bazı kurallar Büyü Yap etkinliğine atıfta bulunur; örneğin "kullanacağınız bir sonraki eylem Büyü Yap ise". Herhangi bir büyü Büyü Yap etkinliği sayılır ve büyünün tüm nitelikleri yaptığınız spesifik büyünün niteliklerini kullanır. Maliyetler ve Odaklar Bazı büyüler bir maliyet ödemenizi veya bir odak sağlamanızı gerektirir. Büyü bir maliyet listeliyorsa, büyüyü yapmak için listelenen paraya, değerli materyallere veya diğer kaynaklara (değerli taşlar veya büyülü reaktifler gibi) sahip olmanız gerekir ve bunlar büyü yapma sırasında harcanır. Bir odak, büyünün büyü enerjisini yönlendiren veya toplayan, ancak büyü yapılması sırasında tüketilmeyen bir nesnedir. Büyü Yapmanın bir parçası olarak odağı çıkarırsınız (gerekliyse ve boş bir eliniz varsa) ve dilerseniz tekrar yerine kaldırabilirsiniz. Odaklar pahalı olma eğilimindedir ve büyüyü yapmak için onları önceden edinmeniz gerekir, ancak maliyetler gibi harcanmazlar. Aksi belirtilmedikçe, bir odak ihmal edilebilir Bulk değerine sahiptir. Uzun Büyü Yapma Süreleri Bazı büyülerin yapılması dakikalar veya saatler sürer. Böyle bir büyüyü yaparken diğer eylemleri veya reaksiyonları kullanamazsınız, ancak GM'nin takdirine bağlı olarak birkaç cümle konuşabilirsiniz. Uzun süren diğer etkinliklerde olduğu gibi bu büyüler de exploration özelliğine sahiptir ve bunları bir karşılaşmada yapamazsınız. Büyüyü yaparken çatışma çıkarsa büyünüz kesintiye uğrar. Kesintiye Uğrayan ve Kaybedilen Büyüler Bazı yetenekler ve büyüler bir büyüyü kesintiye uğratarak etkisiz kalmasına ve kaybedilmesine neden olabilir. Bir büyüyü kaybettiğinizde, büyü slotunu ve büyünün maliyetleri ile eylemlerini zaten harcamış olursunuz. Bir büyü Sürdür eylemi sırasında kesintiye uğrarsa büyü derhal sona erer.
+
+
+omen://action/climb?source=paizo-pathfinder-player-core:
+  name: Tırmanma
+  description: >
+    Bir eğim boyunca yukarı, aşağı veya enlemesine en fazla 5 fitlik bir mesafe hareket etmek için bir Atletizm testi denersiniz. Tırmanma Hareket Hızınız olmadığı sürece tırmanırken Savunmasız kalırsınız. GM, eğimin niteliğine ve çevresel koşullara göre ZD'yi belirler; tırmanması önemsiz bir eğimde otomatik kritik başarı elde edebilirsiniz. Kara Hızınız 40 fit veya daha yüksekse, 20 fitin üzerindeki her 20 fitlik Hız için maksimum mesafeyi 5 fit artırın. Örnek Tırmanma Görevleri
+     • Eğitimsiz merdiven, dik yamaç, alçak dallı ağaç
+     • Eğitimli donanım, halat, tipik ağaç
+     • Uzman küçük el ve ayak tutamakları olan duvar
+     • Usta el ve ayak tutamakları olan tavan, kaya duvarı
+     • Efsanevi pürüzsüz yüzey
+
+  requirements: Her iki eliniz de boş olmalıdır
+  criticalSuccess: Maksimum mesafeyi 5 fit artırarak eğim boyunca hareket edersiniz.
+  success: Eğim boyunca hareket edersiniz.
+  criticalFailure: Düşersiniz. Tırmanışa dengeli bir zeminde başladıysanız düşer ve Yüzüstü yere kapaklanırsınız.
+
+omen://action/coerce?source=paizo-pathfinder-player-core:
+  name: Tehditle Zorla
+  description: >
+    Üstü kapalı ya da açık tehditlerle bir yaratığı istediğinizi yapması için sindirmeye çalışırsınız. Yaratıkla en az 1 dakikalık bir konuşma yapmalısınız. Konuşmanın sonunda hedefin İrade ZD'sine karşı GM'nin belirlediği koşullarla değiştirilmiş bir Gözdağı testi deneyin. (Aşağıdaki etkilerde atıfta bulunulan tutumlar alt kısımdaki Tutumları Değiştirme bölümünde özetlenmiştir) Tutumları Değiştirme OYV'ler üzerindeki etkiniz, karakterinize nasıl baktıklarını yansıtan bir dizi tutumla ölçülür. Bunlar bir yaratığın mizanının yalnızca kısa bir özetidir. GM, etkileşimde bulunduğunuz karakterlerin geçmişine ve inançlarına dayalı olarak ek ayrıntılar sağlayacaktır ve tutumları hikâyeye uygun olarak değişebilir. Tutumlar Durumlar Ekinde ayrıntılı olarak açıklanmıştır ve burada özetlenmiştir.
+     • Yardımsever: Size yardım etmeye isteklidir ve taleplerinize olumlu yanıt verir.
+     • Dostane: Size karşı iyi bir tutuma sahiptir, ancak size yardım etmek için boynunu tehlikeye atması şart değildir.
+     • Kayıtsız: Sizinle iyi veya kötü ilgilenmez. (Çoğu OYV kayıtsız olarak başlar.)
+     • Hoşnutsuz: Sizden hoşlanmaz ve size yardım etmek istemez.
+     • Düşmanca: Aktif olarak aleyhinize çalışır—ve sadece sizden hoşlanmadığı için size saldırabilir.
+    Hiç kimse bu becerilerle bir oyuncu karakterinin tutumunu asla değiştiremez. Oyuncu karakterleriyle olan etkileşimleri canlandırabilirsiniz ve oyuncu bir karakterin ne kadar ikna edici veya çekici olduğuna dair mekanik bir fikir edinmek isterse Diplomasi sonuçlarını bile kullanabilirsiniz; ancak karakterlerinin nasıl tepki vereceğine dair nihai kararları oyuncular verir.
+
+  criticalSuccess: "Hedefe herhangi bir şekilde zarar vermesi muhtemel olmadığı sürece, hedef aradığınız bilgiyi verir veya talimatlarınıza uymayı kabul eder. Hedef, GM tarafından belirlenen ancak 1 günü aşmayan bir süre boyunca uymaya devam eder; bu sürenin sonunda hedef hoşnutsuz hâle gelir (zaten hoşnutsuz veya düşmanca değilse). Bununla birlikte hedef, en azından kısa vadede misilleme yapamayacak kadar sizden korkar."
+  success: Kritik başarıdaki gibi, ancak hedef bir kez hoşnutsuz hâle geldiğinde aleyhinize hareket etmeye karar verebilir—örneğin sizi yetkililere ihbar ederek veya düşmanlarınıza yardım ederek.
+  failure: Hedef söylediğinizi yapmaz ve zaten hoşnutsuz veya düşmanca değilse hoşnutsuz hâle gelir.
+  criticalFailure: Hedef uymayı reddeder, zaten değilse düşmanca hâle gelir ve en az 1 hafta boyunca Tehdit Etmenize geçici olarak bağışık olur.
+
+omen://action/command-an-animal?source=paizo-pathfinder-player-core:
+  name: Hayvana Emret
+  description: >
+    Bir hayvana emir verirsiniz. Hayvanın İrade ZD'sine karşı bir Doğa testi deneyin. Hayvanın size karşı iyi bir tutumu varsa, meyilli olduğu bir eylem tarzı önerirseniz veya ona bir ödül maması sunarsanız GM ZD'yi ayarlayabilir. Hayvan size karşı düşmanca veya mesafeliyse otomatik olarak başarısız olursunuz. Hayvan size karşı yardımsever ise başarı derecenizi bir basamak artırın. Binicilik gibi bir yetenekle bir Hayvana Emret eylemini daha kolay gerçekleştirebilirsiniz. Çoğu hayvan Yere Kapan, Sıçra, Ara, Ayağa Kalk, Depar ve Saldırı temel eylemlerini bilir. Bir hayvan bir atın Dörtnalı gibi bir etkinliği biliyorsa, Hayvana Emret eylemini o etkinliği gerçekleştirmesi için kullanabilirsiniz; ancak Hayvana Emret için o etkinliğin eylem sayısı kadar eylem harcamanız gerekir. Ayrıca bir sonraki turunda o sayıda temel eylemi gerçekleştirmesi için Hayvana Emret eylemine birden fazla eylem harcayabilirsiniz; örneğin bir hayvana üç kez Depar atmasını veya iki kez Depar atıp ardından bir Vuruş Yapmasını emretmek için 3 eylem harcayabilirsiniz.
+
+  success: Hayvan bir sonraki turunda emrettiğiniz gibi davranır.
+  failure: Hayvan tereddüt eder veya direnir ve hiçbir şey yapmaz.
+  criticalFailure: Hayvan yaramazlık yapar veya yanlış anlar ve GM tarafından belirlenen başka bir eylemde bulunur.
+
+omen://action/conceal-an-object?source=paizo-pathfinder-player-core:
+  name: Eşya Gizle
+  description: >
+    Üzerinizde küçük bir nesneyi gizlersiniz (hafif Bulk değerindeki bir silah gibi). Gizlenmiş bir nesneyi fark edebilecek birinin yanından gizlice geçirmeye çalıştığınızda, GM Gizlilik testinizi atar ve bunu bu pasif gözlemcinin Dikkat ZD'si ile karşılaştırır. GM gizlenmiş bir nesne için testinizi bir kez attığında, yanından gizlice geçirmeye çalıştığınız pasif gözlemci sayısı ne olursa olsun aynı sonuç kullanılır. Bir yaratık özellikle üzerinizde bir eşya arıyorsa, Gizlilik ZD'nize karşı bir Dikkat testi deneyebilir (başarı durumunda nesneyi bulur). Ayrıca bir nesneyi üzerinizden başka bir yere de gizleyebilirsiniz; örneğin çalıların arasına veya bir mobilya parçasının içindeki gizli bir bölmeye. Bu durumda bir alanda Arama Yapan karakterler, nesneyi bulup bulamayacaklarını belirlemek için Dikkat testi sonuçlarını Gizlilik ZD'niz ile karşılaştırır.
+
+  success: Nesne konumu saptanmamış olarak kalır.
+  failure: Arayan kişi nesneyi bulur.
+
+omen://action/cover-tracks?source=paizo-pathfinder-player-core:
+  name: İzlerini Gizle
+  description: >
+    Seyahat Hızı kurallarını kullanarak seyahat Hızınızın yarısına kadar hareket ederek izlerinizi örtersiniz. İzlerinizi örtmek için bir Hayatta Kalma testi denemenize gerek yoktur, ancak sizi takip eden herkes, normal İz Sür ZD'sinden daha yüksekse Hayatta Kalma ZD'nize karşı bir Hayatta Kalma testinde başarılı olmalıdır. Bazı durumlarda bir karşılaşmada İzleri Örtebilirsiniz. Bu durumda İzleri Ört tek bir eylemdir ve exploration özelliğine sahip değildir.
+
+
+omen://action/craft?source=paizo-pathfinder-player-core:
+  name: Zanaat
+  description: >
+    Ham maddelerden bir eşya yapabilirsiniz. Simyasal eşyalar yaratmak için Simyasal Zanaat beceri yeteneğine, büyülü eşyalar yaratmak için Büyülü Zanaat yeteneğine ihtiyacınız vardır. Bir eşyayı zanaatla üretmek için aşağıdaki gereksinimleri karşılamalısınız:
+     • Eşya sizin seviyenizde veya daha düşük olmalıdır. Seviye belirtmeyen bir eşya 0. seviyedir. Eşya 9. seviye veya daha yüksekse Zanaat konusunda usta olmalısınız ve 17. veya daha yüksekse efsanevi olmalısınız.
+     • Eşya yaygın olmalı veya başka bir şekilde ona erişiminiz bulunmalıdır.
+     • Uygun bir alet takımına ve çoğu durumda bir atölyeye sahip olmalısınız. Örneğin metal bir kalkan dövmek için bir demirhaneye, simyasal eşyalar üretmek için bir Simyacı Laboratuvarına erişiminiz olmalıdır.
+     • Eşyanın Fiyatının en az yarısı değerinde ham madde sağlamalısınız. Başarılı bir şekilde Zanaat yaptığınızda her zaman en az bu miktarda ham madde harcarsınız. Bir yerleşim yerindeyseniz, daha nadir değerli materyaller dışında genellikle ihtiyacınız olan ham madde miktarını elde etmek için para harcayabilirsiniz.
+    Hazırlık için 2 günlük çalışma harcadıktan sonra veya eşyanın formülüne sahipseniz 1 gün sonra bir Zanaat testi denersiniz. GM, eşyayı Zanaatla üretme ZD'sini eşyanın seviyesine, nadirliğine ve diğer koşullara göre belirler. Eşyayı yaratma girişiminiz başarılı olursa sağladığınız ham maddeleri harcarsınız. Eşyayı hemen tamamlamak için eşya Fiyatının kalan kısmını materyal olarak ödeyebilir veya üzerinde çalışarak fazladan boş zaman günleri geçirebilirsiniz. Harcadığınız her ek gün için eşyayı tamamlamak üzere harcamanız gereken materyallerin değerini azaltırsınız. Bu miktar, bir görev seviyesi yerine kendi seviyenizi kullanarak ve Zanaat yetkinlik derecenize dayalı olarak Kazanılan Gelir tablosu kullanılarak belirlenir. Bu boş zaman günlerinden herhangi birinin ardından eşya Fiyatının kalan kısmını materyal olarak harcayarak eşyayı tamamlayabilirsiniz. Harcadığınız boş zaman günleri kesintiye uğrarsa daha sonra kaldığınız yerden devam ederek eşyayı bitirmek için geri dönebilirsiniz.
+
+  criticalSuccess: Girişiminiz başarılıdır. Zanaat için harcanan her ek gün, eşyayı tamamlamak için gereken materyalleri seviyeniz + 1 ve Zanaat yetkinlik derecenize bağlı bir miktarda azaltır.
+  success: Girişiminiz başarılıdır. Zanaat için harcanan her ek gün, eşyayı tamamlamak için gereken materyalleri seviyeniz ve yetkinlik derecenize bağlı bir miktarda azaltır.
+  failure: Eşyayı tamamlamayı başaramazsınız. Sağladığınız ham maddeleri tam değerleri üzerinden kurtarabilirsiniz. Tekrar denemek isterseniz baştan başlamalısınız.
+  criticalFailure: Eşyayı tamamlamayı başaramazsınız. Sağladığınız ham maddelerin %10'unu heba edersiniz, ancak geri kalanını kurtarabilirsiniz. Tekrar denemek isterseniz baştan başlamalısınız.
+
+omen://action/crawl?source=paizo-pathfinder-player-core:
+  name: Sürün
+  description: Emekleyerek 5 fit hareket edersiniz ve Yüzüstü kalmaya devam edersiniz.
+  requirements: Yüzüstü olmalısınız ve Hızınız en az 10 fit olmalıdır.
+
+omen://action/create-a-diversion?source=paizo-pathfinder-player-core:
+  name: Dikkat Dağıt
+  description: >
+    Bir jest, bir numara veya dikkat dağıtıcı birkaç kelimeyle yaratıkların dikkatini başka yöne çeken bir oyalanma yaratabilirsiniz. Bir jest veya numara kullanırsanız bu eylem manipulate özelliği kazanır. Dikkat dağıtıcı kelimeler kullanırsanız auditory ve linguistic özelliklerini kazanır. Tek bir Aldatma testi deneyin ve dikkatini dağıtmaya çalıştığınız yaratıkların Dikkat ZD'leri ile karşılaştırın. Başarılı olun ya da olmayın, dikkatini dağıtmaya çalıştığınız yaratıklar 1 dakika boyunca Dikkat Dağıtma girişimlerinize karşı Dikkat ZD'lerine +4 durumsal bonus kazanır.
+
+  success: Dikkat ZD'si sonucunuza eşit veya daha düşük olan her yaratık için Gizli hâle gelirsiniz. (Gizli durumu Sessizce İlerleyerek uzaklaşmanıza olanak tanır.) Bu durum sıranızın sonuna kadar veya Adım atmak ya da Gizlenmek veya Sessizce İlerlemek için Gizlilik becerisini kullanmak dışında herhangi bir şey yapana kadar sürer. Bir yaratığa Vuruş Yaparsanız yaratık bu saldırıya karşı Savunmasız kalır ve ardından gözlemlenen hâle gelirsiniz. Başka bir şey yaparsanız GM aksi yönde karar vermedikçe tam hareket etmeden önce gözlemlenen hâle gelirsiniz.
+  failure: Dikkat ZD'si sonucunuzu aşan hiçbir yaratığın dikkatini dağıtamazsınız ve bu yaratıklar onları kandırmaya çalıştığınızın farkına varır.
+
+omen://action/create-forgery?source=paizo-pathfinder-player-core:
+  name: Sahte Belge Üret
+  description: >
+    Genellikle bir gün veya bir hafta boyunca sahte bir belge yaratırsınız. GM gizli bir ZD 20 Sosyoloji testi atar. Belirli bir kişinin el yazısını taklit etmeniz gerekiyorsa o kişinin el yazısından bir örneğe ihtiyacınız vardır. Aksi takdirde yalnızca benzer bir belge görmüş olmanız yeterlidir ve teste en fazla +4 durumsal bonus kazanırsınız (bonusu GM belirler). Sahte Belgeleri İnceleme Pasif bir bakışta aldanmış olsa bile sahte belgelere karşı tetikte olan bir yaratık, belgenin sahte olup olmadığını görmek için yakından incelemeye zaman ayırabilir. Yüzeydeki unsurların ötesine bakmak için farklı teknikler ve analiz yöntemleri uygular ve sahtecinin Sosyoloji ZD'sine karşı gizli bir Dikkat veya Sosyoloji testi dener; sahte belgeyi üretirken başlangıçta sahip olduğunuz herhangi bir bonus bu ZD'ye uygulanır. Başarı durumunda inceleyen kişi belgenin sahte olduğunu anlar. Başarısızlık durumunda belgenin gerçek olduğunu düşünür ve belgeden şüphelenmek için yeni bir neden bulmadıkça tekrar deneyemez. Bir OY gerçek bir belgeyi incelerse GM belgenin gerçek olduğunu açıklamadan önce yine de gizli bir test atıyormuş gibi yapabilir.
+
+  requirements: Sahte belgeniz için uygun yazı malzemeleri sağlamalısınız.
+  success: Sahte belge, pasif gözlemcilerin sahteliği fark edemeyeceği kadar kaliteli olur (ancak Sahte Belgeleri İnceleme bölümüne bakın).
+  failure: Sahte belgede sahte olduğuna dair bazı bariz işaretler bulunur ve bu durum pasif gözlemcilerin bunu tespit etmesine olanak tanıyabilir. Pasif bir gözlemci belgeyi her gördüğünde GM test sonucunuzu gözlemcinin Dikkat ZD'si veya Sosyoloji ZD'sinden hangisi daha yüksekse onunla karşılaştırır. Sonucunuz pasif bir gözlemcinin ZD'sini aşmazsa o gözlemci belgenin sahte olduğunu anlar.
+
+omen://action/debilitating-strike?source=paizo-pathfinder-player-core:
+  name: Güçten Düşürücü Vuruş
+  description: >
+    Bir sonraki sıranızın sonuna kadar süren aşağıdaki zayıflatmalardan birini uygularsınız:
+     • Zayıflatma Hedef Hızlarına -10 fitlik statü cezası alır.
+     • Zayıflatma Hedef Halsiz 1 olur.
+
+  trigger: Saldırınız savunmasız bir yaratığa isabet eder ve hasar verir
+
+omen://action/decipher-writing?source=paizo-pathfinder-player-core:
+  name: Yazı Çözümle
+  description: >
+    Karmaşık bir yazıyı veya anlaşılması güç bir konudaki edebiyatı çözümlemeye çalışırsınız. Bu işlem genellikle metnin sayfası başına 1 dakika sürer ancak daha uzun sürebilir (şifreleri çözmek veya benzeri durumlar için sayfa başına genellikle bir saat). Metin okuyabildiğiniz bir dilde olmalıdır; ancak GM bunun yerine Sosyoloji becerisini kullanarak yabancı bir dilde yazılmış metni çözümlemeyi denemenize izin verebilir. ZD, belgenin durumuna veya karmaşıklığına bağlı olarak GM tarafından belirlenir. GM kısa bir metin için tek bir test veya daha büyük bir metnin her bölümü için bir test atmanızı isteyebilir. Beceri Genellikle şunun için kullanılır Mistik İlim Büyü veya bilim hakkındaki yazılar Okültizm Gizemler ve felsefe hakkındaki ezoterik metinler Din Kutsal metinler Sosyoloji Şifreli mesajlar veya arkaik belgeler Örnek Yazı Çözümleme Görevleri Eğitimli başlangıç seviyesi felsefe risalesi Uzman şifre gibi karmaşık kodlar Usta baş casusun şifresi veya ileri düzey araştırma notları Efsanevi kadim bir göksel varlık tarafından metaforla yazılmış ezoterik düzlemsel metin
+
+  criticalSuccess: Metnin gerçek anlamını kavrarsınız.
+  success: Metnin gerçek anlamını kavrarsınız. Şifreli bir belgeyse genel anlamını bilirsiniz ancak kelimesi kelimesine bir çeviriye sahip olmayabilirsiniz.
+  failure: Metni anlayamazsınız ve onu çözümlemek için yapacağınız sonraki testlerde -2 durumsal ceza alırsınız.
+  criticalFailure: O sayfadaki metni anladığınıza inanırsınız ancak aslında mesajını yanlış yorumlamışsınızdır.
+
+omen://action/defend?source=paizo-pathfinder-player-core:
+  name: Kalkanla İlerle
+  description: Kalkanınız kaldırılmış halde seyahat hızınızın yarısıyla hareket edersiniz. Çatışma çıkarsa ilk turunuz başlamadan önce Kalkan Kaldırmanın faydalarını kazanırsınız.
+
+omen://action/delay?source=paizo-pathfinder-player-core:
+  name: Ertele
+  description: >
+    İnisiyatif sıranızı geçici olarak ertelersiniz. Sıranız geldiğinde herhangi bir eylem yapmadan sıranızı askıya alabilir ve başka bir yaratığın sırası bittikten hemen sonra sıranızı kullanabilirsiniz.
+
+  trigger: Sıranız gelmiştir.
+
+omen://action/demoralize?source=paizo-pathfinder-player-core:
+  name: Gözdağı Ver
+  description: Ani bir çığlık, iyi zamanlanmış bir alay veya iğneleyici bir aşağılamayla bir düşmanın azmini sarsabilirsiniz. 30 fit içinde farkında olduğunuz bir yaratık seçin. O hedefin İrade ZD'sine karşı bir Gözdağı testi deneyin. Hedef konuştuğunuz dili anlamıyorsa veya bir dil konuşmuyorsanız teste -4 durumsal ceza alırsınız. Sonucunuz ne olursa olsun hedef 10 dakika boyunca Gözdağı Verme girişimlerinize karşı geçici olarak bağışık olur.
+  criticalSuccess: Hedef Korkmuş 2 olur.
+  success: Hedef Korkmuş 1 olur.
+
+omen://action/detect-magic?source=paizo-pathfinder-player-core:
+  name: Büyü Tespit Et
+  description: "Düzenli aralıklarla Büyü Tespit Et büyüsü yaparsınız. Seyahat hızınızın yarısıyla veya daha yavaş hareket edersiniz. Dakikada 300 fite kadar seyahat hızında büyülü bir aurayı kazara gözden kaçırma şansınız yoktur; ancak grup auraya girmeden önce büyülü auraları tespit etmek için dakikada en fazla 150 fit hızla seyahat ediyor olmalısınız."
+
+omen://action/disable-a-device?source=paizo-pathfinder-player-core:
+  name: Düzeneği Etkisizleştir
+  description: >
+    Bu eylem bir tuzağı veya başka bir karmaşık aygıtı etkisizleştirmenize olanak tanır. Çoğu zaman bir aygıt, yapısına ve karmaşıklığına bağlı olarak etkisizleştirilmeden önce çok sayıda başarı gerektirir. GM tarafından belirlendiği üzere bir Aygıtı Etkisizleştirmek için Düzenbaz Alet Takımı faydalıdır ve bazen zorunludur; ayrıca bazen bir aygıt onu etkisizleştirmek için Hırsızlık konusunda daha yüksek bir yetkinlik derecesi gerektirir. Hırsızlık testi sonucunuz ilerlemenizi belirler.
+
+  criticalSuccess: Aygıtı etkisizleştirirsiniz veya birden fazla başarı gerektiren bir aygıtı etkisizleştirmeye yönelik iki başarı elde edersiniz. Müdahalenize dair hiçbir iz bırakmazsınız ve bu tür bir aygıt yeniden kurulabiliyorsa aygıtı daha sonra yeniden kurabilirsiniz.
+  success: Aygıtı etkisizleştirirsiniz veya birden fazla başarı gerektiren bir aygıtı etkisizleştirmeye yönelik bir başarı elde edersiniz.
+  criticalFailure: Aygıtı tetiklersiniz.
+
+omen://action/disarm?source=paizo-pathfinder-player-core:
+  name: Silahsızlandır
+  description: Bir yaratığın tutuşundaki bir eşyayı düşürmeye çalışırsınız. Hedefin Refleks ZD'sine karşı bir Atletizm testi deneyin.
+  requirements: En az bir eliniz boş olmalıdır. Hedef sizden en fazla bir boy boyutu daha büyük olabilir.
+  criticalSuccess: Eşyayı hedefin tutuşundan düşürürsünüz. Eşya hedefin bulunduğu alanda yere düşer.
+  success: "Hedefinizin eşya üzerindeki tutuşunu zayıflatırsınız. Hedefi o eşyadan Silahsızlandırmaya yönelik sonraki girişimler +2 durumsal bonus kazanır ve hedef o eşyayla yapılan saldırılarda veya eşyayı sıkı tutmayı gerektiren diğer testlerde -2 durumsal ceza alır. Yaratık eşya üzerindeki tutuşunu değiştirmek için Etkileşime Girerek etkiyi sonlandırabilir; aksi takdirde yaratık eşyayı tuttuğu sürece bu durum devam eder."
+  criticalFailure: Dengenizi kaybedersiniz ve bir sonraki sıranızın başlangıcına kadar Savunmasız kalırsınız.
+
+omen://action/dismiss?source=paizo-pathfinder-player-core:
+  name: Sonlandır
+  description: Sonlandırabileceğinizi belirten bir etkiyi bitirirsiniz. Sonlandırma, aksi belirtilmedikçe tüm etkiyi sona erdirir.
+
+omen://action/dragon-breath-dragon-form?source=paizo-pathfinder-player-core:
+  name: Ejderha Nefesi (Ejderha Biçimi)
+  description: "Bir alana ölümcül büyü enerjisi soluyarak büyü ZD'nize karşı temel bir kurtarışla alandaki her bir yaratığa 10d6[untyped]|options:area-damage hasar verirsiniz. Biçim, hasar türü ve kurtarma türü, seçtiğiniz ejderhanın nefesiyle eşleşir. Seçilen ejderha nefesi birden fazla hasar türü verebiliyorsa, ejderha biçimi büyüsünü yaptığınızda birini seçin. Biçim bir type:cone veya bir type:line olur. Etkinleştirildikten sonra Ejderha Nefesi 1d4 tur boyunca tekrar kullanılamaz. Ejderha Nefesi, ejderhanın türüyle eşleşen gelenek özelliğine ve varsa verdiği hasar türüyle eşleşen hasar özelliğine sahiptir."
+
+omen://action/drain-bonded-item?source=paizo-pathfinder-player-core:
+  name: Bağlı Eşyayı Boşalt
+  description: Bağlı eşyanızda depolanan büyü gücünü harcarsınız. Mevcut tur sırasında, bugün hazırladığınız ve daha önce yaptığınız bir büyüyü, büyü slotu harcamadan yapabilirsiniz. Yine de Büyü Yapmalı ve büyünün diğer gereksinimlerini karşılamalısınız.
+  requirements: Bağlı eşyanız üzerinizde olmalıdır.
+  frequency: günde bir kez
+
+omen://action/drop-prone?source=paizo-pathfinder-player-core:
+  name: Yere Kapan
+  description: Yüzüstü yere kapaklanırsınız.
+
+omen://action/earn-income?source=paizo-pathfinder-player-core:
+  name: Gelir Elde Et
+  description: >
+    Boş zaman boyunca para kazanmak için bir beceri kullanabilirsiniz. Bunu yapmak için o beceride eğitimli olmalısınız. Bunun ayarlanması zaman alır ve geliriniz yetkinlik derecenize ve bulabileceğiniz işin ne kadar kazançlı olduğuna bağlıdır. Bu süreç önemli miktarda zaman gerektirdiğinden ve maceraların ilerleyişi dışındaki şeyleri takip etmeyi içerdiğinden her senaryoda karşınıza çıkmayacaktır. Bu bölümde ayrıntıları verilen en tipik gelir elde etme yolları şunlardır:
+     • Pazar için mal üretmek (Zanaat)
+     • Bir Zanaatı/Mesleği İcra Etmek (İlim)
+     • Bir Gösteri Sergilemek (Performans)
+    Bazı durumlarda GM, uzmanlaşmış çalışmalar yoluyla Gelir Elde Etmek için farklı bir beceri kullanmanıza izin verebilir. Genellikle bu, eski metinleri incelemek için bir manastırda Din becerisini kullanmak gibi akademik çalışmalardır; ancak bir kilisede vaaz vermek Din yerine yine de Performans kapsamına girer. Ayrıca bir sirkte gösteri yapmak için Akrobasiyi veya cepleri soymak için Hırsızlığı kullanmak gibi para kazanmak amacıyla fiziksel becerileri de kullanabilirsiniz. Zanaat, İlim veya Performans dışında bir beceri kullanıyorsanız ZD belirgin şekilde daha yüksek olma eğilimindedir. Gelir Elde Et Boş Zaman Boş zaman boyunca para kazanmak için becerilerinizden birini kullanırsınız. GM, mevcut en kazançlı işi temsil eden bir görev seviyesi belirler. GM'nin bulup bulamayacağınızı belirlemesiyle daha düşük seviyeli görevler arayabilirsiniz. Bazen ilk tekliflerden daha iyi iş bulmaya çalışabilirsiniz; ancak bu zaman alır ve Bilgi Toplamak için Diplomasi becerisini kullanmayı, biraz araştırma yapmayı veya sosyalleşmeyi gerektirir. Bir iş aldığınızda GM beceri testinizin ZD'sini gizlice belirler. İlk iş gününüzün ardından kazancınızı belirlemek için zar atarsınız. Sonucunuza, görevin seviyesine ve yetkinlik derecenize bağlı olarak bir miktar gelir elde edersiniz (Kazanılan Gelir tablosunda listelendiği gibi). Görevin tamamlanmasına kadar tekrar zar atmanıza gerek kalmadan sonraki günlerde görevde çalışmaya devam edebilirsiniz. İlk günden sonra harcadığınız her gün için ilk günle aynı miktarı kazanırsınız. GM görevde ne kadar süre çalışabileceğinizi belirler. Çoğu görev bir veya iki hafta sürer, ancak bazıları aylar hatta yıllar alabilir. Tablo 4-2: Kazanılan Gelir Görev Seviyesi Başarısızlık Eğitimli Uzman Usta Efsanevi 0 1 cp 5 cp 5 cp 5 cp 5 cp 1 2 cp 2 sp 2 sp 2 sp 2 sp 2 4 cp 3 sp 3 sp 3 sp 3 sp 3 8 cp 5 sp 5 sp 5 sp 5 sp 4 1 sp 7 sp 8 sp 8 sp 8 sp 5 2 sp 9 sp 1 gp 1 gp 1 gp 6 3 sp 1 gp, 5 sp 2 gp 2 gp 2 gp 7 4 sp 2 gp 2 gp, 5 sp 2 gp, 5 sp 2 gp, 5 sp 8 5 sp 2 gp, 5 sp 3 gp 3 gp 3 gp 9 6 sp 3 gp 4 gp 4 gp 4 gp 10 7 sp 4 gp 5 gp 6 gp 6 gp 11 8 sp 5 gp 6 gp 8 gp 8 gp 12 9 sp 6 gp 8 gp 10 gp 10 gp 13 1 gp 7 gp 10 gp 15 gp 15 gp 14 1 gp, 5 sp 8 gp 15 gp 20 gp 20 gp 15 2 gp 10 gp 20 gp 28 gp 28 gp 16 2 gp, 5 sp 13 gp 25 gp 36 gp 40 gp 17 3 gp 15 gp 30 gp 45 gp 55 gp 18 4 gp 20 gp 45 gp 70 gp 90 gp 19 6 gp 30 gp 60 gp 100 gp 130 gp 20 8 gp 40 gp 75 gp 150 gp 200 gp 20 (kritik başarı) - 50 gp 90 gp 175 gp 300 gp Örnek Gelir Elde Etme Görevleri Bu örnekler bir barda çalışmak için İçki İlimini veya hukuki işler yapmak için Hukuk İlimini kullanır.
+     • Eğitimli barmenlik yapmak, hukuki araştırma yapmak
+     • Uzman içki seçkisini yönetmek, küçük mahkeme davalarını sunmak
+     • Usta büyük bir birahaneyi işletmek, önemli mahkeme davalarını sunmak
+     • Efsanevi uluslararası bir biracılık zincirini yönetmek, Cehennem mahkemelerinde dava sunmak
+    Pazar İçin Mal Üretmek [Zanaat] Zanaat becerisini kullanarak pazar için yaygın eşyalar üretme üzerine çalışabilirsiniz. Seviyesi yerleşim yerinizin seviyesinin 1 veya 2 altında olan temel eşyaları üretmek için iş bulmak genellikle kolaydır. Daha yüksek seviyeli görevler özel siparişleri temsil eder; bu siparişler Zanaat boş zaman etkinliğini kullanarak belirli bir eşyayı Zanaatla üretmenizi ve bunu bir alıcıya tam Fiyatından satmanızı gerektirebilir. Bu fırsatlar o kadar sık ortaya çıkmaz ve özel gereksinimleri olabilir—ya da önde gelen bir müşteriyi hayal kırıklığına uğratırsanız ciddi sonuçları olabilir. Bir Zanaatı/Mesleği İcra Etmek [İlim] Mesleğinizi icra ederek boş zaman boyunca İlim uzmanlıklarınızdan birinin pratik faydalarını uygularsınız. Bu en çok ticaret, hukuk veya denizcilik gibi işçilere yüksek talebin olduğu İlim uzmanlıkları için etkilidir. Gelir elde etmek için bilinmeyen bir İlim becerisini kullanmaya çalışıyorsanız GM ZD'yi artırabilir veya yalnızca düşük seviyeli görevlerin mevcut olduğunu belirleyebilir. Bir işi kabul etmek için özel aletlere de ihtiyacınız olabilir; örneğin bir madende çalışmak için madencilik aletleri veya bir pazarda değerli eşyaları alıp satmak için bir tüccar terazisi gibi. Bir Gösteri Sergilemek [Performans] Para kazanmak için bir seyirci kitlesine gösteri yaparsınız. Mevcut seyirciler görevinizin seviyesini belirler, çünkü daha seçici seyircileri etkilemek daha zordur ancak daha büyük bir ödeme sağlarlar. GM görev seviyesini mevcut seyircilere göre belirler. Sokaktaki sıradan halktan oluşan tipik bir seyirci kitlesine gösteri yapmak 0. seviye bir görevdir; ancak daha rafine zevklere sahip bir zanaatkâr grubuna gösteri yapmak 2. veya 3. seviye bir görev olabilir ve tüccarlar, soylular ve kraliyet mensupları için olanlar giderek daha yüksek seviyelidir. Başarı dereceniz seyircinizi etkileyip etkilemediğinizi ve alkışla mı yoksa çürük meyvelerle mi ödüllendirildiğinizi belirler. Görevleri Sonlandırma veya Kesintiye Uğratma Yaptığınız bir görev tamamlandığında veya bir görevin ortasında durursanız Gelir Elde Etmeye devam etmek istiyorsanız normalde yeni bir görev bulmanız gerekir. Örneğin rıhtımdaki işinizi bırakırsanız kaldığınız yerden devam etmek yerine başka bir istihdam yeri bulmanız gerekecektir. Bu genellikle yeni işlerle ilgili ipuçları arayarak 1 gün veya daha fazla boş zaman gerektirir. Ancak daha sonra eski işe dönmenizi engellemeyecek bir macera veya olay nedeniyle bir göreve ara verebilirsiniz. Görevin yokluğunuzda başkaları tarafından tamamlanmadığını varsayarak GM kaldığınız yerden devam edebileceğinize karar verebilir. İşe devam ettiğinizde yeni bir beceri testi atıp atmayacağınız da GM'ye bağlıdır. Genel olarak konuşursak başlangıçta iyi bir zar attıysanız ve bunu korumak istiyorsanız koruyabilirsiniz; ancak kötü bir başlangıç zarı attıysanız başka bir şey yapmak için ara vererek daha iyisini elde etmeye çalışamazsınız. İstatistikleriniz mola sırasında değiştiyse—genellikle macera sırasında seviye atladığınız için—yeni bir test deneyebilirsiniz.
+
+  criticalSuccess: Olağanüstü iş çıkarırsınız. Görev seviyesi + 1 ve yetkinlik dereceniz için listelenen para miktarını kazanın.
+  success: Yetkin bir iş çıkarırsınız. Görev seviyesi ve yetkinlik dereceniz için listelenen para miktarını kazanın.
+  failure: Uydurma bir iş çıkarırsınız ve zamanınız için asgari ücret alırsınız. Görev seviyesi için başarısızlık sütununda listelenen para miktarını kazanın. GM büyük olasılıkla görevde ne kadar süre devam edebileceğinizi azaltacaktır.
+  criticalFailure: Çalışmanızdan hiçbir şey kazanamazsınız ve derhal kovulursunuz. Göreve devam edemezsiniz. İtibarınız zedelenir ve gelecekte o toplulukta tatmin edici işler bulmanızı potansiyel olarak zorlaştırır.
+
+omen://action/escape?source=paizo-pathfinder-player-core:
+  name: Kurtulma
+  description: >
+    Kavranmış, Hareketsiz Kılınmış veya Bağlanmış durumlarından kurtulmaya çalışırsınız. Size bu durumlardan birini uygulayan bir yaratık, nesne, büyü etkisi veya engeli seçin. İlgili etkinin Zorluk Derecesine (ZD) karşı silahsız saldırı bonusunuzu kullanarak bir test yapın. İsterseniz saldırı bonusunuz yerine Akrobasi veya Atletizm testi de yapabilirsiniz (ancak bu eylem yine de saldırı özelliğini taşır ve Çoklu Saldırı Cezasını artırır).
+
+  criticalSuccess: >
+    Serbest kalırsınız ve seçilen hedefin uyguladığı kavranmış, hareketsiz kılınmış ve bağlanmış durumlarını kaldırırsınız. Ardından 5 fite kadar Depar atabilirsiniz.
+
+  success: >
+    Serbest kalırsınız ve seçilen hedefin uyguladığı kavranmış, hareketsiz kılınmış ve bağlanmış durumlarını kaldırırsınız.
+
+  criticalFailure: >
+    Serbest kalamazsınız ve bir sonraki sıranıza kadar tekrar Kurtulma deneyemezsiniz.
+
+
+omen://action/feint?source=paizo-pathfinder-player-core:
+  name: Yanıltıcı Hamle
+  description: Yanıltıcı bir gösterişle rakibinizi gerçek saldırınıza karşı hazırlıksız bırakırsınız. Hedefinizin Dikkat ZD'sine karşı bir Aldatma testi deneyin.
+  requirements: Yanıltıcı Hamle yapmaya çalıştığınız hedefin yakın dövüş erişimi içinde olmalısınız.
+  criticalSuccess: Düşmanınızın size karşı olan savunmasını tamamen altüst edersiniz. Hedef, bir sonraki sıranızın sonuna kadar ona karşı deneyeceğiniz yakın dövüş saldırılarına karşı Savunmasız kalır.
+  success: Düşmanınız aldanır, ancak yalnızca bir anlığına. Hedef, mevcut sıranızın bitiminden önce ona karşı deneyeceğiniz bir sonraki yakın dövüş saldırısına karşı savunmasız kalır.
+  criticalFailure: Yanıltıcı hamleniz geri teper. Bir sonraki sıranızın sonuna kadar hedefin size karşı deneyeceği yakın dövüş saldırılarına karşı savunmasız kalırsınız.
+
+omen://action/fly?source=paizo-pathfinder-player-core:
+  name: Uçma
+  description: Havada uçma Hareket Hızınıza kadar hareket edersiniz. Yukarı doğru hareket etmek (doğrudan yukarı veya çapraz olarak) zorlu arazide hareket etme kurallarını kullanır. Harcadığınız her 5 fitlik hareket için doğrudan 10 fit aşağı hareket edebilirsiniz. Yere Uçarsanız düşme hasarı almazsınız. Olduğunuz yerde havada asılı kalmak için 0 fit Uçmak amacıyla bir eylem kullanabilirsiniz. Sıranızın sonunda havadaysanız ve bu turda Uçma eylemi kullanmadıysanız düşersiniz.
+  requirements: Uçma Hareket Hızına sahip olmalısınız.
+
+omen://action/follow-the-expert?source=paizo-pathfinder-player-core:
+  name: Uzmanı Takip Et
+  description: >
+    Keşif yaparken tırmanma gibi tekrarlanan bir beceri testi deneyen veya beceri testi gerektiren farklı bir keşif taktiği (Fark Edilmekten Kaçın gibi) uygulayan bir müttefik seçin. Müttefik o beceride en az uzman olmalı ve yardım sağlamaya istekli olmalıdır. Uzmanı Takip Ederken onların taktiğiyle eşleşirsiniz veya benzer beceri testleri denersiniz. Müttefikinizin yardımı sayesinde eğitimsiz olsanız bile ilgili beceri testine yetkinlik bonusu olarak seviyenizi ekleyebilirsiniz. Ek olarak müttefikinizin yetkinliğine bağlı olarak beceri testinize bir durumsal bonus kazanırsınız (uzman için +2, usta için +3 ve efsanevi için +4).
+
+
+omen://action/force-open?source=paizo-pathfinder-player-core:
+  name: Zorlayarak Aç
+  description: >
+    Vücudunuzu, bir kaldıracı veya başka bir aleti kullanarak bir kapıyı, pencereyi, kabı veya ağır bir parmaklığı zorla açmaya çalışırsınız. Yeterince yüksek bir sonuçla duvarları bile kırıp geçebilirsiniz. Bir levye olmadan bir şeyi zorlayarak açmak, Zorlayarak Açma Atletizm testine -2 eşya cezası uygular. Örnek Zorlayarak Açma Görevleri
+     • Eğitimsiz kumaş, dayanıksız cam
+     • Eğitimli buz, sağlam cam
+     • Uzman dayanıksız ahşap kapı, ahşap parmaklık
+     • Usta sağlam ahşap kapı, demir parmaklık, metal çubuk
+     • Efsanevi taş veya demir kapı
+
+  criticalSuccess: Kapıyı, pencereyi, kabı veya parmaklığı açarsınız ve bu süreçte zarar vermekten kaçınabilirsiniz.
+  success: Kapıyı, pencereyi, kabı veya parmaklığı kırarak açarsınız ve Kırık durumu kazanır. Özellikle sağlamsa GM hasar almasına ancak kırılmamasına karar verebilir.
+  criticalFailure: Girişiminiz kapıyı, pencereyi, kabı veya parmaklığı sıkıştırarak kapatır ve gelecekte onu Zorlayarak Açma girişimlerine -2 durumsal ceza uygular.
+
+omen://action/foresight?source=paizo-pathfinder-player-core:
+  name: Öngörü
+  description: "Etki: Düşman yaratık veya tehlike hedefi zar atmaya zorlarsa (örneğin bir kurtarış), hedef iki kez zar atar ve daha yüksek olan sonucu kullanır ve bu büyü fortune özelliği kazanır. Ancak düşman yaratık veya tehlike hedefe karşı zar atıyorsa (örneğin bir saldırı zarı veya beceri testi), o düşman yaratık veya tehlike iki kez zar atar ve daha düşük olan sonucu kullanır ve bu büyü misfortune özelliği kazanır."
+  trigger: Öngörü hedefi düşman bir yaratığa veya diğer bir tehlikeye karşı kendini savunur.
+
+omen://action/gather-information?source=paizo-pathfinder-player-core:
+  name: Bilgi Topla
+  description: >
+    Belirli bir kişi veya konu hakkında bilgi edinmek için yerel pazarları, tavernaları ve toplanma yerlerini tararsınız. GM, rüşvetlere, içkilere veya hediyelere para harcayarak elde edebileceğiniz herhangi bir fayda ile birlikte Diplomasi testinin ZD'sini ve ne kadar sürdüğünü (genellikle 2 saat, ancak bazen daha fazla) belirler. Örnek Bilgi Toplama Görevleri
+     • Eğitimsiz kasaba dedikodusu
+     • Eğitimli yaygın söylenti
+     • Uzman bilinmeyen söylenti, zayıf korunan sır
+     • Usta iyi korunan veya ezoterik bilgi
+     • Efsanevi yalnızca inanılmaz derecede seçkin birkaç kişi veya yalnızca olağanüstü varlıklar tarafından bilinen bilgi
+
+  success: Birey veya konu hakkında bilgi toplarsınız. Ayrıntıları GM belirler.
+  criticalFailure: Birey veya konu hakkında yanlış bilgi toplarsınız.
+
+omen://action/grab-an-edge?source=paizo-pathfinder-player-core:
+  name: Kenara Tutun
+  description: Bir kenardan veya başka bir tutamaktan düştüğünüzde ya da yanından düşerken tutunmaya çalışabilir, potansiyel olarak düşüşünüzü durdurabilirsiniz. Genellikle Tırmanma ZD'sinde olmak üzere seçeceğiniz bir Akrobasi testi veya Refleks kurtarışında başarılı olmalısınız. Kenara veya tutamağa tutunursanız ardından Atletizm kullanarak yukarı Tırmanabilirsiniz.
+  trigger: Bir kenardan veya tutamaktan düşersiniz ya da düşerken yanından geçersiniz.
+  requirements: Elleriniz arkadan bağlanmış veya başka bir şekilde kısıtlanmış olmamalıdır.
+  criticalSuccess: Boş bir eliniz olsun ya da olmasın, genellikle kendinizi yakalamak için tutulan uygun bir eşyayı kullanarak (örneğin bir çıkıntıya bir savaş baltasını takarak) kenara veya tutamağa tutunursunuz. Şimdiye kadar düşülen mesafeden yine de hasar alırsınız, ancak düşüşü 30 fit daha kısaymış gibi ele alırsınız.
+  success: En az bir eliniz boşsa kenara veya tutamağa tutunarak düşüşünüzü durdurursunuz. Şimdiye kadar düşülen mesafeden yine de hasar alırsınız, ancak düşüşü 20 fit daha kısaymış gibi ele alırsınız. Boş eliniz yoksa testi başarısız olmuşsunuz gibi düşmeye devam edersiniz.
+  criticalFailure: Düşmeye devam edersiniz ve bu reaksiyonu kullanmadan önce 20 fit veya daha fazla düştüyseniz düşülen her 20 fit için çarpma nedeniyle 10 ezilme hasarı alırsınız.
+
+omen://action/grapple?source=paizo-pathfinder-player-core:
+  name: Kavra
+  description: Boş elinizle bir yaratığı veya nesneyi yakalamaya çalışırsınız. Hedefin Beden ZD'sine karşı bir Atletizm testi deneyin. Boş bir eliniz olmadan da zaten Kavranmış veya Bağlanmış durumdaki bir hedefi kavrayabilirsiniz.
+  requirements: En az bir eliniz boş olmalı ve hedefiniz sizden en fazla bir boy boyutu daha büyük olmalıdır.
+  criticalSuccess: Siz hareket etmedikçe veya hedefiniz Kurtulmadıkça hedefiniz bir sonraki sıranızın sonuna kadar bağlanmış olur.
+  success: Siz hareket etmedikçe veya hedefiniz Kurtulmadıkça hedefiniz bir sonraki sıranızın sonuna kadar kavranmış olur.
+  failure: Hedefinizi kavramayı başaramazsınız. Bir Kavrama kullanarak hedefi zaten kavramış veya bağlamış durumdaysanız hedef üzerindeki bu durumlar sona erer.
+  criticalFailure: Hedefi zaten kavramış veya bağlamış durumdaysanız serbest kalır. Hedefiniz size karşı Kavra eylemini başarıyla kullanmış gibi sizi kavrayabilir veya düşüp Yüzüstü yere kapaklanmanıza neden olabilir.
+
+omen://action/hide?source=paizo-pathfinder-player-core:
+  name: Gizlen
+  description: >
+    Gözlemlenen olmak yerine Gizli hâle gelmek için siperin veya büyük siperin arkasına sığınır ya da gizlenmenin derinliklerine çekilirsiniz. GM Gizlilik testinizi gizlice atar ve sonucu, sizi gözlemleyen ancak kendilerine karşı siperiniz veya büyük siperiniz bulunan ya da kendilerinden Gizlenmiş olduğunuz her yaratığın Dikkat ZD'si ile karşılaştırır. Standart siperiniz varsa testinize +2 durumsal bonus (veya büyük siperden +4) kazanırsınız. Bir yaratığa karşı başarılı bir şekilde gizli hâle gelir ancak ardından ona karşı siperinizi veya büyük siperinize sahip olmayı bırakırsanız ya da ondan gizlenmiş olmayı bırakırsanız yeniden gözlemlenen hâle gelirsiniz. Gizlenmek, Sessizce İlerlemek veya Adım atmak dışında herhangi bir şey yaparsanız gizli olmayı bırakırsınız. Bir yaratığa Vuruş Yapmayı denerseniz yaratık bu saldırıya karşı savunmasız kalır ve ardından gözlemlenen hâle gelirsiniz. Başka bir şey yaparsanız GM aksi yönde karar vermedikçe tam hareket etmeden önce gözlemlenen hâle gelirsiniz. GM fark edilmeden özellikle göze çarpmayan bir eylem gerçekleştirmenize izin verebilir ve bu muhtemelen başka bir Gizlilik testi gerektirebilir. Bir yaratık sizin tarafınızdan gözlemlenmenizi sağlamak için Ara eylemini kullanırsa ondan tekrar gizli hâle gelmek için başarılı bir şekilde Gizlenmelisiniz.
+
+  success: Yaratık sizi görebiliyorsa artık gözlemlenen olmak yerine ondan Gizli hâle gelirsiniz. Yaratıktan gizli veya Konumu Saptanmamış durumdaysanız o durumu korursunuz.
+
+omen://action/high-jump?source=paizo-pathfinder-player-core:
+  name: Yüksek Atlama
+  description: Depar atar, ardından dikey olarak atlamak için ZD 30 Atletizm testi denersiniz. En az 10 fit Depar atmadıysanız testinizde otomatik olarak başarısız olursunuz. GM tarafından belirlendiği üzere duruma bağlı olarak bu ZD artırılabilir veya azaltılabilir.
+  criticalSuccess: Dikey olarak 8 fite kadar ve yatay olarak 10 fite kadar Sıçrarsınız.
+  success: Dikey olarak 5 fite kadar ve yatay olarak 5 fite kadar Sıçrarsınız.
+  failure: Normal şekilde Sıçrarsınız.
+  criticalFailure: Bulunduğunuz alanda Yüzüstü yere kapaklanırsınız.
+
+omen://action/hunt-prey?source=paizo-pathfinder-player-core:
+  name: Avı İşaretle
+  description: >
+    Tek bir yaratığı avınız olarak belirler ve saldırılarınızı o yaratığa odaklarsınız. Avı görebilmeli veya duyabilmeli ya da keşif sırasında avın izini sürüyor olmalısınız. Avınızı Aradığınızda Dikkat testlerine +2 durumsal bonus ve avınızın İzini Sürdüğünüzde Hayatta Kalma testlerine +2 durumsal bonus kazanırsınız. Ayrıca avladığınız ava karşı ikinci menzil aralığınız içinde menzilli saldırılar yapmanın cezasını da yok sayarsınız. Aynı anda yalnızca bir yaratığı avınız olarak belirlemiş olabilirsiniz. Halihazırda belirlenmiş bir yaratığınız varken bir yaratığa karşı Avı İşaretle eylemini kullanırsanız önceki yaratık unvanı kaybeder ve yeni av unvanı kazanır. Belirlemeniz bir sonraki günlük hazırlıklarınıza kadar sürer.
+
+
+omen://action/hustle?source=paizo-pathfinder-player-core:
+  name: Tempoyu Artır
+  description: "Seyahat hızınızın iki katı hızda hareket etmek için kendinizi zorlarsınız. Yalnızca Dayanıklılık nitelik bonusunuz × 10 dakika kadar Acele Edebilirsiniz (en az 10 dakika). Acele Eden bir gruptaysanız grubun birlikte ne kadar hızlı Acele Edebileceğini belirlemek için herkes arasındaki en düşük Dayanıklılık nitelik bonusunu kullanın."
+
+omen://action/identify-alchemy?source=paizo-pathfinder-player-core:
+  name: Simyasal Eşyayı Tanımla
+  description: Simyacı alet takımını kullanarak 10 dakikalık bir test ile simyasal bir eşyanın niteliğini tanımlayabilirsiniz. Girişiminiz herhangi bir şekilde kesintiye uğrarsa baştan başlamalısınız.
+  requirements: Bir Simyacı Alet Takımı tutuyor veya takıyor olmalısınız.
+  success: Eşyayı ve onu etkinleştirme yöntemini tanımlarsınız.
+  failure: Eşyayı tanımlamada başarısız olursunuz ancak tekrar deneyebilirsiniz.
+  criticalFailure: Eşyayı yanlış tanımlayarak GM'nin seçtiği başka bir eşya sanırsınız.
+
+omen://action/identify-magic?source=paizo-pathfinder-player-core:
+  name: Büyüyü Tanı
+  description: Bir eşyanın, konumun veya devam eden bir etkinin büyülü olduğunu keşfettiğinizde büyüsünün ayrıntılarını tanımlamaya çalışmak için 10 dakika harcayabilirsiniz. Girişiminiz kesintiye uğrarsa baştan başlamalısınız. GM testiniz için ZD'yi belirler. Lanetli büyü veya ezoterik konular genellikle daha yüksek ZD'lere sahiptir veya yalnızca bu etkinliği kullanarak tanımlanmaları imkânsız olabilir. Bir büyüyü güçlendirmek onu tanımlama ZD'sini artırmaz.
+  criticalSuccess: Adı (bir etki için), ne yaptığı, etkinleştirme yöntemleri (bir eşya veya konum için) ve lanetli olup olmadığı da dahil olmak üzere büyünün tüm niteliklerini öğrenirsiniz.
+  success: Bir eşya veya konum için ne yaptığına dair bir fikir edinir ve onu etkinleştirme yöntemlerini öğrenirsiniz. Devam eden bir etki için (süresi olan bir büyü gibi) etkinin adını ve ne yaptığını öğrenirsiniz. Kritik bir başarı elde etme umuduyla tekrar deneyemezsiniz.
+  failure: Büyüyü tanımlamada başarısız olursunuz ve 1 gün boyunca tekrar deneyemezsiniz.
+  criticalFailure: Büyüyü yanlış tanımlayarak GM'nin seçtiği başka bir şey sanırsınız.
+
+omen://action/impersonate?source=paizo-pathfinder-player-core:
+  name: Kılığına Bürün
+  description: >
+    Kendinizi olmadığınız biri veya bir şey gibi göstermek için bir kılık yaratırsınız. İnandırıcı bir kılık oluşturmak 10 dakika sürer ve bir Kılık Değiştirme Kiti gerektirir; ancak belirli bir kişiyi taklit etmeye çalışmıyorsanız GM'nin takdirine bağlı olarak daha basit, daha hızlı bir kılık işinizi görebilir. Çoğu durumda yaratıklar yalnızca Aldatma ZD'nize karşı Dikkat testleri denemek için Ara eylemini kullanırlarsa aldatmacanızı tespit etme şansına sahip olurlar. Kılık değiştirmiş durumdayken biriyle doğrudan etkileşime girmeye çalışırsanız GM bunun yerine o yaratığın Dikkat ZD'sine karşı sizin adınıza gizli bir Aldatma testi atar. Belirli bir kişinin kılığına büründüyseniz GM taklit ettiğiniz kişiyi ne kadar iyi ruhdaş hayvanlarına bağlı olarak etkileşime girdiğiniz yaratıklara bir durumsal bonus verebilir veya başkalarıyla doğrudan etkileşime girmeseniz bile GM gizli bir Aldatma testi atabilir.
+
+  success: Yaratığı kılığına girdiğiniz kişi olduğunuza inandırırsınız. Davranışınız değişirse yeni bir test denemeniz gerekebilir.
+  failure: Yaratık iddia ettiğiniz kişi olmadığınızı anlayabilir.
+  criticalFailure: Yaratık iddia ettiğiniz kişi olmadığınızı anlayabilir ve kılık değiştirmeden sizi tanıyacaksa sizi tanır.
+
+omen://action/inspired-stratagem?source=paizo-pathfinder-player-core:
+  name: İlham Veren Strateji
+  description: "Etki: Müttefik tetikleyici testi iki kez atar ve iki sonucun daha iyisini alır. Bu müttefik bir sonraki günlük hazırlıklarınıza kadar İlham Veren Stratejinize geçici olarak bağışık hâle gelir."
+  trigger: Birlikte stratejileri gözden geçirdiğiniz bir müttefik bir saldırı zarı veya beceri testi denemek üzeredir
+
+omen://action/interact?source=paizo-pathfinder-player-core:
+  name: Etkileşime Gir
+  description: Bir nesneyi veya araziyi manipüle etmek için elinizi veya ellerinizi kullanırsınız. Sahipsiz veya saklanan bir nesneyi alabilir, bir silah çekebilir, tutulan bir eşyayı diğeriyle değiştirebilir, bir kapıyı açabilir veya benzer bir etki elde edebilirsiniz. Nadir durumlarda Etkileşime Gir eyleminizin başarılı olup olmadığını belirlemek için bir beceri testi denemeniz gerekebilir.
+
+omen://action/investigate?source=paizo-pathfinder-player-core:
+  name: Araştır
+  description: Yarı hızda seyahat ederken çevreniz hakkında bilgi ararsınız. Yol boyunca görebileceğiniz ve etkileşim kurabileceğiniz çeşitli şeyler arasında ipuçları keşfetmek için gizli bir test olarak Bilgi Hatırla eylemini kullanırsınız. İnceleme yaparken Bilgi Hatırla eylemine sahip herhangi bir beceriyi kullanabilirsiniz, ancak becerinin bulabileceğiniz ipuçlarıyla ilgili olup olmadığını GM belirler.
+
+omen://action/jinx?source=paizo-pathfinder-player-core:
+  name: Kem Göz
+  description: "Etki: Başka bir yaratığı sakarlıkla lanetleyebilirsiniz. Bu lanetin menzili 30 fittir ve hedefinizi görebilmelisiniz. Hedef, sınıf ZD'niz veya büyü ZD'nizden hangisi daha yüksekse ona karşı İrade kurtarış yapar."
+  frequency: günde bir kez
+  success: Hedef etkilenmez ve 24 saat boyunca geçici olarak bağışık olur.
+  failure: Hedef 1 dakika boyunca Hantal 1 olur.
+  criticalFailure: Hedef 1 dakika boyunca Hantal 2 olur.
+
+omen://action/leap?source=paizo-pathfinder-player-core:
+  name: Sıçra
+  description: >
+    Kısa bir yatay veya dikey zıplama yaparsınız. Daha büyük bir mesafe atlamak, Yüksek Atlama veya Uzun Atlama için Atletizm becerisini kullanmayı gerektirir.
+     • Yatay Hızınız en az 15 fit ise yatay olarak 10 fite kadar veya hızınız en az 30 fit ise yatay olarak 15 fite kadar atlayın. Sıçramanızın bittiği alana inersiniz (bu genellikle 5 fitlik bir boşluğu veya Hızınız 30 fit ya da daha fazlaysa 10 fitlik bir boşluğu geçebileceğiniz anlamına gelir). Hızınız 15 fitten azsa yatay bir Sıçrama yapamazsınız.
+     • Dikey Yükseltilmiş bir yüzeye dikey olarak 3 fite kadar ve yatay olarak 5 fite kadar atlayın.
+
+
+omen://action/learn-a-spell?source=paizo-pathfinder-player-core:
+  name: Büyü Öğren
+  description: >
+    Büyü Gelenekleri ve Beceriler Aşağıdaki tabloda gösterildiği gibi her büyü geleneğinin karşılık gelen bir becerisi vardır. Büyüyü Tanımak veya Büyü Öğrenmek için bir beceride eğitimli yetkinlik derecesine sahip olmalısınız. Büyülü özelliğine sahip bir eşya gibi belirli bir geleneği olmayan bir şey bu becerilerin herhangi biri kullanılarak tanımlanabilir. Büyü Geleneği Karşılık Gelen Beceri Mistik Mistik İlim İlahi Din Okült Okültizm Doğa Doğa Geleneğinize ait yeni bir büyüye, o büyüyü bilen birinden veya büyü kitabı ya da parşömen gibi büyülü bir yazıdan erişim kazanabilirsiniz. Birden fazla geleneğin büyülerini yapabiliyorsanız bu geleneklerden herhangi birine ait bir Büyü Öğrenebilirsiniz, ancak bunu yapmak için karşılık gelen beceriyi kullanmalısınız. Örneğin ozan çoklu sınıf arketipine sahip bir rahip olsaydınız ozan büyü repertuvarınıza okült bir büyü eklemek için Din becerisini kullanamazdınız. Büyüyü öğrenmek için aşağıdakileri yapmalısınız:
+     • Büyü derecesi başına 1 saat harcayın; bu süre boyunca büyüyü bilen bir kişiyle sohbet halinde olmalı veya büyülü yazıyı elinizde bulundurmalısınız.
+     • Büyü Öğrenme tablosunda belirtilen Fiyattaki materyallere sahip olun.
+     • Geleneğinize karşılık gelen beceri için bir beceri testi deneyin (GM tarafından belirlenen ZD, genellikle Büyü Öğrenme Tablosundaki ZD'ye yakındır). Sıra dışı veya nadir büyülerin ZD'leri daha yüksektir; GM için tüm yönergeler GM Core sayfa 52'de yer almaktadır.
+    Büyü Öğrenme Büyü Derecesi Fiyat Tipik ZD 1. veya kantrip 2 gp 15 2. 6 gp 18 3. 16 gp 20 4. 36 gp 23 5. 70 gp 26 6. 140 gp 28 7. 300 gp 31 8. 650 gp 34 9. 1.500 gp 36 10. 7.000 gp 41
+
+  requirements: Bir büyücülük sınıf özelliğine sahipsiniz ve öğrenmek istediğiniz büyü, büyü geleneğinizin büyü listesinde yer alıyor.
+  criticalSuccess: Materyallerin yarısını harcar ve büyüyü öğrenirsiniz.
+  success: Materyalleri harcar ve büyüyü öğrenirsiniz.
+  failure: Büyüyü öğrenemezsiniz ancak bir seviye kazandıktan sonra tekrar deneyebilirsiniz. Materyaller harcanmaz.
+  criticalFailure: Materyallerin yarısını harcamanız dışında başarısızlık gibidir.
+
+omen://action/lie?source=paizo-pathfinder-player-core:
+  name: Yalan Söyle
+  description: >
+    Birini bir yalanla kandırmaya çalışırsınız. Bunu yapmak en az 1 tur sürer veya yalan ayrıntılıysa daha uzun sürer. Tek bir Aldatma testi atarsınız ve bunu kandırmaya çalıştığınız her yaratığın Dikkat ZD'si ile karşılaştırırsınız. GM duruma ve söylemeye çalıştığınız yalanın niteliğine göre onlara bir durumsal bonus verebilir. Ayrıntılı veya son derece inanılmaz yalanlara bir yaratığı inandırmak, daha basit ve daha inandırıcı yalanlara göre çok daha zordur ve bazı yalanlar o kadar büyüktür ki kimseyi bunlara inandırmak mümkün değildir. GM'nin takdirine bağlı olarak bir yaratık başlangıçta yalanınıza inanırsa, yalan olduğunu fark etmek için daha sonra Aldatma ZD'nize karşı Niyetini Tart amacıyla bir Dikkat testi deneyebilir. Bu genellikle yaratık ifadelerinize karşı çıkacak yeterli kanıt keşfettiğinde gerçekleşir.
+
+  success: Hedef yalanınıza inanır.
+  failure: Hedef yalanınıza inanmaz ve konuşmanız süresince Yalan Söyleme girişimlerinize karşı +4 durumsal bonus kazanır. Hedefin gelecekte sizden şüphelenme olasılığı da daha yüksektir.
+
+omen://action/long-jump?source=paizo-pathfinder-player-core:
+  name: Uzun Atlama
+  description: Depar atar, ardından Depar attığınız yönde uzun atlama yapmak için bir ZD 15 Atletizm testi denersiniz. En az 10 fit Depar atmadıysanız testinizde otomatik olarak başarısız olursunuz. Duruma bağlı olarak GM bu ZD'yi artırabilir veya azaltabilir.
+  success: En yakın 5 fite aşağı yuvarlanmış test sonucunuza eşit bir mesafeye kadar Sıçrarsınız. Kara Hızınızdan daha uzağa atlayamazsınız.
+  failure: Normal bir yatay Sıçrama yaparsınız.
+  criticalFailure: Normal bir yatay Sıçrama yapar, ardından düşer ve Yüzüstü yere kapaklanırsınız.
+
+omen://action/long-term-rest?source=paizo-pathfinder-player-core:
+  name: Uzun Süreli Dinlenme
+  description: Seviyenizin iki katı ile çarpılan Dayanıklılık nitelik bonusunuza (en az 1) eşit Can Puanı toparlamak için boş zaman boyunca tüm bir günü ve geceyi dinlenerek geçirebilirsiniz.
+
+omen://action/make-an-impression?source=paizo-pathfinder-player-core:
+  name: İyi İzlenim Bırak
+  description: >
+    Karizmatik yaklaşımlarda bulunduğunuz, iltifatlar ettiğiniz ve diğer iyi niyet gösterilerinde bulunduğunuz en az 1 dakikalık bir konuşmayla, birini geçici olarak uzlaşmacı kılmak için üzerinde iyi bir izlenim bırakmaya çalışırsınız. Konuşmanın sonunda bir hedefin İrade ZD'sine karşı bir Diplomasi testi deneyin. -2 ceza alırsanız bunun yerine en fazla beş hedef seçebilirsiniz. GM duruma göre başka bonuslar veya cezalar ekleyebilir. Yaptığınız herhangi bir izlenim GM aksi yönde karar vermedikçe yalnızca mevcut sosyal etkileşim boyunca sürer. Tutum durumlarının özeti için aşağıdaki Tutumları Değiştirme bölümüne bakın. Tutumları Değiştirme OYV'ler üzerindeki etkiniz, karakterinize nasıl baktıklarını yansıtan bir dizi tutumla ölçülür. Bunlar bir yaratığın mizanının yalnızca kısa bir özetidir. GM, etkileşimde bulunduğunuz karakterlerin geçmişine ve inançlarına dayalı olarak ek ayrıntılar sağlayacaktır ve tutumları hikâyeye uygun olarak değişebilir. Tutumlar Durumlar Ekinde ayrıntılı olarak açıklanmıştır ve burada özetlenmiştir.
+     • Yardımsever: Size yardım etmeye isteklidir ve taleplerinize olumlu yanıt verir.
+     • Dostane: Size karşı iyi bir tutuma sahiptir, ancak size yardım etmek için boynunu tehlikeye atması şart değildir.
+     • Kayıtsız: Sizinle iyi veya kötü ilgilenmez. (Çoğu OYV kayıtsız olarak başlar.)
+     • Hoşnutsuz: Sizden hoşlanmaz ve size yardım etmek istemez.
+     • Düşmanca: Aktif olarak aleyhinize çalışır—ve sadece sizden hoşlanmadığı için size saldırabilir.
+    Hiç kimse bu becerilerle bir oyuncu karakterinin tutumunu asla değiştiremez. Oyuncu karakterleriyle olan etkileşimleri canlandırabilirsiniz ve oyuncu bir karakterin ne kadar ikna edici veya çekici olduğuna dair mekanik bir fikir edinmek isterse Diplomasi sonuçlarını bile kullanabilirsiniz; ancak karakterlerinin nasıl tepki vereceğine dair nihai kararları oyuncular verir.
+
+  criticalSuccess: Hedefin size karşı tutumu iki basamak iyileşir.
+  success: Hedefin size karşı tutumu bir basamak iyileşir.
+  criticalFailure: Hedefin size karşı tutumu bir basamak kötüleşir.
+
+omen://action/maneuver-in-flight?source=paizo-pathfinder-player-core:
+  name: Havada Manevra Yap
+  description: >
+    Uçarken zorlu bir manevra denersiniz. Bir Akrobasi testi deneyin. Hangi manevraların mümkün olduğunu GM belirler ancak nadiren uçma Hareket Hızınızdan daha uzağa hareket etmenize izin verirler. Örnek Havada Manevra Görevleri
+     • Eğitimli dik tırmanış veya iniş
+     • Uzman rüzgara karşı uçma
+     • Usta yönü tersine çevirme
+     • Efsanevi fırtına şiddetindeki rüzgarlarda uçma
+
+  requirements: Uçma Hareket Hızına sahip olmalısınız.
+  success: Manevrada başarılı olursunuz.
+  failure: Manevranız başarısız olur. GM hareket edemeyeceğinizi mi yoksa başka bir zararlı etkinin mi gerçekleşeceğini seçer. Sonuç denediğiniz manevraya uygun olmalıdır (örneğin kuvvetli bir rüzgara karşı uçmaya çalışıyorsanız rotadan savrulmak gibi).
+  criticalFailure: Başarısızlık gibidir, ancak sonuç daha vahimdir.
+
+omen://action/master-strike?source=paizo-pathfinder-player-core:
+  name: Usta Vuruşu
+  description: Hedef sınıf ZD'nize karşı bir Dayanıklılık kurtarışı dener. Ardından 1 gün boyunca Usta Darbenize karşı bağışıklık kazanır.
+  trigger: Saldırınız Savunmasız bir yaratığa isabet eder ve hasar verir.
+  criticalSuccess: Hedef etkilenmez.
+  success: Hedef bir sonraki sıranızın sonuna kadar Halsiz 2 olur.
+  failure: Hedef 4 tur boyunca Felçli kalır.
+  criticalFailure: Hedef 4 tur boyunca felçli kalır, 2 saat boyunca Bilinçsiz hâle gelir veya ölür (seçim sizin).
+
+omen://action/mount?source=paizo-pathfinder-player-core:
+  name: Bineğe Bin
+  description: Yaratığın üzerine geçip ona binersiniz. Halihazırda binmiş durumdaysanız bunun yerine bu eylemi binekten inmek için kullanabilir, binek üzerinden bitişiğindeki bir alana hareket edebilirsiniz.
+  requirements: Sizden en az bir boy boyutu daha büyük olan ve bineğiniz olmaya istekli bir yaratığın bitişiğinde bulunmalısınız.
+
+omen://action/palm-an-object?source=paizo-pathfinder-player-core:
+  name: Eşya Aşırma
+  description: Küçük, sahipsiz bir nesneyi alır ve fark edilmemeye çalışırsınız. Şu anda sizi gözlemleyen tüm yaratıkların Dikkat ZD'lerine karşı tek bir Hırsızlık testi atın. Duruma bağlı olarak GM aksi yönde karar vermedikçe genellikle yalnızca ihmal edilebilir Bulk değerindeki Nesneleri Aşırabilirsiniz.
+  success: Yaratık Nesneyi Aşırdığınızı fark etmez.
+  failure: Yaratık Nesneyi Aşırdığınızı fark eder.
+
+omen://action/patrons-claim?source=paizo-pathfinder-player-core:
+  name: Haminin Talebi
+  description: "Etki: Yoldaşınızın ağzı akılalmaz derecede geniş açılır ve ardından haminizin kavrayıcı uzvu içinden fırlayarak 30 fit içindeki bir yaratığa uzanır; büyü ZD'nize karşı bir fortitude|basic|options:inflicts:drained kurtarmasıyla 10d10[spirit] hasar verir. Yaratık kurtarmasında başarısız olup hasar alırsa, ayrıca Takatsiz 2 (veya kritik başarısızlıkta Takatsiz 4) durumuna düşer ve haminiz, rakibinizin ruhu hediyeniz karşılığında size ek büyü bahşederken siz de normal maksimumunuza kadar 1 Odak Puanı geri kazanırsınız."
+  frequency: saatte bir kez
+
+omen://action/patrons-presence?source=paizo-pathfinder-player-core:
+  name: Haminin Varlığı
+  description: "Etki: Ruhdaş Hayvanınızdan bir yayılma şeklinde elle tutulur bir ağırlık uzanır. Auraya giren veya turuna aurada başlayan düşmanlar, büyü ZD'nize karşı bir İrade kurtarışında başarılı olmalıdır; aksi takdirde aurada kaldıkları sürece Zihni Bulanmış 2 veya kritik başarısızlıkta Zihni Bulanmış 3 olurlar. Aura bir sonraki sıranızın sonuna kadar sürer, ancak ruhdaş hayvan bunu 1 dakikaya kadar Sürdürebilir."
+  frequency: saatte bir kez
+
+omen://action/perform?source=paizo-pathfinder-player-core:
+  name: Gösteri Yap
+  description: >
+    Kısa bir gösteri yaparken—bir şarkı, hızlı bir dans veya birkaç şaka—Gösteri Yap eylemini kullanırsınız. Bu eylem en çok yeteneğinizi kanıtlamak veya birini hızlıca etkilemek istediğinizde kullanışlıdır. Gösteri yapmanın kendi başına nadiren bir etkisi olur, ancak gözlemcilere karşı yapılacak sonraki Diplomasi testlerinin ZD'lerini etkileyebilir, hatta GM uygun görürse tutumlarını değiştirebilir. Performans Ek Özellikler Örnekler Oyunculuk Auditory, linguistic ve visual Drama, pandomim, kuklacılık Komedi Auditory, linguistic ve visual Maskaralık, fıkra anlatma, taşlama Dans Move ve visual Bale, huara, jig, makru Tuşlu Çalgı Çalma Auditory ve manipulate Klavsen, org, piyano Hitabet Auditory ve linguistic Destan, kaside, şiir, hikâye anlatımı Vurmalı Çalgı Çalma Auditory ve manipulate Çanlar, davul, gong, ksilofon Şarkı Söyleme Auditory ve linguistic Balad, ilahi, melodi, kafiye Telli Çalgı Çalma Auditory ve manipulate Keman, arp, lavta, viyol Nefesli Çalgı Çalma Auditory ve manipulate Tulum, flüt, blokflüt, trompet Örnek Gösteri Yapma Görevleri
+     • Eğitimsiz sıradan halktan oluşan seyirci kitlesi
+     • Eğitimli zanaatkârlardan oluşan seyirci kitlesi
+     • Uzman tüccarlar veya küçük soylulardan oluşan seyirci kitlesi
+     • Usta yüksek soylular veya küçük kraliyet mensuplarından oluşan seyirci kitlesi
+     • Efsanevi büyük kraliyet mensupları veya diğer dünyalardan varlıklardan oluşan seyirci kitlesi
+
+  criticalSuccess: Performansınız gözlemcileri etkiler ve yeteneğinizle ilgili hikâyeleri paylaşmaları muhtemeldir.
+  success: Kendinizi kanıtlarsınız ve gözlemciler performansınızın kalitesini takdir eder.
+  failure: Performansınız sönük kalır.
+  criticalFailure: Yalnızca yeteneksizlik sergilersiniz.
+
+omen://action/pick-a-lock?source=paizo-pathfinder-player-core:
+  name: Kilit Aç
+  description: Bir kilidi anahtarsız açmak bir Aygıtı Etkisizleştirmeye çok benzer, ancak testin ZD'si açmaya çalıştığınız kilidin karmaşıklığına ve yapısına göre belirlenir. Daha yüksek kalitedeki kilitlerin açılması için birden fazla başarı gerekebilir. Uygun aletleriniz yoksa GM uydurma bir alet takımı muamelesi gören derme çatma maymuncuklar kullanmanıza izin verebilir.
+  requirements: Bir Düzenbaz Alet Takımı tutuyor veya takıyor olmalısınız.
+  criticalSuccess: Kilidi açarsınız veya birden fazla başarı gerektiren bir kilidi açmaya yönelik iki başarı elde edersiniz. Müdahalenize dair hiçbir iz bırakmazsınız.
+  success: Kilidi açarsınız veya birden fazla başarı gerektiren bir kilidi açmaya yönelik bir başarı elde edersiniz. Yakından incelendiğinde kilidin kurcalandığını gösteren hasar bırakırsınız.
+  criticalFailure: Alet takımınızı kırarsınız ve geride bariz hasar bırakırsınız. Kırık bir alet takımını tamir etmek, onu Tamir Etmek için Zanaat becerisini kullanmayı veya yedek maymuncuklar takmayı gerektirir (3 sp maliyetindedir veya bir sızmacı hırsız alet takımı için 3 gp).
+
+omen://action/point-out?source=paizo-pathfinder-player-core:
+  name: İşaret Et
+  description: "Görebildiğiniz bir yaratığı, bir yönü işaret ederek ve mesafeyi sözlü olarak tarif ederek bir veya daha fazla müttefikinize gösterirsiniz. Bu yaratık müttefikleriniz için Fark Edilmemiş olmak yerine Gizli hâle gelir. Bu yalnızca sizi görebilen ve hedefi potansiyel olarak tespit edebilecek bir konumda bulunan müttefikler için geçerlidir. Müttefikleriniz sizi duyamıyor veya anlayamıyorsa, yaratığın Gizlilik ZD'sine karşı bir Dikkat testinde başarılı olmalıdırlar; aksi takdirde yanlış anlar ve hedefin farklı bir konumda olduğuna inanırlar."
+  requirements: Bir yaratık bir veya daha fazla müttefikiniz tarafından fark edilmemiş olmalı, ancak sizin tarafınızdan fark edilmemiş olmamalıdır.
+
+omen://action/primal-howl?source=paizo-pathfinder-player-core:
+  name: İlkel Uluma
+  description: "Etki: Yoldaş Hayvanınız doğa büyüsüyle güçlenmiş olarak çığlık atar ve ulur. Bir koni içindeki tüm yaratıklar, büyü ZD'nize karşı bir fortitude|against:spell|basic|options:area-effect kurtarmasıyla yoldaşınızın sahip olduğu her 2 seviye için (floor(@actor.level/2))d6[sonic]|options:area-damage hasar alır. Başarısız olan yaratıklar Korkmuş 1 durumuna düşer ve kritik başarısız olan yaratıklar Korkmuş 2 durumuna düşer. Bu korku bir duygu, korku ve zihinsel etkidir."
+  frequency: saatte bir kez
+
+omen://action/raise-a-shield?source=paizo-pathfinder-player-core:
+  name: Kalkan Kaldır
+  description: Kendinizi korumak için kalkanınızı konumlandırırsınız. Kalkan Kaldırdığınızda kalkanın listelenen durumsal bonusnu SD'ye eklersiniz. Kalkanınız bir sonraki sıranızın başlangıcına kadar kaldırılmış kalır.
+  requirements: Bir kalkan kuşanmış olmalısınız.
+
+omen://action/reactive-strike?source=paizo-pathfinder-player-core:
+  name: Reaktif Vuruş
+  description: >
+    Açık veren bir düşmana anında karşılık verirsiniz. Tetikleyici yaratığa karşı bir yakın dövüş Saldırısı gerçekleştirirsiniz. Saldırınız kritik vuruş olursa ve tetikleyici bir manipülasyon eylemi idiyse, o eylemi kesintiye uğratıp boşa çıkarırsınız. Bu Saldırı Çoklu Saldırı Cezanıza dahil edilmez ve mevcut Çoklu Saldırı Cezanız bu Saldırıya uygulanmaz.
+
+  trigger: >
+    Erişiminizdeki bir yaratık manipülasyon veya hareket eylemi kullandığında, menzilli bir vuruş yaptığında ya da bir hareket eylemi sırasında bulunduğu kareden çıktığında.
+
+
+omen://action/ready?source=paizo-pathfinder-player-core:
+  name: Hazırlan
+  description: >
+    Belirli bir tetikleyici gerçekleştiğinde kullanmak üzere reaksiyonunuzu ve 1 eylemlik bir hamleyi hazırlarsınız. Hangi eylemi yapacağınızı ve hangi tetikleyicinin bunu başlatacağını belirlersiniz.
+
+  requirements: Turunuzdasınızdır ve 2 eylem harcarsınız.
+
+omen://action/recall-knowledge?source=paizo-pathfinder-player-core:
+  name: Bilgi Hatırla
+  description: Bu beceriyle ilgili bir konuya ilişkin bir bilgiyi hatırlamaya çalışmak için bir beceri testi denersiniz. Hangi beceriyi kullanmak istediğinizi önerin ve GM'ye bir soru sorun. GM ZD'yi belirler. Soruyu veya becerileri daraltmak için GM ile işbirliği yapmanız gerekebilir ve seçenekleri beğenmezseniz eyleme başlamadan önce Bilgi Hatırlamaktan vazgeçebilirsiniz.
+  criticalSuccess: Bilgiyi doğru şekilde hatırlarsınız. GM sorunuzu dürüstçe yanıtlar ve ya ek bilgi veya bağlam söyler ya da bir takip sorusunu yanıtlar.
+  success: Bilgiyi doğru şekilde hatırlarsınız. GM sorunuzu dürüstçe yanıtlar.
+  criticalFailure: Yanlış bilgi hatırlarsınız. GM sorunuzu yanlış yanıtlar (veya bir başarısızlıkta olduğu gibi size hiçbir bilgi vermemeye karar verir).
+
+omen://action/refocus?source=paizo-pathfinder-player-core:
+  name: Odak Yenile
+  description: Büyülü bağınızı yeniden kurmak amacıyla ameller gerçekleştirmek için 10 dakika harcarsınız. Bu, odak havuzunuza 1 Odak Puanı kazandırır. Gerçekleştirmeniz gereken ameller, size odak büyülerinizi veren sınıfta veya yetenekte belirtilmiştir. Bu ameller genellikle odak büyülerinizi aldığınız kaynakla ilgili diğer görevlerle örtüşebilir. Örneğin mübarek bir ilaha inanan ve odak büyüleri olan bir rahip, genellikle müttefiklerinin yaralarını sararken Odak Yenileme eylemini kullanabilir.
+  requirements: Bir odak havuzuna sahip olmalısınız.
+
+omen://action/release?source=paizo-pathfinder-player-core:
+  name: Bırak
+  description: >
+    Elinizde veya ellerinizde tuttuğunuz bir şeyi serbest bırakırsınız. Bu bir eşyayı düşürmek, silahı bir elinizde tutmaya devam ederken diğer elinizi silahtan çekmek, bir avizeyi asılı tutan halatı bırakmak veya benzer bir eylemi gerçekleştirmek anlamına gelebilir. Çoğu manipülasyon eyleminin aksine Bırak, manipülasyon özelliğine sahip eylemler tarafından tetiklenebilen reaksiyonları (Reaktif Vuruş gibi) tetiklemez. Sıranızın dışında bir şeyi Bırakmaya hazırlanmak istiyorsanız Hazırlan etkinliğini kullanın.
+
+
+omen://action/repair?source=paizo-pathfinder-player-core:
+  name: Tamir Et
+  description: Eşyayı sabit bir yüzeye yerleştirip tamir alet takımını iki elinizle kullanarak hasarlı bir eşyayı onarmaya çalışmak için 10 dakika harcarsınız. GM ZD'yi belirler, ancak belirli bir eşyayı Tamir Etme ZD'si genellikle onu ilk etapta Zanaatla üretme ZD'si ile hemen hemen aynıdır. Yok edilmiş bir eşyayı Tamir Edemezsiniz.
+  requirements: Bir Tamir Alet Takımı tutuyor veya takıyor olmalısınız
+  criticalSuccess: Eşyaya 10 Can Puanı ve Zanaat becerisinde sahip olduğunuz yetkinlik derecesi başına ek 10 Can Puanı kazandırırsınız (eğitimliyseniz toplam 20 CP, uzmansanız 30 CP, ustaysanız 40 CP veya efsaneviyseniz 50 CP).
+  success: Eşyaya 5 Can Puanı ve Zanaat becerisinde sahip olduğunuz yetkinlik derecesi başına ek 5 Can Puanı kazandırırsınız (eğitimliyseniz toplam 10 CP, uzmansanız 15 CP, ustaysanız 20 CP veya efsaneviyseniz 25 CP).
+  criticalFailure: Eşyaya 2d6 hasar verirsiniz. Bu hasara eşyanın Sertliğini uygulayın.
+
+omen://action/repeat-a-spell?source=paizo-pathfinder-player-core:
+  name: Büyüyü Tekrarla
+  description: Yarı hızda hareket ederken aynı büyüyü tekrar tekrar yaparsınız. Tipik olarak bu büyü bir çatışma çıkması durumunda yürürlükte olmasını istediğiniz bir kantrip ve 2 eylem veya daha kısa sürede yapabileceğiniz bir büyü olmalıdır. Hayal Kırıntısı gibi karmaşık kararlar almayı gerektiren bir büyüyü tekrarlamak, GM tarafından belirlendiği üzere sizi Yorgun kılabilir.
+
+omen://action/reposition?source=paizo-pathfinder-player-core:
+  name: Yerinden Oynat
+  description: Bir yaratığı veya nesneyi zorla hareket ettirirsiniz. Hedefin Beden ZD'sine karşı bir Atletizm testi deneyin.
+  requirements: En az bir eliniz boş olmalı veya hedefi kavrıyor ya da bağlıyor olmalısınız. Hedef sizden en fazla bir boy boyutu daha büyük olabilir.
+  criticalSuccess: Yaratığı 10 fite kadar hareket ettirirsiniz. Bu hareket sırasında erişiminiz içinde kalmalıdır ve onu engellerin içine veya içinden geçecek şekilde hareket ettiremezsiniz.
+  success: Hedefi 5 fite kadar hareket ettirirsiniz. Bu hareket sırasında erişiminiz içinde kalmalıdır ve onu engellerin içine veya içinden geçecek şekilde hareket ettiremezsiniz.
+  criticalFailure: Hedef, sizi başarıyla Konumlandırmış gibi 5 fite kadar hareket ettirebilir.
+
+omen://action/request?source=paizo-pathfinder-player-core:
+  name: Ricada Bulun
+  description: Size karşı dostane veya yardımsever olan bir yaratıktan ricada bulunabilirsiniz. Ricayı hedefin size karşı mevcut tutumu göz önüne alındığında kabul edeceği terimlerle ifade etmelisiniz. GM Diplomasi testinin ZD'sini ricanın zorluğuna göre belirler. Bazı ricalar nahoş veya imkânsızdır ve yardımsever bir OYV bile bunlara asla razı olmaz.
+  criticalSuccess: Hedef ricanızı koşulsuz olarak kabul eder.
+  success: Hedef ricanızı kabul eder, ancak ricaya ek hükümler veya değişiklikler talep edebilir.
+  failure: Hedef ricayı reddeder, ancak daha az aşırı bir alternatif önerebilir.
+  criticalFailure: Hedef yalnızca ricayı reddetmekle kalmaz, ricanın küstahlığı nedeniyle size karşı tutumu da bir basamak kötüleşir.
+
+omen://action/retraining?source=paizo-pathfinder-player-core:
+  name: Yeniden Eğitim
+  description: >
+    Yeniden eğitim, karakter seçimlerinizi değiştirmenin bir yolunu sunar; bu karakterinizi yeni bir yöne götürmek istediğinizde veya beklentilerinizi karşılamayan kararları değiştirmek istediğinizde faydalıdır. Yetenekleri, becerileri ve bazı seçilebilir sınıf özelliklerini yeniden eğitebilirsiniz. Soyunuzu, mirasınızı, geçmişinizi, sınıfınızı veya nitelik bonuslarınızı yeniden eğitemezsiniz. Yeniden eğitim alırken diğer boş zaman etkinliklerini gerçekleştiremezsiniz. Yeniden eğitim genellikle bir eğitmenden öğrenerek zaman geçirmenizi gerektirir; bu ister fiziksel eğitimi, ister bir kütüphanede çalışmayı, isterse ortak büyülü trans hallerine girmeyi gerektirsin. GM uygun eğitimi alıp alamayacağınızı veya bir şeyin yeniden eğitilip eğitilemeyeceğini belirler. Bazı durumlarda eğitmeninize ödeme yapmanız gerekecektir. Bazı yeteneklerin yeniden eğitilmesi zor veya imkânsız olabilir (örneğin bir Witch yalnızca olağanüstü durumlarda hamisini yeniden eğitebilir). Yeniden eğitim alırken orijinal seçeneği seçtiğinizde yapamayacağınız seçimleri genellikle yapamazsınız. Örneğin 2. seviyede seçtiğiniz bir beceri yeteneğini 4. seviye bir yetenekle veya orijinal yeteneği aldığınız sırada karşılamadığınız önkoşulları gerektiren bir yetenekle değiştiremezsiniz. O sırada önkoşulları karşılayıp karşılamadığınızı hatırlamıyorsanız GM'nizden kararı vermesini isteyin. Yeniden eğitim nedeniyle bir yeteneğin önkoşullarını karşılamayı bırakırsanız o yeteneği kullanamazsınız. İstediğiniz tüm yetenekleri elde etmek için sırayla birkaç yeteneği yeniden eğitmeniz gerekebilir. Yetenekler Yeteneklerinizden birini değiştirmek için bir haftalık boş zamanı yeniden eğitimle geçirebilirsiniz. Eski yeteneği kaldırın ve aynı türden bir başkasıyla değiştirin. Örneğin bir beceri hünerini başka bir beceri hüneriyle değiştirebilirsiniz, ancak bir Wizard hüneriyle değiştiremezsiniz. Beceriler Beceri artışlarınızdan birini değiştirmek için bir haftalık boş zamanı yeniden eğitimle geçirebilirsiniz. Artışını kaybeden becerideki yetkinlik derecenizi bir basamak azaltın ve başka bir becerideki yetkinlik derecenizi bir basamak artırın. Yeni yetkinlik derecesi takas ettiğiniz yetkinlik derecesine eşit veya daha düşük olmalıdır. Örneğin ozanınız Performans ve Gizlilikte usta, Okültizmde uzmansa karakterin Gizlilik yetkinliğini uzmana düşürebilir ve Okültizmde usta olabilirsiniz; ancak Performansta efsanevi olmak için bu beceri artışını yeniden atayamazsınız. Beceri artışlarını yeniden atarken seviyenizi takip edin; beceri yetkinliklerinizin değiştiği seviye, beceri önkoşullarına sahip yetenekleri yeniden eğitme kabiliyetinizi etkileyebilir. Ayrıca karakter yaratma sırasında seçtiğiniz başlangıçtaki eğitimli bir beceriyi yeniden eğitmek için bir hafta harcayabilirsiniz. Sınıf Özellikleri Bir seçim gerektiren bir sınıf özelliğini değiştirebilir, bunun yerine farklı bir seçim yapabilirsiniz. Büyü repertuvarınızdaki bir büyüyü değiştirmek gibi bazıları bir hafta sürer. Druid öğretisi veya Wizard okulu gibi daha büyük seçimleri yeniden eğitmenin ne kadar sürdüğünü GM size söyleyecektir—bu süre her zaman en az bir aydır.
+
+
+omen://action/scout?source=paizo-pathfinder-player-core:
+  name: Gözcülük Yap
+  description: Tehlikeyi gözetlemek için grubun önünde ve arkasında gözcülük yaparak yarı hızda hareket edersiniz. Bir sonraki karşılaşmanın başında grubunuzdaki her yaratık inisiyatif zarlarına +1 durumsal bonus kazanır.
+
+omen://action/search?source=paizo-pathfinder-player-core:
+  name: Ara
+  description: "Gizli kapıları, gizlenmiş tehlikeleri vb. titizlikle Ararsınız. Genellikle hangi konumların kontrol edilmesinin en iyisi olduğu konusunda bilinçli bir tahminde bulunabilir ve yarı hızda hareket edebilirsiniz; ancak kapsamlı olmak ve her şeyi kontrol ettiğinizi garanti etmek istiyorsanız dakikada 300 fitten fazla olmayan bir Hızda veya içine girmeden önce her şeyi kontrol ettiğinizden emin olmak için dakikada 150 fit hızla seyahat etmeniz gerekir. Alanı daha kapsamlı bir şekilde taramak için Arama Yaparken her zaman daha yavaş hareket edebilirsiniz ve Hızlı Arama yeteneği bu maksimum Hızları artırır. Arama Yaparken gizli bir kapı, eşya veya tehlikeyle karşılaşırsanız GM gizli nesneyi veya tehlikeyi fark edip etmediğinizi görmek için Ara eylemiyle serbest bir gizli test dener. Aranacak çok sayıda nesnenin olduğu yerlerde durmalı ve kapsamlı bir şekilde aramak için belirgin şekilde daha uzun zaman harcamalısınız."
+
+omen://action/seek?source=paizo-pathfinder-player-core:
+  name: Tara
+  description: >
+    Gizli kapılar veya tehlikeler de dahil olmak üzere yaratıkların veya nesnelerin işaretleri için bir alanı tararsınız. Taranacak bir alan seçin. Bir Ara eylemiyle tarayabileceğiniz alanı GM belirler—hemen her zaman herhangi bir boyutta 30 fit veya daha azdır. Sizden uzakta arama yaparsanız GM bir ceza uygulayabilir veya özellikle dağınık bir alanı Aramanın kaç eylem alacağını ayarlayabilir. GM sizin adınıza tek bir gizli Dikkat testi dener ve sonucu alandaki herhangi bir Konumu Saptanmamış veya Gizli yaratığın Gizlilik ZD'leri veya alandaki her bir nesneyi tespit etme ZD'si ile karşılaştırır (GM tarafından veya Nesneyi Gizleyen biri tarafından belirlendiği üzere). Tespit ettiğiniz bir yaratık, belirsiz bir duyu kullanıyorsanız veya bir etki (Görünmezlik gibi) deneğin gözlemlenmesini engelliyorsa Gözlemlenen hâle gelmek yerine gizli kalabilir.
+
+  criticalSuccess: Aleyhine kritik başarı elde ettiğiniz herhangi bir konumu saptanmamış veya gizli yaratık sizin tarafınızdan gözlemlenen hâle gelir. Aleyhine kritik başarı elde ettiğiniz alandaki nesnelerin yerini öğrenirsiniz.
+  success: Aleyhine başarılı olduğunuz konumu saptanmamış herhangi bir yaratık konumu saptanmamış olmak yerine sizden gizli hâle gelir ve aleyhine başarılı olduğunuz herhangi bir gizli yaratık sizin tarafınızdan gözlemlenen hâle gelir. Herhangi bir nesnenin yerini öğrenir veya GM tarafından belirlendiği üzere nerede olduğuna dair bir ipucu edinirsiniz.
+
+omen://action/sense-direction?source=paizo-pathfinder-player-core:
+  name: Yön Bul
+  description: >
+    Yıldızları, güneşin konumunu, coğrafyanın veya bitki örtüsünün özelliklerini ya da hayvanların davranışlarını kullanarak vahşi doğada yönünüzü kaybetmeden kalabilirsiniz. Tipik olarak günde yalnızca bir kez Hayatta Kalma testi denersiniz ancak bazı ortamlar veya değişiklikler daha sık zar atmayı gerektirebilir. GM ZD'yi ve bu etkinliğin ne kadar sürdüğünü belirler (genellikle sadece bir dakika kadar). Daha sıra dışı olan veya aşina olmadığınız yerler Yön Bulmak için asgari bir yetkinlik derecesine sahip olmanızı gerektirebilir. Pusula olmadan Yön Bulma testlerine -2 eşya cezası alırsınız. Yön Bulma Görevleri
+     • Eğitimsiz güneşi kullanarak bir ana yönü belirlemek
+     • Eğitimli bir ormanda aşırı büyümüş bir patika bulmak
+     • Uzman bir çit labirentinde yolunu bulmak
+     • Usta girift bir labirentte veya nispeten özelliksiz bir çölde yolunu bulmak
+     • Efsanevi sürekli değişen bir rüya aleminde yolunu bulmak
+
+  criticalSuccess: Nerede olduğunuza dair mükemmel bir his edinirsiniz. Ana yönleri olan bir ortamdaysanız onları tam olarak bilirsiniz.
+  success: Umutsuzca kaybolmaktan kaçınmaya yetecek kadar yön duygusu kazanırsınız. Ana yönleri olan bir ortamdaysanız bu yönlere dair bir hisse sahip olursunuz.
+
+omen://action/sense-motive?source=paizo-pathfinder-player-core:
+  name: Niyetini Tart
+  description: Bir yaratığın davranışının anormal olup olmadığını anlamaya çalışırsınız. Bir yaratık seçin ve garip vücut dili, gerginlik belirtileri ve birini aldatmaya çalışıyor olabileceğine dair diğer göstergeler açısından değerlendirin. GM sizin adınıza tek bir gizli Dikkat testi dener ve sonucu yaratığın Aldatma ZD'si, yaratığın zihinsel durumunu etkileyen bir büyünün ZD'si veya GM tarafından belirlenen başka bir uygun ZD ile karşılaştırır. Durum önemli ölçüde değişene kadar tipik olarak aynı yaratığın Niyetini tekrar Sezmeye çalışamazsınız.
+  criticalSuccess: Yaratığın gerçek niyetlerini belirlersiniz ve onu etkileyen herhangi bir zihinsel büyü hakkında sağlam bir fikir edinirsiniz.
+  success: Yaratığın normal davranıp davranmadığını anlayabilirsiniz, ancak tam niyetlerini veya onu hangi büyünün etkileyebileceğini bilemezsiniz.
+  failure: Aldatıcı bir yaratığın inanmanızı istediği şeyi sezersiniz. Aldatıcı davranmıyorsa normal davrandığına inanırsınız.
+  criticalFailure: Yaratığın niyetlerine dair sahte bir his edinirsiniz.
+
+omen://action/shed-spirit?source=paizo-pathfinder-player-core:
+  name: Ruhunu Sal
+  description: "Etki: Yoldaşınızın ruhu bedeninden çıkarak geride boş kabuğunu bırakır; ardından 20 fit içindeki bir düşmana doğru uçup büyü ZD'nize karşı bir will|basic kurtarmasıyla (6+max(0,(ceil((@actor.level -8)/2)*2)))d6[spirit] hasar verir. Yoldaş hasar verirse, ardından düşmanın 30 fit içindeki bir müttefike uçar ve verilen hasarın yarısına eşit Can Puanı yeniler. Yoldaşınız daha sonra orijinal karesinde yeniden biçimlenir. 9. seviyede ve sonrasındaki her 2 seviyede bir, saldırı ilave 2d6 hasar verir."
+  frequency: 10 dakikada bir
+
+omen://action/shove?source=paizo-pathfinder-player-core:
+  name: İt
+  description: Bir yaratığı kendinizden uzağa itersiniz. Hedefinizin Beden ZD'sine karşı bir Atletizm testi deneyin.
+  requirements: En az bir eliniz boş olmalıdır. Hedef sizden en fazla bir boy boyutu daha büyük olabilir.
+  criticalSuccess: Hedefinizi sizden 10 fite kadar uzağa itersiniz. Peşinden Depar atabilirsiniz, ancak aynı mesafede ve aynı yönde hareket etmelisiniz.
+  success: Hedefinizi 5 fit geri itersiniz. Peşinden Depar atabilirsiniz, ancak aynı mesafede ve aynı yönde hareket etmelisiniz.
+  criticalFailure: Dengenizi kaybeder, düşer ve Yüzüstü yere kapaklanırsınız.
+
+omen://action/sneak?source=paizo-pathfinder-player-core:
+  name: Sessizce İlerle
+  description: >
+    Konumu Saptanmamış hâle gelerek veya öyle kalarak başka bir yere hareket etmeye çalışırsınız. Hızınızın yarısına kadar Depar atın. (İlgili hareket türüne sahipseniz Depar atmak yerine Kazarak, Tırmanarak, Uçarak veya Yüzerek Sessizce İlerlemeyi kullanabilirsiniz; bu Hızın yarısıyla hareket etmelisiniz.) Hareketinizin sonunda GM Sessizce İlerleme testinizi gizlice atar ve sonucu hareketinizin başında kendilerinden Gizli veya Konumu Saptanmamış olduğunuz her yaratığın Dikkat ZD'si ile karşılaştırır. Deparınız boyunca yaratığa karşı siperiniz veya büyük siperiniz varsa Gizlilik testinize siperden gelen +2 durumsal bonusnu (veya büyük siperden +4) kazanırsınız. Hareket ettiğiniz için Siper Almaktan gelen bonus artışı geçerli olmaz. Hareketinizin sonunda bir yaratıktan ne Gizlenmiş durumdaysanız ne de ona karşı siperiniz veya büyük siperiniz varsa o yaratığa karşı zar atamazsınız. Böyle bir yaratık tarafından otomatik olarak gözlemlenen hâle gelirsiniz. Gizlenmek, Sessizce İlerlemek veya Adım atmak dışında herhangi bir şey yaptığınız anda gözlemlenen hâle gelirsiniz. Bir yaratığa Vuruş Yapmayı denerseniz yaratık bu saldırıya karşı Savunmasız kalır ve ardından gözlemlenen hâle gelirsiniz. Başka bir şey yaparsanız GM aksi yönde karar vermedikçe tam hareket etmeden önce gözlemlenen hâle gelirsiniz. GM fark edilmeden özellikle göze çarpmayan bir eylem gerçekleştirmenize izin verebilir ve bu muhtemelen başka bir Gizlilik testi gerektirebilir. Konuşursanız veya kasten yüksek bir ses çıkarırsanız konumu saptanmamış olmak yerine gizli hâle gelirsiniz. Bir yaratık Ara eylemini kullanır ve bunun sonucunda ona karşı gizli hâle gelirseniz o yaratık tarafından yeniden konumu saptanmamış olmak istiyorsanız Sessizce İlerlemelisiniz.
+
+  success: Hareketiniz sırasında yaratık tarafından tespit edilmezsiniz ve hareketin sonunda da yaratık tarafından konumu saptanmamış olarak kalırsınız.
+  failure: Ele verici bir ses veya başka bir işaret yerinizi belli eder, ancak yine de görünmez kalırsınız. Hareketiniz boyunca yaratıktan gizli kalırsınız ve öyle kalmaya devam edersiniz.
+  criticalFailure: "Görülürsünüz! Hareketiniz boyunca yaratık tarafından gözlemlenirsiniz ve öyle kalmaya devam edersiniz. Görünmez iseniz ve yaratıktan gizli idiyseniz gözlemlenmek yerine hareketiniz boyunca gizli kalırsınız ve öyle kalmaya devam edersiniz."
+
+omen://action/squeeze?source=paizo-pathfinder-player-core:
+  name: Dar Yerden Geç
+  description: >
+    Güçlükle sığabileceğiniz kadar küçük bir alandan geçmek için vücudunuzu bükersiniz. Bu eylem son derece dar alanlar içindir; birçok dar alan, bir test yapmadan daha hızlı hareket edebileceğiniz zorlu arazidir. Örnek Dar Yerden Geçme Görevleri
+     • Eğitimli omuzlarınızın zar zor sığdığı alan
+     • Usta başınızın zar zor sığdığı alan
+
+  criticalSuccess: Dar yerden her 10 fitlik sıkışarak geçiş başına 1 dakikada geçersiniz.
+  success: Her 5 fit başına 1 dakikada sıkışarak geçersiniz.
+  criticalFailure: Dar alanda sıkışıp kalırsınız. Sıkışmış durumdayken aynı ZD'de başka bir Akrobasi testi denemek için 1 dakika harcayabilirsiniz. Bu testteki kritik başarısızlık dışındaki herhangi bir sonuç sıkışıklıktan kurtulmanızı sağlar.
+
+omen://action/stand?source=paizo-pathfinder-player-core:
+  name: Ayağa Kalk
+  description: Yüzüstü durumundan ayağa kalkarsınız.
+
+omen://action/steal?source=paizo-pathfinder-player-core:
+  name: Çal
+  description: >
+    Fark edilmeden başka bir yaratıktan küçük bir nesneyi almaya çalışırsınız. Tipik olarak yalnızca ihmal edilebilir Bulk değerindeki bir nesneyi Çalabilirsiniz, bir eliniz boş olmalıdır ve nesneye sahip olan yaratık çatışmadaysa veya tetikteyse otomatik olarak başarısız olursunuz. Nesneyi başarıyla Çalıp Çalmadığınızı belirlemek için bir Hırsızlık testi deneyin. ZD genellikle nesneyi üzerinde taşıyan yaratığın Dikkat ZD'sidir. Üzerinde taşınan ancak sıkı korunmayan bir nesneyi çalmak en kolay olanıdır (madeni paralarla dolu gevşekçe taşınan bir kese veya böyle bir kesenin içindeki bir nesne gibi). Nesne korunuyorsa veya nesnenin niteliği çalınmasını zorlaştırıyorsa (büyük bir çantadaki çok küçük bir eşya veya diğer belgelerle karışmış bir parşömen tabakası gibi) GM ZD'yi artırabilir. Örneğin nesne bir cepteyse, bir yaratığın elinde tutuluyorsa veya benzer şekilde korunuyorsa ZD tipik olarak 5 daha yüksektir. Hırsızlık testi sonucunuzu nesneyi üzerinde taşıyan kişi dışındaki gözlemcilerin Dikkat ZD'leri ile de karşılaştırmanız gerekebilir. GM dikkati dağılmış gözlemcilerin ZD'lerine bir durumsal ceza uygulayabilir.
+
+  success: Taşıyan kişi fark etmeden eşyayı çalarsınız veya bir gözlemci eşyayı aldığınızı ya da almaya çalıştığınızı görmez.
+  failure: Eşyayı siz alamadan taşıyıcısı girişiminizi fark eder veya bir gözlemci eşyayı aldığınızı ya da almaya çalıştığınızı görür. GM hırsızlığınızı fark eden herhangi bir yaratığın vereceği tepkiyi belirler.
+
+omen://action/step?source=paizo-pathfinder-player-core:
+  name: Adım
+  description: >
+    Dikkatli bir şekilde 5 fit hareket edersiniz. Çoğu hareket eyleminin aksine, Adım atmak Reaktif Vuruş gibi hareket eylemleriyle ya da bir kareden çıkıp girerken tetiklenen reaksiyonları tetiklemez. Zorlu araziye Adım atamazsınız ve kara hızınız dışındaki bir hız türüyle Adım kullanamazsınız.
+
+  requirements: Hareket hızınız en az 10 fit olmalıdır.
+
+omen://action/stitching-strike?source=paizo-pathfinder-player-core:
+  name: Dikiş Vuruşu
+  description: "Etki: Yoldaşınız çözülerek 30 fit içindeki bir düşmanı saran ve büyü ZD'nize karşı bir reflex|basic kurtarmasıyla (6+max(0,(ceil((@actor.level -8)/2)*2)))d6[slashing] hasar veren büyülü liflere dönüşür. Başarısızlık durumunda hedef ayrıca 1 tur boyunca veya büyü ZD'nize karşı Kurtulana kadar Hareketsiz Kılınmış durumuna düşer. Yoldaşınız daha sonra orijinal karesinde yeniden biçimlenir. 9. seviyede ve sonrasındaki her 2 seviyede bir, saldırı ilave 2d6 hasar verir."
+  frequency: 10 dakikada bir
+
+omen://action/stride?source=paizo-pathfinder-player-core:
+  name: Depar
+  description: Hareket hızınız kadar sahada ilerlersiniz.
+
+omen://action/strike?source=paizo-pathfinder-player-core:
+  name: Vuruş Yap
+  description: Kullandığınız bir silahla veya silahsız bir saldırıyla, (yakın dövüş saldırısı için) erişiminizdeki ya da (menzilli saldırı için) menzilinizdeki bir yaratığı hedef alarak saldırırsınız. Kullandığınız silahın veya silahsız saldırının saldırı bonusunu kullanarak bir saldırı zarı atın ve sonucu belirlemek için hedef yaratığın Savunma Değeri (SD) ile karşılaştırın.
+  criticalSuccess: Silaha veya silahsız saldırıya göre bir hasar zarı atarsınız ve iki kat hasar verirsiniz.
+  success: Silaha veya silahsız saldırıya göre bir hasar zarı atarsınız ve hasar verirsiniz.
+
+omen://action/subsist?source=paizo-pathfinder-player-core:
+  name: Barın
+  description: >
+    Bir yaşam standardı ile kendinize ve muhtemelen başkalarına da yiyecek ve barınak sağlamaya çalışırsınız. Bu işlem bir yerleşim yerindeyseniz genellikle Sosyoloji, vahşi doğadaysanız Hayatta Kalma becerisini kullanır. GM Geçimini Sağlamaya çalıştığınız yerin niteliğine göre ZD'yi belirler. Özellikle tuhaf ortamlarda Geçimini Sağlamak için asgari bir yetkinlik derecesine ihtiyacınız olabilir. Çoğu boş zaman etkinliğinin aksine 8 saat veya daha az keşif yaptıktan sonra Geçimini Sağlayabilirsiniz, ancak bunu yaparsanız -5 ceza alırsınız. Örnek Geçimini Sağlama Görevleri
+     • Eğitimsiz ılıman hava koşullarına sahip gür bir orman veya bol kaynaklara sahip büyük bir şehir
+     • Eğitimli tipik bir yamaç veya köy
+     • Uzman tipik dağlar veya içine kapanık mezra
+     • Usta tipik bir çöl veya kuşatma altındaki şehir
+     • Efsanevi çorak arazi veya hortlaklar şehri
+
+  criticalSuccess: Kendinize ve fazladan bir yaratığa kıt kanaat bir geçim sağlarsınız ya da kendi yiyecek ve barınağınızı iyileştirerek kendinize rahat bir yaşam standardı tanırsınız.
+  success: Size kıt kanaat bir geçim sağlayacak, doğa koşullarından temel düzeyde koruyan yeterli yiyecek ve barınak bulursunuz.
+  failure: "Doğa koşullarına maruz kalırsınız ve yeterli yiyecek alamazsınız; yeterli yiyecek ve barınak elde edene kadar Yorgun hâle gelirsiniz."
+  criticalFailure: "Belayı üzerinize çeker, yememeniz gereken bir şey yer veya durumunuzu başka bir şekilde kötüleştirirsiniz. 1 hafta boyunca Geçimini Sağlama testlerine -2 durumsal ceza alırsınız. Hiç yiyecek bulamazsınız; depolanmış yiyeceğiniz yoksa başarısız olmaya devam ederseniz açlıktan veya susuzluktan ölme tehlikesiyle karşı karşıya kalırsınız."
+
+omen://action/sustain-an-effect?source=paizo-pathfinder-player-core:
+  name: Etkiyi Sürdür
+  description: Yarı hızda hareket ederken sürdürülen süreye sahip bir etkiyi Sürdürürsünüz. Bu tür etkilerin çoğu 10 dakika boyunca sürdürülebilir, ancak bazıları farklı bir süre boyunca sürdürülebileceğini belirtir. Ruhani Teçhizat gibi karmaşık kararlar almayı gerektiren bir etkiyi sürdürmek, GM tarafından belirlendiği üzere sizi Yorgun kılabilir.
+
+omen://action/sustain?source=paizo-pathfinder-player-core:
+  name: Sürdür
+  description: >
+    Sürdürülen süreye sahip veya Sürdürdüğünüzde özel bir fayda listeleyen etkilerinizden birini seçin. Bu tür etkilerin çoğu büyülerden veya büyülü eşya etkinleştirmelerinden gelir. Etkinin sürdürülen bir süresi varsa süresi bir sonraki sıranızın sonuna kadar uzar. (Aynı turda birden fazla kez Sürdürmek süreyi sonraki turlara uzatmaz.) Bir yetenek sürdürülebiliyor ancak ne kadar süreyle olduğu belirtilmiyorsa 10 dakikaya kadar sürdürülebilir. Bir etki, onu Sürdürdüğünüzde ortaya çıkan ek bir fayda listeleyebilir ve bu durum sürdürülen süreye sahip olmayan etkilerde bile görülebilir. Etki hem özel bir faydaya hem de sürdürülen bir süreye sahipse Sürdür eyleminiz süreyi uzatmanın yanı sıra özel faydayı da sağlar. Sürdür eyleminiz kesintiye uğrarsa yetenek sona erer.
+
+
+omen://action/swim?source=paizo-pathfinder-player-core:
+  name: Yüzme
+  description: >
+    Su içinde en fazla 10 fitlik bir mesafe hareket etmek için bir Atletizm testi denersiniz. GM, suyun dalgalanmasına veya tehlikesine göre ZD'yi belirler; durgun suyun çoğu örneğinde otomatik bir kritik başarı elde edersiniz. Kara Hızınız 40 fit veya daha yüksekse 20 fitin üzerindeki her 20 fitlik Hız için mümkün olan maksimum mesafeyi 5 fit artırın. Sıranızı suda bitirirseniz ve o sırada bir Yüzme eyleminde başarılı olamadıysanız GM tarafından belirlendiği üzere 10 fit batarsınız veya akıntıyla sürüklenirsiniz. Sıranızdaki son eyleminiz suya girmek idiyse bu kural geçerli değildir. Örnek Yüzme Görevleri Eğitimsiz göl veya diğer durgun sular Eğitimli nehir gibi akan sular Uzman hızla akan nehir Usta fırtınalı deniz Efsanevi girdap, şelale
+
+  criticalSuccess: Maksimum mesafeyi 5 fit artırarak su içinde hareket edersiniz.
+  success: Su içinde hareket edersiniz.
+  criticalFailure: Hiç ilerleme kaydedemezsiniz. Nefesinizi tutuyorsanız 1 turluk hava kaybedersiniz.
+
+omen://action/take-cover?source=paizo-pathfinder-player-core:
+  name: Siper Al
+  description: >
+    Kendinizi korumak için siperin arkasına gizlenir veya yere kapanırsınız. Standart siperinizi büyük sipere dönüştürürsünüz (Savunma Değeri, Refleks kurtarmaları ve Gizlilik zarlarına +4 bonus). Daha önce siperiniz yoksa standart siper kazanırsınız (+2 bonus).
+
+  requirements: Bir siperin yakınındasınızdır veya yüzüstü durumdasınızdır.
+
+omen://action/track?source=paizo-pathfinder-player-core:
+  name: İz Sür
+  description: >
+    Seyahat Hızı kurallarını kullanarak seyahat Hızınızın yarısına kadar hareket ederek izleri takip edersiniz. İz Sür testindeki başarılı bir testin ardından ek testler denemeden Hızınızın yarısıyla 1 saate kadar izleri takip etmeye devam edebilirsiniz. Bazı durumlarda bir karşılaşmada İz Sürebilirsiniz. Bu durumda İz Sür tek bir eylemdir ve exploration özelliğine sahip değildir, ancak gergin bir durumda olduğunuz için daha sık zar atmanız gerekebilir. Bu testi ne sıklıkta denemeniz gerektiğini GM belirler. İz Sürmeye başladığınızda, iz sürmeye devam ettiğiniz her saatte bir ve izin geçtiği hatta önemli bir değişiklik olduğunda Hayatta Kalma testinizi denersiniz. GM izin tazeliğine, hava durumuna ve zemin türüne bağlı olarak bu testlerin ZD'lerini belirler. Örnek İz Sürme Görevleri
+     • Eğitimsiz yolu takip eden büyük bir ordunun izi
+     • Eğitimli ovalarda azgın bir ayının nispeten taze izleri
+     • Uzman bir ormanda çevik bir panterin izleri, yağmurla belirsizleşmiş izler
+     • Usta kış karıyla belirsizleşmiş izler, bir farenin veya daha küçük bir yaratığın izleri, çıplak kaya gibi iz tutmayan yüzeylerde bırakılan izler
+     • Efsanevi rüzgarlı bir çölün kumlarındaki eski izler, büyük bir tipi veya kasırgayla belirsizleşmiş izler
+
+  success: İzi bulursunuz veya zaten takip ettiğiniz izi takip etmeye devam edersiniz.
+  failure: İzi kaybedersiniz ancak 1 saatlik bir gecikmenin ardından tekrar deneyebilirsiniz.
+  criticalFailure: İzi kaybedersiniz ve 24 saat boyunca tekrar deneyemezsiniz.
+
+omen://action/treat-disease?source=paizo-pathfinder-player-core:
+  name: Hastalığı Tedavi Et
+  description: Hastalıklı bir yaratığın bakımı için en az 8 saat harcarsınız. Hastalığın ZD'sine karşı bir Tıp testi deneyin. Bir yaratık için Hastalık Tedavi Etmeyi denedikten sonra o yaratığın hastalığa karşı bir sonraki kurtarıştan sonrasına kadar tekrar deneyemezsiniz.
+  requirements: Bir Şifacı Alet Takımı takıyor veya tutuyor olmalısınız
+  criticalSuccess: Yaratığa hastalığa karşı bir sonraki kurtarış için +4 durumsal bonus sağlarsınız.
+  success: Yaratığa hastalığa karşı bir sonraki kurtarış için +2 durumsal bonus sağlarsınız.
+  criticalFailure: "Çabalarınız yaratığın hastalığa karşı bir sonraki kurtarışta −2 durumsal ceza almasına neden olur."
+
+omen://action/treat-poison?source=paizo-pathfinder-player-core:
+  name: Zehirlenmeyi Tedavi Et
+  description: Zehirin yayılmasını önlemek için bir hastayı tedavi edersiniz. Zehirin ZD'sine karşı bir Tıp testi deneyin. Bir yaratık için Zehir Tedavi Etmeyi denedikten sonra o yaratığın zehire karşı bir sonraki kurtarışı denemesinden sonrasına kadar tekrar deneyemezsiniz.
+  requirements: Bir Şifacı Alet Takımı takıyor veya tutuyor olmalısınız
+  criticalSuccess: Yaratığa zehire karşı bir sonraki kurtarış için +4 durumsal bonus sağlarsınız.
+  success: Yaratığa zehire karşı bir sonraki kurtarış için +2 durumsal bonus sağlarsınız.
+  criticalFailure: "Çabalarınız yaratığın zehire karşı bir sonraki kurtarışta −2 durumsal ceza almasına neden olur."
+
+omen://action/treat-wounds?source=paizo-pathfinder-player-core:
+  name: Yaraları Tedavi Et
+  description: >
+    Yaralı bir canlı yaratığı (isterseniz kendinizi hedef alarak) tedavi etmek için 10 dakika harcarsınız. Hedef ardından 1 saat boyunca Yaraları Tedavi Et eylemlerine karşı geçici olarak bağışık hâle gelir, ancak bu süre tedaviye harcadığınız zamanla çakışır (böylece bir hasta 70 dakikada bir değil, saatte bir tedavi edilebilir).
+
+    Tıp testi ZD'si genellikle 15'tir; ancak GM, dışarıda fırtınada bir hastayı tedavi etmek veya büyülü biçimde lanetlenmiş yaraları tedavi etmek gibi koşullara bağlı olarak bunu ayarlayabilir. Tıp konusunda uzmansanız, geri kazanılan Can Puanını 10 artırmak için ZD 20 bir test deneyebilirsiniz; Tıp ustasıysanız, geri kazanılan Can Puanını 30 artırmak için ZD 30 bir test deneyebilirsiniz; ve efsaneviyseniz, geri kazanılan Can Puanını 50 artırmak için ZD 40 bir test deneyebilirsiniz. Kritik başarısızlıkta verilen hasar aynı kalır.
+
+    Testinizde başarılı olursanız, ek iyileşme sağlamak için hedefi tedavi etmeye devam edebilirsiniz. Toplam 1 saat boyunca tedavi ederseniz, Yaraları Tedavi Et eyleminden geri kazandığı Can Puanını ikiye katlarsınız.
+
+    Tıp testinizin sonucu hedefin ne kadar Can Puanı geri kazanacağını belirler.
+  requirements: Üzerinizde veya elinizde bir Şifacı Alet Takımı bulunmalıdır.
+  criticalSuccess: "Hedef 4d8[healing] Can Puanı geri kazanır ve Yaralı durumunu kaybeder."
+  success: "Hedef 2d8[healing] Can Puanı geri kazanır ve Yaralı durumunu kaybeder."
+  criticalFailure: "Hedef 1d8[untyped] hasar alır."
+
+omen://action/trip?source=paizo-pathfinder-player-core:
+  name: Çelme Tak
+  description: Bir yaratığı yere düşürmeye çalışırsınız. Hedefin Refleks ZD'sine karşı bir Atletizm testi deneyin.
+  requirements: En az bir eliniz boş olmalıdır. Hedefiniz sizden bir boyuttan daha büyük olamaz.
+  criticalSuccess: "Hedef düşer, Yüzüstü yere serilir ve 1d6[bludgeoning] hasar alır."
+  success: Hedef düşer ve Yüzüstü yere serilir.
+  criticalFailure: Dengenizi kaybeder, düşer ve Yüzüstü yere serilirsiniz.
+
+omen://action/true-shapeshift?source=paizo-pathfinder-player-core:
+  name: Gerçek Şekil Değiştirme
+  description: "Etki: Ehlileşmemiş form listenizdeki başka bir biçime dönüşürsünüz. Bu biçimin süresi daha önce bulunduğunuz biçimden farklıysa kalan sürenizi belirlemek için daha kısa olan süreyi kullanın."
+  requirements: Ehlileşmemiş Form büyüsünün etkisi altında olmalısınız
+
+omen://action/tumble-through?source=paizo-pathfinder-player-core:
+  name: Sıyrılıp Geç
+  description: Hızınız kadar Depar atarsınız. Bu hareket sırasında bir düşmanın alanının içinden geçmeyi deneyebilirsiniz. Alanına girmeye çalıştığınız anda düşmanın Refleks ZD'sine karşı bir Akrobasi testi deneyin. Uygun ortamda Depar yerine Tırmanma, Uçma, Yüzme veya başka bir eylem kullanarak Sıyrılıp Geçebilirsiniz.
+  success: Düşmanın alanındaki karelere zorlu arazi muamelesi yaparak (her 5 fit, 10 fitlik hareket harcar) düşmanın alanının içinden hareket edersiniz. Alanının tamamen dışına çıkmak için yeterli Hızınız yoksa başarısızlıkla aynı etkiyi alırsınız.
+  failure: Hareketiniz sona erer ve başladığınız kareden çıkmışsınız gibi reaksiyonları tetiklersiniz.
+
+omen://action/verdant-rest?source=paizo-pathfinder-player-core:
+  name: Yeşil Dinlenme
+  description: Bir ağaca veya yaratık olmayan başka bir bitkiye dönüşürsünüz. Bu, SD'nizin 30 olması dışında bir bitkiye dönüşmek için Bitkilerle Bir kullanma etkisine sahiptir. Geri dönüşmek için bu etkiyi Sonlandırabilirsiniz. Doğal güneş ışığında bu formda 10 dakika dinlenirseniz maksimum Can Puanınızın yarısını toparlarsınız. Günlük dinlenmenizi bu formda yaparsanız dinlenme sizi maksimum Can Puanına ulaştırır ve kalıcı olmayan tüm Takatsiz, Halsiz, Hantal ve Zihni Bulanmış durumlarının yanı sıra 19. seviye veya daha düşük tüm zehirleri ve hastalıkları ortadan kaldırır.
