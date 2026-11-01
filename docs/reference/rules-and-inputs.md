@@ -65,6 +65,9 @@ inputs:
 - **Sheet values.** An input whose type is a sheet value (`maximum`, `itemLevel`, a resistance's `value`) takes a
   bare expression, which starts with `(` and ends with `)`, or a bare `$` path. Numbers are written
   as numbers.
+- **Prerequisites name a record by `has`.** `has: '@feat.aggressive-block'` is met when the character has that
+  record: a feat, a class feature, a heritage, an action or an identity record. A name never stands for a record
+  (`hasFeatWithName` and its kin are gone). A spell or an item is never "had", so a `has` on one is never met.
 - **Record inputs** are named by their role, not their type: `feat:`, `feature:`, `heritage:`, `spell:`, `item:`,
   `action:` (never `featId`), each taking an `@` reference.
 - **Ranks.** A proficiency rank is a word (`untrained`, `trained`, `expert`, `master` or `legendary`) under one input

@@ -7,13 +7,13 @@ traits:
 - druid
 prerequisites:
 - text: Untamed Form
-  hasResourceWithName: untamed form
+  has: '@feat.untamed-form'
 - text: Dragon Shape, Elemental Shape, Plant Shape, or Soaring Shape
   anyOf:
-  - hasResourceWithName: dragon shape
-  - hasResourceWithName: elemental shape
-  - hasResourceWithName: plant shape
-  - hasResourceWithName: soaring shape
+  - has: '@feat.dragon-shape'
+  - has: '@feat.elemental-shape'
+  - has: '@feat.plant-shape'
+  - has: '@feat.soaring-shape'
 action:
   count: reaction
   trigger: You take poison damage

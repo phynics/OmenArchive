@@ -8,11 +8,11 @@ traits:
 prerequisites:
 - text: animal companion, Pet, or Bonded Animal
   anyOf:
-  - hasResourceWithName: animal companion
-  - hasResourceWithName: pet
-  - hasResourceWithName: bonded animal
+  - has: '@feat.animal-companion'
+  - has: '@feat.pet'
+  - has: '@feat.bonded-animal'
 - text: Orc Ferocity
-  hasResourceWithName: orc ferocity
+  has: '@feat.orc-ferocity'
 description: Since ancient times, the mightiest orc beast tamers would draw out the
   true fighting spirit of their companion beasts by feeding the creatures a draft
   incorporating the orc's own blood. All animal companions, pets, familiars, and bonded

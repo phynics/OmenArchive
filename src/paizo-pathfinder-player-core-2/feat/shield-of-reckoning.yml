@@ -7,7 +7,7 @@ traits:
 - champion
 prerequisites:
 - text: blessed shield
-  hasFeatureWithName: blessed shield
+  has: '@class.champion.blessings.blessed-shield'
 - text: champion's reaction
   anyOf:
   - hasChoice:
@@ -32,7 +32,7 @@ prerequisites:
       name: $.champion.cause
       equals: {type: core/feature-id, value: '@class.champion.causes.obedience'}
 - text: Shield Warden
-  hasResourceWithName: shield warden
+  has: '@feat.shield-warden?source=paizo-pathfinder-player-core'
 action:
   count: reaction
   frequency: once per round

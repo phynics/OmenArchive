@@ -9,7 +9,7 @@ traits:
 - spellshape
 prerequisites:
 - text: Reach Spell or Widen Spell
-  anyOf: [{hasResourceWithName: reach spell}, {hasResourceWithName: widen spell}]
+  anyOf: [{has: '@feat.reach-spell?source=paizo-pathfinder-player-core'}, {has: '@feat.widen-spell?source=paizo-pathfinder-player-core'}]
 action:
   count: free_action
 description: Inspiration lets you surpass your preconceptions of your spells' limits.

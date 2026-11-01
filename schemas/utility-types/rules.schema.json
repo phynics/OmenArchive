@@ -413,39 +413,14 @@
         {
           "type": "object",
           "properties": {
-            "hasFeatWithName": {
+            "has": {
               "type": "string",
+              "description": "A reference to the record the character must have, such as @feat.power-attack",
               "minLength": 1
             }
           },
           "required": [
-            "hasFeatWithName"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "hasFeatureWithName": {
-              "type": "string",
-              "minLength": 1
-            }
-          },
-          "required": [
-            "hasFeatureWithName"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "hasResourceWithName": {
-              "type": "string",
-              "minLength": 1
-            }
-          },
-          "required": [
-            "hasResourceWithName"
+            "has"
           ],
           "additionalProperties": false
         },
@@ -1000,8 +975,9 @@
         {
           "type": "object",
           "properties": {
-            "hasFeatWithName": {
+            "has": {
               "type": "string",
+              "description": "A reference to the record the character must have, such as @feat.power-attack",
               "minLength": 1
             },
             "text": {
@@ -1023,67 +999,7 @@
           },
           "required": [
             "text",
-            "hasFeatWithName"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "hasFeatureWithName": {
-              "type": "string",
-              "minLength": 1
-            },
-            "text": {
-              "type": "string",
-              "minLength": 1
-            },
-            "diagnostic": {
-              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
-              "oneOf": [
-                {
-                  "const": true
-                },
-                {
-                  "type": "string",
-                  "minLength": 1
-                }
-              ]
-            }
-          },
-          "required": [
-            "text",
-            "hasFeatureWithName"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "properties": {
-            "hasResourceWithName": {
-              "type": "string",
-              "minLength": 1
-            },
-            "text": {
-              "type": "string",
-              "minLength": 1
-            },
-            "diagnostic": {
-              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
-              "oneOf": [
-                {
-                  "const": true
-                },
-                {
-                  "type": "string",
-                  "minLength": 1
-                }
-              ]
-            }
-          },
-          "required": [
-            "text",
-            "hasResourceWithName"
+            "has"
           ],
           "additionalProperties": false
         },

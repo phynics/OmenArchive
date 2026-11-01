@@ -9,7 +9,7 @@ traits:
 - social
 prerequisites:
 - text: animal companion or familiar
-  anyOf: [{hasResourceWithName: animal companion}, {hasResourceWithName: familiar}]
+  anyOf: [{has: '@feat.animal-companion?source=paizo-pathfinder-player-core'}, {has: '@feat.familiar?source=paizo-pathfinder-player-core'}]
 - text: expert in Deception
   hasSkillProficiency: {skill: deception, proficiency: expert}
 - text: Vigilante Dedication

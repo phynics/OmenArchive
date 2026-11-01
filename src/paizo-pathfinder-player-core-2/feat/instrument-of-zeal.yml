@@ -10,7 +10,7 @@ prerequisites:
     that grants an ally resistance to an enemy's damage (including the grandeur, justice,
     liberation, and redemption causes)
   anyOf:
-  - hasFeatWithName: blessed counterstrike
+  - has: '@feat.blessed-counterstrike'
   - hasChoice:
       name: $.champion.cause
       equals: {type: core/feature-id, value: '@class.champion.causes.justice'}

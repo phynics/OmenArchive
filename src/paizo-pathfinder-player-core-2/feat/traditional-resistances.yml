@@ -8,10 +8,10 @@ traits:
 prerequisites:
 - text: Arcane Dragonblood, Divine Dragonblood, Occult Dragonblood, or Primal Dragonblood
   anyOf:
-  - hasResourceWithName: arcane dragonblood
-  - hasResourceWithName: divine dragonblood
-  - hasResourceWithName: occult dragonblood
-  - hasResourceWithName: primal dragonblood
+  - has: '@feat.arcane-dragonblood'
+  - has: '@feat.divine-dragonblood'
+  - has: '@feat.occult-dragonblood'
+  - has: '@feat.primal-dragonblood'
 description: Due to your blood, you have some resistance to certain types of magic.
   You gain a +1 status bonus to AC and saves against spells and other magical effects
   from the same tradition as your lineage. This bonus increases to +2 against sleep
