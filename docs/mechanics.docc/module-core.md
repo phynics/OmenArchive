@@ -45,7 +45,6 @@ Character lists the module declares for the engine. Rules add to and read them l
 | `list-item` | 1 | `{"kind":"any"}` |
 | `list-path` | 1 | `{"kind":"string"}` |
 | `list-value-type` | 1 | `{"kind":"any"}` |
-| `placeholder` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"name":{"kind":"string"},"id":{"kind":"string"}},"required":[]}` |
 | `proficiency-rank` | 1 | `{"values":[0,2,4,6,8],"kind":"enum"}` |
 | `roll-description` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"description":{"items":{"required":[],"additionalProperties":true,"kind":"object","properties":{}},"kind":"array"}},"required":[]}` |
 | `roll-modifier` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"numeric":{"properties":{"type":{"values":["item","status","circumstance","untyped"],"kind":"enum"},"amount":{"kind":"integer"},"applicability":{"required":["kind"],"kind":"object","additionalProperties":false,"properties":{"kind":{"values":["always","situational"],"kind":"enum"},"description":{"kind":"string"}}}},"kind":"object","required":["amount","applicability","type"],"additionalProperties":false},"id":{"kind":"string"},"description":{"kind":"string"},"targetRoll":{"properties":{},"kind":"object","required":[],"additionalProperties":true}},"required":[]}` |
@@ -78,12 +77,10 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-heritage>
 - <doc:core-add-hit-points-2>
 - <doc:core-add-item-3>
-- <doc:core-add-language>
 - <doc:core-add-lore-skill-increase-2>
 - <doc:core-add-membership-2>
 - <doc:core-add-modifier>
 - <doc:core-add-note>
-- <doc:core-add-placeholder>
 - <doc:core-add-resistance-2>
 - <doc:core-add-resource-pool>
 - <doc:core-add-saving-throw-2>

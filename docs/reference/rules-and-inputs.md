@@ -17,13 +17,13 @@ A rule contains the following fields in order:
 
 ```yaml
 rules:
-  - key: add-language-draconic
-    effect: core/add-language
+  - key: add-trait-undead
+    effect: core/add-trait
     level: 3                 # Omitted when 1
     prerequisites:
       - hasClassTrait: true
     inputs:
-      languageName: Draconic
+      trait: undead
 ```
 
 - **`key`**: Unique kebab-case string within the record. A rule's identity UUID is deterministically derived from its enclosing record path and key: `uuid5("<record-path>#rule/<key>")`. Renaming a key constitutes creating a new rule.
