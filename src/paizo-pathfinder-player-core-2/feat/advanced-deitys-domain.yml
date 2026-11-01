@@ -36,7 +36,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: advanced-domain-spell
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: champion-focus-spells
-    spellId: $.champion.advanced-domains.advancedDomainSpell
+    spell: $.champion.advanced-domains.advancedDomainSpell

@@ -1,8 +1,8 @@
-# spellcasting/grant-spell
+# spellcasting/grant-spell@2
 
 Grants a specific spell to a spellcasting source with specified rank policy and casting frequency.
 
-Effect `grant-spell`, revision 1, from module `me.atkn.omen.pf2e.playercore-spellcasting`.
+Effect `grant-spell`, revision 2, from module `me.atkn.omen.pf2e.playercore-spellcasting`.
 
 ## Inputs
 
@@ -10,7 +10,7 @@ Effect `grant-spell`, revision 1, from module `me.atkn.omen.pf2e.playercore-spel
 |---|---|---|
 | `source` | `source-key` | yes |
 | `grantId` | `uuid` | yes |
-| `spellId` | `spell-id` | yes |
+| `spell` | `spell-id` | yes |
 | `rankPolicy` | `rank-policy` | yes |
 | `castFrequency` | `cast-frequency` | yes |
 
@@ -25,11 +25,11 @@ Used by 11 rules.
 Example, from `paizo-pathfinder-player-core/class/bard/features/composition-spells.yml`:
 
 ```yaml
-- key: grant-spell-1
-  effect: spellcasting/grant-spell
+- effect: spellcasting/grant-spell@2
   inputs:
-    source: bard-focus-spells
-    spellId: '@spell.courageous-anthem'
-    rankPolicy: cantrip
     castFrequency: atWill
+    rankPolicy: cantrip
+    source: bard-focus-spells
+    spell: '@spell.courageous-anthem'
+  key: grant-spell-1
 ```

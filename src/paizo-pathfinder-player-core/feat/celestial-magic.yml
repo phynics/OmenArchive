@@ -59,21 +59,21 @@ rules:
           - {name: humanoid form}
           - {name: everlight}
 - key: innate-spell-1
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: celestial-magic
     sourceName: Celestial Magic
-    spellId: {choice: $.feat.celestial-magic.spell-one}
+    spell: {choice: $.feat.celestial-magic.spell-one}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}
     castFrequency: {perDay: 1}
 - key: innate-spell-2
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: celestial-magic
     sourceName: Celestial Magic
-    spellId: {choice: $.feat.celestial-magic.spell-two}
+    spell: {choice: $.feat.celestial-magic.spell-two}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}

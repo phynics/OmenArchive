@@ -32,11 +32,11 @@ rules:
         - {level: 1}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-1
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 3
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-1}
+    spell: {choice: $.sorcerer.signature-spells.rank-1}
 - key: choice-2
   level: 3
   choice:
@@ -49,11 +49,11 @@ rules:
         - {level: 2}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-2
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 3
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-2}
+    spell: {choice: $.sorcerer.signature-spells.rank-2}
 - key: choice-3
   level: 5
   choice:
@@ -66,11 +66,11 @@ rules:
         - {level: 3}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-3
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 5
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-3}
+    spell: {choice: $.sorcerer.signature-spells.rank-3}
 - key: choice-4
   level: 7
   choice:
@@ -83,11 +83,11 @@ rules:
         - {level: 4}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-4
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 7
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-4}
+    spell: {choice: $.sorcerer.signature-spells.rank-4}
 - key: choice-5
   level: 9
   choice:
@@ -100,11 +100,11 @@ rules:
         - {level: 5}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-5
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 9
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-5}
+    spell: {choice: $.sorcerer.signature-spells.rank-5}
 - key: choice-6
   level: 11
   choice:
@@ -117,11 +117,11 @@ rules:
         - {level: 6}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-6
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 11
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-6}
+    spell: {choice: $.sorcerer.signature-spells.rank-6}
 - key: choice-7
   level: 13
   choice:
@@ -134,11 +134,11 @@ rules:
         - {level: 7}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-7
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 13
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-7}
+    spell: {choice: $.sorcerer.signature-spells.rank-7}
 - key: choice-8
   level: 15
   choice:
@@ -151,11 +151,11 @@ rules:
         - {level: 8}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-8
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 15
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-8}
+    spell: {choice: $.sorcerer.signature-spells.rank-8}
 - key: choice-9
   level: 17
   choice:
@@ -168,11 +168,11 @@ rules:
         - {level: 9}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-9
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 17
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-9}
+    spell: {choice: $.sorcerer.signature-spells.rank-9}
 - key: choice-10
   level: 19
   choice:
@@ -185,8 +185,8 @@ rules:
         - {level: 10}
         - {knownBySource: sorcerer-spellcasting}
 - key: mark-signature-spell-10
-  effect: spellcasting/mark-signature-spell
+  effect: spellcasting/mark-signature-spell@2
   level: 19
   inputs:
     source: sorcerer-spellcasting
-    spellId: {choice: $.sorcerer.signature-spells.rank-10}
+    spell: {choice: $.sorcerer.signature-spells.rank-10}

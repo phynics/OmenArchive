@@ -26,6 +26,6 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.rogue.rackets'}}
 - key: choice-set-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: {choice: $.rogue.racket}
+    feature: {choice: $.rogue.racket}

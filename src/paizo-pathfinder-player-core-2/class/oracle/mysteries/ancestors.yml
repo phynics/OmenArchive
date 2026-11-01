@@ -47,18 +47,18 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.ancestral-touch'
+    spell: '@spell.ancestral-touch'
 - key: add-feature-by-id-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: '@class.oracle.curses.curse-of-ancestral-meddling'
+    feature: '@class.oracle.curses.curse-of-ancestral-meddling'
 - key: add-feat-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.whispers-of-weakness'
+    feat: '@feat.whispers-of-weakness'
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:

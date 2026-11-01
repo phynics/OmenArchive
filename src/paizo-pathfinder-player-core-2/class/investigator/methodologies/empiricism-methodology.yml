@@ -15,13 +15,13 @@ mechanicsScope: builder
 foundryID: g3mNzNphtVxyR9Xr
 rules:
 - key: grant-item-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.thats-odd'
+    feat: '@feat.thats-odd'
 - key: grant-item-2
-  effect: core/add-action
+  effect: core/add-action@2
   inputs:
-    actionId: '@action.expeditious-inspection'
+    action: '@action.expeditious-inspection'
 - key: choice-investigator-empiricism-skill
   choice:
     name: $.investigator.empiricism.skill

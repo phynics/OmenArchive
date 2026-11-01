@@ -52,7 +52,7 @@ rules:
         - {trait: classTrait-monk}
         - {level: 3}
 - key: grant-qi-spell
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: monk-focus-spells
-    spellId: {choice: $.feat.advanced-qi-spells.spell}
+    spell: {choice: $.feat.advanced-qi-spells.spell}

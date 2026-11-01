@@ -31,16 +31,16 @@ rules:
     tradition: primal
     attribute: wisdom
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: druid-focus-spells
-    spellId: '@spell.cornucopia'
+    spell: '@spell.cornucopia'
 - key: add-skill-increase-1
   effect: core/add-skill-increase@2
   inputs:
     skill: diplomacy
     rank: trained
 - key: add-feat-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.leshy-familiar'
+    feat: '@feat.leshy-familiar'

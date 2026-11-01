@@ -89,7 +89,7 @@ rules:
     - {key: lay-on-hands, value: '@spell.lay-on-hands'}
     - {key: touch-of-the-void, value: '@spell.touch-of-the-void'}
 - key: grant-devotion-spell
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: champion-focus-spells
-    spellId: {choice: $.champion.devotion-spell}
+    spell: {choice: $.champion.devotion-spell}

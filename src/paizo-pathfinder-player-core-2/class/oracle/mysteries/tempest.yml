@@ -42,18 +42,18 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.tempest-touch'
+    spell: '@spell.tempest-touch'
 - key: add-feature-by-id-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: '@class.oracle.curses.curse-of-inclement-headwinds'
+    feature: '@class.oracle.curses.curse-of-inclement-headwinds'
 - key: add-feat-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.foretell-harm'
+    feat: '@feat.foretell-harm'
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:

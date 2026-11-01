@@ -86,14 +86,14 @@ rules:
     tradition: arcane
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.flurry-of-claws'
+    spell: '@spell.flurry-of-claws'
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -235,14 +235,14 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-2
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.flurry-of-claws'
+    spell: '@spell.flurry-of-claws'
 - key: add-known-spell-11
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -384,14 +384,14 @@ rules:
     tradition: occult
     attribute: charisma
 - key: grant-focus-spell-3
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.flurry-of-claws'
+    spell: '@spell.flurry-of-claws'
 - key: add-known-spell-21
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -533,14 +533,14 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-4
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.flurry-of-claws'
+    spell: '@spell.flurry-of-claws'
 - key: add-known-spell-31
   effect: spellcasting/add-known-spell
   prerequisites:

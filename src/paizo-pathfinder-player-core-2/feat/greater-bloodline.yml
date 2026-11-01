@@ -65,7 +65,7 @@ rules:
     tradition: occult
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -73,7 +73,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.unusual-anatomy'
+    spell: '@spell.unusual-anatomy'
 - key: configure-source-2
   effect: spellcasting/configure-source
   level: 10
@@ -88,7 +88,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-2
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -96,7 +96,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.celestial-brand'
+    spell: '@spell.celestial-brand'
 - key: configure-source-3
   effect: spellcasting/configure-source
   level: 10
@@ -111,7 +111,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-3
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -119,7 +119,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.chthonian-wrath'
+    spell: '@spell.chthonian-wrath'
 - key: configure-source-4
   effect: spellcasting/configure-source
   level: 10
@@ -134,7 +134,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-4
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -142,7 +142,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.hellfire-plume'
+    spell: '@spell.hellfire-plume'
 - key: configure-source-5
   effect: spellcasting/configure-source
   level: 10
@@ -160,7 +160,7 @@ rules:
     tradition: arcane
     attribute: charisma
 - key: grant-focus-spell-5
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -171,7 +171,7 @@ rules:
       equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.dragon-wings'
+    spell: '@spell.dragon-wings'
 - key: configure-source-6
   effect: spellcasting/configure-source
   level: 10
@@ -189,7 +189,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-6
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -200,7 +200,7 @@ rules:
       equals: {type: core/string, value: divine}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.dragon-wings'
+    spell: '@spell.dragon-wings'
 - key: configure-source-7
   effect: spellcasting/configure-source
   level: 10
@@ -218,7 +218,7 @@ rules:
     tradition: occult
     attribute: charisma
 - key: grant-focus-spell-7
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -229,7 +229,7 @@ rules:
       equals: {type: core/string, value: occult}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.dragon-wings'
+    spell: '@spell.dragon-wings'
 - key: configure-source-8
   effect: spellcasting/configure-source
   level: 10
@@ -247,7 +247,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-8
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -258,7 +258,7 @@ rules:
       equals: {type: core/string, value: primal}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.dragon-wings'
+    spell: '@spell.dragon-wings'
 - key: configure-source-9
   effect: spellcasting/configure-source
   level: 10
@@ -276,7 +276,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-9
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -287,7 +287,7 @@ rules:
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-blast'
+    spell: '@spell.elemental-blast'
 - key: configure-source-10
   effect: spellcasting/configure-source
   level: 10
@@ -305,7 +305,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-10
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -316,7 +316,7 @@ rules:
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-blast'
+    spell: '@spell.elemental-blast'
 - key: configure-source-11
   effect: spellcasting/configure-source
   level: 10
@@ -334,7 +334,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-11
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -345,7 +345,7 @@ rules:
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-blast'
+    spell: '@spell.elemental-blast'
 - key: configure-source-12
   effect: spellcasting/configure-source
   level: 10
@@ -363,7 +363,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-12
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -374,7 +374,7 @@ rules:
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-blast'
+    spell: '@spell.elemental-blast'
 - key: configure-source-13
   effect: spellcasting/configure-source
   level: 10
@@ -392,7 +392,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-13
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -403,7 +403,7 @@ rules:
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-blast'
+    spell: '@spell.elemental-blast'
 - key: configure-source-14
   effect: spellcasting/configure-source
   level: 10
@@ -421,7 +421,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-14
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -432,7 +432,7 @@ rules:
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-blast'
+    spell: '@spell.elemental-blast'
 - key: configure-source-15
   effect: spellcasting/configure-source
   level: 10
@@ -447,7 +447,7 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-15
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -455,7 +455,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.fey-glamour'
+    spell: '@spell.fey-glamour'
 - key: configure-source-16
   effect: spellcasting/configure-source
   level: 10
@@ -470,7 +470,7 @@ rules:
     tradition: occult
     attribute: charisma
 - key: grant-focus-spell-16
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -478,7 +478,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.youre-mine'
+    spell: '@spell.youre-mine'
 - key: configure-source-17
   effect: spellcasting/configure-source
   level: 10
@@ -493,7 +493,7 @@ rules:
     tradition: arcane
     attribute: charisma
 - key: grant-focus-spell-17
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -501,7 +501,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.arcane-countermeasure'
+    spell: '@spell.arcane-countermeasure'
 - key: configure-source-18
   effect: spellcasting/configure-source
   level: 10
@@ -516,7 +516,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-18
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
   - hasChoice:
@@ -524,4 +524,4 @@ rules:
       equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.grasping-grave'
+    spell: '@spell.grasping-grave'

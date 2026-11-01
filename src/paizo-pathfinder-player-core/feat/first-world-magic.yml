@@ -25,11 +25,11 @@ rules:
         - {spell.category: cantrip}
         - {spell.tradition: primal}
 - key: grant-innate-spell-1
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: first-world-magic
     sourceName: First World Magic
-    spellId: {choice: $.feat.first-world-magic.cantrip}
+    spell: {choice: $.feat.first-world-magic.cantrip}
     tradition: primal
     attribute: charisma
     rankPolicy: cantrip

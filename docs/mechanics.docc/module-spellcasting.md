@@ -23,10 +23,10 @@ Rules refer to it with the alias `spellcasting`, declared in a publication's `me
 - <doc:spellcasting-add-spell-list>
 - <doc:spellcasting-allow-known-spells>
 - <doc:spellcasting-configure-source>
-- <doc:spellcasting-grant-focus-spell>
-- <doc:spellcasting-grant-innate-spell>
+- <doc:spellcasting-grant-focus-spell-2>
+- <doc:spellcasting-grant-innate-spell-2>
 - <doc:spellcasting-grant-slot>
-- <doc:spellcasting-grant-spell>
+- <doc:spellcasting-grant-spell-2>
 - <doc:spellcasting-increase-spell-proficiency-2>
-- <doc:spellcasting-mark-signature-spell>
+- <doc:spellcasting-mark-signature-spell-2>
 - <doc:spellcasting-modify-innate-sources>

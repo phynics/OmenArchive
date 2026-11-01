@@ -27,8 +27,8 @@ description: 'You have a knack for learning and sequestered yourself from the ou
 mechanicsScope: builder
 rules:
 - key: add-feat-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.assurance'
+    feat: '@feat.assurance'
     with:
       $.feat.assurance.skills: {from: [arcana, nature, occultism, religion]}

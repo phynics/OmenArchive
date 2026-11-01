@@ -23,6 +23,6 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.wizard.schools'}}
 - key: add-feature-by-id-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: {choice: $.wizard.school}
+    feature: {choice: $.wizard.school}

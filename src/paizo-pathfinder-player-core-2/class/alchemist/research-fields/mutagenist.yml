@@ -42,20 +42,20 @@ mechanicsScope: builder
 foundryID: tvdb1jkjl2bRZjSp
 rules:
 - key: grant-field-benefits-field-discovery-mutagenist
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   level: 5
   inputs:
-    featureId: '@class.alchemist.field-benefits.field-discovery-mutagenist'
+    feature: '@class.alchemist.field-benefits.field-discovery-mutagenist'
 - key: grant-field-benefits-advanced-vials-mutagenist
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   level: 11
   inputs:
-    featureId: '@class.alchemist.field-benefits.advanced-vials-mutagenist'
+    feature: '@class.alchemist.field-benefits.advanced-vials-mutagenist'
 - key: grant-field-benefits-greater-field-discovery-mutagenist
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   level: 13
   inputs:
-    featureId: '@class.alchemist.field-benefits.greater-field-discovery-mutagenist'
+    feature: '@class.alchemist.field-benefits.greater-field-discovery-mutagenist'
 - key: choice-alchemist-formulas-field
   choice:
     name: $.alchemist.formulas.field

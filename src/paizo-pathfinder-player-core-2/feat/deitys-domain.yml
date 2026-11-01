@@ -32,7 +32,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: domain-spell
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: champion-focus-spells
-    spellId: $.champion.domains.domainSpell
+    spell: $.champion.domains.domainSpell

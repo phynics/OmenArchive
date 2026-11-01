@@ -77,21 +77,21 @@ rules:
     type: spellcasting/spell-id
     records: {filter: {all: [{type: spell}, {maxLevel: 4}, {rarity: common}]}}
 - key: innate-spell-1
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: hag-magic
     sourceName: Hag Magic
-    spellId: {choice: $.feat.hag-magic.spell}
+    spell: {choice: $.feat.hag-magic.spell}
     tradition: occult
     attribute: charisma
     rankPolicy: {fixed: 4}
     castFrequency: {perDay: 1}
 - key: innate-spell-2
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: hag-magic
     sourceName: Hag Magic
-    spellId: {choice: $.feat.hag-magic.other-spell}
+    spell: {choice: $.feat.hag-magic.other-spell}
     tradition: occult
     attribute: charisma
     rankPolicy: {fixed: 4}

@@ -45,10 +45,10 @@ rules:
         - {trait: classTrait-ranger}
         - {level: 5}
 - key: grant-warden-spell
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: ranger-focus-spells
-    spellId: {choice: $.feat.peerless-warden.spell}
+    spell: {choice: $.feat.peerless-warden.spell}
 - key: warden-spell-proficiency
   effect: spellcasting/increase-spell-proficiency@2
   prerequisites:

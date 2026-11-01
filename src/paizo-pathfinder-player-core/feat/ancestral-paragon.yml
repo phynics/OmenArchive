@@ -24,6 +24,6 @@ rules:
         - {sharesAncestryTrait: true}
         - {not: {trait: lineage}}
 - key: grant-item-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: {choice: $.feat.ancestral-paragon.feat}
+    feat: {choice: $.feat.ancestral-paragon.feat}

@@ -48,7 +48,7 @@ rules:
     tradition: divine
     attribute: wisdom
 - key: domain-spell
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: cleric-focus-spells
-    spellId: $.cleric.domains.domainSpell
+    spell: $.cleric.domains.domainSpell

@@ -39,10 +39,10 @@ rules:
     tradition: divine
     attribute: intelligence
 - key: grant-spell-1
-  effect: spellcasting/grant-spell
+  effect: spellcasting/grant-spell@2
   inputs:
     source: witch-focus-spells
-    spellId: '@spell.stoke-the-heart'
+    spell: '@spell.stoke-the-heart'
     rankPolicy: cantrip
     castFrequency: atWill
 - key: add-known-spell-1
@@ -61,10 +61,10 @@ rules:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: witch-focus-spells
-    spellId: {choice: $.witch.patron.first-hex}
+    spell: {choice: $.witch.patron.first-hex}
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:

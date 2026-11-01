@@ -102,14 +102,14 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-toss'
+    spell: '@spell.elemental-toss'
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -251,14 +251,14 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-2
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: earth}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-toss'
+    spell: '@spell.elemental-toss'
 - key: add-known-spell-11
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -400,14 +400,14 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-3
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: fire}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-toss'
+    spell: '@spell.elemental-toss'
 - key: add-known-spell-21
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -549,14 +549,14 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-4
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: metal}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-toss'
+    spell: '@spell.elemental-toss'
 - key: add-known-spell-31
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -698,14 +698,14 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-5
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: water}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-toss'
+    spell: '@spell.elemental-toss'
 - key: add-known-spell-41
   effect: spellcasting/add-known-spell
   prerequisites:
@@ -847,14 +847,14 @@ rules:
     tradition: primal
     attribute: charisma
 - key: grant-focus-spell-6
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.elemental-toss'
+    spell: '@spell.elemental-toss'
 - key: add-known-spell-51
   effect: spellcasting/add-known-spell
   prerequisites:

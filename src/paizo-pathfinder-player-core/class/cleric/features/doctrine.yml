@@ -17,6 +17,6 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.cleric.doctrines'}}
 - key: add-feature-by-id-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: {choice: $.cleric.doctrine}
+    feature: {choice: $.cleric.doctrine}

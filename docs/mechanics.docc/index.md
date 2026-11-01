@@ -21,18 +21,18 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:spellcasting-add-spell-list>
 - <doc:spellcasting-allow-known-spells>
 - <doc:spellcasting-configure-source>
-- <doc:spellcasting-grant-focus-spell>
-- <doc:spellcasting-grant-innate-spell>
+- <doc:spellcasting-grant-focus-spell-2>
+- <doc:spellcasting-grant-innate-spell-2>
 - <doc:spellcasting-grant-slot>
-- <doc:spellcasting-grant-spell>
+- <doc:spellcasting-grant-spell-2>
 - <doc:spellcasting-increase-spell-proficiency-2>
-- <doc:spellcasting-mark-signature-spell>
+- <doc:spellcasting-mark-signature-spell-2>
 - <doc:spellcasting-modify-innate-sources>
 
 ### Module core
 
 - <doc:module-core>
-- <doc:core-add-action>
+- <doc:core-add-action-2>
 - <doc:core-add-armor-group-proficiency-3>
 - <doc:core-add-armor-proficiency-2>
 - <doc:core-add-assurance>
@@ -42,16 +42,16 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:core-add-chosen-weapon-proficiency-2>
 - <doc:core-add-class-dc-2>
 - <doc:core-add-crafting-ability>
-- <doc:core-add-feat-2>
+- <doc:core-add-feat-3>
 - <doc:core-add-feat-ancestry>
 - <doc:core-add-feature>
-- <doc:core-add-feature-by-id>
+- <doc:core-add-feature-by-id-2>
 - <doc:core-add-formulas>
-- <doc:core-add-heritage-by-id>
+- <doc:core-add-heritage-by-id-2>
 - <doc:core-add-hit-points>
 - <doc:core-add-hit-points-per-count>
 - <doc:core-add-hit-points-per-level>
-- <doc:core-add-item-2>
+- <doc:core-add-item-3>
 - <doc:core-add-language>
 - <doc:core-add-lore-skill-increase-2>
 - <doc:core-add-membership>

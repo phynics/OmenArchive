@@ -1,8 +1,8 @@
-# spellcasting/grant-innate-spell
+# spellcasting/grant-innate-spell@2
 
 Creates a dedicated innate spellcasting source and grants a specific innate spell to it.
 
-Effect `grant-innate-spell`, revision 1, from module `me.atkn.omen.pf2e.playercore-spellcasting`.
+Effect `grant-innate-spell`, revision 2, from module `me.atkn.omen.pf2e.playercore-spellcasting`.
 
 ## Inputs
 
@@ -11,7 +11,7 @@ Effect `grant-innate-spell`, revision 1, from module `me.atkn.omen.pf2e.playerco
 | `source` | `source-key` | yes |
 | `sourceName` | `string` | yes |
 | `grantId` | `uuid` | yes |
-| `spellId` | `spell-id` | yes |
+| `spell` | `spell-id` | yes |
 | `tradition` | `tradition` | yes |
 | `attribute` | `attribute` | yes |
 | `rankPolicy` | `rank-policy` | yes |
@@ -25,17 +25,19 @@ Derived from the rule key, never written: `grantId`.
 
 Used by 11 rules.
 
-Example, from `paizo-pathfinder-player-core/feat/first-world-magic.yml`:
+Example, from `paizo-pathfinder-player-core/ancestry/gnome/heritages/wellspring-gnome.yml`:
 
 ```yaml
-- key: grant-innate-spell-1
-  effect: spellcasting/grant-innate-spell
+- effect: spellcasting/grant-innate-spell@2
   inputs:
-    source: first-world-magic
-    sourceName: First World Magic
-    spellId: {choice: $.feat.first-world-magic.cantrip}
-    tradition: primal
-    attribute: cha
-    rankPolicy: {kind: cantrip}
-    castFrequency: {kind: atWill}
+    attribute: charisma
+    castFrequency: atWill
+    rankPolicy: cantrip
+    source: wellspring-gnome
+    sourceName: Wellspring Gnome
+    spell:
+      choice: $.gnome.wellspring-cantrip
+    tradition:
+      choice: $.gnome.wellspring-tradition
+  key: grant-wellspring-cantrip
 ```

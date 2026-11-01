@@ -65,6 +65,8 @@ inputs:
 - **Sheet values.** An input whose type is a sheet value (`maximum`, `itemLevel`, a resistance's `value`) takes a
   bare expression, which starts with `(` and ends with `)`, or a bare `$` path. Numbers are written
   as numbers.
+- **Record inputs** are named by their role, not their type: `feat:`, `feature:`, `heritage:`, `spell:`, `item:`,
+  `action:` (never `featId`), each taking an `@` reference.
 - **Ranks.** A proficiency rank is a word (`untrained`, `trained`, `expert`, `master` or `legendary`) under one input
   name, `rank`, on every effect that takes one: `rank: expert`. `add-skill-increase {skill, rank}` raises the skill to
   `rank`. A number is not a rank, and `rank` means only a proficiency rank: a spell's rank keeps the names

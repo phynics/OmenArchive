@@ -23,8 +23,8 @@ description: 'You earned a living wrenching precious minerals from the lightless
 mechanicsScope: builder
 rules:
 - key: add-feat-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.terrain-expertise'
+    feat: '@feat.terrain-expertise'
     with:
       $.feat.terrain-expertise.terrains: {type: core/terrain, value: underground}

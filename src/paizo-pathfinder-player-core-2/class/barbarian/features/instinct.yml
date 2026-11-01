@@ -17,6 +17,6 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.barbarian.instincts'}}
 - key: choice-set-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: {choice: $.barbarian.instinct}
+    feature: {choice: $.barbarian.instinct}

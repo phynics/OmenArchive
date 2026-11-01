@@ -32,11 +32,11 @@ rules:
         - {spell.category: cantrip}
         - {hasChoiceTradition: $.gnome.wellspring-tradition}
 - key: grant-wellspring-cantrip
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: wellspring-gnome
     sourceName: Wellspring Gnome
-    spellId: {choice: $.gnome.wellspring-cantrip}
+    spell: {choice: $.gnome.wellspring-cantrip}
     tradition: {choice: $.gnome.wellspring-tradition}
     attribute: charisma
     rankPolicy: cantrip

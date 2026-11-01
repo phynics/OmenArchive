@@ -25,8 +25,8 @@ node scripts/check-schemas.mjs [path/to/file.yml]
 
 ### `YAML parse error: ...`
 - **Cause**: Invalid YAML syntax, typically improper indentation, unquoted special characters, or tabs.
-- **Example**: Starting a value with `@` without quotes: `featId: @feat.example`.
-- **Fix**: Quote references in single or double quotes: `featId: '@feat.example'`. Ensure only 2-space indentation is used (no tabs).
+- **Example**: Starting a value with `@` without quotes: `feat: @feat.example`.
+- **Fix**: Quote references in single or double quotes: `feat: '@feat.example'`. Ensure only 2-space indentation is used (no tabs).
 
 ---
 

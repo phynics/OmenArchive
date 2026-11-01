@@ -51,7 +51,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -59,7 +59,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.ancestral-form'
+    spell: '@spell.ancestral-form'
 - key: configure-source-2
   effect: spellcasting/configure-source
   level: 12
@@ -74,7 +74,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-2
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -82,7 +82,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.revel-in-retribution'
+    spell: '@spell.revel-in-retribution'
 - key: configure-source-3
   effect: spellcasting/configure-source
   level: 12
@@ -97,7 +97,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-3
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -105,7 +105,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.claim-undead'
+    spell: '@spell.claim-undead'
 - key: configure-source-4
   effect: spellcasting/configure-source
   level: 12
@@ -120,7 +120,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-4
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -128,7 +128,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.moonlight-bridge'
+    spell: '@spell.moonlight-bridge'
 - key: configure-source-5
   effect: spellcasting/configure-source
   level: 12
@@ -143,7 +143,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-5
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -151,7 +151,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.flaming-fusillade'
+    spell: '@spell.flaming-fusillade'
 - key: configure-source-6
   effect: spellcasting/configure-source
   level: 12
@@ -166,7 +166,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-6
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -174,7 +174,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.life-giving-form'
+    spell: '@spell.life-giving-form'
 - key: configure-source-7
   effect: spellcasting/configure-source
   level: 12
@@ -189,7 +189,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-7
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -197,7 +197,7 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.dread-secret'
+    spell: '@spell.dread-secret'
 - key: configure-source-8
   effect: spellcasting/configure-source
   level: 12
@@ -212,7 +212,7 @@ rules:
     tradition: divine
     attribute: charisma
 - key: grant-focus-spell-8
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   level: 12
   prerequisites:
   - hasChoice:
@@ -220,4 +220,4 @@ rules:
       equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
   inputs:
     source: oracle-focus-spells
-    spellId: '@spell.tempest-form'
+    spell: '@spell.tempest-form'

@@ -50,25 +50,25 @@ rules:
     - {label: Heal, value: '@spell.heal'}
     - {label: Harm, value: '@spell.harm'}
 - key: grant-spell-1
-  effect: spellcasting/grant-spell
+  effect: spellcasting/grant-spell@2
   inputs:
     source: cleric-spellcasting
-    spellId: {choice: $.cleric.divine-font}
+    spell: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 4}
 - key: grant-spell-2
-  effect: spellcasting/grant-spell
+  effect: spellcasting/grant-spell@2
   level: 5
   inputs:
     source: cleric-spellcasting
-    spellId: {choice: $.cleric.divine-font}
+    spell: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 1}
 - key: grant-spell-3
-  effect: spellcasting/grant-spell
+  effect: spellcasting/grant-spell@2
   level: 15
   inputs:
     source: cleric-spellcasting
-    spellId: {choice: $.cleric.divine-font}
+    spell: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 1}

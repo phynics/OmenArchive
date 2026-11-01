@@ -18,6 +18,6 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.witch.basic-lessons'}}
 - key: choice-set-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: {choice: $.feat.basic-lesson.lesson}
+    feature: {choice: $.feat.basic-lesson.lesson}

@@ -46,14 +46,14 @@ rules:
     tradition: occult
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: bard-focus-spells
-    spellId: '@spell.counter-performance'
+    spell: '@spell.counter-performance'
 - key: grant-spell-1
-  effect: spellcasting/grant-spell
+  effect: spellcasting/grant-spell@2
   inputs:
     source: bard-focus-spells
-    spellId: '@spell.courageous-anthem'
+    spell: '@spell.courageous-anthem'
     rankPolicy: cantrip
     castFrequency: atWill

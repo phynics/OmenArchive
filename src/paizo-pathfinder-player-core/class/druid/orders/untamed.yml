@@ -33,16 +33,16 @@ rules:
     tradition: primal
     attribute: wisdom
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: druid-focus-spells
-    spellId: '@spell.untamed-shift'
+    spell: '@spell.untamed-shift'
 - key: add-skill-increase-1
   effect: core/add-skill-increase@2
   inputs:
     skill: intimidation
     rank: trained
 - key: add-feat-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.untamed-form'
+    feat: '@feat.untamed-form'

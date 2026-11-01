@@ -13,9 +13,9 @@ mechanicsScope: builder
 foundryID: Z56DtGBd3AcZOCeG
 rules:
 - key: grant-item-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.adopted-ancestry'
+    feat: '@feat.adopted-ancestry'
 - key: choice-feat-cultural-adaptability-feat
   choice:
     name: $.feat.cultural-adaptability.feat
@@ -31,6 +31,6 @@ rules:
         - {level: 1}
         - {hasChoiceAncestryTrait: $.feat.adopted-ancestry.ancestry}
 - key: grant-item-2
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: {choice: $.feat.cultural-adaptability.feat}
+    feat: {choice: $.feat.cultural-adaptability.feat}

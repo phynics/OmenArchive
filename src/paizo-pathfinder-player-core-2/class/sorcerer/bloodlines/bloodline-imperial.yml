@@ -56,10 +56,10 @@ rules:
     tradition: arcane
     attribute: charisma
 - key: grant-focus-spell-1
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: sorcerer-focus-spells
-    spellId: '@spell.ancestral-memories'
+    spell: '@spell.ancestral-memories'
 - key: add-known-spell-1
   effect: spellcasting/add-known-spell
   inputs:

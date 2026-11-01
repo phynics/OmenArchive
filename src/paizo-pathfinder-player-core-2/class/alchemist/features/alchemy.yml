@@ -18,22 +18,22 @@ mechanicsScope: mixed
 foundryID: w3aS3tsvH2Ub6XMn
 rules:
 - key: grant-item-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.alchemical-crafting?source=paizo-pathfinder-player-core'
+    feat: '@feat.alchemical-crafting?source=paizo-pathfinder-player-core'
 - key: grant-alchemy-benefits-formula-book
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: '@class.alchemist.alchemy-benefits.formula-book'
+    feature: '@class.alchemist.alchemy-benefits.formula-book'
 - key: grant-alchemy-benefits-advanced-alchemy
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: '@class.alchemist.alchemy-benefits.advanced-alchemy'
+    feature: '@class.alchemist.alchemy-benefits.advanced-alchemy'
 - key: grant-alchemy-benefits-versatile-vials
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: '@class.alchemist.alchemy-benefits.versatile-vials'
+    feature: '@class.alchemist.alchemy-benefits.versatile-vials'
 - key: grant-alchemy-benefits-quick-alchemy
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: '@class.alchemist.alchemy-benefits.quick-alchemy'
+    feature: '@class.alchemist.alchemy-benefits.quick-alchemy'

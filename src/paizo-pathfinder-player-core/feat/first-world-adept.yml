@@ -18,21 +18,21 @@ mechanicsScope: mixed
 foundryID: WUVNZoIZvr9XFv2x
 rules:
 - key: grant-innate-spell-1
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: first-world-adept
     sourceName: First World Adept
-    spellId: '@spell.invisibility'
+    spell: '@spell.invisibility'
     tradition: primal
     attribute: charisma
     rankPolicy: {fixed: 2}
     castFrequency: {perDay: 1}
 - key: grant-innate-spell-2
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: first-world-adept
     sourceName: First World Adept
-    spellId: '@spell.revealing-light'
+    spell: '@spell.revealing-light'
     tradition: primal
     attribute: charisma
     rankPolicy: {fixed: 2}

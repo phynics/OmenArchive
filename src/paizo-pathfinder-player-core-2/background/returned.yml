@@ -21,8 +21,8 @@ description: 'You died and miraculously returned with knowledge of the realms be
 mechanicsScope: builder
 rules:
 - key: background-item-additional-lore-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
     with:
       $.feat.additional-lore.lores: {type: core/string, value: Boneyard Lore}

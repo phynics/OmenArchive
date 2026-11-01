@@ -20,6 +20,6 @@ rules:
         - {id: '@feat.animal-empathy'}
         - {id: '@feat.plant-empathy'}
 - key: grant-item-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: {choice: $.druid.voice-of-nature.feat}
+    feat: {choice: $.druid.voice-of-nature.feat}

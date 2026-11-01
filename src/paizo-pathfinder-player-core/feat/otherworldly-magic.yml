@@ -25,11 +25,11 @@ rules:
         - {spell.category: cantrip}
         - {spell.tradition: arcane}
 - key: grant-innate-spell-1
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: otherworldly-magic
     sourceName: Otherworldly Magic
-    spellId: {choice: $.feat.otherworldly-magic.cantrip}
+    spell: {choice: $.feat.otherworldly-magic.cantrip}
     tradition: arcane
     attribute: charisma
     rankPolicy: cantrip

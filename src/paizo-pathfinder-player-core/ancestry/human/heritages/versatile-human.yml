@@ -20,6 +20,6 @@ rules:
         - {maxLevel: 1}
         - {trait: systemTrait-general}
 - key: add-feat-1
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   inputs:
-    featId: {choice: $.heritage.feat}
+    feat: {choice: $.heritage.feat}

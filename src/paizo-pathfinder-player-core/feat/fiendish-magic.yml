@@ -56,21 +56,21 @@ rules:
           - {name: false vitality}
           - {name: invisibility}
 - key: innate-spell-1
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: fiendish-magic
     sourceName: Fiendish Magic
-    spellId: {choice: $.feat.fiendish-magic.spell-one}
+    spell: {choice: $.feat.fiendish-magic.spell-one}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}
     castFrequency: {perDay: 1}
 - key: innate-spell-2
-  effect: spellcasting/grant-innate-spell
+  effect: spellcasting/grant-innate-spell@2
   inputs:
     source: fiendish-magic
     sourceName: Fiendish Magic
-    spellId: {choice: $.feat.fiendish-magic.spell-two}
+    spell: {choice: $.feat.fiendish-magic.spell-two}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}

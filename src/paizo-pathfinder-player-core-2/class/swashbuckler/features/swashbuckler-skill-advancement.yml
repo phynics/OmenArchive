@@ -20,10 +20,10 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 3}
 - key: skill-feat-3
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   level: 3
   inputs:
-    featId: {choice: $.swashbuckler.skill-feat-3}
+    feat: {choice: $.swashbuckler.skill-feat-3}
 - key: choice-swashbuckler-skill-feat-7
   level: 7
   choice:
@@ -37,10 +37,10 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 7}
 - key: skill-feat-7
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   level: 7
   inputs:
-    featId: {choice: $.swashbuckler.skill-feat-7}
+    feat: {choice: $.swashbuckler.skill-feat-7}
 - key: choice-swashbuckler-skill-feat-15
   level: 15
   choice:
@@ -54,7 +54,7 @@ rules:
         - {trait: systemTrait-skill}
         - {maxLevel: 15}
 - key: skill-feat-15
-  effect: core/add-feat@2
+  effect: core/add-feat@3
   level: 15
   inputs:
-    featId: {choice: $.swashbuckler.skill-feat-15}
+    feat: {choice: $.swashbuckler.skill-feat-15}

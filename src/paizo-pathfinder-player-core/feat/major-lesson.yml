@@ -28,6 +28,6 @@ rules:
         - {pathPrefix: '@class.witch.greater-lessons'}
         - {pathPrefix: '@class.witch.major-lessons'}
 - key: choice-set-1
-  effect: core/add-feature-by-id
+  effect: core/add-feature-by-id@2
   inputs:
-    featureId: {choice: $.feat.major-lesson.lessons}
+    feature: {choice: $.feat.major-lesson.lessons}
