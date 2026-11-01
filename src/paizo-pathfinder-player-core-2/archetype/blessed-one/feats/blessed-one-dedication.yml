@@ -18,11 +18,24 @@ description: 'You are touched by a deity and gifted with the ability to alleviat
 
   [Blessed One](omen://archetype/blessed-one?source=paizo-pathfinder-player-core-2)'
 mechanicsScope: mixed
-unsupportedReason: What the dedication trains (class DC, spell attack and DC) is modeled.
-  The rest of it is not yet.
+unsupportedReason: Lay on Hands, its focus source and the spell statistics are modeled.
+  Refocusing without a deity is not yet.
 foundryID: eBdajOzs8kiJDic2
 rules:
 - key: dedication-spell-proficiency
   effect: spellcasting/increase-spell-proficiency@2
   inputs:
     rank: trained
+- key: blessed-one-focus-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: blessed-one-focus-spells
+    sourceName: Blessed One Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: charisma
+- key: grant-lay-on-hands
+  effect: spellcasting/grant-focus-spell@2
+  inputs:
+    source: blessed-one-focus-spells
+    spell: '@spell.lay-on-hands'

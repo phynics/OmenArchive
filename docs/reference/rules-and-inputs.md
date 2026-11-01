@@ -106,8 +106,11 @@ inputs:
   shown: `amount: 4`, `amount: $.level` (a bonus for each level), `amount: (multiply 3 $.archetype.fighter.feat-count)` (a bonus
   for each feat from an archetype).
 - **Prerequisites name a record by `has`.** `has: '@feat.aggressive-block'` is met when the character has that
-  record: a feat, a class feature, a heritage, an action or an identity record. A name never stands for a record
-  (`hasFeatWithName` and its kin are gone). A spell or an item is never "had", so a `has` on one is never met.
+  record: a feat, a class feature, a heritage, an action or an identity record. It is also met by a spell any of the
+  character's spellcasting sources holds, however the spell got there (a chosen focus spell, a repertoire or spellbook
+  pick, a granted spell): `has: '@spell.lay-on-hands'`. A name never stands for a record (`hasFeatWithName` and its kin
+  are gone). A `has` on an item, a condition or any other record a character never has is an error. A sense is not a
+  record: `hasSense: darkvision` is met by a character with that sense from any source.
 - **Record inputs** are named by their role, not their type: `feat:`, `feature:`, `heritage:`, `spell:`, `item:`,
   `action:` (never `featId`), each taking an `@` reference.
 - **Ranks.** A proficiency rank is a word (`untrained`, `trained`, `expert`, `master` or `legendary`) under one input
