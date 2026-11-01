@@ -11,6 +11,14 @@ Rules refer to it with the alias `core`, declared in a publication's `mechanicsM
 - `crafting-abilities`: `crafting-abilities`
 - `formula-families`: `formula-families`
 
+## Lists
+
+Character lists the module declares for the engine. Rules add to and read them like a list a record declares (<doc:character-lists>).
+
+| List | Holds | Label |
+|---|---|---|
+| `$.ancestry.feat-ancestries` | `string` | Feat ancestries |
+
 ## Value types
 
 | Type | Rev | Shape |
@@ -33,6 +41,10 @@ Rules refer to it with the alias `core`, declared in a publication's `mechanicsM
 | `int` | 1 | `{"kind":"integer"}` |
 | `item-id` | 1 | `{"kind":"string"}` |
 | `item-id-list` | 1 | `{"items":{"kind":"string"},"kind":"array"}` |
+| `list-entry` | 1 | `{"kind":"any"}` |
+| `list-item` | 1 | `{"kind":"any"}` |
+| `list-path` | 1 | `{"kind":"string"}` |
+| `list-value-type` | 1 | `{"kind":"any"}` |
 | `placeholder` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"name":{"kind":"string"},"id":{"kind":"string"}},"required":[]}` |
 | `proficiency-rank` | 1 | `{"values":[0,2,4,6,8],"kind":"enum"}` |
 | `roll-description` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"description":{"items":{"required":[],"additionalProperties":true,"kind":"object","properties":{}},"kind":"array"}},"required":[]}` |
@@ -90,10 +102,12 @@ Rules refer to it with the alias `core`, declared in a publication's `mechanicsM
 - <doc:core-add-speed-modifier>
 - <doc:core-add-terrain-expertise>
 - <doc:core-add-terrain-stalker>
+- <doc:core-add-to-list>
 - <doc:core-add-weapon-critical-specialization>
 - <doc:core-add-weapon-die-step>
 - <doc:core-add-weapon-group-proficiency>
 - <doc:core-add-weapon-proficiency>
+- <doc:core-declare-list>
 - <doc:core-extend-class-key-attribute>
 - <doc:core-set-ancestry-hit-points>
 - <doc:core-substitute-skill>

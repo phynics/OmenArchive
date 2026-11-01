@@ -13,6 +13,7 @@ Detailed technical specifications are divided into focused topic guides:
 | [**Format and Repository Layout**](docs/reference/format-and-layout.md) | File trees, publication manifests (`publication.yml`), collections, and epoch/version rules. |
 | [**Identities and References**](docs/reference/identities-and-references.md) | `@reference` syntax, canonical `omen://` URIs, member resolution, and prose links. |
 | [**Rules and Inputs**](docs/reference/rules-and-inputs.md) | The `rules` array, choices (`$.` paths), effect invocations, and input typing. |
+| [**Character Lists**](docs/reference/character-lists.md) | Declared, typed, derived sets of items (`declare-list`, `add-to-list`, `addTo:`, `distinct`, `$.list[].field`). |
 | [**Filters**](docs/reference/filters.md) | Filtering syntax for dynamic choices (`all`, `any`, traits, levels, and prerequisites). |
 | [**Spellcasting Tables**](docs/reference/spellcasting.md) | Compact class spell tables (`spellcasting:` block), slot progression, and repertoires. |
 | [**Family Conventions**](docs/reference/family-conventions.md) | Structural schemas, directory locations, and examples for all 13 content families. |
@@ -34,6 +35,7 @@ that type ([the full rules](docs/reference/rules-and-inputs.md)):
   spelled `{ type: core/terrain, value: underground }`. `{ from: [...] }` and `{ choice: $.path }` are the other two.
 - A choice lists its cases as words (`cases: [air, earth]`), names its answer `type:` on the choice, and writes
   `freeText: true` and `records: { filter: …, from: $.path }`.
+- A list is named by its plain `$` path (`list: $.feats.assurance.skills`), with no backslash, and an item added to it is `{choice: $.path}` or a value with its type (`{type: core/skill, literal: athletics}`). [Character lists](docs/reference/character-lists.md) have the rest.
 - An input equal to its default, an empty string, an empty list and a null are left out, and the reader puts them back.
   The check rejects an empty array.
 

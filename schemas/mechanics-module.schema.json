@@ -45,6 +45,13 @@
         "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
       },
       "uniqueItems": true
+    },
+    "lists": {
+      "type": "array",
+      "description": "The character lists the module declares for the engine, such as $.ancestry.feat-ancestries. Rules add to and read them like any list; no record declares them. Omitted when empty.",
+      "items": {
+        "$ref": "#/$defs/list"
+      }
     }
   },
   "required": [
@@ -101,6 +108,87 @@
         "schema"
       ],
       "additionalProperties": false
+    },
+    "list": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^\\$\\.(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "The list's plain $ path."
+        },
+        "valueType": {
+          "$ref": "#/$defs/listValueType"
+        },
+        "label": {
+          "type": "string",
+          "description": "Display wording for the list."
+        }
+      },
+      "required": [
+        "path",
+        "valueType"
+      ],
+      "additionalProperties": false
+    },
+    "listValueType": {
+      "description": "What a list holds: a value type ID, {records: <collection path prefix>} for any record under a collection from any publication, or {entry: {<field>: <value type ID or {records: …}>}} for an entry of named fields.",
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "records": {
+              "type": "string",
+              "pattern": "^omen://[^?#\\s]+$"
+            }
+          },
+          "required": [
+            "records"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entry": {
+              "type": "object",
+              "minProperties": 1,
+              "propertyNames": {
+                "pattern": "^[a-z][A-Za-z0-9]*$"
+              },
+              "additionalProperties": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "records": {
+                        "type": "string",
+                        "pattern": "^omen://[^?#\\s]+$"
+                      }
+                    },
+                    "required": [
+                      "records"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "entry"
+          ],
+          "additionalProperties": false
+        }
+      ]
     },
     "effect": {
       "type": "object",

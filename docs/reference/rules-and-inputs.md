@@ -107,6 +107,16 @@ An input that holds its default is left out, and the reader puts it back. The de
   source key. A map that merely has a `type` key (`numeric: {amount: 1, type: item}`) is written bare.
 - `{ type: core/skill, … }`: names the input's value type where it isn't the one the descriptor declares.
 
+- `{ list: $.deity.spells, field: rank }`: reads one field of every item of a character list, as a list of values in list
+  order. `$.deity.spells[].rank` is its short form, for an input that takes a list. See [Character
+  lists](character-lists.md#reading-a-list).
+- `{ entry: { rank: { type: core/int, value: 1 } } }`: one entry of an entry list, each field a value with its type.
+
+An input that names a character list (`declare-list` and `add-to-list`'s `list`) is written as its plain `$` path:
+`list: $.feats.assurance.skills`. It needs no backslash, and `[]` is refused there. An item added to a list is
+`{ choice: $.path }` or a value with its type (`{ type: core/skill, literal: athletics }`), which the list's
+declaration then checks.
+
 An input whose type is **text** (`string`, as in `add-membership`'s `list`) takes a `$` path or an
 expression as plain text, so a string that begins with `$`, `@`, `(` or `[[` is escaped with a
 leading backslash (`\$.druid.order-memberships`). No other type needs the backslash.
@@ -136,7 +146,8 @@ rules:
   - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`.
 - **`multiple`**: Specifies multi-selection: `multiple: { min: 1, max: 3 }`.
 - **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`.
-- **`distinct`**: Leaves out the value of one or more `$` paths: another choice or a built-in. One path is bare, `distinct: $.ancestry.name`; several are a list, `distinct: [$.bard.muse, $.feat.other]`. It is one-way: the choice it names keeps its own options. An unanswered path leaves out nothing.
+- **`distinct`**: Leaves out the value of one or more `$` paths: another choice or a built-in. One path is bare, `distinct: $.ancestry.name`; several are a list, `distinct: [$.bard.muse, $.feat.other]`. It is one-way: the choice it names keeps its own options. An unanswered path leaves out nothing. `{list: $.path}` leaves out the items on a [character list](character-lists.md), and `distinct: false` goes with `addTo`.
+- **`addTo`**: Names the character list the answer goes to (`addTo: $.feats.assurance.skills`). The reader expands it into an `add-to-list` rule keyed `<question key>-add` and a `distinct` over the same list; the wire form carries only those rules. See [Character lists](character-lists.md#addto-on-a-question).
 - **`optional: true`**: Marks the choice as optional, excluding it from blocking open-question counts.
 
 The older spellings stay readable: `records: { filter: …, type: … }`, `freeText: core/string`, and `optionsFrom` beside `records`.

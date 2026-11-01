@@ -35,6 +35,10 @@
             },
             "inputs": {
               "$ref": "#/$defs/inputs"
+            },
+            "forEach": {
+              "description": "Reserved for rules that run once for each item of a list. Not supported yet: a rule that uses it is refused.",
+              "not": {}
             }
           },
           "required": [
@@ -68,6 +72,10 @@
             },
             "choice": {
               "$ref": "#/$defs/choice"
+            },
+            "forEach": {
+              "description": "Reserved for rules that run once for each item of a list. Not supported yet: a rule that uses it is refused.",
+              "not": {}
             }
           },
           "required": [
@@ -106,17 +114,21 @@
           }
         },
         "distinct": {
-          "description": "The $ paths whose values this choice's options leave out: another choice or a built-in. One path is written bare. One-way: the choice named here keeps its own options.",
+          "description": "What this choice's options leave out: another choice or a built-in ($.ancestry.name), or the items already on a list ({list: $.path}). One path is written bare; several are a list. One-way: the choice or list named here keeps its own options, and a list leaves out only what rules authored before this question added. With addTo, the list is left out as well unless distinct is false.",
           "oneOf": [
             {
-              "$ref": "#/$defs/choiceName"
+              "$ref": "#/$defs/distinctItem"
             },
             {
               "type": "array",
               "minItems": 1,
               "items": {
-                "$ref": "#/$defs/choiceName"
+                "$ref": "#/$defs/distinctItem"
               }
+            },
+            {
+              "const": false,
+              "description": "Only with addTo: the answer may repeat an item already on the list."
             }
           ]
         },
@@ -203,6 +215,10 @@
             "$ref": "#/$defs/choiceCase"
           },
           "description": "Typed alternatives beside records. These cases cannot carry effects."
+        },
+        "addTo": {
+          "description": "The list the answer goes to, as a plain $ path. The reader expands it into a rule keyed <question key>-add that adds the answer with core/add-to-list, and into a distinct over the same list unless distinct is false. The wire form carries only the expanded rules. A question that takes several answers can't add to a list.",
+          "$ref": "#/$defs/listPath"
         }
       },
       "required": [
@@ -290,6 +306,36 @@
       "anyOf": [
         {
           "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
+        }
+      ]
+    },
+    "listPath": {
+      "description": "A character list: a plain $ path with at least two steps, without [] or #. No built-in value is a list a record declares.",
+      "type": "string",
+      "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "listRead": {
+      "description": "One field of every item of a list: $.list[].field, or $.list[].field.recordField for a field of the record an entry's field holds. Read-only and typed by the list's declaration; there is no [n].",
+      "type": "string",
+      "pattern": "^\\$\\.(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*\\[\\]\\.[a-z][A-Za-z0-9]*(?:\\.[a-z][A-Za-z0-9]*)?$"
+    },
+    "distinctItem": {
+      "description": "A $ path whose value is left out, or {list: $.path} for the items of a list.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/choiceName"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "list": {
+              "$ref": "#/$defs/listPath"
+            }
+          },
+          "required": [
+            "list"
+          ],
+          "additionalProperties": false
         }
       ]
     },
@@ -620,7 +666,15 @@
               "type": "object",
               "properties": {
                 "name": {
-                  "$ref": "#/$defs/choiceName"
+                  "description": "A choice, a list, or one field of every item of a list ($.list[].field).",
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/choiceName"
+                    },
+                    {
+                      "$ref": "#/$defs/listRead"
+                    }
+                  ]
                 },
                 "isSet": {
                   "const": true
@@ -636,7 +690,7 @@
                   "minItems": 1
                 },
                 "contains": {
-                  "description": "A repeatable choice holds a list, one answer per copy; one of them equals this value.",
+                  "description": "A list (or a repeatable choice, one answer per copy) holds this value.",
                   "$ref": "#/$defs/typedValue"
                 }
               },
@@ -754,7 +808,7 @@
       "additionalProperties": false
     },
     "inputs": {
-      "description": "Effect inputs by name. Bare values are literals typed by the effect descriptor. Explicit forms are {choice: $.path}, {choiceList: $.path}, {choice: $.path, field: name} (a field of the record the choice holds) and {literal: ...}, each with an optional type. A list read requires a confirmed answer.",
+      "description": "Effect inputs by name. Bare values are literals typed by the effect descriptor. Explicit forms are {choice: $.path}, {choiceList: $.path}, {choice: $.path, field: name} (a field of the record the choice holds), {list: $.path, field: name} (one field of every item of a list, short for $.list[].field), {entry: {field: {type, value}}} (one entry of an entry list) and {literal: ...}, each with an optional type. A list read requires a confirmed answer. A list is named by its plain $ path, without the \\$ escape; add-to-list takes {choice: $.path} or a value with its type.",
       "type": "object",
       "additionalProperties": {}
     },

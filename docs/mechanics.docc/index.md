@@ -10,6 +10,10 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 
 ## Topics
 
+### Articles
+
+- <doc:character-lists>
+
 ### Module spellcasting
 
 - <doc:module-spellcasting>
@@ -61,10 +65,12 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:core-add-speed-modifier>
 - <doc:core-add-terrain-expertise>
 - <doc:core-add-terrain-stalker>
+- <doc:core-add-to-list>
 - <doc:core-add-weapon-critical-specialization>
 - <doc:core-add-weapon-die-step>
 - <doc:core-add-weapon-group-proficiency>
 - <doc:core-add-weapon-proficiency>
+- <doc:core-declare-list>
 - <doc:core-extend-class-key-attribute>
 - <doc:core-set-ancestry-hit-points>
 - <doc:core-substitute-skill>
