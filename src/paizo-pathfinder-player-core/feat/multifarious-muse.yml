@@ -24,8 +24,7 @@ rules:
   choice:
     name: $.feat.multifarious-muse.muses
     label: Muse
-    distinctFrom:
-    - $.bard.muse
+    distinct: $.bard.muse
     type: core/feature-id
     cases:
     - key: enigma

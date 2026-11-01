@@ -42,8 +42,7 @@ rules:
   choice:
     name: $.feat.fiendish-magic.spell-two
     label: Second Spell
-    distinctFrom:
-    - $.feat.fiendish-magic.spell-one
+    distinct: $.feat.fiendish-magic.spell-one
     type: spellcasting/spell-id
     records:
       filter:

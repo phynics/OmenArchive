@@ -18,8 +18,7 @@ rules:
   choice:
     name: $.feat.adopted-ancestry.ancestry
     label: Ancestry
-    distinctFrom:
-    - $.ancestry.name
+    distinct: $.ancestry.name
     type: core/string
     cases: [dwarf, elf, gnome, goblin, halfling, human, leshy, orc]
 - key: feat-ancestry

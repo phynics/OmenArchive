@@ -16,8 +16,7 @@ rules:
     label: Saving Throw
     prerequisites:
     - $.monk.path-to-perfection.save
-    distinctFrom:
-    - $.monk.path-to-perfection.save
+    distinct: $.monk.path-to-perfection.save
     type: core/saving-throw
     cases:
     - key: fortitude

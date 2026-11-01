@@ -105,17 +105,20 @@
             "$ref": "#/$defs/choiceName"
           }
         },
-        "distinctFrom": {
-          "description": "Choices whose picks this choice's options leave out.",
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/choiceName"
-          }
-        },
-        "distinctWithin": {
-          "description": "A group name. A choice in a group leaves out the picks of the choices in the same group that come before it, such as the spells of one repertoire. A later pick never removes an earlier one.",
-          "type": "string",
-          "minLength": 1
+        "distinct": {
+          "description": "The $ paths whose values this choice's options leave out: another choice or a built-in. One path is written bare. One-way: the choice named here keeps its own options.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/choiceName"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/choiceName"
+              }
+            }
+          ]
         },
         "type": {
           "$ref": "#/$defs/typeName"

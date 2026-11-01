@@ -136,7 +136,7 @@ rules:
   - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`.
 - **`multiple`**: Specifies multi-selection: `multiple: { min: 1, max: 3 }`.
 - **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`.
-- **`distinctWithin`**: Prevents duplicate picks within a named group. No record uses it: the free picks of a spellbook or repertoire are `allow-known-spells` rules, not choices.
+- **`distinct`**: Leaves out the value of one or more `$` paths: another choice or a built-in. One path is bare, `distinct: $.ancestry.name`; several are a list, `distinct: [$.bard.muse, $.feat.other]`. It is one-way: the choice it names keeps its own options. An unanswered path leaves out nothing.
 - **`optional: true`**: Marks the choice as optional, excluding it from blocking open-question counts.
 
 The older spellings stay readable: `records: { filter: …, type: … }`, `freeText: core/string`, and `optionsFrom` beside `records`.

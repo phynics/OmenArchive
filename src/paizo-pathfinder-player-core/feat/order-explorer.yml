@@ -25,8 +25,7 @@ rules:
   choice:
     name: $.feat.order-explorer.orders
     label: Order
-    distinctFrom:
-    - $.druid.order
+    distinct: $.druid.order
     type: core/feature-id
     cases:
     - key: animal

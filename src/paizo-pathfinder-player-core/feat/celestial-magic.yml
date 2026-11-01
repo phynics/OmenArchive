@@ -45,8 +45,7 @@ rules:
   choice:
     name: $.feat.celestial-magic.spell-two
     label: Second Spell
-    distinctFrom:
-    - $.feat.celestial-magic.spell-one
+    distinct: $.feat.celestial-magic.spell-one
     type: spellcasting/spell-id
     records:
       filter:
