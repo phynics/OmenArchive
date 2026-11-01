@@ -22,8 +22,8 @@ rules:
     description: 'Sensate Gnome: +2 circumstance bonus to Perception checks (Seek).'
     numeric: {amount: 2, applicability: {description: Seek, kind: situational}, type: circumstance}
 - key: add-sense-1
-  effect: core/add-sense
+  effect: core/add-sense@2
   inputs:
-    selector: scent
+    sense: scent
     acuity: imprecise
     range: 30

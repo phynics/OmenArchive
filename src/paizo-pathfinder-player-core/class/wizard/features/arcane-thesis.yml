@@ -29,6 +29,6 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.wizard.theses'}}
 - key: add-feature-by-id-1
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   inputs:
     feature: {choice: $.wizard.thesis}

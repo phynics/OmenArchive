@@ -21,7 +21,7 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.bard.muses'}}
 - key: choice-set-1
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   inputs:
     feature: {choice: $.bard.muse}
 - key: choice-set-2

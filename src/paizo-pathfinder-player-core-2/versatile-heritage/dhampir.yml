@@ -14,16 +14,17 @@ unsupportedReason: 'Its negative-healing flag (void healing) isn''t represented 
   the character rules. Resource: omen://versatile-heritage/dhampir?source=paizo-pathfinder-player-core-2.'
 rules:
 - key: grant-heritage-trait
-  effect: core/add-character-ancestry-trait
+  effect: core/add-trait
   inputs:
     trait: dhampir
+    as: ancestry
 - key: sense-1
-  effect: core/add-sense
+  effect: core/add-sense@2
   inputs:
-    selector: low-light-vision
+    sense: low-light-vision
 - key: sense-2
-  effect: core/add-sense
+  effect: core/add-sense@2
   prerequisites:
   - hasAncestryVision: low-light-vision
   inputs:
-    selector: darkvision
+    sense: darkvision

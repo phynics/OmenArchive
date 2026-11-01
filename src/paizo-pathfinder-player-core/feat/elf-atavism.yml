@@ -25,6 +25,6 @@ rules:
     type: core/heritage-id
     records: {filter: {pathPrefix: '@ancestry.elf.heritages'}}
 - key: grant-heritage
-  effect: core/add-heritage-by-id@2
+  effect: core/add-heritage
   inputs:
     heritage: {choice: $.feat.elf-atavism.heritage}

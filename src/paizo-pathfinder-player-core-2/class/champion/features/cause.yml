@@ -82,6 +82,6 @@ rules:
     - {key: justice, value: '@class.champion.causes.justice'}
     - {key: obedience, value: '@class.champion.causes.obedience'}
 - key: grant-selected-cause
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   inputs:
     feature: {choice: $.champion.cause}

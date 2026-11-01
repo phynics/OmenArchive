@@ -9,11 +9,12 @@ description: Your body is made from woven seaweed, and you're just as comfortabl
 mechanicsScope: builder
 rules:
 - key: add-base-speed-1
-  effect: core/add-base-speed
+  effect: core/add-speed
   inputs:
-    selector: swim
-    value: 20
+    movement: swim
+    speed: 20
 - key: add-speed-modifier-1
-  effect: core/add-speed-modifier
+  effect: core/add-speed
   inputs:
-    amount: -5
+    movement: land
+    bonus: -5

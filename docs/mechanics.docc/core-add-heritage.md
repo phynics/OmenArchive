@@ -1,8 +1,8 @@
-# core/add-heritage-by-id@2
+# core/add-heritage
 
 Applies the rules and features of a second heritage without altering the character's primary heritage identity (e.g. Elf Atavism).
 
-Effect `add-heritage-by-id`, revision 2, from module `me.atkn.omen.pf2e.playercore`.
+Effect `add-heritage`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs
 
@@ -17,7 +17,7 @@ Used by 1 rules.
 Example, from `paizo-pathfinder-player-core/feat/elf-atavism.yml`:
 
 ```yaml
-- effect: core/add-heritage-by-id@2
+- effect: core/add-heritage
   inputs:
     heritage:
       choice: $.feat.elf-atavism.heritage

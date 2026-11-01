@@ -54,7 +54,7 @@ rules:
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.druid.orders'}}
 - key: choice-set-1
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   inputs:
     feature: {choice: $.druid.order}
 - key: choice-set-2

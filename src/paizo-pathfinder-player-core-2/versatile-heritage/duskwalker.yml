@@ -11,16 +11,17 @@ description: Thanks to an ancient bargain, your soul has been reborn as a duskwa
 mechanicsScope: builder
 rules:
 - key: grant-heritage-trait
-  effect: core/add-character-ancestry-trait
+  effect: core/add-trait
   inputs:
     trait: duskwalker
+    as: ancestry
 - key: sense-1
-  effect: core/add-sense
+  effect: core/add-sense@2
   inputs:
-    selector: low-light-vision
+    sense: low-light-vision
 - key: sense-2
-  effect: core/add-sense
+  effect: core/add-sense@2
   prerequisites:
   - hasAncestryVision: low-light-vision
   inputs:
-    selector: darkvision
+    sense: darkvision

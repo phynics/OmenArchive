@@ -10,14 +10,16 @@ description: You have elves, or possibly other aiuvarins, in your family tree. Y
 mechanicsScope: builder
 rules:
 - key: add-character-ancestry-trait-1
-  effect: core/add-character-ancestry-trait
+  effect: core/add-trait
   inputs:
     trait: aiuvarin
+    as: ancestry
 - key: add-character-ancestry-trait-2
-  effect: core/add-character-ancestry-trait
+  effect: core/add-trait
   inputs:
     trait: elf
+    as: ancestry
 - key: add-sense-1
-  effect: core/add-sense
+  effect: core/add-sense@2
   inputs:
-    selector: low-light-vision
+    sense: low-light-vision

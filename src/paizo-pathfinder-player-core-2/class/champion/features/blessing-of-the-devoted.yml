@@ -39,7 +39,7 @@ rules:
     - {key: blessed-shield, value: '@class.champion.blessings.blessed-shield'}
     - {key: blessed-swiftness, value: '@class.champion.blessings.blessed-swiftness'}
 - key: grant-selected-blessing
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   level: 3
   inputs:
     feature: {choice: $.champion.blessing}

@@ -11,16 +11,17 @@ description: Your nature is influenced by celestials, fiends, or monitors. This 
 mechanicsScope: builder
 rules:
 - key: add-character-ancestry-trait-1
-  effect: core/add-character-ancestry-trait
+  effect: core/add-trait
   inputs:
     trait: nephilim
+    as: ancestry
 - key: add-sense-1
-  effect: core/add-sense
+  effect: core/add-sense@2
   inputs:
-    selector: low-light-vision
+    sense: low-light-vision
 - key: add-sense-2
-  effect: core/add-sense
+  effect: core/add-sense@2
   prerequisites:
   - hasAncestryVision: low-light-vision
   inputs:
-    selector: darkvision
+    sense: darkvision

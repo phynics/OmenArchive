@@ -86,14 +86,14 @@ rules:
       value: holy
       effects:
       - key: add-holy-trait
-        effect: core/add-character-trait
+        effect: core/add-trait
         inputs:
           trait: holy
     - key: unholy
       value: unholy
       effects:
       - key: add-unholy-trait
-        effect: core/add-character-trait
+        effect: core/add-trait
         inputs:
           trait: unholy
     - {value: none}
@@ -139,10 +139,10 @@ rules:
     type: core/string
     freeText: true
 - key: grant-deity-benefits-deific-weapon
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   inputs:
     feature: '@class.champion.deity-benefits.deific-weapon'
 - key: grant-deity-benefits-champions-aura
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   inputs:
     feature: '@class.champion.deity-benefits.champions-aura'

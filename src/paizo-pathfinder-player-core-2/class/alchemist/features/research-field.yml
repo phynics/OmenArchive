@@ -21,6 +21,6 @@ rules:
     - {key: mutagenist, value: '@class.alchemist.research-fields.mutagenist'}
     - {key: toxicologist, value: '@class.alchemist.research-fields.toxicologist'}
 - key: grant-selected-research-field
-  effect: core/add-feature-by-id@2
+  effect: core/add-feature@2
   inputs:
     feature: {choice: $.alchemist.research-field}

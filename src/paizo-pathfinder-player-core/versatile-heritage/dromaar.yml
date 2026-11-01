@@ -9,14 +9,16 @@ description: Orcish strength emboldens your bloodline. You have a green tinge to
 mechanicsScope: builder
 rules:
 - key: add-character-ancestry-trait-1
-  effect: core/add-character-ancestry-trait
+  effect: core/add-trait
   inputs:
     trait: dromaar
+    as: ancestry
 - key: add-character-ancestry-trait-2
-  effect: core/add-character-ancestry-trait
+  effect: core/add-trait
   inputs:
     trait: orc
+    as: ancestry
 - key: add-sense-1
-  effect: core/add-sense
+  effect: core/add-sense@2
   inputs:
-    selector: low-light-vision
+    sense: low-light-vision
