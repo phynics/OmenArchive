@@ -13,7 +13,7 @@ Effect `add-known-spell`, revision 1, from module `me.atkn.omen.pf2e.playercore-
 
 `source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
 
-`spells` is a list: one spell is a list of one (`[spell/soothe]`), and a single answered choice is read with `{choiceList: $.spellbook.known-1}`. Each spell gets its own repertoire entry, with an identity derived from the rule and the spell, so replaying the rule adds nothing twice. The effect adds to the repertoire or spellbook only; to also widen the source's spell list, add an `add-spell-list` rule with the same spells.
+`spells` is a list: one spell is a list of one (`[spell/soothe]`), and a single answered choice is read with `{choiceList: $.deity.spells.rank-1}`. To let the player pick spells instead, use `allow-known-spells`. Each spell gets its own repertoire entry, with an identity derived from the rule and the spell, so replaying the rule adds nothing twice. The effect adds to the repertoire or spellbook only; to also widen the source's spell list, add an `add-spell-list` rule with the same spells.
 
 ## Usage in the archive
 

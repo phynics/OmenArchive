@@ -4,7 +4,7 @@ This document describes the authoring shorthand for spellcasting progression, sp
 
 ## The `spellcasting:` Shorthand Block
 
-A spellcasting class feature defines its progression concisely using a `spellcasting:` block. At compile time, the reader expands this block into explicit rules (`configure-source`, `increase-spell-proficiency`, `grant-slot`, and `add-known-spell` by level).
+A spellcasting class feature defines its progression concisely using a `spellcasting:` block. At compile time, the reader expands this block into explicit rules (`configure-source`, `increase-spell-proficiency`, `grant-slot`, and `allow-known-spells` by level).
 
 ```yaml
 spellcasting:
@@ -17,6 +17,36 @@ spellcasting:
     1: { cantrips: 10, rank-1: 5 }
     2-20: { any-rank: 2 }      # Or { new-slots: true }
 ```
+
+### Free Spell Picks
+
+The `spellbook:` counts are the spells the player adds to the repertoire or spellbook for free. A pick is not a question. Each level's picks of one kind expand to one `allow-known-spells` rule that carries the count: the player makes the picks in the collection editor, and the rule grants no spell itself.
+
+| Spellbook entry | Pick | Takes |
+|---|---|---|
+| `cantrips: 10` | `cantrip` | cantrips |
+| `rank-1: 5` | `{rank: 1}` | spells of exactly that rank |
+| `any-rank: 2` | `{upTo: N}` | spells of any rank up to `N`, the highest rank of slot the source has at that level |
+| `new-slots: true` | `{rank: R}` for each rank that opens | one spell per new slot of that rank (the 10th-rank slot has its own count, `{rank-10: 2}`) |
+
+The rule's `filter` holds what the spells must be: common spells of the source's tradition, or of the tradition of its patron (the witch). A school's curriculum picks come from exactly the spells it lists, uncommon ones included, so its filter is the list. A `choose:` list is one pick from exactly the listed spells, of any rank. The same rule outside a block is written like any other rule:
+
+```yaml
+- key: allow-known-spells-1
+  effect: spellcasting/allow-known-spells
+  level: 3
+  inputs:
+    source: wizard-spellcasting
+    count: 2
+    pick: {upTo: 2}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: arcane}
+      - {rarity: common}
+```
+
+A record has no choice named `$.spellbook.*`; the archive check refuses one.
 
 ### Cumulative Slot Rows
 
@@ -60,7 +90,7 @@ spellcastingSources:
 ```
 
 - The ID is written here and nowhere else. A record never carries a literal source ID, and the reader refuses a source ID the publication doesn't declare.
-- The key is also what a filter and a pick's `distinctWithin` group name: `{ knownBySource: wizard-spellcasting }`, `{ hasSourceTradition: witch-spellcasting }`, `distinctWithin: known-spells/wizard-spellcasting`. The wire form holds the ID in each place (`known-spells/<id>`).
+- The key is also what a filter names: `{ knownBySource: wizard-spellcasting }`, `{ hasSourceTradition: witch-spellcasting }`. The wire form holds the ID in each place.
 - A source is named the same way wherever it appears. The archive check refuses two source names that give one key (`Hag Magic` and `hag  magic`), a source whose key the publication doesn't declare or declares for another ID, and a record that names a key no source defines.
 - A source a `spellcasting:` block defines is declared under the key of its feature's name (`wizard-spellcasting`) with the ID the block derives, so the check holds the two together.
 - To add a source, choose its key, write a new lowercase UUID for it under `spellcastingSources`, and name the key in the rules.
@@ -72,7 +102,7 @@ A wizard school providing curriculum spells declares its slots and spells in a `
 A witch's spellcasting source tradition depends on their patron:
 - The baseline Witch Spellcasting feature declares `source: patron`.
 - Each patron option configures the source tradition (`arcane`, `divine`, `occult`, or `primal`).
-- The spellbook progression offers spells matching that patron's tradition.
+- The spellbook picks come from spells matching that patron's tradition.
 
 ## Innate Spells vs. Spellcasting Sources
 
@@ -84,4 +114,4 @@ A witch's spellcasting source tradition depends on their patron:
 
 - **Focus pool**: derived, never written. A character has one focus point for each focus spell granted (`spellcasting/grant-focus-spell`, which is the only way to grant one), up to 3. A focus cantrip cast at will adds nothing. Domain spells are granted by reading the chosen domain's `domainSpell` or `advancedDomainSpell` field: `spellId: $.cleric.domains.domainSpell` (the short form of `{choice: $.cleric.domains, field: domainSpell}`).
 - **Spell proficiency**: a character has one spell attack and spell DC rank, raised with `spellcasting/increase-spell-proficiency`; each source keeps its own key attribute. A character with an innate source is at least trained.
-- **Known spells and the spell list**: `add-known-spell` adds a list of spells to the repertoire or spellbook; `add-spell-list` adds spells to the source's spell list only. A feature that does both (the oracle's Divine Access) carries one rule of each.
+- **Known spells and the spell list**: `add-known-spell` adds a list of spells the feature names to the repertoire or spellbook; `allow-known-spells` lets the player pick a number of spells for it; `add-spell-list` adds spells to the source's spell list only. A feature that does both (the oracle's Divine Access) carries one rule of each.

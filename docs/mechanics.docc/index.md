@@ -15,6 +15,7 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:module-spellcasting>
 - <doc:spellcasting-add-known-spell>
 - <doc:spellcasting-add-spell-list>
+- <doc:spellcasting-allow-known-spells>
 - <doc:spellcasting-configure-source>
 - <doc:spellcasting-grant-focus-spell>
 - <doc:spellcasting-grant-innate-spell>

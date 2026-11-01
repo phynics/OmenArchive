@@ -67,7 +67,8 @@ inputs:
   as numbers.
 - **Kinds without data** are a word: `skill: arcana`, `rankPolicy: cantrip`, `castFrequency: atWill`.
 - **Kinds with one datum** are a one-key map from the kind to the datum: `{lore: Boneyard Lore}`,
-  `{fixed: 4}` (the rank), `{perDay: 1}` (the uses). A list of such values is a list of these
+  `{fixed: 4}` (the rank), `{perDay: 1}` (the uses), `{rank: 1}` and `{upTo: 3}` (what a spell pick takes;
+  a cantrip pick is the word `cantrip`). A list of such values is a list of these
   (`[arcana, {lore: Y}]`). A type with more than one datum (a weapon or armor designation) keeps
   its `{kind: filter, weaponGroup: …}` form.
 - **Filters.** An input that takes a resource filter is written like the filters under `choice:`
@@ -135,7 +136,7 @@ rules:
   - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`.
 - **`multiple`**: Specifies multi-selection: `multiple: { min: 1, max: 3 }`.
 - **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`.
-- **`distinctWithin`**: Prevents duplicate picks within a named group (such as spells in a single spellbook).
+- **`distinctWithin`**: Prevents duplicate picks within a named group. No record uses it: the free picks of a spellbook or repertoire are `allow-known-spells` rules, not choices.
 - **`optional: true`**: Marks the choice as optional, excluding it from blocking open-question counts.
 
 The older spellings stay readable: `records: { filter: …, type: … }`, `freeText: core/string`, and `optionsFrom` beside `records`.

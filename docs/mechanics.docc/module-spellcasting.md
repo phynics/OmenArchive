@@ -14,12 +14,14 @@ Rules refer to it with the alias `spellcasting`, declared in a publication's `me
 | `resource-filter` | 1 | `{"additionalProperties":true,"kind":"object","properties":{},"required":[]}` |
 | `spell-id` | 1 | `{"kind":"string"}` |
 | `spell-id-list` | 1 | `{"items":{"kind":"string"},"kind":"array"}` |
+| `spell-pick` | 1 | `{"properties":{"rank":{"kind":"integer"},"kind":{"kind":"enum","values":["cantrip","rank","upTo"]}},"required":["kind"],"kind":"object","additionalProperties":false}` |
 | `tradition` | 1 | `{"values":["arcane","divine","occult","primal"],"kind":"enum"}` |
 
 ## Effects
 
 - <doc:spellcasting-add-known-spell>
 - <doc:spellcasting-add-spell-list>
+- <doc:spellcasting-allow-known-spells>
 - <doc:spellcasting-configure-source>
 - <doc:spellcasting-grant-focus-spell>
 - <doc:spellcasting-grant-innate-spell>
