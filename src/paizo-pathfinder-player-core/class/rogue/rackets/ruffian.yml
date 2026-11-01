@@ -27,13 +27,13 @@ rules:
   inputs:
     attribute: str
 - key: trained-skill-0
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: medium-armor
-  effect: core/add-armor-proficiency
+  effect: core/add-armor-proficiency@2
   inputs:
     armorDesignation: {armorKind: medium, kind: type}
-    proficiencyRank: 2
+    rank: trained
     selfScaling: true

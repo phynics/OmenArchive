@@ -24,7 +24,7 @@ rules:
     description: 'Ant Kholo: +1 circumstance bonus to Deception checks (Lie).'
     numeric: {amount: 1, applicability: {description: Lie, kind: situational}, type: circumstance}
 - key: active-effect-like-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: deception
-    proficiencyCap: 2
+    rank: trained

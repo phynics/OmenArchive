@@ -56,23 +56,23 @@ rules:
     tradition: arcane
     attribute: cha
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
     skill: arcana
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-2
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: arcane}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-2
   effect: spellcasting/configure-source
   prerequisites:
@@ -205,23 +205,23 @@ rules:
     tradition: divine
     attribute: cha
 - key: add-skill-increase-3
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-4
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: divine}
   inputs:
     skill: religion
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-4
   effect: spellcasting/configure-source
   prerequisites:
@@ -354,23 +354,23 @@ rules:
     tradition: occult
     attribute: cha
 - key: add-skill-increase-5
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-6
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: occult}
   inputs:
     skill: occultism
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-6
   effect: spellcasting/configure-source
   prerequisites:
@@ -503,23 +503,23 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-7
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-8
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.draconic
       equals: {type: core/string, value: primal}
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-8
   effect: spellcasting/configure-source
   prerequisites:

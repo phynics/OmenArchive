@@ -39,15 +39,15 @@ rules:
     tradition: divine
     attribute: cha
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: diplomacy
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-2
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: religion
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:

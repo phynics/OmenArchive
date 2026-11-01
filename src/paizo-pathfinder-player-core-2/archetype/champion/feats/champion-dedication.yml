@@ -86,10 +86,10 @@ rules:
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
 - key: deity-divine-skill
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.deity.divine-skill}
-    proficiencyCap: 2
+    rank: trained
 - key: choice-deity-edicts
   choice:
     name: $.deity.edicts
@@ -105,10 +105,10 @@ rules:
     type: core/string
     freeText: true
 - key: dedication-religion
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: religion
-    proficiencyCap: 2
+    rank: trained
 - key: choice-champion-class-dc-attribute
   choice:
     name: $.champion.class-dc-attribute
@@ -116,12 +116,12 @@ rules:
     type: core/attribute
     cases: [str, dex]
 - key: dedication-class-dc
-  effect: core/add-class-dc
+  effect: core/add-class-dc@2
   inputs:
-    proficiencyRank: 2
+    rank: trained
     className: champion
     keyAttribute: {choice: $.champion.class-dc-attribute}
 - key: dedication-spell-proficiency
-  effect: spellcasting/increase-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency@2
   inputs:
-    proficiency: 2
+    rank: trained

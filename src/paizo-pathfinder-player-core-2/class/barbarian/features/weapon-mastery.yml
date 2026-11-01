@@ -24,17 +24,17 @@ mechanicsScope: builder
 foundryID: ejP4jVQkS48uKRFz
 rules:
 - key: generated-1
-  effect: core/add-weapon-proficiency
+  effect: core/add-weapon-proficiency@2
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
-    proficiencyRank: 6
+    rank: master
 - key: generated-2
-  effect: core/add-weapon-proficiency
+  effect: core/add-weapon-proficiency@2
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
-    proficiencyRank: 6
+    rank: master
 - key: generated-3
-  effect: core/add-weapon-proficiency
+  effect: core/add-weapon-proficiency@2
   inputs:
     weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
-    proficiencyRank: 6
+    rank: master

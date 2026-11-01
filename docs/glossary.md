@@ -12,7 +12,7 @@ A collection of thematic feats taken in place of class feats, gated by a dedicat
 The structural contract declared in `schemas/archive-format.json` with an explicit `epoch` and `version` (currently `epoch: 2, version: 5`).
 
 ### Bare Literal
-An input value written as a direct scalar or dictionary without dynamic evaluation markers (e.g. `proficiencyCap: 2`).
+An input value written as a direct scalar or dictionary without dynamic evaluation markers (e.g. `rank: expert`).
 
 ### Bundle
 A multi-file directory representing a complex game element (such as an `ancestry`, `class`, or `archetype`) containing a root record and owned sub-directories for features, heritages, or feats.

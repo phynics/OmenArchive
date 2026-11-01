@@ -67,14 +67,14 @@ Character lists the module declares for the engine. Rules add to and read them l
 ## Effects
 
 - <doc:core-add-action>
-- <doc:core-add-armor-group-proficiency-2>
-- <doc:core-add-armor-proficiency>
+- <doc:core-add-armor-group-proficiency-3>
+- <doc:core-add-armor-proficiency-2>
 - <doc:core-add-assurance>
 - <doc:core-add-base-speed>
 - <doc:core-add-character-ancestry-trait>
 - <doc:core-add-character-trait>
-- <doc:core-add-chosen-weapon-proficiency>
-- <doc:core-add-class-dc>
+- <doc:core-add-chosen-weapon-proficiency-2>
+- <doc:core-add-class-dc-2>
 - <doc:core-add-crafting-ability>
 - <doc:core-add-feat-2>
 - <doc:core-add-feat-ancestry>
@@ -87,7 +87,7 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-hit-points-per-level>
 - <doc:core-add-item-2>
 - <doc:core-add-language>
-- <doc:core-add-lore-skill-increase>
+- <doc:core-add-lore-skill-increase-2>
 - <doc:core-add-membership>
 - <doc:core-add-placeholder>
 - <doc:core-add-play-modifier>
@@ -95,9 +95,9 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-resistance-2>
 - <doc:core-add-resource-pool>
 - <doc:core-add-roll-modifier-2>
-- <doc:core-add-saving-throw>
+- <doc:core-add-saving-throw-2>
 - <doc:core-add-sense>
-- <doc:core-add-skill-increase>
+- <doc:core-add-skill-increase-2>
 - <doc:core-add-specialty-crafting>
 - <doc:core-add-speed-modifier>
 - <doc:core-add-terrain-expertise>
@@ -105,8 +105,8 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-to-list>
 - <doc:core-add-weapon-critical-specialization>
 - <doc:core-add-weapon-die-step>
-- <doc:core-add-weapon-group-proficiency>
-- <doc:core-add-weapon-proficiency>
+- <doc:core-add-weapon-group-proficiency-2>
+- <doc:core-add-weapon-proficiency-2>
 - <doc:core-declare-list>
 - <doc:core-extend-class-key-attribute>
 - <doc:core-set-ancestry-hit-points>

@@ -30,13 +30,13 @@ rules:
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.heritage.skill}
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-2
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   level: 5
   inputs:
     skill: {choice: $.heritage.skill}
-    proficiencyCap: 4
+    rank: expert

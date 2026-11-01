@@ -16,10 +16,10 @@ mechanicsScope: builder
 foundryID: sKDCoxMz2yKWLGRJ
 rules:
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: religion
-    proficiencyCap: 2
+    rank: trained
 - key: choice-feat-nephilim-lore-skill
   choice:
     name: $.feat.nephilim-lore.skill
@@ -29,10 +29,10 @@ rules:
     - {key: diplomacy, value: diplomacy}
     - {key: intimidation, value: intimidation}
 - key: add-skill-increase-2
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feat.nephilim-lore.skill}
-    proficiencyCap: 2
+    rank: trained
 - key: add-feat-1
   effect: core/add-feat@2
   inputs:

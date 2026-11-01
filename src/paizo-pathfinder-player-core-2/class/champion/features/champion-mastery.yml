@@ -10,12 +10,12 @@ mechanicsScope: builder
 foundryID: z5G0o04uV65zyxDB
 rules:
 - key: increase-spell-proficiency-1
-  effect: spellcasting/increase-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency@2
   level: 17
   inputs:
-    proficiency: 6
+    rank: master
 - key: generated-1
-  effect: core/add-class-dc
+  effect: core/add-class-dc@2
   level: 17
   inputs:
-    proficiencyRank: 6
+    rank: master

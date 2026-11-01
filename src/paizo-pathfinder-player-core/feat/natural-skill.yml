@@ -33,10 +33,10 @@ rules:
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feat.natural-skill.skill-one}
-    proficiencyCap: 2
+    rank: trained
 - key: choice-feat-natural-skill-skill-two
   choice:
     name: $.feat.natural-skill.skill-two
@@ -60,7 +60,7 @@ rules:
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
 - key: add-skill-increase-2
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feat.natural-skill.skill-two}
-    proficiencyCap: 2
+    rank: trained

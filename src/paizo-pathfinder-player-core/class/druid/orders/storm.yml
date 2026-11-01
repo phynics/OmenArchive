@@ -36,10 +36,10 @@ rules:
     source: druid-focus-spells
     spellId: '@spell.tempest-surge'
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: acrobatics
-    proficiencyCap: 2
+    rank: trained
 - key: add-feat-1
   effect: core/add-feat@2
   inputs:

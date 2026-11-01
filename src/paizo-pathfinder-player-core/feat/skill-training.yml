@@ -39,7 +39,7 @@ rules:
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feat.skill-training.skills}
-    proficiencyCap: 2
+    rank: trained

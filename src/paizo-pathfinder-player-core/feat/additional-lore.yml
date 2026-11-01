@@ -23,25 +23,25 @@ rules:
     type: core/string
     freeText: true
 - key: add-lore-skill-increase-1
-  effect: core/add-lore-skill-increase
+  effect: core/add-lore-skill-increase@2
   inputs:
     loreName: {choice: $.feat.additional-lore.lores}
-    proficiencyCap: 2
+    rank: trained
 - key: add-lore-skill-increase-2
-  effect: core/add-lore-skill-increase
+  effect: core/add-lore-skill-increase@2
   level: 3
   inputs:
     loreName: {choice: $.feat.additional-lore.lores}
-    proficiencyCap: 4
+    rank: expert
 - key: add-lore-skill-increase-3
-  effect: core/add-lore-skill-increase
+  effect: core/add-lore-skill-increase@2
   level: 7
   inputs:
     loreName: {choice: $.feat.additional-lore.lores}
-    proficiencyCap: 6
+    rank: master
 - key: add-lore-skill-increase-4
-  effect: core/add-lore-skill-increase
+  effect: core/add-lore-skill-increase@2
   level: 15
   inputs:
     loreName: {choice: $.feat.additional-lore.lores}
-    proficiencyCap: 8
+    rank: legendary

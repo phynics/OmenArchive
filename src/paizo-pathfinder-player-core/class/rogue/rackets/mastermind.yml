@@ -22,10 +22,10 @@ rules:
   inputs:
     attribute: int
 - key: trained-skill-0
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: society
-    proficiencyCap: 2
+    rank: trained
 - key: choice-rogue-mastermind-skill
   choice:
     name: $.rogue.mastermind.skill
@@ -37,7 +37,7 @@ rules:
     - {key: occultism, value: occultism}
     - {key: religion, value: religion}
 - key: mastermind-skill
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.rogue.mastermind.skill}
-    proficiencyCap: 2
+    rank: trained

@@ -52,7 +52,7 @@ through that type. An input is written as the plainest value of its type; none o
 
 ```yaml
 inputs:
-  proficiencyCap: 2
+  rank: expert
   skill: arcana                             # a skill: a word
   rankPolicy: {fixed: 4}                    # a kind with one datum: {kind: datum}
   castFrequency: focus
@@ -65,6 +65,10 @@ inputs:
 - **Sheet values.** An input whose type is a sheet value (`maximum`, `itemLevel`, a resistance's `value`) takes a
   bare expression, which starts with `(` and ends with `)`, or a bare `$` path. Numbers are written
   as numbers.
+- **Ranks.** A proficiency rank is a word (`untrained`, `trained`, `expert`, `master` or `legendary`) under one input
+  name, `rank`, on every effect that takes one: `rank: expert`. `add-skill-increase {skill, rank}` raises the skill to
+  `rank`. A number is not a rank, and `rank` means only a proficiency rank: a spell's rank keeps the names
+  `spellRank` and `rankPolicy`.
 - **Kinds without data** are a word: `skill: arcana`, `rankPolicy: cantrip`, `castFrequency: atWill`.
 - **Kinds with one datum** are a one-key map from the kind to the datum: `{lore: Boneyard Lore}`,
   `{fixed: 4}` (the rank), `{perDay: 1}` (the uses), `{rank: 1}` and `{upTo: 3}` (what a spell pick takes;

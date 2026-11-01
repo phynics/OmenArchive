@@ -72,23 +72,23 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: air}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-2
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: air}
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-2
   effect: spellcasting/configure-source
   prerequisites:
@@ -221,23 +221,23 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-3
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: earth}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-4
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: earth}
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-4
   effect: spellcasting/configure-source
   prerequisites:
@@ -370,23 +370,23 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-5
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: fire}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-6
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: fire}
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-6
   effect: spellcasting/configure-source
   prerequisites:
@@ -519,23 +519,23 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-7
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: metal}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-8
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: metal}
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-8
   effect: spellcasting/configure-source
   prerequisites:
@@ -668,23 +668,23 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-9
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: water}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-10
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: water}
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-10
   effect: spellcasting/configure-source
   prerequisites:
@@ -817,23 +817,23 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-11
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: wood}
   inputs:
     skill: intimidation
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-12
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
       name: $.sorcerer.bloodline.elemental
       equals: {type: core/string, value: wood}
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-12
   effect: spellcasting/configure-source
   prerequisites:

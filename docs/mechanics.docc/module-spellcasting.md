@@ -27,6 +27,6 @@ Rules refer to it with the alias `spellcasting`, declared in a publication's `me
 - <doc:spellcasting-grant-innate-spell>
 - <doc:spellcasting-grant-slot>
 - <doc:spellcasting-grant-spell>
-- <doc:spellcasting-increase-spell-proficiency>
+- <doc:spellcasting-increase-spell-proficiency-2>
 - <doc:spellcasting-mark-signature-spell>
 - <doc:spellcasting-modify-innate-sources>

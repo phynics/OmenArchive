@@ -77,10 +77,10 @@ rules:
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
 - key: deity-divine-skill
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.deity.divine-skill}
-    proficiencyCap: 2
+    rank: trained
 - key: choice-deity-edicts
   choice:
     name: $.deity.edicts
@@ -96,7 +96,7 @@ rules:
     type: core/string
     freeText: true
 - key: dedication-religion
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: religion
-    proficiencyCap: 2
+    rank: trained

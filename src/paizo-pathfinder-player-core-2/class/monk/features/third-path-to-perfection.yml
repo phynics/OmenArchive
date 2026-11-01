@@ -23,14 +23,14 @@ rules:
     - key: first-path
       effects:
       - key: raise-first-path-save
-        effect: core/add-saving-throw
+        effect: core/add-saving-throw@2
         inputs:
           savingThrow: {choice: $.monk.path-to-perfection.save}
-          proficiencyRank: 8
+          rank: legendary
     - key: second-path
       effects:
       - key: raise-second-path-save
-        effect: core/add-saving-throw
+        effect: core/add-saving-throw@2
         inputs:
           savingThrow: {choice: $.monk.second-path-to-perfection.save}
-          proficiencyRank: 8
+          rank: legendary

@@ -94,10 +94,10 @@ rules:
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
 - key: deity-divine-skill
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.deity.divine-skill}
-    proficiencyCap: 2
+    rank: trained
 - key: choice-deity-edicts
   choice:
     name: $.deity.edicts
@@ -121,10 +121,10 @@ rules:
     - {value: fist}
     records: {filter: {all: [{type: item}, {item.kind: weapon}]}}
 - key: deity-favored-weapon-proficiency
-  effect: core/add-chosen-weapon-proficiency
+  effect: core/add-chosen-weapon-proficiency@2
   inputs:
     weapon: {choice: $.deity.favored-weapon}
-    proficiencyRank: 2
+    rank: trained
     selfScaling: true
 - key: configure-source-1
   effect: spellcasting/configure-source

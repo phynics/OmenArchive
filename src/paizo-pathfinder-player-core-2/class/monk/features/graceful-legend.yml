@@ -11,15 +11,15 @@ mechanicsScope: builder
 foundryID: JWDfzYub3JfuEtth
 rules:
 - key: generated-3
-  effect: core/add-armor-proficiency
+  effect: core/add-armor-proficiency@2
   inputs:
     armorDesignation: {armorKind: unarmored, kind: type}
-    proficiencyRank: 8
+    rank: legendary
 - key: active-effect-like-1
-  effect: spellcasting/increase-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency@2
   inputs:
-    proficiency: 6
+    rank: master
 - key: generated-2
-  effect: core/add-class-dc
+  effect: core/add-class-dc@2
   inputs:
-    proficiencyRank: 6
+    rank: master

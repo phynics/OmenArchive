@@ -33,7 +33,7 @@ rules:
     - {key: occultism, value: occultism}
     - {key: society, value: society}
 - key: active-effect-like-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.investigator.empiricism.skill}
-    proficiencyCap: 2
+    rank: trained

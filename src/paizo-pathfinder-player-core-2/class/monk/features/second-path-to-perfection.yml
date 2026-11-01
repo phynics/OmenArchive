@@ -23,23 +23,23 @@ rules:
       value: fortitude
       effects:
       - key: raise-fortitude-to-master
-        effect: core/add-saving-throw
+        effect: core/add-saving-throw@2
         inputs:
           savingThrow: fortitude
-          proficiencyRank: 6
+          rank: master
     - key: reflex
       value: reflex
       effects:
       - key: raise-reflex-to-master
-        effect: core/add-saving-throw
+        effect: core/add-saving-throw@2
         inputs:
           savingThrow: reflex
-          proficiencyRank: 6
+          rank: master
     - key: will
       value: will
       effects:
       - key: raise-will-to-master
-        effect: core/add-saving-throw
+        effect: core/add-saving-throw@2
         inputs:
           savingThrow: will
-          proficiencyRank: 6
+          rank: master

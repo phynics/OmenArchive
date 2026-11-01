@@ -49,10 +49,10 @@ rules:
     source: ranger-focus-spells
     spellId: {choice: $.feat.masterful-warden.spell}
 - key: warden-spell-proficiency
-  effect: spellcasting/increase-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency@2
   prerequisites:
   - hasChoice:
       name: $.feat.masterful-warden.spell
       isSet: true
   inputs:
-    proficiency: 2
+    rank: trained

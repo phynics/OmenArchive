@@ -39,15 +39,15 @@ rules:
     tradition: primal
     attribute: cha
 - key: add-skill-increase-1
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: deception
-    proficiencyCap: 2
+    rank: trained
 - key: add-skill-increase-2
-  effect: core/add-skill-increase
+  effect: core/add-skill-increase@2
   inputs:
     skill: nature
-    proficiencyCap: 2
+    rank: trained
 - key: configure-source-2
   effect: spellcasting/configure-source
   inputs:

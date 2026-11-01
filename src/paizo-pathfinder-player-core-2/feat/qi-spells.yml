@@ -33,9 +33,9 @@ rules:
     tradition: {choice: $.qi.tradition}
     attribute: wis
 - key: qi-spell-proficiency
-  effect: spellcasting/increase-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency@2
   inputs:
-    proficiency: 2
+    rank: trained
 - key: choice-feat-qi-spells-spell
   choice:
     name: $.feat.qi-spells.spell

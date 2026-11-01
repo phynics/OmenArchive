@@ -29,12 +29,12 @@ rules:
     type: core/attribute
     cases: [str, dex]
 - key: dedication-class-dc
-  effect: core/add-class-dc
+  effect: core/add-class-dc@2
   inputs:
-    proficiencyRank: 2
+    rank: trained
     className: ranger
     keyAttribute: {choice: $.ranger.class-dc-attribute}
 - key: dedication-spell-proficiency
-  effect: spellcasting/increase-spell-proficiency
+  effect: spellcasting/increase-spell-proficiency@2
   inputs:
-    proficiency: 2
+    rank: trained
