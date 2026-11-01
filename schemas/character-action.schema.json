@@ -23,6 +23,44 @@
           },
           "description": "List of traits associated with this action",
           "default": []
+        },
+        "learning": {
+          "type": "object",
+          "description": "The Learning a Spell table: what one more spell costs to learn, by spell rank. Rank 1 also prices a cantrip.",
+          "properties": {
+            "hoursPerRank": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Hours the learning takes for each rank of the spell"
+            },
+            "ranks": {
+              "type": "object",
+              "description": "The rows by spell rank, 1 to 10",
+              "patternProperties": {
+                "^([1-9]|10)$": {
+                  "type": "object",
+                  "properties": {
+                    "price": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "Price of the materials, in gold pieces"
+                    },
+                    "dc": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "Typical skill DC"
+                    }
+                  },
+                  "required": ["price", "dc"],
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false,
+              "minProperties": 1
+            }
+          },
+          "required": ["hoursPerRank", "ranks"],
+          "additionalProperties": false
         }
       },
       "required": [

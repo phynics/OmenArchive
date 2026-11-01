@@ -21,12 +21,22 @@ description: "Magical Traditions and Skills\nEach magical tradition has a corres
   the Price indicated in the Learning a Spell table.\n\t•\tAttempt a skill check for
   the skill corresponding to your tradition \\(DC determined by the GM, often close
   to the DC on the Learning a Spell Table\\). Uncommon or rare spells have higher
-  DCs; full guidelines for the GM appear on page 52 of GM Core.\nLearning a Spell\nSpell
-  Rank\nPrice\nTypical DC\n1st or cantrip\n2 gp\n15\n2nd\n6 gp\n18\n3rd\n16 gp\n20\n4th\n36
-  gp\n23\n5th\n70 gp\n26\n6th\n140 gp\n28\n7th\n300 gp\n31\n8th\n650 gp\n34\n9th\n1,500
-  gp\n36\n10th\n7,000 gp\n41"
+  DCs; full guidelines for the GM appear on page 52 of GM Core."
 criticalSuccess: You expend half the materials and learn the spell.
 success: You expend the materials and learn the spell.
 failure: You fail to learn the spell but can try again after you gain a level. The
   materials aren't expended.
 criticalFailure: As failure, except you expend half the materials.
+learning:
+  hoursPerRank: 1
+  ranks:
+    1: {price: 2, dc: 15}
+    2: {price: 6, dc: 18}
+    3: {price: 16, dc: 20}
+    4: {price: 36, dc: 23}
+    5: {price: 70, dc: 26}
+    6: {price: 140, dc: 28}
+    7: {price: 300, dc: 31}
+    8: {price: 650, dc: 34}
+    9: {price: 1500, dc: 36}
+    10: {price: 7000, dc: 41}

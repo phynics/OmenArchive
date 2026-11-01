@@ -38,6 +38,18 @@ criticalFailure: |
 
 Action fields include: `count` (`one_action`, `two_actions`, `three_actions`, `reaction`, `free_action`), `requirements`, `trigger`, `frequency`, `success`, `criticalSuccess`, `failure`, and `criticalFailure`.
 
+The Learn a Spell action also has `learning`, the printed Learning a Spell table: what one more spell costs, by spell rank.
+
+```yaml
+learning:
+  hoursPerRank: 1          # Hours the learning takes for each rank of the spell
+  ranks:                   # Rank 1 also prices a cantrip
+    1: {price: 2, dc: 15}  # price in gold pieces, typical skill DC
+    2: {price: 6, dc: 18}
+```
+
+A rank is a whole number from 1 to 10, and every row has both a `price` and a `dc`.
+
 ---
 
 ## 2. Spells
