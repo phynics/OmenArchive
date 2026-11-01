@@ -22,14 +22,9 @@ mechanicsScope: builder
 foundryID: ItLZL9Bd6xwgfeB8
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
-      - anySkill: {}
-    description: 'Detective''s Kit: +1 item bonus to Perception checks and skill checks
-      (Investigate).'
-    numeric: {amount: 1, applicability: {description: Investigate, kind: situational},
-      type: item}
+    target: [perception, skills]
+    amount: 1
+    type: item
+    when: Investigate

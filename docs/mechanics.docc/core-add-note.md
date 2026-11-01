@@ -1,18 +1,16 @@
-# core/add-play-note
+# core/add-note
 
-Adds a note to the rolls it targets at the table, optionally only in a situation or while a condition on the character holds. A change to the degree of success is a note.
+Adds a note to the rolls it targets, optionally only in a situation the player toggles (when) or while a condition on the character holds (requires). A change to the degree of success is a note.
 
-Effect `add-play-note`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
+Effect `add-note`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs
 
 | Input | Type | Required |
 |---|---|---|
-| `source` | `string` | yes |
-| `slug` | `string` | yes |
 | `target` | `roll-description` | yes |
 | `text` | `string` | yes |
-| `condition` | `string` | yes |
+| `when` | `string` | no |
 | `requires` | `sheet-value` | no |
 
 ## Writes
@@ -26,11 +24,8 @@ Used by 63 rules.
 Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/chemical-hardiness.yml`:
 
 ```yaml
-- effect: core/add-play-note
+- effect: core/add-note
   inputs:
-    condition: ''
-    slug: degree
-    source: Chemical Hardiness
     target:
       description:
       - savingThrow:

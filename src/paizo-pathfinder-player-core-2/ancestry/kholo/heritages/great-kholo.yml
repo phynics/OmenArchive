@@ -9,17 +9,12 @@ description: You're an imposing, powerful kholo, with tawny fur and brown spots 
 mechanicsScope: builder
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
-    description: 'Great Kholo: +1 circumstance bonus to Athletics checks (Shove or
-      Trip or Reposition).'
-    numeric: {amount: 1, applicability: {description: Shove or Trip or Reposition,
-        kind: situational}, type: circumstance}
+    target: athletics
+    amount: 1
+    type: circumstance
+    when: Shove or Trip or Reposition
 - key: active-effect-like-1
   effect: core/set-ancestry-hit-points
   inputs:

@@ -17,17 +17,9 @@ mechanicsScope: mixed
 foundryID: ZZzgqFTOtUgnzSLZ
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Monstrous Peacemaker
-    slug: diplomacy-perception
-    target:
-      description:
-      - skill:
-          '_0':
-            diplomacy: {}
-      - savingThrow:
-          '_0': perception
+    target: [diplomacy, perception]
     amount: 1
-    bonusType: circumstance
-    condition: monstrous peacemaker
+    type: circumstance
+    when: monstrous peacemaker

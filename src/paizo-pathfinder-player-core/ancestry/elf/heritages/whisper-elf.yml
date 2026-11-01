@@ -14,13 +14,9 @@ description: Your ears are finely tuned, able to detect even the slightest whisp
 mechanicsScope: builder
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
-    description: 'Whisper Elf: +2 circumstance bonus to Perception checks (in some
-      situations).'
-    numeric: {amount: 2, applicability: {description: in some situations, kind: situational},
-      type: circumstance}
+    target: perception
+    amount: 2
+    type: circumstance
+    when: in some situations

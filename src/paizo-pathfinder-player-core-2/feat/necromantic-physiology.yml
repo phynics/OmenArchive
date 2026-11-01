@@ -16,23 +16,15 @@ mechanicsScope: mixed
 foundryID: GgerQCCsGibaGWq0
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Necromantic Physiology
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 2
-    bonusType: circumstance
-    condition: the effect has the disease trait
+    type: circumstance
+    when: the effect has the disease trait
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Necromantic Physiology
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
-    condition: the effect has the disease trait
+    when: the effect has the disease trait

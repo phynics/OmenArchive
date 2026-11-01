@@ -14,12 +14,9 @@ description: 'You have an inborn ability to detect and understand magical phenom
 mechanicsScope: mixed
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - anySkill: {}
-    description: 'Seer Elf: +1 circumstance bonus to skill checks (Identify Magic
-      or Decipher Writing).'
-    numeric: {amount: 1, applicability: {description: Identify Magic or Decipher Writing,
-        kind: situational}, type: circumstance}
+    target: skills
+    amount: 1
+    type: circumstance
+    when: Identify Magic or Decipher Writing

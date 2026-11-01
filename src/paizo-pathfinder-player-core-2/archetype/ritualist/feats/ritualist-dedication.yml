@@ -27,13 +27,9 @@ mechanicsScope: mixed
 foundryID: kU4K9jj9qnktoAaQ
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Ritualist Dedication
-    slug: skill-check
-    target:
-      description:
-      - anySkill: {}
+    target: skills
     amount: 2
-    bonusType: circumstance
-    condition: primaryRitualCheck
+    type: circumstance
+    when: primaryRitualCheck

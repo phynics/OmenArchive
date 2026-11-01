@@ -21,14 +21,9 @@ mechanicsScope: builder
 foundryID: laU7xnX42wXch2Dv
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            stealth: {}
-    description: 'Concealed Sheath: +1 item bonus to Stealth checks (hide or conceal
-      contents).'
-    numeric: {amount: 1, applicability: {description: hide or conceal contents, kind: situational},
-      type: item}
+    target: stealth
+    amount: 1
+    type: item
+    when: hide or conceal contents

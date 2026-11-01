@@ -21,13 +21,9 @@ mechanicsScope: mixed
 foundryID: 4kz3vhkKPUuXBpxk
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
-    description: 'Crowbar (Levered): +1 item bonus to Athletics checks (Force Open).'
-    numeric: {amount: 1, applicability: {description: Force Open, kind: situational},
-      type: item}
+    target: athletics
+    amount: 1
+    type: item
+    when: Force Open

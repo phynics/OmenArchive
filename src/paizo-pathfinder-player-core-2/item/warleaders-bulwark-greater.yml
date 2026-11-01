@@ -38,27 +38,15 @@ mechanicsScope: builder
 foundryID: XKON66YXYLXlGPPg
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            diplomacy: {}
-    description: 'Warleader''s Bulwark (Greater): +3 item bonus to Diplomacy checks.'
-    numeric: {amount: 3, applicability: {kind: always}, type: item}
+    target: diplomacy
+    amount: 3
+    type: item
 - key: flat-modifier-2
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            deception: {}
-      - skill:
-          '_0':
-            stealth: {}
-    description: 'Warleader''s Bulwark (Greater): -3 item bonus to Deception checks
-      and Stealth checks (Hide or Sneak or Impersonate).'
-    numeric: {amount: -3, applicability: {description: Hide or Sneak or Impersonate,
-        kind: situational}, type: item}
+    target: [deception, stealth]
+    amount: -3
+    type: item
+    when: Hide or Sneak or Impersonate

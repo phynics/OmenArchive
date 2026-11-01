@@ -21,15 +21,10 @@ mechanicsScope: mixed
 foundryID: zAZJpgeEf5TWvdq4
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Watchful Halfling
-    slug: perception
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
+    target: perception
     amount: 2
-    bonusType: circumstance
-    condition: Sense Motive; the target has the possessed trait or the target has
-      the enchanted trait
+    type: circumstance
+    when: Sense Motive; the target has the possessed trait or the target has the enchanted
+      trait

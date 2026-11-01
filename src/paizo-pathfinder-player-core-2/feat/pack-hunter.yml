@@ -12,13 +12,9 @@ mechanicsScope: mixed
 foundryID: aGpH394T1xr2ey88
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Pack Hunter
-    slug: skill-check
-    target:
-      description:
-      - anySkill: {}
+    target: skills
     amount: 2
-    bonusType: circumstance
-    condition: Aid
+    type: circumstance
+    when: Aid

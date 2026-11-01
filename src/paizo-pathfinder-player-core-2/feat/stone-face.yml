@@ -14,13 +14,9 @@ unsupportedReason: 'FlatModifier at position 2: The selector will-dc is not a ro
 foundryID: Nn80wBZYJZxcuKsJ
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Stone Face
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 1
-    bonusType: circumstance
-    condition: the effect has the fear trait
+    type: circumstance
+    when: the effect has the fear trait

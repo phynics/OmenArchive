@@ -21,24 +21,9 @@ mechanicsScope: mixed
 foundryID: B4nuabUvA1rk7Hej
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Multilingual Cipher
-    slug: arcana-occultism-religion-society
-    target:
-      description:
-      - skill:
-          '_0':
-            arcana: {}
-      - skill:
-          '_0':
-            occultism: {}
-      - skill:
-          '_0':
-            religion: {}
-      - skill:
-          '_0':
-            society: {}
+    target: [arcana, occultism, religion, society]
     amount: 1
-    bonusType: circumstance
-    condition: Decipher Writing
+    type: circumstance
+    when: Decipher Writing

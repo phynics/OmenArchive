@@ -12,15 +12,8 @@ mechanicsScope: mixed
 foundryID: GsXKThvUN2Mi9eNk
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Peerless Form
-    slug: fortitude-will
-    target:
-      description:
-      - savingThrow:
-          '_0': fortitude
-      - savingThrow:
-          '_0': will
+    target: [fortitude, will]
     amount: 2
-    bonusType: status
+    type: status

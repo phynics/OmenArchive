@@ -14,13 +14,9 @@ mechanicsScope: mixed
 foundryID: 2RmsQrLySNYQ4uIn
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Spirit Soother
-    slug: skill-check
-    target:
-      description:
-      - anySkill: {}
+    target: skills
     amount: 1
-    bonusType: circumstance
-    condition: the source is trait haunt
+    type: circumstance
+    when: the source is trait haunt

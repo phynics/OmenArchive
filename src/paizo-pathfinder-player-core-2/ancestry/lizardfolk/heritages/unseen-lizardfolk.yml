@@ -12,14 +12,9 @@ description: You can change your skin color to blend in with your surroundings, 
 mechanicsScope: builder
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            stealth: {}
-    description: 'Unseen Lizardfolk: +2 circumstance bonus to Stealth checks (in some
-      situations).'
-    numeric: {amount: 2, applicability: {description: in some situations, kind: situational},
-      type: circumstance}
+    target: stealth
+    amount: 2
+    type: circumstance
+    when: in some situations

@@ -15,15 +15,9 @@ mechanicsScope: mixed
 foundryID: BuaOQzmRNgIhGsfN
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Blessed Blood (Nephilim)
-    slug: crafting
-    target:
-      description:
-      - skill:
-          '_0':
-            crafting: {}
+    target: crafting
     amount: 4
-    bonusType: circumstance
-    condition: Craft; item holy water; own blood
+    type: circumstance
+    when: Craft; item holy water; own blood

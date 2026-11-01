@@ -13,23 +13,15 @@ mechanicsScope: mixed
 foundryID: cRMUYCnkkE9lSEhh
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Irrepressible (Halfling)
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
-    condition: the effect has the emotion trait
+    when: the effect has the emotion trait
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Irrepressible (Halfling)
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a critical failure on a saving throw, the result is one degree
       better.
-    condition: the effect has the emotion trait; you heritage gutsy halfling
+    when: the effect has the emotion trait; you heritage gutsy halfling

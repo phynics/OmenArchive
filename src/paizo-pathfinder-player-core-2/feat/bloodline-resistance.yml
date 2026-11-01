@@ -11,13 +11,9 @@ mechanicsScope: mixed
 foundryID: zf6Poru1jNmrO3kk
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Bloodline Resistance
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 1
-    bonusType: status
-    condition: magical or arcane or divine or occult or primal or item type spell
+    type: status
+    when: magical or arcane or divine or occult or primal or item type spell

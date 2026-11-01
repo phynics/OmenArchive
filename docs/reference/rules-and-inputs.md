@@ -69,6 +69,15 @@ inputs:
   by a choice); `add-trait {trait, as?: ancestry}` grants a trait; `add-speed {movement, speed | bonus}` sets a
   movement type (`land`, `climb`, `swim`, `fly`, `burrow`) or adds a bonus to land Speed; `add-sense {sense, acuity?,
   range?}` grants a sense.
+- **Modifiers and notes.** `add-modifier {target, amount, type, when?, requires?}` gives a typed bonus or penalty to
+  rolls (`type: circumstance`); a target reads as a word or a list of words (`saving-throws`, `skills`, `attack-rolls`,
+  `perception`, `fortitude`, `reflex`, `will`, `speed`, a skill such as `athletics`, or `[fortitude, reflex]`), and any other
+  roll description is written out, and `add-note {target, text, when?,
+  requires?}` adds a note. The record's own name labels them; there is no `source` or `slug`. The two optional inputs
+  differ: `when` is **text the player judges** (`when: the target is physically menaced`), so the modifier shows
+  with a toggle that starts off; `requires` is **a condition the sheet reads** (`requires: (gte $.skills.diplomacy.rank 3)`),
+  so the modifier appears only while it holds, with no toggle of its own. A bonus that grows when a condition
+  holds is a second modifier of the same type with a `requires`; the highest bonus of a type applies.
 - **Hit points are one effect.** `add-hit-points {amount}` takes a number or an expression, worked out for the level
   shown: `amount: 4`, `amount: $.level` (a bonus for each level), `amount: (multiply 3 $.archetype.fighter.feat-count)` (a bonus
   for each feat from an archetype).
@@ -104,8 +113,7 @@ inputs:
 ### Left-out inputs
 
 An input that holds its default is left out, and the reader puts it back. The defaults are
-`selfScaling: false` (every proficiency effect), `mode: add` and `condition: ''` (`add-play-modifier`),
-`condition: ''` (`add-play-note`) and `exceptions: ''` (`add-resistance`). An optional input has no default: it is
+`selfScaling: false` (every proficiency effect) and `exceptions: ''` (`add-resistance`). An optional input has no default: it is
 absent when the rule doesn't use it (`add-sense`'s `acuity` and `range`, `add-speed`'s `speed` and `bonus`,
 `add-trait`'s `as`).
 

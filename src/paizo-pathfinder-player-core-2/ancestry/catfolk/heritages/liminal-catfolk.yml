@@ -11,14 +11,9 @@ description: You've inherited a closeness to the far corners of the world, where
 mechanicsScope: builder
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            occultism: {}
-    description: 'Liminal Catfolk: +1 circumstance bonus to Occultism checks (Recall
-      Knowledge).'
-    numeric: {amount: 1, applicability: {description: Recall Knowledge, kind: situational},
-      type: circumstance}
+    target: occultism
+    amount: 1
+    type: circumstance
+    when: Recall Knowledge

@@ -19,28 +19,16 @@ mechanicsScope: mixed
 foundryID: cmuvvPJvt2R16vGe
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Fresh Ingredients
-    slug: fresh-herbs-wild
-    target:
-      description:
-      - skill:
-          '_0':
-            nature: {}
+    target: nature
     amount: 4
-    bonusType: circumstance
-    condition: Treat Wounds; natural medicine; terrain wilderness
+    type: circumstance
+    when: Treat Wounds; natural medicine; terrain wilderness
 - key: annotation-2
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Fresh Ingredients
-    slug: fresh-herbs
-    target:
-      description:
-      - skill:
-          '_0':
-            nature: {}
+    target: nature
     amount: 2
-    bonusType: circumstance
-    condition: Treat Wounds; natural medicine
+    type: circumstance
+    when: Treat Wounds; natural medicine

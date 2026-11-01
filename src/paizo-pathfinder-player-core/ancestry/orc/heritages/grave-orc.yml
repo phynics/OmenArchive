@@ -14,11 +14,9 @@ rules:
     type: void
     value: (max 1 (divide $.level 2))
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
-    description: 'Grave Orc: +1 circumstance bonus to saving throws (in some situations).'
-    numeric: {amount: 1, applicability: {description: in some situations, kind: situational},
-      type: circumstance}
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: in some situations

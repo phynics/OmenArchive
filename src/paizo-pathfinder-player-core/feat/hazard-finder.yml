@@ -16,25 +16,16 @@ unsupportedReason: 'FlatModifier at position 2: The selector ac is not a roll th
 foundryID: 16MOW7deoOoDwE9z
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Hazard Finder
-    slug: perception
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
+    target: perception
     amount: 1
-    bonusType: circumstance
-    condition: trap or hazard
+    type: circumstance
+    when: trap or hazard
 - key: annotation-3
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Hazard Finder
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 1
-    bonusType: circumstance
-    condition: trap or hazard
+    type: circumstance
+    when: trap or hazard

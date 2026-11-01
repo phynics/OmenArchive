@@ -11,13 +11,9 @@ mechanicsScope: mixed
 foundryID: TpWS2b9ISHnXVfZg
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Timeless Nature
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 2
-    bonusType: status
-    condition: disease or primal
+    type: status
+    when: disease or primal

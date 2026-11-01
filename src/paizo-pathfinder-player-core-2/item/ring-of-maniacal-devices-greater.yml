@@ -39,26 +39,16 @@ mechanicsScope: builder
 foundryID: Wkm2VYPsfGjWBtQe
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            thievery: {}
-    description: 'Ring of Maniacal Devices (Greater): +3 item bonus to Thievery checks
-      (Disable a Device or Pick a Lock).'
-    numeric: {amount: 3, applicability: {description: Disable a Device or Pick a Lock,
-        kind: situational}, type: item}
+    target: thievery
+    amount: 3
+    type: item
+    when: Disable a Device or Pick a Lock
 - key: flat-modifier-2
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            crafting: {}
-    description: 'Ring of Maniacal Devices (Greater): +3 item bonus to Crafting checks
-      (Craft or Repair).'
-    numeric: {amount: 3, applicability: {description: Craft or Repair, kind: situational},
-      type: item}
+    target: crafting
+    amount: 3
+    type: item
+    when: Craft or Repair

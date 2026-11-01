@@ -29,12 +29,8 @@ unsupportedReason: 'Note at position 2: The text is a localization key, which th
 foundryID: v7Bt6hjmzYnLFLeG
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Magical Shorthand
-    slug: degree
-    target:
-      description:
-      - anySkill: {}
+    target: skills
     text: When you roll a success on a skill check, the result is one degree better.
-    condition: Learn A Spell
+    when: Learn A Spell

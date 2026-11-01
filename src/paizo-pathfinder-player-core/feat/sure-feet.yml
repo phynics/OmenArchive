@@ -17,28 +17,16 @@ unsupportedReason: 'Note at position 1: The text is a localization key, which th
 foundryID: ehvHedIwPcxq9cRt
 rules:
 - key: annotation-3
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Sure Feet
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            acrobatics: {}
+    target: acrobatics
     text: When you roll a success on an Acrobatics check, the result is one degree
       better.
-    condition: Balance
+    when: Balance
 - key: annotation-4
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Sure Feet
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
+    target: athletics
     text: When you roll a success on an Athletics check, the result is one degree
       better.
-    condition: Climb
+    when: Climb

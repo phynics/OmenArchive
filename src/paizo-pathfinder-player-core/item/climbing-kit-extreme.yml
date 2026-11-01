@@ -25,12 +25,9 @@ mechanicsScope: builder
 foundryID: TWv2EeDJaCjtmGUN
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
-    description: 'Climbing Kit (Extreme): +1 item bonus to Athletics checks (Climb).'
-    numeric: {amount: 1, applicability: {description: Climb, kind: situational}, type: item}
+    target: athletics
+    amount: 1
+    type: item
+    when: Climb

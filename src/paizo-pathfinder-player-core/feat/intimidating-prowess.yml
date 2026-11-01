@@ -20,29 +20,17 @@ mechanicsScope: mixed
 foundryID: XFJiGllNZp8Xebda
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Intimidating Prowess
-    slug: intimidating-prowess
-    target:
-      description:
-      - skill:
-          '_0':
-            intimidation: {}
+    target: intimidation
     amount: 1
-    bonusType: circumstance
-    condition: the target is physically menaced; Coerce or Demoralize
+    type: circumstance
+    when: the target is physically menaced; Coerce or Demoralize
 - key: annotation-2
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Intimidating Prowess
-    slug: intimidating-prowess
-    target:
-      description:
-      - skill:
-          '_0':
-            intimidation: {}
+    target: intimidation
     amount: 2
-    bonusType: untyped
-    mode: upgrade
+    type: circumstance
+    when: the target is physically menaced; Coerce or Demoralize
     requires: (and (gte $.attributes.str 5) (gte $.skills.intimidation.rank 3))

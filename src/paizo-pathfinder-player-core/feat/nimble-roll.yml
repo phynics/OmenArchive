@@ -22,14 +22,9 @@ mechanicsScope: mixed
 foundryID: F6ZAceuDpiM9bUiF
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Nimble Roll
-    slug: reflex
-    target:
-      description:
-      - savingThrow:
-          '_0': reflex
+    target: reflex
     amount: 2
-    bonusType: circumstance
-    condition: nimble dodge
+    type: circumstance
+    when: nimble dodge

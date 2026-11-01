@@ -24,14 +24,9 @@ mechanicsScope: mixed
 foundryID: 3ld14dsn2RLu9owg
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            performance: {}
-    description: 'Musical Instrument (Virtuoso handheld): +1 item bonus to Performance
-      checks (playing).'
-    numeric: {amount: 1, applicability: {description: playing, kind: situational},
-      type: item}
+    target: performance
+    amount: 1
+    type: item
+    when: playing

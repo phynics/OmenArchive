@@ -11,23 +11,16 @@ description: You were born in a rain forest with only tangles of trees providing
 mechanicsScope: builder
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
-    description: 'Rainfall Orc: +2 circumstance bonus to Athletics checks (Climb or
-      Swim).'
-    numeric: {amount: 2, applicability: {description: Climb or Swim, kind: situational},
-      type: circumstance}
+    target: athletics
+    amount: 2
+    type: circumstance
+    when: Climb or Swim
 - key: add-roll-modifier-2
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
-    description: 'Rainfall Orc: +1 circumstance bonus to saving throws (in some situations).'
-    numeric: {amount: 1, applicability: {description: in some situations, kind: situational},
-      type: circumstance}
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: in some situations

@@ -22,27 +22,15 @@ unsupportedReason: 'Note at position 2: The text is a localization key, which th
 foundryID: bkZgWFSFV4cAf5Ot
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Risky Surgery
-    slug: medicine
-    target:
-      description:
-      - skill:
-          '_0':
-            medicine: {}
+    target: medicine
     amount: 2
-    bonusType: circumstance
-    condition: Treat Wounds; risky surgery
+    type: circumstance
+    when: Treat Wounds; risky surgery
 - key: annotation-3
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Risky Surgery
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            medicine: {}
+    target: medicine
     text: When you roll a success on a Medicine check, the result is one degree better.
-    condition: risky surgery; Treat Wounds
+    when: risky surgery; Treat Wounds

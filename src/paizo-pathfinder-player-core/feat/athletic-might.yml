@@ -13,28 +13,16 @@ mechanicsScope: mixed
 foundryID: Wwr8VilSybQgVtin
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Athletic Might
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
+    target: athletics
     text: When you roll a success on an Athletics check, the result is one degree
       better.
-    condition: Climb or Swim
+    when: Climb or Swim
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Athletic Might
-    slug: note
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
+    target: athletics
     text: Whenever you roll a success on an Athletics check to Climb or Swim, you
       get a critical success instead.
-    condition: Climb or Swim
+    when: Climb or Swim

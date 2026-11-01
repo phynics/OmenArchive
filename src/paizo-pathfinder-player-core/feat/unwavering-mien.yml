@@ -18,13 +18,9 @@ unsupportedReason: 'Note at position 2: The text is a localization key, which th
 foundryID: uW0VSyy75YrsvtWz
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Unwavering Mien
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll any degree of success on a saving throw, the result is one
       degree better.
-    condition: sleep
+    when: sleep

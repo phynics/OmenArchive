@@ -22,13 +22,9 @@ mechanicsScope: builder
 foundryID: YhkomhtKBK3i9C7Q
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            deception: {}
-    description: 'Disguise Kit (Elite): +1 item bonus to Deception checks (Impersonate).'
-    numeric: {amount: 1, applicability: {description: Impersonate, kind: situational},
-      type: item}
+    target: deception
+    amount: 1
+    type: item
+    when: Impersonate

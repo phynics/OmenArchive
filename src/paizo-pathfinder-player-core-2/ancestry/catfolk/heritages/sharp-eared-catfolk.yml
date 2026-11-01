@@ -11,12 +11,9 @@ description: You were born with big, expressive ears that move with your moods a
 mechanicsScope: builder
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
-    description: 'Sharp-Eared Catfolk: +2 circumstance bonus to Perception checks
-      (Seek).'
-    numeric: {amount: 2, applicability: {description: Seek, kind: situational}, type: circumstance}
+    target: perception
+    amount: 2
+    type: circumstance
+    when: Seek

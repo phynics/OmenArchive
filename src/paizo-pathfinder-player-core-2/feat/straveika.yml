@@ -17,14 +17,9 @@ mechanicsScope: mixed
 foundryID: PVkAEBlRSJHe3JCz
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Straveika
-    slug: perception
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
+    target: perception
     amount: 1
-    bonusType: circumstance
-    condition: Sense Motive or Lie
+    type: circumstance
+    when: Sense Motive or Lie

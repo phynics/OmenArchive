@@ -25,41 +25,23 @@ mechanicsScope: mixed
 foundryID: QvBIYW6aAqoiyim3
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Exhort the Faithful
-    slug: diplomacy
-    target:
-      description:
-      - skill:
-          '_0':
-            diplomacy: {}
+    target: diplomacy
     amount: 2
-    bonusType: circumstance
-    condition: Request; member of your faith
+    type: circumstance
+    when: Request; member of your faith
 - key: annotation-2
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Exhort the Faithful
-    slug: intimidation
-    target:
-      description:
-      - skill:
-          '_0':
-            intimidation: {}
+    target: intimidation
     amount: 2
-    bonusType: circumstance
-    condition: Coerce; member of your faith
+    type: circumstance
+    when: Coerce; member of your faith
 - key: annotation-3
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Exhort the Faithful
-    slug: religion
-    target:
-      description:
-      - skill:
-          '_0':
-            religion: {}
+    target: religion
     amount: 2
-    bonusType: circumstance
-    condition: member of your faith; Request or Coerce
+    type: circumstance
+    when: member of your faith; Request or Coerce

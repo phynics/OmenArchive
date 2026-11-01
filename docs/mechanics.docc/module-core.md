@@ -83,12 +83,11 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-language>
 - <doc:core-add-lore-skill-increase-2>
 - <doc:core-add-membership>
+- <doc:core-add-modifier>
+- <doc:core-add-note>
 - <doc:core-add-placeholder>
-- <doc:core-add-play-modifier>
-- <doc:core-add-play-note>
 - <doc:core-add-resistance-2>
 - <doc:core-add-resource-pool>
-- <doc:core-add-roll-modifier-2>
 - <doc:core-add-saving-throw-2>
 - <doc:core-add-sense-2>
 - <doc:core-add-skill-increase-2>

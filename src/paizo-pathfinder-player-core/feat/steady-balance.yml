@@ -19,15 +19,9 @@ unsupportedReason: 'Note at position 1: The text is a localization key, which th
 foundryID: CnqMJR8e9jqJR7MM
 rules:
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Steady Balance
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            acrobatics: {}
+    target: acrobatics
     text: When you roll a success on an Acrobatics check, the result is one degree
       better.
-    condition: Balance
+    when: Balance

@@ -31,13 +31,9 @@ mechanicsScope: builder
 foundryID: YfRwH0wIEmuNDL7I
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
-    description: 'Mariner''s Splint: +1 item bonus to Athletics checks (Swim or Climb).'
-    numeric: {amount: 1, applicability: {description: Swim or Climb, kind: situational},
-      type: item}
+    target: athletics
+    amount: 1
+    type: item
+    when: Swim or Climb

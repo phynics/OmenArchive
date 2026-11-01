@@ -22,13 +22,9 @@ unsupportedReason: 'FlatModifier at position 1: The predicate uses lte, which is
 foundryID: SPyvwsiSghySIEw2
 rules:
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Dragon's Presence
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
       When you roll a failure on a saving throw, the result is one degree worse.
-    condition: the effect has the fear trait
+    when: the effect has the fear trait

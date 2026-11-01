@@ -17,13 +17,9 @@ mechanicsScope: builder
 foundryID: rV7MTDCseZmEZKDw
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
-    description: 'Spyglass (Fine): +1 item bonus to Perception checks (Notice details
-      at distance).'
-    numeric: {amount: 1, applicability: {description: Notice details at distance,
-        kind: situational}, type: item}
+    target: perception
+    amount: 1
+    type: item
+    when: Notice details at distance

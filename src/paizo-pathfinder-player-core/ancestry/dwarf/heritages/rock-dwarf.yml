@@ -15,24 +15,16 @@ description: 'Your ancestors lived and worked among the ancient stones of the mo
 mechanicsScope: builder
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - savingThrow:
-          '_0': fortitude
-      - savingThrow:
-          '_0': reflex
-    description: 'Rock Dwarf: +2 circumstance bonus to Fortitude saves and Reflex
-      saves (Shove or Trip or Reposition).'
-    numeric: {amount: 2, applicability: {description: Shove or Trip or Reposition,
-        kind: situational}, type: circumstance}
+    target: [fortitude, reflex]
+    amount: 2
+    type: circumstance
+    when: Shove or Trip or Reposition
 - key: add-roll-modifier-2
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
-    description: 'Rock Dwarf: +2 circumstance bonus to saving throws (in some situations).'
-    numeric: {amount: 2, applicability: {description: in some situations, kind: situational},
-      type: circumstance}
+    target: saving-throws
+    amount: 2
+    type: circumstance
+    when: in some situations

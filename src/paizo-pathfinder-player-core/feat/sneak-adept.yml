@@ -14,14 +14,8 @@ mechanicsScope: mixed
 foundryID: 2Nu4ZdKQM8hx8x5D
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Sneak Adept
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            stealth: {}
+    target: stealth
     text: When you roll a failure on a Stealth check, you get a success instead.
-    condition: Sneak
+    when: Sneak

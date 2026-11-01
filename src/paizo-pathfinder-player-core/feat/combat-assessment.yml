@@ -17,13 +17,9 @@ mechanicsScope: mixed
 foundryID: 5FyvwI24mnROzh61
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Combat Assessment
-    slug: combat-assessment
-    target:
-      description:
-      - anySkill: {}
+    target: skills
     amount: 2
-    bonusType: circumstance
-    condition: Recall Knowledge; critical assessment
+    type: circumstance
+    when: Recall Knowledge; critical assessment

@@ -13,13 +13,9 @@ mechanicsScope: mixed
 foundryID: HBhLR980Q0cb2rxp
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Perfect Debilitation
-    slug: note
-    target:
-      description:
-      - anyAttack: {}
+    target: attack-rolls
     text: If your bomb hits, the target must critically succed at its Fortitude save
       to avoid the condition the bomb imposes.
-    condition: alchemical; bomb; debilitating bomb
+    when: alchemical; bomb; debilitating bomb

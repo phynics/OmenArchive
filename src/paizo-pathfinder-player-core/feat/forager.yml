@@ -23,15 +23,9 @@ unsupportedReason: 'Note at position 2: The text is a localization key, which th
 foundryID: 8qebBeOJsyRIchcu
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Forager
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            survival: {}
+    target: survival
     text: When you roll a failure on a Survival check, you get a success instead.
       When you roll a critical failure on a Survival check, you get a success instead.
-    condition: Subsist
+    when: Subsist

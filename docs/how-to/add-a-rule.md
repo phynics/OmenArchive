@@ -7,10 +7,9 @@ This guide explains how to add mechanical logic, stat bonuses, grants, or player
 Browse the native DocC catalog at [`docs/mechanics.docc/`](../mechanics.docc/) or inspect `mechanics/*.json` to find the registered effect that matches your mechanic.
 
 Common effects include:
-- `core/add-language`: Grants a known language.
 - `core/add-sense`: Grants a sensory capability like darkvision or low-light vision.
-- `core/add-speed-bonus`: Grants a speed bonus.
-- `core/add-roll-modifier`: Applies a bonus/penalty to rolls, AC, or DCs.
+- `core/add-speed`: Sets a movement speed or adds a bonus to land Speed.
+- `core/add-modifier`: Applies a typed bonus/penalty to rolls, AC, or DCs.
 - `core/add-feat`: Grants an additional feat (e.g. at a specific level).
 
 ## 2. Check the Effect's Inputs and Identity

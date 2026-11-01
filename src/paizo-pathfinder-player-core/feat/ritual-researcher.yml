@@ -19,13 +19,9 @@ mechanicsScope: mixed
 foundryID: DUuCOQ9FiZf7vS5b
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Ritual Researcher
-    slug: skill-check
-    target:
-      description:
-      - anySkill: {}
+    target: skills
     amount: 2
-    bonusType: circumstance
-    condition: ritual; primary check or secondary check
+    type: circumstance
+    when: ritual; primary check or secondary check

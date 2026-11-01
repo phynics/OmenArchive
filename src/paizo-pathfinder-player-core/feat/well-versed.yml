@@ -12,13 +12,9 @@ mechanicsScope: mixed
 foundryID: iX5HEqRImhKzfPR2
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Well-Versed
-    slug: well-versed
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 1
-    bonusType: circumstance
-    condition: auditory or illusion or linguistic or sonic or visual
+    type: circumstance
+    when: auditory or illusion or linguistic or sonic or visual

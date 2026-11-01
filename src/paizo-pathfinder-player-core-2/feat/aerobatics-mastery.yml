@@ -25,15 +25,9 @@ mechanicsScope: mixed
 foundryID: pKnX7MGZayqZui0Z
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Aerobatics Mastery
-    slug: acrobatics
-    target:
-      description:
-      - skill:
-          '_0':
-            acrobatics: {}
+    target: acrobatics
     amount: 2
-    bonusType: circumstance
-    condition: Maneuver In Flight
+    type: circumstance
+    when: Maneuver In Flight

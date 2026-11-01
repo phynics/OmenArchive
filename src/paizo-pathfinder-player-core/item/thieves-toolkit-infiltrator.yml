@@ -25,14 +25,9 @@ mechanicsScope: builder
 foundryID: 6nrCxNQFycUVFOV2
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            thievery: {}
-    description: 'Thieves'' Toolkit (Infiltrator): +1 item bonus to Thievery checks
-      (Disable a Device or Pick a Lock).'
-    numeric: {amount: 1, applicability: {description: Disable a Device or Pick a Lock,
-        kind: situational}, type: item}
+    target: thievery
+    amount: 1
+    type: item
+    when: Disable a Device or Pick a Lock

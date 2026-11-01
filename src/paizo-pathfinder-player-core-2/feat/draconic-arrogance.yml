@@ -17,13 +17,9 @@ mechanicsScope: mixed
 foundryID: EOmTf95t03y4IGdp
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Draconic Arrogance
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 2
-    bonusType: status
-    condition: you effect rage; the effect has the emotion trait
+    type: status
+    when: you effect rage; the effect has the emotion trait

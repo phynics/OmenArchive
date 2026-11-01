@@ -15,23 +15,15 @@ unsupportedReason: 'Note at position 2: The text is a localization key, which th
 foundryID: AogIo1gHLdz7DyHx
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Forlorn
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 1
-    bonusType: circumstance
-    condition: emotion
+    type: circumstance
+    when: emotion
 - key: annotation-3
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Forlorn
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
-    condition: emotion
+    when: emotion

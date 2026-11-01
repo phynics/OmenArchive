@@ -27,23 +27,16 @@ mechanicsScope: builder
 foundryID: 1M4SSDuTv2SwBltC
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            survival: {}
-    description: 'Survey Map (Atlas): +1 item bonus to Survival checks (mapped area).'
-    numeric: {amount: 1, applicability: {description: mapped area, kind: situational},
-      type: item}
+    target: survival
+    amount: 1
+    type: item
+    when: mapped area
 - key: add-roll-modifier-2
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - anySkill: {}
-    description: 'Survey Map (Atlas): +1 item bonus to skill checks (Recall knowledge
-      on mapped area).'
-    numeric: {amount: 1, applicability: {description: Recall knowledge on mapped area,
-        kind: situational}, type: item}
+    target: skills
+    amount: 1
+    type: item
+    when: Recall knowledge on mapped area

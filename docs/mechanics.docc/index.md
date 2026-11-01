@@ -49,9 +49,10 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:core-add-language>
 - <doc:core-add-lore-skill-increase-2>
 - <doc:core-add-membership>
+- <doc:core-add-modifier>
+- <doc:core-add-note>
 - <doc:core-add-placeholder>
 - <doc:core-add-resistance-2>
-- <doc:core-add-roll-modifier-2>
 - <doc:core-add-saving-throw-2>
 - <doc:core-add-sense-2>
 - <doc:core-add-skill-increase-2>

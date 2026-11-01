@@ -30,12 +30,8 @@ mechanicsScope: builder
 foundryID: 64mxKuxc9k98FkUi
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
-    description: 'Fire-Jump Ring: +2 item bonus to Athletics checks.'
-    numeric: {amount: 2, applicability: {kind: always}, type: item}
+    target: athletics
+    amount: 2
+    type: item

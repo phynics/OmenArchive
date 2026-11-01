@@ -14,15 +14,9 @@ mechanicsScope: mixed
 foundryID: cA1IIy6UEsgETXiX
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Furious Bully
-    slug: athletics
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
+    target: athletics
     amount: 2
-    bonusType: circumstance
-    condition: you effect rage; attack
+    type: circumstance
+    when: you effect rage; attack

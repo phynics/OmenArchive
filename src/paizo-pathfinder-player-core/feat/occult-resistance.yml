@@ -14,13 +14,9 @@ mechanicsScope: mixed
 foundryID: zPJ2NyMv97AfkN3P
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Occult Resistance
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 1
-    bonusType: circumstance
-    condition: the effect has the occult trait
+    type: circumstance
+    when: the effect has the occult trait

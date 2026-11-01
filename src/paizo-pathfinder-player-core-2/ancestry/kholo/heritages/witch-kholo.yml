@@ -11,14 +11,9 @@ description: You're a shaggy, dark-furred kholo capable of making some truly unc
 mechanicsScope: mixed
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            deception: {}
-    description: 'Witch Kholo: +1 circumstance bonus to Deception checks (Impersonate
-      or Create A Diversion).'
-    numeric: {amount: 1, applicability: {description: Impersonate or Create A Diversion,
-        kind: situational}, type: circumstance}
+    target: deception
+    amount: 1
+    type: circumstance
+    when: Impersonate or Create A Diversion

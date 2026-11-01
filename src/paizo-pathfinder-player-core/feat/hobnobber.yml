@@ -19,16 +19,10 @@ mechanicsScope: mixed
 foundryID: 4RjDxgvNXNl5GG9d
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Hobnobber
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            diplomacy: {}
+    target: diplomacy
     text: When you roll a critical failure on a Diplomacy check, the result is one
       degree better.
-    condition: Gather Information
+    when: Gather Information
     requires: (gte $.skills.diplomacy.rank 3)

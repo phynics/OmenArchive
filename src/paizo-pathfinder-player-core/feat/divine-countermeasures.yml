@@ -14,13 +14,9 @@ mechanicsScope: mixed
 foundryID: ovMIxhiStlPE7tty
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Divine Countermeasures
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 1
-    bonusType: circumstance
-    condition: the effect has the divine trait
+    type: circumstance
+    when: the effect has the divine trait

@@ -16,15 +16,9 @@ rules:
   inputs:
     hitPoints: 10
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - savingThrow:
-          '_0': fortitude
-      - savingThrow:
-          '_0': reflex
-    description: 'Root Leshy: +2 circumstance bonus to Fortitude saves and Reflex
-      saves (Shove or Trip or Reposition).'
-    numeric: {amount: 2, applicability: {description: Shove or Trip or Reposition,
-        kind: situational}, type: circumstance}
+    target: [fortitude, reflex]
+    amount: 2
+    type: circumstance
+    when: Shove or Trip or Reposition

@@ -19,36 +19,23 @@ mechanicsScope: mixed
 foundryID: scNrNhnGTgPIzoj7
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Ancestral Suspicion
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 2
-    bonusType: circumstance
-    condition: inflicts controlled
+    type: circumstance
+    when: inflicts controlled
 - key: annotation-2
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Ancestral Suspicion
-    slug: perception
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
+    target: perception
     amount: 2
-    bonusType: circumstance
-    condition: Sense Motive; ancestral suspicion
+    type: circumstance
+    when: Sense Motive; ancestral suspicion
 - key: annotation-3
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Ancestral Suspicion
-    slug: note
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on a saving throw against an effect that would make
       you controlled, you get a critical success instead.
-    condition: inflicts controlled
+    when: inflicts controlled

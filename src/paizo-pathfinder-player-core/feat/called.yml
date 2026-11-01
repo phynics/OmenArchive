@@ -14,35 +14,22 @@ mechanicsScope: mixed
 foundryID: 2vlQ09QIBli5u9Gz
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Called
-    slug: will
-    target:
-      description:
-      - savingThrow:
-          '_0': will
+    target: will
     amount: 1
-    bonusType: circumstance
-    condition: mental
+    type: circumstance
+    when: mental
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Called
-    slug: note
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on an saving throw against a mental effect that
       would make you controlled, you get a critical success instead.
-    condition: mental; inflicts controlled
+    when: mental; inflicts controlled
 - key: annotation-3
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Called
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
-    condition: mental; inflicts controlled
+    when: mental; inflicts controlled

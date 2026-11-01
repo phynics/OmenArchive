@@ -30,7 +30,7 @@ A UUID or identifier deterministically derived by the engine from a record's pat
 A JSON document in `mechanics/` that declares the signature, inputs, types, and writes of mechanics effects.
 
 ### Effect
-A discrete game mechanic registered in a mechanics module (e.g. `core/add-roll-modifier`, `core/add-language`).
+A discrete game mechanic registered in a mechanics module (e.g. `core/add-modifier`, `core/add-sense`).
 
 ### Family
 One of the 13 primary record categories in the archive (e.g. `action`, `spell`, `item`, `feat`, `class`).

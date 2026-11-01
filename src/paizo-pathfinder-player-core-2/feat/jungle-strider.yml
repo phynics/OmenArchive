@@ -15,15 +15,9 @@ mechanicsScope: mixed
 foundryID: M41PGiFlLE2tByUL
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Jungle Strider
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            acrobatics: {}
+    target: acrobatics
     text: When you roll a success on an Acrobatics check, the result is one degree
       better.
-    condition: Balance; terrain foliage or terrain forest
+    when: Balance; terrain foliage or terrain forest

@@ -28,12 +28,8 @@ mechanicsScope: builder
 foundryID: tr2eOlJMmBKBZtI9
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            intimidation: {}
-    description: 'Guise of the Smirking Devil: +2 item bonus to Intimidation checks.'
-    numeric: {amount: 2, applicability: {kind: always}, type: item}
+    target: intimidation
+    amount: 2
+    type: item

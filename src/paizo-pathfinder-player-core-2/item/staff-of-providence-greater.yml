@@ -42,26 +42,16 @@ mechanicsScope: builder
 foundryID: T1L6XbgMqJLDv2Pi
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            survival: {}
-    description: 'Staff of Providence (Greater): +1 item bonus to Survival checks
-      (Sense Direction or Subsist).'
-    numeric: {amount: 1, applicability: {description: Sense Direction or Subsist,
-        kind: situational}, type: item}
+    target: survival
+    amount: 1
+    type: item
+    when: Sense Direction or Subsist
 - key: flat-modifier-2
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            religion: {}
-    description: 'Staff of Providence (Greater): +1 item bonus to Religion checks
-      (Recall Knowledge).'
-    numeric: {amount: 1, applicability: {description: Recall Knowledge, kind: situational},
-      type: item}
+    target: religion
+    amount: 1
+    type: item
+    when: Recall Knowledge

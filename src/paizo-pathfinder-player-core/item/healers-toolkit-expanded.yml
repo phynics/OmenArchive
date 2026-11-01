@@ -23,14 +23,9 @@ mechanicsScope: builder
 foundryID: SGkOHFyBbzWdBk8D
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            medicine: {}
-    description: 'Healer''s Toolkit (Expanded): +1 item bonus to Medicine checks (Administer
-      First Aid or Treat Disease or Treat Poison or Treat Wounds).'
-    numeric: {amount: 1, applicability: {description: Administer First Aid or Treat
-          Disease or Treat Poison or Treat Wounds, kind: situational}, type: item}
+    target: medicine
+    amount: 1
+    type: item
+    when: Administer First Aid or Treat Disease or Treat Poison or Treat Wounds

@@ -14,15 +14,9 @@ mechanicsScope: mixed
 foundryID: evwCimenReYvcruj
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Animal Elocutionist
-    slug: diplomacy
-    target:
-      description:
-      - skill:
-          '_0':
-            diplomacy: {}
+    target: diplomacy
     amount: 1
-    bonusType: circumstance
-    condition: the target has the animal trait; Make An Impression
+    type: circumstance
+    when: the target has the animal trait; Make An Impression

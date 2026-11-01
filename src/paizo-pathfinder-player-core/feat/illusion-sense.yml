@@ -16,16 +16,9 @@ mechanicsScope: mixed
 foundryID: tFgsBRsEo9ZEA5fU
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Illusion Sense
-    slug: perception-will
-    target:
-      description:
-      - savingThrow:
-          '_0': perception
-      - savingThrow:
-          '_0': will
+    target: [perception, will]
     amount: 1
-    bonusType: circumstance
-    condition: illusion
+    type: circumstance
+    when: illusion

@@ -15,13 +15,8 @@ mechanicsScope: mixed
 foundryID: RmiMUZlae6yGUyXY
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Haughty Obstinacy
-    slug: degree
-    target:
-      description:
-      - savingThrow:
-          '_0': will
+    target: will
     text: When you roll a success on a Will save, the result is one degree better.
-    condition: mental; inflicts controlled
+    when: mental; inflicts controlled

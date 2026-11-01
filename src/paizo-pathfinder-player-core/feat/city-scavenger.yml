@@ -21,34 +21,16 @@ unsupportedReason: 'AdjustModifier at position 3: It names no selector. AdjustMo
 foundryID: g388ImzpenYBoiEF
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: City Scavenger
-    slug: scavenger-subsist
-    target:
-      description:
-      - skill:
-          '_0':
-            society: {}
-      - skill:
-          '_0':
-            survival: {}
+    target: [society, survival]
     amount: 1
-    bonusType: circumstance
-    condition: Subsist
+    type: circumstance
+    when: Subsist
 - key: annotation-2
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: City Scavenger
-    slug: scavenger-earn
-    target:
-      description:
-      - skill:
-          '_0':
-            society: {}
-      - skill:
-          '_0':
-            survival: {}
+    target: [society, survival]
     amount: 1
-    bonusType: circumstance
-    condition: Earn Income; with subsist
+    type: circumstance
+    when: Earn Income; with subsist

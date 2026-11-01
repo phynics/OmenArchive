@@ -31,12 +31,8 @@ mechanicsScope: builder
 foundryID: 7wuDdrF6HKPXyxqj
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            religion: {}
-    description: 'Prognostic Veil: +2 item bonus to Religion checks.'
-    numeric: {amount: 2, applicability: {kind: always}, type: item}
+    target: religion
+    amount: 2
+    type: item

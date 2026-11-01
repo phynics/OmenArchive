@@ -32,16 +32,8 @@ mechanicsScope: builder
 foundryID: uj09q6x8wPAZcMs9
 rules:
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
-      - skill:
-          '_0':
-            acrobatics: {}
-    description: 'Sash of Prowess (Greater): +3 item bonus to Athletics checks and
-      Acrobatics checks.'
-    numeric: {amount: 3, applicability: {kind: always}, type: item}
+    target: [athletics, acrobatics]
+    amount: 3
+    type: item

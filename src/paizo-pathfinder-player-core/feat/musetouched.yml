@@ -14,96 +14,54 @@ mechanicsScope: mixed
 foundryID: eSP2938INGUG9b3w
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Musetouched
-    slug: attack-acrobatics-athletics
-    target:
-      description:
-      - anyAttack: {}
-      - skill:
-          '_0':
-            acrobatics: {}
-      - skill:
-          '_0':
-            athletics: {}
+    target: [attack-rolls, acrobatics, athletics]
     amount: 1
-    bonusType: circumstance
-    condition: Escape
+    type: circumstance
+    when: Escape
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Musetouched
-    slug: degree
-    target:
-      description:
-      - anyAttack: {}
+    target: attack-rolls
     text: When you roll a success on an attack roll, the result is one degree better.
       When you roll a critical failure on an attack roll, the result is one degree
       better.
-    condition: Escape
+    when: Escape
 - key: annotation-3
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Musetouched
-    slug: note
-    target:
-      description:
-      - anyAttack: {}
+    target: attack-rolls
     text: When you roll a critical failure on a check to Escape, you get a failure
       instead, and when you roll a success, you get a critical success instead.
-    condition: Escape
+    when: Escape
 - key: annotation-4
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Musetouched
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
+    target: athletics
     text: When you roll a success on an Athletics check, the result is one degree
       better. When you roll a critical failure on an Athletics check, the result is
       one degree better.
-    condition: Escape
+    when: Escape
 - key: annotation-5
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Musetouched
-    slug: note
-    target:
-      description:
-      - skill:
-          '_0':
-            athletics: {}
+    target: athletics
     text: When you roll a critical failure on a check to Escape, you get a failure
       instead, and when you roll a success, you get a critical success instead.
-    condition: Escape
+    when: Escape
 - key: annotation-6
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Musetouched
-    slug: degree
-    target:
-      description:
-      - skill:
-          '_0':
-            acrobatics: {}
+    target: acrobatics
     text: When you roll a success on an Acrobatics check, the result is one degree
       better. When you roll a critical failure on an Acrobatics check, the result
       is one degree better.
-    condition: Escape
+    when: Escape
 - key: annotation-7
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Musetouched
-    slug: note
-    target:
-      description:
-      - skill:
-          '_0':
-            acrobatics: {}
+    target: acrobatics
     text: When you roll a critical failure on a check to Escape, you get a failure
       instead, and when you roll a success, you get a critical success instead.
-    condition: Escape
+    when: Escape

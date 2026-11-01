@@ -20,13 +20,9 @@ mechanicsScope: builder
 foundryID: aDsdYMPpVc8hOnM5
 rules:
 - key: add-roll-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - skill:
-          '_0':
-            crafting: {}
-    description: 'Repair Toolkit (Superb): +1 item bonus to Crafting checks (Repair).'
-    numeric: {amount: 1, applicability: {description: Repair, kind: situational},
-      type: item}
+    target: crafting
+    amount: 1
+    type: item
+    when: Repair

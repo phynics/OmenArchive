@@ -22,15 +22,9 @@ mechanicsScope: mixed
 foundryID: WC4xLBGmBsdOdHWu
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Natural Medicine
-    slug: nature
-    target:
-      description:
-      - skill:
-          '_0':
-            nature: {}
+    target: nature
     amount: 2
-    bonusType: circumstance
-    condition: Treat Wounds; fresh ingredients
+    type: circumstance
+    when: Treat Wounds; fresh ingredients

@@ -14,13 +14,9 @@ mechanicsScope: mixed
 foundryID: tJduF6N83l5khRow
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Divine Grace
-    slug: saving-throw
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     amount: 2
-    bonusType: circumstance
-    condition: item type spell; divine grace
+    type: circumstance
+    when: item type spell; divine grace

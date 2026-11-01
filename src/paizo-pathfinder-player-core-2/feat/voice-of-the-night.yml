@@ -13,16 +13,10 @@ mechanicsScope: mixed
 foundryID: 5VkVWZq7ZqH6RaAW
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Voice of the Night
-    slug: diplomacy
-    target:
-      description:
-      - skill:
-          '_0':
-            diplomacy: {}
+    target: diplomacy
     amount: 1
-    bonusType: circumstance
-    condition: Make An Impression; the target is tag bat or the target is tag rat
-      or the target is tag wolf
+    type: circumstance
+    when: Make An Impression; the target is tag bat or the target is tag rat or the
+      target is tag wolf

@@ -18,32 +18,20 @@ mechanicsScope: mixed
 foundryID: uuD8Z9jUG61GmenX
 rules:
 - key: annotation-1
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Unfettered Halfling
-    slug: degree
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
+    target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
-    condition: inflicts grabbed or inflicts immobilized or inflicts restrained
+    when: inflicts grabbed or inflicts immobilized or inflicts restrained
 - key: annotation-2
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Unfettered Halfling
-    slug: degree
-    target:
-      description:
-      - anySkill: {}
+    target: skills
     text: When you roll a success on a skill check, the result is one degree better.
-    condition: Escape
+    when: Escape
 - key: annotation-3
-  effect: core/add-play-note
+  effect: core/add-note
   inputs:
-    source: Unfettered Halfling
-    slug: degree
-    target:
-      description:
-      - anyAttack: {}
+    target: attack-rolls
     text: When you roll a success on an attack roll, the result is one degree better.
-    condition: Escape
+    when: Escape

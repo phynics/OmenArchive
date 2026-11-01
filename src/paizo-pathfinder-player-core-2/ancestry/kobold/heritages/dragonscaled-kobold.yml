@@ -13,12 +13,9 @@ rules:
   inputs:
     hitPoints: 10
 - key: flat-modifier-1
-  effect: core/add-roll-modifier@2
+  effect: core/add-modifier
   inputs:
-    target:
-      description:
-      - anyNonPerceptionSavingThrow: {}
-    description: 'Dragonscaled Kobold: +1 circumstance bonus to saving throws (Breath
-      Weapon).'
-    numeric: {amount: 1, applicability: {description: Breath Weapon, kind: situational},
-      type: circumstance}
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: Breath Weapon

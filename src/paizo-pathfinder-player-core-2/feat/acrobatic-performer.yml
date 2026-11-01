@@ -18,17 +18,11 @@ mechanicsScope: mixed
 foundryID: f0faBEUPtspdutKx
 rules:
 - key: annotation-1
-  effect: core/add-play-modifier
+  effect: core/add-modifier
   inputs:
-    source: Acrobatic Performer
-    slug: acrobatics
-    target:
-      description:
-      - skill:
-          '_0':
-            acrobatics: {}
+    target: acrobatics
     amount: 1
-    bonusType: circumstance
-    condition: Perform
+    type: circumstance
+    when: Perform
     requires: (and (gte $.skills.acrobatics.rank 1) (gte $.skills.performance.rank
       1))
