@@ -13,17 +13,17 @@ mechanicsScope: mixed
 foundryID: F5BHEav90oOJ2LwN
 rules:
 - key: generated-2
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    weapons: {category: martial}
     rank: expert
 - key: generated-3
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    weapons: {category: simple}
     rank: expert
 - key: generated-4
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    weapons: {category: unarmed}
     rank: expert

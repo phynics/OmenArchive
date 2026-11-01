@@ -9,20 +9,20 @@ mechanicsScope: builder
 foundryID: basYH3RUrT7omPQk
 rules:
 - key: alchemical-weapons-simple
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   level: 15
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    weapons: {category: simple}
     rank: master
 - key: alchemical-weapons-unarmed
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   level: 15
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    weapons: {category: unarmed}
     rank: master
 - key: alchemical-weapons-bomb
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   level: 15
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: bomb, weaponKind: any}
+    weapons: {group: bomb}
     rank: master

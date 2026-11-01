@@ -69,6 +69,13 @@ inputs:
   by a choice); `add-trait {trait, as?: ancestry}` grants a trait; `add-speed {movement, speed | bonus}` sets a
   movement type (`land`, `climb`, `swim`, `fly`, `burrow`) or adds a bonus to land Speed; `add-sense {sense, acuity?,
   range?}` grants a sense.
+- **Weapons and armor.** `add-weapon-proficiency {weapons, rank}` and `add-armor-proficiency {armor, rank}` take a
+  filter, a record or a choice, and no other kind of value. A filter names what it narrows to and leaves out what it
+  doesn't: `weapons: {category: martial}`, `{group: sword}`, `{category: advanced, group: sword}`,
+  `armor: {category: heavy}` (categories `unarmed`, `simple`, `martial`, `advanced`, and `any-non-advanced` for weapons;
+  `unarmored`, `light`, `medium`, `heavy` for armor). A record is `weapons: '@item.club'`. A choice reads the answer
+  to a question, and the answer is a weapon group, a weapon, or an armor category; a weapon group answer takes the
+  optional `category: any-non-advanced` to leave out advanced weapons. The archive check refuses any other value type.
 - **Modifiers and notes.** `add-modifier {target, amount, type, when?, requires?}` gives a typed bonus or penalty to
   rolls (`type: circumstance`); a target reads as a word or a list of words (`saving-throws`, `skills`, `attack-rolls`,
   `perception`, `fortitude`, `reflex`, `will`, `speed`, a skill such as `athletics`, or `[fortitude, reflex]`), and any other

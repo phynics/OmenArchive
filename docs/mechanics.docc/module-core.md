@@ -67,10 +67,8 @@ Character lists the module declares for the engine. Rules add to and read them l
 ## Effects
 
 - <doc:core-add-action-2>
-- <doc:core-add-armor-group-proficiency-3>
-- <doc:core-add-armor-proficiency-2>
+- <doc:core-add-armor-proficiency-3>
 - <doc:core-add-assurance>
-- <doc:core-add-chosen-weapon-proficiency-2>
 - <doc:core-add-class-dc-2>
 - <doc:core-add-crafting-ability>
 - <doc:core-add-feat-3>
@@ -99,8 +97,7 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-trait>
 - <doc:core-add-weapon-critical-specialization>
 - <doc:core-add-weapon-die-step>
-- <doc:core-add-weapon-group-proficiency-2>
-- <doc:core-add-weapon-proficiency-2>
+- <doc:core-add-weapon-proficiency-3>
 - <doc:core-declare-list>
 - <doc:core-extend-class-key-attribute>
 - <doc:core-set-ancestry-hit-points>

@@ -15,12 +15,12 @@ mechanicsScope: builder
 foundryID: pZYkb12t5DSwtts7
 rules:
 - key: generated-1
-  effect: core/add-armor-proficiency@2
+  effect: core/add-armor-proficiency@3
   inputs:
-    armorDesignation: {armorKind: light, kind: type}
+    armor: {category: light}
     rank: expert
 - key: generated-2
-  effect: core/add-armor-proficiency@2
+  effect: core/add-armor-proficiency@3
   inputs:
-    armorDesignation: {armorKind: unarmored, kind: type}
+    armor: {category: unarmored}
     rank: expert

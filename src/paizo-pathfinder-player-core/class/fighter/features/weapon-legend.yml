@@ -15,24 +15,24 @@ mechanicsScope: builder
 foundryID: F5VenhIQMDkeGvmV
 rules:
 - key: generated-4
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: advanced}
+    weapons: {category: advanced}
     rank: expert
 - key: generated-5
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    weapons: {category: martial}
     rank: master
 - key: generated-6
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    weapons: {category: simple}
     rank: master
 - key: generated-7
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    weapons: {category: unarmed}
     rank: master
 - key: choice-fighter-weapon-legend-group
   level: 13
@@ -55,14 +55,13 @@ rules:
     - shield
     - bow
 - key: martial-proficiency-1
-  effect: core/add-weapon-group-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponGroup: {choice: $.fighter.weapon-legend-group}
+    weapons: {choice: $.fighter.weapon-legend-group}
     rank: legendary
-    includeAdvanced: false
+    category: any-non-advanced
 - key: martial-proficiency-2
-  effect: core/add-weapon-group-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponGroup: {choice: $.fighter.weapon-legend-group}
+    weapons: {choice: $.fighter.weapon-legend-group}
     rank: master
-    includeAdvanced: true

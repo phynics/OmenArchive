@@ -121,9 +121,9 @@ rules:
     - {value: fist}
     records: {filter: {all: [{type: item}, {item.kind: weapon}]}}
 - key: deity-favored-weapon-proficiency
-  effect: core/add-chosen-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weapon: {choice: $.deity.favored-weapon}
+    weapons: {choice: $.deity.favored-weapon}
     rank: trained
     selfScaling: true
 - key: configure-source-1

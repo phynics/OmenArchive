@@ -20,17 +20,17 @@ mechanicsScope: builder
 foundryID: FCEp9jjxxgRJDJV3
 rules:
 - key: generated-1
-  effect: core/add-armor-proficiency@2
+  effect: core/add-armor-proficiency@3
   inputs:
-    armorDesignation: {armorKind: light, kind: type}
+    armor: {category: light}
     rank: expert
 - key: generated-2
-  effect: core/add-armor-proficiency@2
+  effect: core/add-armor-proficiency@3
   inputs:
-    armorDesignation: {armorKind: medium, kind: type}
+    armor: {category: medium}
     rank: expert
 - key: generated-3
-  effect: core/add-armor-proficiency@2
+  effect: core/add-armor-proficiency@3
   inputs:
-    armorDesignation: {armorKind: unarmored, kind: type}
+    armor: {category: unarmored}
     rank: expert

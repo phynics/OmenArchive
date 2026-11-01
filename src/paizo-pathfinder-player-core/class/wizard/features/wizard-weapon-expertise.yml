@@ -10,32 +10,32 @@ mechanicsScope: builder
 foundryID: GBsC2cARoFiqMi9V
 rules:
 - key: add-weapon-proficiency-1
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: specific, name: club}
+    weapons: '@item.club'
     rank: expert
 - key: add-weapon-proficiency-2
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: specific, name: crossbow}
+    weapons: '@item.crossbow'
     rank: expert
 - key: add-weapon-proficiency-3
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: specific, name: dagger}
+    weapons: '@item.dagger'
     rank: expert
 - key: add-weapon-proficiency-4
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: specific, name: heavy-crossbow}
+    weapons: '@item.heavy-crossbow'
     rank: expert
 - key: add-weapon-proficiency-5
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: specific, name: staff}
+    weapons: '@item.staff'
     rank: expert
 - key: add-weapon-proficiency-6
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    weapons: {category: unarmed}
     rank: expert

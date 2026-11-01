@@ -9,12 +9,12 @@ mechanicsScope: builder
 foundryID: 0iidKkzC2yy13lIf
 rules:
 - key: generated-1
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    weapons: {category: simple}
     rank: master
 - key: generated-2
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    weapons: {category: unarmed}
     rank: master

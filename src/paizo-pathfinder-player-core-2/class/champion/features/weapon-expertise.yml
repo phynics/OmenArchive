@@ -55,20 +55,20 @@ mechanicsScope: builder
 foundryID: 9XLUh9iMepZesdmc
 rules:
 - key: generated-5
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   level: 5
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: simple}
+    weapons: {category: simple}
     rank: expert
 - key: generated-6
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   level: 5
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: unarmed}
+    weapons: {category: unarmed}
     rank: expert
 - key: active-effect-like-1
-  effect: core/add-weapon-proficiency@2
+  effect: core/add-weapon-proficiency@3
   level: 5
   inputs:
-    weaponDesignation: {kind: filter, weaponGroup: any, weaponKind: martial}
+    weapons: {category: martial}
     rank: expert

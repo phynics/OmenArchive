@@ -33,14 +33,13 @@ rules:
     - shield
     - bow
 - key: martial-proficiency-1
-  effect: core/add-weapon-group-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponGroup: {choice: $.fighter.weapon-mastery-group}
+    weapons: {choice: $.fighter.weapon-mastery-group}
     rank: master
-    includeAdvanced: false
+    category: any-non-advanced
 - key: martial-proficiency-2
-  effect: core/add-weapon-group-proficiency@2
+  effect: core/add-weapon-proficiency@3
   inputs:
-    weaponGroup: {choice: $.fighter.weapon-mastery-group}
+    weapons: {choice: $.fighter.weapon-mastery-group}
     rank: expert
-    includeAdvanced: true
