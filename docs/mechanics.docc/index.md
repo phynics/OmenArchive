@@ -44,9 +44,7 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:core-add-feature-2>
 - <doc:core-add-formulas>
 - <doc:core-add-heritage>
-- <doc:core-add-hit-points>
-- <doc:core-add-hit-points-per-count>
-- <doc:core-add-hit-points-per-level>
+- <doc:core-add-hit-points-2>
 - <doc:core-add-item-3>
 - <doc:core-add-language>
 - <doc:core-add-lore-skill-increase-2>

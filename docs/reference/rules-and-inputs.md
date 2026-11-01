@@ -69,6 +69,9 @@ inputs:
   by a choice); `add-trait {trait, as?: ancestry}` grants a trait; `add-speed {movement, speed | bonus}` sets a
   movement type (`land`, `climb`, `swim`, `fly`, `burrow`) or adds a bonus to land Speed; `add-sense {sense, acuity?,
   range?}` grants a sense.
+- **Hit points are one effect.** `add-hit-points {amount}` takes a number or an expression, worked out for the level
+  shown: `amount: 4`, `amount: $.level` (a bonus for each level), `amount: (multiply 3 $.archetype.fighter.feat-count)` (a bonus
+  for each feat from an archetype).
 - **Prerequisites name a record by `has`.** `has: '@feat.aggressive-block'` is met when the character has that
   record: a feat, a class feature, a heritage, an action or an identity record. A name never stands for a record
   (`hasFeatWithName` and its kin are gone). A spell or an item is never "had", so a `has` on one is never met.
