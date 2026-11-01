@@ -69,6 +69,10 @@ inputs:
   name, `rank`, on every effect that takes one: `rank: expert`. `add-skill-increase {skill, rank}` raises the skill to
   `rank`. A number is not a rank, and `rank` means only a proficiency rank: a spell's rank keeps the names
   `spellRank` and `rankPolicy`.
+- **Attributes** are spelled out: `attribute: wisdom`, `keyAttribute: strength`, `cases: [strength, dexterity]` in an
+  attribute choice, and `hasAttributeModifier: {attribute: strength, modifier: 2}` in a prerequisite. The decoded wire
+  form (`omen-archive wire`) keeps the abbreviations (`wis`), because the answer to an attribute question in a saved
+  character holds one.
 - **Kinds without data** are a word: `skill: arcana`, `rankPolicy: cantrip`, `castFrequency: atWill`.
 - **Kinds with one datum** are a one-key map from the kind to the datum: `{lore: Boneyard Lore}`,
   `{fixed: 4}` (the rank), `{perDay: 1}` (the uses), `{rank: 1}` and `{upTo: 3}` (what a spell pick takes;

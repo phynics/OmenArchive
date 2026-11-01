@@ -9,7 +9,7 @@ traits:
 - multiclass
 prerequisites:
 - text: Dexterity +2
-  hasAttributeModifier: {attribute: dex, modifier: 2}
+  hasAttributeModifier: {attribute: dexterity, modifier: 2}
 description: 'You become trained in Survival; if you were already trained in Survival,
   you instead become trained in another skill of your choice. You become trained in
   ranger class DC. If you gain a warden spell through this archetype, you become trained
@@ -27,7 +27,7 @@ rules:
     name: $.ranger.class-dc-attribute
     label: Ranger class DC attribute
     type: core/attribute
-    cases: [str, dex]
+    cases: [strength, dexterity]
 - key: dedication-class-dc
   effect: core/add-class-dc@2
   inputs:

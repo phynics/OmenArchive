@@ -8,7 +8,7 @@ A spellcasting class feature defines its progression concisely using a `spellcas
 
 ```yaml
 spellcasting:
-  source: { kind: prepared, tradition: arcane, attribute: int }
+  source: { kind: prepared, tradition: arcane, attribute: intelligence }
   slots:                       # Cumulative counts: cantrips, then ranks 1-10
     1: [5, 2]
     2: [5, 3]

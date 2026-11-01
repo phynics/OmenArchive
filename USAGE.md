@@ -29,6 +29,7 @@ that type ([the full rules](docs/reference/rules-and-inputs.md)):
 
 - Sheet expressions and `$` paths are bare: `maximum: (max 1 (divide $.level 2))`. The backslash escape
   (`\$.path`) is only for inputs that take text.
+- An attribute is spelled out (`wisdom`), never abbreviated; the decoded wire form keeps `wis`.
 - A proficiency rank is a word under the input name `rank` (`rank: expert`); a number is not a rank.
 - A kind is a word (`skill: arcana`, `rankPolicy: cantrip`), or a one-key map when it carries a datum
   (`rankPolicy: { fixed: 4 }`, `castFrequency: { perDay: 1 }`, `skill: { lore: Name }`).

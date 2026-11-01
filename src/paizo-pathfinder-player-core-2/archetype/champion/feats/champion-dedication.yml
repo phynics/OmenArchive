@@ -9,9 +9,9 @@ traits:
 - multiclass
 prerequisites:
 - text: Strength +2
-  hasAttributeModifier: {attribute: str, modifier: 2}
+  hasAttributeModifier: {attribute: strength, modifier: 2}
 - text: Charisma +2
-  hasAttributeModifier: {attribute: cha, modifier: 2}
+  hasAttributeModifier: {attribute: charisma, modifier: 2}
 description: 'Choose a deity. You are bound by your deity''s anathema and gain the
   champion''s aura and sanctification as described in the champion class. Choose a
   cause as you would if you were a champion, with the same options a champion must
@@ -114,7 +114,7 @@ rules:
     name: $.champion.class-dc-attribute
     label: Champion class DC attribute
     type: core/attribute
-    cases: [str, dex]
+    cases: [strength, dexterity]
 - key: dedication-class-dc
   effect: core/add-class-dc@2
   inputs:
