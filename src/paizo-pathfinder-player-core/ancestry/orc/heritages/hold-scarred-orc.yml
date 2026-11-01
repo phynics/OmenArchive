@@ -2,16 +2,13 @@
 name: hold-scarred orc
 ancestry: orc
 rarity: common
+hitPoints: 12
 description: You are part of an orc community that participates in ritual scarification
   or tattooing. The marks on your skin show your exceptional hardiness and vitality.
   You gain 12 Hit Points from your ancestry instead of 10. You also gain the [Diehard](omen://feat/diehard?source=paizo-pathfinder-player-core)
   feat.
 mechanicsScope: builder
 rules:
-- key: set-ancestry-hit-points-1
-  effect: core/set-ancestry-hit-points
-  inputs:
-    hitPoints: 12
 - key: add-feat-1
   effect: core/add-feat@3
   inputs:

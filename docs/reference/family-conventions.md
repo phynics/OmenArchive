@@ -222,7 +222,9 @@ description: |
   You possess an instinctive grasp of magical energies...
 ```
 
-For versatile heritages, set `ancestry: versatile` and use inline rules to grant ancestry traits (`add-character-ancestry-trait`) and senses.
+A heritage that gives hit points in place of its ancestry's writes `hitPoints:` (`hitPoints: 10`).
+
+For versatile heritages, set `ancestry: versatile` and use inline rules to grant ancestry traits (`add-trait` with `as: ancestry`) and senses.
 
 ---
 

@@ -80,7 +80,7 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-item-3>
 - <doc:core-add-language>
 - <doc:core-add-lore-skill-increase-2>
-- <doc:core-add-membership>
+- <doc:core-add-membership-2>
 - <doc:core-add-modifier>
 - <doc:core-add-note>
 - <doc:core-add-placeholder>
@@ -100,5 +100,4 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-weapon-proficiency-3>
 - <doc:core-declare-list>
 - <doc:core-extend-class-key-attribute>
-- <doc:core-set-ancestry-hit-points>
 - <doc:core-substitute-skill>

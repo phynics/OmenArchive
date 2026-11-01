@@ -1,14 +1,14 @@
-# core/add-membership
+# core/add-membership@2
 
 Registers the character in a named organization, class order, or school (e.g. druid order, bard muse).
 
-Effect `add-membership`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
+Effect `add-membership`, revision 2, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs
 
 | Input | Type | Required |
 |---|---|---|
-| `list` | `string` | yes |
+| `list` | `list-path` | yes |
 | `value` | `feature-id` | yes |
 
 ## Writes
@@ -17,14 +17,15 @@ Effect `add-membership`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Usage in the archive
 
-Used by 4 rules.
+Used by 2 rules.
 
 Example, from `paizo-pathfinder-player-core/class/bard/features/muses.yml`:
 
 ```yaml
-- key: choice-set-2
-  effect: core/add-membership
+- effect: core/add-membership@2
   inputs:
-    list: \$.bard.muse-memberships
-    value: {choice: $.bard.muse}
+    list: $.bard.muse-memberships
+    value:
+      choice: $.bard.muse
+  key: choice-set-2
 ```

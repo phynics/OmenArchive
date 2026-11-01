@@ -25,7 +25,7 @@ rules:
   inputs:
     feature: {choice: $.bard.muse}
 - key: choice-set-2
-  effect: core/add-membership
+  effect: core/add-membership@2
   inputs:
-    list: \$.bard.muse-memberships
+    list: $.bard.muse-memberships
     value: {choice: $.bard.muse}

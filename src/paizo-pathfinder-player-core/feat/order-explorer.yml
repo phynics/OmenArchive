@@ -37,9 +37,9 @@ rules:
           selectionId: 3076bb1d-1498-5f90-8bdc-7e5543973a19
           feat: '@feat.animal-companion'
       - key: add-membership
-        effect: core/add-membership
+        effect: core/add-membership@2
         inputs:
-          list: \$.druid.order-memberships
+          list: $.druid.order-memberships
           value: '@class.druid.orders.animal'
     - key: leaf
       value: '@class.druid.orders.leaf'
@@ -50,9 +50,9 @@ rules:
           selectionId: 2d144296-79fe-5dec-8116-20ef361b3958
           feat: '@feat.leshy-familiar'
       - key: add-membership
-        effect: core/add-membership
+        effect: core/add-membership@2
         inputs:
-          list: \$.druid.order-memberships
+          list: $.druid.order-memberships
           value: '@class.druid.orders.leaf'
     - key: storm
       value: '@class.druid.orders.storm'
@@ -63,9 +63,9 @@ rules:
           selectionId: 276f5969-499c-5d31-9270-dcf299ff4f80
           feat: '@feat.storm-born'
       - key: add-membership
-        effect: core/add-membership
+        effect: core/add-membership@2
         inputs:
-          list: \$.druid.order-memberships
+          list: $.druid.order-memberships
           value: '@class.druid.orders.storm'
     - key: untamed
       value: '@class.druid.orders.untamed'
@@ -76,7 +76,7 @@ rules:
           selectionId: 7b430d91-4407-542b-b041-bae3b9eea4dc
           feat: '@feat.untamed-form'
       - key: add-membership
-        effect: core/add-membership
+        effect: core/add-membership@2
         inputs:
-          list: \$.druid.order-memberships
+          list: $.druid.order-memberships
           value: '@class.druid.orders.untamed'

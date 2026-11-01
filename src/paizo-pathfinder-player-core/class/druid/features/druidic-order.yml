@@ -58,7 +58,7 @@ rules:
   inputs:
     feature: {choice: $.druid.order}
 - key: choice-set-2
-  effect: core/add-membership
+  effect: core/add-membership@2
   inputs:
-    list: \$.druid.order-memberships
+    list: $.druid.order-memberships
     value: {choice: $.druid.order}

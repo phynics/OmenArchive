@@ -44,6 +44,21 @@ the publication declares it in `spellcastingSources` of `publication.yml`, where
 source's ID. The wire form calls the input `sourceId` and holds that ID; a literal source ID is not
 written in a record. See [Spellcasting Tables and Sources](spellcasting.md#source-keys).
 
+## Effect Verbs
+
+An effect's name starts with a verb, and the verb says what the effect does to the character.
+
+| Verb | Does | Examples |
+|---|---|---|
+| `add-` | contributes something to the character | `add-feat`, `add-modifier`, `add-speed`, `add-hit-points`, `add-to-list` |
+| `set-` | overrides a value another rule or the record gave | (none today; a heritage's `hitPoints:` field replaced `set-ancestry-hit-points`) |
+| `modify-` | changes another rule's grant | `modify-innate-sources` |
+| `grant-` | gives a spell, slot or focus spell to a spellcasting source; used only in spellcasting | `grant-spell`, `grant-slot`, `grant-focus-spell` |
+
+Other verbs name a specific act (`configure-source`, `declare-list`, `extend-class-key-attribute`, `increase-spell-proficiency`,
+`mark-signature-spell`, `substitute-skill`, `allow-known-spells`). A new effect takes `add-`, `set-` or `modify-`, and `grant-` only in
+spellcasting.
+
 ## Input Values
 
 The mechanics descriptor gives every input a value type, and the reader parses the authored value
@@ -85,6 +100,8 @@ inputs:
   with a toggle that starts off; `requires` is **a condition the sheet reads** (`requires: (gte $.skills.diplomacy.rank 3)`),
   so the modifier appears only while it holds, with no toggle of its own. A bonus that grows when a condition
   holds is a second modifier of the same type with a `requires`; the highest bonus of a type applies.
+- **A heritage's hit points are a field.** A heritage that gives hit points in place of its ancestry's writes
+  `hitPoints: 10`; the effect that set them is gone.
 - **Hit points are one effect.** `add-hit-points {amount}` takes a number or an expression, worked out for the level
   shown: `amount: 4`, `amount: $.level` (a bonus for each level), `amount: (multiply 3 $.archetype.fighter.feat-count)` (a bonus
   for each feat from an archetype).

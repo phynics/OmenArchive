@@ -2,6 +2,7 @@
 name: root leshy
 ancestry: leshy
 rarity: common
+hitPoints: 10
 description: Your body is made from hardy roots that attach you firmly to the ground.
   You gain 10 Hit Points from your ancestry instead of 8. You can go without sunlight
   for 2 weeks before you begin to starve. You gain a +2 circumstance bonus to your
@@ -11,10 +12,6 @@ description: Your body is made from hardy roots that attach you firmly to the gr
   to move you or knock you [Prone](omen://condition/prone?source=paizo-pathfinder-player-core).
 mechanicsScope: builder
 rules:
-- key: set-ancestry-hit-points-1
-  effect: core/set-ancestry-hit-points
-  inputs:
-    hitPoints: 10
 - key: add-roll-modifier-1
   effect: core/add-modifier
   inputs:
