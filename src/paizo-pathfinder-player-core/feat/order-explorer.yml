@@ -7,7 +7,7 @@ traits:
 - druid
 repeatPolicy:
   duplicateSelectionRules:
-  - lookupName: $.feat.order-explorer.orders
+  - lookupName: $.feats.order-explorer.order
     valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
 description: You have learned the secrets of another druidic order, passing whatever
   rites of initiation that order requires and gaining access to its secrets. Choose
@@ -23,25 +23,25 @@ foundryID: 9onf3uGvZRnNLPR6
 rules:
 - key: choice-feat-order-explorer-orders
   choice:
-    name: $.feat.order-explorer.orders
+    name: $.feats.order-explorer.order
     label: Order
     addTo: $.druid.orders
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.druid.orders'}}
 - key: choice-feat-order-explorer-feat
   choice:
-    name: $.feat.order-explorer.feat
+    name: $.feats.order-explorer.feat
     label: Order feat
     prerequisites:
-    - $.feat.order-explorer.orders
+    - $.feats.order-explorer.order
     type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {level: 1}
-        - {requiresListValue: {list: $.druid.orders, value: {choice: $.feat.order-explorer.orders}}}
+        - {requiresListValue: {list: $.druid.orders, value: {choice: $.feats.order-explorer.order}}}
 - key: grant-order-feat
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.order-explorer.feat}
+    feat: {choice: $.feats.order-explorer.feat}

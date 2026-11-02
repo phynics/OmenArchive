@@ -22,7 +22,7 @@ rules:
     rank: trained
 - key: choice-feat-nephilim-lore-skill
   choice:
-    name: $.feat.nephilim-lore.skill
+    name: $.feats.nephilim-lore.skill
     label: Skill
     type: core/skill
     cases:
@@ -31,7 +31,7 @@ rules:
 - key: add-skill-increase-2
   effect: core/add-skill-increase@2
   inputs:
-    skill: {choice: $.feat.nephilim-lore.skill}
+    skill: {choice: $.feats.nephilim-lore.skill}
     rank: trained
 - key: add-feat-1
   effect: core/add-feat@3

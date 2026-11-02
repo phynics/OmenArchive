@@ -12,7 +12,7 @@ foundryID: qDfTqetM9UEpp8ty
 rules:
 - key: choice-feat-greater-lesson-lesson
   choice:
-    name: $.feat.greater-lesson.lesson
+    name: $.feats.greater-lesson.lesson
     label: Lesson
     type: core/feature-id
     records:
@@ -23,4 +23,4 @@ rules:
 - key: choice-set-1
   effect: core/add-feature@2
   inputs:
-    feature: {choice: $.feat.greater-lesson.lesson}
+    feature: {choice: $.feats.greater-lesson.lesson}

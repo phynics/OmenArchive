@@ -24,5 +24,5 @@ Example, from `paizo-pathfinder-player-core/feat/specialty-crafting.yml`:
 - key: add-specialty-crafting-1
   effect: core/add-specialty-crafting
   inputs:
-    specialty: {choice: $.feat.specialty-crafting.specialty}
+    specialty: {choice: $.feats.specialty-crafting.specialty}
 ```

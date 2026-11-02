@@ -7,7 +7,7 @@ traits:
 - bard
 repeatPolicy:
   duplicateSelectionRules:
-  - lookupName: $.feat.multifarious-muse.muses
+  - lookupName: $.feats.multifarious-muse.muse
     valueTypeID: me.atkn.omen.pf2e.playercore/value/feature-id
   maxCount: 3
 description: Your muse doesn't fall into a single label. Choose a type of muse other
@@ -22,25 +22,25 @@ foundryID: a898miJnjgD93ZsX
 rules:
 - key: choice-feat-multifarious-muse-muses
   choice:
-    name: $.feat.multifarious-muse.muses
+    name: $.feats.multifarious-muse.muse
     label: Muse
     addTo: $.bard.muses
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.bard.muses'}}
 - key: choice-feat-multifarious-muse-feat
   choice:
-    name: $.feat.multifarious-muse.feat
+    name: $.feats.multifarious-muse.feat
     label: Muse feat
     prerequisites:
-    - $.feat.multifarious-muse.muses
+    - $.feats.multifarious-muse.muse
     type: core/feat-id
     records:
       filter:
         all:
         - {type: feat}
         - {level: 1}
-        - {requiresListValue: {list: $.bard.muses, value: {choice: $.feat.multifarious-muse.muses}}}
+        - {requiresListValue: {list: $.bard.muses, value: {choice: $.feats.multifarious-muse.muse}}}
 - key: grant-muse-feat
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.multifarious-muse.feat}
+    feat: {choice: $.feats.multifarious-muse.feat}

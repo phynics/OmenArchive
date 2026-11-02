@@ -18,12 +18,12 @@ foundryID: 8CSewrCVEmL8sjnk
 rules:
 - key: choice-feat-nephilim-resistance-damage-type
   choice:
-    name: $.feat.nephilim-resistance.damage-type
+    name: $.feats.nephilim-resistance.damage-type
     label: Damage Type
     type: core/string
     cases: [fire, acid, cold, sonic, electricity]
 - key: add-resistance-1
   effect: core/add-resistance@2
   inputs:
-    type: {choice: $.feat.nephilim-resistance.damage-type}
+    type: {choice: $.feats.nephilim-resistance.damage-type}
     value: 5

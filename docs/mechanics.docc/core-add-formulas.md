@@ -20,5 +20,5 @@ Example, from `paizo-pathfinder-player-core/feat/alchemical-crafting.yml`:
 - key: learn-choice-feat-alchemical-crafting-formulas
   effect: core/add-formulas
   inputs:
-    items: {choiceList: $.feat.alchemical-crafting.formulas}
+    items: {choiceList: $.feats.alchemical-crafting.formulas}
 ```

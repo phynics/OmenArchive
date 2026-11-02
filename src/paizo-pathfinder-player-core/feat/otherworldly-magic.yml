@@ -14,7 +14,7 @@ foundryID: Pat4H0VbmApblZxc
 rules:
 - key: choice-feat-otherworldly-magic-cantrip
   choice:
-    name: $.feat.otherworldly-magic.cantrip
+    name: $.feats.otherworldly-magic.cantrip
     label: Otherworldly Magic Spell
     type: spellcasting/spell-id
     records:
@@ -29,7 +29,7 @@ rules:
   inputs:
     source: otherworldly-magic
     sourceName: Otherworldly Magic
-    spell: {choice: $.feat.otherworldly-magic.cantrip}
+    spell: {choice: $.feats.otherworldly-magic.cantrip}
     tradition: arcane
     attribute: charisma
     rankPolicy: cantrip

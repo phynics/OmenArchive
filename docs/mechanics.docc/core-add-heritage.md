@@ -20,6 +20,6 @@ Example, from `paizo-pathfinder-player-core/feat/elf-atavism.yml`:
 - effect: core/add-heritage
   inputs:
     heritage:
-      choice: $.feat.elf-atavism.heritage
+      choice: $.feats.elf-atavism.heritage
   key: grant-heritage
 ```

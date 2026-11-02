@@ -27,7 +27,7 @@ rules:
     label: Terrain Expertise
 - key: choice-feat-terrain-expertise-terrains
   choice:
-    name: $.feat.terrain-expertise.terrains
+    name: $.feats.terrain-expertise.terrain
     label: Terrain Expertise Terrain
     addTo: $.feats.terrain-expertise.terrains
     type: core/terrain
@@ -44,4 +44,4 @@ rules:
 - key: add-terrain-expertise-1
   effect: core/add-terrain-expertise
   inputs:
-    terrain: {choice: $.feat.terrain-expertise.terrains}
+    terrain: {choice: $.feats.terrain-expertise.terrain}

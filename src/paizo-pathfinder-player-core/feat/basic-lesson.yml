@@ -13,11 +13,11 @@ foundryID: wsq8nncD25Q1fRn2
 rules:
 - key: choice-feat-basic-lesson-lesson
   choice:
-    name: $.feat.basic-lesson.lesson
+    name: $.feats.basic-lesson.lesson
     label: Lesson
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.witch.basic-lessons'}}
 - key: choice-set-1
   effect: core/add-feature@2
   inputs:
-    feature: {choice: $.feat.basic-lesson.lesson}
+    feature: {choice: $.feats.basic-lesson.lesson}

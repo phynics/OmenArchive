@@ -14,7 +14,7 @@ foundryID: yJ8Ez5dEscIk1xr5
 rules:
 - key: choice-feat-first-world-magic-cantrip
   choice:
-    name: $.feat.first-world-magic.cantrip
+    name: $.feats.first-world-magic.cantrip
     label: First World Magic Spell
     type: spellcasting/spell-id
     records:
@@ -29,7 +29,7 @@ rules:
   inputs:
     source: first-world-magic
     sourceName: First World Magic
-    spell: {choice: $.feat.first-world-magic.cantrip}
+    spell: {choice: $.feats.first-world-magic.cantrip}
     tradition: primal
     attribute: charisma
     rankPolicy: cantrip

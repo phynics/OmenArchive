@@ -24,7 +24,7 @@ rules:
     label: Additional Lore
 - key: choice-feat-additional-lore-lores
   choice:
-    name: $.feat.additional-lore.lores
+    name: $.feats.additional-lore.lore
     label: Lore name
     addTo: $.feats.additional-lore.lores
     type: core/skill
@@ -33,23 +33,23 @@ rules:
 - key: lore-trained
   effect: core/add-skill-increase@2
   inputs:
-    skill: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feats.additional-lore.lore}
     rank: trained
 - key: lore-expert
   effect: core/add-skill-increase@2
   level: 3
   inputs:
-    skill: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feats.additional-lore.lore}
     rank: expert
 - key: lore-master
   effect: core/add-skill-increase@2
   level: 7
   inputs:
-    skill: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feats.additional-lore.lore}
     rank: master
 - key: lore-legendary
   effect: core/add-skill-increase@2
   level: 15
   inputs:
-    skill: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feats.additional-lore.lore}
     rank: legendary

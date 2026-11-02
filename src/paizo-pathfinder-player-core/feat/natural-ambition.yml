@@ -14,7 +14,7 @@ foundryID: PodajLVxqYSAqVox
 rules:
 - key: choice-feat-natural-ambition-feat
   choice:
-    name: $.feat.natural-ambition.feat
+    name: $.feats.natural-ambition.feat
     label: Class Feat
     type: core/feat-id
     records:
@@ -32,4 +32,4 @@ rules:
 - key: grant-item-1
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.natural-ambition.feat}
+    feat: {choice: $.feats.natural-ambition.feat}

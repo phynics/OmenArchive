@@ -35,7 +35,7 @@ foundryID: t6GBBIwX7hvvxYyV
 rules:
 - key: choice-feat-hag-magic-spell
   choice:
-    name: $.feat.hag-magic.spell
+    name: $.feats.hag-magic.spell
     label: Spell
     type: spellcasting/spell-id
     records:
@@ -72,7 +72,7 @@ rules:
             - {any: [{name: hydraulic torrent}]}
 - key: choice-feat-hag-magic-other-spell
   choice:
-    name: $.feat.hag-magic.other-spell
+    name: $.feats.hag-magic.other-spell
     label: Other Coven Spell
     type: spellcasting/spell-id
     records: {filter: {all: [{type: spell}, {maxLevel: 4}, {rarity: common}]}}
@@ -81,7 +81,7 @@ rules:
   inputs:
     source: hag-magic
     sourceName: Hag Magic
-    spell: {choice: $.feat.hag-magic.spell}
+    spell: {choice: $.feats.hag-magic.spell}
     tradition: occult
     attribute: charisma
     rankPolicy: {fixed: 4}
@@ -91,7 +91,7 @@ rules:
   inputs:
     source: hag-magic
     sourceName: Hag Magic
-    spell: {choice: $.feat.hag-magic.other-spell}
+    spell: {choice: $.feats.hag-magic.other-spell}
     tradition: occult
     attribute: charisma
     rankPolicy: {fixed: 4}

@@ -10,7 +10,7 @@ prerequisites:
   has: '@feat.initiate-warden'
 repeatPolicy:
   duplicateSelectionRules:
-  - lookupName: $.feat.advanced-warden.spell
+  - lookupName: $.feats.advanced-warden.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
 description: 'You unlock more powerful primal spells. You gain your choice of one
   warden spell from the advanced warden spells.
@@ -37,7 +37,7 @@ rules:
     attribute: wisdom
 - key: choice-feat-advanced-warden-spell
   choice:
-    name: $.feat.advanced-warden.spell
+    name: $.feats.advanced-warden.spell
     label: Warden spell
     type: spellcasting/spell-id
     records:
@@ -51,12 +51,12 @@ rules:
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: ranger-focus-spells
-    spell: {choice: $.feat.advanced-warden.spell}
+    spell: {choice: $.feats.advanced-warden.spell}
 - key: warden-spell-proficiency
   effect: spellcasting/increase-spell-proficiency@2
   prerequisites:
   - hasChoice:
-      name: $.feat.advanced-warden.spell
+      name: $.feats.advanced-warden.spell
       isSet: true
   inputs:
     rank: trained

@@ -14,7 +14,7 @@ rules:
   inputs:
     feat: '@feat.terrain-expertise'
     with:
-      $.feat.terrain-expertise.terrains: {type: core/terrain, value: underground}
+      $.feats.terrain-expertise.terrain: {type: core/terrain, value: underground}
 - key: add-feat-2
   effect: core/add-feat@3
   inputs:

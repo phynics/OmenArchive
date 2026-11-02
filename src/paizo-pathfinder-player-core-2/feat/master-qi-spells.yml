@@ -10,7 +10,7 @@ prerequisites:
   has: '@feat.qi-spells'
 repeatPolicy:
   duplicateSelectionRules:
-  - lookupName: $.feat.master-qi-spells.spell
+  - lookupName: $.feats.master-qi-spells.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
 description: You have achieved near-total mastery of your qi. You gain [Medusa's Wrath](omen://spell/medusas-wrath?source=paizo-pathfinder-player-core-2),
   [Touch of Death](omen://spell/touch-of-death?source=paizo-pathfinder-player-core-2),
@@ -40,7 +40,7 @@ rules:
     rank: trained
 - key: choice-feat-master-qi-spells-spell
   choice:
-    name: $.feat.master-qi-spells.spell
+    name: $.feats.master-qi-spells.spell
     label: Qi spell
     type: spellcasting/spell-id
     records:
@@ -54,4 +54,4 @@ rules:
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: monk-focus-spells
-    spell: {choice: $.feat.master-qi-spells.spell}
+    spell: {choice: $.feats.master-qi-spells.spell}

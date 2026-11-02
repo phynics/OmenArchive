@@ -16,7 +16,7 @@ foundryID: Ht6b8H9DpA9lWzAg
 rules:
 - key: choice-feat-advanced-general-training-feats
   choice:
-    name: $.feat.advanced-general-training.feats
+    name: $.feats.advanced-general-training.feat
     label: General Feat
     type: core/feat-id
     records:
@@ -28,4 +28,4 @@ rules:
 - key: grant-item-1
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.advanced-general-training.feats}
+    feat: {choice: $.feats.advanced-general-training.feat}

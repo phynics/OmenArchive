@@ -17,7 +17,7 @@ foundryID: is3Oz9wt11lNq62K
 rules:
 - key: choice-feat-alchemical-crafting-formulas
   choice:
-    name: $.feat.alchemical-crafting.formulas
+    name: $.feats.alchemical-crafting.formulas
     label: Alchemical Crafting formulas
     multiple: {min: 4, max: 4}
     type: core/item-id
@@ -31,4 +31,4 @@ rules:
 - key: learn-choice-feat-alchemical-crafting-formulas
   effect: core/add-formulas
   inputs:
-    items: {choiceList: $.feat.alchemical-crafting.formulas}
+    items: {choiceList: $.feats.alchemical-crafting.formulas}

@@ -18,7 +18,7 @@ foundryID: ZFkCMl63ogK55Otq
 rules:
 - key: choice-feat-major-lesson-lessons
   choice:
-    name: $.feat.major-lesson.lessons
+    name: $.feats.major-lesson.lesson
     label: Lesson
     type: core/feature-id
     records:
@@ -30,4 +30,4 @@ rules:
 - key: choice-set-1
   effect: core/add-feature@2
   inputs:
-    feature: {choice: $.feat.major-lesson.lessons}
+    feature: {choice: $.feats.major-lesson.lesson}

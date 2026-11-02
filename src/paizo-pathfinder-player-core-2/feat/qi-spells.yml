@@ -7,7 +7,7 @@ traits:
 - monk
 repeatPolicy:
   duplicateSelectionRules:
-  - lookupName: $.feat.qi-spells.spell
+  - lookupName: $.feats.qi-spells.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
 description: You have cultivated your qi to produce magical effects. You gain [Inner
   Upheaval](omen://spell/inner-upheaval?source=paizo-pathfinder-player-core-2), [Qi
@@ -38,7 +38,7 @@ rules:
     rank: trained
 - key: choice-feat-qi-spells-spell
   choice:
-    name: $.feat.qi-spells.spell
+    name: $.feats.qi-spells.spell
     label: Qi spell
     type: spellcasting/spell-id
     records:
@@ -52,4 +52,4 @@ rules:
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: monk-focus-spells
-    spell: {choice: $.feat.qi-spells.spell}
+    spell: {choice: $.feats.qi-spells.spell}

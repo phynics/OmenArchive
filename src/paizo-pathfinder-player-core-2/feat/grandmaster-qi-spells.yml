@@ -10,7 +10,7 @@ prerequisites:
   has: '@feat.qi-spells'
 repeatPolicy:
   duplicateSelectionRules:
-  - lookupName: $.feat.grandmaster-qi-spells.spell
+  - lookupName: $.feats.grandmaster-qi-spells.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
 description: You have unlocked a qi technique achievable only by those who attain
   complete mastery of both their body and their spirit. You gain [Embrace Nothingness](omen://spell/embrace-nothingness?source=paizo-pathfinder-player-core-2),
@@ -41,7 +41,7 @@ rules:
     rank: trained
 - key: choice-feat-grandmaster-qi-spells-spell
   choice:
-    name: $.feat.grandmaster-qi-spells.spell
+    name: $.feats.grandmaster-qi-spells.spell
     label: Qi spell
     type: spellcasting/spell-id
     records:
@@ -55,4 +55,4 @@ rules:
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: monk-focus-spells
-    spell: {choice: $.feat.grandmaster-qi-spells.spell}
+    spell: {choice: $.feats.grandmaster-qi-spells.spell}

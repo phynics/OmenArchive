@@ -12,7 +12,7 @@ foundryID: m7KjpkAAh9PptJsY
 rules:
 - key: choice-feat-ancestral-paragon-feat
   choice:
-    name: $.feat.ancestral-paragon.feat
+    name: $.feats.ancestral-paragon.feat
     label: Ancestry Feat
     type: core/feat-id
     records:
@@ -26,4 +26,4 @@ rules:
 - key: grant-item-1
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.ancestral-paragon.feat}
+    feat: {choice: $.feats.ancestral-paragon.feat}

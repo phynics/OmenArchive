@@ -24,5 +24,5 @@ Example, from `paizo-pathfinder-player-core/feat/terrain-expertise.yml`:
 - key: add-terrain-expertise-1
   effect: core/add-terrain-expertise
   inputs:
-    terrain: {choice: $.feat.terrain-expertise.terrains}
+    terrain: {choice: $.feats.terrain-expertise.terrain}
 ```

@@ -10,7 +10,7 @@ prerequisites:
   has: '@feat.initiate-warden'
 repeatPolicy:
   duplicateSelectionRules:
-  - lookupName: $.feat.peerless-warden.spell
+  - lookupName: $.feats.peerless-warden.spell
     valueTypeID: me.atkn.omen.pf2e.playercore-spellcasting/value/spell-id
 description: 'Your mastery of primal magic has given you access to the greatest secrets
   of warden magic. You gain your choice of one warden spell from the peerless warden
@@ -34,7 +34,7 @@ rules:
     attribute: wisdom
 - key: choice-feat-peerless-warden-spell
   choice:
-    name: $.feat.peerless-warden.spell
+    name: $.feats.peerless-warden.spell
     label: Warden spell
     type: spellcasting/spell-id
     records:
@@ -48,12 +48,12 @@ rules:
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: ranger-focus-spells
-    spell: {choice: $.feat.peerless-warden.spell}
+    spell: {choice: $.feats.peerless-warden.spell}
 - key: warden-spell-proficiency
   effect: spellcasting/increase-spell-proficiency@2
   prerequisites:
   - hasChoice:
-      name: $.feat.peerless-warden.spell
+      name: $.feats.peerless-warden.spell
       isSet: true
   inputs:
     rank: trained

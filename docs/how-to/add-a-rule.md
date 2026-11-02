@@ -38,7 +38,7 @@ To prompt the player for a decision, use a `choice:` block instead of `effect:`:
 rules:
   - key: choice-bonus-language
     choice:
-      name: $.feat.multilingual.languages
+      name: $.feats.multilingual.languages
       label: Bonus Language
       type: core/string
       freeText: true

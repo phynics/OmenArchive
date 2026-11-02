@@ -75,7 +75,7 @@ foundryID: QLeMH5mQgh28sa5o
 rules:
 - key: choice-feat-specialty-crafting-specialty
   choice:
-    name: $.feat.specialty-crafting.specialty
+    name: $.feats.specialty-crafting.specialty
     label: Specialty Crafting Specialty
     type: core/crafting-specialty
     cases:
@@ -94,4 +94,4 @@ rules:
 - key: add-specialty-crafting-1
   effect: core/add-specialty-crafting
   inputs:
-    specialty: {choice: $.feat.specialty-crafting.specialty}
+    specialty: {choice: $.feats.specialty-crafting.specialty}

@@ -20,11 +20,11 @@ foundryID: 7BVl9lFf0wuTjBgM
 rules:
 - key: choice-feat-elf-atavism-heritage
   choice:
-    name: $.feat.elf-atavism.heritage
+    name: $.feats.elf-atavism.heritage
     label: Elf Heritage
     type: core/heritage-id
     records: {filter: {pathPrefix: '@ancestry.elf.heritages'}}
 - key: grant-heritage
   effect: core/add-heritage
   inputs:
-    heritage: {choice: $.feat.elf-atavism.heritage}
+    heritage: {choice: $.feats.elf-atavism.heritage}

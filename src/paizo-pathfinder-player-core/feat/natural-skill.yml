@@ -12,7 +12,7 @@ foundryID: Rfyhlyql1GSoDkI2
 rules:
 - key: choice-feat-natural-skill-skill-one
   choice:
-    name: $.feat.natural-skill.skill-one
+    name: $.feats.natural-skill.skill-one
     label: Skill One
     type: core/skill
     cases:
@@ -35,11 +35,11 @@ rules:
 - key: add-skill-increase-1
   effect: core/add-skill-increase@2
   inputs:
-    skill: {choice: $.feat.natural-skill.skill-one}
+    skill: {choice: $.feats.natural-skill.skill-one}
     rank: trained
 - key: choice-feat-natural-skill-skill-two
   choice:
-    name: $.feat.natural-skill.skill-two
+    name: $.feats.natural-skill.skill-two
     label: Skill Two
     type: core/skill
     cases:
@@ -62,5 +62,5 @@ rules:
 - key: add-skill-increase-2
   effect: core/add-skill-increase@2
   inputs:
-    skill: {choice: $.feat.natural-skill.skill-two}
+    skill: {choice: $.feats.natural-skill.skill-two}
     rank: trained

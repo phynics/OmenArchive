@@ -18,7 +18,7 @@ foundryID: P6icK2DbRoZ3H6kc
 rules:
 - key: choice-feat-skill-training-skills
   choice:
-    name: $.feat.skill-training.skills
+    name: $.feats.skill-training.skill
     label: Skill
     type: core/skill
     cases:
@@ -41,5 +41,5 @@ rules:
 - key: add-skill-increase-1
   effect: core/add-skill-increase@2
   inputs:
-    skill: {choice: $.feat.skill-training.skills}
+    skill: {choice: $.feats.skill-training.skill}
     rank: trained

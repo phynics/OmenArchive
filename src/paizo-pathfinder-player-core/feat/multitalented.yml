@@ -16,7 +16,7 @@ foundryID: C80vQCKQBGRaqcmq
 rules:
 - key: choice-feat-multitalented-dedication
   choice:
-    name: $.feat.multitalented.dedication
+    name: $.feats.multitalented.dedication
     label: Multiclass Dedication
     type: core/feat-id
     records:
@@ -29,4 +29,4 @@ rules:
 - key: grant-item-1
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.multitalented.dedication}
+    feat: {choice: $.feats.multitalented.dedication}

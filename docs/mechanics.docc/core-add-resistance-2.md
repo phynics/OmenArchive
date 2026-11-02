@@ -22,7 +22,7 @@ Example, from `paizo-pathfinder-player-core/feat/nephilim-resistance.yml`:
 - key: add-resistance-1
   effect: core/add-resistance@2
   inputs:
-    type: {choice: $.feat.nephilim-resistance.damage-type}
+    type: {choice: $.feats.nephilim-resistance.damage-type}
     value: 5
     exceptions: ''
 ```

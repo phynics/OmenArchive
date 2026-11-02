@@ -27,7 +27,7 @@ foundryID: esKk5XrnlqRayDPG
 rules:
 - key: choice-feat-celestial-magic-spell-one
   choice:
-    name: $.feat.celestial-magic.spell-one
+    name: $.feats.celestial-magic.spell-one
     label: First Spell
     type: spellcasting/spell-id
     records:
@@ -43,9 +43,9 @@ rules:
           - {name: everlight}
 - key: choice-feat-celestial-magic-spell-two
   choice:
-    name: $.feat.celestial-magic.spell-two
+    name: $.feats.celestial-magic.spell-two
     label: Second Spell
-    distinct: $.feat.celestial-magic.spell-one
+    distinct: $.feats.celestial-magic.spell-one
     type: spellcasting/spell-id
     records:
       filter:
@@ -63,7 +63,7 @@ rules:
   inputs:
     source: celestial-magic
     sourceName: Celestial Magic
-    spell: {choice: $.feat.celestial-magic.spell-one}
+    spell: {choice: $.feats.celestial-magic.spell-one}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}
@@ -73,7 +73,7 @@ rules:
   inputs:
     source: celestial-magic
     sourceName: Celestial Magic
-    spell: {choice: $.feat.celestial-magic.spell-two}
+    spell: {choice: $.feats.celestial-magic.spell-two}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}

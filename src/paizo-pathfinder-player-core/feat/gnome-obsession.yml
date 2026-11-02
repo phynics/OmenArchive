@@ -15,7 +15,7 @@ foundryID: mxhGH4FVYXJwb0BC
 rules:
 - key: choice-feat-gnome-obsession-lore
   choice:
-    name: $.feat.gnome-obsession.lore
+    name: $.feats.gnome-obsession.lore
     label: Lore
     type: core/skill
     freeText: true
@@ -25,10 +25,10 @@ rules:
   inputs:
     feat: '@feat.additional-lore'
     with:
-      $.feat.additional-lore.lores: {choice: $.feat.gnome-obsession.lore}
+      $.feats.additional-lore.lore: {choice: $.feats.gnome-obsession.lore}
 - key: add-feat-2
   effect: core/add-feat@3
   inputs:
     feat: '@feat.assurance'
     with:
-      $.feat.assurance.skills: {choice: $.feat.gnome-obsession.lore}
+      $.feats.assurance.skill: {choice: $.feats.gnome-obsession.lore}

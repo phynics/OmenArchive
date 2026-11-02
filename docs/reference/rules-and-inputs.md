@@ -131,10 +131,10 @@ inputs:
   (`{all: [{type: feat}, {trait: gnome}]}`); the wire's `{kind: intersection, values: […]}` wrapper is
   only read.
 - **Grant settings.** The `with:` input of `core/add-feat@2` maps a `$` path to a setting. A setting
-  is the value it grants: a bare value is a **skill** (`$.feat.assurance.skills: athletics`), and a value of
+  is the value it grants: a bare value is a **skill** (`$.feats.assurance.skill: athletics`), and a value of
   any other type is spelled with its type (`{type: core/terrain, value: underground}`, the same
   spelling `type:` has anywhere). The two other settings are `{from: [arcana, nature]}`, which
-  offers values, and `{choice: $.feat.gnome-obsession.lore}`, which reads a choice.
+  offers values, and `{choice: $.feats.gnome-obsession.lore}`, which reads a choice.
 
 ### Left-out inputs
 
@@ -201,7 +201,7 @@ rules:
   - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`. `freeTextKind: lore` on a `core/skill` question asks for a Lore: the text becomes a Lore skill, lowercased, trimmed and without a trailing "Lore" ("Sailing Lore", "sailing" and "Sailing" are one skill).
 - **`multiple`**: Specifies multi-selection: `multiple: { min: 1, max: 3 }`.
 - **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`.
-- **`distinct`**: Leaves out the value of one or more `$` paths: another choice or a built-in. One path is bare, `distinct: $.ancestry.name`; several are a list, `distinct: [$.bard.muse, $.feat.other]`. It is one-way: the choice it names keeps its own options. An unanswered path leaves out nothing. `{list: $.path}` leaves out the items on a [character list](character-lists.md), and `distinct: false` goes with `addTo`.
+- **`distinct`**: Leaves out the value of one or more `$` paths: another choice or a built-in. One path is bare, `distinct: $.ancestry.name`; several are a list, `distinct: [$.bard.muse, $.feats.other]`. It is one-way: the choice it names keeps its own options. An unanswered path leaves out nothing. `{list: $.path}` leaves out the items on a [character list](character-lists.md), and `distinct: false` goes with `addTo`.
 - **`addTo`**: Names the character list the answer goes to (`addTo: $.feats.assurance.skills`). The reader expands it into an `add-to-list` rule keyed `<question key>-add` and a `distinct` over the same list; the wire form carries only those rules. See [Character lists](character-lists.md#addto-on-a-question).
 - **`optional: true`**: Marks the choice as optional, excluding it from blocking open-question counts.
 

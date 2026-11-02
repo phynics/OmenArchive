@@ -24,7 +24,7 @@ foundryID: UKYO5kiOnCY1hgCD
 rules:
 - key: choice-feat-fiendish-magic-spell-one
   choice:
-    name: $.feat.fiendish-magic.spell-one
+    name: $.feats.fiendish-magic.spell-one
     label: First Spell
     type: spellcasting/spell-id
     records:
@@ -40,9 +40,9 @@ rules:
           - {name: invisibility}
 - key: choice-feat-fiendish-magic-spell-two
   choice:
-    name: $.feat.fiendish-magic.spell-two
+    name: $.feats.fiendish-magic.spell-two
     label: Second Spell
-    distinct: $.feat.fiendish-magic.spell-one
+    distinct: $.feats.fiendish-magic.spell-one
     type: spellcasting/spell-id
     records:
       filter:
@@ -60,7 +60,7 @@ rules:
   inputs:
     source: fiendish-magic
     sourceName: Fiendish Magic
-    spell: {choice: $.feat.fiendish-magic.spell-one}
+    spell: {choice: $.feats.fiendish-magic.spell-one}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}
@@ -70,7 +70,7 @@ rules:
   inputs:
     source: fiendish-magic
     sourceName: Fiendish Magic
-    spell: {choice: $.feat.fiendish-magic.spell-two}
+    spell: {choice: $.feats.fiendish-magic.spell-two}
     tradition: divine
     attribute: charisma
     rankPolicy: {fixed: 2}

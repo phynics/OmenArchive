@@ -17,7 +17,7 @@ foundryID: D3SuA5MaKucO1flE
 rules:
 - key: choice-feat-general-training-feats
   choice:
-    name: $.feat.general-training.feats
+    name: $.feats.general-training.feat
     label: General Feat
     type: core/feat-id
     records:
@@ -29,4 +29,4 @@ rules:
 - key: grant-item-1
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.general-training.feats}
+    feat: {choice: $.feats.general-training.feat}

@@ -18,10 +18,10 @@ rules:
     feat: '@feat.adopted-ancestry'
 - key: choice-feat-cultural-adaptability-feat
   choice:
-    name: $.feat.cultural-adaptability.feat
+    name: $.feats.cultural-adaptability.feat
     label: Ancestry Feat
     prerequisites:
-    - $.feat.adopted-ancestry.ancestry
+    - $.feats.adopted-ancestry.ancestry
     type: core/feat-id
     records:
       filter:
@@ -29,8 +29,8 @@ rules:
         - {type: feat}
         - {trait: systemTrait-ancestry}
         - {level: 1}
-        - {hasChoiceAncestryTrait: $.feat.adopted-ancestry.ancestry}
+        - {hasChoiceAncestryTrait: $.feats.adopted-ancestry.ancestry}
 - key: grant-item-2
   effect: core/add-feat@3
   inputs:
-    feat: {choice: $.feat.cultural-adaptability.feat}
+    feat: {choice: $.feats.cultural-adaptability.feat}
