@@ -13,21 +13,21 @@ description: You trace your lineage to archons, guardians of the seven-tiered mo
 mechanicsScope: mixed
 foundryID: g3oJlWGHc74qX2z5
 rules:
-- key: annotation-1
+- key: saving-throws-circumstance-bonus-emotion
   effect: core/add-modifier
   inputs:
     target: saving-throws
     amount: 1
     type: circumstance
     when: emotion
-- key: annotation-2
+- key: saving-throws-emotion-success-note
   effect: core/add-note
   inputs:
     target: saving-throws
     text: When you roll a success on a save against an emotion effect, you get a critical
       success instead.
     when: emotion
-- key: annotation-3
+- key: saving-throws-emotion-success-note-2
   effect: core/add-note
   inputs:
     target: saving-throws

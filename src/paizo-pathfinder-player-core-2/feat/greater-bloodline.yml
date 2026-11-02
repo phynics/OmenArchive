@@ -51,7 +51,7 @@ description: You uncover the greater secrets of your bloodline. You gain the gre
 mechanicsScope: builder
 foundryID: DpRMdytpPiCypmkJ
 rules:
-- key: configure-source-1
+- key: sorcerer-focus-spells-source-bloodline-aberrant
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -64,7 +64,7 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: charisma
-- key: grant-focus-spell-1
+- key: unusual-anatomy-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -74,7 +74,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.unusual-anatomy'
-- key: configure-source-2
+- key: sorcerer-focus-spells-source-bloodline-angelic
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -87,7 +87,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-2
+- key: celestial-brand-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -97,7 +97,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.celestial-brand'
-- key: configure-source-3
+- key: sorcerer-focus-spells-source-bloodline-demonic
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -110,7 +110,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-3
+- key: chthonian-wrath-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -120,7 +120,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.chthonian-wrath'
-- key: configure-source-4
+- key: sorcerer-focus-spells-source-bloodline-diabolic
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -133,7 +133,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-4
+- key: hellfire-plume-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -143,7 +143,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.hellfire-plume'
-- key: configure-source-5
+- key: sorcerer-focus-spells-source-bloodline-draconic-arcane
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -159,7 +159,7 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: charisma
-- key: grant-focus-spell-5
+- key: dragon-wings-focus-spell-bloodline-draconic-arcane
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -172,7 +172,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.dragon-wings'
-- key: configure-source-6
+- key: sorcerer-focus-spells-source-bloodline-draconic-divine
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -188,7 +188,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-6
+- key: dragon-wings-focus-spell-bloodline-draconic-divine
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -201,7 +201,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.dragon-wings'
-- key: configure-source-7
+- key: sorcerer-focus-spells-source-bloodline-draconic-occult
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -217,7 +217,7 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: charisma
-- key: grant-focus-spell-7
+- key: dragon-wings-focus-spell-bloodline-draconic-occult
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -230,7 +230,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.dragon-wings'
-- key: configure-source-8
+- key: sorcerer-focus-spells-source-bloodline-draconic-primal
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -246,7 +246,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-8
+- key: dragon-wings-focus-spell-bloodline-draconic-primal
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -259,7 +259,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.dragon-wings'
-- key: configure-source-9
+- key: sorcerer-focus-spells-source-bloodline-elemental-air
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -275,7 +275,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-9
+- key: elemental-blast-focus-spell-bloodline-air
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -288,7 +288,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-blast'
-- key: configure-source-10
+- key: sorcerer-focus-spells-source-bloodline-elemental-earth
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -304,7 +304,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-10
+- key: elemental-blast-focus-spell-bloodline-earth
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -317,7 +317,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-blast'
-- key: configure-source-11
+- key: sorcerer-focus-spells-source-bloodline-elemental-fire
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -333,7 +333,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-11
+- key: elemental-blast-focus-spell-bloodline-fire
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -346,7 +346,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-blast'
-- key: configure-source-12
+- key: sorcerer-focus-spells-source-bloodline-elemental-metal
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -362,7 +362,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-12
+- key: elemental-blast-focus-spell-bloodline-metal
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -375,7 +375,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-blast'
-- key: configure-source-13
+- key: sorcerer-focus-spells-source-bloodline-elemental-water
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -391,7 +391,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-13
+- key: elemental-blast-focus-spell-bloodline-water
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -404,7 +404,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-blast'
-- key: configure-source-14
+- key: sorcerer-focus-spells-source-bloodline-elemental-wood
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -420,7 +420,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-14
+- key: elemental-blast-focus-spell-bloodline-wood
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -433,7 +433,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-blast'
-- key: configure-source-15
+- key: sorcerer-focus-spells-source-bloodline-fey
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -446,7 +446,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-15
+- key: fey-glamour-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -456,7 +456,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.fey-glamour'
-- key: configure-source-16
+- key: sorcerer-focus-spells-source-bloodline-hag
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -469,7 +469,7 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: charisma
-- key: grant-focus-spell-16
+- key: youre-mine-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -479,7 +479,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.youre-mine'
-- key: configure-source-17
+- key: sorcerer-focus-spells-source-bloodline-imperial
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -492,7 +492,7 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: charisma
-- key: grant-focus-spell-17
+- key: arcane-countermeasure-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:
@@ -502,7 +502,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.arcane-countermeasure'
-- key: configure-source-18
+- key: sorcerer-focus-spells-source-bloodline-undead
   effect: spellcasting/configure-source
   level: 10
   prerequisites:
@@ -515,7 +515,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-18
+- key: grasping-grave-focus-spell
   effect: spellcasting/grant-focus-spell@2
   level: 10
   prerequisites:

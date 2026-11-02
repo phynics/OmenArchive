@@ -13,21 +13,21 @@ description: You've heard the Call, and by resisting it, you've developed a bulw
 mechanicsScope: mixed
 foundryID: 2vlQ09QIBli5u9Gz
 rules:
-- key: annotation-1
+- key: will-circumstance-bonus-mental
   effect: core/add-modifier
   inputs:
     target: will
     amount: 1
     type: circumstance
     when: mental
-- key: annotation-2
+- key: saving-throws-mental-controlled-success-note
   effect: core/add-note
   inputs:
     target: saving-throws
     text: When you roll a success on an saving throw against a mental effect that
       would make you controlled, you get a critical success instead.
     when: mental; inflicts controlled
-- key: annotation-3
+- key: saving-throws-mental-controlled-success-note-2
   effect: core/add-note
   inputs:
     target: saving-throws

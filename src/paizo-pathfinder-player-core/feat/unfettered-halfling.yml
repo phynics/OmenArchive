@@ -17,19 +17,19 @@ description: You were either pressed into indentured servitude or shackled in a 
 mechanicsScope: mixed
 foundryID: uuD8Z9jUG61GmenX
 rules:
-- key: annotation-1
+- key: saving-throws-grabbed-or-immobilized-success-note
   effect: core/add-note
   inputs:
     target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
     when: inflicts grabbed or inflicts immobilized or inflicts restrained
-- key: annotation-2
+- key: skills-escape-success-note
   effect: core/add-note
   inputs:
     target: skills
     text: When you roll a success on a skill check, the result is one degree better.
     when: Escape
-- key: annotation-3
+- key: attack-rolls-escape-success-note
   effect: core/add-note
   inputs:
     target: attack-rolls

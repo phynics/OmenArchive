@@ -13,20 +13,20 @@ description: You might have a flighty nature, but when a topic captures your att
 mechanicsScope: builder
 foundryID: mxhGH4FVYXJwb0BC
 rules:
-- key: choice-feat-gnome-obsession-lore
+- key: choice-feats-gnome-obsession-lore
   choice:
     name: $.feats.gnome-obsession.lore
     label: Lore
     type: core/skill
     freeText: true
     freeTextKind: lore
-- key: add-feat-1
+- key: additional-lore-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.additional-lore'
     with:
       $.feats.additional-lore.lore: {choice: $.feats.gnome-obsession.lore}
-- key: add-feat-2
+- key: assurance-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.assurance'

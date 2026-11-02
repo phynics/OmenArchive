@@ -12,7 +12,7 @@ description: Your elven magic manifests as a simple arcane spell, even if you ar
 mechanicsScope: mixed
 foundryID: Pat4H0VbmApblZxc
 rules:
-- key: choice-feat-otherworldly-magic-cantrip
+- key: choice-feats-otherworldly-magic-cantrip
   choice:
     name: $.feats.otherworldly-magic.cantrip
     label: Otherworldly Magic Spell
@@ -24,7 +24,7 @@ rules:
         - {rarity: common}
         - {spell.category: cantrip}
         - {spell.tradition: arcane}
-- key: grant-innate-spell-1
+- key: chosen-cantrip-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: otherworldly-magic

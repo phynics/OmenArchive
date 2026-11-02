@@ -13,14 +13,14 @@ description: Your blood sings with the liberating power of the azatas, living em
 mechanicsScope: mixed
 foundryID: eSP2938INGUG9b3w
 rules:
-- key: annotation-1
+- key: attack-rolls-and-acrobatics-more-circumstance-bonus
   effect: core/add-modifier
   inputs:
     target: [attack-rolls, acrobatics, athletics]
     amount: 1
     type: circumstance
     when: Escape
-- key: annotation-2
+- key: attack-rolls-escape-success-note
   effect: core/add-note
   inputs:
     target: attack-rolls
@@ -28,14 +28,14 @@ rules:
       When you roll a critical failure on an attack roll, the result is one degree
       better.
     when: Escape
-- key: annotation-3
+- key: attack-rolls-escape-critical-failure-note
   effect: core/add-note
   inputs:
     target: attack-rolls
     text: When you roll a critical failure on a check to Escape, you get a failure
       instead, and when you roll a success, you get a critical success instead.
     when: Escape
-- key: annotation-4
+- key: athletics-escape-success-note
   effect: core/add-note
   inputs:
     target: athletics
@@ -43,14 +43,14 @@ rules:
       better. When you roll a critical failure on an Athletics check, the result is
       one degree better.
     when: Escape
-- key: annotation-5
+- key: athletics-escape-critical-failure-note
   effect: core/add-note
   inputs:
     target: athletics
     text: When you roll a critical failure on a check to Escape, you get a failure
       instead, and when you roll a success, you get a critical success instead.
     when: Escape
-- key: annotation-6
+- key: acrobatics-escape-success-note
   effect: core/add-note
   inputs:
     target: acrobatics
@@ -58,7 +58,7 @@ rules:
       better. When you roll a critical failure on an Acrobatics check, the result
       is one degree better.
     when: Escape
-- key: annotation-7
+- key: acrobatics-escape-critical-failure-note
   effect: core/add-note
   inputs:
     target: acrobatics

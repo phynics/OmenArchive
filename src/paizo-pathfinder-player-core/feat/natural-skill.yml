@@ -10,7 +10,7 @@ description: Your ingenuity allows you to learn a wide variety of skills. You ga
 mechanicsScope: builder
 foundryID: Rfyhlyql1GSoDkI2
 rules:
-- key: choice-feat-natural-skill-skill-one
+- key: choice-feats-natural-skill-skill-one
   choice:
     name: $.feats.natural-skill.skill-one
     label: Skill One
@@ -32,12 +32,12 @@ rules:
     - {key: stealth, value: stealth}
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
-- key: add-skill-increase-1
+- key: chosen-skill-one-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feats.natural-skill.skill-one}
     rank: trained
-- key: choice-feat-natural-skill-skill-two
+- key: choice-feats-natural-skill-skill-two
   choice:
     name: $.feats.natural-skill.skill-two
     label: Skill Two
@@ -59,7 +59,7 @@ rules:
     - {key: stealth, value: stealth}
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
-- key: add-skill-increase-2
+- key: chosen-skill-two-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feats.natural-skill.skill-two}

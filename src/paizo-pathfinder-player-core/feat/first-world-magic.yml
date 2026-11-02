@@ -12,7 +12,7 @@ description: Your connection to the First World grants you a primal innate spell
 mechanicsScope: mixed
 foundryID: yJ8Ez5dEscIk1xr5
 rules:
-- key: choice-feat-first-world-magic-cantrip
+- key: choice-feats-first-world-magic-cantrip
   choice:
     name: $.feats.first-world-magic.cantrip
     label: First World Magic Spell
@@ -24,7 +24,7 @@ rules:
         - {rarity: common}
         - {spell.category: cantrip}
         - {spell.tradition: primal}
-- key: grant-innate-spell-1
+- key: chosen-cantrip-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: first-world-magic

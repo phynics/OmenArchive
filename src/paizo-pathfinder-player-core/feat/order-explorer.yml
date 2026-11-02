@@ -21,14 +21,14 @@ specialText: You can take this feat multiple times. Each time you do, you must c
 mechanicsScope: builder
 foundryID: 9onf3uGvZRnNLPR6
 rules:
-- key: choice-feat-order-explorer-orders
+- key: choice-feats-order-explorer-order
   choice:
     name: $.feats.order-explorer.order
     label: Order
     addTo: $.druid.orders
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.druid.orders'}}
-- key: choice-feat-order-explorer-feat
+- key: choice-feats-order-explorer-feat
   choice:
     name: $.feats.order-explorer.feat
     label: Order feat

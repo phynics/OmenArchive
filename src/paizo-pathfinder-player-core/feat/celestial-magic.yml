@@ -25,7 +25,7 @@ description: 'You possess celestial magic. Choose two of the following spells: [
 mechanicsScope: builder
 foundryID: esKk5XrnlqRayDPG
 rules:
-- key: choice-feat-celestial-magic-spell-one
+- key: choice-feats-celestial-magic-spell-one
   choice:
     name: $.feats.celestial-magic.spell-one
     label: First Spell
@@ -41,7 +41,7 @@ rules:
           - {name: revealing light}
           - {name: humanoid form}
           - {name: everlight}
-- key: choice-feat-celestial-magic-spell-two
+- key: choice-feats-celestial-magic-spell-two
   choice:
     name: $.feats.celestial-magic.spell-two
     label: Second Spell
@@ -58,7 +58,7 @@ rules:
           - {name: revealing light}
           - {name: humanoid form}
           - {name: everlight}
-- key: innate-spell-1
+- key: chosen-one-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: celestial-magic
@@ -68,7 +68,7 @@ rules:
     attribute: charisma
     rankPolicy: {fixed: 2}
     castFrequency: {perDay: 1}
-- key: innate-spell-2
+- key: chosen-two-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: celestial-magic

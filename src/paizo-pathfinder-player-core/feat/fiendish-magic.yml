@@ -22,7 +22,7 @@ description: 'You possess fiendish magic. Choose two of the following spells: [D
 mechanicsScope: builder
 foundryID: UKYO5kiOnCY1hgCD
 rules:
-- key: choice-feat-fiendish-magic-spell-one
+- key: choice-feats-fiendish-magic-spell-one
   choice:
     name: $.feats.fiendish-magic.spell-one
     label: First Spell
@@ -38,7 +38,7 @@ rules:
           - {name: see the unseen}
           - {name: false vitality}
           - {name: invisibility}
-- key: choice-feat-fiendish-magic-spell-two
+- key: choice-feats-fiendish-magic-spell-two
   choice:
     name: $.feats.fiendish-magic.spell-two
     label: Second Spell
@@ -55,7 +55,7 @@ rules:
           - {name: see the unseen}
           - {name: false vitality}
           - {name: invisibility}
-- key: innate-spell-1
+- key: chosen-one-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: fiendish-magic
@@ -65,7 +65,7 @@ rules:
     attribute: charisma
     rankPolicy: {fixed: 2}
     castFrequency: {perDay: 1}
-- key: innate-spell-2
+- key: chosen-two-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: fiendish-magic

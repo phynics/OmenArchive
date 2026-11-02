@@ -15,12 +15,12 @@ description: 'You know the secrets of the Multiverse. You gain the trained profi
 mechanicsScope: builder
 foundryID: sKDCoxMz2yKWLGRJ
 rules:
-- key: add-skill-increase-1
+- key: religion-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: religion
     rank: trained
-- key: choice-feat-nephilim-lore-skill
+- key: choice-feats-nephilim-lore-skill
   choice:
     name: $.feats.nephilim-lore.skill
     label: Skill
@@ -28,12 +28,12 @@ rules:
     cases:
     - {key: diplomacy, value: diplomacy}
     - {key: intimidation, value: intimidation}
-- key: add-skill-increase-2
+- key: chosen-skill-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feats.nephilim-lore.skill}
     rank: trained
-- key: add-feat-1
+- key: additional-lore-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.additional-lore'

@@ -33,7 +33,7 @@ description: 'Through your heritage, you can replicate a hag''s magic. Choose on
 mechanicsScope: builder
 foundryID: t6GBBIwX7hvvxYyV
 rules:
-- key: choice-feat-hag-magic-spell
+- key: choice-feats-hag-magic-spell
   choice:
     name: $.feats.hag-magic.spell
     label: Spell
@@ -70,13 +70,13 @@ rules:
           - all:
             - {characterHasFeat: virga may}
             - {any: [{name: hydraulic torrent}]}
-- key: choice-feat-hag-magic-other-spell
+- key: choice-feats-hag-magic-other-spell
   choice:
     name: $.feats.hag-magic.other-spell
     label: Other Coven Spell
     type: spellcasting/spell-id
     records: {filter: {all: [{type: spell}, {maxLevel: 4}, {rarity: common}]}}
-- key: innate-spell-1
+- key: chosen-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: hag-magic
@@ -86,7 +86,7 @@ rules:
     attribute: charisma
     rankPolicy: {fixed: 4}
     castFrequency: {perDay: 1}
-- key: innate-spell-2
+- key: chosen-other-innate-spell
   effect: spellcasting/grant-innate-spell@2
   inputs:
     source: hag-magic

@@ -20,14 +20,14 @@ specialText: You can take this feat multiple times. Each time you do, you must c
 mechanicsScope: builder
 foundryID: a898miJnjgD93ZsX
 rules:
-- key: choice-feat-multifarious-muse-muses
+- key: choice-feats-multifarious-muse-muse
   choice:
     name: $.feats.multifarious-muse.muse
     label: Muse
     addTo: $.bard.muses
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.bard.muses'}}
-- key: choice-feat-multifarious-muse-feat
+- key: choice-feats-multifarious-muse-feat
   choice:
     name: $.feats.multifarious-muse.feat
     label: Muse feat

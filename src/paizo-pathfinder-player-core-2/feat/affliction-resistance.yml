@@ -15,13 +15,13 @@ description: Your diet has strengthened you against diseases and poisons. You ga
 mechanicsScope: mixed
 foundryID: 5oazhjGmSwfPTlh3
 rules:
-- key: annotation-1
+- key: saving-throws-disease-or-poison-success-note
   effect: core/add-note
   inputs:
     target: saving-throws
     text: When you roll a success on a saving throw, the result is one degree better.
     when: the effect has the disease trait or the effect has the poison trait
-- key: annotation-2
+- key: saving-throws-circumstance-bonus-disease-or-poison
   effect: core/add-modifier
   inputs:
     target: saving-throws

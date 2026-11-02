@@ -25,7 +25,7 @@ rules:
     list: $.feats.terrain-expertise.terrains
     valueType: core/terrain
     label: Terrain Expertise
-- key: choice-feat-terrain-expertise-terrains
+- key: choice-feats-terrain-expertise-terrain
   choice:
     name: $.feats.terrain-expertise.terrain
     label: Terrain Expertise Terrain
@@ -41,7 +41,7 @@ rules:
     - sky
     - swamp
     - underground
-- key: add-terrain-expertise-1
+- key: terrain-expertise
   effect: core/add-terrain-expertise
   inputs:
     terrain: {choice: $.feats.terrain-expertise.terrain}

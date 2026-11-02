@@ -12,11 +12,11 @@ description: During your adventures, you've honed your ability to adapt to the c
 mechanicsScope: builder
 foundryID: Z56DtGBd3AcZOCeG
 rules:
-- key: grant-item-1
+- key: adopted-ancestry-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.adopted-ancestry'
-- key: choice-feat-cultural-adaptability-feat
+- key: choice-feats-cultural-adaptability-feat
   choice:
     name: $.feats.cultural-adaptability.feat
     label: Ancestry Feat
@@ -30,7 +30,7 @@ rules:
         - {trait: systemTrait-ancestry}
         - {level: 1}
         - {hasChoiceAncestryTrait: $.feats.adopted-ancestry.ancestry}
-- key: grant-item-2
+- key: chosen-feat
   effect: core/add-feat@3
   inputs:
     feat: {choice: $.feats.cultural-adaptability.feat}
