@@ -35,6 +35,7 @@ Filters fitting within 56 characters may be written inline on a single line. Lon
 | `sharesClassTrait` | Matches records sharing the character's class trait | `{ sharesClassTrait: true }` |
 | `characterHasFeat` | Tests whether the character has taken a specific feat | `{ characterHasFeat: '@feat.assurance' }` |
 | `hasChoiceAncestryTrait`| Matches records sharing an ancestry chosen by a choice | `{ hasChoiceAncestryTrait: $.feat.adopted-ancestry.ancestry }` |
+| `requiresListValue` | Matches records whose structured prerequisites test a character list for the value a question holds ("a feat that requires that order"). Text-only prerequisites never match | `{ requiresListValue: { list: $.druid.orders, value: { choice: $.feat.order-explorer.orders } } }` |
 | `hasChoiceTradition` | Matches spells of a tradition selected by a choice | `{ hasChoiceTradition: $.gnome.wellspring-tradition }` |
 | `knownBySource` | Matches spells known by a specific spellcasting source | `{ knownBySource: bard-spellcasting }` |
 | `hasSourceTradition` | Matches spells of the tradition a spellcasting source is configured with | `{ hasSourceTradition: witch-spellcasting }` |

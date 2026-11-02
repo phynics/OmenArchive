@@ -255,6 +255,43 @@
     {
       "type": "object",
       "properties": {
+        "requiresListValue": {
+          "type": "object",
+          "properties": {
+            "list": {
+              "type": "string",
+              "pattern": "^\\$\\.[a-z0-9.-]+$"
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "choice": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "choice"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "list",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "requiresListValue"
+      ],
+      "additionalProperties": false,
+      "description": "The resource's structured prerequisites test the character list for the value the named question holds (a 1st-level feat that requires that order). Nothing matches while the question is unanswered, or for a prerequisite that is text only."
+    },
+    {
+      "type": "object",
+      "properties": {
         "hasSourceTradition": {
           "type": "string",
           "minLength": 1

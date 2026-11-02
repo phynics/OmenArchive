@@ -25,58 +25,23 @@ rules:
   choice:
     name: $.feat.order-explorer.orders
     label: Order
-    distinct: $.druid.order
+    addTo: $.druid.orders
     type: core/feature-id
-    cases:
-    - key: animal
-      value: '@class.druid.orders.animal'
-      effects:
-      - key: grant-feat
-        effect: core/add-feat@3
-        inputs:
-          selectionId: 3076bb1d-1498-5f90-8bdc-7e5543973a19
-          feat: '@feat.animal-companion'
-      - key: add-membership
-        effect: core/add-to-list
-        inputs:
-          list: $.druid.orders
-          value: {type: core/feature-id, literal: '@class.druid.orders.animal'}
-    - key: leaf
-      value: '@class.druid.orders.leaf'
-      effects:
-      - key: grant-feat
-        effect: core/add-feat@3
-        inputs:
-          selectionId: 2d144296-79fe-5dec-8116-20ef361b3958
-          feat: '@feat.leshy-familiar'
-      - key: add-membership
-        effect: core/add-to-list
-        inputs:
-          list: $.druid.orders
-          value: {type: core/feature-id, literal: '@class.druid.orders.leaf'}
-    - key: storm
-      value: '@class.druid.orders.storm'
-      effects:
-      - key: grant-feat
-        effect: core/add-feat@3
-        inputs:
-          selectionId: 276f5969-499c-5d31-9270-dcf299ff4f80
-          feat: '@feat.storm-born'
-      - key: add-membership
-        effect: core/add-to-list
-        inputs:
-          list: $.druid.orders
-          value: {type: core/feature-id, literal: '@class.druid.orders.storm'}
-    - key: untamed
-      value: '@class.druid.orders.untamed'
-      effects:
-      - key: grant-feat
-        effect: core/add-feat@3
-        inputs:
-          selectionId: 7b430d91-4407-542b-b041-bae3b9eea4dc
-          feat: '@feat.untamed-form'
-      - key: add-membership
-        effect: core/add-to-list
-        inputs:
-          list: $.druid.orders
-          value: {type: core/feature-id, literal: '@class.druid.orders.untamed'}
+    records: {filter: {pathPrefix: '@class.druid.orders'}}
+- key: choice-feat-order-explorer-feat
+  choice:
+    name: $.feat.order-explorer.feat
+    label: Order feat
+    prerequisites:
+    - $.feat.order-explorer.orders
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {level: 1}
+        - {requiresListValue: {list: $.druid.orders, value: {choice: $.feat.order-explorer.orders}}}
+- key: grant-order-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feat.order-explorer.feat}
