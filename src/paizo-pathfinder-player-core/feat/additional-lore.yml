@@ -16,32 +16,40 @@ specialText: You can select this feat more than once. Each time you must select 
 mechanicsScope: builder
 foundryID: BocFD2KV0qgUC76x
 rules:
+- key: lore-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.additional-lore.lores
+    valueType: core/skill
+    label: Additional Lore
 - key: choice-feat-additional-lore-lores
   choice:
     name: $.feat.additional-lore.lores
     label: Lore name
-    type: core/string
+    addTo: $.feats.additional-lore.lores
+    type: core/skill
     freeText: true
-- key: add-lore-skill-increase-1
-  effect: core/add-lore-skill-increase@2
+    freeTextKind: lore
+- key: lore-trained
+  effect: core/add-skill-increase@2
   inputs:
-    loreName: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feat.additional-lore.lores}
     rank: trained
-- key: add-lore-skill-increase-2
-  effect: core/add-lore-skill-increase@2
+- key: lore-expert
+  effect: core/add-skill-increase@2
   level: 3
   inputs:
-    loreName: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feat.additional-lore.lores}
     rank: expert
-- key: add-lore-skill-increase-3
-  effect: core/add-lore-skill-increase@2
+- key: lore-master
+  effect: core/add-skill-increase@2
   level: 7
   inputs:
-    loreName: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feat.additional-lore.lores}
     rank: master
-- key: add-lore-skill-increase-4
-  effect: core/add-lore-skill-increase@2
+- key: lore-legendary
+  effect: core/add-skill-increase@2
   level: 15
   inputs:
-    loreName: {choice: $.feat.additional-lore.lores}
+    skill: {choice: $.feat.additional-lore.lores}
     rank: legendary

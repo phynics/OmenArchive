@@ -17,8 +17,9 @@ rules:
   choice:
     name: $.feat.gnome-obsession.lore
     label: Lore
-    type: core/string
+    type: core/skill
     freeText: true
+    freeTextKind: lore
 - key: add-feat-1
   effect: core/add-feat@3
   inputs:
@@ -30,4 +31,4 @@ rules:
   inputs:
     feat: '@feat.assurance'
     with:
-      $.feat.assurance.skills: {choice: $.feat.gnome-obsession.lore, as: lore}
+      $.feat.assurance.skills: {choice: $.feat.gnome-obsession.lore}

@@ -134,8 +134,7 @@ inputs:
   is the value it grants: a bare value is a **skill** (`$.feat.assurance.skills: athletics`), and a value of
   any other type is spelled with its type (`{type: core/terrain, value: underground}`, the same
   spelling `type:` has anywhere). The two other settings are `{from: [arcana, nature]}`, which
-  offers values, and `{choice: $.feat.gnome-obsession.lore}`, which reads a choice (with
-  `as: lore`, a lore skill named by the answer).
+  offers values, and `{choice: $.feat.gnome-obsession.lore}`, which reads a choice.
 
 ### Left-out inputs
 
@@ -199,7 +198,7 @@ rules:
 - **Options**: Defined using one of:
   - `cases`: A list of the values: `cases: [strength, dexterity]`. The case's key is the value's text. A case with a label, a different key or `effects:` is a map (`{ key: …, label: …, value: …, effects: […] }`), and then the list is maps.
   - `records`: A query object `{ filter: { ... } }` dynamically populated from the archive, with the answers' `type:` on the choice. `records: { filter: …, from: $.deity.domains }` limits the options to the values selected in another choice.
-  - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`.
+  - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`. `freeTextKind: lore` on a `core/skill` question asks for a Lore: the text becomes a Lore skill, lowercased, trimmed and without a trailing "Lore" ("Sailing Lore", "sailing" and "Sailing" are one skill).
 - **`multiple`**: Specifies multi-selection: `multiple: { min: 1, max: 3 }`.
 - **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`.
 - **`distinct`**: Leaves out the value of one or more `$` paths: another choice or a built-in. One path is bare, `distinct: $.ancestry.name`; several are a list, `distinct: [$.bard.muse, $.feat.other]`. It is one-way: the choice it names keeps its own options. An unanswered path leaves out nothing. `{list: $.path}` leaves out the items on a [character list](character-lists.md), and `distinct: false` goes with `addTo`.
