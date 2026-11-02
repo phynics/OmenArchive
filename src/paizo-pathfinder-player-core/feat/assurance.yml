@@ -36,10 +36,17 @@ specialText: You can select this feat multiple times. Each time, choose a differ
 mechanicsScope: builder
 foundryID: W6Gl9ePmItfDHji0
 rules:
+- key: assurance-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.assurance.skills
+    valueType: core/skill
+    label: Assurance
 - key: choice-feat-assurance-skills
   choice:
     name: $.feat.assurance.skills
     label: Skill
+    addTo: $.feats.assurance.skills
     type: core/skill
     cases:
     - {key: acrobatics, value: acrobatics}
@@ -58,7 +65,3 @@ rules:
     - {key: stealth, value: stealth}
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
-- key: add-assurance-1
-  effect: core/add-assurance
-  inputs:
-    skill: {choice: $.feat.assurance.skills}
