@@ -10,10 +10,10 @@ traits:
 prerequisites:
 - text: trained in Arcana, Nature, Occultism or Religion
   anyOf:
-  - hasSkillProficiency: {skill: arcana, proficiency: trained}
-  - hasSkillProficiency: {skill: nature, proficiency: trained}
-  - hasSkillProficiency: {skill: occultism, proficiency: trained}
-  - hasSkillProficiency: {skill: religion, proficiency: trained}
+  - hasSkillProficiency: {skill: arcana, rank: trained}
+  - hasSkillProficiency: {skill: nature, rank: trained}
+  - hasSkillProficiency: {skill: occultism, rank: trained}
+  - hasSkillProficiency: {skill: religion, rank: trained}
 action:
   count: reaction
   criticalFailure: You misidentify the spell as another spell entirely, of the GM's

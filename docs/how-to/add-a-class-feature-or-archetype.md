@@ -77,7 +77,7 @@ traits:
   - dedication
 prerequisites:
   - text: trained in Medicine
-    hasSkillProficiency: { skill: medicine, proficiency: trained }
+    hasSkillProficiency: { skill: medicine, rank: trained }
 description: |
   You have dedicated your studies to battlefield medicine...
 ```

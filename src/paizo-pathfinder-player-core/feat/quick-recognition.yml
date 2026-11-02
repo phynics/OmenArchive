@@ -9,10 +9,10 @@ traits:
 prerequisites:
 - text: Master in Arcana, Nature, Occultism or Religion
   anyOf:
-  - hasSkillProficiency: {skill: arcana, proficiency: master}
-  - hasSkillProficiency: {skill: nature, proficiency: master}
-  - hasSkillProficiency: {skill: occultism, proficiency: master}
-  - hasSkillProficiency: {skill: religion, proficiency: master}
+  - hasSkillProficiency: {skill: arcana, rank: master}
+  - hasSkillProficiency: {skill: nature, rank: master}
+  - hasSkillProficiency: {skill: occultism, rank: master}
+  - hasSkillProficiency: {skill: religion, rank: master}
 - text: Recognize Spell
   has: '@feat.recognize-spell'
 description: You Recognize Spells swiftly. Once per round, you can [Recognize a Spell](omen://feat/recognize-spell?source=paizo-pathfinder-player-core)

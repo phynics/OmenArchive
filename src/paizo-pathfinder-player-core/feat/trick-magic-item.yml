@@ -10,10 +10,10 @@ traits:
 prerequisites:
 - text: trained in Arcana, Nature, Occultism, or Religion
   anyOf:
-  - hasSkillProficiency: {skill: arcana, proficiency: trained}
-  - hasSkillProficiency: {skill: nature, proficiency: trained}
-  - hasSkillProficiency: {skill: occultism, proficiency: trained}
-  - hasSkillProficiency: {skill: religion, proficiency: trained}
+  - hasSkillProficiency: {skill: arcana, rank: trained}
+  - hasSkillProficiency: {skill: nature, rank: trained}
+  - hasSkillProficiency: {skill: occultism, rank: trained}
+  - hasSkillProficiency: {skill: religion, rank: trained}
 action:
   count: one_action
   criticalFailure: You can't use the item, and you can't try to trick it again until
