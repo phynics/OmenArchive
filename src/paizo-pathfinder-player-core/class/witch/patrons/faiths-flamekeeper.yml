@@ -30,7 +30,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: mFqMSQoNl0NMDklv
 rules:
-- key: configure-source-1
+- key: witch-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: witch-focus-spells
@@ -38,14 +38,14 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: intelligence
-- key: grant-spell-1
+- key: stoke-the-heart-spell
   effect: spellcasting/grant-spell@2
   inputs:
     source: witch-focus-spells
     spell: '@spell.stoke-the-heart'
     rankPolicy: cantrip
     castFrequency: atWill
-- key: add-known-spell-1
+- key: command-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
@@ -60,12 +60,12 @@ rules:
         any:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
-- key: grant-focus-spell-1
+- key: chosen-first-hex-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: witch-focus-spells
     spell: {choice: $.witch.patron.first-hex}
-- key: configure-source-2
+- key: witch-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: witch-spellcasting
@@ -73,7 +73,7 @@ rules:
     castingKind: prepared
     tradition: divine
     attribute: intelligence
-- key: add-skill-increase-1
+- key: religion-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: religion

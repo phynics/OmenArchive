@@ -19,7 +19,7 @@ description: "Fire lives at the center of the world, the center of the sun, and 
 mechanicsScope: builder
 foundryID: GTSvbFb36InvuH0w
 rules:
-- key: configure-source-1
+- key: oracle-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-spellcasting
@@ -27,12 +27,12 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: acrobatics-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: acrobatics
     rank: trained
-- key: configure-source-2
+- key: oracle-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-focus-spells
@@ -40,36 +40,36 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: incendiary-aura-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
     spell: '@spell.incendiary-aura'
-- key: add-feature-by-id-1
+- key: curse-of-engulfing-flames-feature
   effect: core/add-feature@2
   inputs:
     feature: '@class.oracle.curses.curse-of-engulfing-flames'
-- key: add-feat-1
+- key: foretell-harm-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.foretell-harm'
-- key: add-known-spell-1
+- key: ignition-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.ignition?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: breathe-fire-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.breathe-fire?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: blazing-bolt-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.blazing-bolt?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: fireball-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:

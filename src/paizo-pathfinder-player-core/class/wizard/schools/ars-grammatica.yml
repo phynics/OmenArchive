@@ -77,7 +77,7 @@ spellcasting:
   source: wizard-spellcasting
   spellbook: {from: curriculum}
 rules:
-- key: configure-source-1
+- key: wizard-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: wizard-focus-spells
@@ -85,7 +85,7 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: intelligence
-- key: grant-focus-spell-1
+- key: protective-wards-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: wizard-focus-spells

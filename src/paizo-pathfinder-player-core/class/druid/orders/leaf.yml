@@ -22,7 +22,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: u4nlOzPj2WHkIj9l
 rules:
-- key: configure-source-1
+- key: druid-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: druid-focus-spells
@@ -30,17 +30,17 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: wisdom
-- key: grant-focus-spell-1
+- key: cornucopia-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: druid-focus-spells
     spell: '@spell.cornucopia'
-- key: add-skill-increase-1
+- key: diplomacy-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: diplomacy
     rank: trained
-- key: add-feat-1
+- key: leshy-familiar-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.leshy-familiar'

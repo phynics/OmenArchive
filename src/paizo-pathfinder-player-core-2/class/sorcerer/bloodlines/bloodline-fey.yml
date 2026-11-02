@@ -30,7 +30,7 @@ description: 'Fey whimsy or a tryst in a moonlit grove put the bewitching magic 
 mechanicsScope: builder
 foundryID: eW3cfCH7Wpx2vik2
 rules:
-- key: configure-source-1
+- key: sorcerer-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-spellcasting
@@ -38,17 +38,17 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-1
+- key: deception-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: deception
     rank: trained
-- key: add-skill-increase-2
+- key: nature-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-focus-spells
@@ -56,64 +56,64 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-1
+- key: faerie-dust-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.faerie-dust'
-- key: add-known-spell-1
+- key: figment-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.figment?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: charm-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.charm?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: laughing-fit-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.laughing-fit?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: enthrall-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.enthrall?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: suggestion-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.suggestion?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: hallucination-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.hallucination?source=paizo-pathfinder-player-core']
-- key: add-known-spell-7
+- key: mislead-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.mislead?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: visions-of-danger-known-spell
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.visions-of-danger']
-- key: add-known-spell-9
+- key: uncontrollable-dance-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.uncontrollable-dance?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: metamorphosis-known-spell
   effect: spellcasting/add-known-spell
   level: 17
   inputs:

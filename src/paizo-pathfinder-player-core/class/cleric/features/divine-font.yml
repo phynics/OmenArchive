@@ -32,7 +32,7 @@ rules:
     - {key: heal, value: ['@spell.heal']}
     - {key: harm, value: ['@spell.harm']}
     - {key: both, label: Heal or Harm, value: ['@spell.heal', '@spell.harm']}
-- key: configure-source-1
+- key: cleric-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: cleric-spellcasting
@@ -49,14 +49,14 @@ rules:
     cases:
     - {label: Heal, value: '@spell.heal'}
     - {label: Harm, value: '@spell.harm'}
-- key: grant-spell-1
+- key: chosen-divine-font-spell-level-1
   effect: spellcasting/grant-spell@2
   inputs:
     source: cleric-spellcasting
     spell: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 4}
-- key: grant-spell-2
+- key: chosen-divine-font-spell-level-5
   effect: spellcasting/grant-spell@2
   level: 5
   inputs:
@@ -64,7 +64,7 @@ rules:
     spell: {choice: $.cleric.divine-font}
     rankPolicy: cantrip
     castFrequency: {perDay: 1}
-- key: grant-spell-3
+- key: chosen-divine-font-spell-level-15
   effect: spellcasting/grant-spell@2
   level: 15
   inputs:

@@ -25,7 +25,7 @@ description: "The voices of generations past speak to you, and you hear their wo
 mechanicsScope: builder
 foundryID: qvRlih3u7vK3FYUR
 rules:
-- key: configure-source-1
+- key: oracle-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-spellcasting
@@ -33,12 +33,12 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: society-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: society
     rank: trained
-- key: configure-source-2
+- key: oracle-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-focus-spells
@@ -46,36 +46,36 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: ancestral-touch-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
     spell: '@spell.ancestral-touch'
-- key: add-feature-by-id-1
+- key: curse-of-ancestral-meddling-feature
   effect: core/add-feature@2
   inputs:
     feature: '@class.oracle.curses.curse-of-ancestral-meddling'
-- key: add-feat-1
+- key: whispers-of-weakness-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.whispers-of-weakness'
-- key: add-known-spell-1
+- key: guidance-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.guidance?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: ill-omen-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.ill-omen?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: ghostly-carrier-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.ghostly-carrier?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: dreaming-potential-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:

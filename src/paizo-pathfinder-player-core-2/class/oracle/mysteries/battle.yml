@@ -23,7 +23,7 @@ description: "Warlike forces fill you with physical might and tactical knowledge
 mechanicsScope: builder
 foundryID: gjOGOR30Czpnx3tM
 rules:
-- key: configure-source-1
+- key: oracle-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-spellcasting
@@ -31,12 +31,12 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: athletics-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: athletics
     rank: trained
-- key: configure-source-2
+- key: oracle-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-focus-spells
@@ -44,36 +44,36 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: weapon-trance-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
     spell: '@spell.weapon-trance'
-- key: add-feature-by-id-1
+- key: curse-of-the-mortal-warrior-feature
   effect: core/add-feature@2
   inputs:
     feature: '@class.oracle.curses.curse-of-the-mortal-warrior'
-- key: add-feat-1
+- key: oracular-warning-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.oracular-warning'
-- key: add-known-spell-1
+- key: shield-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: sure-strike-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.sure-strike?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: telekinetic-maneuver-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.telekinetic-maneuver?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: weapon-storm-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:

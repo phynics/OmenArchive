@@ -20,7 +20,7 @@ description: "The fury of the wind and waves pounds in your heart, whether your 
 mechanicsScope: builder
 foundryID: W9cF7wZztLDb1WGY
 rules:
-- key: configure-source-1
+- key: oracle-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-spellcasting
@@ -28,12 +28,12 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: nature-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-2
+- key: oracle-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-focus-spells
@@ -41,36 +41,36 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: tempest-touch-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
     spell: '@spell.tempest-touch'
-- key: add-feature-by-id-1
+- key: curse-of-inclement-headwinds-feature
   effect: core/add-feature@2
   inputs:
     feature: '@class.oracle.curses.curse-of-inclement-headwinds'
-- key: add-feat-1
+- key: foretell-harm-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.foretell-harm'
-- key: add-known-spell-1
+- key: electric-arc-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.electric-arc?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: thunderstrike-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.thunderstrike?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: hydraulic-torrent-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.hydraulic-torrent?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: chain-lightning-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:

@@ -10,21 +10,21 @@ description: You gain expert proficiency in simple weapons, martial weapons, and
 mechanicsScope: mixed
 foundryID: v8UNEJR5IDKi8yqa
 rules:
-- key: add-weapon-critical-specialization-1
+- key: weapon-critical-specialization
   effect: core/add-weapon-critical-specialization
   inputs:
     weaponGroup: any
-- key: add-weapon-proficiency-1
+- key: martial-weapons-expert
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: martial}
     rank: expert
-- key: add-weapon-proficiency-2
+- key: simple-weapons-expert
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: simple}
     rank: expert
-- key: add-weapon-proficiency-3
+- key: unarmed-attacks-expert
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: unarmed}

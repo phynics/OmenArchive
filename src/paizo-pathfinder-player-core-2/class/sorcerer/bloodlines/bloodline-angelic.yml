@@ -30,7 +30,7 @@ description: 'One of your forebears hailed from a celestial realm, or your ances
 mechanicsScope: builder
 foundryID: vhW3glAaEfq2DKrw
 rules:
-- key: configure-source-1
+- key: sorcerer-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-spellcasting
@@ -38,17 +38,17 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: diplomacy-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: diplomacy
     rank: trained
-- key: add-skill-increase-2
+- key: religion-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: religion
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-focus-spells
@@ -56,64 +56,64 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: angelic-halo-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.angelic-halo'
-- key: add-known-spell-1
+- key: light-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.light?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: heal-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.heal?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: spiritual-armament-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.spiritual-armament?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: holy-light-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.holy-light?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: divine-wrath-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.divine-wrath?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: divine-immolation-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.divine-immolation?source=paizo-pathfinder-player-core']
-- key: add-known-spell-7
+- key: blessed-boundary-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.blessed-boundary?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: divine-decree-known-spell
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.divine-decree?source=paizo-pathfinder-player-core']
-- key: add-known-spell-9
+- key: moment-of-renewal-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.moment-of-renewal?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: foresight-known-spell
   effect: spellcasting/add-known-spell
   level: 17
   inputs:

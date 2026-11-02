@@ -33,7 +33,7 @@ description: 'The touch of undeath runs through your blood. Your family tree mig
 mechanicsScope: builder
 foundryID: 7WBZ2kkhZ7JorWu2
 rules:
-- key: configure-source-1
+- key: sorcerer-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-spellcasting
@@ -41,17 +41,17 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: intimidation-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-2
+- key: religion-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: religion
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-focus-spells
@@ -59,64 +59,64 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: undeaths-blessing-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.undeaths-blessing'
-- key: add-known-spell-1
+- key: void-warp-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.void-warp?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: harm-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.harm?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: see-the-unseen-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.see-the-unseen?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: bind-undead-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.bind-undead?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: talking-corpse-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.talking-corpse?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: invoke-spirits-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.invoke-spirits?source=paizo-pathfinder-player-core']
-- key: add-known-spell-7
+- key: vampiric-exsanguination-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.vampiric-exsanguination?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: execute-known-spell
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.execute?source=paizo-pathfinder-player-core']
-- key: add-known-spell-9
+- key: canticle-of-everlasting-grief-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.canticle-of-everlasting-grief?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: wails-of-the-damned-known-spell
   effect: spellcasting/add-known-spell
   level: 17
   inputs:

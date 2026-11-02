@@ -32,7 +32,7 @@ description: 'A hag long ago cursed your family, or you are a descendant of a ha
 mechanicsScope: builder
 foundryID: O0uXZRWMNliDbkxU
 rules:
-- key: configure-source-1
+- key: sorcerer-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-spellcasting
@@ -40,17 +40,17 @@ rules:
     castingKind: spontaneous
     tradition: occult
     attribute: charisma
-- key: add-skill-increase-1
+- key: deception-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: deception
     rank: trained
-- key: add-skill-increase-2
+- key: occultism-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: occultism
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-focus-spells
@@ -58,64 +58,64 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: charisma
-- key: grant-focus-spell-1
+- key: jealous-hex-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.jealous-hex'
-- key: add-known-spell-1
+- key: daze-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.daze?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: illusory-disguise-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.illusory-disguise?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: stupefy-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.stupefy?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: blindness-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.blindness?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: outcasts-curse-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.outcasts-curse?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: mariners-curse-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.mariners-curse?source=paizo-pathfinder-player-core']
-- key: add-known-spell-7
+- key: cursed-metamorphosis-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.cursed-metamorphosis?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: warp-mind-known-spell
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.warp-mind?source=paizo-pathfinder-player-core']
-- key: add-known-spell-9
+- key: quandary-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.quandary?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: phantasmagoria-known-spell
   effect: spellcasting/add-known-spell
   level: 17
   inputs:

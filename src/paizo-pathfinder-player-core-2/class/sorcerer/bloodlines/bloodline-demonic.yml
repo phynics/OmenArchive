@@ -29,7 +29,7 @@ description: 'Demons debase all they touch. One of your ancestors fell victim to
 mechanicsScope: builder
 foundryID: w5koctOVrEcpxTIq
 rules:
-- key: configure-source-1
+- key: sorcerer-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-spellcasting
@@ -37,17 +37,17 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: intimidation-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-2
+- key: religion-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: religion
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-focus-spells
@@ -55,64 +55,64 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: gluttons-jaws-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.gluttons-jaws'
-- key: add-known-spell-1
+- key: caustic-blast-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.caustic-blast?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: fear-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: enlarge-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.enlarge?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: slow-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.slow?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: divine-wrath-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.divine-wrath?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: blister-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.blister']
-- key: add-known-spell-7
+- key: disintegrate-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.disintegrate?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: divine-decree-known-spell
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.divine-decree?source=paizo-pathfinder-player-core']
-- key: add-known-spell-9
+- key: canticle-of-everlasting-grief-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.canticle-of-everlasting-grief?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: implosion-known-spell
   effect: spellcasting/add-known-spell
   level: 17
   inputs:

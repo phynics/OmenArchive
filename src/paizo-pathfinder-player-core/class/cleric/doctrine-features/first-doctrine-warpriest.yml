@@ -12,28 +12,28 @@ description: You're trained in light and medium armor, and you have expert profi
 mechanicsScope: builder
 foundryID: xxkszluN9icAiTO4
 rules:
-- key: generated-5
+- key: fortitude-expert
   effect: core/add-saving-throw@2
   inputs:
     savingThrow: fortitude
     rank: expert
-- key: generated-6
+- key: light-armor-trained
   effect: core/add-armor-proficiency@3
   inputs:
     armor: {category: light}
     rank: trained
     selfScaling: true
-- key: generated-7
+- key: medium-armor-trained
   effect: core/add-armor-proficiency@3
   inputs:
     armor: {category: medium}
     rank: trained
     selfScaling: true
-- key: grant-item-1
+- key: shield-block-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.shield-block'
-- key: grant-item-2
+- key: deadly-simplicity-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.deadly-simplicity'

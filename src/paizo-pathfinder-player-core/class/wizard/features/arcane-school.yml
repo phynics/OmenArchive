@@ -22,7 +22,7 @@ rules:
     label: School
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.wizard.schools'}}
-- key: add-feature-by-id-1
+- key: chosen-school-feature
   effect: core/add-feature@2
   inputs:
     feature: {choice: $.wizard.school}

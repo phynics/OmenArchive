@@ -22,7 +22,7 @@ description: "Knowledge and information come freely to you. You might use this l
 mechanicsScope: builder
 foundryID: tZBb3Kh4nJcNoUFI
 rules:
-- key: configure-source-1
+- key: oracle-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-spellcasting
@@ -30,12 +30,12 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: occultism-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: occultism
     rank: trained
-- key: configure-source-2
+- key: oracle-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-focus-spells
@@ -43,36 +43,36 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: brain-drain-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
     spell: '@spell.brain-drain'
-- key: add-feature-by-id-1
+- key: curse-of-torrential-knowledge-feature
   effect: core/add-feature@2
   inputs:
     feature: '@class.oracle.curses.curse-of-torrential-knowledge'
-- key: add-feat-1
+- key: whispers-of-weakness-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.whispers-of-weakness'
-- key: add-known-spell-1
+- key: read-aura-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.read-aura?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: mindlink-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.mindlink?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: hypercognition-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.hypercognition?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: never-mind-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:

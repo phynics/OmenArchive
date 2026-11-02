@@ -32,7 +32,7 @@ rules:
     - {key: harm, value: ['@spell.harm?source=paizo-pathfinder-player-core']}
     - {key: both, label: Heal or Harm, value: ['@spell.heal?source=paizo-pathfinder-player-core',
         '@spell.harm?source=paizo-pathfinder-player-core']}
-- key: configure-source-1
+- key: champion-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: champion-focus-spells
@@ -40,7 +40,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: increase-spell-proficiency-1
+- key: spell-proficiency-trained
   effect: spellcasting/increase-spell-proficiency@2
   inputs:
     rank: trained

@@ -24,7 +24,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: v0EjtiwdeMj8ykI0
 rules:
-- key: configure-source-1
+- key: druid-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: druid-focus-spells
@@ -32,17 +32,17 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: wisdom
-- key: grant-focus-spell-1
+- key: untamed-shift-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: druid-focus-spells
     spell: '@spell.untamed-shift'
-- key: add-skill-increase-1
+- key: intimidation-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: intimidation
     rank: trained
-- key: add-feat-1
+- key: untamed-form-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.untamed-form'

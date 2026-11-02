@@ -31,7 +31,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: FdLx4VODZEYLGOK9
 rules:
-- key: configure-source-1
+- key: witch-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: witch-focus-spells
@@ -39,14 +39,14 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: intelligence
-- key: grant-spell-1
+- key: discern-secrets-spell
   effect: spellcasting/grant-spell@2
   inputs:
     source: witch-focus-spells
     spell: '@spell.discern-secrets'
     rankPolicy: cantrip
     castFrequency: atWill
-- key: add-known-spell-1
+- key: runic-weapon-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: witch-spellcasting
@@ -61,12 +61,12 @@ rules:
         any:
         - {id: '@spell.patrons-puppet'}
         - {id: '@spell.phase-familiar'}
-- key: grant-focus-spell-1
+- key: chosen-first-hex-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: witch-focus-spells
     spell: {choice: $.witch.patron.first-hex}
-- key: configure-source-2
+- key: witch-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: witch-spellcasting
@@ -74,7 +74,7 @@ rules:
     castingKind: prepared
     tradition: arcane
     attribute: intelligence
-- key: add-skill-increase-1
+- key: arcana-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: arcana

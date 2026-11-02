@@ -20,7 +20,7 @@ description: You've learned to cast some of your spells more flexibly. For each 
 mechanicsScope: builder
 foundryID: VKRjmXxBFLrJK01c
 rules:
-- key: choice-1
+- key: choice-sorcerer-signature-spells-rank-1
   level: 3
   choice:
     name: $.sorcerer.signature-spells.rank-1
@@ -31,13 +31,13 @@ rules:
         all:
         - {level: 1}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-1
+- key: chosen-rank-1-signature
   effect: spellcasting/mark-signature-spell@2
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-1}
-- key: choice-2
+- key: choice-sorcerer-signature-spells-rank-2
   level: 3
   choice:
     name: $.sorcerer.signature-spells.rank-2
@@ -48,13 +48,13 @@ rules:
         all:
         - {level: 2}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-2
+- key: chosen-rank-2-signature
   effect: spellcasting/mark-signature-spell@2
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-2}
-- key: choice-3
+- key: choice-sorcerer-signature-spells-rank-3
   level: 5
   choice:
     name: $.sorcerer.signature-spells.rank-3
@@ -65,13 +65,13 @@ rules:
         all:
         - {level: 3}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-3
+- key: chosen-rank-3-signature
   effect: spellcasting/mark-signature-spell@2
   level: 5
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-3}
-- key: choice-4
+- key: choice-sorcerer-signature-spells-rank-4
   level: 7
   choice:
     name: $.sorcerer.signature-spells.rank-4
@@ -82,13 +82,13 @@ rules:
         all:
         - {level: 4}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-4
+- key: chosen-rank-4-signature
   effect: spellcasting/mark-signature-spell@2
   level: 7
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-4}
-- key: choice-5
+- key: choice-sorcerer-signature-spells-rank-5
   level: 9
   choice:
     name: $.sorcerer.signature-spells.rank-5
@@ -99,13 +99,13 @@ rules:
         all:
         - {level: 5}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-5
+- key: chosen-rank-5-signature
   effect: spellcasting/mark-signature-spell@2
   level: 9
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-5}
-- key: choice-6
+- key: choice-sorcerer-signature-spells-rank-6
   level: 11
   choice:
     name: $.sorcerer.signature-spells.rank-6
@@ -116,13 +116,13 @@ rules:
         all:
         - {level: 6}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-6
+- key: chosen-rank-6-signature
   effect: spellcasting/mark-signature-spell@2
   level: 11
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-6}
-- key: choice-7
+- key: choice-sorcerer-signature-spells-rank-7
   level: 13
   choice:
     name: $.sorcerer.signature-spells.rank-7
@@ -133,13 +133,13 @@ rules:
         all:
         - {level: 7}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-7
+- key: chosen-rank-7-signature
   effect: spellcasting/mark-signature-spell@2
   level: 13
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-7}
-- key: choice-8
+- key: choice-sorcerer-signature-spells-rank-8
   level: 15
   choice:
     name: $.sorcerer.signature-spells.rank-8
@@ -150,13 +150,13 @@ rules:
         all:
         - {level: 8}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-8
+- key: chosen-rank-8-signature
   effect: spellcasting/mark-signature-spell@2
   level: 15
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-8}
-- key: choice-9
+- key: choice-sorcerer-signature-spells-rank-9
   level: 17
   choice:
     name: $.sorcerer.signature-spells.rank-9
@@ -167,13 +167,13 @@ rules:
         all:
         - {level: 9}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-9
+- key: chosen-rank-9-signature
   effect: spellcasting/mark-signature-spell@2
   level: 17
   inputs:
     source: sorcerer-spellcasting
     spell: {choice: $.sorcerer.signature-spells.rank-9}
-- key: choice-10
+- key: choice-sorcerer-signature-spells-rank-10
   level: 19
   choice:
     name: $.sorcerer.signature-spells.rank-10
@@ -184,7 +184,7 @@ rules:
         all:
         - {level: 10}
         - {knownBySource: sorcerer-spellcasting}
-- key: mark-signature-spell-10
+- key: chosen-rank-10-signature
   effect: spellcasting/mark-signature-spell@2
   level: 19
   inputs:

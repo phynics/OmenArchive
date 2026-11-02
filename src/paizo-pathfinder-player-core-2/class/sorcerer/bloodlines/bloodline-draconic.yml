@@ -43,7 +43,7 @@ rules:
     label: Draconic tradition
     type: core/string
     cases: [arcane, divine, occult, primal]
-- key: configure-source-1
+- key: sorcerer-spellcasting-source-arcane
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -55,7 +55,7 @@ rules:
     castingKind: spontaneous
     tradition: arcane
     attribute: charisma
-- key: add-skill-increase-1
+- key: arcana-trained
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -64,7 +64,7 @@ rules:
   inputs:
     skill: arcana
     rank: trained
-- key: add-skill-increase-2
+- key: intimidation-trained-arcane
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -73,7 +73,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source-arcane
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -85,7 +85,7 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: charisma
-- key: grant-focus-spell-1
+- key: flurry-of-claws-focus-spell-arcane
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -94,7 +94,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.flurry-of-claws'
-- key: add-known-spell-1
+- key: shield-known-spell-arcane
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -103,7 +103,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: fear-known-spell-arcane
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -112,7 +112,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: blazing-bolt-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -122,7 +122,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.blazing-bolt?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: haste-known-spell-arcane
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -132,7 +132,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: fly-known-spell-arcane
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -142,7 +142,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: subconscious-suggestion-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -152,7 +152,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.subconscious-suggestion?source=paizo-pathfinder-player-core']
-- key: add-known-spell-7
+- key: dragon-form-known-spell-arcane
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -162,7 +162,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: mask-of-terror-known-spell-arcane
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -172,7 +172,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: add-known-spell-9
+- key: quandary-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -182,7 +182,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.quandary?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: overwhelming-presence-known-spell-arcane
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -192,7 +192,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.overwhelming-presence?source=paizo-pathfinder-player-core']
-- key: configure-source-3
+- key: sorcerer-spellcasting-source-divine
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -204,7 +204,7 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-3
+- key: intimidation-trained-divine
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -213,7 +213,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-4
+- key: religion-trained
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -222,7 +222,7 @@ rules:
   inputs:
     skill: religion
     rank: trained
-- key: configure-source-4
+- key: sorcerer-focus-spells-source-divine
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -234,7 +234,7 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-2
+- key: flurry-of-claws-focus-spell-divine
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -243,7 +243,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.flurry-of-claws'
-- key: add-known-spell-11
+- key: shield-known-spell-divine
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -252,7 +252,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: add-known-spell-12
+- key: fear-known-spell-divine
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -261,7 +261,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: add-known-spell-13
+- key: augury-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -271,7 +271,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.augury?source=paizo-pathfinder-player-core']
-- key: add-known-spell-14
+- key: haste-known-spell-divine
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -281,7 +281,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: add-known-spell-15
+- key: fly-known-spell-divine
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -291,7 +291,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: add-known-spell-16
+- key: divine-immolation-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -301,7 +301,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.divine-immolation?source=paizo-pathfinder-player-core']
-- key: add-known-spell-17
+- key: dragon-form-known-spell-divine
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -311,7 +311,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-18
+- key: mask-of-terror-known-spell-divine
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -321,7 +321,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: add-known-spell-19
+- key: divine-inspiration-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -331,7 +331,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.divine-inspiration?source=paizo-pathfinder-player-core']
-- key: add-known-spell-20
+- key: overwhelming-presence-known-spell-divine
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -341,7 +341,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.overwhelming-presence?source=paizo-pathfinder-player-core']
-- key: configure-source-5
+- key: sorcerer-spellcasting-source-occult
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -353,7 +353,7 @@ rules:
     castingKind: spontaneous
     tradition: occult
     attribute: charisma
-- key: add-skill-increase-5
+- key: intimidation-trained-occult
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -362,7 +362,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-6
+- key: occultism-trained
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -371,7 +371,7 @@ rules:
   inputs:
     skill: occultism
     rank: trained
-- key: configure-source-6
+- key: sorcerer-focus-spells-source-occult
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -383,7 +383,7 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: charisma
-- key: grant-focus-spell-3
+- key: flurry-of-claws-focus-spell-occult
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -392,7 +392,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.flurry-of-claws'
-- key: add-known-spell-21
+- key: shield-known-spell-occult
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -401,7 +401,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: add-known-spell-22
+- key: fear-known-spell-occult
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -410,7 +410,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: add-known-spell-23
+- key: blood-vendetta-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -420,7 +420,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.blood-vendetta?source=paizo-pathfinder-player-core']
-- key: add-known-spell-24
+- key: haste-known-spell-occult
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -430,7 +430,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: add-known-spell-25
+- key: fly-known-spell-occult
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -440,7 +440,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: add-known-spell-26
+- key: slither-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -450,7 +450,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.slither?source=paizo-pathfinder-player-core']
-- key: add-known-spell-27
+- key: dragon-form-known-spell-occult
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -460,7 +460,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-28
+- key: mask-of-terror-known-spell-occult
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -470,7 +470,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: add-known-spell-29
+- key: unrelenting-observation-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -480,7 +480,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unrelenting-observation?source=paizo-pathfinder-player-core']
-- key: add-known-spell-30
+- key: overwhelming-presence-known-spell-occult
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -490,7 +490,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.overwhelming-presence?source=paizo-pathfinder-player-core']
-- key: configure-source-7
+- key: sorcerer-spellcasting-source-primal
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -502,7 +502,7 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-7
+- key: intimidation-trained-primal
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -511,7 +511,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-8
+- key: nature-trained
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -520,7 +520,7 @@ rules:
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-8
+- key: sorcerer-focus-spells-source-primal
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -532,7 +532,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-4
+- key: flurry-of-claws-focus-spell-primal
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -541,7 +541,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.flurry-of-claws'
-- key: add-known-spell-31
+- key: shield-known-spell-primal
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -550,7 +550,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: add-known-spell-32
+- key: fear-known-spell-primal
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -559,7 +559,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: add-known-spell-33
+- key: shatter-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -569,7 +569,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.shatter?source=paizo-pathfinder-player-core']
-- key: add-known-spell-34
+- key: haste-known-spell-primal
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -579,7 +579,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: add-known-spell-35
+- key: fly-known-spell-primal
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -589,7 +589,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: add-known-spell-36
+- key: howling-blizzard-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -599,7 +599,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.howling-blizzard?source=paizo-pathfinder-player-core']
-- key: add-known-spell-37
+- key: dragon-form-known-spell-primal
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -609,7 +609,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-38
+- key: mask-of-terror-known-spell-primal
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -619,7 +619,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: add-known-spell-39
+- key: earthquake-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -629,7 +629,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: add-known-spell-40
+- key: overwhelming-presence-known-spell-primal
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:

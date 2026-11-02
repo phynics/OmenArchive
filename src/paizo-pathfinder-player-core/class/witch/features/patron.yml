@@ -28,7 +28,7 @@ rules:
     label: Patron
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.witch.patrons'}}
-- key: add-feature-by-id-1
+- key: chosen-patron-feature
   effect: core/add-feature@2
   inputs:
     feature: {choice: $.witch.patron}

@@ -10,16 +10,16 @@ description: You gain expert proficiency with your deity's favored weapon, simpl
 mechanicsScope: builder
 foundryID: vxOf4LXZcqUG3P7a
 rules:
-- key: add-weapon-critical-specialization-1
+- key: weapon-critical-specialization
   effect: core/add-weapon-critical-specialization
   inputs:
     weaponGroup: any
-- key: add-weapon-proficiency-1
+- key: simple-weapons-expert
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: simple}
     rank: expert
-- key: add-weapon-proficiency-2
+- key: unarmed-attacks-expert
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: unarmed}

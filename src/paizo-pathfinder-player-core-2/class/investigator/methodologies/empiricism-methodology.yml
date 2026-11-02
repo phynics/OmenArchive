@@ -14,11 +14,11 @@ description: 'Everything comes down to data. Calculating statistics, running num
 mechanicsScope: builder
 foundryID: g3mNzNphtVxyR9Xr
 rules:
-- key: grant-item-1
+- key: thats-odd-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.thats-odd'
-- key: grant-item-2
+- key: expeditious-inspection-action
   effect: core/add-action@2
   inputs:
     action: '@action.expeditious-inspection'
@@ -32,7 +32,7 @@ rules:
     - {key: crafting, value: crafting}
     - {key: occultism, value: occultism}
     - {key: society, value: society}
-- key: active-effect-like-1
+- key: chosen-skill-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.investigator.empiricism.skill}

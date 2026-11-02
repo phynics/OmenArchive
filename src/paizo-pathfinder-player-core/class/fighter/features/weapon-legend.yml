@@ -14,22 +14,22 @@ description: 'You''ve learned fighting techniques that apply to all armaments, a
 mechanicsScope: builder
 foundryID: F5VenhIQMDkeGvmV
 rules:
-- key: generated-4
+- key: advanced-weapons-expert
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: advanced}
     rank: expert
-- key: generated-5
+- key: martial-weapons-master
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: martial}
     rank: master
-- key: generated-6
+- key: simple-weapons-master
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: simple}
     rank: master
-- key: generated-7
+- key: unarmed-attacks-master
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {category: unarmed}
@@ -54,13 +54,13 @@ rules:
     - pick
     - shield
     - bow
-- key: martial-proficiency-1
+- key: chosen-weapon-legend-group-legendary
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {choice: $.fighter.weapon-legend-group}
     rank: legendary
     category: any-non-advanced
-- key: martial-proficiency-2
+- key: chosen-weapon-legend-group-master
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {choice: $.fighter.weapon-legend-group}

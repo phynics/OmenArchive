@@ -22,7 +22,7 @@ description: "Celestial bodies great and small exert influence on you, giving yo
 mechanicsScope: builder
 foundryID: RI2EMRBBPNSoTJXu
 rules:
-- key: configure-source-1
+- key: oracle-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-spellcasting
@@ -30,12 +30,12 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: nature-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-2
+- key: oracle-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-focus-spells
@@ -43,36 +43,36 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: spray-of-stars-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
     spell: '@spell.spray-of-stars'
-- key: add-feature-by-id-1
+- key: curse-of-the-skys-call-feature
   effect: core/add-feature@2
   inputs:
     feature: '@class.oracle.curses.curse-of-the-skys-call'
-- key: add-feat-1
+- key: oracular-warning-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.oracular-warning'
-- key: add-known-spell-1
+- key: light-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.light?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: dizzying-colors-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.dizzying-colors?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: darkness-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.darkness?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: moon-frenzy-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:

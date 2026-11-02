@@ -29,7 +29,7 @@ description: 'One of your ancestors was a mortal who mastered magic.
 mechanicsScope: builder
 foundryID: ZEtJJ5UOlV5oTWWp
 rules:
-- key: configure-source-1
+- key: sorcerer-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-spellcasting
@@ -37,17 +37,17 @@ rules:
     castingKind: spontaneous
     tradition: arcane
     attribute: charisma
-- key: add-skill-increase-1
+- key: arcana-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: arcana
     rank: trained
-- key: add-skill-increase-2
+- key: society-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: society
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: sorcerer-focus-spells
@@ -55,64 +55,64 @@ rules:
     castingKind: focus
     tradition: arcane
     attribute: charisma
-- key: grant-focus-spell-1
+- key: ancestral-memories-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.ancestral-memories'
-- key: add-known-spell-1
+- key: detect-magic-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.detect-magic?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: force-barrage-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.force-barrage?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: dispel-magic-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.dispel-magic?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: haste-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: translocate-known-spell
   effect: spellcasting/add-known-spell
   level: 7
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.translocate?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: scouting-eye-known-spell
   effect: spellcasting/add-known-spell
   level: 9
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.scouting-eye?source=paizo-pathfinder-player-core']
-- key: add-known-spell-7
+- key: disintegrate-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.disintegrate?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: retrocognition-known-spell
   effect: spellcasting/add-known-spell
   level: 13
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.retrocognition?source=paizo-pathfinder-player-core']
-- key: add-known-spell-9
+- key: quandary-known-spell
   effect: spellcasting/add-known-spell
   level: 15
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.quandary?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: implosion-known-spell
   effect: spellcasting/add-known-spell
   level: 17
   inputs:

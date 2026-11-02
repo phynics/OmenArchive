@@ -59,7 +59,7 @@ rules:
     label: Elemental bloodline
     type: core/string
     cases: [air, earth, fire, metal, water, wood]
-- key: configure-source-1
+- key: sorcerer-spellcasting-source-air
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -71,7 +71,7 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-1
+- key: intimidation-trained-air
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -80,7 +80,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-2
+- key: nature-trained-air
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -89,7 +89,7 @@ rules:
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-2
+- key: sorcerer-focus-spells-source-air
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -101,7 +101,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-1
+- key: elemental-toss-focus-spell-air
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -110,7 +110,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-toss'
-- key: add-known-spell-1
+- key: gale-blast-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -119,7 +119,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.gale-blast']
-- key: add-known-spell-2
+- key: tailwind-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -128,7 +128,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.tailwind?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: resist-energy-known-spell-air
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -138,7 +138,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: wall-of-wind-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -148,7 +148,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wall-of-wind?source=paizo-pathfinder-player-core']
-- key: add-known-spell-5
+- key: unfettered-movement-known-spell-air
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -158,7 +158,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: add-known-spell-6
+- key: elemental-form-known-spell-air
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -168,7 +168,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-7
+- key: chain-lightning-known-spell-air
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -178,7 +178,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']
-- key: add-known-spell-8
+- key: energy-aegis-known-spell-air
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -188,7 +188,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: add-known-spell-9
+- key: earthquake-known-spell-air
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -198,7 +198,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: add-known-spell-10
+- key: wrathful-storm-known-spell-air
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -208,7 +208,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: configure-source-3
+- key: sorcerer-spellcasting-source-earth
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -220,7 +220,7 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-3
+- key: intimidation-trained-earth
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -229,7 +229,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-4
+- key: nature-trained-earth
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -238,7 +238,7 @@ rules:
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-4
+- key: sorcerer-focus-spells-source-earth
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -250,7 +250,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-2
+- key: elemental-toss-focus-spell-earth
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -259,7 +259,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-toss'
-- key: add-known-spell-11
+- key: scatter-scree-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -268,7 +268,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.scatter-scree']
-- key: add-known-spell-12
+- key: pummeling-rubble-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -277,7 +277,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.pummeling-rubble?source=paizo-pathfinder-player-core']
-- key: add-known-spell-13
+- key: resist-energy-known-spell-earth
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -287,7 +287,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: add-known-spell-14
+- key: earthbind-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -297,7 +297,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthbind?source=paizo-pathfinder-player-core']
-- key: add-known-spell-15
+- key: unfettered-movement-known-spell-earth
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -307,7 +307,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: add-known-spell-16
+- key: elemental-form-known-spell-earth
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -317,7 +317,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-17
+- key: petrify-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -327,7 +327,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.petrify?source=paizo-pathfinder-player-core']
-- key: add-known-spell-18
+- key: energy-aegis-known-spell-earth
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -337,7 +337,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: add-known-spell-19
+- key: earthquake-known-spell-earth
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -347,7 +347,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: add-known-spell-20
+- key: wrathful-storm-known-spell-earth
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -357,7 +357,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: configure-source-5
+- key: sorcerer-spellcasting-source-fire
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -369,7 +369,7 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-5
+- key: intimidation-trained-fire
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -378,7 +378,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-6
+- key: nature-trained-fire
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -387,7 +387,7 @@ rules:
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-6
+- key: sorcerer-focus-spells-source-fire
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -399,7 +399,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-3
+- key: elemental-toss-focus-spell-fire
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -408,7 +408,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-toss'
-- key: add-known-spell-21
+- key: ignition-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -417,7 +417,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.ignition?source=paizo-pathfinder-player-core']
-- key: add-known-spell-22
+- key: breathe-fire-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -426,7 +426,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.breathe-fire?source=paizo-pathfinder-player-core']
-- key: add-known-spell-23
+- key: resist-energy-known-spell-fire
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -436,7 +436,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: add-known-spell-24
+- key: fireball-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -446,7 +446,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fireball?source=paizo-pathfinder-player-core']
-- key: add-known-spell-25
+- key: unfettered-movement-known-spell-fire
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -456,7 +456,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: add-known-spell-26
+- key: elemental-form-known-spell-fire
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -466,7 +466,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-27
+- key: tree-of-seasons-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -476,7 +476,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.tree-of-seasons?source=paizo-pathfinder-player-core']
-- key: add-known-spell-28
+- key: energy-aegis-known-spell-fire
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -486,7 +486,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: add-known-spell-29
+- key: earthquake-known-spell-fire
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -496,7 +496,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: add-known-spell-30
+- key: wrathful-storm-known-spell-fire
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -506,7 +506,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: configure-source-7
+- key: sorcerer-spellcasting-source-metal
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -518,7 +518,7 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-7
+- key: intimidation-trained-metal
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -527,7 +527,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-8
+- key: nature-trained-metal
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -536,7 +536,7 @@ rules:
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-8
+- key: sorcerer-focus-spells-source-metal
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -548,7 +548,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-4
+- key: elemental-toss-focus-spell-metal
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -557,7 +557,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-toss'
-- key: add-known-spell-31
+- key: electric-arc-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -566,7 +566,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.electric-arc?source=paizo-pathfinder-player-core']
-- key: add-known-spell-32
+- key: thunderstrike-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -575,7 +575,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.thunderstrike?source=paizo-pathfinder-player-core']
-- key: add-known-spell-33
+- key: resist-energy-known-spell-metal
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -585,7 +585,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: add-known-spell-34
+- key: lightning-bolt-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -595,7 +595,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.lightning-bolt?source=paizo-pathfinder-player-core']
-- key: add-known-spell-35
+- key: unfettered-movement-known-spell-metal
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -605,7 +605,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: add-known-spell-36
+- key: elemental-form-known-spell-metal
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -615,7 +615,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-37
+- key: chain-lightning-known-spell-metal
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -625,7 +625,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']
-- key: add-known-spell-38
+- key: energy-aegis-known-spell-metal
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -635,7 +635,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: add-known-spell-39
+- key: earthquake-known-spell-metal
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -645,7 +645,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: add-known-spell-40
+- key: wrathful-storm-known-spell-metal
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -655,7 +655,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: configure-source-9
+- key: sorcerer-spellcasting-source-water
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -667,7 +667,7 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-9
+- key: intimidation-trained-water
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -676,7 +676,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-10
+- key: nature-trained-water
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -685,7 +685,7 @@ rules:
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-10
+- key: sorcerer-focus-spells-source-water
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -697,7 +697,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-5
+- key: elemental-toss-focus-spell-water
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -706,7 +706,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-toss'
-- key: add-known-spell-41
+- key: frostbite-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -715,7 +715,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.frostbite?source=paizo-pathfinder-player-core']
-- key: add-known-spell-42
+- key: hydraulic-push-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -724,7 +724,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.hydraulic-push?source=paizo-pathfinder-player-core']
-- key: add-known-spell-43
+- key: resist-energy-known-spell-water
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -734,7 +734,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: add-known-spell-44
+- key: aqueous-orb-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -744,7 +744,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.aqueous-orb?source=paizo-pathfinder-player-core']
-- key: add-known-spell-45
+- key: unfettered-movement-known-spell-water
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -754,7 +754,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: add-known-spell-46
+- key: elemental-form-known-spell-water
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -764,7 +764,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-47
+- key: scintillating-safeguard-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -774,7 +774,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.scintillating-safeguard']
-- key: add-known-spell-48
+- key: energy-aegis-known-spell-water
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -784,7 +784,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: add-known-spell-49
+- key: earthquake-known-spell-water
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -794,7 +794,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: add-known-spell-50
+- key: wrathful-storm-known-spell-water
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:
@@ -804,7 +804,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: configure-source-11
+- key: sorcerer-spellcasting-source-wood
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -816,7 +816,7 @@ rules:
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: add-skill-increase-11
+- key: intimidation-trained-wood
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -825,7 +825,7 @@ rules:
   inputs:
     skill: intimidation
     rank: trained
-- key: add-skill-increase-12
+- key: nature-trained-wood
   effect: core/add-skill-increase@2
   prerequisites:
   - hasChoice:
@@ -834,7 +834,7 @@ rules:
   inputs:
     skill: nature
     rank: trained
-- key: configure-source-12
+- key: sorcerer-focus-spells-source-wood
   effect: spellcasting/configure-source
   prerequisites:
   - hasChoice:
@@ -846,7 +846,7 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: grant-focus-spell-6
+- key: elemental-toss-focus-spell-wood
   effect: spellcasting/grant-focus-spell@2
   prerequisites:
   - hasChoice:
@@ -855,7 +855,7 @@ rules:
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-toss'
-- key: add-known-spell-51
+- key: tangle-vine-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -864,7 +864,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.tangle-vine?source=paizo-pathfinder-player-core']
-- key: add-known-spell-52
+- key: cleanse-cuisine-known-spell
   effect: spellcasting/add-known-spell
   prerequisites:
   - hasChoice:
@@ -873,7 +873,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.cleanse-cuisine?source=paizo-pathfinder-player-core']
-- key: add-known-spell-53
+- key: resist-energy-known-spell-wood
   effect: spellcasting/add-known-spell
   level: 3
   prerequisites:
@@ -883,7 +883,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: add-known-spell-54
+- key: wall-of-thorns-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   prerequisites:
@@ -893,7 +893,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wall-of-thorns?source=paizo-pathfinder-player-core']
-- key: add-known-spell-55
+- key: unfettered-movement-known-spell-wood
   effect: spellcasting/add-known-spell
   level: 7
   prerequisites:
@@ -903,7 +903,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: add-known-spell-56
+- key: elemental-form-known-spell-wood
   effect: spellcasting/add-known-spell
   level: 9
   prerequisites:
@@ -913,7 +913,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: add-known-spell-57
+- key: tangling-creepers-known-spell
   effect: spellcasting/add-known-spell
   level: 11
   prerequisites:
@@ -923,7 +923,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.tangling-creepers?source=paizo-pathfinder-player-core']
-- key: add-known-spell-58
+- key: energy-aegis-known-spell-wood
   effect: spellcasting/add-known-spell
   level: 13
   prerequisites:
@@ -933,7 +933,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: add-known-spell-59
+- key: earthquake-known-spell-wood
   effect: spellcasting/add-known-spell
   level: 15
   prerequisites:
@@ -943,7 +943,7 @@ rules:
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: add-known-spell-60
+- key: wrathful-storm-known-spell-wood
   effect: spellcasting/add-known-spell
   level: 17
   prerequisites:

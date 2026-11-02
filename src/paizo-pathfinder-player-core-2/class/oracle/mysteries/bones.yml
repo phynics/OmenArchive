@@ -23,7 +23,7 @@ description: "Your mystery imparts an understanding of death and undeath in all 
 mechanicsScope: builder
 foundryID: IaxmCkdsPlA52spu
 rules:
-- key: configure-source-1
+- key: oracle-spellcasting-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-spellcasting
@@ -31,12 +31,12 @@ rules:
     castingKind: spontaneous
     tradition: divine
     attribute: charisma
-- key: add-skill-increase-1
+- key: medicine-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: medicine
     rank: trained
-- key: configure-source-2
+- key: oracle-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: oracle-focus-spells
@@ -44,36 +44,36 @@ rules:
     castingKind: focus
     tradition: divine
     attribute: charisma
-- key: grant-focus-spell-1
+- key: soul-siphon-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: oracle-focus-spells
     spell: '@spell.soul-siphon'
-- key: add-feature-by-id-1
+- key: curse-of-the-living-death-feature
   effect: core/add-feature@2
   inputs:
     feature: '@class.oracle.curses.curse-of-the-living-death'
-- key: add-feat-1
+- key: nudge-the-scales-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.nudge-the-scales'
-- key: add-known-spell-1
+- key: void-warp-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.void-warp?source=paizo-pathfinder-player-core']
-- key: add-known-spell-2
+- key: grim-tendrils-known-spell
   effect: spellcasting/add-known-spell
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.grim-tendrils?source=paizo-pathfinder-player-core']
-- key: add-known-spell-3
+- key: false-vitality-known-spell
   effect: spellcasting/add-known-spell
   level: 3
   inputs:
     source: oracle-spellcasting
     spells: ['@spell.false-vitality?source=paizo-pathfinder-player-core']
-- key: add-known-spell-4
+- key: ghostly-weapon-known-spell
   effect: spellcasting/add-known-spell
   level: 5
   inputs:

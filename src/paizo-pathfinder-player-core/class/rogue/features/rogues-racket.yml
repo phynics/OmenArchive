@@ -25,7 +25,7 @@ rules:
     label: Racket
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.rogue.rackets'}}
-- key: choice-set-1
+- key: chosen-racket-feature
   effect: core/add-feature@2
   inputs:
     feature: {choice: $.rogue.racket}

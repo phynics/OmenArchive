@@ -15,7 +15,7 @@ rules:
     label: Style
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.swashbuckler.styles'}}
-- key: choice-set-1
+- key: chosen-style-feature
   effect: core/add-feature@2
   inputs:
     feature: {choice: $.swashbuckler.style}

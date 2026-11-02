@@ -60,7 +60,7 @@ rules:
     addTo: $.druid.orders
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.druid.orders'}}
-- key: choice-set-1
+- key: chosen-order-feature
   effect: core/add-feature@2
   inputs:
     feature: {choice: $.druid.order}

@@ -22,7 +22,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: acqqlYmti8D9QJi0
 rules:
-- key: configure-source-1
+- key: druid-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: druid-focus-spells
@@ -30,17 +30,17 @@ rules:
     castingKind: focus
     tradition: primal
     attribute: wisdom
-- key: grant-focus-spell-1
+- key: tempest-surge-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: druid-focus-spells
     spell: '@spell.tempest-surge'
-- key: add-skill-increase-1
+- key: acrobatics-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: acrobatics
     rank: trained
-- key: add-feat-1
+- key: storm-born-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.storm-born'

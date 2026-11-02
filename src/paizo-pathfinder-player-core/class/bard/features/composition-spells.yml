@@ -37,7 +37,7 @@ grantedSpells:
 mechanicsScope: builder
 foundryID: s0VbbQJNlSgPocui
 rules:
-- key: configure-source-1
+- key: bard-focus-spells-source
   effect: spellcasting/configure-source
   inputs:
     source: bard-focus-spells
@@ -45,12 +45,12 @@ rules:
     castingKind: focus
     tradition: occult
     attribute: charisma
-- key: grant-focus-spell-1
+- key: counter-performance-focus-spell
   effect: spellcasting/grant-focus-spell@2
   inputs:
     source: bard-focus-spells
     spell: '@spell.counter-performance'
-- key: grant-spell-1
+- key: courageous-anthem-spell
   effect: spellcasting/grant-spell@2
   inputs:
     source: bard-focus-spells
