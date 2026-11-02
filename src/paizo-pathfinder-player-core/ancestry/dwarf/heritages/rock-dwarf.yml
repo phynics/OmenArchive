@@ -14,14 +14,14 @@ description: 'Your ancestors lived and worked among the ancient stones of the mo
   only half the distance.'
 mechanicsScope: builder
 rules:
-- key: add-roll-modifier-1
+- key: fortitude-and-reflex-circumstance-bonus-shove
   effect: core/add-modifier
   inputs:
     target: [fortitude, reflex]
     amount: 2
     type: circumstance
     when: Shove or Trip or Reposition
-- key: add-roll-modifier-2
+- key: saving-throws-circumstance-bonus
   effect: core/add-modifier
   inputs:
     target: saving-throws

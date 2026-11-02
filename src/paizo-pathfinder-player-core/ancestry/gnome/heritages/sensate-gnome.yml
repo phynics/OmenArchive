@@ -12,14 +12,14 @@ description: 'You see all colors as brighter, hear all sounds as richer, and esp
   trying to locate an undetected creature that is within the range of your scent.'
 mechanicsScope: builder
 rules:
-- key: add-roll-modifier-1
+- key: perception-circumstance-bonus-seek
   effect: core/add-modifier
   inputs:
     target: perception
     amount: 2
     type: circumstance
     when: Seek
-- key: add-sense-1
+- key: scent
   effect: core/add-sense@2
   inputs:
     sense: scent

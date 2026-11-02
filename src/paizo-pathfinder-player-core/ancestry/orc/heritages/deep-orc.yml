@@ -9,13 +9,13 @@ description: Your calloused hands and red eyes speak to a life spent in the deep
   skill feat.
 mechanicsScope: builder
 rules:
-- key: add-feat-1
+- key: terrain-expertise-underground-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.terrain-expertise'
     with:
       $.feats.terrain-expertise.terrain: {type: core/terrain, value: underground}
-- key: add-feat-2
+- key: combat-climber-feat
   effect: core/add-feat@3
   inputs:
     feat: '@feat.combat-climber'

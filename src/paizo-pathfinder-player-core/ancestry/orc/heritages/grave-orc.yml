@@ -8,12 +8,12 @@ description: You were exposed to powerful necromantic energies that should have 
   bonus to saving throws against effects with the death or void trait.
 mechanicsScope: builder
 rules:
-- key: add-resistance-1
+- key: void-resistance
   effect: core/add-resistance@2
   inputs:
     type: void
     value: (max 1 (divide $.level 2))
-- key: add-roll-modifier-1
+- key: saving-throws-circumstance-bonus
   effect: core/add-modifier
   inputs:
     target: saving-throws

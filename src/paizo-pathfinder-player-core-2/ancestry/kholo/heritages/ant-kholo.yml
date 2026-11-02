@@ -13,14 +13,14 @@ mechanicsScope: mixed
 unsupportedReason: 'A FlatModifier on initiative has no roll target. Foundry rule
   element CreatureSize has no translation. Resource: omen://ancestry/kholo/heritages/ant-kholo?source=paizo-pathfinder-player-core-2.'
 rules:
-- key: flat-modifier-2
+- key: deception-circumstance-bonus-lie
   effect: core/add-modifier
   inputs:
     target: deception
     amount: 1
     type: circumstance
     when: Lie
-- key: active-effect-like-1
+- key: deception-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: deception

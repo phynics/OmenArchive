@@ -11,13 +11,13 @@ description: 'Your long snout gives you a keener sense of smell than most ratfol
   a creature or object within the range of your scent.'
 mechanicsScope: builder
 rules:
-- key: sense-1
+- key: scent
   effect: core/add-sense@2
   inputs:
     sense: scent
     acuity: imprecise
     range: 30
-- key: flat-modifier-1
+- key: perception-circumstance-bonus-seek
   effect: core/add-modifier
   inputs:
     target: perception

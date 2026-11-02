@@ -12,14 +12,14 @@ description: 'You come from a long line of skilled hunters and trackers and have
   a creature or object if you''ve smelled it before.'
 mechanicsScope: builder
 rules:
-- key: flat-modifier-1
+- key: survival-circumstance-bonus-track
   effect: core/add-modifier
   inputs:
     target: survival
     amount: 2
     type: circumstance
     when: Track
-- key: sense-1
+- key: scent
   effect: core/add-sense@2
   inputs:
     sense: scent

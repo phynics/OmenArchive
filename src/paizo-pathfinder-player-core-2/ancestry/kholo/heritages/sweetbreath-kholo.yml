@@ -9,12 +9,12 @@ description: You're a striped, pale-furred kholo with oddly pleasant breath, whi
   if the target can smell your breath.
 mechanicsScope: builder
 rules:
-- key: active-effect-like-1
+- key: diplomacy-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: diplomacy
     rank: trained
-- key: flat-modifier-1
+- key: diplomacy-circumstance-bonus-make-impression
   effect: core/add-modifier
   inputs:
     target: diplomacy
