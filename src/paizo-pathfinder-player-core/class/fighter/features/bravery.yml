@@ -16,3 +16,9 @@ rules:
   inputs:
     savingThrow: will
     rank: expert
+- key: will-fear-success-note
+  effect: core/add-note
+  inputs:
+    target: will
+    text: When you roll a success on a Will save, the result is one degree better.
+    when: the effect has the fear trait

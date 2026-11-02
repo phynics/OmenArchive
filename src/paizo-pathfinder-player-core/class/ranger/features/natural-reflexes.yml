@@ -7,6 +7,8 @@ description: You've honed your reflexes dodging falling trees and pounding hail.
   proficiency rank for Reflex saves increases to master. When you roll a success on
   a Reflex save, you get a critical success instead.
 mechanicsScope: mixed
+unsupportedReason: 'Note at position 1: The text is a localization key, which the
+  pack doesn''t carry.'
 foundryID: 7dMDxvzGKbqoEAdX
 rules:
 - key: reflex-master
@@ -14,3 +16,8 @@ rules:
   inputs:
     savingThrow: reflex
     rank: master
+- key: reflex-success-note
+  effect: core/add-note
+  inputs:
+    target: reflex
+    text: When you roll a success on a Reflex save, the result is one degree better.

@@ -8,6 +8,8 @@ description: You avoid explosions with reflexes a cat would envy. Your proficien
   a Reflex save, you get a failure instead. When you fail a Reflex save against an
   effect that deals damage, you halve the damage you take.
 mechanicsScope: mixed
+unsupportedReason: 'Note at position 2: The text is a localization key, which the
+  pack doesn''t carry.'
 foundryID: rpLPCkTXCZlQ51SR
 rules:
 - key: reflex-legendary
@@ -15,3 +17,9 @@ rules:
   inputs:
     savingThrow: reflex
     rank: legendary
+- key: reflex-critical-failure-note
+  effect: core/add-note
+  inputs:
+    target: reflex
+    text: When you roll a critical failure on a Reflex save, the result is one degree
+      better.
