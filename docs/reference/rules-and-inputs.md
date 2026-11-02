@@ -100,6 +100,12 @@ inputs:
   with a toggle that starts off; `requires` is **a condition the sheet reads** (`requires: (gte $.skills.diplomacy.rank 3)`),
   so the modifier appears only while it holds, with no toggle of its own. A bonus that grows when a condition
   holds is a second modifier of the same type with a `requires`; the highest bonus of a type applies.
+- **Resource pools.** `add-resource-pool {name, maximum, itemLevel?, refresh?, craftable?}` declares a count the player
+  spends and refills at the table. `maximum` and `itemLevel` are sheet values (`maximum: (add 2 $.attributes.int)`).
+  `refresh: daily` marks a pool that refills with the character's daily preparations; the default, `manual`, refills when
+  the player says so. `craftable` is a filter (`{any: [{trait: oil}, {trait: potion}]}`) for the items a use can make.
+  `$.spellcasting.proficiency` reads the character's one spell attack and spell DC rank as a number, 0 (untrained) to 4
+  (legendary): Cauldron's maximum is `(add 1 (gte $.spellcasting.proficiency 3) (gte $.spellcasting.proficiency 4))`.
 - **A heritage's hit points are a field.** A heritage that gives hit points in place of its ancestry's writes
   `hitPoints: 10`; the effect that set them is gone.
 - **Hit points are one effect.** `add-hit-points {amount}` takes a number or an expression, worked out for the level

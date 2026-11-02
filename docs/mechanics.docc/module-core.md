@@ -8,7 +8,6 @@ Rules refer to it with the alias `core`, declared in a publication's `mechanicsM
 
 - `assurance-skills`: `assurance-skills`
 - `terrain-stalker-terrains`: `terrain-stalker-terrains`
-- `crafting-abilities`: `crafting-abilities`
 - `formula-families`: `formula-families`
 
 ## Lists
@@ -30,7 +29,6 @@ Character lists the module declares for the engine. Rules add to and read them l
 | `attribute` | 1 | `{"values":["str","dex","con","int","wis","cha"],"kind":"enum"}` |
 | `bool` | 1 | `{"kind":"boolean"}` |
 | `character-feature` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"rules":{"items":{"properties":{},"kind":"object","required":[],"additionalProperties":true},"kind":"array"},"actionDefinition":{"properties":{},"kind":"object","required":[],"additionalProperties":true},"traits":{"items":{"kind":"string"},"kind":"array"},"sourceID":{"kind":"string"},"id":{"kind":"string"},"text":{"kind":"string"},"source":{"properties":{},"additionalProperties":true,"required":[],"kind":"object"},"parentPath":{"kind":"string"},"name":{"kind":"string"},"rarity":{"values":["common","uncommon","rare","unique"],"kind":"enum"},"level":{"kind":"integer"}},"required":["actionDefinition","id","level","name","rules","text","traits"]}` |
-| `crafting-abilities` | 1 | `{"items":{"properties":{"maxSlotsExpression":{"kind":"string"},"slug":{"kind":"string"},"isDailyPreparation":{"kind":"boolean"},"craftableItems":{"kind":"array","items":{"kind":"string"}},"label":{"kind":"string"}},"additionalProperties":false,"required":["craftableItems","isDailyPreparation","label","maxSlotsExpression","slug"],"kind":"object"},"kind":"array"}` |
 | `crafting-specialty` | 1 | `{"values":["alchemy","artistry","blacksmithing","bookmaking","glassmaking","leatherworking","pottery","shipbuilding","stonemasonry","tailoring","weaving","woodworking"],"kind":"enum"}` |
 | `domain-id` | 1 | `{"kind":"string"}` |
 | `feat-choice-settings` | 1 | `{"additionalProperties":true,"kind":"object","properties":{},"required":[]}` |
@@ -46,6 +44,7 @@ Character lists the module declares for the engine. Rules add to and read them l
 | `list-path` | 1 | `{"kind":"string"}` |
 | `list-value-type` | 1 | `{"kind":"any"}` |
 | `proficiency-rank` | 1 | `{"values":[0,2,4,6,8],"kind":"enum"}` |
+| `resource-filter` | 1 | `{"properties":{},"kind":"object","required":[],"additionalProperties":true}` |
 | `roll-description` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"description":{"items":{"required":[],"additionalProperties":true,"kind":"object","properties":{}},"kind":"array"}},"required":[]}` |
 | `roll-modifier` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"numeric":{"properties":{"type":{"values":["item","status","circumstance","untyped"],"kind":"enum"},"amount":{"kind":"integer"},"applicability":{"required":["kind"],"kind":"object","additionalProperties":false,"properties":{"kind":{"values":["always","situational"],"kind":"enum"},"description":{"kind":"string"}}}},"kind":"object","required":["amount","applicability","type"],"additionalProperties":false},"id":{"kind":"string"},"description":{"kind":"string"},"targetRoll":{"properties":{},"kind":"object","required":[],"additionalProperties":true}},"required":[]}` |
 | `roll-modifier-numeric` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"amount":{"kind":"integer"},"applicability":{"properties":{"description":{"kind":"string"},"kind":{"values":["always","situational"],"kind":"enum"}},"kind":"object","required":["kind"],"additionalProperties":false},"type":{"kind":"enum","values":["item","status","circumstance","untyped"]}},"required":["amount","applicability","type"]}` |
@@ -68,7 +67,6 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-action-2>
 - <doc:core-add-armor-proficiency-3>
 - <doc:core-add-class-dc-2>
-- <doc:core-add-crafting-ability>
 - <doc:core-add-feat-3>
 - <doc:core-add-feature-2>
 - <doc:core-add-formulas>

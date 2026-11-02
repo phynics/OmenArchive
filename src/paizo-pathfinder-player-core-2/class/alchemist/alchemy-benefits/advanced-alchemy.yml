@@ -19,11 +19,10 @@ description: 'During your daily preparations, you spend some time to create alch
 mechanicsScope: mixed
 foundryID: Pe0zmIqyTBc2Td0I
 rules:
-- key: advanced-alchemy-crafting
-  effect: core/add-crafting-ability
+- key: advanced-alchemy-resource-pool
+  effect: core/add-resource-pool
   inputs:
-    slug: advanced-alchemy
-    label: Advanced Alchemy
-    maxSlotsExpression: 4 + @actor.system.abilities.int.mod
-    isDailyPreparation: true
-    craftableItems: item:trait:alchemical|item:trait:consumable
+    name: advanced-alchemy
+    maximum: (add 4 $.attributes.int)
+    refresh: daily
+    craftable: {all: [{trait: alchemical}, {trait: consumable}]}

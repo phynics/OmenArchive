@@ -25,11 +25,11 @@ description: 'You can brew magic in your cauldron, creating useful magical conco
 mechanicsScope: builder
 foundryID: zUtdBd3IbM7UX0AD
 rules:
-- key: cauldron-crafting
-  effect: core/add-crafting-ability
+- key: cauldron-resource-pool
+  effect: core/add-resource-pool
   inputs:
-    slug: cauldron
-    label: Cauldron
-    maxSlotsExpression: ternary(eq(@actor.system.proficiencies.spellcasting.rank,4),3,ternary(eq(@actor.system.proficiencies.spellcasting.rank,3),2,1))
-    isDailyPreparation: true
-    craftableItems: or(item:trait:oil,item:trait:potion)
+    name: cauldron
+    maximum: (add 1 (gte $.spellcasting.proficiency 3) (gte $.spellcasting.proficiency
+      4))
+    refresh: daily
+    craftable: {any: [{trait: oil}, {trait: potion}]}

@@ -10,8 +10,13 @@ prerequisites:
   has: '@archetype.alchemist.feats.alchemist-dedication'
 description: You gain the Advanced Alchemy benefits, and you can create 4 alchemical
   consumables during your daily preparations.
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/advanced-alchemy?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [CraftingAbility].'
+mechanicsScope: builder
 foundryID: NlEZ0piDxg9buXCL
+rules:
+- key: advanced-alchemy-resource-pool
+  effect: core/add-resource-pool
+  inputs:
+    name: advanced-alchemy
+    maximum: 4
+    refresh: daily
+    craftable: {all: [{trait: alchemical}, {trait: consumable}]}
