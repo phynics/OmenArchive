@@ -19,10 +19,17 @@ specialText: You can select this feat more than once, choosing a different type 
 mechanicsScope: mixed
 foundryID: 4tTkRyOQ0VuRBac3
 rules:
+- key: terrain-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.terrain-expertise.terrains
+    valueType: core/terrain
+    label: Terrain Expertise
 - key: choice-feat-terrain-expertise-terrains
   choice:
     name: $.feat.terrain-expertise.terrains
     label: Terrain Expertise Terrain
+    addTo: $.feats.terrain-expertise.terrains
     type: core/terrain
     cases:
     - aquatic

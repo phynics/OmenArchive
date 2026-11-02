@@ -25,13 +25,16 @@ specialText: You can select this feat multiple times. Each time, choose a differ
 mechanicsScope: mixed
 foundryID: beyw5bdA5hkQbmaG
 rules:
+- key: terrain-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.terrain-stalker.terrains
+    valueType: core/string
+    label: Terrain Stalker
 - key: choice-feat-terrain-stalker-terrains
   choice:
     name: $.feat.terrain-stalker.terrains
     label: Terrain Stalker Terrain
+    addTo: $.feats.terrain-stalker.terrains
     type: core/string
     cases: [rubble, snow, underbrush]
-- key: add-terrain-stalker-1
-  effect: core/add-terrain-stalker
-  inputs:
-    terrain: {choice: $.feat.terrain-stalker.terrains}

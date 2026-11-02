@@ -22,6 +22,7 @@ rules:
     type: core/string
     cases: [dwarf, elf, gnome, goblin, halfling, human, leshy, orc]
 - key: feat-ancestry
-  effect: core/add-feat-ancestry
+  effect: core/add-to-list
   inputs:
-    ancestry: {choice: $.feat.adopted-ancestry.ancestry}
+    list: $.ancestry.feat-ancestries
+    value: {choice: $.feat.adopted-ancestry.ancestry}
