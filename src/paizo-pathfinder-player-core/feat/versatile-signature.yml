@@ -7,9 +7,7 @@ traits:
 - bard
 prerequisites:
 - text: polymath muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.polymath'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.polymath'}
 description: While most bards are known for certain signature performances and spells,
   you're always tweaking your available repertoire. When you make your daily preparations,
   you can change one of your signature spells to a different spell of that rank from

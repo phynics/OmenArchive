@@ -14,18 +14,20 @@ description: "As a bard, you select one muse at 1st level. This muse leads you t
 mechanicsScope: builder
 foundryID: AIOBWGOS4nkfH3kW
 rules:
+- key: muse-list
+  effect: core/declare-list
+  inputs:
+    list: $.bard.muses
+    valueType: {records: '@class.bard.muses'}
+    label: Bard muses
 - key: choice-bard-muse
   choice:
     name: $.bard.muse
     label: Muse
+    addTo: $.bard.muses
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.bard.muses'}}
 - key: choice-set-1
   effect: core/add-feature@2
   inputs:
     feature: {choice: $.bard.muse}
-- key: choice-set-2
-  effect: core/add-membership@2
-  inputs:
-    list: $.bard.muse-memberships
-    value: {choice: $.bard.muse}

@@ -10,9 +10,7 @@ traits:
 - spellshape
 prerequisites:
 - text: warrior muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.warrior'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.warrior'}
 - text: Rallying Anthem
   has: '@feat.rallying-anthem'
 action:

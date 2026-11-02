@@ -7,9 +7,7 @@ traits:
 - bard
 prerequisites:
 - text: enigma muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.enigma'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.enigma'}
 - text: legendary in Occultism
   hasSkillProficiency: {skill: occultism, rank: legendary}
 description: Your continued study of occult magic has increased your magical capacity,

@@ -669,8 +669,19 @@
                   "minItems": 1
                 },
                 "contains": {
-                  "description": "A list (or a repeatable choice, one answer per copy) holds this value.",
-                  "$ref": "#/$defs/typedValue"
+                  "description": "A list (or a repeatable choice, one answer per copy) holds this value. A list declared by a record takes the bare value, typed by the declaration.",
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/typedValue"
+                    },
+                    {
+                      "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                      ]
+                    }
+                  ]
                 }
               },
               "required": [
@@ -1427,8 +1438,19 @@
                   "minItems": 1
                 },
                 "contains": {
-                  "description": "A repeatable choice holds a list, one answer per copy; one of them equals this value.",
-                  "$ref": "#/$defs/typedValue"
+                  "description": "A repeatable choice holds a list, one answer per copy; one of them equals this value. A list declared by a record takes the bare value, typed by the declaration.",
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/typedValue"
+                    },
+                    {
+                      "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                      ]
+                    }
+                  ]
                 }
               },
               "required": [

@@ -7,9 +7,7 @@ traits:
 - bard
 prerequisites:
 - text: polymath muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.polymath'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.polymath'}
 - text: master in Occultism
   hasSkillProficiency: {skill: occultism, rank: master}
 description: Your broad experiences translate to a range of skills. Your proficiency

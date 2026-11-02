@@ -7,9 +7,7 @@ traits:
 - bard
 prerequisites:
 - text: warrior muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.warrior'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.warrior'}
 description: 'Your muse has taught you how to handle a wider variety of weapons than
   most bards, empowering you to effortlessly blend your performance into combat tools.
   When you have a [Courageous Anthem](omen://spell/courageous-anthem?source=paizo-pathfinder-player-core)

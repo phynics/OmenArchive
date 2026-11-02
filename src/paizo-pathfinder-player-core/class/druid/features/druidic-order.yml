@@ -47,18 +47,20 @@ description: 'Upon becoming a druid, you align yourself with a druidic order, wh
 mechanicsScope: builder
 foundryID: 8STJEFVJISujgpMR
 rules:
+- key: order-list
+  effect: core/declare-list
+  inputs:
+    list: $.druid.orders
+    valueType: {records: '@class.druid.orders'}
+    label: Druidic orders
 - key: choice-druid-order
   choice:
     name: $.druid.order
     label: Order
+    addTo: $.druid.orders
     type: core/feature-id
     records: {filter: {pathPrefix: '@class.druid.orders'}}
 - key: choice-set-1
   effect: core/add-feature@2
   inputs:
     feature: {choice: $.druid.order}
-- key: choice-set-2
-  effect: core/add-membership@2
-  inputs:
-    list: $.druid.order-memberships
-    value: {choice: $.druid.order}

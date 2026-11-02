@@ -7,9 +7,7 @@ traits:
 - bard
 prerequisites:
 - text: warrior muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.warrior'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.warrior'}
 description: Your performances inspire strength in your allies to aid them at physical
   tasks. You learn the [Song of Strength](omen://spell/song-of-strength?source=paizo-pathfinder-player-core)
   composition cantrip.

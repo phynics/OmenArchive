@@ -10,9 +10,7 @@ traits:
 - spellshape
 prerequisites:
 - text: polymath muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.polymath'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.polymath'}
 action:
   count: one_action
 description: You can translate the emotion and power of a composition to other mediums.

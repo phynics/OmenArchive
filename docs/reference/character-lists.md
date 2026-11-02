@@ -92,7 +92,7 @@ It is **one-way**: a question leaves out only items that rules authored before i
 
 ## Reading a list
 
-- `hasChoice: {name: $.druid.orders, contains: {type: core/feature-id, value: '@class.druid.orders.leaf'}}` tests a list for a value.
+- `hasChoice: {name: $.druid.orders, contains: '@class.druid.orders.leaf'}` tests a list for a value. The value is bare because the list's declaration gives its type; a test of anything else (a repeatable choice, a list nobody declares) spells the type: `contains: {type: core/int, value: 1}`.
 - `{choiceList: $.list}` reads a list as an input once a rule has declared it or added to it.
 - `$.list[].field` reads **one field of every item**, in list order, duplicates kept: `$.deity.spells[].rank` is the list of the `rank` fields of the entries of `$.deity.spells`. It is short for `{list: $.deity.spells, field: rank}`. Conditions and inputs that take a list may project.
   - The field is typed against the declaration. For an entry list it is one of the entry's declared fields; for a record list, a field of the record. A field of a record may follow an entry field: `$.deity.spells[].spell.traits`.

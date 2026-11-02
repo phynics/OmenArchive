@@ -7,9 +7,7 @@ traits:
 - bard
 prerequisites:
 - text: warrior muse
-  hasChoice:
-    name: $.bard.muse-memberships
-    contains: {type: core/feature-id, value: '@class.bard.muses.warrior'}
+  hasChoice: {name: $.bard.muses, contains: '@class.bard.muses.warrior'}
 action:
   count: free_action
   trigger: You critically hit a foe with a melee weapon Strike or a melee unarmed

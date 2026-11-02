@@ -9,9 +9,7 @@ traits:
 - spellshape
 prerequisites:
 - text: storm order
-  hasChoice:
-    name: $.druid.order-memberships
-    contains: {type: core/feature-id, value: '@class.druid.orders.storm'}
+  hasChoice: {name: $.druid.orders, contains: '@class.druid.orders.storm'}
 action:
   count: one_action
 description: Your lightning splits the air, generating a booming shock wave. If your

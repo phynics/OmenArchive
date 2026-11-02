@@ -172,9 +172,9 @@ An input that names a character list (`declare-list` and `add-to-list`'s `list`)
 `{ choice: $.path }` or a value with its type (`{ type: core/skill, literal: athletics }`), which the list's
 declaration then checks.
 
-An input whose type is **text** (`string`, as in `add-membership`'s `list`) takes a `$` path or an
+An input whose type is **text** (`string`) takes a `$` path or an
 expression as plain text, so a string that begins with `$`, `@`, `(` or `[[` is escaped with a
-leading backslash (`\$.druid.order-memberships`). No other type needs the backslash.
+leading backslash (`\$.druid.orders`). No other type needs the backslash.
 
 ## Player Choices (`choice:`)
 

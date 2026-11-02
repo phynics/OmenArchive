@@ -7,9 +7,7 @@ traits:
 - druid
 prerequisites:
 - text: untamed order
-  hasChoice:
-    name: $.druid.order-memberships
-    contains: {type: core/feature-id, value: '@class.druid.orders.untamed'}
+  hasChoice: {name: $.druid.orders, contains: '@class.druid.orders.untamed'}
 description: You are one with the wild, always changing and adapting to meet any challenge.
   You gain the [Untamed Form](omen://spell/untamed-form?source=paizo-pathfinder-player-core)
   order spell, which lets you transform into a variety of shapes that you can expand
