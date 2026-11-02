@@ -26,7 +26,7 @@ rules:
       trait: undead
 ```
 
-- **`key`**: Unique kebab-case string within the record. A rule's identity UUID is deterministically derived from its enclosing record path and key: `uuid5("<record-path>#rule/<key>")`. Renaming a key constitutes creating a new rule.
+- **`key`**: Unique kebab-case string within the record. A rule's identity UUID is deterministically derived from its enclosing record path and key: `uuid5("<record-path>#rule/<key>")`. Renaming a key constitutes creating a new rule. A key says what the rule gives, noun first (`cold-resistance`, `arcana-trained`, `martial-weapons-legendary`, `gale-blast-known-spell`); a subject that comes from a choice is `chosen-…` (`chosen-skill-trained`). Rules with one name in a record are told apart by the choice they depend on, then by level, then by a numeric suffix. Do not write a counter key (`generated-3`, `annotation-2`, `add-feat-1`): the writer replaces one with a name, and the archive check warns on one.
 - **`effect`**: `<module-alias>/<effect-name>`, optionally with `@<revision>` if different from 1 (e.g. `core/add-feat@2`). Module aliases are declared in `publication.yml`.
 - **`level`**: The level at which the rule takes effect (defaults to 1 if omitted).
 - **`prerequisites`**: Optional list of typed prerequisite conditions.
