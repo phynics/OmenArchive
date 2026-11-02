@@ -67,18 +67,14 @@ Character lists the module declares for the engine. Rules add to and read them l
 
 - <doc:core-add-action-2>
 - <doc:core-add-armor-proficiency-3>
-- <doc:core-add-assurance>
 - <doc:core-add-class-dc-2>
 - <doc:core-add-crafting-ability>
 - <doc:core-add-feat-3>
-- <doc:core-add-feat-ancestry>
 - <doc:core-add-feature-2>
 - <doc:core-add-formulas>
 - <doc:core-add-heritage>
 - <doc:core-add-hit-points-2>
 - <doc:core-add-item-3>
-- <doc:core-add-lore-skill-increase-2>
-- <doc:core-add-membership-2>
 - <doc:core-add-modifier>
 - <doc:core-add-note>
 - <doc:core-add-resistance-2>
@@ -89,7 +85,6 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-specialty-crafting>
 - <doc:core-add-speed>
 - <doc:core-add-terrain-expertise>
-- <doc:core-add-terrain-stalker>
 - <doc:core-add-to-list>
 - <doc:core-add-trait>
 - <doc:core-add-weapon-critical-specialization>
