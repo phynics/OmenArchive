@@ -18,7 +18,7 @@ description: You gain 3 additional Hit Points for each ranger archetype class fe
 mechanicsScope: builder
 foundryID: JKvP4pFHzwWsHu2n
 rules:
-- key: add-hit-points-per-count-1
+- key: hit-points-per-feat
   effect: core/add-hit-points@2
   inputs:
     amount: (multiply 3 $.archetype.ranger.feat-count)

@@ -18,7 +18,7 @@ description: You gain 3 additional Hit Points for each fighter archetype class f
 mechanicsScope: builder
 foundryID: PLz1oIEGJojVUBsW
 rules:
-- key: add-hit-points-per-count-1
+- key: hit-points-per-feat
   effect: core/add-hit-points@2
   inputs:
     amount: (multiply 3 $.archetype.fighter.feat-count)

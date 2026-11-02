@@ -10,16 +10,16 @@ description: Your mother was a hag. Your eyes' heterochromia is the most obvious
   parent's ancestry whenever you gain an ancestry feat.
 mechanicsScope: builder
 rules:
-- key: add-character-ancestry-trait-1
+- key: changeling-ancestry-trait
   effect: core/add-trait
   inputs:
     trait: changeling
     as: ancestry
-- key: add-sense-1
+- key: low-light-vision
   effect: core/add-sense@2
   inputs:
     sense: low-light-vision
-- key: add-sense-2
+- key: darkvision
   effect: core/add-sense@2
   prerequisites:
   - hasAncestryVision: low-light-vision
