@@ -83,8 +83,9 @@ that give text or lists, such as `$.ancestry.name`, can't be used in an expressi
 
 An expression has no value when it is malformed (an unmatched parenthesis, an unknown operator or a
 wrong number of arguments), when it divides by zero, or when a read names nothing the character has.
-Today a number without a value counts as 0, and a condition without a value does not hold, with no
-error on the sheet. Check every expression before relying on it.
+Such an expression has no value. It is never read as 0 or as a condition that doesn't hold: a reader
+shows it as not checked, and leaves the decision to the player. `omen-archive validate` reports each of
+these mistakes with the record and the line, so check an archive before publishing it.
 
 ## Examples from the archive
 
