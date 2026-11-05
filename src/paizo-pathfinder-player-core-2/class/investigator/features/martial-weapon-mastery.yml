@@ -1,0 +1,28 @@
+---
+name: martial weapon mastery
+level: 13
+traits:
+- champion
+- investigator
+- ranger
+- swashbuckler
+description: You fully understand your weapons. Your proficiency ranks for simple
+  weapons, martial weapons, and unarmed attacks increase to master.
+mechanicsScope: builder
+foundryID: i6563IU7x4L9oRgC
+rules:
+- key: martial-weapons-master
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: martial}
+    rank: master
+- key: simple-weapons-master
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: simple}
+    rank: master
+- key: unarmed-attacks-master
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: unarmed}
+    rank: master
