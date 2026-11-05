@@ -14,6 +14,7 @@ Detailed technical specifications are divided into focused topic guides:
 | [**Identities and References**](docs/reference/identities-and-references.md) | `@reference` syntax, canonical `omen://` URIs, member resolution, and prose links. |
 | [**Rules and Inputs**](docs/reference/rules-and-inputs.md) | The `rules` array, choices (`$.` paths), effect invocations, and input typing. |
 | [**Character Lists**](docs/reference/character-lists.md) | Declared, typed, derived sets of items (`declare-list`, `add-to-list`, `addTo:`, `distinct`, `$.list[].field`). |
+| [**Sheet Expressions**](docs/reference/expressions.md) | The expression language of sheet values: grammar, operators, `$` reads, conditions and rounding. |
 | [**Filters**](docs/reference/filters.md) | Filtering syntax for dynamic choices (`all`, `any`, traits, levels, and prerequisites). |
 | [**Spellcasting Tables**](docs/reference/spellcasting.md) | Compact class spell tables (`spellcasting:` block), slot progression, and repertoires. |
 | [**Family Conventions**](docs/reference/family-conventions.md) | Structural schemas, directory locations, and examples for all 13 content families. |
@@ -29,6 +30,9 @@ that type ([the full rules](docs/reference/rules-and-inputs.md)):
 
 - Sheet expressions and `$` paths are bare: `maximum: (max 1 (divide $.level 2))`. The backslash escape
   (`\$.path`) is only for inputs that take text.
+  [Sheet expressions](docs/reference/expressions.md) has the operators, the reads and the rounding.
+- Authored files carry no comments: the canonical writer (`omen-archive canonicalize`) drops them.
+  Put a note in the record's `description`, or in the pull request.
 - A prerequisite on a record is `has: '@feat.power-attack'`, never its name.
 - An attribute is spelled out (`wisdom`), never abbreviated; the decoded wire form keeps `wis`.
 - A proficiency rank is a word under the input name `rank` (`rank: expert`); a number is not a rank.

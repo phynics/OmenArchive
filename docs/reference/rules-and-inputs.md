@@ -75,6 +75,8 @@ inputs:
   itemLevel: $.item.level                   #   or a bare $ path
 ```
 
+The operators, reads and rounding of sheet expressions are in [Sheet Expressions](expressions.md).
+
 ### Typed values
 
 - **Sheet values.** An input whose type is a sheet value (`maximum`, `itemLevel`, a resistance's `value`) takes a
