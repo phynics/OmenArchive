@@ -81,6 +81,17 @@ node scripts/check-schemas.mjs src/paizo-pathfinder-player-core/feat/fleet.yml
 
 The full reference validator is implemented in `OmenArchiveKit` (Swift 6.4 / macOS or Linux). It verifies all cross-record links, derived rule identities, and mechanics contracts.
 
+Beyond the schemas, `omen-archive validate` checks, naming the record and the authored line:
+
+| Check | What it reports |
+|---|---|
+| Sheet expressions | Malformed syntax, an unknown operator, a wrong argument count, a constant division by zero, a read nothing defines or that isn't a number, and a value of the wrong kind for its input (a condition where a number belongs) |
+| `hasChoice` tests | A value the question can never hold, and a value of another type than the answer |
+| Record references | A record-id input naming a record of another family (a feat input given a spell), and a list entry's record outside the list's declared collection |
+| List items | A wrong item type and a missing entry field, also in the single-file check an editor runs on save |
+
+Whole-archive analyses (dependency cycles, reachability, rule ordering, termination) run in the maintainers' tooling, not in `omen-archive`.
+
 If you have `OmenArchiveKit` available:
 ```bash
 ./scripts/validate.sh
