@@ -90,6 +90,21 @@ The full gate runs automatically in trusted CI upon merge to `main`.
 
 ---
 
+## Writing Rules for a Record
+
+Describe a record's mechanics with what the format already has, in this order:
+
+1. **Existing effects, questions, filters and expressions.** Most records need nothing else.
+2. **Part of a rule can't be expressed:** write the part that can, and record the rest in
+   `mechanicsScope` or `unsupportedReason`. A record that is partly applied is better than a new
+   effect made for it alone.
+3. **A new effect** is for something the engine must compute and no combination of the above can.
+   Open an issue first that explains why, before writing records that need it. An effect never
+   carries a rule's name from one book, display text, or a bonus or condition that belongs to a
+   single record.
+
+---
+
 ## Submitting Changes
 
 ### Step-by-Step Workflow
