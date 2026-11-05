@@ -21,7 +21,10 @@ Every property in our JSON schemas under `schemas/` declares an ownership model 
 
 - **Reviewed Rules**: When a human author adds or customizes a `rules:` block, the converter tracks this as human-reviewed. Subsequent refreshes will **never** silently overwrite reviewed rules.
 - **Divergence Detection**: If an upstream release introduces changes to an existing record, the refresh pipeline checks whether the human-reviewed mechanics still apply or flags the record for manual review.
-- **Mechanics Scope**: The fields `mechanicsScope` and `unsupportedReason` belong entirely to the archive to document implementation limits.
+- **Mechanics Scope**: The fields `mechanicsScope` and `unsupportedReason` belong entirely to the archive to document implementation limits. `mechanicsScope` says where a record's rules matter:
+  - `builder`: they change the character sheet, and the record's `rules` apply them.
+  - `encounter`: they matter only at the table: a situation, a target, an action in play, or an option the player turns on. Nothing on the sheet waits for them, so the record needs no `unsupportedReason`. A rule that always applies, or that depends only on fixed facts of the character (a proficiency, a feat, a weapon's traits), changes the sheet and is not `encounter`.
+  - `mixed`: some rules change the sheet and some matter at the table. When the sheet part is not applied yet, `unsupportedReason` says what is missing.
 
 ## Hand-Authored Records
 
