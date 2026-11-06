@@ -30,7 +30,7 @@ OmenArchive/
 │   ├── archive-format.json
 │   ├── character-*.schema.json
 │   └── utility-types/
-├── scripts/                      # Local and CI validation scripts
+├── scripts/                      # Local validation scripts
 │   ├── check-schemas.mjs
 │   ├── check-links.sh
 │   └── validate.sh

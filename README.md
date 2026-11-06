@@ -58,7 +58,7 @@ For step-by-step instructions on setting up your environment, running validation
 | Guide | Description |
 | :--- | :--- |
 | [**Consuming the Archive**](docs/consuming-the-archive.md) | Guide for third parties using the archive as a database (JSONL, SQLite, Python, Node.js). |
-| [**CONTRIBUTING.md**](CONTRIBUTING.md) | Contributor workflows, editor setup, licensing rules, and CI validation. |
+| [**CONTRIBUTING.md**](CONTRIBUTING.md) | Contributor workflows, editor setup, licensing rules, and validation. |
 | [**How-To Guides**](docs/how-to/) | Step-by-step guides for fixing typos, adding feats, spells, rules, and publications. |
 | [**Reference Manual**](docs/reference/) | In-depth specifications for layout, `@` references, rules, filters, and families. |
 | [**Converter Ownership**](docs/converter-ownership.md) | How automated upstream refreshes work and what fields the archive owns. |

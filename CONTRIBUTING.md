@@ -46,7 +46,7 @@ Install the local pre-commit hook to automatically validate changed files before
 
 We use a two-tiered validation model to support contributors on any platform:
 
-### Tier 1: Standalone Schema Check (Local & PR CI)
+### Tier 1: Standalone Schema Check
 
 A lightweight Node.js validator that verifies structural YAML syntax and schema compliance without requiring a Swift toolchain.
 
@@ -77,7 +77,7 @@ node scripts/check-schemas.mjs src/paizo-pathfinder-player-core/feat/fleet.yml
 - Mechanics effect input validation against compiled module descriptors.
 - Deterministic UUID derivation and collision detection.
 
-### Tier 2: Full Validation Gate (Maintainer CI & Local Toolchain)
+### Tier 2: Full Validation Gate (Local Toolchain)
 
 The full reference validator is implemented in `OmenArchiveKit` (Swift 6.4 / macOS or Linux). It verifies all cross-record links, derived rule identities, and mechanics contracts.
 
@@ -97,7 +97,7 @@ If you have `OmenArchiveKit` available:
 ./scripts/validate.sh
 ```
 
-The full gate runs automatically in trusted CI upon merge to `main`.
+Maintainers run the full gate before they merge to `main`. No hosted CI runs on pull requests: run Tier 1 before you open one.
 
 ---
 

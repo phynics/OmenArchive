@@ -52,7 +52,7 @@ node scripts/check-schemas.mjs [path/to/file.yml]
 
 ## 3. Mechanics and Rule Errors
 
-Full mechanics validation runs in maintainer CI via `./scripts/validate.sh`.
+Full mechanics validation runs locally with `./scripts/validate.sh` (see the full validation gate in `CONTRIBUTING.md`).
 
 ### `mechanics [unknownEffect] Effect <name> is not registered`
 - **Cause**: The rule names an effect that does not exist in the referenced mechanics module.
