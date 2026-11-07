@@ -28,5 +28,5 @@ Example, from `paizo-pathfinder-player-core-2/ancestry/catfolk/heritages/hunting
     acuity: imprecise
     range: 30
     sense: scent
-  key: sense-1
+  key: scent
 ```

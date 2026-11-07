@@ -17,8 +17,8 @@ Used by 3 rules.
 Example, from `paizo-pathfinder-player-core/class/rogue/rackets/mastermind.yml`:
 
 ```yaml
-- key: key-attribute
-  effect: core/extend-class-key-attribute
+- effect: core/extend-class-key-attribute
   inputs:
     attribute: intelligence
+  key: key-attribute
 ```

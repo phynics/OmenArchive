@@ -22,9 +22,9 @@ Used by 1 rules.
 Example, from `paizo-pathfinder-player-core-2/class/alchemist/research-fields/chirurgeon.yml`:
 
 ```yaml
-- key: chirurgeon-crafting-for-medicine
-  effect: core/substitute-skill
+- effect: core/substitute-skill
   inputs:
-    skill: {kind: medicine}
-    substitute: {kind: crafting}
+    skill: medicine
+    substitute: crafting
+  key: chirurgeon-crafting-for-medicine
 ```

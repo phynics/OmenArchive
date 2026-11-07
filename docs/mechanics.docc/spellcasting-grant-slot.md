@@ -18,14 +18,14 @@ Effect `grant-slot`, revision 1, from module `me.atkn.omen.pf2e.playercore-spell
 
 Used by 2 rules.
 
-Example, from `paizo-pathfinder-player-core-2/feat/oracular-providence.yml`:
+Example, from `paizo-pathfinder-player-core-2/feat/bloodline-perfection.yml`:
 
 ```yaml
-- key: grant-slot-1
-  effect: spellcasting/grant-slot
-  level: 20
+- effect: spellcasting/grant-slot
   inputs:
-    source: oracle-spellcasting
-    spellRank: 10
     count: 1
+    source: sorcerer-spellcasting
+    spellRank: 10
+  key: rank-10-slot
+  level: 20
 ```

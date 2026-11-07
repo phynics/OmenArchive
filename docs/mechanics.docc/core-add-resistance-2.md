@@ -10,19 +10,18 @@ Effect `add-resistance`, revision 2, from module `me.atkn.omen.pf2e.playercore`.
 |---|---|---|
 | `type` | `string` | yes |
 | `value` | `sheet-value` | yes |
-| `exceptions` | `string` | yes |
+| `exceptions` | `string` | no, default `""` |
 
 ## Usage in the archive
 
 Used by 15 rules.
 
-Example, from `paizo-pathfinder-player-core/feat/nephilim-resistance.yml`:
+Example, from `paizo-pathfinder-player-core-2/ancestry/catfolk/heritages/winter-catfolk.yml`:
 
 ```yaml
-- key: add-resistance-1
-  effect: core/add-resistance@2
+- effect: core/add-resistance@2
   inputs:
-    type: {choice: $.feats.nephilim-resistance.damage-type}
-    value: 5
-    exceptions: ''
+    type: cold
+    value: (max 1 (divide $.level 2))
+  key: cold-resistance
 ```

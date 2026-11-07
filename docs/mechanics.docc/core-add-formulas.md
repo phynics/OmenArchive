@@ -14,11 +14,12 @@ Effect `add-formulas`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 Used by 25 rules.
 
-Example, from `paizo-pathfinder-player-core/feat/alchemical-crafting.yml`:
+Example, from `paizo-pathfinder-player-core-2/class/alchemist/alchemy-benefits/formula-book.yml`:
 
 ```yaml
-- key: learn-choice-feat-alchemical-crafting-formulas
-  effect: core/add-formulas
+- effect: core/add-formulas
   inputs:
-    items: {choiceList: $.feats.alchemical-crafting.formulas}
+    items:
+      choiceList: $.alchemist.formulas.starting
+  key: learn-choice-alchemist-formulas-starting
 ```

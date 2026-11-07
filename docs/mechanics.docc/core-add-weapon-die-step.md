@@ -17,8 +17,9 @@ Used by 1 rules.
 Example, from `paizo-pathfinder-player-core-2/class/champion/deity-benefits/deific-weapon.yml`:
 
 ```yaml
-- key: deity-favored-weapon-die
-  effect: core/add-weapon-die-step
+- effect: core/add-weapon-die-step
   inputs:
-    weapon: {choice: $.deity.favored-weapon}
+    weapon:
+      choice: $.deity.favored-weapon
+  key: deity-favored-weapon-die
 ```

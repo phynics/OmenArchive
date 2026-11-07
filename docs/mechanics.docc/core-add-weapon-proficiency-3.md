@@ -10,7 +10,7 @@ Effect `add-weapon-proficiency`, revision 3, from module `me.atkn.omen.pf2e.play
 |---|---|---|
 | `weapons` | `list-item` | yes |
 | `rank` | `proficiency-rank` | yes |
-| `selfScaling` | `bool` | yes |
+| `selfScaling` | `bool` | no, default `false` |
 | `category` | `weapon-kind` | no |
 
 ## Writes
@@ -19,7 +19,7 @@ Effect `add-weapon-proficiency`, revision 3, from module `me.atkn.omen.pf2e.play
 
 ## Usage in the archive
 
-Used by 93 rules.
+Used by 90 rules.
 
 Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/alchemical-weapon-expertise.yml`:
 

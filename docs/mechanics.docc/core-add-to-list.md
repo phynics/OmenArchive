@@ -17,4 +17,15 @@ Effect `add-to-list`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Usage in the archive
 
-Used by 0 rules.
+Used by 1 rules.
+
+Example, from `paizo-pathfinder-player-core/feat/adopted-ancestry.yml`:
+
+```yaml
+- effect: core/add-to-list
+  inputs:
+    list: $.ancestry.feat-ancestries
+    value:
+      choice: $.feats.adopted-ancestry.ancestry
+  key: feat-ancestry
+```

@@ -19,3 +19,19 @@ Effect `modify-innate-sources`, revision 1, from module `me.atkn.omen.pf2e.playe
 ## Usage in the archive
 
 Used by 1 rules.
+
+Example, from `paizo-pathfinder-player-core/ancestry/gnome/heritages/wellspring-gnome.yml`:
+
+```yaml
+- effect: spellcasting/modify-innate-sources
+  inputs:
+    grantedBy:
+      all:
+      - type: feat
+      - trait: systemTrait-ancestry
+      - trait: ancestryTrait-gnome
+    setTradition:
+      choice: $.gnome.wellspring-tradition
+    tradition: primal
+  key: modify-innate-sources
+```

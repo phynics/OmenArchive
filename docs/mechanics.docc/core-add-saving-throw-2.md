@@ -17,7 +17,7 @@ Effect `add-saving-throw`, revision 2, from module `me.atkn.omen.pf2e.playercore
 
 ## Usage in the archive
 
-Used by 70 rules.
+Used by 73 rules.
 
 Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/chemical-hardiness.yml`:
 
@@ -26,6 +26,6 @@ Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/chemical-
   inputs:
     rank: master
     savingThrow: fortitude
-  key: generated-2
+  key: fortitude-master
   level: 11
 ```

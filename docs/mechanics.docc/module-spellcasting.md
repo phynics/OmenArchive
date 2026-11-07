@@ -8,13 +8,13 @@ Rules refer to it with the alias `spellcasting`, declared in a publication's `me
 
 | Type | Rev | Shape |
 |---|---|---|
-| `cast-frequency` | 1 | `{"properties":{"uses":{"kind":"integer"},"kind":{"kind":"enum","values":["atWill","perDay","focus"]}},"required":["kind"],"kind":"object","additionalProperties":false}` |
-| `casting-kind` | 1 | `{"kind":"enum","values":["prepared","spontaneous","innate","focus"]}` |
-| `rank-policy` | 1 | `{"properties":{"rank":{"kind":"integer"},"kind":{"kind":"enum","values":["fixed","cantrip"]}},"required":["kind"],"kind":"object","additionalProperties":false}` |
-| `resource-filter` | 1 | `{"additionalProperties":true,"kind":"object","properties":{},"required":[]}` |
+| `cast-frequency` | 1 | `{"kind":"object","required":["kind"],"properties":{"kind":{"kind":"enum","values":["atWill","perDay","focus"]},"uses":{"kind":"integer"}},"additionalProperties":false}` |
+| `casting-kind` | 1 | `{"values":["prepared","spontaneous","innate","focus"],"kind":"enum"}` |
+| `rank-policy` | 1 | `{"properties":{"kind":{"values":["fixed","cantrip"],"kind":"enum"},"rank":{"kind":"integer"}},"kind":"object","additionalProperties":false,"required":["kind"]}` |
+| `resource-filter` | 1 | `{"required":[],"properties":{},"additionalProperties":true,"kind":"object"}` |
 | `spell-id` | 1 | `{"kind":"string"}` |
-| `spell-id-list` | 1 | `{"items":{"kind":"string"},"kind":"array"}` |
-| `spell-pick` | 1 | `{"properties":{"rank":{"kind":"integer"},"kind":{"kind":"enum","values":["cantrip","rank","upTo"]}},"required":["kind"],"kind":"object","additionalProperties":false}` |
+| `spell-id-list` | 1 | `{"kind":"array","items":{"kind":"string"}}` |
+| `spell-pick` | 1 | `{"kind":"object","required":["kind"],"properties":{"kind":{"kind":"enum","values":["cantrip","rank","upTo"]},"rank":{"kind":"integer"}},"additionalProperties":false}` |
 | `tradition` | 1 | `{"values":["arcane","divine","occult","primal"],"kind":"enum"}` |
 
 ## Effects

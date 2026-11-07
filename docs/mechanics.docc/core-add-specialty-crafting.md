@@ -21,8 +21,9 @@ Used by 1 rules.
 Example, from `paizo-pathfinder-player-core/feat/specialty-crafting.yml`:
 
 ```yaml
-- key: add-specialty-crafting-1
-  effect: core/add-specialty-crafting
+- effect: core/add-specialty-crafting
   inputs:
-    specialty: {choice: $.feats.specialty-crafting.specialty}
+    specialty:
+      choice: $.feats.specialty-crafting.specialty
+  key: specialty-crafting
 ```

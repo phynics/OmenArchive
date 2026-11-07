@@ -21,8 +21,9 @@ Used by 1 rules.
 Example, from `paizo-pathfinder-player-core/feat/terrain-expertise.yml`:
 
 ```yaml
-- key: add-terrain-expertise-1
-  effect: core/add-terrain-expertise
+- effect: core/add-terrain-expertise
   inputs:
-    terrain: {choice: $.feats.terrain-expertise.terrain}
+    terrain:
+      choice: $.feats.terrain-expertise.terrain
+  key: terrain-expertise
 ```

@@ -20,5 +20,5 @@ Example, from `paizo-pathfinder-player-core/archetype/fighter/feats/fighter-resi
 - effect: core/add-hit-points@2
   inputs:
     amount: (multiply 3 $.archetype.fighter.feat-count)
-  key: add-hit-points-per-count-1
+  key: hit-points-per-feat
 ```

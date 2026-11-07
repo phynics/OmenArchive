@@ -74,3 +74,6 @@ A declaration, an `add-to-list` target and a saved answer's address take the pla
 | List | Holds | Module |
 |---|---|---|
 | `$.ancestry.feat-ancestries` | `string` | `core` |
+| `$.class.key-attribute-options` | `attribute` | `core` |
+| `$.skills.substitutions` | entries of `skill` (`skill`), `substitute` (`skill`) | `core` |
+| `$.crafting.formulas` | any record under `omen://item` | `core` |

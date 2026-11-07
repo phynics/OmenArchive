@@ -20,5 +20,5 @@ Example, from `paizo-pathfinder-player-core-2/ancestry/hobgoblin/heritages/elfba
 - effect: core/add-action@2
   inputs:
     action: '@action.resist-elf-magic'
-  key: grant-item-1
+  key: resist-elf-magic-action
 ```

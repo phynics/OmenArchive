@@ -19,7 +19,7 @@ Effect `add-note`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Usage in the archive
 
-Used by 63 rules.
+Used by 80 rules.
 
 Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/chemical-hardiness.yml`:
 
@@ -28,6 +28,6 @@ Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/chemical-
   inputs:
     target: fortitude
     text: When you roll a success on a Fortitude save, the result is one degree better.
-  key: annotation-1
+  key: fortitude-success-note
   level: 11
 ```

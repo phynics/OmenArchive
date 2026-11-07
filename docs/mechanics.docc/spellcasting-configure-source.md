@@ -14,25 +14,25 @@ Effect `configure-source`, revision 1, from module `me.atkn.omen.pf2e.playercore
 | `tradition` | `tradition` | yes |
 | `attribute` | `attribute` | yes |
 
+`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
+
 ## Writes
 
 - domain `spellcasting`, name `spellcasting`
 
-`source` is the key of a spellcasting source the publication declares in `spellcastingSources`, such as `ranger-focus-spells`. The wire form calls the input `sourceId` and holds the source's ID.
-
 ## Usage in the archive
 
-Used by 146 rules.
+Used by 147 rules.
 
-Example, from `paizo-pathfinder-player-core/feat/advanced-domain.yml`:
+Example, from `paizo-pathfinder-player-core-2/archetype/blessed-one/feats/blessed-one-dedication.yml`:
 
 ```yaml
-- key: configure-source-1
-  effect: spellcasting/configure-source
+- effect: spellcasting/configure-source
   inputs:
-    source: cleric-focus-spells
-    sourceName: Cleric Focus Spells
+    attribute: charisma
     castingKind: focus
+    source: blessed-one-focus-spells
+    sourceName: Blessed One Focus Spells
     tradition: divine
-    attribute: wisdom
+  key: blessed-one-focus-source
 ```

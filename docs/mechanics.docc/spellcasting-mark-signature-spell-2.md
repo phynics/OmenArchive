@@ -29,6 +29,6 @@ Example, from `paizo-pathfinder-player-core-2/class/oracle/features/signature-sp
     source: oracle-spellcasting
     spell:
       choice: $.oracle.signature-spells.rank-1
-  key: mark-signature-spell-1
+  key: chosen-rank-1-signature
   level: 3
 ```

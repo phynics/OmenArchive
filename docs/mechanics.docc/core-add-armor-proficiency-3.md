@@ -10,7 +10,7 @@ Effect `add-armor-proficiency`, revision 3, from module `me.atkn.omen.pf2e.playe
 |---|---|---|
 | `armor` | `list-item` | yes |
 | `rank` | `proficiency-rank` | yes |
-| `selfScaling` | `bool` | yes |
+| `selfScaling` | `bool` | no, default `false` |
 
 ## Writes
 
@@ -18,7 +18,7 @@ Effect `add-armor-proficiency`, revision 3, from module `me.atkn.omen.pf2e.playe
 
 ## Usage in the archive
 
-Used by 67 rules.
+Used by 69 rules.
 
 Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/medium-armor-expertise.yml`:
 
@@ -28,6 +28,6 @@ Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/medium-ar
     armor:
       category: light
     rank: expert
-  key: generated-3
+  key: light-armor-expert
   level: 13
 ```

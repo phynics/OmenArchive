@@ -16,7 +16,7 @@ Derived from the rule key, never written: `selectionId`.
 
 ## Usage in the archive
 
-Used by 98 rules.
+Used by 100 rules.
 
 Example, from `paizo-pathfinder-player-core-2/ancestry/catfolk/heritages/nine-lives-catfolk.yml`:
 
@@ -24,5 +24,5 @@ Example, from `paizo-pathfinder-player-core-2/ancestry/catfolk/heritages/nine-li
 - effect: core/add-feat@3
   inputs:
     feat: '@feat.diehard?source=paizo-pathfinder-player-core'
-  key: grant-item-1
+  key: diehard-feat
 ```

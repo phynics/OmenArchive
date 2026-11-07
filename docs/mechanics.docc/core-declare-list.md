@@ -14,4 +14,16 @@ Effect `declare-list`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Usage in the archive
 
-Used by 0 rules.
+Used by 6 rules.
+
+Example, from `paizo-pathfinder-player-core/class/bard/features/muses.yml`:
+
+```yaml
+- effect: core/declare-list
+  inputs:
+    label: Bard muses
+    list: $.bard.muses
+    valueType:
+      records: '@class.bard.muses'
+  key: muse-list
+```

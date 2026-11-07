@@ -27,5 +27,5 @@ Example, from `paizo-pathfinder-player-core-2/ancestry/kholo/heritages/dog-kholo
   inputs:
     movement: land
     speed: 30
-  key: base-speed-1
+  key: land-speed
 ```

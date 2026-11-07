@@ -21,11 +21,11 @@ Derived from the rule key, never written: `uuid`.
 
 Used by 5 rules.
 
-Example, from `paizo-pathfinder-player-core/class/ranger/features/ranger-weapon-expertise.yml`:
+Example, from `paizo-pathfinder-player-core/class/bard/features/bard-weapon-expertise.yml`:
 
 ```yaml
-- key: add-weapon-critical-specialization-1
-  effect: core/add-weapon-critical-specialization
+- effect: core/add-weapon-critical-specialization
   inputs:
     weaponGroup: any
+  key: weapon-critical-specialization
 ```

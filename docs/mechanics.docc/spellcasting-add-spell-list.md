@@ -17,12 +17,20 @@ Effect `add-spell-list`, revision 1, from module `me.atkn.omen.pf2e.playercore-s
 
 Used by 18 rules.
 
-Example, from `paizo-pathfinder-player-core/class/cleric/features/deity-cleric.yml`:
+Example, from `paizo-pathfinder-player-core-2/class/oracle/features/divine-access.yml`:
 
 ```yaml
-- key: deity-spell-list-rank-1
-  effect: spellcasting/add-spell-list
+- effect: spellcasting/add-spell-list
   inputs:
-    source: cleric-spellcasting
-    spells: {choiceList: $.deity.spells.rank-1}
+    source: oracle-spellcasting
+    spells:
+      choiceList: $.deity.spells.rank-1
+  key: divine-access-list-rank-1
+  level: 11
+  prerequisites:
+  - hasChoice:
+      contains:
+        type: core/int
+        value: 1
+      name: $.oracle.divine-access
 ```

@@ -41,9 +41,11 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:core-add-heritage>
 - <doc:core-add-hit-points-2>
 - <doc:core-add-item-3>
-- <doc:core-add-modifier>
+- <doc:core-add-modifier-2>
 - <doc:core-add-note>
+- <doc:core-add-perception>
 - <doc:core-add-resistance-2>
+- <doc:core-add-resource-pool>
 - <doc:core-add-saving-throw-2>
 - <doc:core-add-sense-2>
 - <doc:core-add-skill-increase-2>

@@ -15,15 +15,14 @@ Effect `grant-focus-spell`, revision 2, from module `me.atkn.omen.pf2e.playercor
 
 ## Usage in the archive
 
-Used by 121 rules.
+Used by 122 rules.
 
-Example, from `paizo-pathfinder-player-core-2/class/champion/features/devotion-spells.yml`:
+Example, from `paizo-pathfinder-player-core-2/archetype/blessed-one/feats/blessed-one-dedication.yml`:
 
 ```yaml
 - effect: spellcasting/grant-focus-spell@2
   inputs:
-    source: champion-focus-spells
-    spell:
-      choice: $.champion.devotion-spell
-  key: grant-devotion-spell
+    source: blessed-one-focus-spells
+    spell: '@spell.lay-on-hands'
+  key: grant-lay-on-hands
 ```

@@ -1,6 +1,6 @@
 # core/add-feature@2
 
-Grants a class, ancestry, or general feature to the character by its canonical identifier.
+Grants a class, ancestry, or general feature to the character by its canonical identifier, or the rules of a heritage the character does not hold (Elf Atavism).
 
 Effect `add-feature`, revision 2, from module `me.atkn.omen.pf2e.playercore`.
 

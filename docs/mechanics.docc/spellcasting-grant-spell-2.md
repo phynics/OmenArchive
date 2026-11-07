@@ -31,5 +31,5 @@ Example, from `paizo-pathfinder-player-core/class/bard/features/composition-spel
     rankPolicy: cantrip
     source: bard-focus-spells
     spell: '@spell.courageous-anthem'
-  key: grant-spell-1
+  key: courageous-anthem-spell
 ```

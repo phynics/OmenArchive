@@ -1,6 +1,6 @@
 # core/add-skill-increase@2
 
-Increases the character's proficiency rank in a standard skill up to the specified proficiency cap.
+Increases the character's proficiency rank in a standard skill, up to the specified rank.
 
 Effect `add-skill-increase`, revision 2, from module `me.atkn.omen.pf2e.playercore`.
 
@@ -17,7 +17,7 @@ Effect `add-skill-increase`, revision 2, from module `me.atkn.omen.pf2e.playerco
 
 ## Usage in the archive
 
-Used by 121 rules.
+Used by 125 rules.
 
 Example, from `paizo-pathfinder-player-core-2/ancestry/kholo/heritages/ant-kholo.yml`:
 
@@ -26,5 +26,5 @@ Example, from `paizo-pathfinder-player-core-2/ancestry/kholo/heritages/ant-kholo
   inputs:
     rank: trained
     skill: deception
-  key: active-effect-like-1
+  key: deception-trained
 ```

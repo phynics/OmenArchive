@@ -6,8 +6,6 @@ Rules refer to it with the alias `core`, declared in a publication's `mechanicsM
 
 ## State keys
 
-- `assurance-skills`: `assurance-skills`
-- `terrain-stalker-terrains`: `terrain-stalker-terrains`
 - `formula-families`: `formula-families`
 
 ## Lists
@@ -17,49 +15,44 @@ Character lists the module declares for the engine. Rules add to and read them l
 | List | Holds | Label |
 |---|---|---|
 | `$.ancestry.feat-ancestries` | `string` | Feat ancestries |
+| `$.class.key-attribute-options` | `attribute` | Key attribute options |
+| `$.skills.substitutions` | entries of `skill` (`skill`), `substitute` (`skill`) | Skill substitutions |
+| `$.crafting.formulas` | any record under `omen://item` | Formulas |
 
 ## Value types
 
 | Type | Rev | Shape |
 |---|---|---|
 | `action-id` | 1 | `{"kind":"string"}` |
-| `armor-designation` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"name":{"kind":"string"},"kind":{"kind":"enum","values":["type","specific"]},"armorKind":{"kind":"enum","values":["unarmored","light","medium","heavy"]}},"required":["kind"]}` |
-| `armor-kind` | 1 | `{"values":["unarmored","light","medium","heavy"],"kind":"enum"}` |
-| `assurance-skills` | 1 | `{"items":{"properties":{"kind":{"values":["acrobatics","arcana","athletics","crafting","deception","diplomacy","intimidation","medicine","nature","occultism","performance","religion","society","stealth","survival","thievery","lore"],"kind":"enum"},"name":{"kind":"string"}},"additionalProperties":false,"required":["kind"],"kind":"object"},"kind":"array"}` |
+| `armor-designation` | 1 | `{"kind":"object","required":["kind"],"properties":{"name":{"kind":"string"},"kind":{"kind":"enum","values":["type","specific"]},"armorKind":{"kind":"enum","values":["unarmored","light","medium","heavy"]}},"additionalProperties":false}` |
 | `attribute` | 1 | `{"values":["str","dex","con","int","wis","cha"],"kind":"enum"}` |
 | `bool` | 1 | `{"kind":"boolean"}` |
-| `character-feature` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"rules":{"items":{"properties":{},"kind":"object","required":[],"additionalProperties":true},"kind":"array"},"actionDefinition":{"properties":{},"kind":"object","required":[],"additionalProperties":true},"traits":{"items":{"kind":"string"},"kind":"array"},"sourceID":{"kind":"string"},"id":{"kind":"string"},"text":{"kind":"string"},"source":{"properties":{},"additionalProperties":true,"required":[],"kind":"object"},"parentPath":{"kind":"string"},"name":{"kind":"string"},"rarity":{"values":["common","uncommon","rare","unique"],"kind":"enum"},"level":{"kind":"integer"}},"required":["actionDefinition","id","level","name","rules","text","traits"]}` |
-| `crafting-specialty` | 1 | `{"values":["alchemy","artistry","blacksmithing","bookmaking","glassmaking","leatherworking","pottery","shipbuilding","stonemasonry","tailoring","weaving","woodworking"],"kind":"enum"}` |
+| `crafting-specialty` | 1 | `{"name":"crafting-specialty","kind":"vocabulary"}` |
 | `domain-id` | 1 | `{"kind":"string"}` |
-| `feat-choice-settings` | 1 | `{"additionalProperties":true,"kind":"object","properties":{},"required":[]}` |
+| `feat-choice-settings` | 1 | `{"required":[],"kind":"object","additionalProperties":true,"properties":{}}` |
 | `feat-id` | 1 | `{"kind":"string"}` |
 | `feature-id` | 1 | `{"kind":"string"}` |
-| `formula-families` | 1 | `{"items":{"kind":"string"},"kind":"array"}` |
+| `formula-families` | 1 | `{"kind":"array","items":{"kind":"string"}}` |
 | `heritage-id` | 1 | `{"kind":"string"}` |
 | `int` | 1 | `{"kind":"integer"}` |
 | `item-id` | 1 | `{"kind":"string"}` |
-| `item-id-list` | 1 | `{"items":{"kind":"string"},"kind":"array"}` |
+| `item-id-list` | 1 | `{"kind":"array","items":{"kind":"string"}}` |
 | `list-entry` | 1 | `{"kind":"any"}` |
 | `list-item` | 1 | `{"kind":"any"}` |
 | `list-path` | 1 | `{"kind":"string"}` |
 | `list-value-type` | 1 | `{"kind":"any"}` |
-| `proficiency-rank` | 1 | `{"values":[0,2,4,6,8],"kind":"enum"}` |
-| `resource-filter` | 1 | `{"properties":{},"kind":"object","required":[],"additionalProperties":true}` |
-| `roll-description` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"description":{"items":{"required":[],"additionalProperties":true,"kind":"object","properties":{}},"kind":"array"}},"required":[]}` |
-| `roll-modifier` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"numeric":{"properties":{"type":{"values":["item","status","circumstance","untyped"],"kind":"enum"},"amount":{"kind":"integer"},"applicability":{"required":["kind"],"kind":"object","additionalProperties":false,"properties":{"kind":{"values":["always","situational"],"kind":"enum"},"description":{"kind":"string"}}}},"kind":"object","required":["amount","applicability","type"],"additionalProperties":false},"id":{"kind":"string"},"description":{"kind":"string"},"targetRoll":{"properties":{},"kind":"object","required":[],"additionalProperties":true}},"required":[]}` |
-| `roll-modifier-numeric` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"amount":{"kind":"integer"},"applicability":{"properties":{"description":{"kind":"string"},"kind":{"values":["always","situational"],"kind":"enum"}},"kind":"object","required":["kind"],"additionalProperties":false},"type":{"kind":"enum","values":["item","status","circumstance","untyped"]}},"required":["amount","applicability","type"]}` |
-| `saving-throw` | 1 | `{"values":["fortitude","reflex","will","perception"],"kind":"enum"}` |
+| `proficiency-rank` | 1 | `{"kind":"enum","values":[0,2,4,6,8]}` |
+| `resource-filter` | 1 | `{"properties":{},"kind":"object","additionalProperties":true,"required":[]}` |
+| `roll-description` | 1 | `{"required":[],"kind":"object","additionalProperties":false,"properties":{"description":{"kind":"array","items":{"required":[],"properties":{"skill":{"kind":"object","required":["_0"],"properties":{"_0":{"kind":"object","properties":{"performance":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"occultism":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"thievery":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"nature":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"athletics":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"arcana":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"medicine":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"deception":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"religion":{"required":[],"kind":"object","additionalProperties":false,"properties":{}},"crafting":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"acrobatics":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"survival":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"society":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"stealth":{"required":[],"kind":"object","additionalProperties":false,"properties":{}},"diplomacy":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"lore":{"required":["_0"],"kind":"object","additionalProperties":false,"properties":{"_0":{"kind":"string"}}},"intimidation":{"kind":"object","properties":{},"additionalProperties":false,"required":[]}},"additionalProperties":false,"required":[]}},"additionalProperties":false},"anySkill":{"kind":"object","required":[],"properties":{},"additionalProperties":false},"anyAttribute":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"weaponAttack":{"kind":"object","properties":{"_0":{"kind":"object","required":[],"properties":{"specific":{"required":["_0"],"additionalProperties":false,"kind":"object","properties":{"_0":{"kind":"string"}}},"filter":{"required":["_0"],"additionalProperties":false,"kind":"object","properties":{"_0":{"additionalProperties":false,"properties":{"group":{"name":"weapon-group","kind":"vocabulary"},"kind":{"properties":{"martial":{"required":[],"kind":"object","properties":{},"additionalProperties":false},"anyNonAdvanced":{"additionalProperties":false,"required":[],"properties":{},"kind":"object"},"advanced":{"required":[],"kind":"object","properties":{},"additionalProperties":false},"any":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"simple":{"kind":"object","properties":{},"additionalProperties":false,"required":[]},"unarmed":{"additionalProperties":false,"required":[],"properties":{},"kind":"object"}},"required":[],"additionalProperties":false,"kind":"object"}},"required":["group","kind"],"kind":"object"}}}},"additionalProperties":false}},"required":["_0"],"additionalProperties":false},"anyAttack":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"savingThrow":{"kind":"object","required":["_0"],"properties":{"_0":{"kind":"enum","values":["fortitude","reflex","will","perception"]}},"additionalProperties":false},"attribute":{"properties":{"_0":{"values":["str","dex","con","int","wis","cha"],"kind":"enum"}},"additionalProperties":false,"kind":"object","required":["_0"]},"perception":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"anySavingThrow":{"kind":"object","required":[],"properties":{},"additionalProperties":false},"speed":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"anyNonPerceptionSavingThrow":{"properties":{},"additionalProperties":false,"kind":"object","required":[]},"action":{"properties":{"_0":{"kind":"string"}},"additionalProperties":false,"kind":"object","required":["_0"]},"spellAttack":{"properties":{},"additionalProperties":false,"kind":"object","required":[]}},"kind":"object","additionalProperties":false}}}}` |
+| `saving-throw` | 1 | `{"kind":"enum","values":["fortitude","reflex","will","perception"]}` |
 | `sheet-value` | 1 | `{"kind":"any"}` |
-| `skill` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"kind":{"kind":"enum","values":["acrobatics","arcana","athletics","crafting","deception","diplomacy","intimidation","medicine","nature","occultism","performance","religion","society","stealth","survival","thievery","lore"]},"name":{"kind":"string"}},"required":["kind"]}` |
-| `skill-increase` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"selected":{"properties":{},"kind":"object","required":[],"additionalProperties":true},"id":{"kind":"string"},"proficiencyCap":{"kind":"enum","values":[0,2,4,6,8]}},"required":["id","proficiencyCap"]}` |
+| `skill` | 1 | `{"kind":"object","required":["kind"],"properties":{"name":{"kind":"string"},"kind":{"kind":"enum","values":["acrobatics","arcana","athletics","crafting","deception","diplomacy","intimidation","medicine","nature","occultism","performance","religion","society","stealth","survival","thievery","lore"]}},"additionalProperties":false}` |
 | `string` | 1 | `{"kind":"string"}` |
-| `terrain` | 1 | `{"values":["aquatic","arctic","desert","forest","mountain","plains","sky","swamp","underground"],"kind":"enum"}` |
-| `terrain-stalker-terrains` | 1 | `{"items":{"kind":"string"},"kind":"array"}` |
-| `type-of-value` | 1 | `{"kind":"string"}` |
+| `terrain` | 1 | `{"kind":"vocabulary","name":"terrain"}` |
 | `uuid` | 1 | `{"kind":"string"}` |
-| `weapon-designation` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"weaponKind":{"kind":"enum","values":["unarmed","simple","martial","advanced","any","any-non-advanced"]},"weaponGroup":{"kind":"enum","values":["sword","brawling","flail","knife","club","dart","spear","axe","polearm","hammer","pick","shield","bow","bomb","any"]},"kind":{"kind":"enum","values":["filter","specific"]},"name":{"kind":"string"}},"required":["kind"]}` |
-| `weapon-group` | 1 | `{"values":["sword","brawling","flail","knife","club","dart","spear","axe","polearm","hammer","pick","shield","bow","bomb","any"],"kind":"enum"}` |
-| `weapon-kind` | 1 | `{"values":["unarmed","simple","martial","advanced","any","any-non-advanced"],"kind":"enum"}` |
+| `weapon-designation` | 1 | `{"required":["kind"],"properties":{"kind":{"values":["filter","specific"],"kind":"enum"},"weaponKind":{"values":["unarmed","simple","martial","advanced","any","any-non-advanced"],"kind":"enum"},"name":{"kind":"string"},"weaponGroup":{"name":"weapon-group","kind":"vocabulary"}},"kind":"object","additionalProperties":false}` |
+| `weapon-group` | 1 | `{"name":"weapon-group","kind":"vocabulary"}` |
+| `weapon-kind` | 1 | `{"kind":"enum","values":["unarmed","simple","martial","advanced","any","any-non-advanced"]}` |
 | `weapon-reference` | 1 | `{"kind":"string"}` |
 
 ## Effects
@@ -73,8 +66,9 @@ Character lists the module declares for the engine. Rules add to and read them l
 - <doc:core-add-heritage>
 - <doc:core-add-hit-points-2>
 - <doc:core-add-item-3>
-- <doc:core-add-modifier>
+- <doc:core-add-modifier-2>
 - <doc:core-add-note>
+- <doc:core-add-perception>
 - <doc:core-add-resistance-2>
 - <doc:core-add-resource-pool>
 - <doc:core-add-saving-throw-2>
