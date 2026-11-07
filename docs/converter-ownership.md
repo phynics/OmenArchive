@@ -21,10 +21,16 @@ Every property in our JSON schemas under `schemas/` declares an ownership model 
 
 - **Reviewed Rules**: When a human author adds or customizes a `rules:` block, the converter tracks this as human-reviewed. Subsequent refreshes will **never** silently overwrite reviewed rules.
 - **Divergence Detection**: If an upstream release introduces changes to an existing record, the refresh pipeline checks whether the human-reviewed mechanics still apply or flags the record for manual review.
-- **Mechanics Scope**: The fields `mechanicsScope` and `unsupportedReason` belong entirely to the archive to document implementation limits. `mechanicsScope` says where a record's rules matter:
+- **Mechanics Scope**: The fields `mechanicsScope`, `unsupportedReason` and, from format 6, `unsupportedCategory` belong entirely to the archive to document implementation limits. `mechanicsScope` says where a record's rules matter:
   - `builder`: they change the character sheet, and the record's `rules` apply them.
   - `encounter`: they matter only at the table: a situation, a target, an action in play, or an option the player turns on. Nothing on the sheet waits for them, so the record needs no `unsupportedReason`. A rule that always applies, or that depends only on fixed facts of the character (a proficiency, a feat, a weapon's traits), changes the sheet and is not `encounter`.
   - `mixed`: some rules change the sheet and some matter at the table. When the sheet part is not applied yet, `unsupportedReason` says what is missing.
+- **Unsupported Category** (from format 6): a record with an `unsupportedReason` also has an `unsupportedCategory`, which says what the missing part costs a player. The reason stays for the author, in words; the category is what tools count and applications read. A `builder` record has neither. The values are:
+  - `numbers`: a number on the sheet is wrong or missing (a bonus, a Speed, a proficiency rank, a skill, a rider on a strike).
+  - `choice`: a choice the book allows cannot be made.
+  - `benefit`: a benefit the book grants is not applied.
+  - `text`: the rule is in the record's description, and the player applies it.
+  - `scope`: the rule is a table or encounter concern that a builder does not need.
 
 ## Hand-Authored Records
 
