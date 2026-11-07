@@ -106,7 +106,7 @@ Classes define specific sub-collections declared in `schemas/archive-format.json
 - Cleric: `doctrine-features/`, `deities/`
 - Druid: `orders/`
 - Rogue: `rackets/`
-- Sorcerer: `bloodlines/`
+- Sorcerer: `bloodlines/`, and from format 6 `draconic-exemplars/` and `elemental-influences/` (the records the Draconic and Elemental bloodlines add for the option a player chooses)
 - Witch: `patrons/`, `basic-lessons/`, `greater-lessons/`, `major-lessons/`
 - Wizard: `schools/`, `theses/`
 
