@@ -78,6 +78,7 @@ spellcastingSources:
 - **`mechanicsModules`**: Maps short module aliases (`core`, `spellcasting`) used in `rules:` blocks to registered mechanics module IDs.
 - **`spellcastingSources`**: Optional. Maps each spellcasting source a publication's rules name to its ID. The key is kebab-case after the source's name (`ranger-focus-spells`, `hag-magic`); a rule writes the key as its `source`. A key is declared once, its ID appears nowhere else in the publication's records, and two source names that give one key are refused. See [Spellcasting Tables and Sources](spellcasting.md#source-keys).
 - **`externalRecords`**: Declares fully qualified references (`omen://...`) to records from publications not yet imported into the archive that are referenced by this publication.
+- **`requires`**: Optional, from format 6. A list of the publication ids this publication needs. A reference, prerequisite or grant that names a record of another publication with `?source=` fails without that publication, so the validator expects the publication's id here and, when it is missing, names the publication and the first use. Two uses are exempt: a record listed in `externalRecords`, and a link in a description, which only loses its target without the publication. A publication does not list itself or list another twice.
 
 ## Resource Families: Flat vs. Bundle Layouts
 

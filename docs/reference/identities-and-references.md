@@ -59,6 +59,7 @@ From format 6, one rule covers every reference and link in a file:
 - **A path to a collection keeps meaning every publication.** `pathPrefix: '@class.witch.patrons'` and `records:` name a set, and a later publication adds options to that set.
 - **Prose links leave out the file's own `?source=`.** `[Trip](omen://action/trip)` is a link to the file's own publication; the decoded wire form (the JSONL and SQLite streams) keeps the qualified link, so a reader of the wire never needs this rule.
 - **Structured `omen://` values, review notes and `externalRecords` keep their `?source=`.** Only links in descriptions compact.
+- **A publication lists the others it needs in `requires`.** Every `?source=` in a reference, a prerequisite or a grant names a publication the file needs, so `publication.yml` lists it under `requires` (`requires: [paizo-pathfinder-player-core]`). A record in `externalRecords` and a link in a description don't count. The validator names the missing publication and the first use.
 
 Before format 6, the validator only warns about an unqualified `@` reference or link whose record only another publication holds (the rules below).
 
