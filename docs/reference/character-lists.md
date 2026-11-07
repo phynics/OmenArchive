@@ -72,9 +72,12 @@ A question can name the list its answer goes to:
 - key: choice-assurance-skill
   choice:
     name: $.feats.assurance.skill
+    label: Skill
     type: core/skill
     addTo: $.feats.assurance.skills     # adds the answer; leaves out skills already on the list
-    cases: [...]
+    cases:
+      - {key: acrobatics, value: acrobatics}
+      - {key: athletics, value: athletics}
 ```
 
 The reader expands `addTo` into the `add-to-list` rule above, keyed `<question key>-add`, and into a `distinct` over the same list. The wire form (`omen-archive wire`) carries only the expanded rules, so tools and presenters treat both spellings alike. Writing `add-to-list` by hand stays valid for rules that add something other than a question's answer. A question with `multiple:` can't use `addTo`.
@@ -83,6 +86,7 @@ The reader expands `addTo` into the `add-to-list` rule above, keyed `<question k
 
 `distinct` is the one "different from" field of a question. Beside a `$` path (another question or a built-in), it takes the items of a list:
 
+<!-- docs-check: not a whole example — two spellings shown on their own -->
 ```yaml
 distinct: {list: $.feats.assurance.skills}
 distinct: [$.ancestry.name, {list: $.feats.assurance.skills}]

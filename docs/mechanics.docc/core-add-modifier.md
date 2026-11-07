@@ -28,11 +28,7 @@ Example, from `paizo-pathfinder-player-core-2/ancestry/catfolk/heritages/hunting
 - effect: core/add-modifier
   inputs:
     amount: 2
-    target:
-      description:
-      - skill:
-          _0:
-            survival: {}
+    target: survival
     type: circumstance
     when: Track
   key: flat-modifier-1

@@ -75,10 +75,10 @@ Every spellcasting source has a **key**: its name in kebab-case, as the book nam
 
 ```yaml
 - key: grant-warden-spell
-  effect: spellcasting/grant-focus-spell
+  effect: spellcasting/grant-focus-spell@2
   inputs:
     source: ranger-focus-spells
-    spellId: {choice: $.feats.masterful-warden.spell}
+    spell: {choice: $.feats.masterful-warden.spell}
 ```
 
 The publication declares each key once, in `spellcastingSources` of its `publication.yml`, with the ID the engine and the OmenDB store know the source by:

@@ -113,6 +113,7 @@ Classes define specific sub-collections declared in `schemas/archive-format.json
 
 Collections live under `collections/*.yml` and conform to [`schemas/collection.schema.json`](../../schemas/collection.schema.json). They group publications into curated bundles (such as `pathfinder-core`):
 
+<!-- docs-check: not a whole example — fields of a collection file shown on their own -->
 ```yaml
 id: pathfinder-core
 name: Pathfinder Core

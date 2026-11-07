@@ -60,6 +60,7 @@ A rank is a whole number from 1 to 10, and every row has both a `price` and a `d
 ```yaml
 name: fireball
 rank: 3
+rarity: common
 category: spell
 traditions:
   - arcane
@@ -87,6 +88,8 @@ description: |
 ```yaml
 name: elf
 rarity: common
+description: |
+  Elves are tall, long-lived people of curious minds and graceful bearing.
 hitPoints: 6
 traits:
   - elf
@@ -162,6 +165,8 @@ Backgrounds with alternate choices use a `variants` array. `loreSkill` is set to
 ```yaml
 name: fighter
 rarity: common
+description: |
+  Fighting for honor, greed, loyalty, or simply the thrill of battle, you are an undisputed master of weaponry.
 keyAttribute:
   - dexterity
   - strength
@@ -198,6 +203,7 @@ Class options declared in `schemas/archive-format.json` live in custom child dir
 name: fleet
 level: 1
 rarity: common
+type: general
 traits:
   - general
 description: |
@@ -252,22 +258,24 @@ Archetypes are bundles whose owned feats live in `feats/`. The `entryFeat` links
 
 ```yaml
 name: longsword
+level: 0
+rarity: common
 type: weapon
+traits:
+  - versatile-p
 physical:
   bulk: "1"
-  price:
-    gp: 1
+  price: 1 gp
+  quantity: 1
   hardness: 0
   hitPoints: 0
+  size: med
   usage: held-in-one-hand
 details:
-  category: martial
-  group: sword
-  damage:
-    die: d8
-    type: slashing
-  traits:
-    - versatile-p
+  weapon:
+    category: martial
+    group: sword
+    damage: 1d8 slashing
 description: |
   A longsword is a versatile blade with a single- or double-edged blade...
 ```
@@ -285,9 +293,8 @@ Equipment uses a single canonical `item/` family. `type` designates `equipment`,
 name: air
 description: |
   You have power over the winds, skies, and air.
-spells:
-  initial: omen://spell/air-cushion?source=paizo-pathfinder-player-core
-  advanced: omen://spell/updraft?source=paizo-pathfinder-player-core
+domainSpell: omen://spell/air-cushion?source=paizo-pathfinder-player-core
+advancedDomainSpell: omen://spell/updraft?source=paizo-pathfinder-player-core
 ```
 
 ---

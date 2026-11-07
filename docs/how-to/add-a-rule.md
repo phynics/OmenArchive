@@ -25,7 +25,7 @@ Add the `rules:` block to your file. Ensure you assign a unique, descriptive keb
 ```yaml
 rules:
   - key: darkvision-grant
-    effect: core/add-sense
+    effect: core/add-sense@2
     inputs:
       sense: darkvision
 ```

@@ -33,7 +33,7 @@ The format and structural contract of the archive are governed by `schemas/archi
 ```json
 {
   "epoch": 2,
-  "version": 2
+  "version": 5
 }
 ```
 
@@ -124,10 +124,10 @@ The `rules` array contains structured, machine-executable declarations for rules
 ```yaml
 rules:
   - key: speed-bonus
-    effect: core/bonus
-    target: speed
-    value: 5
-    type: status
+    effect: core/add-speed
+    inputs:
+      movement: land
+      bonus: 5
 ```
 
 ### What the Archive Does Not Cover

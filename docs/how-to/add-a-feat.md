@@ -16,17 +16,17 @@ Create the YAML file conforming to [`schemas/character-feat.schema.json`](../../
 name: fleet
 level: 1
 rarity: common
+type: general
 traits:
   - general
 description: |
   You move more quickly on foot. You gain a +5-foot status bonus to your Speed.
 rules:
   - key: fleet-speed
-    effect: core/add-speed-bonus
+    effect: core/add-speed
     inputs:
-      type: land
+      movement: land
       bonus: 5
-      kind: status
 ```
 
 ### Key Considerations

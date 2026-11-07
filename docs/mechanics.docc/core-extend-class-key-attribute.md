@@ -20,5 +20,5 @@ Example, from `paizo-pathfinder-player-core/class/rogue/rackets/mastermind.yml`:
 - key: key-attribute
   effect: core/extend-class-key-attribute
   inputs:
-    attribute: int
+    attribute: intelligence
 ```

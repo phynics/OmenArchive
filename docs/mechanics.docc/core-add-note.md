@@ -26,10 +26,7 @@ Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/chemical-
 ```yaml
 - effect: core/add-note
   inputs:
-    target:
-      description:
-      - savingThrow:
-          _0: fortitude
+    target: fortitude
     text: When you roll a success on a Fortitude save, the result is one degree better.
   key: annotation-1
   level: 11

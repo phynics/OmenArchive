@@ -14,6 +14,7 @@ Create the YAML file conforming to [`schemas/character-spell.schema.json`](../..
 ```yaml
 name: guidance
 rank: 0
+rarity: common
 category: cantrip
 traditions:
   - divine
@@ -22,8 +23,8 @@ traditions:
 traits:
   - cantrip
   - concentrate
-cast:
-  actions: one_action
+action:
+  count: one_action
 range: 30 feet
 target: 1 creature
 duration: until the start of your next turn
@@ -36,6 +37,7 @@ description: |
 ```yaml
 name: heal
 rank: 1
+rarity: common
 category: spell
 traditions:
   - divine
@@ -44,15 +46,16 @@ traits:
   - healing
   - manipulate
   - vitality
-cast:
-  actions: one_to_three_actions
+action:
+  count: one_to_three_actions
 range: touch or 30 feet
 description: |
   You channel positive vitality to heal the living or harm the undead...
 heightening:
-  interval:
-    level: 1
-    damage: 1d8
+  type: interval
+  interval: 1
+  damage:
+    0: 1d8
 ```
 
 ### Guidelines

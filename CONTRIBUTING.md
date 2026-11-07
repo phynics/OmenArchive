@@ -114,6 +114,21 @@ Describe a record's mechanics with what the format already has, in this order:
    carries a rule's name from one book, display text, or a bonus or condition that belongs to a
    single record.
 
+### Examples in the documents
+
+Every ` ```yaml ` block in `docs/` and `USAGE.md` that is a whole record, a `rules:` block or a list
+of rules is checked by the archive's tests: it must parse and validate as the format writes it. A
+block that is only a fragment (two spellings side by side, fields of a manifest on their own) says so
+on the line before its fence:
+
+```markdown
+<!-- docs-check: not a whole example — two spellings shown side by side -->
+```yaml
+distinct: {list: $.feats.assurance.skills}
+distinct: [$.ancestry.name, {list: $.feats.assurance.skills}]
+```
+```
+
 ---
 
 ## Submitting Changes

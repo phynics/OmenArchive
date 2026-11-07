@@ -59,8 +59,6 @@ name: medic
 description: |
   You are an expert field medic...
 entryFeat: omen://archetype/medic/feats/medic-dedication?source=paizo-pathfinder-player-core-2
-progression:
-  dedicationLockFeatCount: 3
 ```
 
 ### 3. Author the Feats
@@ -71,7 +69,8 @@ Place owned feats under `feats/` conforming to [`schemas/character-feat.schema.j
 # src/.../archetype/medic/feats/medic-dedication.yml
 name: medic dedication
 level: 2
-rarity: archetype
+rarity: common
+type: archetype
 traits:
   - archetype
   - dedication

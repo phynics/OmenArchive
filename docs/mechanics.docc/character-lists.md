@@ -43,9 +43,12 @@ A question can name the list its answer goes to:
 - key: choice-assurance-skill
   choice:
     name: $.feats.assurance.skill
+    label: Skill
     type: core/skill
     addTo: $.feats.assurance.skills
-    cases: [...]
+    cases:
+      - {key: acrobatics, value: acrobatics}
+      - {key: athletics, value: athletics}
 ```
 
 The reader expands `addTo` into an `add-to-list` rule keyed `<question key>-add`, and into a `distinct` over the same list, so the question leaves out the items already on it. `distinct: false` lets the answer repeat an item. The wire form carries only the expanded rules.

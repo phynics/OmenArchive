@@ -34,5 +34,5 @@ Example, from `paizo-pathfinder-player-core/feat/advanced-domain.yml`:
     sourceName: Cleric Focus Spells
     castingKind: focus
     tradition: divine
-    attribute: wis
+    attribute: wisdom
 ```

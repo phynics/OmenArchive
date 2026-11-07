@@ -26,7 +26,7 @@ Example, from `paizo-pathfinder-player-core-2/archetype/alchemist/feats/alchemis
 - effect: core/add-class-dc@2
   inputs:
     className: alchemist
-    keyAttribute: int
+    keyAttribute: intelligence
     rank: trained
   key: dedication-class-dc
 ```

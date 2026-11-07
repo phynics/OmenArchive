@@ -11,6 +11,7 @@ Records are organized by publication and family under `src/{publication}/{family
 
 Open the file in your editor. Ensure your editor is configured to use UTF-8 without BOM and spaces (not tabs) for indentation.
 
+<!-- docs-check: not a whole example — two descriptions shown before and after an edit -->
 ```yaml
 # Before:
 description: |
