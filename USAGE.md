@@ -83,5 +83,5 @@ Before committing:
 1. All authored YAML files are UTF-8 encoded.
 2. File paths strictly match `{publication}/{family}/{slug}.yml` or the bundle conventions.
 3. Every file validates against its JSON Schema under `schemas/`.
-4. `@` references and `omen://` URI destinations resolve to valid targets.
+4. `@` references and `omen://` URI destinations resolve to valid targets. From format 6, a path without `?source=` means the file's own publication (a record of another publication needs its `?source=`), and a description's link to the file's own publication is written without it.
 5. No unreviewed Foundry rule element JSON exists in descriptive text fields.

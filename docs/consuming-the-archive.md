@@ -100,6 +100,7 @@ omen://<family>/<resource-path>?source=<publication-id>
 When records cross-reference other records:
 * **Fully-qualified URIs:** Unambiguously identify the target and its source publication (e.g. `omen://condition/frightened?source=paizo-pathfinder-player-core`).
 * **Relative slugs:** Inside an authored file, a bare slug (e.g. `fleet`) refers to the same family within the current publication. In the decoded wire format (JSONL and SQLite), references are fully resolved.
+* **Links in descriptions:** From format 6, an authored file leaves the file's own `?source=` out of a description's links, and an unqualified record path means the file's own publication. The decoded wire format keeps every link qualified (`[Trip](omen://action/trip?source=paizo-pathfinder-player-core)`), so a consumer of the JSONL or SQLite streams reads each link as written and needs no rule for the missing qualifier. A link to a collection (no single record) stays unqualified.
 
 For full identity details, see [Identities and References](reference/identities-and-references.md).
 

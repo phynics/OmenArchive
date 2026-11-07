@@ -51,9 +51,20 @@ featureId: '@feat.assurance#feature'
 pathPrefix: '@class.witch.patrons'
 ```
 
+### Unqualified Paths From Format 6
+
+From format 6, one rule covers every reference and link in a file:
+
+- **A path to a record without `?source=` means the file's own publication.** Nothing searches the other publications for it, and which other publications are installed never changes what a file means. A reference or link to a record that only another publication holds is an error. To point at another publication's record, write its `?source=`; a `?source=` therefore always means "from another publication".
+- **A path to a collection keeps meaning every publication.** `pathPrefix: '@class.witch.patrons'` and `records:` name a set, and a later publication adds options to that set.
+- **Prose links leave out the file's own `?source=`.** `[Trip](omen://action/trip)` is a link to the file's own publication; the decoded wire form (the JSONL and SQLite streams) keeps the qualified link, so a reader of the wire never needs this rule.
+- **Structured `omen://` values, review notes and `externalRecords` keep their `?source=`.** Only links in descriptions compact.
+
+Before format 6, the validator only warns about an unqualified `@` reference or link whose record only another publication holds (the rules below).
+
 ### Resolution Rules
 
-1. **Unqualified References**: An `@` reference without `?source=` resolves to a record in the **same publication** as the referencing file. If the referenced record only exists in a different publication, the validator flags an `ambiguous` warning requiring an explicit `?source=`.
+1. **Unqualified References**: An `@` reference without `?source=` resolves to a record in the **same publication** as the referencing file. If the referenced record only exists in a different publication, the validator flags an `ambiguous` warning requiring an explicit `?source=`. From format 6 the warning is an error, and its message names the `?source=` to write.
 2. **Missing Targets**: A reference that does not resolve in any publication of the archive produces a `dangling` error, unless explicitly registered in the publication's `externalRecords` list in `publication.yml`.
 3. **YAML Quoting**: In YAML, `@` is a reserved indicator character. All shorthand references starting with `@` **must be quoted** in single or double quotes (`'@feat.example'`).
 4. **No Raw UUIDs**: Never author raw UUIDs for record identities in YAML files.
@@ -71,6 +82,7 @@ description: |
 
 ### Description Linking Rules
 
+- **Own Publication**: From format 6, write a link to a record of the file's own publication without `?source=` (`omen://action/trip`), and a link to another publication's record with it (`omen://action/trip?source=paizo-pathfinder-player-core`). Before format 6, an unqualified link resolves to the file's own publication's record first, and the validator warns when only one other publication has it (and reports an error when several do).
 - **Destination Scheme**: Prose links must use the `omen://` URI scheme. The `@` shorthand is reserved exclusively for structured YAML reference fields.
 - **Link Text**: Use natural, human-readable book casing for the link label (`[Trip]`, `[frightened 2]`). The label does not need to match the filename slug.
 - **Checked Fields**: The archive validator scans inline links across `description`, `specialText`, `trigger`, `requirements`, `frequency`, `criticalSuccess`, `success`, `failure`, and `criticalFailure`.
