@@ -27,7 +27,7 @@ rules:
 ```
 
 - **`key`**: Unique kebab-case string within the record. A rule's identity UUID is deterministically derived from its enclosing record path and key: `uuid5("<record-path>#rule/<key>")`. Renaming a key constitutes creating a new rule. A key says what the rule gives, noun first (`cold-resistance`, `arcana-trained`, `martial-weapons-legendary`, `gale-blast-known-spell`); a subject that comes from a choice is `chosen-…` (`chosen-skill-trained`). Rules with one name in a record are told apart by the choice they depend on, then by level, then by a numeric suffix. Do not write a counter key (`generated-3`, `annotation-2`, `add-feat-1`): the writer replaces one with a name, and the archive check warns on one.
-- **`effect`**: `<module-alias>/<effect-name>`, optionally with `@<revision>` if different from 1 (e.g. `core/add-feat@2`). Module aliases are declared in `publication.yml`.
+- **`effect`**: `<module-alias>/<effect-name>`, optionally with `@<revision>` if different from 1 (e.g. `core/add-feat@3`). Module aliases are declared in `publication.yml`.
 - **`level`**: The level at which the rule takes effect (defaults to 1 if omitted).
 - **`prerequisites`**: Optional list of typed prerequisite conditions.
 - **`inputs`**: Map of input parameter names to their values as declared by the effect's descriptor.
@@ -138,7 +138,7 @@ The operators, reads and rounding of sheet expressions are in [Sheet Expressions
 - **Filters.** An input that takes a resource filter is written like the filters under `choice:`
   (`{all: [{type: feat}, {trait: gnome}]}`); the wire's `{kind: intersection, values: […]}` wrapper is
   only read.
-- **Grant settings.** The `with:` input of `core/add-feat@2` maps a `$` path to a setting. A setting
+- **Grant settings.** The `with:` input of `core/add-feat@3` maps a `$` path to a setting. A setting
   is the value it grants: a bare value is a **skill** (`$.feats.assurance.skill: athletics`), and a value of
   any other type is spelled with its type (`{type: core/terrain, value: underground}`, the same
   spelling `type:` has anywhere). The two other settings are `{from: [arcana, nature]}`, which
