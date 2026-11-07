@@ -17,10 +17,26 @@ Examples:
 
 Resource identity is derived entirely from the relative filesystem path of the record within its publication directory. Filesystem slugs must remain stable across updates.
 
+### Name collisions
+
+The encoding is lossy, by design: it lowercases, turns a run of spaces into one hyphen, and deletes other punctuation. Names that differ only in punctuation or case therefore share one OmenPath, and only one of them can be a record in a collection:
+
+| Names | One OmenPath |
+|---|---|
+| `O'Brien`, `OBrien` | `obrien` |
+| `Fire/Ice`, `FireIce`, `Fire_Ice` | `fireice` |
+| `Weapon +1`, `Weapon 1` | `weapon-1` |
+| `1/2`, `12` | `12` |
+
+The second file fails the archive check with a duplicate identity. Write the distinction in words instead of punctuation where two names would otherwise collide (`weapon-plus-1`).
+
+Publisher and book join with a hyphen after encoding too, so publisher `a b` with book `c`, and publisher `a` with book `b c`, both give the qualifier `a-b-c`. Two publications cannot both be checked out: their directory names collide, and the check reports the duplicate publication id before it reads a record. Keep publisher and book distinct when either name contains a space or punctuation.
+
 ## Authored Shorthand (`@` References)
 
 When referencing another record within structured YAML fields (such as `prerequisites`, `featId`, `featureId`, or choice options), use the `@` shorthand:
 
+<!-- docs-check: not a whole example — three reference fields shown on their own -->
 ```yaml
 # Record in the current publication:
 featId: '@feat.lie-to-me'
