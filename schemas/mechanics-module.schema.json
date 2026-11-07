@@ -52,6 +52,20 @@
       "items": {
         "$ref": "#/$defs/list"
       }
+    },
+    "vocabularies": {
+      "type": "array",
+      "description": "The terms the module's types and rule literals use, each vocabulary named in kebab-case. Omitted when empty.",
+      "items": {
+        "$ref": "#/$defs/vocabulary"
+      }
+    },
+    "facts": {
+      "type": "array",
+      "description": "The facts the engine reads from a family's own fields, such as a class's hit-points. A record states them in its fields, not in a facts: block. Omitted when empty.",
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
     }
   },
   "required": [
@@ -243,7 +257,10 @@
             "weapon-proficiency",
             "speed",
             "roll-modifier",
-            "spellcasting"
+            "spellcasting",
+            "class-dc",
+            "perception",
+            "resource-pool"
           ]
         },
         "nameInput": {
@@ -311,6 +328,20 @@
         "identity": {
           "enum": ["rule", "source"],
           "description": "The input is an identity an author leaves out: a rule's own (derived from its key) or a spellcasting source's. A uuid input called selectionId, grantId or uuid is a rule's, and sourceId a source's, without saying so."
+        },
+        "alsoAccepts": {
+          "type": "array",
+          "description": "Other value types the input accepts, beside valueTypeID: a heritage where a feature is expected.",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+          },
+          "uniqueItems": true
+        },
+        "vocabulary": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "For a text input: the module vocabulary its terms come from (damage-type). The archive check reads the text against it."
         }
       },
       "required": [
@@ -339,6 +370,66 @@
         "keyID",
         "revision",
         "valueTypeID"
+      ],
+      "additionalProperties": false
+    },
+    "vocabulary": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "terms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "ordered": {
+          "type": "boolean",
+          "description": "The terms are a scale, in order (untrained, trained, expert, master, legendary)."
+        },
+        "computesWith": {
+          "type": "array",
+          "description": "Terms another construct computes with, such as the roll targets a weapon group adds to.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "name",
+        "terms"
+      ],
+      "additionalProperties": false
+    },
+    "fact": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "type": "string",
+          "pattern": "^@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*$",
+          "description": "The family and folder path the fact belongs to, with the leading @ (domain, class.commander.tactics)."
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][A-Za-z0-9]*(?:-[a-z0-9][A-Za-z0-9]*)*$"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^(?:int|bool|@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*|[a-z0-9]+(?:-[a-z0-9]+)*|\\[(?:int|bool|@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*|[a-z0-9]+(?:-[a-z0-9]+)*)\\])$",
+          "description": "int, bool, a vocabulary's kebab-case name, @collection for a record, or [T] for a list of T."
+        }
+      },
+      "required": [
+        "collection",
+        "name",
+        "type"
       ],
       "additionalProperties": false
     }
