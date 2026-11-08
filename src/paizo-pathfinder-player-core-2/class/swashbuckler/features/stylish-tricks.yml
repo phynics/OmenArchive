@@ -7,5 +7,66 @@ description: At 3rd level, 7th level, and 15th level, you gain an additional ski
   increase you can apply only to Acrobatics or the skill from your swashbuckler's
   style. You also gain an additional skill feat at these levels. This feat must be
   for Acrobatics or the trained skill from your swashbuckler's style.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: pthjQIK9pDxnbER6
+rules:
+- key: choice-stylish-tricks-skill-increase-3
+  level: 3
+  choice:
+    name: $.swashbuckler.stylish-tricks-skill-3
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: athletics, value: athletics}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: performance, value: performance}
+    - {key: thievery, value: thievery}
+- key: skill-increase-3
+  effect: core/add-skill-increase@2
+  level: 3
+  inputs:
+    skill: {choice: $.swashbuckler.stylish-tricks-skill-3}
+    rank: expert
+- key: choice-stylish-tricks-skill-increase-7
+  level: 7
+  choice:
+    name: $.swashbuckler.stylish-tricks-skill-7
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: athletics, value: athletics}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: performance, value: performance}
+    - {key: thievery, value: thievery}
+- key: skill-increase-7
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: {choice: $.swashbuckler.stylish-tricks-skill-7}
+    rank: master
+- key: choice-stylish-tricks-skill-increase-15
+  level: 15
+  choice:
+    name: $.swashbuckler.stylish-tricks-skill-15
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: athletics, value: athletics}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: performance, value: performance}
+    - {key: thievery, value: thievery}
+- key: skill-increase-15
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: {choice: $.swashbuckler.stylish-tricks-skill-15}
+    rank: legendary

@@ -18,7 +18,7 @@ Effect `add-armor-proficiency`, revision 3, from module `me.atkn.omen.pf2e.playe
 
 ## Usage in the archive
 
-Used by 69 rules.
+Used by 66 rules.
 
 Example, from `paizo-pathfinder-player-core-2/class/alchemist/features/medium-armor-expertise.yml`:
 

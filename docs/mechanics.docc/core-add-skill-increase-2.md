@@ -17,7 +17,7 @@ Effect `add-skill-increase`, revision 2, from module `me.atkn.omen.pf2e.playerco
 
 ## Usage in the archive
 
-Used by 125 rules.
+Used by 128 rules.
 
 Example, from `paizo-pathfinder-player-core-2/ancestry/kholo/heritages/ant-kholo.yml`:
 

@@ -1,6 +1,6 @@
 # core/add-weapon-die-step
 
-Increases the damage die of the deity's favored weapon by one step (e.g. 1d4 to 1d6) if it is a simple weapon or 1d4 unarmed attack.
+Increases the damage die of a chosen weapon by one step (e.g. 1d4 to 1d6) if it is a simple weapon or 1d4 unarmed attack.
 
 Effect `add-weapon-die-step`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
