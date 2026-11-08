@@ -26,7 +26,12 @@ description: Stitched together from pieces of ghoul skin, this suit of +1 hide a
   to the stench of ghouls. Ghoul hide with a resilient rune increases the resilient
   rune's item bonus to saving throws against curses by 1 \(maximum +4\).
 mechanicsScope: mixed
-unsupportedReason: 'Foundry item rule element FlatModifier has no translation. External
-  review required. Resource: omen://item/ghoul-hide?source=paizo-pathfinder-player-core.
-  Foundry keys: [FlatModifier, AdjustModifier].'
 foundryID: hRwnNTMj7wa8S4Ji
+rules:
+- key: saving-throws-item-bonus
+  effect: core/add-modifier
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: item
+    when: in some situations
