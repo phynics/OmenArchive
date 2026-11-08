@@ -10,8 +10,56 @@ description: 'When you hatched, you imprinted on a creature strongly associated 
   acid for water, or poison for wood.'
 mechanicsScope: builder
 rules:
-- key: chosen-element-resistance
-  effect: core/add-resistance@2
-  inputs:
-    type: '{item|flags.system.rulesSelections.element}'
-    value: (max 1 (divide $.level 2))
+- key: choice-kobold-elementheart-element
+  choice:
+    name: $.kobold.elementheart-element
+    label: Element
+    cases:
+    - key: air
+      label: Air (cold)
+      effects:
+      - key: resist-air
+        effect: core/add-resistance@2
+        inputs:
+          type: cold
+          value: (max 1 (divide $.level 2))
+    - key: earth
+      label: Earth (electricity)
+      effects:
+      - key: resist-earth
+        effect: core/add-resistance@2
+        inputs:
+          type: electricity
+          value: (max 1 (divide $.level 2))
+    - key: fire
+      label: Fire (fire)
+      effects:
+      - key: resist-fire
+        effect: core/add-resistance@2
+        inputs:
+          type: fire
+          value: (max 1 (divide $.level 2))
+    - key: metal
+      label: Metal (sonic)
+      effects:
+      - key: resist-metal
+        effect: core/add-resistance@2
+        inputs:
+          type: sonic
+          value: (max 1 (divide $.level 2))
+    - key: water
+      label: Water (acid)
+      effects:
+      - key: resist-water
+        effect: core/add-resistance@2
+        inputs:
+          type: acid
+          value: (max 1 (divide $.level 2))
+    - key: wood
+      label: Wood (poison)
+      effects:
+      - key: resist-wood
+        effect: core/add-resistance@2
+        inputs:
+          type: poison
+          value: (max 1 (divide $.level 2))
