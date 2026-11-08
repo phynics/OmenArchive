@@ -8,14 +8,14 @@ Rules refer to it with the alias `spellcasting`, declared in a publication's `me
 
 | Type | Rev | Shape |
 |---|---|---|
-| `cast-frequency` | 1 | `{"kind":"object","required":["kind"],"properties":{"kind":{"kind":"enum","values":["atWill","perDay","focus"]},"uses":{"kind":"integer"}},"additionalProperties":false}` |
-| `casting-kind` | 1 | `{"values":["prepared","spontaneous","innate","focus"],"kind":"enum"}` |
-| `rank-policy` | 1 | `{"properties":{"kind":{"values":["fixed","cantrip"],"kind":"enum"},"rank":{"kind":"integer"}},"kind":"object","additionalProperties":false,"required":["kind"]}` |
-| `resource-filter` | 1 | `{"required":[],"properties":{},"additionalProperties":true,"kind":"object"}` |
+| `cast-frequency` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"kind":{"kind":"enum","values":["atWill","perDay","focus"]},"uses":{"kind":"integer"}},"required":["kind"]}` |
+| `casting-kind` | 1 | `{"kind":"enum","values":["prepared","spontaneous","innate","focus"]}` |
+| `rank-policy` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"kind":{"kind":"enum","values":["fixed","cantrip"]},"rank":{"kind":"integer"}},"required":["kind"]}` |
+| `resource-filter` | 1 | `{"additionalProperties":true,"kind":"object","properties":{},"required":[]}` |
 | `spell-id` | 1 | `{"kind":"string"}` |
-| `spell-id-list` | 1 | `{"kind":"array","items":{"kind":"string"}}` |
-| `spell-pick` | 1 | `{"kind":"object","required":["kind"],"properties":{"kind":{"kind":"enum","values":["cantrip","rank","upTo"]},"rank":{"kind":"integer"}},"additionalProperties":false}` |
-| `tradition` | 1 | `{"values":["arcane","divine","occult","primal"],"kind":"enum"}` |
+| `spell-id-list` | 1 | `{"items":{"kind":"string"},"kind":"array"}` |
+| `spell-pick` | 1 | `{"additionalProperties":false,"kind":"object","properties":{"kind":{"kind":"enum","values":["cantrip","rank","upTo"]},"rank":{"kind":"integer"}},"required":["kind"]}` |
+| `tradition` | 1 | `{"kind":"enum","values":["arcane","divine","occult","primal"]}` |
 
 ## Effects
 

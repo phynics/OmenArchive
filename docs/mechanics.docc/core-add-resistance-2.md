@@ -14,7 +14,7 @@ Effect `add-resistance`, revision 2, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Usage in the archive
 
-Used by 15 rules.
+Used by 14 rules.
 
 Example, from `paizo-pathfinder-player-core-2/ancestry/catfolk/heritages/winter-catfolk.yml`:
 
