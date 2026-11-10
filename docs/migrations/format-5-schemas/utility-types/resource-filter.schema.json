@@ -1,0 +1,376 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/resource-filter.schema.json",
+  "title": "Resource Filter",
+  "description": "Portable resource-filter options (archive format 4): all: and any: lists of filters, and leaves with one key (a metadata key is a dotted name such as spell.category).",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "all": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#"
+          }
+        }
+      },
+      "required": [
+        "all"
+      ],
+      "additionalProperties": false,
+      "description": "Every filter passes."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "any": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#"
+          }
+        }
+      },
+      "required": [
+        "any"
+      ],
+      "additionalProperties": false,
+      "description": "Some filter passes."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "not": {
+          "type": "object",
+          "properties": {
+            "trait": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "trait"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "not"
+      ],
+      "additionalProperties": false,
+      "description": "Only a trait can be negated (lacksTrait)."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "everything": {
+          "const": true
+        }
+      },
+      "required": [
+        "everything"
+      ],
+      "additionalProperties": false,
+      "description": "Every record."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "rules.schema.json#/$defs/recordReference"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false,
+      "description": "The record."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "excludesIds": {
+          "type": "array",
+          "items": {
+            "$ref": "rules.schema.json#/$defs/recordReference"
+          }
+        }
+      },
+      "required": [
+        "excludesIds"
+      ],
+      "additionalProperties": false,
+      "description": "Every record but these."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "trait": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "trait"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "rarity": {
+          "enum": [
+            "common",
+            "uncommon",
+            "rare",
+            "unique"
+          ]
+        }
+      },
+      "required": [
+        "rarity"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "level"
+      ],
+      "additionalProperties": false,
+      "description": "The exact level."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "maxLevel": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maxLevel"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "pathPrefix": {
+          "type": "string",
+          "pattern": "^[@$].+$",
+          "description": "A record collection (@class.witch.patrons) or, reserved, a $ character value"
+        }
+      },
+      "required": [
+        "pathPrefix"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sharesAncestryTrait": {
+          "const": true
+        }
+      },
+      "required": [
+        "sharesAncestryTrait"
+      ],
+      "additionalProperties": false,
+      "description": "The resource shares an ancestry trait with the character's ancestry (adopted and heritage-granted ones included)."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sharesClassTrait": {
+          "const": true
+        }
+      },
+      "required": [
+        "sharesClassTrait"
+      ],
+      "additionalProperties": false,
+      "description": "The resource carries the character's class trait ($.class)."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "characterHasFeat": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "characterHasFeat"
+      ],
+      "additionalProperties": false,
+      "description": "The character has the named feat."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "hasChoiceAncestryTrait": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "hasChoiceAncestryTrait"
+      ],
+      "additionalProperties": false,
+      "description": "The resource carries the ancestry trait the named choice picked ($.feats.adopted-ancestry.ancestry); nothing matches while it is unanswered."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "requiresListValue": {
+          "type": "object",
+          "properties": {
+            "list": {
+              "type": "string",
+              "pattern": "^\\$\\.[a-z0-9.-]+$"
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "choice": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "choice"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "list",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "requiresListValue"
+      ],
+      "additionalProperties": false,
+      "description": "The resource's structured prerequisites test the character list for the value the named question holds (a 1st-level feat that requires that order). Nothing matches while the question is unanswered, or for a prerequisite that is text only."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "hasSourceTradition": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "hasSourceTradition"
+      ],
+      "additionalProperties": false,
+      "description": "The resource is of the tradition of the character's spellcasting source with this ID; nothing matches while the source is not configured."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "minLength": 1
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "key",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "metadata"
+      ],
+      "additionalProperties": false,
+      "description": "A metadata key without a dot."
+    },
+    {
+      "type": "object",
+      "description": "A metadata key with a dot (spell.category: cantrip).",
+      "patternProperties": {
+        "^[A-Za-z]+\\.[A-Za-z0-9.-]+$": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "hasChoiceTradition": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "hasChoiceTradition"
+      ],
+      "additionalProperties": false,
+      "description": "The resource is a spell of the tradition the named choice picked. Nothing matches while the choice is unanswered."
+    },
+    {
+      "type": "object",
+      "properties": {
+        "knownBySource": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "knownBySource"
+      ],
+      "additionalProperties": false,
+      "description": "The resource is in this spellcasting source's known spells. Combine with level to select one rank."
+    }
+  ]
+}

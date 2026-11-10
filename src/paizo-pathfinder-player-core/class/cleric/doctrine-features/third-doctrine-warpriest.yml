@@ -10,10 +10,13 @@ description: You gain expert proficiency with your deity's favored weapon, marti
 mechanicsScope: builder
 foundryID: Zp81uTBItG1xlH4O
 rules:
-- key: weapon-critical-specialization
-  effect: core/add-weapon-critical-specialization
+- key: weapon-critical-specialization-note
+  effect: core/add-note
   inputs:
-    weaponGroup: any
+    target: attack-rolls
+    text: When you critically succeed at an attack roll using your deity's favored
+      weapon, you apply the weapon's critical specialization effect.
+    when: With your deity's favored weapon
 - key: martial-weapons-expert
   effect: core/add-weapon-proficiency@3
   inputs:

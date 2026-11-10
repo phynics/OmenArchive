@@ -22,7 +22,20 @@ description: 'Your time gossiping in fashionable salons keeps you informed on ev
   Lore, but you can''t increase your proficiency rank in Gossip Lore by any other
   means.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/gossip-lore?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, Note].'
+unsupportedCategory: text
+unsupportedReason: 'Note at position 2: The selector gossip-lore is not a roll the
+  sheet shows.'
 foundryID: 7jqBwXq9jVsghCva
+rules:
+- key: trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {lore: gossip}
+    rank: trained
+- key: active-effect-like-1-2
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasSkillProficiency: {skill: society, rank: legendary}
+  inputs:
+    skill: {lore: gossip}
+    rank: expert

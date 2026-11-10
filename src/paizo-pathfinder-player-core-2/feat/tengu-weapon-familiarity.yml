@@ -17,7 +17,36 @@ description: 'You gain access to all uncommon weapons with the tengu trait plus 
   At 5th level, whenever you get a critical hit with one of these weapons, you get
   its critical specialization effect.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/tengu-weapon-familiarity?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, MartialProficiency, MartialProficiency, CriticalSpecialization].'
+unsupportedCategory: numbers
+unsupportedReason: 'Proficiency in weapons with the tengu trait and a weapon the player
+  chose is not applied: a weapon filter selects by category, group or name only. Critical
+  specialization is not applied: the archive''s effect unlocks it for a whole weapon
+  group, not for the weapons or trait this record names. Rule elements not applied:
+  ActiveEffectLike.'
 foundryID: AmFv3ClkAVRowHLI
+rules:
+- key: trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: katana}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-2-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: khakkhara}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-2-3
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: temple
+          sword}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-2-4
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: wakizashi}}
+    rank: trained
+    selfScaling: true

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-archetype.schema.json",
+  "title": "OmenArchive Archetype",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
+    "description": { "type": "string" },
+    "entryFeat": { "type": "string", "pattern": "^omen://archetype/[^/]+/feats/[^/?]+(?:\\?source=[^/?]+)?$" },
+    "progression": {
+      "type": "object",
+      "properties": {
+        "requires": { "type": "array", "items": { "type": "string" } },
+        "excludes": { "type": "array", "items": { "type": "string" } },
+        "countsFeatsFrom": { "type": "array", "items": { "type": "string" } },
+        "dedicationLockExceptions": {
+          "type": "array", "items": { "type": "string" },
+          "description": "Archetypes whose dedication can be taken while this archetype has fewer than three feats."
+        },
+        "dedicationLockChoice": {
+          "type": "string", "pattern": "^\\$\\.",
+          "description": "A choice the dedication asks, whose answer names one more archetype whose dedication can be taken early (a pledge)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "selections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "type": { "type": "string" },
+              "required": { "type": "boolean" }
+            },
+            "required": ["id", "type"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["name", "description", "entryFeat"],
+  "additionalProperties": false
+}

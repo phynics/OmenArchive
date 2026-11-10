@@ -12,7 +12,39 @@ description: 'You have familiarity with the bo staff, longbow, composite longbow
   At 5th level, whenever you get a critical hit with one of these weapons, you get
   its critical specialization effect.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/duskwalker-weapon-familiarity?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [MartialProficiency, CriticalSpecialization].'
+unsupportedCategory: numbers
+unsupportedReason: 'Critical specialization is not applied: the archive''s effect
+  unlocks it for a whole weapon group, not for the weapons or trait this record names.'
 foundryID: 8rKlptZ7ArtJ6cI8
+rules:
+- key: trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: bo staff}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: composite
+          longbow}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-3
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: longbow}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-4
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: scythe}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-5
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: staff}}
+    rank: trained
+    selfScaling: true

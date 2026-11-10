@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-background.schema.json",
+  "title": "Character Background",
+  "description": "Schema for a character background in the game",
+  "type": "object",
+  "$defs": {
+    "trainedSkill": {
+      "oneOf": [
+        {
+          "$ref": "utility-types/skill.schema.json",
+          "description": "A fixed skill grant"
+        },
+        {
+          "type": "array",
+          "description": "A choice of one skill for this grant",
+          "items": {
+            "$ref": "utility-types/skill.schema.json"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "backgroundVariant": {
+      "type": "object",
+      "description": "A variant of a character background",
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "Stable identity for this background variant"
+        },
+        "attributes": {
+          "type": "object",
+          "description": "Attribute modifications available for this background variant",
+          "properties": {
+            "freeBoosts": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "default": 0,
+              "description": "Number of free attribute boosts available"
+            },
+            "chooseFrom": {
+              "type": "array",
+              "description": "Attributes that can be chosen for modification",
+              "items": {
+                "$ref": "utility-types/attribute.schema.json"
+              }
+            }
+          }
+        },
+        "skillOption": {
+          "$ref": "#/$defs/trainedSkill",
+          "description": "One trained skill grant, fixed or chosen from a list"
+        },
+        "skillOptions": {
+          "type": "array",
+          "description": "Multiple trained skill grants, each fixed or chosen from a list",
+          "items": {
+            "$ref": "#/$defs/trainedSkill"
+          },
+          "minItems": 2
+        },
+        "loreSkill": {
+          "type": "string",
+          "description": "A fixed Lore, an empty string for a chosen Lore, or omitted when no Lore is granted"
+        },
+        "skillFeat": {
+          "type": "string",
+          "description": "The skill feat granted by this background variant"
+        }
+      },
+      "required": [
+        "attributes",
+        "skillFeat"
+      ],
+      "not": {
+        "required": ["skillOption", "skillOptions"]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the background"
+        },
+        "attribution": { "$ref": "utility-types/attribution.schema.json" },
+        "description": {
+          "type": "string",
+          "description": "Description text of the background"
+        },
+        "rarity": {
+          "$ref": "utility-types/rarity.schema.json",
+          "default": "common"
+        },
+        "rules": {
+          "x-omen-ownership": "archive",
+          "description": "Inline rules, applied at 1st level. Larger mechanics go in feature records.",
+          "type": "array",
+          "items": {
+            "$ref": "utility-types/rules.schema.json#/$defs/rule"
+          },
+          "default": []
+        }
+      },
+      "required": [
+        "name",
+        "description"
+      ]
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "variants": {
+              "type": "array",
+              "description": "Different variants of this background",
+              "items": {
+                "allOf": [
+                  { "$ref": "#/$defs/backgroundVariant" },
+                  { "required": ["key"] }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": ["variants"]
+        },
+        {
+          "$ref": "#/$defs/backgroundVariant"
+        }
+      ]
+    },
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
+  ]
+}

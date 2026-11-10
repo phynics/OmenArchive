@@ -29,6 +29,8 @@ rules:
         - {rarity: common}
         - {level: 1}
 - key: learn-choice-feats-alchemical-crafting-formulas
-  effect: core/add-formulas
+  forEach: $.feats.alchemical-crafting.formulas
+  effect: core/add-to-list
   inputs:
-    items: {choiceList: $.feats.alchemical-crafting.formulas}
+    list: $.crafting.formulas
+    value: {item: true}

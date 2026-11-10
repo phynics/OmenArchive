@@ -13,7 +13,12 @@ description: 'People can''t help but trust you, whether through your inherent li
   as long as you ask a question related to the creature with which you''re conversing
   or a topic of your conversation. You also gain the Pointed Question action.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry class-feature rule elements are preserved for external
-  review. External review required. Resource: omen://class/investigator/features/interrogation-methodology?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem, GrantItem].'
+unsupportedCategory: benefit
+unsupportedReason: 'Rule elements not applied: GrantItem.'
 foundryID: UIHUNNYZyQ3p4Vmo
+rules:
+- key: diplomacy-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: diplomacy
+    rank: trained

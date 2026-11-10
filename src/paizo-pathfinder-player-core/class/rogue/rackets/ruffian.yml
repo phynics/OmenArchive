@@ -12,7 +12,7 @@ description: 'You prefer the direct approach: strong-arming or intimidation. You
   This benefit doesn''t apply to a simple weapon with a damage die greater than d8
   or a martial or advanced weapon with a damage die greater than d6. \(Apply any abilities
   that alter the damage die size first.\) Critical hits you make with these weapons
-  gain the weapon''s critical specialization benefit if the target is [Off-Guard](omen://condition/off-guard?source=paizo-pathfinder-player-core)
+  gain the weapon''s critical specialization benefit if the target is [Off-Guard](omen://condition/off-guard)
   to you.
 
   You''re trained in Intimidation and medium armor. You can choose Strength as your
@@ -23,9 +23,10 @@ mechanicsScope: mixed
 foundryID: 3KPZ7svIO6kmmEKH
 rules:
 - key: key-attribute
-  effect: core/extend-class-key-attribute
+  effect: core/add-to-list
   inputs:
-    attribute: strength
+    list: $.class.key-attribute-options
+    value: {type: core/attribute, literal: strength}
 - key: intimidation-trained
   effect: core/add-skill-increase@2
   inputs:

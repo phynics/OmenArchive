@@ -21,7 +21,12 @@ description: 'You can create natural remedies. You gain the Advanced Alchemy ben
   consumables with the healing trait. You don''t need to be trained in Crafting to
   do so, and you can use healer''s tools instead of alchemist''s tools.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/herbalist-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, CraftingAbility, GrantItem].'
+unsupportedCategory: benefit
+unsupportedReason: 'Rule elements not applied: CraftingAbility, GrantItem.'
 foundryID: 5CRt5Dy9eLv5LpRF
+rules:
+- key: nature-expert
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: nature
+    rank: expert

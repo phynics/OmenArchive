@@ -10,9 +10,9 @@ description: Your elven blood runs particularly strong, granting you features fa
   elves, steeped in your elven ancestors' heritage. You gain the benefits of the elf
   heritage of your elven parent or ancestors. You typically can't select a heritage
   that depends on or improves an elven feature you don't have. For example, you couldn't
-  take the [Ancient Elf](omen://ancestry/elf/heritages/ancient-elf?source=paizo-pathfinder-player-core)
-  heritage unless your non-elf ancestry also has a lifespan measured in multiple centuries.
-  In these cases, at the GM's discretion, you might gain a different benefit.
+  take the [Ancient Elf](omen://ancestry/elf/heritages/ancient-elf) heritage unless
+  your non-elf ancestry also has a lifespan measured in multiple centuries. In these
+  cases, at the GM's discretion, you might gain a different benefit.
 specialText: You can take this feat only at 1st level, and you can't retrain out of
   this feat or into this feat.
 mechanicsScope: builder
@@ -25,6 +25,6 @@ rules:
     type: core/heritage-id
     records: {filter: {pathPrefix: '@ancestry.elf.heritages'}}
 - key: grant-heritage
-  effect: core/add-heritage
+  effect: core/add-feature@2
   inputs:
-    heritage: {choice: $.feats.elf-atavism.heritage}
+    feature: {choice: $.feats.elf-atavism.heritage}

@@ -9,7 +9,7 @@ Browse the native DocC catalog at [`docs/mechanics.docc/`](../mechanics.docc/) o
 Common effects include:
 - `core/add-sense`: Grants a sensory capability like darkvision or low-light vision.
 - `core/add-speed`: Sets a movement speed or adds a bonus to land Speed.
-- `core/add-modifier`: Applies a typed bonus/penalty to rolls, AC, or DCs.
+- `core/add-modifier@2`: Applies a typed bonus/penalty to rolls, AC, or DCs.
 - `core/add-feat`: Grants an additional feat (e.g. at a specific level).
 
 ## 2. Check the Effect's Inputs and Identity

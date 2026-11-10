@@ -2,6 +2,8 @@
 
 Adds a typed bonus or penalty to the rolls it targets, optionally only in a situation the player toggles (when) or while a condition on the character holds (requires). The amount is a number or an expression worked out from the character.
 
+Revision 2: `amount` is a number or an expression. A bonus that depends on the character, such as +1 and +2 for a master, is `(add 1 (gte $.skills.crafting.rank master))`.
+
 Effect `add-modifier`, revision 2, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs

@@ -9,7 +9,18 @@ description: You move carefully, feinting and creating false openings to lead yo
   or [Feint](omen://action/feint?source=paizo-pathfinder-player-core), the action
   gains the bravado trait.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry class-feature rule elements are preserved for external
-  review. External review required. Resource: omen://class/swashbuckler/features/fencer?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, Note, ItemAlteration, RollOption].'
+unsupportedCategory: text
+unsupportedReason: 'Note at position 2: The selector strike-attack-roll is not a roll
+  the sheet shows.'
 foundryID: Jgid6Ja6Y879COlN
+rules:
+- key: deception-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: deception
+    rank: trained
+- key: skill-feat-skill
+  effect: core/add-to-list
+  inputs:
+    list: $.swashbuckler.skill-feat-skills
+    value: {type: core/skill, literal: deception}

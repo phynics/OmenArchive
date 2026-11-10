@@ -1,0 +1,14 @@
+---
+name: quick-tempered
+level: 1
+traits:
+- barbarian
+description: You gain the [Quick-Tempered](omen://action/quick-tempered) free action,
+  which lets you [Rage](omen://action/rage) at the slightest provocation.
+mechanicsScope: builder
+foundryID: 04lXNnt73rF3RNc4
+rules:
+- key: quick-tempered-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.quick-tempered'

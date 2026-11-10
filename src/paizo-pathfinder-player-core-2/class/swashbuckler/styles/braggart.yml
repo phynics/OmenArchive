@@ -7,7 +7,18 @@ description: You boast, taunt, and psychologically needle your foes. You are tra
   in Intimidation. When you [Demoralize](omen://action/demoralize?source=paizo-pathfinder-player-core),
   the action gains the bravado trait.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry class-feature rule elements are preserved for external
-  review. External review required. Resource: omen://class/swashbuckler/features/braggart?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, Note, ItemAlteration, RollOption].'
+unsupportedCategory: text
+unsupportedReason: 'Note at position 2: The selector strike-attack-roll is not a roll
+  the sheet shows.'
 foundryID: KBhwFjdptrKyN5EM
+rules:
+- key: intimidation-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: intimidation
+    rank: trained
+- key: skill-feat-skill
+  effect: core/add-to-list
+  inputs:
+    list: $.swashbuckler.skill-feat-skills
+    value: {type: core/skill, literal: intimidation}

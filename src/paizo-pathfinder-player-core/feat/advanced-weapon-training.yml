@@ -8,8 +8,36 @@ traits:
 description: You've studied the art of wielding an advanced weapon. Choose a weapon
   group. You gain proficiency with all advanced weapons in that group as if they were
   martial weapons of their weapon group.
-mechanicsScope: mixed
-unsupportedReason: 'MartialProficiency at position 1 has no fixed proficiency rank
-  or definition. Resource: omen://feat/advanced-weapon-training?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, MartialProficiency].'
+mechanicsScope: builder
 foundryID: nDjTJq7PEbvRktnb
+rules:
+- key: choice-group
+  level: 6
+  choice:
+    name: $.feats.advanced-weapon-training.group
+    label: Weapon group
+    type: core/weapon-group
+    cases:
+    - sword
+    - brawling
+    - flail
+    - knife
+    - club
+    - dart
+    - spear
+    - axe
+    - polearm
+    - hammer
+    - pick
+    - shield
+    - bow
+    - crossbow
+    - sling
+    - bomb
+- key: chosen-group-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {choice: $.feats.advanced-weapon-training.group}
+    rank: trained
+    selfScaling: true
+    category: advanced

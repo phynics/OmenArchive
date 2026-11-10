@@ -6,7 +6,7 @@ This document describes the repository layout, publication structures, manifest 
 
 OmenArchive adheres to the format declared in [`schemas/archive-format.json`](../../schemas/archive-format.json):
 - **`epoch`**: `2`
-- **`version`**: `2`
+- **`version`**: `6`
 
 Every reader and validator requires exactly this pair. Breaking wire changes increment `version` within an epoch, while structural breaks with earlier data begin a new `epoch`.
 
@@ -79,6 +79,8 @@ spellcastingSources:
 - **`spellcastingSources`**: Optional. Maps each spellcasting source a publication's rules name to its ID. The key is kebab-case after the source's name (`ranger-focus-spells`, `hag-magic`); a rule writes the key as its `source`. A key is declared once, its ID appears nowhere else in the publication's records, and two source names that give one key are refused. See [Spellcasting Tables and Sources](spellcasting.md#source-keys).
 - **`externalRecords`**: Declares fully qualified references (`omen://...`) to records from publications not yet imported into the archive that are referenced by this publication.
 - **`requires`**: Optional, from format 6. A list of the publication ids this publication needs. A reference, prerequisite or grant that names a record of another publication with `?source=` fails without that publication, so the validator expects the publication's id here and, when it is missing, names the publication and the first use. Two uses are exempt: a record listed in `externalRecords`, and a link in a description, which only loses its target without the publication. A publication does not list itself or list another twice.
+- **`vocabularies`**: Optional, from format 6. A map from a vocabulary's name to its `terms` (kebab-case words). With `extends: <module alias>/<vocabulary>` the entry adds terms to a vocabulary a mechanics module declares; without it, the entry declares a vocabulary of the book's own. An ordered vocabulary is closed to other books unless its module marks it open. For example, `vocabularies: {weapon-group: {extends: core/weapon-group, terms: [harpoon]}}` adds one term to the weapon groups.
+- **`facts`**: Optional, from format 6. The facts the publication's records state under `facts:`, each declared once for a collection with its type (`- {collection: '@domain', name: domainSpell, type: '@spell'}`). See [Facts](filters.md#facts-from-format-6).
 
 ## Resource Families: Flat vs. Bundle Layouts
 
@@ -105,6 +107,7 @@ Classes define specific sub-collections declared in `schemas/archive-format.json
 - Bard: `muses/`
 - Cleric: `doctrine-features/`, `deities/`
 - Druid: `orders/`
+- Ranger: `hunters-edge/`, and from format 6 `masterful-hunter/` (the upgrades of the Masterful Hunter feature, one for each hunter's edge)
 - Rogue: `rackets/`
 - Sorcerer: `bloodlines/`, and from format 6 `draconic-exemplars/` and `elemental-influences/` (the records the Draconic and Elemental bloodlines add for the option a player chooses)
 - Witch: `patrons/`, `basic-lessons/`, `greater-lessons/`, `major-lessons/`

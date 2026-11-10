@@ -34,15 +34,13 @@ description: "A large, stylized symbol of an eye adorns the top of this wooden s
   [See the Unseen](omen://spell/see-the-unseen?source=paizo-pathfinder-player-core),
   [Status](omen://spell/status?source=paizo-pathfinder-player-core)\n\t•\t3rd [Safe
   Passage](omen://spell/safe-passage?source=paizo-pathfinder-player-core), [Wanderer's
-  Guide](omen://spell/wanderers-guide?source=paizo-pathfinder-player-core-2)\n\t•\t4th
-  [Cleanse Affliction](omen://spell/cleanse-affliction?source=paizo-pathfinder-player-core),
+  Guide](omen://spell/wanderers-guide)\n\t•\t4th [Cleanse Affliction](omen://spell/cleanse-affliction?source=paizo-pathfinder-player-core),
   [Dispelling Globe](omen://spell/dispelling-globe?source=paizo-pathfinder-player-core),
   [Status](omen://spell/status?source=paizo-pathfinder-player-core)\n\t•\t5th [Dispelling
   Globe](omen://spell/dispelling-globe?source=paizo-pathfinder-player-core), [Scouting
   Eye](omen://spell/scouting-eye?source=paizo-pathfinder-player-core), [See the Unseen](omen://spell/see-the-unseen?source=paizo-pathfinder-player-core)\n\t•\t6th
   [Dispelling Globe](omen://spell/dispelling-globe?source=paizo-pathfinder-player-core),
-  [Scintillating Safeguard](omen://spell/scintillating-safeguard?source=paizo-pathfinder-player-core-2),
-  [Truesight](omen://spell/truesight?source=paizo-pathfinder-player-core)\n\t•\t7th
+  [Scintillating Safeguard](omen://spell/scintillating-safeguard), [Truesight](omen://spell/truesight?source=paizo-pathfinder-player-core)\n\t•\t7th
   [Dispelling Globe](omen://spell/dispelling-globe?source=paizo-pathfinder-player-core),
   [Energy Aegis](omen://spell/energy-aegis?source=paizo-pathfinder-player-core)\n\t•\t8th
   [Dispelling Globe](omen://spell/dispelling-globe?source=paizo-pathfinder-player-core),
@@ -54,14 +52,14 @@ mechanicsScope: builder
 foundryID: pIagOwW8EFBaKW3k
 rules:
 - key: survival-item-bonus-sense-direction-or-subsist
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: survival
     amount: 1
     type: item
     when: Sense Direction or Subsist
 - key: religion-item-bonus-recall-knowledge
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: religion
     amount: 1

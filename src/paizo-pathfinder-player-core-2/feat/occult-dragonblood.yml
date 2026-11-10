@@ -14,7 +14,12 @@ description: Your blood contains a tiny fragment of unusual or inexplicable powe
   become trained in a skill of your choice. You gain the [Oddity Identification](omen://feat/oddity-identification?source=paizo-pathfinder-player-core)
   skill feat. If you choose a draconic exemplar, you must choose an occult dragon.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/occult-dragonblood?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem].'
+unsupportedCategory: benefit
+unsupportedReason: 'Rule elements not applied: GrantItem.'
 foundryID: 4xP7rC0gmEb66bAY
+rules:
+- key: occultism-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: occultism
+    rank: trained

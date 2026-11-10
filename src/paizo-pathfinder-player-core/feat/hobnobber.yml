@@ -10,11 +10,11 @@ prerequisites:
 - text: trained in Diplomacy
   hasSkillProficiency: {skill: diplomacy, rank: trained}
 description: You are skilled at learning information through conversation. The [Gather
-  Information](omen://action/gather-information?source=paizo-pathfinder-player-core)
-  exploration activity takes you half as long as normal \(typically reducing the time
-  to 1 hour\). If you're a master in Diplomacy and roll a critical failure to Gather
-  Information, you get a failure instead. There is still no guarantee that a rumor
-  you learn with Gather Information is accurate.
+  Information](omen://action/gather-information) exploration activity takes you half
+  as long as normal \(typically reducing the time to 1 hour\). If you're a master
+  in Diplomacy and roll a critical failure to Gather Information, you get a failure
+  instead. There is still no guarantee that a rumor you learn with Gather Information
+  is accurate.
 mechanicsScope: mixed
 foundryID: 4RjDxgvNXNl5GG9d
 rules:
@@ -25,4 +25,4 @@ rules:
     text: When you roll a critical failure on a Diplomacy check, the result is one
       degree better.
     when: Gather Information
-    requires: (gte $.skills.diplomacy.rank 3)
+    requires: (gte $.skills.diplomacy.rank master)

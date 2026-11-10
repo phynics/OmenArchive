@@ -27,9 +27,9 @@ description: |
   You have steeled yourself against fear...
 rules:
   - key: brave-will-bonus
-    effect: core/add-modifier
+    effect: core/add-modifier@2
     inputs:
-      target: {description: [{savingThrow: {_0: will}}]}
+      target: will
       amount: 1
       type: circumstance
 ```

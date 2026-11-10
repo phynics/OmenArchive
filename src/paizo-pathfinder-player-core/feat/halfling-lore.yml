@@ -11,8 +11,8 @@ description: 'You''ve dutifully learned how to keep your balance and how to stic
   If you would automatically become trained in one of those skills \(from your background
   or class, for example\), you instead become trained in a skill of your choice.
 
-  You also gain the [Additional Lore](omen://feat/additional-lore?source=paizo-pathfinder-player-core)
-  general feat for Halfling Lore.'
+  You also gain the [Additional Lore](omen://feat/additional-lore) general feat for
+  Halfling Lore.'
 mechanicsScope: builder
 foundryID: VU07hybqzUXIJ6l2
 rules:
@@ -26,3 +26,32 @@ rules:
   inputs:
     skill: stealth
     rank: trained
+- key: trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {lore: halfling}
+    rank: trained
+- key: active-effect-like-3-2
+  effect: core/add-skill-increase@2
+  level: 3
+  inputs:
+    skill: {lore: halfling}
+    rank: expert
+- key: active-effect-like-3-3
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: {lore: halfling}
+    rank: master
+- key: active-effect-like-3-4
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: {lore: halfling}
+    rank: legendary
+- key: additional-lore-halfling-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore'
+    with:
+      $.feats.additional-lore.lore: {lore: halfling}

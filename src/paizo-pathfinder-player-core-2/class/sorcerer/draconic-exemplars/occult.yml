@@ -1,0 +1,50 @@
+---
+name: occult
+level: 1
+traits:
+- sorcerer
+description: 'Occult—Tradition occult; Bloodline Skill Occultism; Sorcerous Gifts
+  2nd: [Blood Vendetta](omen://spell/blood-vendetta?source=paizo-pathfinder-player-core);
+  5th: [Slither](omen://spell/slither?source=paizo-pathfinder-player-core); 8th: [Unrelenting
+  Observation](omen://spell/unrelenting-observation?source=paizo-pathfinder-player-core)'
+mechanicsScope: builder
+rules:
+- key: sorcerer-spellcasting-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: sorcerer-spellcasting
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: occult
+    attribute: charisma
+- key: occultism-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: occultism
+    rank: trained
+- key: sorcerer-focus-spells-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: sorcerer-focus-spells
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: occult
+    attribute: charisma
+- key: blood-vendetta-known-spell
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.blood-vendetta?source=paizo-pathfinder-player-core']
+- key: slither-known-spell
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.slither?source=paizo-pathfinder-player-core']
+- key: unrelenting-observation-known-spell
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.unrelenting-observation?source=paizo-pathfinder-player-core']

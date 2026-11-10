@@ -67,8 +67,8 @@ description: 'Your training focused on Crafting one particular kind of item. Sel
 
   Wooden goods and structures
 
-  \* You must have the [Alchemical Crafting](omen://feat/alchemical-crafting?source=paizo-pathfinder-player-core)
-  skill feat to Craft alchemical items.'
+  \* You must have the [Alchemical Crafting](omen://feat/alchemical-crafting) skill
+  feat to Craft alchemical items.'
 specialText: ty
 mechanicsScope: mixed
 foundryID: QLeMH5mQgh28sa5o
@@ -91,7 +91,10 @@ rules:
     - tailoring
     - weaving
     - woodworking
-- key: specialty-crafting
-  effect: core/add-specialty-crafting
+- key: specialty-crafting-bonus
+  effect: core/add-modifier@2
   inputs:
-    specialty: {choice: $.feats.specialty-crafting.specialty}
+    target: crafting
+    amount: (add 1 (gte $.skills.crafting.rank master))
+    type: circumstance
+    when: to Craft {$.feats.specialty-crafting.specialty} items

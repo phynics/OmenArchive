@@ -13,7 +13,12 @@ description: 'You naturally adopt a pleasant and affable demeanor when meeting o
   In addition, you gain the [Hobnobber](omen://feat/hobnobber?source=paizo-pathfinder-player-core)
   skill feat.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/well-met-traveler?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem].'
+unsupportedCategory: benefit
+unsupportedReason: 'Rule elements not applied: GrantItem.'
 foundryID: 9t4x8vRmQikEl4vP
+rules:
+- key: diplomacy-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: diplomacy
+    rank: trained

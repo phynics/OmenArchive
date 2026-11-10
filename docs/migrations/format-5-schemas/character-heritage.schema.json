@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-heritage.schema.json",
+  "title": "Character Heritage",
+  "description": "Schema for a character heritage in the game",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the heritage"
+    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
+    "description": {
+      "type": "string",
+      "description": "Description text of the heritage"
+    },
+    "rarity": {
+      "$ref": "utility-types/rarity.schema.json"
+    },
+    "ancestry": {
+      "type": "string",
+      "description": "The specific ancestry this heritage belongs to, or `versatile` for versatile heritage."
+    },
+    "rules": {
+      "x-omen-ownership": "archive",
+      "type": "array",
+      "items": {
+        "$ref": "utility-types/rules.schema.json#/$defs/rule"
+      },
+      "default": []
+    },
+    "hitPoints": {
+      "x-omen-ownership": "archive",
+      "type": "integer",
+      "minimum": 1,
+      "description": "The hit points the heritage gives in place of its ancestry's."
+    },
+    "mechanicsScope": {
+      "x-omen-ownership": "archive",
+      "type": "string",
+      "enum": ["builder", "encounter", "mixed"]
+    },
+    "unsupportedReason": {
+      "x-omen-ownership": "archive",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "rarity",
+    "ancestry"
+  ],
+  "allOf": [
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
+  ]
+}

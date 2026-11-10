@@ -10,16 +10,16 @@ prerequisites:
   hasSkillProficiency: {skill: stealth, rank: trained}
 action:
   count: two_actions
-description: You capitalize on the distraction provided by an ally. You [Sneak](omen://action/sneak?source=paizo-pathfinder-player-core)
+description: You capitalize on the distraction provided by an ally. You [Sneak](omen://action/sneak)
   up to a foe adjacent to one of your allies. You can roll against the foe you're
-  Sneaking up on, even if it's currently observing you, as though you were [Hidden](omen://condition/hidden?source=paizo-pathfinder-player-core).
+  Sneaking up on, even if it's currently observing you, as though you were [Hidden](omen://condition/hidden).
   You take a –2 penalty on your Stealth check. If your Stealth check against the chosen
   foe succeeds, you can make a melee Strike against that foe at the end of your Sneak.
 mechanicsScope: mixed
 foundryID: eoDDjIGAA67Z7rQt
 rules:
 - key: stealth-untyped-penalty-sneak-underhanded-assault
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: stealth
     amount: -2

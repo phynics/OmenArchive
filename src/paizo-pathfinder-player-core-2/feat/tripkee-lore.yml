@@ -11,8 +11,45 @@ description: 'You are well versed in tripkee culture and tactics. You gain the t
 
   You also gain the [Additional Lore](omen://feat/additional-lore?source=paizo-pathfinder-player-core)
   general feat for Tripkee Lore.'
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/tripkee-lore?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, GrantItem, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: 5VWItcyt3Mx6mbSK
+rules:
+- key: nature-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: nature
+    rank: trained
+- key: stealth-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: stealth
+    rank: trained
+- key: trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {lore: tripkee}
+    rank: trained
+- key: active-effect-like-3-2
+  effect: core/add-skill-increase@2
+  level: 3
+  inputs:
+    skill: {lore: tripkee}
+    rank: expert
+- key: active-effect-like-3-3
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: {lore: tripkee}
+    rank: master
+- key: active-effect-like-3-4
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: {lore: tripkee}
+    rank: legendary
+- key: additional-lore-tripkee-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.additional-lore.lore: {lore: tripkee}

@@ -20,6 +20,7 @@ Detailed technical specifications are divided into focused topic guides:
 | [**Family Conventions**](docs/reference/family-conventions.md) | Structural schemas, directory locations, and examples for all 13 content families. |
 | [**Consuming the Archive**](docs/consuming-the-archive.md) | Guide for third parties using release JSONL streams and SQLite databases without Swift. |
 | [**Converter Ownership**](docs/converter-ownership.md) | Field ownership during upstream refreshes (`"x-omen-ownership": "archive"`). |
+| [**Moving From Format 5 to Format 6**](docs/migrations/format-6.md) | What a reader of format 5 must change, and what moved. |
 
 ---
 
@@ -35,7 +36,7 @@ that type ([the full rules](docs/reference/rules-and-inputs.md)):
   Put a note in the record's `description`, or in the pull request.
 - A prerequisite on a record is `has: '@feat.power-attack'`, never its name.
 - An attribute is spelled out (`wisdom`), never abbreviated; the decoded wire form keeps `wis`.
-- A proficiency rank is a word under the input name `rank` (`rank: expert`); a number is not a rank.
+- A proficiency rank is a word under the input name `rank` (`rank: expert`); a number is not a rank. In a sheet expression a rank is a word too: `(gte $.skills.diplomacy.rank master)`.
 - A kind is a word (`skill: arcana`, `rankPolicy: cantrip`), or a one-key map when it carries a datum
   (`rankPolicy: { fixed: 4 }`, `castFrequency: { perDay: 1 }`, `skill: { lore: Name }`).
 - A grant setting in `with:` is the value it grants. A bare value is read as a **skill**; any other type is
@@ -80,8 +81,8 @@ bash scripts/check-links.sh
 ```
 
 Before committing:
-1. All authored YAML files are UTF-8 encoded.
+1. All authored YAML files are UTF-8 encoded and read with the YAML 1.2 core schema; quote any scalar that would read as a boolean, a date, or a number other than decimal. One authored file is at most 1,048,576 bytes and 100,000 nodes, and uses no YAML anchors or aliases; a reader refuses a file over a limit, naming the file and the limit.
 2. File paths strictly match `{publication}/{family}/{slug}.yml` or the bundle conventions.
-3. Every file validates against its JSON Schema under `schemas/`.
+3. Every file validates against its JSON Schema under `schemas/`. A key the schema does not list is an error in every object. A count, a page number and a hit-point value have the range its schema gives, and a name, description, trait or reference is not empty.
 4. `@` references and `omen://` URI destinations resolve to valid targets. From format 6, a path without `?source=` means the file's own publication (a record of another publication needs its `?source=`), and a description's link to the file's own publication is written without it.
 5. No unreviewed Foundry rule element JSON exists in descriptive text fields.

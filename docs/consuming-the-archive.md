@@ -33,14 +33,14 @@ The format and structural contract of the archive are governed by `schemas/archi
 ```json
 {
   "epoch": 2,
-  "version": 5
+  "version": 6
 }
 ```
 
 * **`epoch`:** A major paradigm milestone. An epoch change indicates a fundamental shift in layout conventions or directory structures.
 * **`version`:** The current format version within the epoch. Increments when a breaking schema change or layout modification is introduced.
-* **Backward-compatible additions:** Adding optional fields to schemas, introducing new mechanics effects, or adding new content families do not increment the version.
-* **Contract stability:** Any change to schema structures, required fields, or identifier semantics is documented in migration notes and gated across the test suite before release.
+* **Backward-compatible additions:** Adding a field to a schema, even an optional one, increments the version, because every object in a record is closed and a reader of an older version refuses a key it does not know. Introducing new mechanics effects or adding new content families do not increment the version.
+* **Contract stability:** Any change to schema structures, required fields, or identifier semantics is documented in migration notes and gated across the test suite before release. The move from version 5 to version 6 is in [Moving From Format 5 to Format 6](migrations/format-6.md).
 
 ---
 

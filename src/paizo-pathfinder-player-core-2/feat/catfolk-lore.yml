@@ -13,8 +13,45 @@ description: 'Growing up among catfolk has taught you the traditional values of 
 
   You also gain the [Additional Lore](omen://feat/additional-lore?source=paizo-pathfinder-player-core)
   general feat for Catfolk Lore.'
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/catfolk-lore?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, GrantItem, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: eqBWab1J5Be24YAl
+rules:
+- key: acrobatics-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: acrobatics
+    rank: trained
+- key: survival-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: survival
+    rank: trained
+- key: trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {lore: catfolk}
+    rank: trained
+- key: active-effect-like-3-2
+  effect: core/add-skill-increase@2
+  level: 3
+  inputs:
+    skill: {lore: catfolk}
+    rank: expert
+- key: active-effect-like-3-3
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: {lore: catfolk}
+    rank: master
+- key: active-effect-like-3-4
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: {lore: catfolk}
+    rank: legendary
+- key: additional-lore-catfolk-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.additional-lore.lore: {lore: catfolk}

@@ -11,8 +11,17 @@ description: You become trained in all martial weapons. If you were already trai
   If you are at least 11th level, you also become an expert in these weapons.
 specialText: You can select this feat more than once. Each time you do, you become
   trained in an advanced weapon.
-mechanicsScope: mixed
-unsupportedReason: 'ActiveEffectLike at position 0 has an unsupported conditional
-  builder payload. Resource: omen://feat/weapon-proficiency?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: x9wxQ61HNkAVbDHr
+rules:
+- key: martial-weapons-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: martial}
+    rank: trained
+- key: active-effect-like-1-2
+  effect: core/add-weapon-proficiency@3
+  level: 11
+  inputs:
+    weapons: {category: martial}
+    rank: expert

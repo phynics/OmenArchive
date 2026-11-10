@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/collection.schema.json",
+  "title": "OmenArchive Collection",
+  "description": "A named, ordered group of books. A collection holds no records and changes none: it only says which books belong together.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The collection's identity. The file is collections/<id>.yml.",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "publications": {
+      "type": "array",
+      "description": "Publication ids in display order. A member is an imported publication (a src/ directory) or one that archive-format.json declares.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "description",
+    "publications"
+  ],
+  "additionalProperties": false
+}

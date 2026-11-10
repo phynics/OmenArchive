@@ -7,11 +7,12 @@ This document specifies directory conventions, schemas, and authoring guidelines
 A file leaves out a field that is empty, and the reader puts the empty value back. The fields are
 `traits` (actions, spells, items, features), `traditions` (spells), `description` (items and feats),
 `grantedSkills` (classes), `languageAccess` (ancestries), `attributes.chooseFrom` (backgrounds),
-`details.weapon.reload` and `details.kit.contents` (items), the three members of a feat's
-`repeatPolicy` (`duplicateSelectionRules`, `instanceLevelGates`, `maxCount`, so a feat with no limit has
-`repeatPolicy: {}`), and `details` of an `equipment` item. A background's `loreSkill` and
-`skillFeat` are not on this list: some backgrounds have neither key and others have them empty, and the
-two mean different things, so an empty one is written `loreSkill: ''`. The archive check rejects an
+`details.weapon.reload` and `details.kit.contents` (items), the two members of a feat's
+`repeatPolicy` (`instanceLevelGates`, `maxCount`, so a feat with no limit has
+`repeatPolicy: {}`), and `details` of an `equipment` item. A background's `loreSkill` is not on this list:
+some backgrounds have no key and others have it empty, and the two mean different things, so an empty
+one is written `loreSkill: ''`. From format 6 a background with no skill feat to name leaves out
+`skillFeat` (it is optional, and a blank one is refused). The archive check rejects an
 empty array.
 
 ---
@@ -105,6 +106,7 @@ attributes:
 languages:
   - elven
   - common
+additionalLanguages: 0
 speed: 30
 vision: low-light
 size: medium
@@ -186,9 +188,11 @@ savingThrowProficiency:
   fortitude: expert
   reflex: expert
   will: trained
-  perception: expert
+perceptionProficiency: expert
 additionalSkillCount: 3
 ```
+
+Perception is a statistic of its own, not a saving throw: from format 6 a class states `perceptionProficiency` beside the three saving throws.
 
 Class options declared in `schemas/archive-format.json` live in custom child directories (such as `muses/` for bards, `rackets/` for rogues, `schools/` for wizards, and `patrons/` for witches).
 
@@ -293,9 +297,12 @@ Equipment uses a single canonical `item/` family. `type` designates `equipment`,
 name: air
 description: |
   You have power over the winds, skies, and air.
-domainSpell: omen://spell/air-cushion?source=paizo-pathfinder-player-core
-advancedDomainSpell: omen://spell/updraft?source=paizo-pathfinder-player-core
+facts:
+  advancedDomainSpell: '@spell.updraft'
+  domainSpell: '@spell.air-cushion'
 ```
+
+From format 6 a domain's two spells are facts of the record, written under `facts:` in name order, and the publication that holds the domains declares them once for the collection: `- {collection: '@domain', name: domainSpell, type: '@spell'}` and the same for `advancedDomainSpell`, under `facts:` in its `publication.yml`. A rule reads the chosen domain's fact (`$.cleric.domains.domainSpell`). See [Facts](filters.md#facts-from-format-6).
 
 ---
 

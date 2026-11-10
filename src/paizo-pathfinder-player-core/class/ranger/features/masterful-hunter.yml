@@ -11,10 +11,10 @@ description: 'You have honed your abilities as a hunter to incredible levels. Yo
   increments.
 
   If you have master proficiency in Perception, you gain a +4 circumstance bonus to
-  Perception checks when you [Seek](omen://action/seek?source=paizo-pathfinder-player-core)
-  your prey, and if you have master proficiency in Survival, you gain a +4 circumstance
-  bonus to Survival checks when you [Track](omen://action/track?source=paizo-pathfinder-player-core)
-  your prey. You also gain an additional benefit depending on your hunter''s edge.
+  Perception checks when you [Seek](omen://action/seek) your prey, and if you have
+  master proficiency in Survival, you gain a +4 circumstance bonus to Survival checks
+  when you [Track](omen://action/track) your prey. You also gain an additional benefit
+  depending on your hunter''s edge.
 
   Flurry: You can blend your weapon mastery with skillful targeting to make a series
   of precise attacks. If you have master proficiency with your weapon, your multiple
@@ -34,6 +34,7 @@ description: 'You have honed your abilities as a hunter to incredible levels. Yo
   2d8 precision damage, and your third hit in a round against your hunted prey deals
   1d8 precision damage.'
 mechanicsScope: mixed
+unsupportedCategory: numbers
 unsupportedReason: 'Foundry class-feature rule elements are preserved for external
   review. External review required. Resource: omen://class/ranger/features/masterful-hunter?source=paizo-pathfinder-player-core.
   Foundry keys: [AdjustModifier, RollOption, ActiveEffectLike, GrantItem, GrantItem,
@@ -48,3 +49,27 @@ rules:
   effect: spellcasting/increase-spell-proficiency@2
   inputs:
     rank: master
+- key: masterful-hunter-flurry
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.ranger.hunters-edge
+      equals: {type: core/feature-id, value: '@class.ranger.hunters-edge.flurry'}
+  inputs:
+    feature: '@class.ranger.masterful-hunter.masterful-hunter-flurry'
+- key: masterful-hunter-outwit
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.ranger.hunters-edge
+      equals: {type: core/feature-id, value: '@class.ranger.hunters-edge.outwit'}
+  inputs:
+    feature: '@class.ranger.masterful-hunter.masterful-hunter-outwit'
+- key: masterful-hunter-precision
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.ranger.hunters-edge
+      equals: {type: core/feature-id, value: '@class.ranger.hunters-edge.precision'}
+  inputs:
+    feature: '@class.ranger.masterful-hunter.masterful-hunter-precision'

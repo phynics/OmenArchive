@@ -9,24 +9,22 @@ description: Long-lived elves have seen civilizations rise and fall, often at th
   hands of outside forces. As a result, they have developed a wariness of others who
   might seek to influence or control them. You've been trained to resist such manipulation,
   gaining a +2 circumstance bonus to saving throws against effects that would make
-  you [Controlled](omen://condition/controlled?source=paizo-pathfinder-player-core),
-  such as [Dominate](omen://spell/dominate?source=paizo-pathfinder-player-core), and
-  to Perception checks to [Sense Motive](omen://action/sense-motive?source=paizo-pathfinder-player-core)
-  when trying to determine if a creature is under the influence of such an effect.
-  When you roll a success on a saving throw against such an effect, you get a critical
-  success instead.
+  you [Controlled](omen://condition/controlled), such as [Dominate](omen://spell/dominate),
+  and to Perception checks to [Sense Motive](omen://action/sense-motive) when trying
+  to determine if a creature is under the influence of such an effect. When you roll
+  a success on a saving throw against such an effect, you get a critical success instead.
 mechanicsScope: mixed
 foundryID: scNrNhnGTgPIzoj7
 rules:
 - key: saving-throws-circumstance-bonus-controlled
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: saving-throws
     amount: 2
     type: circumstance
     when: inflicts controlled
 - key: perception-circumstance-bonus-sense-motive-ancestral
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: perception
     amount: 2

@@ -5,10 +5,21 @@ traits:
 - swashbuckler
 description: You are friendly, clever, and full of humor, always knowing just what
   to say. Your witticisms leave foes unprepared for the skill and speed of your attacks.
-  You are trained in Diplomacy and gain the [Bon Mot](omen://feat/bon-mot?source=paizo-pathfinder-player-core-2)
-  skill feat. When you use Bon Mot, the action gains the bravado trait
+  You are trained in Diplomacy and gain the [Bon Mot](omen://feat/bon-mot) skill feat.
+  When you use Bon Mot, the action gains the bravado trait
 mechanicsScope: mixed
-unsupportedReason: 'Foundry class-feature rule elements are preserved for external
-  review. External review required. Resource: omen://class/swashbuckler/features/wit?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem, Note, ItemAlteration, RollOption].'
+unsupportedCategory: benefit
+unsupportedReason: 'Note at position 3: The selector strike-attack-roll is not a roll
+  the sheet shows. Rule elements not applied: GrantItem.'
 foundryID: 4lGhbEjlEoGP4scl
+rules:
+- key: diplomacy-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: diplomacy
+    rank: trained
+- key: skill-feat-skill
+  effect: core/add-to-list
+  inputs:
+    list: $.swashbuckler.skill-feat-skills
+    value: {type: core/skill, literal: diplomacy}

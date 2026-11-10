@@ -335,7 +335,7 @@
       "type": "object",
       "description": "A metadata key with a dot (spell.category: cantrip).",
       "patternProperties": {
-        "^[A-Za-z]+\\.[A-Za-z0-9.-]+$": {
+        "^(?!fact\\.)[A-Za-z]+\\.[A-Za-z0-9.-]+$": {
           "type": "string",
           "minLength": 1
         }
@@ -371,6 +371,65 @@
       ],
       "additionalProperties": false,
       "description": "The resource is in this spellcasting source's known spells. Combine with level to select one rank."
+    },
+    {
+      "type": "object",
+      "description": "A fact of the record (fact.tier: expert), or a fact that is on a character list (fact.tier: {in: $.commander.tiers}). A record that states no such fact never matches; a list-valued fact matches when it holds the value, or any item of the list. The fact must be declared for the records the filter offers.",
+      "patternProperties": {
+        "^fact\\.[a-z][A-Za-z0-9]*(-[a-z0-9][A-Za-z0-9]*)*$": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "in": {
+                  "type": "string",
+                  "pattern": "^\\$\\.[a-z0-9.-]+$"
+                }
+              },
+              "required": [
+                "in"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "minProperties": 1,
+      "maxProperties": 1,
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "prerequisiteSkill": {
+          "type": "object",
+          "properties": {
+            "in": {
+              "type": "string",
+              "pattern": "^\\$\\.[a-z0-9.-]+$"
+            }
+          },
+          "required": [
+            "in"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "prerequisiteSkill"
+      ],
+      "additionalProperties": false,
+      "description": "The resource's typed prerequisites ask for a skill, and the skills on this character list (a list of skills) are enough to meet them. A resource that states its skill in text only never matches."
     }
   ]
 }

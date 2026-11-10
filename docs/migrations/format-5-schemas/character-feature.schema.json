@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-feature.schema.json",
+  "title": "Character Feature",
+  "description": "Schema for a character feature in the game",
+  "type": "object",
+  "properties": {
+    "foundryID": {
+      "type": "string",
+      "description": "The source system's stable record identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the character feature"
+    },
+    "attribution": {
+      "$ref": "utility-types/attribution.schema.json"
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "description": "Level of the character feature"
+    },
+    "traits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of traits associated with this feature",
+      "default": []
+    },
+    "action": {
+      "$ref": "utility-types/action-primitive.schema.json"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the character feature"
+    },
+    "grantedSpells": {
+      "description": "Spells this feature grants: focus spells and focus cantrips join the class's focus source; known spells join its repertoire or spellbook, and the known-choice spells are one choice between them.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "spell": {
+            "type": "string",
+            "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$"
+          },
+          "grant": {
+            "type": "string",
+            "enum": [
+              "focus",
+              "focus-cantrip",
+              "known",
+              "known-choice"
+            ]
+          }
+        },
+        "required": [
+          "spell",
+          "grant"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "curriculum": {
+      "description": "A wizard school's curriculum: the spells of each rank (0 for cantrips).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "spells": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "rank",
+          "spells"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rules": {
+      "x-omen-ownership": "archive",
+      "type": "array",
+      "items": {
+        "$ref": "utility-types/rules.schema.json#/$defs/rule"
+      },
+      "default": []
+    },
+    "spellcasting": {
+      "x-omen-ownership": "archive",
+      "description": "A caster's slots and spell picks, written once, as the book's table. Authoring shorthand: reading the archive expands it into the record's first rules (configure-source, increase-spell-proficiency, grant-slot and add-known-spell), with IDs derived from the record's path. `source` is {kind, tradition, attribute} to define a source, or an @ reference to the feature that defines it; `slots` maps a level to its cumulative row (cantrips, then ranks 1-10); `spellbook` maps a level or range (2-20) to its picks (cantrips, rank-N, any-rank, new-slots).",
+      "type": "object",
+      "properties": {
+        "source": {
+          "description": "{kind, tradition, attribute}, or an @ reference to the feature that defines the source"
+        },
+        "slots": {
+          "type": "object"
+        },
+        "spellbook": {
+          "type": "object"
+        },
+        "tradition": {
+          "type": "string",
+          "description": "For a block that adds to another record's source and picks from a tradition list"
+        },
+        "ids": {
+          "type": "string",
+          "description": "The folder whose name the rule IDs derive from, when it is not features"
+        },
+        "choose": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "One more spellbook pick, from exactly these spells (@ references)"
+        }
+      },
+      "required": [
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "mechanicsScope": {
+      "x-omen-ownership": "archive",
+      "type": "string",
+      "enum": [
+        "builder",
+        "encounter",
+        "mixed"
+      ]
+    },
+    "unsupportedReason": {
+      "x-omen-ownership": "archive",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "name",
+    "description"
+  ],
+  "allOf": [
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
+  ]
+}

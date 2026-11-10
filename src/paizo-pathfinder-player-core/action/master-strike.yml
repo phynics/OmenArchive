@@ -4,14 +4,13 @@ traits:
 - incapacitation
 - rogue
 count: free_action
-trigger: Your Strike hits an [Off-Guard](omen://condition/off-guard?source=paizo-pathfinder-player-core)
-  creature and deals damage.
+trigger: Your Strike hits an [Off-Guard](omen://condition/off-guard) creature and
+  deals damage.
 description: The target attempts a Fortitude save against your class DC. It then becomes
   temporarily immune to your Master Strike for 1 day.
 criticalSuccess: The target is unaffected.
-success: The target is [Enfeebled 2](omen://condition/enfeebled?source=paizo-pathfinder-player-core)
-  until the end of your next turn.
-failure: The target is [Paralyzed](omen://condition/paralyzed?source=paizo-pathfinder-player-core)
-  for 4 rounds.
-criticalFailure: The target is paralyzed for 4 rounds, knocked [Unconscious](omen://condition/unconscious?source=paizo-pathfinder-player-core)
+success: The target is [Enfeebled 2](omen://condition/enfeebled) until the end of
+  your next turn.
+failure: The target is [Paralyzed](omen://condition/paralyzed) for 4 rounds.
+criticalFailure: The target is paralyzed for 4 rounds, knocked [Unconscious](omen://condition/unconscious)
   for 2 hours, or killed \(your choice\).

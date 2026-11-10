@@ -26,12 +26,13 @@ description: Stitched together from pieces of ghoul skin, this suit of +1 hide a
   to the stench of ghouls. Ghoul hide with a resilient rune increases the resilient
   rune's item bonus to saving throws against curses by 1 \(maximum +4\).
 mechanicsScope: mixed
+unsupportedCategory: numbers
 unsupportedReason: An AdjustModifier that changes a modifier the item grants is not
   applied.
 foundryID: hRwnNTMj7wa8S4Ji
 rules:
 - key: saving-throws-item-bonus
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: saving-throws
     amount: 1

@@ -1,0 +1,50 @@
+---
+name: divine
+level: 1
+traits:
+- sorcerer
+description: 'Divine—Tradition divine; Bloodline Skill Religion; Sorcerous Gifts 2nd:
+  [Augury](omen://spell/augury?source=paizo-pathfinder-player-core); 5th: [Divine
+  Immolation](omen://spell/divine-immolation?source=paizo-pathfinder-player-core);
+  8th: [Divine Inspiration](omen://spell/divine-inspiration?source=paizo-pathfinder-player-core)'
+mechanicsScope: builder
+rules:
+- key: sorcerer-spellcasting-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: sorcerer-spellcasting
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: divine
+    attribute: charisma
+- key: religion-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: religion
+    rank: trained
+- key: sorcerer-focus-spells-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: sorcerer-focus-spells
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: divine
+    attribute: charisma
+- key: augury-known-spell
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.augury?source=paizo-pathfinder-player-core']
+- key: divine-immolation-known-spell
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.divine-immolation?source=paizo-pathfinder-player-core']
+- key: divine-inspiration-known-spell
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.divine-inspiration?source=paizo-pathfinder-player-core']

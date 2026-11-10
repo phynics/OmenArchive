@@ -9,9 +9,9 @@ prerequisites:
 - text: Nimble Dodge
   has: '@feat.nimble-dodge'
 description: 'You throw yourself into a roll to escape imminent danger. You can use
-  [Nimble Dodge](omen://feat/nimble-dodge?source=paizo-pathfinder-player-core) before
-  attempting a Reflex save in addition to its original trigger. If you do, the circumstance
-  bonus applies to your Reflex save against the triggering effect.
+  [Nimble Dodge](omen://feat/nimble-dodge) before attempting a Reflex save in addition
+  to its original trigger. If you do, the circumstance bonus applies to your Reflex
+  save against the triggering effect.
 
   When you use Nimble Dodge and the triggering attack fails or critically fails, or
   when you succeed or critically succeed at the saving throw, you can also Stride
@@ -22,7 +22,7 @@ mechanicsScope: mixed
 foundryID: F6ZAceuDpiM9bUiF
 rules:
 - key: reflex-circumstance-bonus-nimble-dodge
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: reflex
     amount: 2

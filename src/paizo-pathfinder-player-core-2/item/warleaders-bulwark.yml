@@ -38,13 +38,13 @@ mechanicsScope: builder
 foundryID: RUEAV5LMUGFHcXcW
 rules:
 - key: diplomacy-item-bonus
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: diplomacy
     amount: 2
     type: item
 - key: deception-and-stealth-item-penalty-hide-or-sneak
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: [deception, stealth]
     amount: -2

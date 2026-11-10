@@ -1,0 +1,1509 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/rules.schema.json",
+  "title": "Character Rules",
+  "description": "Schema for archive-authored character rules and mechanics registry inputs",
+  "$defs": {
+    "rule": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "key": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+              "description": "Readable stable member identity for a rule. Its id is derived from the record path and this key, so a rule written in this format does not carry one."
+            },
+            "level": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "description": "The level the rule starts at; 1 when left out"
+            },
+            "prerequisites": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              }
+            },
+            "effect": {
+              "$ref": "#/$defs/effectName"
+            },
+            "inputs": {
+              "$ref": "#/$defs/inputs"
+            },
+            "forEach": {
+              "description": "Reserved for rules that run once for each item of a list. Not supported yet: a rule that uses it is refused.",
+              "not": {}
+            }
+          },
+          "required": [
+            "key",
+            "effect"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "key": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+              "description": "Readable stable member identity for a rule. Its id is derived from the record path and this key, so a rule written in this format does not carry one."
+            },
+            "level": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "description": "The level the rule starts at; 1 when left out"
+            },
+            "prerequisites": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              }
+            },
+            "choice": {
+              "$ref": "#/$defs/choice"
+            },
+            "forEach": {
+              "description": "Reserved for rules that run once for each item of a list. Not supported yet: a rule that uses it is refused.",
+              "not": {}
+            }
+          },
+          "required": [
+            "key",
+            "choice"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "recordReference": {
+      "description": "A record: @family.name[.collection.name]*, then an optional #member and ?source=. Without ?source= it is the file's own publication's record. A raw UUID passes the schema but not the validator: the archive names records by reference, and a writer that stages into an archive without the record keeps the UUID until the record exists.",
+      "type": "string",
+      "pattern": "^(?:@[^\\s#?]+(?:#[^\\s?]+)?(?:\\?source=[a-z0-9-]+)?|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$"
+    },
+    "choice": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/choiceDefinitionName"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Only when it differs from the rule's level"
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choiceName"
+          }
+        },
+        "distinct": {
+          "description": "What this choice's options leave out: another choice or a built-in ($.ancestry.name), or the items already on a list ({list: $.path}). One path is written bare; several are a list. One-way: the choice or list named here keeps its own options, and a list leaves out only what rules authored before this question added. With addTo, the list is left out as well unless distinct is false.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/distinctItem"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/distinctItem"
+              }
+            },
+            {
+              "const": false,
+              "description": "Only with addTo: the answer may repeat an item already on the list."
+            }
+          ]
+        },
+        "type": {
+          "$ref": "#/$defs/typeName"
+        },
+        "cases": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "description": "A case that is only its value: the key is the text, the label its words capitalized. Needs the choice's type."
+              },
+              {
+                "$ref": "#/$defs/choiceCase"
+              }
+            ]
+          }
+        },
+        "records": {
+          "type": "object",
+          "properties": {
+            "filter": {
+              "$ref": "resource-filter.schema.json"
+            },
+            "from": {
+              "$ref": "#/$defs/choiceName",
+              "description": "Intersects candidates with this named fact's valid values."
+            },
+            "type": {
+              "$ref": "#/$defs/typeName",
+              "description": "The older spelling; the type is written on the choice."
+            }
+          },
+          "required": [
+            "filter"
+          ],
+          "additionalProperties": false
+        },
+        "freeText": {
+          "description": "true: free text of the choice's type. The older spelling names the type.",
+          "anyOf": [
+            {
+              "const": true
+            },
+            {
+              "$ref": "#/$defs/typeName"
+            }
+          ]
+        },
+        "freeTextKind": {
+          "description": "What the typed text of a freeText question stands for. lore: the name of a Lore skill (the choice's type is core/skill); the name is lowercased, trimmed and loses a trailing \"Lore\".",
+          "const": "lore"
+        },
+        "multiple": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "max": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "min"
+          ],
+          "additionalProperties": false,
+          "description": "A confirmed list of distinct answers. max must be at least min."
+        },
+        "optional": {
+          "type": "boolean",
+          "default": false,
+          "description": "An unanswered optional question does not count as open."
+        },
+        "optionsFrom": {
+          "$ref": "#/$defs/choiceName",
+          "description": "Intersects candidates with this named fact's valid values."
+        },
+        "additionalCases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/choiceCase"
+          },
+          "description": "Typed alternatives beside records. These cases cannot carry effects."
+        },
+        "addTo": {
+          "description": "The list the answer goes to, as a plain $ path. The reader expands it into a rule keyed <question key>-add that adds the answer with core/add-to-list, and into a distinct over the same list unless distinct is false. The wire form carries only the expanded rules. A question that takes several answers can't add to a list.",
+          "$ref": "#/$defs/listPath"
+        }
+      },
+      "required": [
+        "name",
+        "label"
+      ],
+      "oneOf": [
+        {
+          "required": [
+            "cases"
+          ]
+        },
+        {
+          "required": [
+            "records"
+          ]
+        },
+        {
+          "required": [
+            "freeText"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "choiceCase": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Left out when it is the value's own text"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Left out when it is the key's words capitalized"
+        },
+        "value": {
+          "description": "A bare literal of the choice's type; a record is an @ reference. With effects, it is what the choice reads as (an order record whose feat and membership the effects add); then every case has one."
+        },
+        "effects": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/effectEntry"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "value"
+          ],
+          "not": {
+            "required": [
+              "effects"
+            ]
+          }
+        },
+        {
+          "required": [
+            "effects",
+            "key"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "choiceName": {
+      "description": "A choice read path: a namespaced content path, or a supported engine read.",
+      "type": "string",
+      "anyOf": [
+        {
+          "pattern": "^\\$\\.(?:level|attributes\\.(?:str|dex|con|int|wis|cha))$"
+        },
+        {
+          "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
+        }
+      ]
+    },
+    "choiceDefinitionName": {
+      "description": "A namespaced content choice definition; engine roots are reserved for reads.",
+      "type": "string",
+      "anyOf": [
+        {
+          "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
+        }
+      ]
+    },
+    "listPath": {
+      "description": "A character list: a plain $ path with at least two steps, without [] or #. No built-in value is a list a record declares.",
+      "type": "string",
+      "pattern": "^\\$\\.(?!level(?:\\.|$)|attributes(?:\\.|$))(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "listRead": {
+      "description": "One field of every item of a list: $.list[].field, or $.list[].field.recordField for a field of the record an entry's field holds. Read-only and typed by the list's declaration; there is no [n].",
+      "type": "string",
+      "pattern": "^\\$\\.(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*\\[\\]\\.[a-z][A-Za-z0-9]*(?:\\.[a-z][A-Za-z0-9]*)?$"
+    },
+    "distinctItem": {
+      "description": "A $ path whose value is left out, or {list: $.path} for the items of a list.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/choiceName"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "list": {
+              "$ref": "#/$defs/listPath"
+            }
+          },
+          "required": [
+            "list"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "prerequisite": {
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
+          "properties": {
+            "hasClassTrait": {
+              "type": "boolean",
+              "const": true
+            }
+          },
+          "required": [
+            "hasClassTrait"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. Kept as a generic level check.",
+          "properties": {
+            "hasLevel": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            }
+          },
+          "required": [
+            "hasLevel"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
+          "properties": {
+            "hasAncestryWithName": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "hasAncestryWithName"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasClassWithName": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "hasClassWithName"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasTrait": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "hasTrait"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "has": {
+              "type": "string",
+              "description": "A reference to the record the character must have, such as @feat.power-attack",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "has"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. A score check kept to read older data; the remaster uses hasAttributeModifier, so new content doesn't author it.",
+          "properties": {
+            "hasAttribute": {
+              "type": "object",
+              "properties": {
+                "attribute": {
+                  "$ref": "#/$defs/prerequisiteAttribute"
+                },
+                "score": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 30
+                }
+              },
+              "required": [
+                "attribute",
+                "score"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "hasAttribute"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasAttributeModifier": {
+              "type": "object",
+              "properties": {
+                "attribute": {
+                  "$ref": "#/$defs/prerequisiteAttribute"
+                },
+                "modifier": {
+                  "type": "integer",
+                  "minimum": -5,
+                  "maximum": 20
+                }
+              },
+              "required": [
+                "attribute",
+                "modifier"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "hasAttributeModifier"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSkillProficiency": {
+              "type": "object",
+              "properties": {
+                "skill": {
+                  "$ref": "#/$defs/prerequisiteSkill"
+                },
+                "rank": {
+                  "$ref": "proficiency-rank.schema.json"
+                }
+              },
+              "required": [
+                "skill",
+                "rank"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "hasSkillProficiency"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSavingThrowProficiency": {
+              "type": "object",
+              "properties": {
+                "savingThrow": {
+                  "$ref": "saving-throw.schema.json"
+                },
+                "rank": {
+                  "$ref": "proficiency-rank.schema.json"
+                }
+              },
+              "required": [
+                "savingThrow",
+                "rank"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "hasSavingThrowProficiency"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSpellcasting": {
+              "type": "boolean",
+              "const": true
+            }
+          },
+          "required": [
+            "hasSpellcasting"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. Kept as a generic access check.",
+          "properties": {
+            "hasAccess": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "hasAccess"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "The chosen ancestry's record states this vision. A stand-in for a choice on character.ancestry.vision.",
+          "properties": {
+            "hasAncestryVision": {
+              "type": "string",
+              "enum": [
+                "normal",
+                "low-light-vision",
+                "darkvision"
+              ]
+            }
+          },
+          "required": [
+            "hasAncestryVision"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "The character has a sense, by its selector. For feat eligibility; a rule gated on it could satisfy itself.",
+          "properties": {
+            "hasSense": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            }
+          },
+          "required": [
+            "hasSense"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "allOf": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "allOf"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "anyOf": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "anyOf"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "unsupported": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "unsupported"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasChoice": {
+              "description": "A choice made in a rule's selection passes one test. Within one resource it must name a choice defined by an earlier rule.",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "A choice, a list, or one field of every item of a list ($.list[].field).",
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/choiceName"
+                    },
+                    {
+                      "$ref": "#/$defs/listRead"
+                    }
+                  ]
+                },
+                "isSet": {
+                  "const": true
+                },
+                "equals": {
+                  "$ref": "#/$defs/typedValue"
+                },
+                "oneOf": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/typedValue"
+                  },
+                  "minItems": 1
+                },
+                "contains": {
+                  "description": "A list (or a repeatable choice, one answer per copy) holds this value. A list declared by a record takes the bare value, typed by the declaration.",
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/typedValue"
+                    },
+                    {
+                      "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "oneOf": [
+                {
+                  "required": [
+                    "isSet"
+                  ]
+                },
+                {
+                  "required": [
+                    "equals"
+                  ]
+                },
+                {
+                  "required": [
+                    "oneOf"
+                  ]
+                },
+                {
+                  "required": [
+                    "contains"
+                  ]
+                }
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "hasChoice"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "valueTypeID": {
+      "type": "string",
+      "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+    },
+    "prerequisiteAttribute": {
+      "type": "string",
+      "enum": [
+        "strength",
+        "dexterity",
+        "constitution",
+        "intelligence",
+        "wisdom",
+        "charisma"
+      ]
+    },
+    "prerequisiteSkill": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "acrobatics",
+            "arcana",
+            "athletics",
+            "crafting",
+            "deception",
+            "diplomacy",
+            "intimidation",
+            "medicine",
+            "nature",
+            "occultism",
+            "performance",
+            "religion",
+            "society",
+            "stealth",
+            "survival",
+            "thievery"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "lore": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "lore"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "typeName": {
+      "description": "A value type: <module alias>/<type> (core/skill), or the full ID.",
+      "type": "string",
+      "pattern": "^(?:[a-z][a-z0-9-]*/[a-z0-9-]+|[a-z0-9.-]+/value/[a-z0-9-]+)$"
+    },
+    "effectName": {
+      "description": "An effect: <module alias>/<effect>, with @<revision> for a revision other than 1 (core/add-feat@2).",
+      "type": "string",
+      "pattern": "^(?:[a-z][a-z0-9-]*/[a-z0-9-]+|[a-z0-9.-]+/effect/[a-z0-9-]+)(?:@[0-9]+)?$"
+    },
+    "typedValue": {
+      "description": "A value that names its type, where the context doesn't.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/typeName"
+        },
+        "value": {}
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "inputs": {
+      "description": "Effect inputs by name. Bare values are literals typed by the effect descriptor. Explicit forms are {choice: $.path}, {choiceList: $.path}, {choice: $.path, field: name} (a field of the record the choice holds), {list: $.path, field: name} (one field of every item of a list, short for $.list[].field), {entry: {field: {type, value}}} (one entry of an entry list) and {literal: ...}, each with an optional type. A list read requires a confirmed answer. A list is named by its plain $ path, without the \\$ escape; add-to-list takes {choice: $.path} or a value with its type.",
+      "type": "object",
+      "additionalProperties": {}
+    },
+    "effectEntry": {
+      "description": "A grant of a choice case: an effect in the same compact form, with no level.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "effect": {
+          "$ref": "#/$defs/effectName"
+        },
+        "inputs": {
+          "$ref": "#/$defs/inputs"
+        },
+        "inputDescriptors": {
+          "description": "Only when they differ from the effect's descriptor",
+          "type": "array"
+        }
+      },
+      "required": [
+        "effect"
+      ],
+      "additionalProperties": false
+    },
+    "prerequisiteEntry": {
+      "description": "A feat's prerequisite: its text and, next to it, its typed form (or unsupported).",
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
+          "properties": {
+            "hasClassTrait": {
+              "type": "boolean",
+              "const": true
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasClassTrait"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. Kept as a generic level check.",
+          "properties": {
+            "hasLevel": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasLevel"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
+          "properties": {
+            "hasAncestryWithName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasAncestryWithName"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasClassWithName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasClassWithName"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasTrait": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasTrait"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "has": {
+              "type": "string",
+              "description": "A reference to the record the character must have, such as @feat.power-attack",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "has"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. A score check kept to read older data; the remaster uses hasAttributeModifier, so new content doesn't author it.",
+          "properties": {
+            "hasAttribute": {
+              "type": "object",
+              "properties": {
+                "attribute": {
+                  "$ref": "#/$defs/prerequisiteAttribute"
+                },
+                "score": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 30
+                }
+              },
+              "required": [
+                "attribute",
+                "score"
+              ],
+              "additionalProperties": false
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasAttribute"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasAttributeModifier": {
+              "type": "object",
+              "properties": {
+                "attribute": {
+                  "$ref": "#/$defs/prerequisiteAttribute"
+                },
+                "modifier": {
+                  "type": "integer",
+                  "minimum": -5,
+                  "maximum": 20
+                }
+              },
+              "required": [
+                "attribute",
+                "modifier"
+              ],
+              "additionalProperties": false
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasAttributeModifier"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSkillProficiency": {
+              "type": "object",
+              "properties": {
+                "skill": {
+                  "$ref": "#/$defs/prerequisiteSkill"
+                },
+                "rank": {
+                  "$ref": "proficiency-rank.schema.json"
+                }
+              },
+              "required": [
+                "skill",
+                "rank"
+              ],
+              "additionalProperties": false
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasSkillProficiency"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSavingThrowProficiency": {
+              "type": "object",
+              "properties": {
+                "savingThrow": {
+                  "$ref": "saving-throw.schema.json"
+                },
+                "rank": {
+                  "$ref": "proficiency-rank.schema.json"
+                }
+              },
+              "required": [
+                "savingThrow",
+                "rank"
+              ],
+              "additionalProperties": false
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasSavingThrowProficiency"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasSpellcasting": {
+              "type": "boolean",
+              "const": true
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasSpellcasting"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "No archive use. Kept as a generic access check.",
+          "properties": {
+            "hasAccess": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasAccess"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "The chosen ancestry's record states this vision. A stand-in for a choice on character.ancestry.vision.",
+          "properties": {
+            "hasAncestryVision": {
+              "type": "string",
+              "enum": [
+                "normal",
+                "low-light-vision",
+                "darkvision"
+              ]
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasAncestryVision"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "The character has a sense, by its selector. For feat eligibility; a rule gated on it could satisfy itself.",
+          "properties": {
+            "hasSense": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasSense"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "allOf": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              },
+              "minItems": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "allOf"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "anyOf": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/prerequisite"
+              },
+              "minItems": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "anyOf"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "unsupported": {
+              "type": "string",
+              "minLength": 1
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "unsupported"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasChoice": {
+              "description": "A choice made in a rule's selection passes one test. Within one resource it must name a choice defined by an earlier rule.",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$ref": "#/$defs/choiceName"
+                },
+                "isSet": {
+                  "const": true
+                },
+                "equals": {
+                  "$ref": "#/$defs/typedValue"
+                },
+                "oneOf": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/typedValue"
+                  },
+                  "minItems": 1
+                },
+                "contains": {
+                  "description": "A repeatable choice holds a list, one answer per copy; one of them equals this value. A list declared by a record takes the bare value, typed by the declaration.",
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/typedValue"
+                    },
+                    {
+                      "type": [
+                        "string",
+                        "number",
+                        "boolean"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "oneOf": [
+                {
+                  "required": [
+                    "isSet"
+                  ]
+                },
+                {
+                  "required": [
+                    "equals"
+                  ]
+                },
+                {
+                  "required": [
+                    "oneOf"
+                  ]
+                },
+                {
+                  "required": [
+                    "contains"
+                  ]
+                }
+              ],
+              "additionalProperties": false
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasChoice"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

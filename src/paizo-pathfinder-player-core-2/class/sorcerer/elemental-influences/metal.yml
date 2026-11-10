@@ -1,0 +1,34 @@
+---
+name: metal
+level: 1
+traits:
+- sorcerer
+description: 'Metal—Sorcerous Gifts cantrip [Electric Arc](omen://spell/electric-arc?source=paizo-pathfinder-player-core);
+  1st: [Thunderstrike](omen://spell/thunderstrike?source=paizo-pathfinder-player-core);
+  3rd: [Lightning Bolt](omen://spell/lightning-bolt?source=paizo-pathfinder-player-core);
+  6th: [Chain Lightning](omen://spell/chain-lightning?source=paizo-pathfinder-player-core);
+  Blood Magic Damage piercing'
+mechanicsScope: builder
+rules:
+- key: electric-arc-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.electric-arc?source=paizo-pathfinder-player-core']
+- key: thunderstrike-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.thunderstrike?source=paizo-pathfinder-player-core']
+- key: lightning-bolt-known-spell
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.lightning-bolt?source=paizo-pathfinder-player-core']
+- key: chain-lightning-known-spell
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']

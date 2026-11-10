@@ -13,8 +13,20 @@ description: 'You''ve studied traditional hobgoblin exercises and fieldcraft, al
 
   You gain the [Additional Lore](omen://feat/additional-lore?source=paizo-pathfinder-player-core)
   general feat for Hobgoblin Lore.'
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/hobgoblin-lore?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, GrantItem].'
+mechanicsScope: builder
 foundryID: 13zaW8ZHRWnRe2pj
+rules:
+- key: athletics-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: athletics
+    rank: trained
+- key: crafting-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: crafting
+    rank: trained
+- key: additional-lore-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'

@@ -7,14 +7,14 @@ traits:
 - lineage
 - nephilim
 description: Your blood sings with the liberating power of the azatas, living embodiments
-  of freedom from the wild realm of Elysium. You gain a +1 circumstance bonus to [Escape](omen://action/escape?source=paizo-pathfinder-player-core).
+  of freedom from the wild realm of Elysium. You gain a +1 circumstance bonus to [Escape](omen://action/escape).
   When you roll a critical failure on a check to Escape, you get a failure instead,
   and when you roll a success, you get a critical success instead.
 mechanicsScope: mixed
 foundryID: eSP2938INGUG9b3w
 rules:
 - key: attack-rolls-and-acrobatics-more-circumstance-bonus
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: [attack-rolls, acrobatics, athletics]
     amount: 1

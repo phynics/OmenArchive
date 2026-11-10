@@ -13,9 +13,8 @@ description: "The blood of dragons flows through your veins. These beasts are bo
   Exemplars below; 6th: [Dragon Form](omen://spell/dragon-form?source=paizo-pathfinder-player-core)
   \\(dragon must match your draconic exemplar\\); 7th: [Mask of Terror](omen://spell/mask-of-terror?source=paizo-pathfinder-player-core);
   8th: see Draconic Exemplars below; 9th: [Overwhelming Presence](omen://spell/overwhelming-presence?source=paizo-pathfinder-player-core)\nBloodline
-  Spells initial: [Flurry of Claws](omen://spell/flurry-of-claws?source=paizo-pathfinder-player-core-2);
-  advanced: [Dragon Breath](omen://spell/dragon-breath?source=paizo-pathfinder-player-core-2);
-  greater: [Dragon Wings](omen://spell/dragon-wings?source=paizo-pathfinder-player-core-2)\nBlood
+  Spells initial: [Flurry of Claws](omen://spell/flurry-of-claws); advanced: [Dragon
+  Breath](omen://spell/dragon-breath); greater: [Dragon Wings](omen://spell/dragon-wings)\nBlood
   Magic—Scaly Hide Draconic scales grow briefly on you or one target, granting a +1
   status bonus to AC for 1 round.\nDraconic Exemplars\nAt 1st level, choose the tradition
   related to the dragon exemplar who influenced your bloodline. You can't change your
@@ -34,6 +33,7 @@ description: "The blood of dragons flows through your veins. These beasts are bo
   5th: [Howling Blizzard](omen://spell/howling-blizzard?source=paizo-pathfinder-player-core);
   8th: [Earthquake](omen://spell/earthquake?source=paizo-pathfinder-player-core)\nDraconic
   Sorcerer Bloodlines"
+facts: {advanced-bloodline-spell: '@spell.dragon-breath', greater-bloodline-spell: '@spell.dragon-wings'}
 mechanicsScope: builder
 foundryID: ZHabYxSgYK0XbjhM
 rules:
@@ -42,600 +42,82 @@ rules:
     name: $.sorcerer.bloodline.draconic
     label: Draconic tradition
     type: core/string
-    cases: [arcane, divine, occult, primal]
-- key: sorcerer-spellcasting-source-arcane
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: arcane
-    attribute: charisma
-- key: arcana-trained
+    cases:
+    - key: arcane
+      value: arcane
+      effects:
+      - key: add-draconic-exemplar-arcane
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.draconic-exemplars.arcane'
+    - key: divine
+      value: divine
+      effects:
+      - key: add-draconic-exemplar-divine
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.draconic-exemplars.divine'
+    - key: occult
+      value: occult
+      effects:
+      - key: add-draconic-exemplar-occult
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.draconic-exemplars.occult'
+    - key: primal
+      value: primal
+      effects:
+      - key: add-draconic-exemplar-primal
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.draconic-exemplars.primal'
+- key: intimidation-trained
   effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
-  inputs:
-    skill: arcana
-    rank: trained
-- key: intimidation-trained-arcane
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     skill: intimidation
     rank: trained
-- key: sorcerer-focus-spells-source-arcane
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: arcane
-    attribute: charisma
-- key: flurry-of-claws-focus-spell-arcane
+- key: flurry-of-claws-focus-spell
   effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.flurry-of-claws'
-- key: shield-known-spell-arcane
+- key: shield-known-spell
   effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: fear-known-spell-arcane
+- key: fear-known-spell
   effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: blazing-bolt-known-spell
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.blazing-bolt?source=paizo-pathfinder-player-core']
-- key: haste-known-spell-arcane
+- key: haste-known-spell
   effect: spellcasting/add-known-spell
   level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: fly-known-spell-arcane
+- key: fly-known-spell
   effect: spellcasting/add-known-spell
   level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: subconscious-suggestion-known-spell
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.subconscious-suggestion?source=paizo-pathfinder-player-core']
-- key: dragon-form-known-spell-arcane
+- key: dragon-form-known-spell
   effect: spellcasting/add-known-spell
   level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: mask-of-terror-known-spell-arcane
+- key: mask-of-terror-known-spell
   effect: spellcasting/add-known-spell
   level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: quandary-known-spell
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.quandary?source=paizo-pathfinder-player-core']
-- key: overwhelming-presence-known-spell-arcane
+- key: overwhelming-presence-known-spell
   effect: spellcasting/add-known-spell
   level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: arcane}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.overwhelming-presence?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-divine
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: divine
-    attribute: charisma
-- key: intimidation-trained-divine
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: religion-trained
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    skill: religion
-    rank: trained
-- key: sorcerer-focus-spells-source-divine
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: divine
-    attribute: charisma
-- key: flurry-of-claws-focus-spell-divine
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.flurry-of-claws'
-- key: shield-known-spell-divine
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: fear-known-spell-divine
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: augury-known-spell
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.augury?source=paizo-pathfinder-player-core']
-- key: haste-known-spell-divine
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: fly-known-spell-divine
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: divine-immolation-known-spell
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.divine-immolation?source=paizo-pathfinder-player-core']
-- key: dragon-form-known-spell-divine
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: mask-of-terror-known-spell-divine
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: divine-inspiration-known-spell
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.divine-inspiration?source=paizo-pathfinder-player-core']
-- key: overwhelming-presence-known-spell-divine
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: divine}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.overwhelming-presence?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-occult
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: occult
-    attribute: charisma
-- key: intimidation-trained-occult
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: occultism-trained
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    skill: occultism
-    rank: trained
-- key: sorcerer-focus-spells-source-occult
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: occult
-    attribute: charisma
-- key: flurry-of-claws-focus-spell-occult
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.flurry-of-claws'
-- key: shield-known-spell-occult
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: fear-known-spell-occult
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: blood-vendetta-known-spell
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.blood-vendetta?source=paizo-pathfinder-player-core']
-- key: haste-known-spell-occult
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: fly-known-spell-occult
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: slither-known-spell
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.slither?source=paizo-pathfinder-player-core']
-- key: dragon-form-known-spell-occult
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: mask-of-terror-known-spell-occult
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: unrelenting-observation-known-spell
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.unrelenting-observation?source=paizo-pathfinder-player-core']
-- key: overwhelming-presence-known-spell-occult
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: occult}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.overwhelming-presence?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-primal
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: primal
-    attribute: charisma
-- key: intimidation-trained-primal
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: nature-trained
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    skill: nature
-    rank: trained
-- key: sorcerer-focus-spells-source-primal
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: primal
-    attribute: charisma
-- key: flurry-of-claws-focus-spell-primal
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.flurry-of-claws'
-- key: shield-known-spell-primal
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.shield?source=paizo-pathfinder-player-core']
-- key: fear-known-spell-primal
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.fear?source=paizo-pathfinder-player-core']
-- key: shatter-known-spell
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.shatter?source=paizo-pathfinder-player-core']
-- key: haste-known-spell-primal
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.haste?source=paizo-pathfinder-player-core']
-- key: fly-known-spell-primal
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.fly?source=paizo-pathfinder-player-core']
-- key: howling-blizzard-known-spell
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.howling-blizzard?source=paizo-pathfinder-player-core']
-- key: dragon-form-known-spell-primal
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.dragon-form?source=paizo-pathfinder-player-core']
-- key: mask-of-terror-known-spell-primal
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.mask-of-terror?source=paizo-pathfinder-player-core']
-- key: earthquake-known-spell
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: overwhelming-presence-known-spell-primal
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.draconic
-      equals: {type: core/string, value: primal}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.overwhelming-presence?source=paizo-pathfinder-player-core']

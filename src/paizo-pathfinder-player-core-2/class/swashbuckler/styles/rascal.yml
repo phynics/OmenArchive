@@ -4,10 +4,21 @@ level: 1
 traits:
 - swashbuckler
 description: You aren't afraid to use underhanded tactics to get the edge over your
-  opponents. You are trained in Thievery and gain the [Dirty Trick](omen://feat/dirty-trick?source=paizo-pathfinder-player-core-2)
+  opponents. You are trained in Thievery and gain the [Dirty Trick](omen://feat/dirty-trick)
   general feat. When you use Dirty Trick, the action gains the bravado trait.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry class-feature rule elements are preserved for external
-  review. External review required. Resource: omen://class/swashbuckler/features/rascal?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem, Note, ItemAlteration, RollOption].'
+unsupportedCategory: benefit
+unsupportedReason: 'Note at position 3: The selector strike-attack-roll is not a roll
+  the sheet shows. Rule elements not applied: GrantItem.'
 foundryID: XKhg55V7WmpLrvqL
+rules:
+- key: thievery-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: thievery
+    rank: trained
+- key: skill-feat-skill
+  effect: core/add-to-list
+  inputs:
+    list: $.swashbuckler.skill-feat-skills
+    value: {type: core/skill, literal: thievery}

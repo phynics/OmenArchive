@@ -41,7 +41,11 @@ rules:
     - sky
     - swamp
     - underground
-- key: terrain-expertise
-  effect: core/add-terrain-expertise
+- key: terrain-bonus
+  forEach: $.feats.terrain-expertise.terrains
+  effect: core/add-modifier@2
   inputs:
-    terrain: {choice: $.feats.terrain-expertise.terrain}
+    target: survival
+    amount: 1
+    type: circumstance
+    when: in {item} terrain

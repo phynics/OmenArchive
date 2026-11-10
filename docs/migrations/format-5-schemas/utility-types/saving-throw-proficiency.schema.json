@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/saving-throw-proficiency.schema.json",
+    "title": "Saving Throw Proficiency",
+    "description": "PF2RPG Saving Throw Proficiency",
+    "type": "object",
+    "properties": {
+        "fortitude": {
+            "$ref": "proficiency-rank.schema.json"
+        },
+        "reflex": {
+            "$ref": "proficiency-rank.schema.json"
+        },
+        "will": {
+            "$ref": "proficiency-rank.schema.json"
+        },
+        "perception": {
+            "$ref": "proficiency-rank.schema.json"
+        }
+    },
+    "required": ["fortitude", "reflex", "will", "perception"]
+} 

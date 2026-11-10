@@ -1,0 +1,441 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/mechanics-module.schema.json",
+  "title": "Mechanics Module Descriptor",
+  "description": "Deterministic archive contract exported by an executable mechanics module.",
+  "type": "object",
+  "properties": {
+    "moduleID": {
+      "type": "string",
+      "pattern": "^[a-z0-9.-]+$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dependency"
+      }
+    },
+    "valueTypes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/valueType"
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/effect"
+      }
+    },
+    "stateKeys": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/stateKey"
+      }
+    },
+    "sharedChoiceRoots": {
+      "type": "array",
+      "description": "First steps of $ names that are one question for the whole character, however many rules declare them. Omitted when empty.",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "lists": {
+      "type": "array",
+      "description": "The character lists the module declares for the engine, such as $.ancestry.feat-ancestries. Rules add to and read them like any list; no record declares them. Omitted when empty.",
+      "items": {
+        "$ref": "#/$defs/list"
+      }
+    },
+    "vocabularies": {
+      "type": "array",
+      "description": "The terms the module's types and rule literals use, each vocabulary named in kebab-case. Omitted when empty.",
+      "items": {
+        "$ref": "#/$defs/vocabulary"
+      }
+    },
+    "facts": {
+      "type": "array",
+      "description": "The facts the engine reads from a family's own fields, such as a class's hit-points. A record states them in its fields, not in a facts: block. Omitted when empty.",
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
+    }
+  },
+  "required": [
+    "moduleID",
+    "revision",
+    "dependencies",
+    "valueTypes",
+    "effects",
+    "stateKeys"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "dependency": {
+      "type": "object",
+      "properties": {
+        "moduleID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "moduleID",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "valueType": {
+      "type": "object",
+      "properties": {
+        "typeID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "schema": {
+          "type": "object"
+        },
+        "listElementTypeID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$",
+          "description": "The registered element type of a homogeneous array value."
+        }
+      },
+      "required": [
+        "typeID",
+        "revision",
+        "schema"
+      ],
+      "additionalProperties": false
+    },
+    "list": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^\\$\\.(?:[a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "The list's plain $ path."
+        },
+        "valueType": {
+          "$ref": "#/$defs/listValueType"
+        },
+        "label": {
+          "type": "string",
+          "description": "Display wording for the list."
+        }
+      },
+      "required": [
+        "path",
+        "valueType"
+      ],
+      "additionalProperties": false
+    },
+    "listValueType": {
+      "description": "What a list holds: a value type ID, {records: <collection path prefix>} for any record under a collection from any publication, or {entry: {<field>: <value type ID or {records: …}>}} for an entry of named fields.",
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "records": {
+              "type": "string",
+              "pattern": "^omen://[^?#\\s]+$"
+            }
+          },
+          "required": [
+            "records"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "entry": {
+              "type": "object",
+              "minProperties": 1,
+              "propertyNames": {
+                "pattern": "^[a-z][A-Za-z0-9]*$"
+              },
+              "additionalProperties": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "records": {
+                        "type": "string",
+                        "pattern": "^omen://[^?#\\s]+$"
+                      }
+                    },
+                    "required": [
+                      "records"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "entry"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "effect": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "$ref": "#/$defs/effectReference"
+        },
+        "summary": {
+          "type": "string",
+          "description": "Explains what the effect does to the character, what each input means, and when to use it."
+        },
+        "inputDescriptors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/inputDescriptor"
+          }
+        },
+        "inputRecipes": {
+          "type": "array"
+        },
+        "writes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/write"
+          },
+          "description": "The character state the effect writes, in terms of its inputs."
+        }
+      },
+      "required": [
+        "reference",
+        "summary",
+        "inputDescriptors",
+        "inputRecipes"
+      ],
+      "additionalProperties": false
+    },
+    "write": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "enum": [
+            "path",
+            "sense",
+            "skill",
+            "saving-throw",
+            "feature",
+            "feat",
+            "trait",
+            "signature-spell",
+            "innate-tradition",
+            "armor-proficiency",
+            "weapon-proficiency",
+            "speed",
+            "roll-modifier",
+            "spellcasting",
+            "class-dc",
+            "perception",
+            "resource-pool"
+          ]
+        },
+        "nameInput": {
+          "type": "string",
+          "description": "The input whose literal value names the state."
+        },
+        "nameMember": {
+          "type": "string",
+          "description": "For an object-valued input, the member holding the name."
+        },
+        "namePrefix": {
+          "type": "string"
+        },
+        "fixedName": {
+          "type": "string",
+          "description": "A name that doesn't depend on an input."
+        },
+        "rankInput": {
+          "type": "string",
+          "description": "The input whose literal value is the proficiency rank written."
+        },
+        "modification": {
+          "type": "boolean",
+          "description": "The effect changes this state on records other rules made, so a rule prerequisite can't read it."
+        }
+      },
+      "required": [
+        "domain"
+      ],
+      "additionalProperties": false
+    },
+    "effectReference": {
+      "type": "object",
+      "properties": {
+        "kindID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/effect/[a-z0-9-]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "kindID",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "inputDescriptor": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "valueTypeID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        },
+        "defaultValue": {
+          "not": { "type": "null" },
+          "description": "What the input holds when a rule leaves it out: a value of the input's value type. An input with a default is optional, and the archive reader puts the default into a rule that omits the input."
+        },
+        "optional": {
+          "type": "boolean",
+          "description": "The input may be left out of a rule. Optional inputs come after the required ones."
+        },
+        "identity": {
+          "enum": ["rule", "source"],
+          "description": "The input is an identity an author leaves out: a rule's own (derived from its key) or a spellcasting source's. A uuid input called selectionId, grantId or uuid is a rule's, and sourceId a source's, without saying so."
+        },
+        "alsoAccepts": {
+          "type": "array",
+          "description": "Other value types the input accepts, beside valueTypeID: a heritage where a feature is expected.",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+          },
+          "uniqueItems": true
+        },
+        "vocabulary": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "For a text input: the module vocabulary its terms come from (damage-type). The archive check reads the text against it."
+        }
+      },
+      "required": [
+        "name",
+        "valueTypeID"
+      ],
+      "additionalProperties": false
+    },
+    "stateKey": {
+      "type": "object",
+      "properties": {
+        "keyID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/state/[a-z0-9-]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "valueTypeID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        }
+      },
+      "required": [
+        "keyID",
+        "revision",
+        "valueTypeID"
+      ],
+      "additionalProperties": false
+    },
+    "vocabulary": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "terms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "ordered": {
+          "type": "boolean",
+          "description": "The terms are a scale, in order (untrained, trained, expert, master, legendary)."
+        },
+        "computesWith": {
+          "type": "array",
+          "description": "Terms another construct computes with, such as the roll targets a weapon group adds to.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "name",
+        "terms"
+      ],
+      "additionalProperties": false
+    },
+    "fact": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "type": "string",
+          "pattern": "^@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*$",
+          "description": "The family and folder path the fact belongs to, with the leading @ (domain, class.commander.tactics)."
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][A-Za-z0-9]*(?:-[a-z0-9][A-Za-z0-9]*)*$"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^(?:int|bool|@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*|[a-z0-9]+(?:-[a-z0-9]+)*|\\[(?:int|bool|@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*|[a-z0-9]+(?:-[a-z0-9]+)*)\\])$",
+          "description": "int, bool, a vocabulary's kebab-case name, @collection for a record, or [T] for a list of T."
+        }
+      },
+      "required": [
+        "collection",
+        "name",
+        "type"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

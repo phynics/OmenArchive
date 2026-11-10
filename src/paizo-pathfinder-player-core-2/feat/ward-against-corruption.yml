@@ -11,12 +11,13 @@ description: Your soul is warded against the power of undeath and plague, as wel
   or sahkils. This bonus increases to +2 against an undead or sahkil's death effect
   or disease.
 mechanicsScope: mixed
+unsupportedCategory: numbers
 unsupportedReason: 'AdjustModifier at position 2: Only an upgrade or downgrade to
   a fixed number is translated.'
 foundryID: NFsQOa3ynthYLVj6
 rules:
 - key: saving-throws-circumstance-bonus-death-or-disease
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: saving-throws
     amount: 1

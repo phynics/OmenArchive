@@ -18,8 +18,10 @@ description: Your studies open up new horizons. Choose a specific settlement. Yo
   language of your choice that's prevalent in that settlement.
 specialText: You can take this feat multiple times. When you take this feat again,
   choose a different settlement.
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/settlement-scholastics?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: R7BO8br4BjCmpjit
+rules:
+- key: additional-lore-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'

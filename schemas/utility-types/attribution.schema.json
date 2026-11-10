@@ -7,7 +7,9 @@
   "properties": {
     "page": {
       "type": "integer",
-      "description": "Page number where the content can be found"
+      "description": "Page number where the content can be found",
+      "minimum": 1,
+      "maximum": 1000
     },
     "url": {
       "type": "string",
@@ -16,11 +18,13 @@
     },
     "publisher": {
       "type": "string",
-      "description": "Only when the record's publisher isn't the publication's"
+      "description": "Only when the record's publisher isn't the publication's",
+      "minLength": 1
     },
     "book": {
       "type": "string",
-      "description": "Only when the record's book isn't the publication's title"
+      "description": "Only when the record's book isn't the publication's title",
+      "minLength": 1
     }
   },
   "additionalProperties": false

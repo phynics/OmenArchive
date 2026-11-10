@@ -14,7 +14,13 @@ description: You can trace your lineage to a dragon with almost deific powers, s
   You gain a +1 circumstance bonus to initiative rolls. If you choose a draconic exemplar,
   you must choose a divine dragon.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/divine-dragonblood?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, FlatModifier].'
+unsupportedCategory: numbers
+unsupportedReason: 'FlatModifier at position 2: The selector initiative is not a roll
+  the sheet shows.'
 foundryID: axDwTLGN32Qfv0SD
+rules:
+- key: religion-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: religion
+    rank: trained

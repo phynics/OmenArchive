@@ -22,7 +22,33 @@ description: 'You''re particularly skilled at wielding the weapons used traditio
   At 5th level, whenever you get a critical hit with one of these weapons, you get
   its critical specialization effect.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/pirate-combat-training?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [MartialProficiency, CriticalSpecialization, ChoiceSet, GrantItem].'
+unsupportedCategory: numbers
+unsupportedReason: 'Critical specialization is not applied: the archive''s effect
+  unlocks it for a whole weapon group, not for the weapons or trait this record names.
+  Rule elements not applied: ChoiceSet, GrantItem.'
 foundryID: i86JRWsFRpfEJnZP
+rules:
+- key: trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: hatchet}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: rapier}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-3
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: scimitar}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-4
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: whip}}
+    rank: trained
+    selfScaling: true

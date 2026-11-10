@@ -137,6 +137,10 @@
         "label": {
           "type": "string",
           "description": "Display wording for the list."
+        },
+        "access": {
+          "enum": ["rules-write", "engine-write"],
+          "description": "Who writes the list: a rule with add-to-list (rules-write, the default and omitted), or only the engine (engine-write). A rule reads either."
         }
       },
       "required": [

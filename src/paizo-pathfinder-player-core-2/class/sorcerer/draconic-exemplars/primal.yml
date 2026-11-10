@@ -1,0 +1,50 @@
+---
+name: primal
+level: 1
+traits:
+- sorcerer
+description: 'Primal—Tradition primal; Bloodline Skill Nature; Sorcerous Gifts 2nd:
+  [Shatter](omen://spell/shatter?source=paizo-pathfinder-player-core); 5th: [Howling
+  Blizzard](omen://spell/howling-blizzard?source=paizo-pathfinder-player-core); 8th:
+  [Earthquake](omen://spell/earthquake?source=paizo-pathfinder-player-core)'
+mechanicsScope: builder
+rules:
+- key: sorcerer-spellcasting-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: sorcerer-spellcasting
+    sourceName: Sorcerer Spellcasting
+    castingKind: spontaneous
+    tradition: primal
+    attribute: charisma
+- key: nature-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: nature
+    rank: trained
+- key: sorcerer-focus-spells-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: sorcerer-focus-spells
+    sourceName: Sorcerer Focus Spells
+    castingKind: focus
+    tradition: primal
+    attribute: charisma
+- key: shatter-known-spell
+  effect: spellcasting/add-known-spell
+  level: 3
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.shatter?source=paizo-pathfinder-player-core']
+- key: howling-blizzard-known-spell
+  effect: spellcasting/add-known-spell
+  level: 9
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.howling-blizzard?source=paizo-pathfinder-player-core']
+- key: earthquake-known-spell
+  effect: spellcasting/add-known-spell
+  level: 15
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']

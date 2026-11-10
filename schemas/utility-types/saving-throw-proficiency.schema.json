@@ -13,10 +13,8 @@
         },
         "will": {
             "$ref": "proficiency-rank.schema.json"
-        },
-        "perception": {
-            "$ref": "proficiency-rank.schema.json"
         }
     },
-    "required": ["fortitude", "reflex", "will", "perception"]
+    "required": ["fortitude", "reflex", "will"],
+    "additionalProperties": false
 } 

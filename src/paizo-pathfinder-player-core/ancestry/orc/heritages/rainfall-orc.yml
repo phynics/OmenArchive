@@ -5,20 +5,19 @@ rarity: common
 description: You were born in a rain forest with only tangles of trees providing protection
   from torrential rainstorms and flash floods. You've learned to move adeptly through
   jungle terrain and resist the various ailments common in humid environs. You gain
-  a +2 circumstance bonus to Athletics checks to [Climb](omen://action/climb?source=paizo-pathfinder-player-core)
-  or [Swim](omen://action/swim?source=paizo-pathfinder-player-core) and a +1 circumstance
-  bonus to saving throws against diseases.
+  a +2 circumstance bonus to Athletics checks to [Climb](omen://action/climb) or [Swim](omen://action/swim)
+  and a +1 circumstance bonus to saving throws against diseases.
 mechanicsScope: builder
 rules:
 - key: athletics-circumstance-bonus-climb-or-swim
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: athletics
     amount: 2
     type: circumstance
     when: Climb or Swim
 - key: saving-throws-circumstance-bonus
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: saving-throws
     amount: 1

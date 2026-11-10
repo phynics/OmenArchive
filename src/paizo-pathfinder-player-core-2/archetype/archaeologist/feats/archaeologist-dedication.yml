@@ -15,8 +15,23 @@ description: You are a student of peoples and their histories, and are in consta
   pursuit of knowledge and artifacts from the past. You become an expert in Society
   and Thievery, and you gain a +1 circumstance bonus to [Recall Knowledge](omen://action/recall-knowledge?source=paizo-pathfinder-player-core)
   about ancient history, peoples, and cultures.
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/archaeologist-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [FlatModifier, ActiveEffectLike, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: PRKe5rWYZMZgEpFU
+rules:
+- key: society-expert
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: society
+    rank: expert
+- key: thievery-expert
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: thievery
+    rank: expert
+- key: arcana-and-nature-more-circumstance-bonus-recall
+  effect: core/add-modifier@2
+  inputs:
+    target: [arcana, nature, occultism, religion, society]
+    amount: 1
+    type: circumstance
+    when: Recall Knowledge; ancient history

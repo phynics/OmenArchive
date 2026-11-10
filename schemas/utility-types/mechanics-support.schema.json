@@ -14,6 +14,12 @@
       "x-omen-ownership": "archive",
       "type": "string",
       "minLength": 1
+    },
+    "unsupportedCategory": {
+      "x-omen-ownership": "archive",
+      "description": "What the unapplied rules cost a player: numbers (a bonus, Speed, proficiency rank or skill is wrong or missing), choice (a choice the book allows can't be made), benefit (a benefit the book grants is not applied), text (the rule is in the description and the player applies it) or scope (a table or encounter concern a builder doesn't need). Required with unsupportedReason; the reason says what is missing in words. From format 6.",
+      "type": "string",
+      "enum": ["numbers", "choice", "benefit", "text", "scope"]
     }
   },
   "allOf": [
@@ -54,6 +60,29 @@
           "rules": {
             "maxItems": 0
           }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["unsupportedReason"]
+      },
+      "then": {
+        "required": ["unsupportedCategory"]
+      }
+    },
+    {
+      "if": {
+        "required": ["mechanicsScope"],
+        "properties": {
+          "mechanicsScope": {
+            "const": "builder"
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": ["unsupportedCategory"]
         }
       }
     }

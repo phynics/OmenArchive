@@ -2,6 +2,8 @@
 
 Unlocks the critical specialization effect for all weapons within a weapon group.
 
+> **Removed in format 6.** A format 6 reader refuses this effect. Write an `add-note` rule on attack rolls instead, with the condition the record states.
+
 Effect `add-weapon-critical-specialization`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs
@@ -21,11 +23,15 @@ Derived from the rule key, never written: `uuid`.
 
 Used by 5 rules.
 
-Example, from `paizo-pathfinder-player-core/class/bard/features/bard-weapon-expertise.yml`:
+Format 6 replacement, from `paizo-pathfinder-player-core/class/bard/features/bard-weapon-expertise.yml`:
 
 ```yaml
-- effect: core/add-weapon-critical-specialization
+- key: weapon-critical-specialization-note
+  effect: core/add-note
   inputs:
-    weaponGroup: any
-  key: weapon-critical-specialization
+    target: attack-rolls
+    text: When you critically succeed at an attack roll using a martial weapon, a
+      simple weapon or an unarmed attack while one of your compositions is active,
+      you apply the critical specialization effect for that weapon or unarmed attack.
+    when: One of your compositions is active
 ```

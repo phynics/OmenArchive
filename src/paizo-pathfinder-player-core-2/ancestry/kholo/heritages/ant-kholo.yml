@@ -10,11 +10,12 @@ description: You're a sharp-featured, big-eared kholo about 3 feet tall. Many ar
   checks to uncover such lies, and to initiative checks when you roll Deception for
   initiative.
 mechanicsScope: mixed
+unsupportedCategory: numbers
 unsupportedReason: 'A FlatModifier on initiative has no roll target. Foundry rule
   element CreatureSize has no translation. Resource: omen://ancestry/kholo/heritages/ant-kholo?source=paizo-pathfinder-player-core-2.'
 rules:
 - key: deception-circumstance-bonus-lie
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: deception
     amount: 1

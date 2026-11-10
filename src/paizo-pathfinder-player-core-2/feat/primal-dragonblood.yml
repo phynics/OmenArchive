@@ -13,8 +13,11 @@ description: A dragon with a deep connection to the natural world, such as an ad
   in Nature \(from your background or class, for example\), you instead become trained
   in a skill of your choice. You can use Nature to Sense Direction and Subsist in
   the wilds. If you choose a draconic exemplar, you must choose a primal dragon.
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/primal-dragonblood?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: XAsPe0mfxfQpgvCR
+rules:
+- key: nature-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: nature
+    rank: trained

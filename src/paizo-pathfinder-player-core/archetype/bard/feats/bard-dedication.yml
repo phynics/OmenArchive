@@ -20,7 +20,17 @@ description: You cast spells like a bard and gain the Cast a Spell activity. You
   you were a bard. You can take that muse's feats, but you don't gain the starting
   feat, spell or any other abilities the choice of muse grants.
 mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/bard-dedication?source=paizo-pathfinder-player-core. Foundry keys: [ChoiceSet,
-  RollOption, ActiveEffectLike, ActiveEffectLike].'
+unsupportedCategory: choice
+unsupportedReason: 'Rule elements not applied: ChoiceSet.'
 foundryID: dIH771mt4PcVTyAs
+rules:
+- key: performance-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: performance
+    rank: trained
+- key: occultism-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: occultism
+    rank: trained

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-condition.schema.json",
+  "title": "OmenArchive Condition",
+  "description": "A condition such as frightened or prone: its rules text and the facts an app shows. Its mechanics are not part of the record yet.",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
+    "traits": { "type": "array", "items": { "type": "string" } },
+    "valued": { "type": "boolean", "description": "The condition carries a value (frightened 2). Left out when false." },
+    "group": { "type": "string", "description": "The group of related conditions, such as attitudes or detection." },
+    "description": { "type": "string" }
+  },
+  "required": ["name", "description"],
+  "additionalProperties": false
+}

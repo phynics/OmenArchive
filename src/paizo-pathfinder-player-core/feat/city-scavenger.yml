@@ -7,28 +7,28 @@ traits:
 - goblin
 description: 'You know that the greatest treasures often look like refuse. You gain
   a +1 circumstance bonus to checks to Subsist, and you can use Society or Survival
-  when you [Subsist](omen://action/subsist?source=paizo-pathfinder-player-core) in
-  a settlement.
+  when you [Subsist](omen://action/subsist) in a settlement.
 
   When you Subsist in a city, you also gather valuable junk that silly longshanks
-  threw away. You can [Earn Income](omen://action/earn-income?source=paizo-pathfinder-player-core)
-  using Society or Survival at the same time while you Subsist, without spending any
-  additional days of downtime. You also gain a +1 circumstance bonus to this check.'
+  threw away. You can [Earn Income](omen://action/earn-income) using Society or Survival
+  at the same time while you Subsist, without spending any additional days of downtime.
+  You also gain a +1 circumstance bonus to this check.'
 specialText: If you have the irongut goblin heritage, increase the bonuses to +2.
 mechanicsScope: mixed
+unsupportedCategory: numbers
 unsupportedReason: 'AdjustModifier at position 3: It names no selector. AdjustModifier
   at position 4: It names no selector.'
 foundryID: g388ImzpenYBoiEF
 rules:
 - key: society-and-survival-circumstance-bonus-subsist
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: [society, survival]
     amount: 1
     type: circumstance
     when: Subsist
 - key: society-and-survival-circumstance-bonus-earn-income
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: [society, survival]
     amount: 1

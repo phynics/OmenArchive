@@ -7,6 +7,16 @@ description: A swashbuckler gains an extra skill feat at levels 3, 7, and 15, be
   the skill feats and skill increases every character gets.
 mechanicsScope: builder
 rules:
+- key: skill-feat-skills
+  effect: core/declare-list
+  inputs:
+    list: $.swashbuckler.skill-feat-skills
+    valueType: core/skill
+- key: skill-feat-skill-acrobatics
+  effect: core/add-to-list
+  inputs:
+    list: $.swashbuckler.skill-feat-skills
+    value: {type: core/skill, literal: acrobatics}
 - key: choice-swashbuckler-skill-feat-3
   level: 3
   choice:
@@ -19,6 +29,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 3}
+        - {prerequisiteSkill: {in: $.swashbuckler.skill-feat-skills}}
 - key: skill-feat-3
   effect: core/add-feat@3
   level: 3
@@ -36,6 +47,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 7}
+        - {prerequisiteSkill: {in: $.swashbuckler.skill-feat-skills}}
 - key: skill-feat-7
   effect: core/add-feat@3
   level: 7
@@ -53,6 +65,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 15}
+        - {prerequisiteSkill: {in: $.swashbuckler.skill-feat-skills}}
 - key: skill-feat-15
   effect: core/add-feat@3
   level: 15

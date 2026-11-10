@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/localization-overrides.schema.json",
+  "title": "OmenArchive Localization Overrides",
+  "description": "Per-family text overrides for localized names, descriptions, triggers, requirements, and notes.",
+  "type": "object",
+  "patternProperties": {
+    "^omen://[a-z0-9-]+/[a-z0-9/.-]+(?:\\?[^#]+)?$": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Localized display name of the record."
+        },
+        "description": {
+          "type": "string",
+          "description": "Localized prose description."
+        },
+        "trigger": {
+          "type": "string",
+          "description": "Localized trigger text for reactions or free actions."
+        },
+        "requirements": {
+          "type": "string",
+          "description": "Localized requirements description."
+        },
+        "frequency": {
+          "type": "string",
+          "description": "Localized frequency note (e.g. Günde bir kez, Turda bir kez)."
+        },
+        "special": {
+          "type": "string",
+          "description": "Localized special rules text."
+        },
+        "prerequisites": {
+          "type": "array",
+          "description": "Localized display strings for prerequisites.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": ["text"],
+            "additionalProperties": false
+          }
+        },
+        "criticalSuccess": {
+          "type": "string",
+          "description": "Localized Critical Success text."
+        },
+        "success": {
+          "type": "string",
+          "description": "Localized Success text."
+        },
+        "failure": {
+          "type": "string",
+          "description": "Localized Failure text."
+        },
+        "criticalFailure": {
+          "type": "string",
+          "description": "Localized Critical Failure text."
+        }
+      },
+      "required": ["name"],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

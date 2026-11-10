@@ -12,8 +12,51 @@ description: 'You listened carefully to the tales passed down among your communi
 
   You also gain the [Additional Lore](omen://feat/additional-lore?source=paizo-pathfinder-player-core)
   general feat for either Astrology Lore or Lizardfolk Lore.'
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/lizardfolk-lore?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, GrantItem, ChoiceSet, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: FhCsnHjdIUyKteCM
+rules:
+- key: nature-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: nature
+    rank: trained
+- key: survival-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: survival
+    rank: trained
+- key: choice-lore
+  choice:
+    name: $.feats.lizardfolk-lore.lore
+    label: Lore
+    type: core/skill
+    cases:
+    - {key: astrology, value: {lore: astrology}}
+    - {key: lizardfolk, value: {lore: lizardfolk}}
+- key: chosen-lore-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.lizardfolk-lore.lore}
+    rank: trained
+- key: active-effect-like-3-2
+  effect: core/add-skill-increase@2
+  level: 3
+  inputs:
+    skill: {choice: $.feats.lizardfolk-lore.lore}
+    rank: expert
+- key: active-effect-like-3-3
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: {choice: $.feats.lizardfolk-lore.lore}
+    rank: master
+- key: active-effect-like-3-4
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: {choice: $.feats.lizardfolk-lore.lore}
+    rank: legendary
+- key: additional-lore-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'

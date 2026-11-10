@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/attribution.schema.json",
+  "title": "Attribution",
+  "description": "What a record's publication does not already say about where its text comes from: page numbers and errata. The publisher and book are the publication's own (publication.yml).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "description": "Page number where the content can be found"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL where the content can be found (for third-party content)"
+    },
+    "publisher": {
+      "type": "string",
+      "description": "Only when the record's publisher isn't the publication's"
+    },
+    "book": {
+      "type": "string",
+      "description": "Only when the record's book isn't the publication's title"
+    }
+  },
+  "additionalProperties": false
+}

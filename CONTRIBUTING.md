@@ -105,11 +105,14 @@ Maintainers run the full gate before they merge to `main`. No hosted CI runs on 
 
 Describe a record's mechanics with what the format already has, in this order:
 
-1. **Existing effects, questions, filters and expressions.** Most records need nothing else.
-2. **Part of a rule can't be expressed:** write the part that can, and record the rest in
+1. **Existing effects, lists, questions, filters and expressions.** Most records need nothing else.
+2. **Data the engine reads.** Use an engine list, a record fact, a vocabulary term or a count,
+   written generically, when code must act on data.
+3. **Extend a generic feature** when it can express the rule with a small extension.
+4. **Part of a rule can't be expressed:** write the part that can, and record the rest in
    `mechanicsScope` or `unsupportedReason`. A record that is partly applied is better than a new
    effect made for it alone.
-3. **A new effect** is for something the engine must compute and no combination of the above can.
+5. **A new effect** is for something the engine must compute and no combination of the above can.
    Open an issue first that explains why, before writing records that need it. An effect never
    carries a rule's name from one book, display text, or a bonus or condition that belongs to a
    single record.

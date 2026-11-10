@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/utility-types/proficiency-block.schema.json",
+    "title": "Proficiency Block",
+    "description": "A mapping of names to proficiency ranks",
+    "type": "object",
+    "patternProperties": {
+        "^.*$": {
+            "$ref": "proficiency-rank.schema.json"
+        }
+    },
+    "additionalProperties": false,
+    "minProperties": 1
+} 

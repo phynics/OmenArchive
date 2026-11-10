@@ -13,9 +13,8 @@ description: "An elemental influence has imbued your blood with primal fury. You
   \\(elemental influence only\\); 6th :see Elemental Influences below; 7th: [Energy
   Aegis](omen://spell/energy-aegis?source=paizo-pathfinder-player-core); 8th: [Earthquake](omen://spell/earthquake?source=paizo-pathfinder-player-core);
   9th: [Wrathful Storm](omen://spell/wrathful-storm?source=paizo-pathfinder-player-core)\nBloodline
-  Spells initial: [Elemental Toss](omen://spell/elemental-toss?source=paizo-pathfinder-player-core-2);
-  advanced: [Elemental Motion](omen://spell/elemental-motion?source=paizo-pathfinder-player-core-2);
-  greater: [Elemental Blast](omen://spell/elemental-blast?source=paizo-pathfinder-player-core-2)\nBlood
+  Spells initial: [Elemental Toss](omen://spell/elemental-toss); advanced: [Elemental
+  Motion](omen://spell/elemental-motion); greater: [Elemental Blast](omen://spell/elemental-blast)\nBlood
   Magic—Elemental Fury Elemental energy wreathes your form and infuses your magic.
   Either you gain a +2 status bonus to Intimidation checks for 1 round, or a target
   takes 1 damage per spell rank; this damage type is listed under your elemental influence.
@@ -24,11 +23,10 @@ description: "An elemental influence has imbued your blood with primal fury. You
   1st level, choose the type of elemental that influenced your bloodline: air, earth,
   fire, metal, water, or wood. You can't change this later. You are granted different
   spells at certain ranks according to this influence.\n\t•\tAir—Sorcerous Gifts cantrip:
-  [Gale Blast](omen://spell/gale-blast?source=paizo-pathfinder-player-core-2); 1st:
-  [Tailwind](omen://spell/tailwind?source=paizo-pathfinder-player-core); 3rd: [Wall
-  of Wind](omen://spell/wall-of-wind?source=paizo-pathfinder-player-core); 6th: [Chain
-  Lightning](omen://spell/chain-lightning?source=paizo-pathfinder-player-core); Blood
-  Magic Damage slashing\n\t•\tEarth—Sorcerous Gifts cantrip: [Scatter Scree](omen://spell/scatter-scree?source=paizo-pathfinder-player-core-2);
+  [Gale Blast](omen://spell/gale-blast); 1st: [Tailwind](omen://spell/tailwind?source=paizo-pathfinder-player-core);
+  3rd: [Wall of Wind](omen://spell/wall-of-wind?source=paizo-pathfinder-player-core);
+  6th: [Chain Lightning](omen://spell/chain-lightning?source=paizo-pathfinder-player-core);
+  Blood Magic Damage slashing\n\t•\tEarth—Sorcerous Gifts cantrip: [Scatter Scree](omen://spell/scatter-scree);
   1st: [Pummeling Rubble](omen://spell/pummeling-rubble?source=paizo-pathfinder-player-core);
   3rd: [Earthbind](omen://spell/earthbind?source=paizo-pathfinder-player-core); 6th:
   [Petrify](omen://spell/petrify?source=paizo-pathfinder-player-core); Blood Magic
@@ -44,12 +42,13 @@ description: "An elemental influence has imbued your blood with primal fury. You
   Blood Magic Damage piercing\n\t•\tWater—Sorcerous Gifts cantrip: [Frostbite](omen://spell/frostbite?source=paizo-pathfinder-player-core);
   1st: [Hydraulic Push](omen://spell/hydraulic-push?source=paizo-pathfinder-player-core);
   3rd: [Aqueous Orb](omen://spell/aqueous-orb?source=paizo-pathfinder-player-core);
-  6th: [Scintillating Safeguard](omen://spell/scintillating-safeguard?source=paizo-pathfinder-player-core-2);
-  Blood Magic Damage bludgeoning\n\t•\tWood—Sorcerous Gifts cantrip: [Tangle Vine](omen://spell/tangle-vine?source=paizo-pathfinder-player-core);
+  6th: [Scintillating Safeguard](omen://spell/scintillating-safeguard); Blood Magic
+  Damage bludgeoning\n\t•\tWood—Sorcerous Gifts cantrip: [Tangle Vine](omen://spell/tangle-vine?source=paizo-pathfinder-player-core);
   1st: [Cleanse Cuisine](omen://spell/cleanse-cuisine?source=paizo-pathfinder-player-core);
   3rd: [Wall of Thorns](omen://spell/wall-of-thorns?source=paizo-pathfinder-player-core);
   6th: [Tangling Creepers](omen://spell/tangling-creepers?source=paizo-pathfinder-player-core);
   Blood Magic Damage bludgeoning"
+facts: {advanced-bloodline-spell: '@spell.elemental-motion', greater-bloodline-spell: '@spell.elemental-blast'}
 mechanicsScope: builder
 foundryID: RXRnJcG4XSabZ35a
 rules:
@@ -58,898 +57,113 @@ rules:
     name: $.sorcerer.bloodline.elemental
     label: Elemental bloodline
     type: core/string
-    cases: [air, earth, fire, metal, water, wood]
-- key: sorcerer-spellcasting-source-air
+    cases:
+    - key: air
+      value: air
+      effects:
+      - key: add-elemental-influence-air
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.elemental-influences.air'
+    - key: earth
+      value: earth
+      effects:
+      - key: add-elemental-influence-earth
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.elemental-influences.earth'
+    - key: fire
+      value: fire
+      effects:
+      - key: add-elemental-influence-fire
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.elemental-influences.fire'
+    - key: metal
+      value: metal
+      effects:
+      - key: add-elemental-influence-metal
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.elemental-influences.metal'
+    - key: water
+      value: water
+      effects:
+      - key: add-elemental-influence-water
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.elemental-influences.water'
+    - key: wood
+      value: wood
+      effects:
+      - key: add-elemental-influence-wood
+        effect: core/add-feature@2
+        inputs:
+          feature: '@class.sorcerer.elemental-influences.wood'
+- key: sorcerer-spellcasting-source
   effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
     sourceName: Sorcerer Spellcasting
     castingKind: spontaneous
     tradition: primal
     attribute: charisma
-- key: intimidation-trained-air
+- key: intimidation-trained
   effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     skill: intimidation
     rank: trained
-- key: nature-trained-air
+- key: nature-trained
   effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     skill: nature
     rank: trained
-- key: sorcerer-focus-spells-source-air
+- key: sorcerer-focus-spells-source
   effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-focus-spells
     sourceName: Sorcerer Focus Spells
     castingKind: focus
     tradition: primal
     attribute: charisma
-- key: elemental-toss-focus-spell-air
+- key: elemental-toss-focus-spell
   effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-focus-spells
     spell: '@spell.elemental-toss'
-- key: gale-blast-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.gale-blast']
-- key: tailwind-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.tailwind?source=paizo-pathfinder-player-core']
-- key: resist-energy-known-spell-air
+- key: resist-energy-known-spell
   effect: spellcasting/add-known-spell
   level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: wall-of-wind-known-spell
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.wall-of-wind?source=paizo-pathfinder-player-core']
-- key: unfettered-movement-known-spell-air
+- key: unfettered-movement-known-spell
   effect: spellcasting/add-known-spell
   level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: elemental-form-known-spell-air
+- key: elemental-form-known-spell
   effect: spellcasting/add-known-spell
   level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: chain-lightning-known-spell-air
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']
-- key: energy-aegis-known-spell-air
+- key: energy-aegis-known-spell
   effect: spellcasting/add-known-spell
   level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: earthquake-known-spell-air
+- key: earthquake-known-spell
   effect: spellcasting/add-known-spell
   level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: wrathful-storm-known-spell-air
+- key: wrathful-storm-known-spell
   effect: spellcasting/add-known-spell
   level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: air}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-earth
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: primal
-    attribute: charisma
-- key: intimidation-trained-earth
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: nature-trained-earth
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    skill: nature
-    rank: trained
-- key: sorcerer-focus-spells-source-earth
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: primal
-    attribute: charisma
-- key: elemental-toss-focus-spell-earth
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.elemental-toss'
-- key: scatter-scree-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.scatter-scree']
-- key: pummeling-rubble-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.pummeling-rubble?source=paizo-pathfinder-player-core']
-- key: resist-energy-known-spell-earth
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: earthbind-known-spell
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.earthbind?source=paizo-pathfinder-player-core']
-- key: unfettered-movement-known-spell-earth
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: elemental-form-known-spell-earth
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: petrify-known-spell
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.petrify?source=paizo-pathfinder-player-core']
-- key: energy-aegis-known-spell-earth
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: earthquake-known-spell-earth
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: wrathful-storm-known-spell-earth
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: earth}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-fire
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: primal
-    attribute: charisma
-- key: intimidation-trained-fire
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: nature-trained-fire
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    skill: nature
-    rank: trained
-- key: sorcerer-focus-spells-source-fire
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: primal
-    attribute: charisma
-- key: elemental-toss-focus-spell-fire
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.elemental-toss'
-- key: ignition-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.ignition?source=paizo-pathfinder-player-core']
-- key: breathe-fire-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.breathe-fire?source=paizo-pathfinder-player-core']
-- key: resist-energy-known-spell-fire
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: fireball-known-spell
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.fireball?source=paizo-pathfinder-player-core']
-- key: unfettered-movement-known-spell-fire
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: elemental-form-known-spell-fire
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: tree-of-seasons-known-spell
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.tree-of-seasons?source=paizo-pathfinder-player-core']
-- key: energy-aegis-known-spell-fire
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: earthquake-known-spell-fire
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: wrathful-storm-known-spell-fire
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: fire}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-metal
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: primal
-    attribute: charisma
-- key: intimidation-trained-metal
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: nature-trained-metal
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    skill: nature
-    rank: trained
-- key: sorcerer-focus-spells-source-metal
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: primal
-    attribute: charisma
-- key: elemental-toss-focus-spell-metal
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.elemental-toss'
-- key: electric-arc-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.electric-arc?source=paizo-pathfinder-player-core']
-- key: thunderstrike-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.thunderstrike?source=paizo-pathfinder-player-core']
-- key: resist-energy-known-spell-metal
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: lightning-bolt-known-spell
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.lightning-bolt?source=paizo-pathfinder-player-core']
-- key: unfettered-movement-known-spell-metal
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: elemental-form-known-spell-metal
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: chain-lightning-known-spell-metal
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.chain-lightning?source=paizo-pathfinder-player-core']
-- key: energy-aegis-known-spell-metal
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: earthquake-known-spell-metal
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: wrathful-storm-known-spell-metal
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: metal}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-water
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: primal
-    attribute: charisma
-- key: intimidation-trained-water
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: nature-trained-water
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    skill: nature
-    rank: trained
-- key: sorcerer-focus-spells-source-water
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: primal
-    attribute: charisma
-- key: elemental-toss-focus-spell-water
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.elemental-toss'
-- key: frostbite-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.frostbite?source=paizo-pathfinder-player-core']
-- key: hydraulic-push-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.hydraulic-push?source=paizo-pathfinder-player-core']
-- key: resist-energy-known-spell-water
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: aqueous-orb-known-spell
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.aqueous-orb?source=paizo-pathfinder-player-core']
-- key: unfettered-movement-known-spell-water
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: elemental-form-known-spell-water
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: scintillating-safeguard-known-spell
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.scintillating-safeguard']
-- key: energy-aegis-known-spell-water
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: earthquake-known-spell-water
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: wrathful-storm-known-spell-water
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: water}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']
-- key: sorcerer-spellcasting-source-wood
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    sourceName: Sorcerer Spellcasting
-    castingKind: spontaneous
-    tradition: primal
-    attribute: charisma
-- key: intimidation-trained-wood
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    skill: intimidation
-    rank: trained
-- key: nature-trained-wood
-  effect: core/add-skill-increase@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    skill: nature
-    rank: trained
-- key: sorcerer-focus-spells-source-wood
-  effect: spellcasting/configure-source
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-focus-spells
-    sourceName: Sorcerer Focus Spells
-    castingKind: focus
-    tradition: primal
-    attribute: charisma
-- key: elemental-toss-focus-spell-wood
-  effect: spellcasting/grant-focus-spell@2
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-focus-spells
-    spell: '@spell.elemental-toss'
-- key: tangle-vine-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.tangle-vine?source=paizo-pathfinder-player-core']
-- key: cleanse-cuisine-known-spell
-  effect: spellcasting/add-known-spell
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.cleanse-cuisine?source=paizo-pathfinder-player-core']
-- key: resist-energy-known-spell-wood
-  effect: spellcasting/add-known-spell
-  level: 3
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.resist-energy?source=paizo-pathfinder-player-core']
-- key: wall-of-thorns-known-spell
-  effect: spellcasting/add-known-spell
-  level: 5
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.wall-of-thorns?source=paizo-pathfinder-player-core']
-- key: unfettered-movement-known-spell-wood
-  effect: spellcasting/add-known-spell
-  level: 7
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.unfettered-movement?source=paizo-pathfinder-player-core']
-- key: elemental-form-known-spell-wood
-  effect: spellcasting/add-known-spell
-  level: 9
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.elemental-form?source=paizo-pathfinder-player-core']
-- key: tangling-creepers-known-spell
-  effect: spellcasting/add-known-spell
-  level: 11
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.tangling-creepers?source=paizo-pathfinder-player-core']
-- key: energy-aegis-known-spell-wood
-  effect: spellcasting/add-known-spell
-  level: 13
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.energy-aegis?source=paizo-pathfinder-player-core']
-- key: earthquake-known-spell-wood
-  effect: spellcasting/add-known-spell
-  level: 15
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
-  inputs:
-    source: sorcerer-spellcasting
-    spells: ['@spell.earthquake?source=paizo-pathfinder-player-core']
-- key: wrathful-storm-known-spell-wood
-  effect: spellcasting/add-known-spell
-  level: 17
-  prerequisites:
-  - hasChoice:
-      name: $.sorcerer.bloodline.elemental
-      equals: {type: core/string, value: wood}
   inputs:
     source: sorcerer-spellcasting
     spells: ['@spell.wrathful-storm?source=paizo-pathfinder-player-core']

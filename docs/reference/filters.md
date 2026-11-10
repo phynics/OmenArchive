@@ -36,6 +36,7 @@ Filters fitting within 56 characters may be written inline on a single line. Lon
 | `characterHasFeat` | Tests whether the character has taken a specific feat | `{ characterHasFeat: '@feat.assurance' }` |
 | `hasChoiceAncestryTrait`| Matches records sharing an ancestry chosen by a choice | `{ hasChoiceAncestryTrait: $.feats.adopted-ancestry.ancestry }` |
 | `requiresListValue` | Matches records whose structured prerequisites test a character list for the value a question holds ("a feat that requires that order"). Text-only prerequisites never match | `{ requiresListValue: { list: $.druid.orders, value: { choice: $.feats.order-explorer.order } } }` |
+| `prerequisiteSkill` | Matches records whose typed skill prerequisites can be met using skills on a character list | `{ prerequisiteSkill: { in: $.class.skills } }` |
 | `hasChoiceTradition` | Matches spells of a tradition selected by a choice | `{ hasChoiceTradition: $.gnome.wellspring-tradition }` |
 | `knownBySource` | Matches spells known by a specific spellcasting source | `{ knownBySource: bard-spellcasting }` |
 | `hasSourceTradition` | Matches spells of the tradition a spellcasting source is configured with | `{ hasSourceTradition: witch-spellcasting }` |
@@ -61,6 +62,15 @@ filter:
 - The `in` form names a character list by its `$` path. A list that nothing has added to is empty, so it matches nothing.
 - The records the filter offers must declare the fact. Name them with a `pathPrefix` or a `type` in the same `all`; the validator refuses a fact that none of them declares, a value of another type, and a list whose items are of another type.
 - A key that starts with `fact.` is always a fact. To filter on a metadata key with that spelling, use the long form `{ metadata: { key: fact.tier, value: expert } }`.
+
+## Skill prerequisites
+
+From format 6, `{prerequisiteSkill: {in: $.class.skills}}` matches a feat or other record whose
+typed prerequisites ask only for skills on the character list `in`, a list of skills such as
+`core/skill`. A skill proficiency is met when its skill is on the list; an `anyOf` when one of its
+skill alternatives is; an `allOf` when all of them are. A prerequisite that names no skill is
+ignored, and a record whose typed prerequisites name no skill never matches. Skills stated only
+in text are not read. The filter reads the character, so it is judged where the question is asked.
 
 ## Negation (`not`)
 

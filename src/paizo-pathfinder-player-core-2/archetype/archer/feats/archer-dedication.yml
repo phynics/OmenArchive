@@ -13,7 +13,32 @@ description: 'You have familiarity with all weapons in the bow and crossbow weap
   If you are at least an expert in the bow or crossbow you are using, you get the
   critical specialization effect of that weapon when you get a critical hit with it.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/archer-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [MartialProficiency, MartialProficiency, CriticalSpecialization].'
+unsupportedCategory: numbers
+unsupportedReason: 'Critical specialization is not applied: the archive''s effect
+  unlocks it for a whole weapon group, not for the weapons or trait this record names.'
 foundryID: 4QFElZoWjg1X0vsg
+rules:
+- key: martial-weapons-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: martial, group: bow}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: martial, group: crossbow}
+    rank: trained
+    selfScaling: true
+- key: advanced-weapons-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: advanced, group: bow}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-2-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: advanced, group: crossbow}
+    rank: trained
+    selfScaling: true

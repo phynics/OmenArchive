@@ -8,6 +8,71 @@ description: A investigator gains an extra skill feat at levels 3, 5, 7, 9, 11, 
   18, and 20, beyond the skill feats and skill increases every character gets.
 mechanicsScope: builder
 rules:
+- key: skill-feat-skills
+  effect: core/declare-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    valueType: core/skill
+- key: skill-feat-skill-arcana
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: arcana}
+- key: skill-feat-skill-crafting
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: crafting}
+- key: skill-feat-skill-occultism
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: occultism}
+- key: skill-feat-skill-society
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: society}
+- key: skill-feat-skill-medicine
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: medicine}
+- key: skill-feat-skill-nature
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: nature}
+- key: skill-feat-skill-religion
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: religion}
+- key: skill-feat-skill-survival
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: survival}
+- key: skill-feat-skill-deception
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: deception}
+- key: skill-feat-skill-diplomacy
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: diplomacy}
+- key: skill-feat-skill-intimidation
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: intimidation}
+- key: skill-feat-skill-performance
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {type: core/skill, literal: performance}
 - key: choice-investigator-skill-feat-3
   level: 3
   choice:
@@ -20,6 +85,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 3}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-3
   effect: core/add-feat@3
   level: 3
@@ -37,6 +103,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 5}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-5
   effect: core/add-feat@3
   level: 5
@@ -54,6 +121,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 7}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-7
   effect: core/add-feat@3
   level: 7
@@ -71,6 +139,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 9}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-9
   effect: core/add-feat@3
   level: 9
@@ -88,6 +157,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 11}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-11
   effect: core/add-feat@3
   level: 11
@@ -105,6 +175,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 13}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-13
   effect: core/add-feat@3
   level: 13
@@ -122,6 +193,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 15}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-15
   effect: core/add-feat@3
   level: 15
@@ -139,6 +211,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 17}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-17
   effect: core/add-feat@3
   level: 17
@@ -156,6 +229,7 @@ rules:
         - {type: feat}
         - {trait: systemTrait-skill}
         - {maxLevel: 19}
+        - {prerequisiteSkill: {in: $.investigator.skill-feat-skills}}
 - key: skill-feat-19
   effect: core/add-feat@3
   level: 19

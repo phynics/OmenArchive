@@ -7,7 +7,7 @@ traits:
 - general
 prerequisites:
 - text: master in Perception
-  hasSavingThrowProficiency: {savingThrow: perception, rank: master}
+  hasPerceptionProficiency: master
 description: 'You have refined your palate and have a discerning sense of taste that
   can detect abnormalities in the flavor and texture of food and beverages. When eating
   food or drinking a beverage, you automatically attempt to identify the ingredients,
@@ -26,7 +26,7 @@ mechanicsScope: mixed
 foundryID: fOIUmDGa9gkeCHA0
 rules:
 - key: skills-circumstance-bonus-taste-recall-knowledge
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: skills
     amount: 2

@@ -65,6 +65,75 @@
         "type": "string",
         "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       }
+    },
+    "vocabularies": {
+      "type": "object",
+      "description": "The vocabularies the publication declares, or adds terms to. A vocabulary is a named set of terms that a value of a vocabulary type draws from (a weapon group, a damage type). With extends, the entry adds its terms to a vocabulary a mechanics module declares, written <module alias>/<vocabulary>; the module decides whether its vocabulary is open to other books.",
+      "propertyNames": {
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "extends": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*/[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "terms": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            }
+          }
+        },
+        "required": [
+          "terms"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "facts": {
+      "type": "array",
+      "description": "The facts the publication's records carry, each declared for a collection. A collection path names every book, so it is declared once for the archive. A record states them under facts.",
+      "minItems": 1,
+      "items": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "type": "string",
+          "pattern": "^@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*$",
+          "description": "The records the fact belongs to: @, a family, then any folders, joined by dots (@domain, @class.commander.tactics)."
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][A-Za-z0-9]*(?:-[a-z0-9][A-Za-z0-9]*)*$"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "^(?:int|bool|@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*|[a-z0-9]+(?:-[a-z0-9]+)*|\\[(?:int|bool|@[a-z][a-z0-9-]*(?:\\.[a-z0-9]+(?:-[a-z0-9]+)*)*|[a-z0-9]+(?:-[a-z0-9]+)*)\\])$",
+          "description": "int, bool, the name of a vocabulary, @collection for a reference to a record, or one of these in brackets for a list."
+        }
+      },
+      "required": [
+        "collection",
+        "name",
+        "type"
+      ],
+      "additionalProperties": false
+    }
+    },
+    "requires": {
+      "type": "array",
+      "description": "The publications this one needs, by id, in a list. A reference, prerequisite or grant that names a record of another publication with ?source= fails without that publication, so it has to be listed here; a record listed in externalRecords is the exception. A link in a description doesn't count, because without its publication a link only loses its target. From format 6.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
     }
   },
   "required": [

@@ -12,8 +12,28 @@ description: 'You''ve crossed blades with a wide variety of foes wielding a wide
 
   At 11th level, you become trained in all weapons.'
 mechanicsScope: mixed
-unsupportedReason: 'ActiveEffectLike at position 1 has an unsupported conditional
-  builder payload. Resource: omen://feat/martial-experience?source=paizo-pathfinder-player-core.
-  Foundry keys: [FlatModifier, ActiveEffectLike, ActiveEffectLike, ActiveEffectLike,
-  ActiveEffectLike].'
+unsupportedCategory: numbers
+unsupportedReason: 'FlatModifier at position 1: The selector strike-attack-roll is
+  not a roll the sheet shows.'
 foundryID: qXl2cOh3wL3QszCy
+rules:
+- key: unarmed-attacks-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: unarmed}
+    rank: trained
+- key: simple-weapons-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: simple}
+    rank: trained
+- key: martial-weapons-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: martial}
+    rank: trained
+- key: advanced-weapons-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: advanced}
+    rank: trained

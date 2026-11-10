@@ -13,8 +13,26 @@ description: You become trained in light armor. If you already were trained in l
   this armor type.
 specialText: You can select this feat more than once. Each time, you become trained
   in the next type of armor, as detailed above.
-mechanicsScope: mixed
-unsupportedReason: 'ChoiceSet at position 0 has no supported typed options. Resource:
-  omen://feat/armor-proficiency?source=paizo-pathfinder-player-core. Foundry keys:
-  [ChoiceSet, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: BStw1cANwx5baL6d
+rules:
+- key: choice-armor
+  choice:
+    name: $.feats.armor-proficiency.armor
+    label: Armor
+    type: core/armor-designation
+    cases:
+    - {key: light, value: {armorKind: light, kind: type}}
+    - {key: medium, value: {armorKind: medium, kind: type}}
+    - {key: heavy, value: {armorKind: heavy, kind: type}}
+- key: chosen-armor-trained
+  effect: core/add-armor-proficiency@3
+  inputs:
+    armor: {type: core/armor-designation, choice: $.feats.armor-proficiency.armor}
+    rank: trained
+- key: active-effect-like-1-2
+  effect: core/add-armor-proficiency@3
+  level: 13
+  inputs:
+    armor: {type: core/armor-designation, choice: $.feats.armor-proficiency.armor}
+    rank: expert

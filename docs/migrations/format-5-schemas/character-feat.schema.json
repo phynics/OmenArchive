@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-feat.schema.json",
+  "title": "Character Feat",
+  "description": "Schema for a character feat in the game",
+  "type": "object",
+  "properties": {
+    "foundryID": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable source-system identifier retained for import diagnostics"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the feat"
+    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
+    "type": {
+      "type": "string",
+      "enum": ["general", "ancestry", "class", "skill", "archetype", "other"],
+      "description": "Feat category/type, such as general, ancestry, class, or skill"
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "alternateLevels": {
+      "type": "object",
+      "patternProperties": {
+        "^.*$": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        }
+      },
+      "additionalProperties": false
+    },
+    "rarity": {
+      "$ref": "utility-types/rarity.schema.json"
+    },
+    "traits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "description": {
+      "type": "string"
+    },
+    "prerequisites": {
+      "type": "array",
+      "description": "One list per feat: each prerequisite's text and, next to it, its typed form. A bare string is text with no typed form.",
+      "items": {
+        "oneOf": [
+          { "type": "string", "minLength": 1 },
+          { "$ref": "utility-types/rules.schema.json#/$defs/prerequisiteEntry" }
+        ]
+      },
+      "default": []
+    },
+    "relatedArchetype": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "specialText": {
+      "type": "string"
+    },
+    "repeatPolicy": {
+      "type": "object",
+      "properties": {
+        "maxCount": {
+          "type": ["integer", "null"],
+          "minimum": 2
+        },
+        "instanceLevelGates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "instanceNumber": {
+                "type": "integer",
+                "minimum": 2
+              },
+              "minimumLevel": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 20
+              }
+            },
+            "required": ["instanceNumber", "minimumLevel"],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "duplicateSelectionRules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lookupName": {
+                "type": "string"
+              },
+              "valueTypeID": {
+                "type": "string",
+                "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+              }
+            },
+            "required": ["lookupName", "valueTypeID"],
+            "additionalProperties": false
+          },
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    },
+    "action": {
+      "$ref": "utility-types/action-primitive.schema.json"
+    },
+    "rules": {
+      "x-omen-ownership": "archive",
+      "type": "array",
+      "items": {
+        "$ref": "utility-types/rules.schema.json#/$defs/rule"
+      },
+      "default": []
+    },
+    "mechanicsScope": {
+      "x-omen-ownership": "archive",
+      "type": "string",
+      "enum": ["builder", "encounter", "mixed"]
+    },
+    "unsupportedReason": {
+      "x-omen-ownership": "archive",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "level",
+    "rarity"
+  ],
+  "allOf": [
+    {
+      "$ref": "utility-types/mechanics-support.schema.json"
+    }
+  ]
+}

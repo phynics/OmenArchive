@@ -1,0 +1,19 @@
+---
+name: on the case
+level: 1
+traits:
+- investigator
+description: 'As an investigator, you think of your adventures as cases waiting to
+  be solved. You gain one activity and one reaction you can use to investigate cases:
+  [Pursue a Lead](omen://action/pursue-a-lead) and [Clue In](omen://action/clue-in).'
+mechanicsScope: builder
+foundryID: 6FasgIXUJ1X8ekRn
+rules:
+- key: pursue-a-lead-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.pursue-a-lead'
+- key: clue-in-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.clue-in'

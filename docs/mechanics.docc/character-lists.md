@@ -61,13 +61,13 @@ The reader expands `addTo` into an `add-to-list` rule keyed `<question key>-add`
 
 - `hasChoice: {name: $.druid.orders, contains: …}` tests a list for a value.
 - `{choiceList: $.list}` reads a list that a rule or a question has declared or added to.
-- `$.list[].field` reads one field of every item, in list order, with duplicates kept. It is short for `{list: $.list, field: field}`. The field must be one the list's items have: an entry's declared field, or a field of a record. A record field may follow an entry field (`$.deity.spells[].spell.traits`). There is no `[n]`: a position is unstable, so a rule that needs one item filters on a field.
+- `$.list[].field` reads one field of every item, in list order, with duplicates kept, in a condition (the `name` of a `hasChoice`). A rule input may not read it: use `{choiceList: $.list}`. The field must be one the list's items have: an entry's declared field, or a field of a record. A record field may follow an entry field (`$.deity.spells[].spell.traits`). There is no `[n]`: a position is unstable, so a rule that needs one item filters on a field.
 
 A declaration, an `add-to-list` target and a saved answer's address take the plain path; `[]` is refused there.
 
-## Reserved
+## Rules for each item
 
-`forEach: <list>` on a rule is reserved for rules that run once for each item. It is not supported yet, and a rule that uses it is refused.
+`forEach: <list>` on a rule runs the rule once for each item of a list, after the character's other rules. The list is a plain `$` path of a declared list, and a rule that writes it is refused. An input reads the item as `{item: true}`, or one field of an entry as `{item: true, field: name}`. A text input may hold `{item}` or `{item.field}` for the item and `{$.path}` for the answer to a question; the whole text is the string a translation replaces, `{{` and `}}` write braces. The output of each run depends on the rule and the item, so an item that leaves the list takes only its own output with it.
 
 ## Lists the engine declares
 

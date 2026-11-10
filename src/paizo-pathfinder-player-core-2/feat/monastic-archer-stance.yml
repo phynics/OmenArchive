@@ -25,7 +25,20 @@ specialText: When you select this feat, you become trained in the longbow, short
   if you gain the master strikes class feature, your proficiency rank for these weapons
   increases to master.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/monastic-archer-stance?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [MartialProficiency, ActiveEffectLike, ActiveEffectLike].'
+unsupportedCategory: numbers
+unsupportedReason: 'Proficiency in weapons with the monk trait is not applied: a weapon
+  filter selects by category, group or name only. Rule elements not applied: ActiveEffectLike.'
 foundryID: YG2RxXE9SMfwo6wP
+rules:
+- key: trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: longbow}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: shortbow}}
+    rank: trained
+    selfScaling: true

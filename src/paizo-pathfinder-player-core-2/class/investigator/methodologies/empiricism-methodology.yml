@@ -8,8 +8,7 @@ description: 'Everything comes down to data. Calculating statistics, running num
   any scenario, and anything out of place draws your keen attention.
 
   You are trained in one Intelligence-based skill of your choice. You gain the [That''s
-  Odd](omen://feat/thats-odd?source=paizo-pathfinder-player-core-2) investigator feat,
-  and you gain the [Expeditious Inspection](omen://action/expeditious-inspection?source=paizo-pathfinder-player-core-2)
+  Odd](omen://feat/thats-odd) investigator feat, and you gain the [Expeditious Inspection](omen://action/expeditious-inspection)
   free action.'
 mechanicsScope: builder
 foundryID: g3mNzNphtVxyR9Xr
@@ -37,3 +36,8 @@ rules:
   inputs:
     skill: {choice: $.investigator.empiricism.skill}
     rank: trained
+- key: skill-feat-skill
+  effect: core/add-to-list
+  inputs:
+    list: $.investigator.skill-feat-skills
+    value: {choice: $.investigator.empiricism.skill}

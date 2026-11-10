@@ -11,26 +11,18 @@ prerequisites:
   hasAttributeModifier: {attribute: strength, modifier: 3}
 - text: expert in Intimidation
   hasSkillProficiency: {skill: intimidation, rank: expert}
-description: In situations where you can physically menace the target when you [Coerce](omen://action/coerce?source=paizo-pathfinder-player-core)
-  or [Demoralize](omen://action/demoralize?source=paizo-pathfinder-player-core), you
-  gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty
-  for not sharing a language. If your Strength modifier is +5 or higher and you are
-  a master in Intimidation, this bonus increases to +2.
+description: In situations where you can physically menace the target when you [Coerce](omen://action/coerce)
+  or [Demoralize](omen://action/demoralize), you gain a +1 circumstance bonus to your
+  Intimidation check and you ignore the penalty for not sharing a language. If your
+  Strength modifier is +5 or higher and you are a master in Intimidation, this bonus
+  increases to +2.
 mechanicsScope: mixed
 foundryID: XFJiGllNZp8Xebda
 rules:
 - key: intimidation-circumstance-bonus-physically-menaced
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: intimidation
-    amount: 1
+    amount: (add 1 (and (gte $.attributes.str 5) (gte $.skills.intimidation.rank master)))
     type: circumstance
     when: the target is physically menaced; Coerce or Demoralize
-- key: intimidation-circumstance-bonus-physically-menaced-2
-  effect: core/add-modifier
-  inputs:
-    target: intimidation
-    amount: 2
-    type: circumstance
-    when: the target is physically menaced; Coerce or Demoralize
-    requires: (and (gte $.attributes.str 5) (gte $.skills.intimidation.rank 3))

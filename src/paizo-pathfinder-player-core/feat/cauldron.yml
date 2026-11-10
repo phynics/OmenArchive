@@ -29,7 +29,7 @@ rules:
   effect: core/add-resource-pool
   inputs:
     name: cauldron
-    maximum: (add 1 (gte $.spellcasting.proficiency 3) (gte $.spellcasting.proficiency
-      4))
+    maximum: (add 1 (gte $.spellcasting.proficiency master) (gte $.spellcasting.proficiency
+      legendary))
     refresh: daily
     craftable: {any: [{trait: oil}, {trait: potion}]}

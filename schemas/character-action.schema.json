@@ -9,17 +9,20 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Name of the action"
+          "description": "Name of the action",
+          "minLength": 1
         },
         "attribution": { "$ref": "utility-types/attribution.schema.json" },
         "description": {
           "type": "string",
-          "description": "Description text of the action"
+          "description": "Description text of the action",
+          "minLength": 1
         },
         "traits": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "description": "List of traits associated with this action",
           "default": []
@@ -61,6 +64,20 @@
           },
           "required": ["hoursPerRank", "ranks"],
           "additionalProperties": false
+        },
+        "facts": {
+          "type": "object",
+          "description": "The facts the record states about itself, which a rule can read: a name to a whole number, a flag, a term of a vocabulary, a reference to a record (omen://), or a list of these. The publication declares each fact for the record's collection in its facts; the archive check holds a value to its declaration.",
+          "minProperties": 1,
+          "propertyNames": {
+            "pattern": "^[a-z][A-Za-z0-9]*(?:-[a-z0-9][A-Za-z0-9]*)*$"
+          },
+          "additionalProperties": {
+            "type": ["integer", "boolean", "string", "array"],
+            "items": {
+              "type": ["integer", "boolean", "string"]
+            }
+          }
         }
       },
       "required": [
@@ -74,5 +91,6 @@
     {
       "$ref": "utility-types/mechanics-support.schema.json"
     }
-  ]
+  ],
+  "unevaluatedProperties": false
 }

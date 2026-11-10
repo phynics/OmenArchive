@@ -2,6 +2,8 @@
 
 Grants a +1 circumstance bonus to Crafting checks for items in the chosen specialty (+2 if master in Crafting).
 
+> **Removed in format 6.** A format 6 reader refuses this effect. Write an `add-modifier@2` rule instead: +1, and +2 for a master in Crafting, to crafting items of the chosen specialty.
+
 Effect `add-specialty-crafting`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs
@@ -18,12 +20,14 @@ Effect `add-specialty-crafting`, revision 1, from module `me.atkn.omen.pf2e.play
 
 Used by 1 rules.
 
-Example, from `paizo-pathfinder-player-core/feat/specialty-crafting.yml`:
+Format 6 replacement, from `paizo-pathfinder-player-core/feat/specialty-crafting.yml`:
 
 ```yaml
-- effect: core/add-specialty-crafting
+- key: specialty-crafting-bonus
+  effect: core/add-modifier@2
   inputs:
-    specialty:
-      choice: $.feats.specialty-crafting.specialty
-  key: specialty-crafting
+    target: crafting
+    amount: (add 1 (gte $.skills.crafting.rank master))
+    type: circumstance
+    when: to Craft {$.feats.specialty-crafting.specialty} items
 ```

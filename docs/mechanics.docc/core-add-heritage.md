@@ -2,6 +2,8 @@
 
 Applies the rules and features of a second heritage without altering the character's primary heritage identity (e.g. Elf Atavism).
 
+> **Removed in format 6.** A format 6 reader refuses this effect. Write `core/add-feature@2`, which takes a heritage, instead.
+
 Effect `add-heritage`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs
@@ -14,12 +16,11 @@ Effect `add-heritage`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 Used by 1 rules.
 
-Example, from `paizo-pathfinder-player-core/feat/elf-atavism.yml`:
+Format 6 replacement, from `paizo-pathfinder-player-core/feat/elf-atavism.yml`:
 
 ```yaml
-- effect: core/add-heritage
+- key: grant-heritage
+  effect: core/add-feature@2
   inputs:
-    heritage:
-      choice: $.feats.elf-atavism.heritage
-  key: grant-heritage
+    feature: {choice: $.feats.elf-atavism.heritage}
 ```

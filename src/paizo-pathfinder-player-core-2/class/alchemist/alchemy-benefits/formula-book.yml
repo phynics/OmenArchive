@@ -45,9 +45,11 @@ rules:
         - {rarity: common}
         - {level: 1}
 - key: learn-choice-alchemist-formulas-starting
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.starting
+  effect: core/add-to-list
   inputs:
-    items: {choiceList: $.alchemist.formulas.starting}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-2
   level: 2
   choice:
@@ -63,10 +65,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 2}
 - key: learn-choice-alchemist-formulas-level-2
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-2
+  effect: core/add-to-list
   level: 2
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-2}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-3
   level: 3
   choice:
@@ -82,10 +86,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 3}
 - key: learn-choice-alchemist-formulas-level-3
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-3
+  effect: core/add-to-list
   level: 3
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-3}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-4
   level: 4
   choice:
@@ -101,10 +107,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 4}
 - key: learn-choice-alchemist-formulas-level-4
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-4
+  effect: core/add-to-list
   level: 4
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-4}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-5
   level: 5
   choice:
@@ -120,10 +128,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 5}
 - key: learn-choice-alchemist-formulas-level-5
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-5
+  effect: core/add-to-list
   level: 5
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-5}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-6
   level: 6
   choice:
@@ -139,10 +149,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 6}
 - key: learn-choice-alchemist-formulas-level-6
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-6
+  effect: core/add-to-list
   level: 6
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-6}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-7
   level: 7
   choice:
@@ -158,10 +170,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 7}
 - key: learn-choice-alchemist-formulas-level-7
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-7
+  effect: core/add-to-list
   level: 7
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-7}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-8
   level: 8
   choice:
@@ -177,10 +191,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 8}
 - key: learn-choice-alchemist-formulas-level-8
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-8
+  effect: core/add-to-list
   level: 8
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-8}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-9
   level: 9
   choice:
@@ -196,10 +212,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 9}
 - key: learn-choice-alchemist-formulas-level-9
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-9
+  effect: core/add-to-list
   level: 9
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-9}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-10
   level: 10
   choice:
@@ -215,10 +233,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 10}
 - key: learn-choice-alchemist-formulas-level-10
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-10
+  effect: core/add-to-list
   level: 10
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-10}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-11
   level: 11
   choice:
@@ -234,10 +254,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 11}
 - key: learn-choice-alchemist-formulas-level-11
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-11
+  effect: core/add-to-list
   level: 11
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-11}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-12
   level: 12
   choice:
@@ -253,10 +275,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 12}
 - key: learn-choice-alchemist-formulas-level-12
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-12
+  effect: core/add-to-list
   level: 12
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-12}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-13
   level: 13
   choice:
@@ -272,10 +296,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 13}
 - key: learn-choice-alchemist-formulas-level-13
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-13
+  effect: core/add-to-list
   level: 13
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-13}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-14
   level: 14
   choice:
@@ -291,10 +317,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 14}
 - key: learn-choice-alchemist-formulas-level-14
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-14
+  effect: core/add-to-list
   level: 14
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-14}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-15
   level: 15
   choice:
@@ -310,10 +338,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 15}
 - key: learn-choice-alchemist-formulas-level-15
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-15
+  effect: core/add-to-list
   level: 15
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-15}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-16
   level: 16
   choice:
@@ -329,10 +359,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 16}
 - key: learn-choice-alchemist-formulas-level-16
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-16
+  effect: core/add-to-list
   level: 16
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-16}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-17
   level: 17
   choice:
@@ -348,10 +380,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 17}
 - key: learn-choice-alchemist-formulas-level-17
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-17
+  effect: core/add-to-list
   level: 17
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-17}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-18
   level: 18
   choice:
@@ -367,10 +401,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 18}
 - key: learn-choice-alchemist-formulas-level-18
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-18
+  effect: core/add-to-list
   level: 18
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-18}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-19
   level: 19
   choice:
@@ -386,10 +422,12 @@ rules:
         - {rarity: common}
         - {maxLevel: 19}
 - key: learn-choice-alchemist-formulas-level-19
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-19
+  effect: core/add-to-list
   level: 19
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-19}
+    list: $.crafting.formulas
+    value: {item: true}
 - key: choice-alchemist-formulas-level-20
   level: 20
   choice:
@@ -405,7 +443,9 @@ rules:
         - {rarity: common}
         - {maxLevel: 20}
 - key: learn-choice-alchemist-formulas-level-20
-  effect: core/add-formulas
+  forEach: $.alchemist.formulas.level-20
+  effect: core/add-to-list
   level: 20
   inputs:
-    items: {choiceList: $.alchemist.formulas.level-20}
+    list: $.crafting.formulas
+    value: {item: true}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/phynics/OmenArchive/refs/heads/main/schemas/character-domain.schema.json",
+  "title": "OmenArchive Domain",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "attribution": { "$ref": "utility-types/attribution.schema.json" },
+    "description": {
+      "type": "string"
+    },
+    "domainSpell": {
+      "type": "string",
+      "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$",
+      "description": "The focus spell Domain Initiate grants for this domain."
+    },
+    "advancedDomainSpell": {
+      "type": "string",
+      "pattern": "^omen://spell/[^/?]+(?:\\?source=[^/?]+)?$",
+      "description": "The focus spell Advanced Domain grants for this domain."
+    }
+  },
+  "required": [
+    "name",
+    "description"
+  ],
+  "additionalProperties": false
+}

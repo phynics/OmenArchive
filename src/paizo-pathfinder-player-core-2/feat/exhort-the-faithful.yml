@@ -25,21 +25,21 @@ mechanicsScope: mixed
 foundryID: QvBIYW6aAqoiyim3
 rules:
 - key: diplomacy-circumstance-bonus-request-member-faith
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: diplomacy
     amount: 2
     type: circumstance
     when: Request; member of your faith
 - key: intimidation-circumstance-bonus-coerce-member-faith
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: intimidation
     amount: 2
     type: circumstance
     when: Coerce; member of your faith
 - key: religion-circumstance-bonus-member-faith-request
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: religion
     amount: 2

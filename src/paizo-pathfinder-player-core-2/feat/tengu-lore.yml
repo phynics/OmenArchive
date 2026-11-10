@@ -12,8 +12,45 @@ description: 'You learned skills for surviving in the place where your people we
 
   You also gain the [Additional Lore](omen://feat/additional-lore?source=paizo-pathfinder-player-core)
   general feat for Tengu Lore.'
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/tengu-lore?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, GrantItem, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: GjQZMmw2sz8OyLxj
+rules:
+- key: society-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: society
+    rank: trained
+- key: survival-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: survival
+    rank: trained
+- key: trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {lore: tengu}
+    rank: trained
+- key: active-effect-like-3-2
+  effect: core/add-skill-increase@2
+  level: 3
+  inputs:
+    skill: {lore: tengu}
+    rank: expert
+- key: active-effect-like-3-3
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: {lore: tengu}
+    rank: master
+- key: active-effect-like-3-4
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: {lore: tengu}
+    rank: legendary
+- key: additional-lore-tengu-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.additional-lore.lore: {lore: tengu}

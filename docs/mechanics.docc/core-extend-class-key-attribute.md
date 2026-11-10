@@ -2,6 +2,8 @@
 
 Adds an attribute to the list of choices for the character's key class attribute.
 
+> **Removed in format 6.** A format 6 reader refuses this effect. Write an `add-to-list` rule on `$.class.key-attribute-options` instead.
+
 Effect `extend-class-key-attribute`, revision 1, from module `me.atkn.omen.pf2e.playercore`.
 
 ## Inputs
@@ -14,11 +16,12 @@ Effect `extend-class-key-attribute`, revision 1, from module `me.atkn.omen.pf2e.
 
 Used by 3 rules.
 
-Example, from `paizo-pathfinder-player-core/class/rogue/rackets/mastermind.yml`:
+Format 6 replacement, from `paizo-pathfinder-player-core/class/rogue/rackets/mastermind.yml`:
 
 ```yaml
-- effect: core/extend-class-key-attribute
+- key: key-attribute
+  effect: core/add-to-list
   inputs:
-    attribute: intelligence
-  key: key-attribute
+    list: $.class.key-attribute-options
+    value: {type: core/attribute, literal: intelligence}
 ```

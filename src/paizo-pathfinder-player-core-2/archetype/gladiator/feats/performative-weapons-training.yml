@@ -21,7 +21,53 @@ description: 'You''re skilled with flashy weapons and can use them to great effe
   Whenever you get a critical hit with one of these weapons, you get its critical
   specialization effect.'
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/performative-weapons-training?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [MartialProficiency, CriticalSpecialization].'
+unsupportedCategory: numbers
+unsupportedReason: 'Critical specialization is not applied: the archive''s effect
+  unlocks it for a whole weapon group, not for the weapons or trait this record names.'
 foundryID: SOG0yVNtiDsaNbIO
+rules:
+- key: trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: bo staff}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: dueling
+          cape}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-3
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: spiked
+          chain}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-4
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: sword
+          cane}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-5
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: trident}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-6
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: war flail}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-7
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: whip}}
+    rank: trained
+    selfScaling: true

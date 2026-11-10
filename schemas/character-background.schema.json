@@ -48,7 +48,9 @@
                 "$ref": "utility-types/attribute.schema.json"
               }
             }
-          }
+          },
+          "additionalProperties": false,
+          "required": ["freeBoosts"]
         },
         "skillOption": {
           "$ref": "#/$defs/trainedSkill",
@@ -72,8 +74,7 @@
         }
       },
       "required": [
-        "attributes",
-        "skillFeat"
+        "attributes"
       ],
       "not": {
         "required": ["skillOption", "skillOptions"]
@@ -85,12 +86,14 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "Name of the background"
+          "description": "Name of the background",
+          "minLength": 1
         },
         "attribution": { "$ref": "utility-types/attribution.schema.json" },
         "description": {
           "type": "string",
-          "description": "Description text of the background"
+          "description": "Description text of the background",
+          "minLength": 1
         },
         "rarity": {
           "$ref": "utility-types/rarity.schema.json",
@@ -104,6 +107,20 @@
             "$ref": "utility-types/rules.schema.json#/$defs/rule"
           },
           "default": []
+        },
+        "facts": {
+          "type": "object",
+          "description": "The facts the record states about itself, which a rule can read: a name to a whole number, a flag, a term of a vocabulary, a reference to a record (omen://), or a list of these. The publication declares each fact for the record's collection in its facts; the archive check holds a value to its declaration.",
+          "minProperties": 1,
+          "propertyNames": {
+            "pattern": "^[a-z][A-Za-z0-9]*(?:-[a-z0-9][A-Za-z0-9]*)*$"
+          },
+          "additionalProperties": {
+            "type": ["integer", "boolean", "string", "array"],
+            "items": {
+              "type": ["integer", "boolean", "string"]
+            }
+          }
         }
       },
       "required": [
@@ -122,7 +139,8 @@
                 "allOf": [
                   { "$ref": "#/$defs/backgroundVariant" },
                   { "required": ["key"] }
-                ]
+                ],
+                "unevaluatedProperties": false
               },
               "minItems": 1
             }
@@ -137,5 +155,6 @@
     {
       "$ref": "utility-types/mechanics-support.schema.json"
     }
-  ]
+  ],
+  "unevaluatedProperties": false
 }

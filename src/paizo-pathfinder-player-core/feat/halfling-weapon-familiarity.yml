@@ -14,7 +14,16 @@ description: 'You favor traditional halfling weapons, so you''ve learned how to 
   At 5th level, whenever you get a critical hit with one of these weapons, you get
   its critical specialization effect.'
 mechanicsScope: mixed
-unsupportedReason: 'MartialProficiency at position 0 has no fixed proficiency rank
-  or definition. Resource: omen://feat/halfling-weapon-familiarity?source=paizo-pathfinder-player-core.
-  Foundry keys: [MartialProficiency, MartialProficiency, CriticalSpecialization].'
+unsupportedCategory: numbers
+unsupportedReason: 'Proficiency in weapons with the halfling trait is not applied:
+  a weapon filter selects by category, group or name only. Critical specialization
+  is not applied: the archive''s effect unlocks it for a whole weapon group, not for
+  the weapons or trait this record names.'
 foundryID: 2ebcYbg68pCZfAFQ
+rules:
+- key: trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: shortsword}}
+    rank: trained
+    selfScaling: true

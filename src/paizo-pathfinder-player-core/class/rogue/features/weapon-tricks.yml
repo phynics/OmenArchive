@@ -4,16 +4,20 @@ level: 5
 traits:
 - rogue
 description: You gain expert proficiency in simple weapons, martial weapons, and unarmed
-  attacks. When you critically succeed at an attack roll against an [Off-Guard](omen://condition/off-guard?source=paizo-pathfinder-player-core)
+  attacks. When you critically succeed at an attack roll against an [Off-Guard](omen://condition/off-guard)
   creature while using an agile or finesse weapon or an agile or finesse unarmed attack,
   you apply the critical specialization effect for that weapon or unarmed attack.
 mechanicsScope: mixed
 foundryID: v8UNEJR5IDKi8yqa
 rules:
-- key: weapon-critical-specialization
-  effect: core/add-weapon-critical-specialization
+- key: weapon-critical-specialization-note
+  effect: core/add-note
   inputs:
-    weaponGroup: any
+    target: attack-rolls
+    text: When you critically succeed at an attack roll against an off-guard creature
+      while using an agile or finesse weapon or an agile or finesse unarmed attack,
+      you apply the critical specialization effect for that weapon or unarmed attack.
+    when: Against an off-guard creature with an agile or finesse weapon
 - key: martial-weapons-expert
   effect: core/add-weapon-proficiency@3
   inputs:

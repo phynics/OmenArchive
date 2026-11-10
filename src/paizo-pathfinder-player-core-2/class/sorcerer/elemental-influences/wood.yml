@@ -1,0 +1,34 @@
+---
+name: wood
+level: 1
+traits:
+- sorcerer
+description: 'Wood—Sorcerous Gifts cantrip: [Tangle Vine](omen://spell/tangle-vine?source=paizo-pathfinder-player-core);
+  1st: [Cleanse Cuisine](omen://spell/cleanse-cuisine?source=paizo-pathfinder-player-core);
+  3rd: [Wall of Thorns](omen://spell/wall-of-thorns?source=paizo-pathfinder-player-core);
+  6th: [Tangling Creepers](omen://spell/tangling-creepers?source=paizo-pathfinder-player-core);
+  Blood Magic Damage bludgeoning'
+mechanicsScope: builder
+rules:
+- key: tangle-vine-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.tangle-vine?source=paizo-pathfinder-player-core']
+- key: cleanse-cuisine-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.cleanse-cuisine?source=paizo-pathfinder-player-core']
+- key: wall-of-thorns-known-spell
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.wall-of-thorns?source=paizo-pathfinder-player-core']
+- key: tangling-creepers-known-spell
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.tangling-creepers?source=paizo-pathfinder-player-core']

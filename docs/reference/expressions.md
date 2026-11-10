@@ -13,7 +13,7 @@ appear in:
 |---|---|---|
 | `value`, `amount` | A number added or set | `value: (max 1 (divide $.level 2))` |
 | `maximum` | A pool's size | `maximum: (add 2 $.attributes.int)` |
-| `requires` | A condition: the rule applies when it is 1 | `requires: (gte $.skills.diplomacy.rank 3)` |
+| `requires` | A condition: the rule applies when it is 1 | `requires: (gte $.skills.diplomacy.rank master)` |
 
 In an authored file an expression is bare, as above. The decoded wire form wraps it as
 `[[ (max 1 (divide $.level 2)) ]]`; both forms mean the same thing.
@@ -21,14 +21,16 @@ In an authored file an expression is bare, as above. The decoded wire form wraps
 ## Grammar
 
 ```text
-expression := number | read | '(' operator expression* ')'
+expression := number | read | word | '(' name expression* ')'
 number     := an integer or decimal literal, such as 2 or 0.5
 read       := a $ path, such as $.level or $.skills.diplomacy.rank
-operator   := one of the names in the table below
+word       := lowercase letters, digits and hyphens, such as master or athletics
+name       := one of the operator names in the table below
 ```
 
 Tokens are separated by spaces and parentheses. An expression is written in prefix form: the
-operator comes first, then its arguments.
+operator comes first, then its arguments. A word is a rank (see [Ranks](#ranks)) or the item
+argument of `contains`; it has no other use.
 
 ## Operators
 
@@ -50,12 +52,14 @@ operator comes first, then its arguments.
 | `and` | 1 or more | 1 if every argument is 1 or more, else 0 |
 | `or` | 1 or more | 1 if any argument is 1 or more, else 0 |
 | `not` | 1 | 1 if the argument is less than 1, else 0 |
+| `count` | 1 | The number of items of a list. The argument is the `$` path of a declared list |
+| `contains` | 2 | 1 if a list has an item, else 0. The first argument is the `$` path of a declared list |
 
 ## Numbers and conditions
 
 - **A condition is a number.** The comparison operators and `and`, `or` and `not` give 1 when they
   hold and 0 when they don't. A condition can be used in arithmetic: `(add 1 (gte
-  $.spellcasting.proficiency 3))` is 2 for a master and 1 below.
+  $.spellcasting.proficiency master))` is 2 for a master and 1 below.
 - **A condition holds when its value is 1 or more.** `requires` applies its rule only then.
 - **Rounding happens once, at the end.** Intermediate values keep their fractions, and the final
   value is rounded down to a whole number. `(divide $.level 2)` at 5th level is 2.5 while it is
@@ -69,15 +73,32 @@ A read is a `$` path that gives a whole number. The engine provides these:
 |---|---|
 | `$.level` | The character's level, 1 to 20 |
 | `$.attributes.<str, dex, con, int, wis or cha>` | The attribute modifier |
-| `$.skills.<skill>.rank` | The skill's proficiency rank: 0 untrained, 1 trained, 2 expert, 3 master, 4 legendary |
-| `$.spellcasting.proficiency` | The character's spell attack and spell DC rank, on the same 0 to 4 scale |
+| `$.skills.<skill>.rank` | The skill's proficiency rank, compared with a rank word |
+| `$.spellcasting.proficiency` | The character's spell attack and spell DC rank, compared the same way |
 | `$.class.dc` | The class DC of the character's class |
 | `$.class.<class>.dc` | The class DC of a class the character has |
 | `$.feats.<feat>.class-dc` | The class DC a feat uses |
 | `$.archetype.<archetype>.feat-count` | How many feats the character has from that archetype, dedication included |
 
 A read can also name a question the record's rules declare, when its answer is a whole number. Reads
-that give text or lists, such as `$.ancestry.name`, can't be used in an expression.
+that give text or lists, such as `$.ancestry.name`, can't be used as a value in an expression. A list
+can be the first argument of `count` and `contains`.
+
+## Ranks
+
+A rank is a word in an expression: untrained, trained, expert, master or legendary. A comparison reads
+the words by position, so `(gte $.skills.diplomacy.rank master)` holds for master and legendary.
+Comparing a rank read with a number is an error that names the word to use. Attribute reads and the
+level stay number.
+
+## Counting a list
+
+`(count $.some.list)` is the number of items of a list a rule declares (0 when the character has
+none). `(contains $.some.list item)` is a condition: it holds when the list has the item. The first
+argument is the `$` path of a declared list. The item is a bare word such as `athletics`, a number, or
+the `$` path of a question's answer. Both take part in arithmetic and comparisons like any other value,
+so `(multiply 2 (count $.feats.my-feat.skills))` gives two hit points per item. The operator table
+lists `count` (one argument) and `contains` (two). See [Character lists](character-lists.md).
 
 ## When an expression can't be evaluated
 
@@ -95,5 +116,6 @@ these mistakes with the record and the line, so check an archive before publishi
 | `(floor (divide $.level 2))` | 7th level | 3 |
 | `(add 2 $.attributes.int)` | Intelligence +3 | 5 |
 | `(multiply 3 $.archetype.fighter.feat-count)` | two fighter archetype feats | 6 |
-| `(gte $.skills.diplomacy.rank 3)` | master in Diplomacy; expert | 1; 0 |
-| `(and (gte $.attributes.str 5) (gte $.skills.intimidation.rank 3))` | Strength +5, master in Intimidation | 1 |
+| `(gte $.skills.diplomacy.rank master)` | master in Diplomacy; expert | 1; 0 |
+| `(and (gte $.attributes.str 5) (gte $.skills.intimidation.rank master))` | Strength +5, master in Intimidation | 1 |
+| `(multiply 2 (count $.feats.my-feat.skills))` | three skills on the list | 6 |

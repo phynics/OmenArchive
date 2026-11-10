@@ -17,7 +17,13 @@ description: Your training in the wrestling arts has made you particularly adept
   to your Fortitude DC when resisting an opponent's attempts to Grapple you or Swallow
   you Whole.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/wrestler-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem, FlatModifier].'
+unsupportedCategory: numbers
+unsupportedReason: 'FlatModifier at position 3: The selector fortitude-dc is not a
+  roll the sheet shows. Rule elements not applied: GrantItem.'
 foundryID: 5npovgLMUlvtot2J
+rules:
+- key: athletics-expert
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: athletics
+    rank: expert

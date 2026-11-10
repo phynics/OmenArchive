@@ -6,11 +6,15 @@ type: ancestry
 traits:
 - orc
 description: You have an impressive innate ability to tame and command ferocious beasts.
-  You become trained in the Nature skill and gain your choice of the [Pet](omen://feat/pet?source=paizo-pathfinder-player-core)
-  general feat or the [Train Animal](omen://feat/train-animal?source=paizo-pathfinder-player-core)
-  skill feat.
+  You become trained in the Nature skill and gain your choice of the [Pet](omen://feat/pet)
+  general feat or the [Train Animal](omen://feat/train-animal) skill feat.
 mechanicsScope: mixed
-unsupportedReason: 'GrantItem at position 2 references unsupported ChoiceSet type
-  string. Resource: omen://feat/beast-trainer?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike, ChoiceSet, GrantItem].'
+unsupportedCategory: choice
+unsupportedReason: 'Rule elements not applied: ChoiceSet, GrantItem.'
 foundryID: wtTye8OrC9cuK7YP
+rules:
+- key: nature-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: nature
+    rank: trained

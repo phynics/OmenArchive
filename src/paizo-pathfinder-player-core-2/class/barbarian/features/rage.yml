@@ -1,0 +1,14 @@
+---
+name: rage
+level: 1
+traits:
+- barbarian
+description: You gain the [Rage](omen://action/rage) action, which lets you fly into
+  a frenzy.
+mechanicsScope: builder
+foundryID: WZUCvxqbigXos1L9
+rules:
+- key: rage-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.rage'

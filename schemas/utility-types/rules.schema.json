@@ -37,8 +37,9 @@
               "$ref": "#/$defs/inputs"
             },
             "forEach": {
-              "description": "Reserved for rules that run once for each item of a list. Not supported yet: a rule that uses it is refused.",
-              "not": {}
+              "description": "The $ path of a list: the rule runs once for each item of it, after the record's other rules. An input reads the item as {item: true} (with a field for an entry), and a text as {item} or {item.field}.",
+              "type": "string",
+              "pattern": "^\\$\\.[a-z0-9]+(-[a-z0-9]+)*(\\.[a-z0-9]+(-[a-z0-9]+)*)+$"
             }
           },
           "required": [
@@ -74,8 +75,9 @@
               "$ref": "#/$defs/choice"
             },
             "forEach": {
-              "description": "Reserved for rules that run once for each item of a list. Not supported yet: a rule that uses it is refused.",
-              "not": {}
+              "description": "The $ path of a list: the rule runs once for each item of it, after the record's other rules. An input reads the item as {item: true} (with a field for an entry), and a text as {item} or {item.field}.",
+              "type": "string",
+              "pattern": "^\\$\\.[a-z0-9]+(-[a-z0-9]+)*(\\.[a-z0-9]+(-[a-z0-9]+)*)+$"
             }
           },
           "required": [
@@ -160,10 +162,6 @@
             "from": {
               "$ref": "#/$defs/choiceName",
               "description": "Intersects candidates with this named fact's valid values."
-            },
-            "type": {
-              "$ref": "#/$defs/typeName",
-              "description": "The older spelling; the type is written on the choice."
             }
           },
           "required": [
@@ -176,9 +174,6 @@
           "anyOf": [
             {
               "const": true
-            },
-            {
-              "$ref": "#/$defs/typeName"
             }
           ]
         },
@@ -347,49 +342,6 @@
       "oneOf": [
         {
           "type": "object",
-          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
-          "properties": {
-            "hasClassTrait": {
-              "type": "boolean",
-              "const": true
-            }
-          },
-          "required": [
-            "hasClassTrait"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. Kept as a generic level check.",
-          "properties": {
-            "hasLevel": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 20
-            }
-          },
-          "required": [
-            "hasLevel"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
-          "properties": {
-            "hasAncestryWithName": {
-              "type": "string",
-              "minLength": 1
-            }
-          },
-          "required": [
-            "hasAncestryWithName"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
           "properties": {
             "hasClassWithName": {
               "type": "string",
@@ -425,34 +377,6 @@
           },
           "required": [
             "has"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. A score check kept to read older data; the remaster uses hasAttributeModifier, so new content doesn't author it.",
-          "properties": {
-            "hasAttribute": {
-              "type": "object",
-              "properties": {
-                "attribute": {
-                  "$ref": "#/$defs/prerequisiteAttribute"
-                },
-                "score": {
-                  "type": "integer",
-                  "minimum": 1,
-                  "maximum": 30
-                }
-              },
-              "required": [
-                "attribute",
-                "score"
-              ],
-              "additionalProperties": false
-            }
-          },
-          "required": [
-            "hasAttribute"
           ],
           "additionalProperties": false
         },
@@ -543,20 +467,6 @@
           },
           "required": [
             "hasSpellcasting"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. Kept as a generic access check.",
-          "properties": {
-            "hasAccess": {
-              "type": "string",
-              "minLength": 1
-            }
-          },
-          "required": [
-            "hasAccess"
           ],
           "additionalProperties": false
         },
@@ -716,6 +626,18 @@
             "hasChoice"
           ],
           "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasPerceptionProficiency": {
+              "$ref": "proficiency-rank.schema.json"
+            }
+          },
+          "required": [
+            "hasPerceptionProficiency"
+          ],
+          "additionalProperties": false
         }
       ]
     },
@@ -835,100 +757,6 @@
       "oneOf": [
         {
           "type": "object",
-          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
-          "properties": {
-            "hasClassTrait": {
-              "type": "boolean",
-              "const": true
-            },
-            "text": {
-              "type": "string",
-              "minLength": 1
-            },
-            "diagnostic": {
-              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
-              "oneOf": [
-                {
-                  "const": true
-                },
-                {
-                  "type": "string",
-                  "minLength": 1
-                }
-              ]
-            }
-          },
-          "required": [
-            "text",
-            "hasClassTrait"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. Kept as a generic level check.",
-          "properties": {
-            "hasLevel": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 20
-            },
-            "text": {
-              "type": "string",
-              "minLength": 1
-            },
-            "diagnostic": {
-              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
-              "oneOf": [
-                {
-                  "const": true
-                },
-                {
-                  "type": "string",
-                  "minLength": 1
-                }
-              ]
-            }
-          },
-          "required": [
-            "text",
-            "hasLevel"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. Kept until its callers and saved packages are checked; a removal candidate.",
-          "properties": {
-            "hasAncestryWithName": {
-              "type": "string",
-              "minLength": 1
-            },
-            "text": {
-              "type": "string",
-              "minLength": 1
-            },
-            "diagnostic": {
-              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
-              "oneOf": [
-                {
-                  "const": true
-                },
-                {
-                  "type": "string",
-                  "minLength": 1
-                }
-              ]
-            }
-          },
-          "required": [
-            "text",
-            "hasAncestryWithName"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
           "properties": {
             "hasClassWithName": {
               "type": "string",
@@ -1015,51 +843,6 @@
           "required": [
             "text",
             "has"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. A score check kept to read older data; the remaster uses hasAttributeModifier, so new content doesn't author it.",
-          "properties": {
-            "hasAttribute": {
-              "type": "object",
-              "properties": {
-                "attribute": {
-                  "$ref": "#/$defs/prerequisiteAttribute"
-                },
-                "score": {
-                  "type": "integer",
-                  "minimum": 1,
-                  "maximum": 30
-                }
-              },
-              "required": [
-                "attribute",
-                "score"
-              ],
-              "additionalProperties": false
-            },
-            "text": {
-              "type": "string",
-              "minLength": 1
-            },
-            "diagnostic": {
-              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
-              "oneOf": [
-                {
-                  "const": true
-                },
-                {
-                  "type": "string",
-                  "minLength": 1
-                }
-              ]
-            }
-          },
-          "required": [
-            "text",
-            "hasAttribute"
           ],
           "additionalProperties": false
         },
@@ -1218,37 +1001,6 @@
           "required": [
             "text",
             "hasSpellcasting"
-          ],
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "description": "No archive use. Kept as a generic access check.",
-          "properties": {
-            "hasAccess": {
-              "type": "string",
-              "minLength": 1
-            },
-            "text": {
-              "type": "string",
-              "minLength": 1
-            },
-            "diagnostic": {
-              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
-              "oneOf": [
-                {
-                  "const": true
-                },
-                {
-                  "type": "string",
-                  "minLength": 1
-                }
-              ]
-            }
-          },
-          "required": [
-            "text",
-            "hasAccess"
           ],
           "additionalProperties": false
         },
@@ -1500,6 +1252,55 @@
           "required": [
             "text",
             "hasChoice"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "hasPerceptionProficiency": {
+              "$ref": "proficiency-rank.schema.json"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "diagnostic": {
+              "description": "true: the unsupported reason is also reported as a diagnostic; text: a different diagnostic",
+              "oneOf": [
+                {
+                  "const": true
+                },
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "required": [
+            "text",
+            "hasPerceptionProficiency"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "A condition no kind says, as an expression over what the builder knows: a condition (not a number) that reads builder state only. The text is what the player reads. Use a kind when one exists.",
+          "properties": {
+            "when": {
+              "type": "string",
+              "description": "An expression in parentheses, such as (lte $.class.hit-points (add 8 $.attributes.con))",
+              "pattern": "^\\(.+\\)$"
+            },
+            "text": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "text",
+            "when"
           ],
           "additionalProperties": false
         }

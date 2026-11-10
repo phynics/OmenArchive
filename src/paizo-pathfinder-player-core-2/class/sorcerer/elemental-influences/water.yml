@@ -1,0 +1,34 @@
+---
+name: water
+level: 1
+traits:
+- sorcerer
+description: 'Water—Sorcerous Gifts cantrip: [Frostbite](omen://spell/frostbite?source=paizo-pathfinder-player-core);
+  1st: [Hydraulic Push](omen://spell/hydraulic-push?source=paizo-pathfinder-player-core);
+  3rd: [Aqueous Orb](omen://spell/aqueous-orb?source=paizo-pathfinder-player-core);
+  6th: [Scintillating Safeguard](omen://spell/scintillating-safeguard); Blood Magic
+  Damage bludgeoning'
+mechanicsScope: builder
+rules:
+- key: frostbite-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.frostbite?source=paizo-pathfinder-player-core']
+- key: hydraulic-push-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.hydraulic-push?source=paizo-pathfinder-player-core']
+- key: aqueous-orb-known-spell
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.aqueous-orb?source=paizo-pathfinder-player-core']
+- key: scintillating-safeguard-known-spell
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.scintillating-safeguard']

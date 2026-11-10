@@ -15,7 +15,29 @@ description: 'Your kin have instilled in you an affinity for hard-hitting weapon
   At 5th level, whenever you get a critical hit with one of these weapons, you get
   its critical specialization effect.'
 mechanicsScope: mixed
-unsupportedReason: 'MartialProficiency at position 0 has no fixed proficiency rank
-  or definition. Resource: omen://feat/dwarven-weapon-familiarity?source=paizo-pathfinder-player-core.
-  Foundry keys: [MartialProficiency, MartialProficiency, CriticalSpecialization].'
+unsupportedCategory: numbers
+unsupportedReason: 'Proficiency in weapons with the dwarf trait is not applied: a
+  weapon filter selects by category, group or name only. Critical specialization is
+  not applied: the archive''s effect unlocks it for a whole weapon group, not for
+  the weapons or trait this record names.'
 foundryID: CXS0ryG2SODSobm9
+rules:
+- key: trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: battle
+          axe}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-2
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: pick}}
+    rank: trained
+    selfScaling: true
+- key: martial-proficiency-1-3
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: warhammer}}
+    rank: trained
+    selfScaling: true

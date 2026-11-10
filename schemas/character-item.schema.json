@@ -5,9 +5,9 @@
   "description": "Canonical equipment record. The type discriminator selects one subtype payload while physical fields stay shared.",
   "type": "object",
   "properties": {
-    "name": { "type": "string" },
+    "name": { "type": "string", "minLength": 1 },
     "attribution": { "$ref": "utility-types/attribution.schema.json" },
-    "foundryID": { "type": "string" },
+    "foundryID": { "type": "string", "minLength": 1 },
     "formulaFamily": {
       "type": "string",
       "minLength": 1,
@@ -19,18 +19,18 @@
     },
     "level": { "type": "integer", "minimum": 0, "maximum": 30 },
     "rarity": { "$ref": "utility-types/rarity.schema.json" },
-    "traits": { "type": "array", "items": { "type": "string" } },
-    "description": { "type": "string" },
+    "traits": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "description": { "type": "string", "minLength": 1 },
     "physical": {
       "type": "object",
       "properties": {
-        "bulk": { "type": "string" },
-        "price": { "type": "string" },
-        "quantity": { "type": "integer", "minimum": 0 },
-        "hardness": { "type": "integer", "minimum": 0 },
-        "hitPoints": { "type": "integer", "minimum": 0 },
-        "usage": { "type": "string" },
-        "size": { "type": "string" }
+        "bulk": { "type": "string", "minLength": 1 },
+        "price": { "type": "string", "minLength": 1 },
+        "quantity": { "type": "integer", "minimum": 0, "maximum": 1000 },
+        "hardness": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "hitPoints": { "type": "integer", "minimum": 0, "maximum": 1000 },
+        "usage": { "type": "string", "minLength": 1 },
+        "size": { "type": "string", "minLength": 1 }
       },
       "additionalProperties": false
     },
@@ -163,6 +163,26 @@
       "x-omen-ownership": "archive",
       "type": "string",
       "minLength": 1
+    },
+    "facts": {
+      "type": "object",
+      "description": "The facts the record states about itself, which a rule can read: a name to a whole number, a flag, a term of a vocabulary, a reference to a record (omen://), or a list of these. The publication declares each fact for the record's collection in its facts; the archive check holds a value to its declaration.",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z][A-Za-z0-9]*(?:-[a-z0-9][A-Za-z0-9]*)*$"
+      },
+      "additionalProperties": {
+        "type": ["integer", "boolean", "string", "array"],
+        "items": {
+          "type": ["integer", "boolean", "string"]
+        }
+      }
+    },
+    "unsupportedCategory": {
+      "x-omen-ownership": "archive",
+      "description": "What the unapplied rules cost a player: numbers (a bonus, Speed, proficiency rank or skill is wrong or missing), choice (a choice the book allows can't be made), benefit (a benefit the book grants is not applied), text (the rule is in the description and the player applies it) or scope (a table or encounter concern a builder doesn't need). Required with unsupportedReason; the reason says what is missing in words. From format 6.",
+      "type": "string",
+      "enum": ["numbers", "choice", "benefit", "text", "scope"]
     }
   },
   "required": ["name", "type", "level", "rarity", "physical"],

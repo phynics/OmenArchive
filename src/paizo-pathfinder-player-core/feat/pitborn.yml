@@ -17,7 +17,12 @@ description: 'Your blood bears the mark of a demon, a living embodiment of sin f
   You also gain any one common 1st-level skill feat with a prerequisite of trained
   in Athletics, as reflects the manifestation of your fiendish blood.'
 mechanicsScope: mixed
-unsupportedReason: 'GrantItem at position 2 references unsupported ChoiceSet type
-  string. Resource: omen://feat/pitborn?source=paizo-pathfinder-player-core. Foundry
-  keys: [ActiveEffectLike, ChoiceSet, GrantItem].'
+unsupportedCategory: choice
+unsupportedReason: 'Rule elements not applied: ChoiceSet, GrantItem.'
 foundryID: gxQheZ4xuDWwyzy4
+rules:
+- key: athletics-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: athletics
+    rank: trained

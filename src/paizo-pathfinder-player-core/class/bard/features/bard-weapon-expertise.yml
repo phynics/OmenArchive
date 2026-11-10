@@ -11,10 +11,14 @@ description: You have become thoroughly adept with bardic weapons. Your proficie
 mechanicsScope: mixed
 foundryID: 4lp8oG9A3zuqhPBS
 rules:
-- key: weapon-critical-specialization
-  effect: core/add-weapon-critical-specialization
+- key: weapon-critical-specialization-note
+  effect: core/add-note
   inputs:
-    weaponGroup: any
+    target: attack-rolls
+    text: When you critically succeed at an attack roll using a martial weapon, a
+      simple weapon or an unarmed attack while one of your compositions is active,
+      you apply the critical specialization effect for that weapon or unarmed attack.
+    when: One of your compositions is active
 - key: martial-weapons-expert
   effect: core/add-weapon-proficiency@3
   inputs:

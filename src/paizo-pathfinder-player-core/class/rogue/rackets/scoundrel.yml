@@ -7,8 +7,7 @@ description: 'You use fast-talking, flattery, and a silver tongue to avoid dange
   and escape tricky situations. You might be a grifter or con artist, or you might
   use your skills in certain reputable professions, like a barrister or diplomat.
 
-  When you successfully [Feint](omen://action/feint?source=paizo-pathfinder-player-core),
-  the target is [Off-Guard](omen://condition/off-guard?source=paizo-pathfinder-player-core)
+  When you successfully [Feint](omen://action/feint), the target is [Off-Guard](omen://condition/off-guard)
   against your melee attacks until the end of your next turn. On a critical success,
   the target is off-guard against all melee attacks until the end of your next turn,
   not just yours.
@@ -20,9 +19,10 @@ mechanicsScope: mixed
 foundryID: ZvfxtUMtfIOLYHyg
 rules:
 - key: key-attribute
-  effect: core/extend-class-key-attribute
+  effect: core/add-to-list
   inputs:
-    attribute: charisma
+    list: $.class.key-attribute-options
+    value: {type: core/attribute, literal: charisma}
 - key: diplomacy-trained
   effect: core/add-skill-increase@2
   inputs:

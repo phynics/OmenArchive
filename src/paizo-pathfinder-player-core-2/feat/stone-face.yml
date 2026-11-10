@@ -9,12 +9,13 @@ description: You've mastered the art of composure, even in the face of fear. You
   a +1 circumstance bonus to saves against effects with the fear trait and a +2 circumstance
   bonus to your Will DC against Intimidation skill actions, such as [Demoralize](omen://action/demoralize?source=paizo-pathfinder-player-core).
 mechanicsScope: mixed
+unsupportedCategory: numbers
 unsupportedReason: 'FlatModifier at position 2: The selector will-dc is not a roll
   the sheet shows.'
 foundryID: Nn80wBZYJZxcuKsJ
 rules:
 - key: saving-throws-circumstance-bonus-fear
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: saving-throws
     amount: 1

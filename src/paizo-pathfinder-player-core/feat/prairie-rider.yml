@@ -8,9 +8,9 @@ traits:
 description: You grew up riding your clan's shaggy ponies and riding dogs. You become
   trained in Nature. If you would automatically become trained in Nature \(from your
   background or class, for example\), you instead become trained in a skill of your
-  choice. You also get a +1 circumstance bonus to [Command an Animal](omen://action/command-an-animal?source=paizo-pathfinder-player-core)
+  choice. You also get a +1 circumstance bonus to [Command an Animal](omen://action/command-an-animal)
   if the target is a traditional halfling mount, such as a pony or riding dog.
-mechanicsScope: mixed
+mechanicsScope: builder
 foundryID: A9HQ2bMAge2aGgWx
 rules:
 - key: nature-trained
@@ -18,3 +18,10 @@ rules:
   inputs:
     skill: nature
     rank: trained
+- key: nature-circumstance-bonus-command-animal-pony
+  effect: core/add-modifier@2
+  inputs:
+    target: nature
+    amount: 1
+    type: circumstance
+    when: Command An Animal; the target is pony or the target is riding dog

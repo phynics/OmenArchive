@@ -4,14 +4,16 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "attribution": { "$ref": "utility-types/attribution.schema.json" },
     "rarity": {
       "$ref": "utility-types/rarity.schema.json"
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "keyAttribute": {
       "oneOf": [
@@ -46,7 +48,8 @@
     },
     "additionalSkillCount": {
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "maximum": 10
     },
     "grantedSkills": {
       "type": "array",
@@ -60,7 +63,8 @@
       "properties": {
         "choose": {
           "type": "integer",
-          "minimum": 1
+          "minimum": 1,
+          "maximum": 10
         },
         "from": {
           "type": "array",
@@ -70,7 +74,8 @@
           "minItems": 1
         }
       },
-      "required": ["choose", "from"]
+      "required": ["choose", "from"],
+      "additionalProperties": false
     },
     "mechanicsScope": {
       "x-omen-ownership": "archive",
@@ -81,6 +86,29 @@
       "x-omen-ownership": "archive",
       "type": "string",
       "minLength": 1
+    },
+    "perceptionProficiency": {
+      "$ref": "utility-types/proficiency-rank.schema.json"
+    },
+    "facts": {
+      "type": "object",
+      "description": "The facts the record states about itself, which a rule can read: a name to a whole number, a flag, a term of a vocabulary, a reference to a record (omen://), or a list of these. The publication declares each fact for the record's collection in its facts; the archive check holds a value to its declaration.",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z][A-Za-z0-9]*(?:-[a-z0-9][A-Za-z0-9]*)*$"
+      },
+      "additionalProperties": {
+        "type": ["integer", "boolean", "string", "array"],
+        "items": {
+          "type": ["integer", "boolean", "string"]
+        }
+      }
+    },
+    "unsupportedCategory": {
+      "x-omen-ownership": "archive",
+      "description": "What the unapplied rules cost a player: numbers (a bonus, Speed, proficiency rank or skill is wrong or missing), choice (a choice the book allows can't be made), benefit (a benefit the book grants is not applied), text (the rule is in the description and the player applies it) or scope (a table or encounter concern a builder doesn't need). Required with unsupportedReason; the reason says what is missing in words. From format 6.",
+      "type": "string",
+      "enum": ["numbers", "choice", "benefit", "text", "scope"]
     }
   },
   "required": [
@@ -91,11 +119,13 @@
     "armorProficiency",
     "weaponProficiency",
     "savingThrowProficiency",
-    "additionalSkillCount"
+    "additionalSkillCount",
+    "perceptionProficiency"
   ],
   "allOf": [
     {
       "$ref": "utility-types/mechanics-support.schema.json"
     }
-  ]
+  ],
+  "additionalProperties": false
 }

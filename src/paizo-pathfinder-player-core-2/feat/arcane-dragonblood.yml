@@ -14,7 +14,12 @@ description: You descend from a dragon that wields mastery of their magical abil
   Sense](omen://feat/arcane-sense?source=paizo-pathfinder-player-core) skill feat.
   If you choose a draconic exemplar, you must choose an arcane dragon.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/arcane-dragonblood?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem].'
+unsupportedCategory: benefit
+unsupportedReason: 'Rule elements not applied: GrantItem.'
 foundryID: oqWclVuvEOh7R5og
+rules:
+- key: arcana-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: arcana
+    rank: trained

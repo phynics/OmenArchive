@@ -10,9 +10,9 @@ prerequisites:
 - text: trained in Nature
   hasSkillProficiency: {skill: nature, rank: trained}
 description: 'You can apply natural cures to heal your allies. You can use Nature
-  instead of Medicine to [Treat Wounds](omen://action/treat-wounds?source=paizo-pathfinder-player-core),
-  including higher Nature proficiency letting you attempt more difficult checks. It
-  doesn''t replace Medicine for uses of the skill other than [Treat Wounds](omen://action/treat-wounds?source=paizo-pathfinder-player-core)
+  instead of Medicine to [Treat Wounds](omen://action/treat-wounds), including higher
+  Nature proficiency letting you attempt more difficult checks. It doesn''t replace
+  Medicine for uses of the skill other than [Treat Wounds](omen://action/treat-wounds)
   or for feat prerequisites.
 
   If you''re in the wilderness, you might have easier access to fresh ingredients,
@@ -22,7 +22,7 @@ mechanicsScope: mixed
 foundryID: WC4xLBGmBsdOdHWu
 rules:
 - key: nature-circumstance-bonus-treat-wounds-fresh
-  effect: core/add-modifier
+  effect: core/add-modifier@2
   inputs:
     target: nature
     amount: 2

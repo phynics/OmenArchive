@@ -13,8 +13,45 @@ description: 'You were raised by your vampiric parent, or you''ve invested subst
 
   You also gain the [Additional Lore](omen://feat/additional-lore?source=paizo-pathfinder-player-core)
   general feat for Vampire Lore.'
-mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/vampire-lore?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, ActiveEffectLike, GrantItem, ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: i0iyW1I7TylEgpV6
+rules:
+- key: society-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: society
+    rank: trained
+- key: religion-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: religion
+    rank: trained
+- key: trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {lore: vampire}
+    rank: trained
+- key: active-effect-like-3-2
+  effect: core/add-skill-increase@2
+  level: 3
+  inputs:
+    skill: {lore: vampire}
+    rank: expert
+- key: active-effect-like-3-3
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: {lore: vampire}
+    rank: master
+- key: active-effect-like-3-4
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: {lore: vampire}
+    rank: legendary
+- key: additional-lore-vampire-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.additional-lore.lore: {lore: vampire}

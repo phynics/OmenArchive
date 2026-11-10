@@ -15,7 +15,23 @@ description: You have trained carefully to maximize the protective qualities of 
   proficiency in unarmored defense and you're 13th level or higher, you also become
   an expert in the armor types granted to you by this feat.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/sentinel-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ChoiceSet, ActiveEffectLike, ActiveEffectLike, ActiveEffectLike].'
+unsupportedCategory: numbers
+unsupportedReason: 'Training in heavy armor for a character already trained in light
+  and medium armor is not applied: no rule can test a character''s armor ranks. The
+  13th-level clause (expert in light and medium armor for a character with expert
+  unarmored defense) is only approximated: these ranks rise with any armor rank the
+  character gains, unarmored defense included, and are not capped at expert.'
 foundryID: 8foxmfC6FFT3oYpV
+rules:
+- key: light-armor-trained
+  effect: core/add-armor-proficiency@3
+  inputs:
+    armor: {category: light}
+    rank: trained
+    selfScaling: true
+- key: medium-armor-trained
+  effect: core/add-armor-proficiency@3
+  inputs:
+    armor: {category: medium}
+    rank: trained
+    selfScaling: true

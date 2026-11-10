@@ -1,0 +1,34 @@
+---
+name: fire
+level: 1
+traits:
+- sorcerer
+description: 'Fire—Sorcerous Gifts cantrip: [Ignition](omen://spell/ignition?source=paizo-pathfinder-player-core),
+  1st: [Breathe Fire](omen://spell/breathe-fire?source=paizo-pathfinder-player-core);
+  3rd: [Fireball](omen://spell/fireball?source=paizo-pathfinder-player-core); 6th:
+  [Tree of Seasons](omen://spell/tree-of-seasons?source=paizo-pathfinder-player-core)
+  \(all pods are summer\); Blood Magic Damage fire'
+mechanicsScope: builder
+rules:
+- key: ignition-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.ignition?source=paizo-pathfinder-player-core']
+- key: breathe-fire-known-spell
+  effect: spellcasting/add-known-spell
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.breathe-fire?source=paizo-pathfinder-player-core']
+- key: fireball-known-spell
+  effect: spellcasting/add-known-spell
+  level: 5
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.fireball?source=paizo-pathfinder-player-core']
+- key: tree-of-seasons-known-spell
+  effect: spellcasting/add-known-spell
+  level: 11
+  inputs:
+    source: sorcerer-spellcasting
+    spells: ['@spell.tree-of-seasons?source=paizo-pathfinder-player-core']

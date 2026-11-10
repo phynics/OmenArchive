@@ -15,8 +15,12 @@ description: Your training has helped you adapt to ever-heavier armor. You are t
   proficiency in medium armor, you also gain that proficiency in heavy armor. You
   treat armor you wear of 2 Bulk or higher as though it were 1 Bulk lighter \(to a
   minimum of 1 Bulk\).
-mechanicsScope: mixed
-unsupportedReason: 'ActiveEffectLike at position 0 has an unsupported conditional
-  builder payload. Resource: omen://feat/warpriests-armor?source=paizo-pathfinder-player-core.
-  Foundry keys: [ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: 0XdK3BJBA66jBcbQ
+rules:
+- key: heavy-armor-trained
+  effect: core/add-armor-proficiency@3
+  inputs:
+    armor: {category: heavy}
+    rank: trained
+    selfScaling: true

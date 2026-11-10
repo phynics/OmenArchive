@@ -2,6 +2,8 @@ id: paizo-pathfinder-player-core-2
 publisher: Paizo
 title: Pathfinder Player Core 2
 published: "2024-07-24"
+requires:
+- paizo-pathfinder-player-core
 mechanicsModules:
 - moduleID: me.atkn.omen.pf2e.playercore
   alias: core
@@ -17,3 +19,8 @@ spellcastingSources:
   oracle-spellcasting: 7d62d58f-4df1-5985-8de6-35a844ea3993
   sorcerer-focus-spells: f7c09ed1-9ba7-5b68-bfec-910156f41144
   sorcerer-spellcasting: f53548c3-b3c7-5ca2-8687-afc0c6268877
+facts:
+- {collection: '@class.sorcerer.bloodlines', name: advanced-bloodline-spell, type: '@spell'}
+- {collection: '@class.sorcerer.bloodlines', name: greater-bloodline-spell, type: '@spell'}
+- {collection: '@class.oracle.mysteries', name: advanced-revelation-spell, type: '@spell'}
+- {collection: '@class.oracle.mysteries', name: greater-revelation-spell, type: '@spell'}

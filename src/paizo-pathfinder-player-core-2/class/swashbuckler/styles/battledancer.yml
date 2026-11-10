@@ -9,7 +9,18 @@ description: To you, a fight is a kind of performance art, and you command your 
   skill feat. When you [Perform](omen://action/perform?source=paizo-pathfinder-player-core),
   the action gains the bravado trait.
 mechanicsScope: mixed
-unsupportedReason: 'Foundry class-feature rule elements are preserved for external
-  review. External review required. Resource: omen://class/swashbuckler/features/battledancer?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem, Note, ItemAlteration, RollOption].'
+unsupportedCategory: benefit
+unsupportedReason: 'Note at position 3: The selector strike-attack-roll is not a roll
+  the sheet shows. Rule elements not applied: GrantItem.'
 foundryID: 5HoEwzLDJGTCZtFa
+rules:
+- key: performance-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: performance
+    rank: trained
+- key: skill-feat-skill
+  effect: core/add-to-list
+  inputs:
+    list: $.swashbuckler.skill-feat-skills
+    value: {type: core/skill, literal: performance}

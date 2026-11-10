@@ -97,12 +97,13 @@ It is **one-way**: a question leaves out only items that rules authored before i
 ## Reading a list
 
 - `hasChoice: {name: $.druid.orders, contains: '@class.druid.orders.leaf'}` tests a list for a value. The value is bare because the list's declaration gives its type; a test of anything else (a repeatable choice, a list nobody declares) spells the type: `contains: {type: core/int, value: 1}`.
+- `(count $.list)` and `(contains $.list item)` read a list in a [sheet expression](expressions.md#counting-a-list): the number of items, and whether the list has one.
 - `{choiceList: $.list}` reads a list as an input once a rule has declared it or added to it.
-- `$.list[].field` reads **one field of every item**, in list order, duplicates kept: `$.deity.spells[].rank` is the list of the `rank` fields of the entries of `$.deity.spells`. It is short for `{list: $.deity.spells, field: rank}`. Conditions and inputs that take a list may project.
+- `$.list[].field` reads **one field of every item**, in list order, duplicates kept: `$.deity.spells[].rank` is the list of the `rank` fields of the entries of `$.deity.spells`. A condition (the `name` of a `hasChoice`) may project. A rule input may not: from format 6 a field of every item is not an input source, so read the list with `{choiceList: $.list}` or one item's field with a field read.
   - The field is typed against the declaration. For an entry list it is one of the entry's declared fields; for a record list, a field of the record. A field of a record may follow an entry field: `$.deity.spells[].spell.traits`.
   - There is no `[n]`: a position is unstable, so a rule that needs one item filters on a field.
   - `[]` makes the path a query. A declaration, an `add-to-list` target and a saved answer's address take the plain path, and refuse `[]`.
 
-## Reserved
+## Rules for each item
 
-`forEach: <list>` on a rule is reserved for rules that run once for each item of a list, with an item's value and fields as input sources. It is not supported yet, and a rule that uses it is refused.
+`forEach: <list>` on a rule runs the rule once for each item of a list, after the character's other rules. The list is a plain `$` path of a declared list, and a rule that writes it is refused. An input reads the item as `{item: true}`, or one field of an entry as `{item: true, field: name}`. A text input may hold `{item}` or `{item.field}` for the item and `{$.path}` for the answer to a question; the whole text is the string a translation replaces, `{{` and `}}` write braces. The output of each run depends on the rule and the item, so an item that leaves the list takes only its own output with it.

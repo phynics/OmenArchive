@@ -21,7 +21,7 @@ rules:
     effect: core/add-trait
     level: 3                 # Omitted when 1
     prerequisites:
-      - hasClassTrait: true
+      - hasTrait: holy
     inputs:
       trait: undead
 ```
@@ -29,6 +29,7 @@ rules:
 - **`key`**: Unique kebab-case string within the record. A rule's identity UUID is deterministically derived from its enclosing record path and key: `uuid5("<record-path>#rule/<key>")`. Renaming a key constitutes creating a new rule. A key says what the rule gives, noun first (`cold-resistance`, `arcana-trained`, `martial-weapons-legendary`, `gale-blast-known-spell`); a subject that comes from a choice is `chosen-…` (`chosen-skill-trained`). Rules with one name in a record are told apart by the choice they depend on, then by level, then by a numeric suffix. Do not write a counter key (`generated-3`, `annotation-2`, `add-feat-1`): the writer replaces one with a name, and the archive check warns on one.
 - **`effect`**: `<module-alias>/<effect-name>`, optionally with `@<revision>` if different from 1 (e.g. `core/add-feat@3`). Module aliases are declared in `publication.yml`.
 - **`level`**: The level at which the rule takes effect (defaults to 1 if omitted).
+- **`forEach`**: Optional, from format 6. The `$` path of a declared list: the rule runs once for each item of it. See [Rules for each item](character-lists.md#rules-for-each-item).
 - **`prerequisites`**: Optional list of typed prerequisite conditions.
 - **`inputs`**: Map of input parameter names to their values as declared by the effect's descriptor.
 
@@ -55,8 +56,8 @@ An effect's name starts with a verb, and the verb says what the effect does to t
 | `modify-` | changes another rule's grant | `modify-innate-sources` |
 | `grant-` | gives a spell, slot or focus spell to a spellcasting source; used only in spellcasting | `grant-spell`, `grant-slot`, `grant-focus-spell` |
 
-Other verbs name a specific act (`configure-source`, `declare-list`, `extend-class-key-attribute`, `increase-spell-proficiency`,
-`mark-signature-spell`, `substitute-skill`, `allow-known-spells`). A new effect takes `add-`, `set-` or `modify-`, and `grant-` only in
+Other verbs name a specific act (`configure-source`, `declare-list`, `increase-spell-proficiency`,
+`mark-signature-spell`, `allow-known-spells`). A new effect takes `add-`, `set-` or `modify-`, and `grant-` only in
 spellcasting.
 
 ## Input Values
@@ -82,7 +83,7 @@ The operators, reads and rounding of sheet expressions are in [Sheet Expressions
 - **Sheet values.** An input whose type is a sheet value (`maximum`, `itemLevel`, a resistance's `value`) takes a
   bare expression, which starts with `(` and ends with `)`, or a bare `$` path. Numbers are written
   as numbers.
-- **One effect per concept.** `add-feature {feature}` and `add-heritage {heritage}` grant a record by reference (or
+- **One effect per concept.** `add-feature {feature}` grants a feature or a heritage by reference (or
   by a choice); `add-trait {trait, as?: ancestry}` grants a trait; `add-speed {movement, speed | bonus}` sets a
   movement type (`land`, `climb`, `swim`, `fly`, `burrow`) or adds a bonus to land Speed; `add-sense {sense, acuity?,
   range?}` grants a sense.
@@ -93,21 +94,29 @@ The operators, reads and rounding of sheet expressions are in [Sheet Expressions
   `unarmored`, `light`, `medium`, `heavy` for armor). A record is `weapons: '@item.club'`. A choice reads the answer
   to a question, and the answer is a weapon group, a weapon, or an armor category; a weapon group answer takes the
   optional `category: any-non-advanced` to leave out advanced weapons. The archive check refuses any other value type.
-- **Modifiers and notes.** `add-modifier {target, amount, type, when?, requires?}` gives a typed bonus or penalty to
-  rolls (`type: circumstance`); a target reads as a word or a list of words (`saving-throws`, `skills`, `attack-rolls`,
-  `perception`, `fortitude`, `reflex`, `will`, `speed`, a skill such as `athletics`, or `[fortitude, reflex]`), and any other
-  roll description is written out, and `add-note {target, text, when?,
-  requires?}` adds a note. The record's own name labels them; there is no `source` or `slug`. The two optional inputs
-  differ: `when` is **text the player judges** (`when: the target is physically menaced`), so the modifier shows
-  with a toggle that starts off; `requires` is **a condition the sheet reads** (`requires: (gte $.skills.diplomacy.rank 3)`),
-  so the modifier appears only while it holds, with no toggle of its own. A bonus that grows when a condition
-  holds is a second modifier of the same type with a `requires`; the highest bonus of a type applies.
+- **Modifiers and notes.** `add-modifier@2 {target, amount, type, when?, requires?}` gives a typed bonus or penalty to
+  rolls (`type: circumstance`), and `add-note {target, text, when?, requires?}` adds a note. The record's own name labels
+  them; there is no `source` or `slug`. Revision 2: `amount` is a number or an expression. A bonus that depends on the
+  character, such as +1 and +2 for a master, is `(add 1 (gte $.skills.crafting.rank master))`. A roll target is a word
+  (`athletics`, `saving-throws`), a list of words (`[fortitude, reflex]`), or a `{description: […]}` of the targets the
+  descriptor lists; an element outside them is an error that names the field and the accepted ones. The words are
+  `saving-throws`, `skills`, `attack-rolls`, `perception`, `fortitude`, `reflex`, `will`, `speed` and a skill. The two
+  optional inputs differ: `when` is **text the player judges** (`when: the target is physically menaced`), so the modifier
+  shows with a toggle that starts off; `requires` is **a condition the sheet reads** (`requires: (gte
+  $.skills.diplomacy.rank master)`), so the modifier appears only while it holds, with no toggle of its own. A bonus that
+  grows when a condition holds is one modifier whose `amount` adds the condition to the flat bonus; the highest bonus of a
+  type applies.
+- **Vocabulary terms.** A weapon group, damage type, terrain, crafting specialty or roll target is a term of a vocabulary
+  the mechanics descriptor declares (its `vocabularies`), and a book adds terms in its `publication.yml`. The check accepts
+  a term from the descriptor or from any publication of the archive, and names the term it does not know. A resistance's
+  `type` is a `damage-type` term. See [Archive Format and Repository
+  Layout](format-and-layout.md#publication-manifests).
 - **Resource pools.** `add-resource-pool {name, maximum, itemLevel?, refresh?, craftable?}` declares a count the player
   spends and refills at the table. `maximum` and `itemLevel` are sheet values (`maximum: (add 2 $.attributes.int)`).
   `refresh: daily` marks a pool that refills with the character's daily preparations; the default, `manual`, refills when
   the player says so. `craftable` is a filter (`{any: [{trait: oil}, {trait: potion}]}`) for the items a use can make.
-  `$.spellcasting.proficiency` reads the character's one spell attack and spell DC rank as a number, 0 (untrained) to 4
-  (legendary): Cauldron's maximum is `(add 1 (gte $.spellcasting.proficiency 3) (gte $.spellcasting.proficiency 4))`.
+  `$.spellcasting.proficiency` reads the character's one spell attack and spell DC rank, which an expression compares with a
+  rank word: Cauldron's maximum is `(add 1 (gte $.spellcasting.proficiency master) (gte $.spellcasting.proficiency legendary))`.
 - **A heritage's hit points are a field.** A heritage that gives hit points in place of its ancestry's writes
   `hitPoints: 10`; the effect that set them is gone.
 - **Hit points are one effect.** `add-hit-points {amount}` takes a number or an expression, worked out for the level
@@ -123,7 +132,7 @@ The operators, reads and rounding of sheet expressions are in [Sheet Expressions
   `action:` (never `featId`), each taking an `@` reference.
 - **Ranks.** A proficiency rank is a word (`untrained`, `trained`, `expert`, `master` or `legendary`) under one input
   name, `rank`, on every effect that takes one: `rank: expert`. `add-skill-increase {skill, rank}` raises the skill to
-  `rank`. A number is not a rank, and `rank` means only a proficiency rank: a spell's rank keeps the names
+  `rank`. A number is not a rank, and `rank` means only a proficiency rank, and an expression compares a rank read with a rank word (see [Sheet Expressions](expressions.md#ranks)): a spell's rank keeps the names
   `spellRank` and `rankPolicy`.
 - **Attributes** are spelled out: `attribute: wisdom`, `keyAttribute: strength`, `cases: [strength, dexterity]` in an
   attribute choice, and `hasAttributeModifier: {attribute: strength, modifier: 2}` in a prerequisite. The decoded wire
@@ -157,7 +166,7 @@ absent when the rule doesn't use it (`add-sense`'s `acuity` and `range`, `add-sp
 - `{ choiceList: $.deity.spells }`: reads a list of answers from a multi-select choice.
 - `{ choice: $.cleric.domains, field: domainSpell }`: reads a field of the record the choice holds (here a
   domain), not the record itself. The field's value must match the input's value type: `domainSpell` and
-  `advancedDomainSpell` are spell references, so they fill a `spell-id` input. The rule waits until the choice
+  `advancedDomainSpell` are spell references (a domain states them under `facts:`), so they fill a `spell-id` input. The rule waits until the choice
   is answered; a record without that field applies nothing and reports it. On the wire the source is
   `{kind: choiceField, name: $.cleric.domains, field: domainSpell}`. `field` is allowed only with `choice`.
 - `$.cleric.domains.domainSpell`: the short form of that field read, for a choice that holds one answer. A
@@ -170,9 +179,6 @@ absent when the rule doesn't use it (`add-sense`'s `acuity` and `range`, `add-sp
   source key. A map that merely has a `type` key (`numeric: {amount: 1, type: item}`) is written bare.
 - `{ type: core/skill, … }`: names the input's value type where it isn't the one the descriptor declares.
 
-- `{ list: $.deity.spells, field: rank }`: reads one field of every item of a character list, as a list of values in list
-  order. `$.deity.spells[].rank` is its short form, for an input that takes a list. See [Character
-  lists](character-lists.md#reading-a-list).
 - `{ entry: { rank: { type: core/int, value: 1 } } }`: one entry of an entry list, each field a value with its type.
 
 An input that names a character list (`declare-list` and `add-to-list`'s `list`) is written as its plain `$` path:
@@ -208,11 +214,11 @@ rules:
   - `records`: A query object `{ filter: { ... } }` dynamically populated from the archive, with the answers' `type:` on the choice. `records: { filter: …, from: $.deity.domains }` limits the options to the values selected in another choice.
   - `freeText: true`: Accepts arbitrary text typed by the player (e.g. edicts/anathema), of the choice's `type`. `freeTextKind: lore` on a `core/skill` question asks for a Lore: the text becomes a Lore skill, lowercased, trimmed and without a trailing "Lore" ("Sailing Lore", "sailing" and "Sailing" are one skill).
 - **`multiple`**: Specifies multi-selection: `multiple: { min: 1, max: 3 }`.
-- **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`.
+- **`optionsFrom`**: The same limit on a choice with `cases`: `optionsFrom: $.deity.divine-font`. On a `records` choice it is written `records: { from: … }`; `optionsFrom` beside `records` is refused.
 - **`distinct`**: Leaves out the value of one or more `$` paths: another choice or a built-in. One path is bare, `distinct: $.ancestry.name`; several are a list, `distinct: [$.bard.muse, $.feats.other]`. It is one-way: the choice it names keeps its own options. An unanswered path leaves out nothing. `{list: $.path}` leaves out the items on a [character list](character-lists.md), and `distinct: false` goes with `addTo`.
 - **`addTo`**: Names the character list the answer goes to (`addTo: $.feats.assurance.skills`). The reader expands it into an `add-to-list` rule keyed `<question key>-add` and a `distinct` over the same list; the wire form carries only those rules. See [Character lists](character-lists.md#addto-on-a-question).
 - **`optional: true`**: Marks the choice as optional, excluding it from blocking open-question counts.
 
-The older spellings stay readable: `records: { filter: …, type: … }`, `freeText: core/string`, and `optionsFrom` beside `records`.
+Format 6 refuses the older spellings: `records: { filter: …, type: … }`, `freeText: core/string` (a type in place of `true`), and `optionsFrom` beside `records`. Write `type:` on the choice, `freeText: true`, and `records: { filter: …, from: … }`. A field of every item of a list is not an input source either: read the list with `{ choiceList: $.list }`, or one item's field with a field read.
 
 For complete documentation on all registered effects, see the native DocC catalog in `docs/mechanics.docc/`.
