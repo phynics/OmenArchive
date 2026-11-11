@@ -32,3 +32,105 @@ rules:
     rank: trained
     className: swashbuckler
     keyAttribute: dexterity
+- key: choice-swashbucklers-style
+  level: 2
+  choice:
+    name: $.feats.swashbuckler-dedication.swashbucklers-style
+    label: Style
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.swashbuckler.styles'}}
+- key: chosen-skill-list
+  effect: core/declare-list
+  level: 2
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    valueType: core/skill
+    label: Skills
+- key: add-acrobatics-skill
+  effect: core/add-to-list
+  level: 2
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    value: {type: core/skill, literal: acrobatics}
+- key: add-performance-skill
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.feats.swashbuckler-dedication.swashbucklers-style
+      equals: {type: core/feature-id, value: '@class.swashbuckler.styles.battledancer'}
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    value: {type: core/skill, literal: performance}
+- key: add-intimidation-skill
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.feats.swashbuckler-dedication.swashbucklers-style
+      equals: {type: core/feature-id, value: '@class.swashbuckler.styles.braggart'}
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    value: {type: core/skill, literal: intimidation}
+- key: add-deception-skill
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.feats.swashbuckler-dedication.swashbucklers-style
+      equals: {type: core/feature-id, value: '@class.swashbuckler.styles.fencer'}
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    value: {type: core/skill, literal: deception}
+- key: add-athletics-skill
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.feats.swashbuckler-dedication.swashbucklers-style
+      equals: {type: core/feature-id, value: '@class.swashbuckler.styles.gymnast'}
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    value: {type: core/skill, literal: athletics}
+- key: add-thievery-skill
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.feats.swashbuckler-dedication.swashbucklers-style
+      equals: {type: core/feature-id, value: '@class.swashbuckler.styles.rascal'}
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    value: {type: core/skill, literal: thievery}
+- key: add-diplomacy-skill
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.feats.swashbuckler-dedication.swashbucklers-style
+      equals: {type: core/feature-id, value: '@class.swashbuckler.styles.wit'}
+  inputs:
+    list: $.feats.swashbuckler-dedication.skills
+    value: {type: core/skill, literal: diplomacy}
+- key: choice-skill
+  level: 2
+  choice:
+    name: $.feats.swashbuckler-dedication.skill
+    label: Skill
+    prerequisites:
+    - $.feats.swashbuckler-dedication.swashbucklers-style
+    optionsFrom: $.feats.swashbuckler-dedication.skills
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: performance, value: performance}
+    - {key: intimidation, value: intimidation}
+    - {key: deception, value: deception}
+    - {key: athletics, value: athletics}
+    - {key: thievery, value: thievery}
+    - {key: diplomacy, value: diplomacy}
+- key: chosen-skill-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.swashbuckler-dedication.skill}
+    rank: trained

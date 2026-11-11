@@ -34,3 +34,17 @@ rules:
     rank: trained
     className: monk
     keyAttribute: {choice: $.monk.class-dc-attribute}
+- key: choice-skill
+  level: 2
+  choice:
+    name: $.feats.monk-dedication.skill
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: athletics, value: athletics}
+- key: chosen-skill-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.monk-dedication.skill}
+    rank: trained

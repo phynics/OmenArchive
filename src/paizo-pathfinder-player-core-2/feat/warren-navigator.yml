@@ -13,8 +13,13 @@ description: You gain the trained proficiency rank in Survival. If you would aut
   take a penalty to [Sense Direction](omen://action/sense-direction?source=paizo-pathfinder-player-core)
   when you lack a compass.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/warren-navigator?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, AdjustDegreeOfSuccess, RollOption].'
+unsupportedCategory: text
+unsupportedReason: 'AdjustDegreeOfSuccess at position 2: The selector all is not a
+  roll the sheet shows.'
 foundryID: 9Orkgjgfx8AILuqD
+rules:
+- key: survival-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: survival
+    rank: trained

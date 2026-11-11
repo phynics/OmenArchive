@@ -14,7 +14,13 @@ description: You were born to a moroi, the most common vampires, and you share t
   choice.
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/svetocher?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, AdjustModifier, FlatModifier].'
+unsupportedReason: 'AdjustModifier at position 2: Only an upgrade or downgrade to
+  a fixed number is translated. FlatModifier at position 3: The selector hp is not
+  a roll the sheet shows.'
 foundryID: P1dk0LTWkQ1LT1ai
+rules:
+- key: diplomacy-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: diplomacy
+    rank: trained

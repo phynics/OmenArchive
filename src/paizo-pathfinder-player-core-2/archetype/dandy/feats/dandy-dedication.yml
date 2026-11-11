@@ -14,8 +14,17 @@ description: You are a consummate student of dignity, etiquette, and fashion. Yo
   you become an expert in it instead. You gain the [Influence Rumor](omen://action/influence-rumor)
   downtime activity.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/dandy-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ChoiceSet, ChoiceSet, ActiveEffectLike, ActiveEffectLike, GrantItem].'
+unsupportedCategory: benefit
+unsupportedReason: 'Rule elements not applied: GrantItem.'
 foundryID: 4M5zIlJ8EvjQDtg9
+rules:
+- key: deception-expert
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: deception
+    rank: expert
+- key: society-expert
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: society
+    rank: expert

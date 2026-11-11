@@ -14,8 +14,26 @@ description: You become an expert in Acrobatics. At 7th level, you become a mast
   critically succeed at an Acrobatics check to [Tumble Through](omen://action/tumble-through?source=paizo-pathfinder-player-core)
   an enemy's space, you don't treat the enemy's space as difficult terrain.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/acrobat-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, Note].'
+unsupportedCategory: text
+unsupportedReason: 'Note at position 2: The text is a localization key, which the
+  pack doesn''t carry.'
 foundryID: aFygWxgSv82WyCsl
+rules:
+- key: acrobatics-expert
+  effect: core/add-skill-increase@2
+  level: 2
+  inputs:
+    skill: acrobatics
+    rank: expert
+- key: active-effect-like-1-2
+  effect: core/add-skill-increase@2
+  level: 7
+  inputs:
+    skill: acrobatics
+    rank: master
+- key: active-effect-like-1-3
+  effect: core/add-skill-increase@2
+  level: 15
+  inputs:
+    skill: acrobatics
+    rank: legendary

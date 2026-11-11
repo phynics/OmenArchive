@@ -44,8 +44,44 @@ description: 'You bear scars or tattoos enhanced by the mark of your community''
   Occult'
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: 'ActiveEffectLike at position 1 has an unsupported conditional
-  builder payload. Resource: omen://feat/hold-mark?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, ActiveEffectLike, ActiveEffectLike, ActiveEffectLike,
-  ActiveEffectLike, FlatModifier].'
+unsupportedReason: 'FlatModifier at position 6 remains untranslated: its predicate
+  depends on the chosen case, which a play annotation cannot read.'
 foundryID: aQNsD2t0Tb4vToA4
+rules:
+- key: choice-mark
+  choice:
+    name: $.feats.hold-mark.mark
+    label: Hold Mark
+    cases:
+    - key: burning-sun
+      effects:
+      - id: eef4db50-6c4f-5d42-b890-4be86efd5b32
+        key: active-effect-like-1
+        effect: core/add-skill-increase@2
+        inputs:
+          skill: diplomacy
+          rank: trained
+    - key: deaths-head
+      effects:
+      - id: 23fa4c11-5db8-5904-b931-24111da935a0
+        key: active-effect-like-2
+        effect: core/add-skill-increase@2
+        inputs:
+          skill: survival
+          rank: trained
+    - key: defiled-corpse
+      effects:
+      - id: b84e612c-3df6-5b29-838c-8fa2895ea359
+        key: active-effect-like-3
+        effect: core/add-skill-increase@2
+        inputs:
+          skill: religion
+          rank: trained
+    - key: empty-hand
+      effects:
+      - id: 6de63495-5b3d-5591-87ad-2ca6e8cdcf84
+        key: active-effect-like-4
+        effect: core/add-skill-increase@2
+        inputs:
+          skill: intimidation
+          rank: trained
