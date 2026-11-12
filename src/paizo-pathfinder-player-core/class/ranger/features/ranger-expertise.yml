@@ -11,6 +11,10 @@ foundryID: 5likl5SAxQPrQ3KF
 rules:
 - key: spell-proficiency-expert
   effect: spellcasting/increase-spell-proficiency@2
+  prerequisites:
+  - anyOf:
+    - has: '@feat.initiate-warden'
+    - unsupported: The Vindicator class archetype is outside Player Core.
   inputs:
     rank: expert
 - key: class-dc-expert

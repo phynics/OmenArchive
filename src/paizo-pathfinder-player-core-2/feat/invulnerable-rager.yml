@@ -10,9 +10,29 @@ description: Even the heaviest armors serve only to enhance your unbridled fury.
   you expert or greater proficiency in medium armor, you also gain that proficiency
   in heavy armor. If you have the [Quick-Tempered](omen://action/quick-tempered) action,
   you can use it while wearing heavy armor.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/invulnerable-rager?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike].'
+mechanicsScope: builder
 foundryID: FGtiEx0yYHu16mN1
+rules:
+- key: heavy-armor-trained
+  effect: core/add-armor-proficiency@3
+  prerequisites:
+  - hasClassWithName: barbarian
+  inputs:
+    armor: {category: heavy}
+    rank: trained
+- key: active-effect-like-1-3
+  effect: core/add-armor-proficiency@3
+  level: 13
+  prerequisites:
+  - hasClassWithName: barbarian
+  inputs:
+    armor: {category: heavy}
+    rank: expert
+- key: active-effect-like-1-2
+  effect: core/add-armor-proficiency@3
+  level: 19
+  prerequisites:
+  - hasClassWithName: barbarian
+  inputs:
+    armor: {category: heavy}
+    rank: master

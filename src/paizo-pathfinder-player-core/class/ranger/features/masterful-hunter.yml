@@ -47,6 +47,8 @@ rules:
     rank: master
 - key: spell-proficiency-master
   effect: spellcasting/increase-spell-proficiency@2
+  prerequisites:
+  - has: '@feat.initiate-warden'
   inputs:
     rank: master
 - key: masterful-hunter-flurry

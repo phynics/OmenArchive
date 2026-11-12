@@ -17,6 +17,8 @@ rules:
     rank: legendary
 - key: spell-proficiency-master
   effect: spellcasting/increase-spell-proficiency@2
+  prerequisites:
+  - has: '@feat.qi-spells'
   inputs:
     rank: master
 - key: class-dc-master

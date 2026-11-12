@@ -11,6 +11,8 @@ foundryID: lxImO5D0qWp0gXFB
 rules:
 - key: spell-proficiency-expert
   effect: spellcasting/increase-spell-proficiency@2
+  prerequisites:
+  - has: '@feat.qi-spells'
   inputs:
     rank: expert
 - key: class-dc-expert
