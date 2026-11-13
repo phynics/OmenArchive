@@ -16,10 +16,92 @@ specialText: You can select this feat more than once. Each time, you become trai
 mechanicsScope: builder
 foundryID: BStw1cANwx5baL6d
 rules:
+- key: options-armor
+  effect: core/declare-list
+  inputs:
+    list: $.feats.armor-proficiency.armor-options
+    valueType: core/armor-designation
+- key: allow-armor-light
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.armor.light.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.armor-proficiency.armor-options
+    value: {type: core/armor-designation, literal: {armorKind: light, kind: type}}
+- key: allow-armor-medium
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.armor.medium.rank
+      equals: {type: core/int, value: 0}
+  - hasChoice:
+      name: $.armor.light.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.armor-proficiency.armor-options
+    value: {type: core/armor-designation, literal: {armorKind: medium, kind: type}}
+- key: allow-armor-heavy
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.armor.light.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  - hasChoice:
+      name: $.armor.medium.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.armor-proficiency.armor-options
+    value: {type: core/armor-designation, literal: {armorKind: heavy, kind: type}}
 - key: choice-armor
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.armor.light.rank
+        equals: {type: core/int, value: 0}
+    - allOf:
+      - hasChoice:
+          name: $.armor.medium.rank
+          equals: {type: core/int, value: 0}
+      - hasChoice:
+          name: $.armor.light.rank
+          oneOf:
+          - {type: core/int, value: 1}
+          - {type: core/int, value: 2}
+          - {type: core/int, value: 3}
+          - {type: core/int, value: 4}
+    - allOf:
+      - hasChoice:
+          name: $.armor.light.rank
+          oneOf:
+          - {type: core/int, value: 1}
+          - {type: core/int, value: 2}
+          - {type: core/int, value: 3}
+          - {type: core/int, value: 4}
+      - hasChoice:
+          name: $.armor.medium.rank
+          oneOf:
+          - {type: core/int, value: 1}
+          - {type: core/int, value: 2}
+          - {type: core/int, value: 3}
+          - {type: core/int, value: 4}
   choice:
     name: $.feats.armor-proficiency.armor
     label: Armor
+    optionsFrom: $.feats.armor-proficiency.armor-options
     type: core/armor-designation
     cases:
     - {key: light, value: {armorKind: light, kind: type}}

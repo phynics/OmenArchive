@@ -74,6 +74,7 @@ A read is a `$` path that gives a whole number. The engine provides these:
 | `$.level` | The character's level, 1 to 20 |
 | `$.attributes.<str, dex, con, int, wis or cha>` | The attribute modifier |
 | `$.skills.<skill>.rank` | The skill's proficiency rank, compared with a rank word |
+| `$.armor.<unarmored, light, medium or heavy>.rank` | The proficiency rank in that kind of armor, compared the same way |
 | `$.spellcasting.proficiency` | The character's spell attack and spell DC rank, compared the same way |
 | `$.class.dc` | The class DC of the character's class |
 | `$.class.<class>.dc` | The class DC of a class the character has |
@@ -90,6 +91,12 @@ A rank is a word in an expression: untrained, trained, expert, master or legenda
 the words by position, so `(gte $.skills.diplomacy.rank master)` holds for master and legendary.
 Comparing a rank read with a number is an error that names the word to use. Attribute reads and the
 level stay number.
+
+**When a rank is read.** A skill or armor rank that a rule's condition reads is the rank the character
+holds as the level begins, plus the skill increases the player chose for that level. A rank another rule
+grants at the same level doesn't count until the next level, so a rule that offers an option by rank
+offers the same options whatever order the level's other rules apply in. A `hasChoice` on one of these
+reads and an expression that reads one are read alike.
 
 ## Counting a list
 

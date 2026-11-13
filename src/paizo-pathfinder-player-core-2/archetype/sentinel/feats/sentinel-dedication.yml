@@ -16,22 +16,110 @@ description: You have trained carefully to maximize the protective qualities of 
   an expert in the armor types granted to you by this feat.
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: 'Training in heavy armor for a character already trained in light
-  and medium armor is not applied: no rule can test a character''s armor ranks. The
-  13th-level clause (expert in light and medium armor for a character with expert
-  unarmored defense) is only approximated: these ranks rise with any armor rank the
-  character gains, unarmored defense included, and are not capped at expert.'
+unsupportedReason: 'The 13th-level clause (expert in light, medium and heavy armor
+  for a character with expert unarmored defense) is only approximated: these ranks
+  rise with any armor rank the character gains, unarmored defense included, and are
+  not capped at expert.'
 foundryID: 8foxmfC6FFT3oYpV
 rules:
-- key: light-armor-trained
-  effect: core/add-armor-proficiency@3
+- key: options-armor
+  effect: core/declare-list
+  level: 2
   inputs:
-    armor: {category: light}
-    rank: trained
-    selfScaling: true
-- key: medium-armor-trained
-  effect: core/add-armor-proficiency@3
+    list: $.feats.sentinel-dedication.armor-options
+    valueType: core/string
+- key: allow-armor-light-and-medium
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.armor.light.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.armor.medium.rank
+        equals: {type: core/int, value: 0}
   inputs:
-    armor: {category: medium}
-    rank: trained
-    selfScaling: true
+    list: $.feats.sentinel-dedication.armor-options
+    value: {type: core/string, literal: light-and-medium}
+- key: allow-armor-heavy
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.armor.light.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  - hasChoice:
+      name: $.armor.medium.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.sentinel-dedication.armor-options
+    value: {type: core/string, literal: heavy}
+- key: choice-armor
+  level: 2
+  prerequisites:
+  - anyOf:
+    - anyOf:
+      - hasChoice:
+          name: $.armor.light.rank
+          equals: {type: core/int, value: 0}
+      - hasChoice:
+          name: $.armor.medium.rank
+          equals: {type: core/int, value: 0}
+    - allOf:
+      - hasChoice:
+          name: $.armor.light.rank
+          oneOf:
+          - {type: core/int, value: 1}
+          - {type: core/int, value: 2}
+          - {type: core/int, value: 3}
+          - {type: core/int, value: 4}
+      - hasChoice:
+          name: $.armor.medium.rank
+          oneOf:
+          - {type: core/int, value: 1}
+          - {type: core/int, value: 2}
+          - {type: core/int, value: 3}
+          - {type: core/int, value: 4}
+  choice:
+    name: $.feats.sentinel-dedication.armor
+    label: Armor
+    optionsFrom: $.feats.sentinel-dedication.armor-options
+    type: core/string
+    cases:
+    - key: light-and-medium
+      label: Light and Medium
+      value: light-and-medium
+      effects:
+      - id: 0c0cf0b5-6de9-5770-b9f3-cadf05978565
+        key: active-effect-like-1
+        effect: core/add-armor-proficiency@3
+        inputs:
+          armor: {category: light}
+          rank: trained
+          selfScaling: true
+      - id: ebdd0f7f-f7d6-5162-9df0-1c98eba3669a
+        key: active-effect-like-2
+        effect: core/add-armor-proficiency@3
+        inputs:
+          armor: {category: medium}
+          rank: trained
+          selfScaling: true
+    - key: heavy
+      value: heavy
+      effects:
+      - id: e6d5369e-ff28-52dc-bd70-3bd4cb56de1d
+        key: active-effect-like-3
+        effect: core/add-armor-proficiency@3
+        inputs:
+          armor: {category: heavy}
+          rank: trained
+          selfScaling: true

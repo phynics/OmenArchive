@@ -19,9 +19,65 @@ description: 'You''ve combined your social skills and combat training to become 
   the emotion, mental, and visual traits and grants you and allies within the aura
   a +1 status bonus to saving throws against fear.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/marshal-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [Aura, ChoiceSet, ActiveEffectLike, ActiveEffectLike, ActiveEffectLike,
-  ActiveEffectLike].'
+unsupportedCategory: scope
+unsupportedReason: 'Rule elements not applied: Aura.'
 foundryID: MYzRfNExDYp25rro
+rules:
+- key: options-marshal-skill
+  effect: core/declare-list
+  level: 2
+  inputs:
+    list: $.feats.marshal-dedication.marshal-skill-options
+    valueType: core/skill
+- key: allow-marshal-skill-diplomacy
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.skills.diplomacy.rank
+      oneOf:
+      - {type: core/int, value: 0}
+      - {type: core/int, value: 1}
+  inputs:
+    list: $.feats.marshal-dedication.marshal-skill-options
+    value: {type: core/skill, literal: diplomacy}
+- key: allow-marshal-skill-intimidation
+  effect: core/add-to-list
+  level: 2
+  prerequisites:
+  - hasChoice:
+      name: $.skills.intimidation.rank
+      oneOf:
+      - {type: core/int, value: 0}
+      - {type: core/int, value: 1}
+  inputs:
+    list: $.feats.marshal-dedication.marshal-skill-options
+    value: {type: core/skill, literal: intimidation}
+- key: choice-marshal-skill
+  level: 2
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.skills.diplomacy.rank
+        oneOf:
+        - {type: core/int, value: 0}
+        - {type: core/int, value: 1}
+    - hasChoice:
+        name: $.skills.intimidation.rank
+        oneOf:
+        - {type: core/int, value: 0}
+        - {type: core/int, value: 1}
+  choice:
+    name: $.feats.marshal-dedication.marshal-skill
+    label: Marshal Skill
+    optionsFrom: $.feats.marshal-dedication.marshal-skill-options
+    type: core/skill
+    cases:
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+- key: raise-marshal-skill
+  effect: core/add-skill-increase@2
+  level: 2
+  inputs:
+    skill: {choice: $.feats.marshal-dedication.marshal-skill}
+    rank: expert

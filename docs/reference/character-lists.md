@@ -94,6 +94,41 @@ distinct: [$.ancestry.name, {list: $.feats.assurance.skills}]
 
 It is **one-way**: a question leaves out only items that rules authored before it added (earlier copies, earlier levels), so retraining an earlier copy never invalidates a later one. `addTo` implies it for its own list; `distinct: false` lets a question's answer repeat an item already on the list.
 
+## Offering options by rank
+
+A question's case holds no condition, so an option offered only at some ranks goes on a list. Declare a typed list, add each option under a `hasChoice` on the rank read (`$.skills.<skill>.rank` or `$.armor.<unarmored, light, medium or heavy>.rank`, a number from 0 for untrained to 4 for legendary), and narrow the question with `optionsFrom`. The question takes the same condition as a prerequisite, so it isn't asked when no option is eligible. Declare and fill the list before the question, in authored order: a question applied while its list is empty freezes the list empty.
+
+<!-- docs-check: not a whole example — two of the list's rules and the question, shown on their own -->
+```yaml
+- key: allow-skill-diplomacy
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.diplomacy.rank
+      oneOf:
+      - {type: core/int, value: 0}
+      - {type: core/int, value: 1}
+  inputs:
+    list: $.feats.marshal-dedication.marshal-skill-options
+    value: {type: core/skill, literal: diplomacy}
+- key: choice-marshal-skill
+  prerequisites:
+  - hasChoice:
+      name: $.skills.diplomacy.rank
+      oneOf:
+      - {type: core/int, value: 0}
+      - {type: core/int, value: 1}
+  choice:
+    name: $.feats.marshal-dedication.marshal-skill
+    label: Marshal Skill
+    optionsFrom: $.feats.marshal-dedication.marshal-skill-options
+    type: core/skill
+    cases:
+    - {key: diplomacy, value: diplomacy}
+```
+
+The rank read is the rank the character holds as the level begins, plus the skill increases the player chose for that level, so the options don't depend on the order of the level's rules (see [expressions](expressions.md#ranks)).
+
 ## Reading a list
 
 - `hasChoice: {name: $.druid.orders, contains: '@class.druid.orders.leaf'}` tests a list for a value. The value is bare because the list's declaration gives its type; a test of anything else (a repeatable choice, a list nobody declares) spells the type: `contains: {type: core/int, value: 1}`.

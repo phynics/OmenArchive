@@ -16,10 +16,210 @@ specialText: You can select this feat multiple times, choosing a new skill to be
 mechanicsScope: builder
 foundryID: P6icK2DbRoZ3H6kc
 rules:
-- key: choice-feats-skill-training-skill
+- key: options-skill
+  effect: core/declare-list
+  inputs:
+    list: $.feats.skill-training.skill-options
+    valueType: core/skill
+- key: allow-skill-acrobatics
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.acrobatics.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: acrobatics}
+- key: allow-skill-arcana
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.arcana.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: arcana}
+- key: allow-skill-athletics
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.athletics.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: athletics}
+- key: allow-skill-crafting
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.crafting.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: crafting}
+- key: allow-skill-deception
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.deception.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: deception}
+- key: allow-skill-diplomacy
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.diplomacy.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: diplomacy}
+- key: allow-skill-intimidation
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.intimidation.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: intimidation}
+- key: allow-skill-medicine
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.medicine.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: medicine}
+- key: allow-skill-nature
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.nature.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: nature}
+- key: allow-skill-occultism
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.occultism.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: occultism}
+- key: allow-skill-performance
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.performance.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: performance}
+- key: allow-skill-religion
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.religion.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: religion}
+- key: allow-skill-society
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.society.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: society}
+- key: allow-skill-stealth
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.stealth.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: stealth}
+- key: allow-skill-survival
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.survival.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: survival}
+- key: allow-skill-thievery
+  effect: core/add-to-list
+  prerequisites:
+  - hasChoice:
+      name: $.skills.thievery.rank
+      equals: {type: core/int, value: 0}
+  inputs:
+    list: $.feats.skill-training.skill-options
+    value: {type: core/skill, literal: thievery}
+- key: choice-skill
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.skills.acrobatics.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.arcana.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.athletics.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.crafting.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.deception.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.diplomacy.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.intimidation.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.medicine.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.nature.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.occultism.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.performance.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.religion.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.society.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.stealth.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.survival.rank
+        equals: {type: core/int, value: 0}
+    - hasChoice:
+        name: $.skills.thievery.rank
+        equals: {type: core/int, value: 0}
   choice:
     name: $.feats.skill-training.skill
     label: Skill
+    optionsFrom: $.feats.skill-training.skill-options
     type: core/skill
     cases:
     - {key: acrobatics, value: acrobatics}
@@ -38,7 +238,7 @@ rules:
     - {key: stealth, value: stealth}
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}
-- key: chosen-skill-trained
+- key: raise-skill
   effect: core/add-skill-increase@2
   inputs:
     skill: {choice: $.feats.skill-training.skill}

@@ -57,9 +57,723 @@ description: 'Rogue: Increase your proficiency rank in one of your skills from e
   associated with one of the skills you chose.'
 specialText: You can select this feat up to five times.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/skill-mastery?source=paizo-pathfinder-player-core.
-  Foundry keys: [ChoiceSet, ChoiceSet, ActiveEffectLike, ActiveEffectLike, ChoiceSet,
-  GrantItem, ItemAlteration].'
+unsupportedCategory: choice
+unsupportedReason: 'Rule elements not applied: ChoiceSet, GrantItem.'
 foundryID: c9rhGmKft1BVT4JO
+rules:
+- key: options-skill-master
+  effect: core/declare-list
+  level: 8
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    valueType: core/skill
+- key: allow-skill-master-acrobatics
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.acrobatics.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: acrobatics}
+- key: allow-skill-master-arcana
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.arcana.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: arcana}
+- key: allow-skill-master-athletics
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.athletics.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: athletics}
+- key: allow-skill-master-crafting
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.crafting.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: crafting}
+- key: allow-skill-master-deception
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.deception.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: deception}
+- key: allow-skill-master-diplomacy
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.diplomacy.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: diplomacy}
+- key: allow-skill-master-intimidation
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.intimidation.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: intimidation}
+- key: allow-skill-master-medicine
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.medicine.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: medicine}
+- key: allow-skill-master-nature
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.nature.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: nature}
+- key: allow-skill-master-occultism
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.occultism.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: occultism}
+- key: allow-skill-master-performance
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.performance.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: performance}
+- key: allow-skill-master-religion
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.religion.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: religion}
+- key: allow-skill-master-society
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.society.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: society}
+- key: allow-skill-master-stealth
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.stealth.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: stealth}
+- key: allow-skill-master-survival
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.survival.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: survival}
+- key: allow-skill-master-thievery
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.thievery.rank
+      oneOf:
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-master-options
+    value: {type: core/skill, literal: thievery}
+- key: choice-skill-master
+  level: 8
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.skills.acrobatics.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.arcana.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.athletics.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.crafting.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.deception.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.diplomacy.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.intimidation.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.medicine.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.nature.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.occultism.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.performance.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.religion.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.society.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.stealth.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.survival.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.thievery.rank
+        oneOf:
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+  choice:
+    name: $.feats.skill-mastery.skill-master
+    label: Skill Master
+    optionsFrom: $.feats.skill-mastery.skill-master-options
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
+- key: raise-skill-master
+  effect: core/add-skill-increase@2
+  level: 8
+  inputs:
+    skill: {choice: $.feats.skill-mastery.skill-master}
+    rank: master
+- key: options-skill-expert
+  effect: core/declare-list
+  level: 8
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    valueType: core/skill
+- key: allow-skill-expert-acrobatics
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.acrobatics.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: acrobatics}
+- key: allow-skill-expert-arcana
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.arcana.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: arcana}
+- key: allow-skill-expert-athletics
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.athletics.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: athletics}
+- key: allow-skill-expert-crafting
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.crafting.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: crafting}
+- key: allow-skill-expert-deception
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.deception.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: deception}
+- key: allow-skill-expert-diplomacy
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.diplomacy.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: diplomacy}
+- key: allow-skill-expert-intimidation
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.intimidation.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: intimidation}
+- key: allow-skill-expert-medicine
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.medicine.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: medicine}
+- key: allow-skill-expert-nature
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.nature.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: nature}
+- key: allow-skill-expert-occultism
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.occultism.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: occultism}
+- key: allow-skill-expert-performance
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.performance.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: performance}
+- key: allow-skill-expert-religion
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.religion.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: religion}
+- key: allow-skill-expert-society
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.society.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: society}
+- key: allow-skill-expert-stealth
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.stealth.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: stealth}
+- key: allow-skill-expert-survival
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.survival.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: survival}
+- key: allow-skill-expert-thievery
+  effect: core/add-to-list
+  level: 8
+  prerequisites:
+  - hasChoice:
+      name: $.skills.thievery.rank
+      oneOf:
+      - {type: core/int, value: 1}
+      - {type: core/int, value: 2}
+      - {type: core/int, value: 3}
+      - {type: core/int, value: 4}
+  inputs:
+    list: $.feats.skill-mastery.skill-expert-options
+    value: {type: core/skill, literal: thievery}
+- key: choice-skill-expert
+  level: 8
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.skills.acrobatics.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.arcana.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.athletics.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.crafting.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.deception.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.diplomacy.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.intimidation.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.medicine.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.nature.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.occultism.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.performance.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.religion.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.society.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.stealth.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.survival.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+    - hasChoice:
+        name: $.skills.thievery.rank
+        oneOf:
+        - {type: core/int, value: 1}
+        - {type: core/int, value: 2}
+        - {type: core/int, value: 3}
+        - {type: core/int, value: 4}
+  choice:
+    name: $.feats.skill-mastery.skill-expert
+    label: Skill Expert
+    optionsFrom: $.feats.skill-mastery.skill-expert-options
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
+- key: raise-skill-expert
+  effect: core/add-skill-increase@2
+  level: 8
+  inputs:
+    skill: {choice: $.feats.skill-mastery.skill-expert}
+    rank: expert
