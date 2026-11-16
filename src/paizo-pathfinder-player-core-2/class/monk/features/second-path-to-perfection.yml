@@ -27,6 +27,12 @@ rules:
         inputs:
           savingThrow: fortitude
           rank: master
+      - key: note-fortitude-success-to-critical-success
+        effect: core/add-note
+        inputs:
+          target: fortitude
+          text: When you roll a success on a Fortitude saving throw, you get a critical
+            success instead.
     - key: reflex
       value: reflex
       effects:
@@ -35,6 +41,12 @@ rules:
         inputs:
           savingThrow: reflex
           rank: master
+      - key: note-reflex-success-to-critical-success
+        effect: core/add-note
+        inputs:
+          target: reflex
+          text: When you roll a success on a Reflex saving throw, you get a critical
+            success instead.
     - key: will
       value: will
       effects:
@@ -43,3 +55,9 @@ rules:
         inputs:
           savingThrow: will
           rank: master
+      - key: note-will-success-to-critical-success
+        effect: core/add-note
+        inputs:
+          target: will
+          text: When you roll a success on a Will saving throw, you get a critical
+            success instead.
