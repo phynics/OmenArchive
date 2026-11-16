@@ -27,12 +27,12 @@ rules:
         inputs:
           savingThrow: fortitude
           rank: master
-      - key: note-fortitude-success-to-critical-success
+      - key: note-fortitude-degree-of-success
         effect: core/add-note
         inputs:
           target: fortitude
-          text: When you roll a success on a Fortitude saving throw, you get a critical
-            success instead.
+          text: When you roll a success on a Fortitude save, the result is one degree
+            better.
     - key: reflex
       value: reflex
       effects:
@@ -41,12 +41,12 @@ rules:
         inputs:
           savingThrow: reflex
           rank: master
-      - key: note-reflex-success-to-critical-success
+      - key: note-reflex-degree-of-success
         effect: core/add-note
         inputs:
           target: reflex
-          text: When you roll a success on a Reflex saving throw, you get a critical
-            success instead.
+          text: When you roll a success on a Reflex save, the result is one degree
+            better.
     - key: will
       value: will
       effects:
@@ -55,9 +55,8 @@ rules:
         inputs:
           savingThrow: will
           rank: master
-      - key: note-will-success-to-critical-success
+      - key: note-will-degree-of-success
         effect: core/add-note
         inputs:
           target: will
-          text: When you roll a success on a Will saving throw, you get a critical
-            success instead.
+          text: When you roll a success on a Will save, the result is one degree better.
