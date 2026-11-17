@@ -14,9 +14,10 @@ description: 'The more people you have looking at you, the more content you are,
   Income](omen://action/earn-income?source=paizo-pathfinder-player-core), if the level
   of the task is higher than your level, you gain a +1 circumstance bonus to your
   check to Earn Income.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/celebrity-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: MNArjo5Z5LUYITQm
+rules:
+- key: upstage-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.upstage'

@@ -16,9 +16,10 @@ description: In nature, certain animals are covered in venomous spines, and just
   into the garment's fabric. You can have only one poison suffused into your clothing
   at a time. You can use the [Once Bitten](omen://action/once-bitten) reaction while
   you have a poison suffused in this way.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/poison-coat?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: eHkMcQQ4ejRAFJAt
+rules:
+- key: once-bitten-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.once-bitten'

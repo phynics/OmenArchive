@@ -13,7 +13,10 @@ description: You have turned into a plant version of yourself, gaining the plant
   gain the [Verdant Rest](omen://action/verdant-rest) action.
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: 'ActorTraits removal at position 0 is not supported yet. Resource:
-  omen://feat/verdant-metamorphosis?source=paizo-pathfinder-player-core. Foundry keys:
-  [ActorTraits, GrantItem].'
+unsupportedReason: 'ActorTraits at position 1: this element is not applied.'
 foundryID: orjVLLoziFTmf1mz
+rules:
+- key: verdant-rest-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.verdant-rest'

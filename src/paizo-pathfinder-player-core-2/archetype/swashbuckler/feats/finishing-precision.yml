@@ -18,7 +18,11 @@ description: 'You''ve learned how to land daring blows when you have Panache.
   Finisher](omen://action/basic-finisher) action.'
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/finishing-precision?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [ActiveEffectLike, GrantItem, GrantItem].'
+unsupportedReason: 'ActiveEffectLike at position 1: this element is not applied. GrantItem
+  at position 3: this element is not applied.'
 foundryID: X5gNhaYNx1xu6NoH
+rules:
+- key: basic-finisher-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.basic-finisher'

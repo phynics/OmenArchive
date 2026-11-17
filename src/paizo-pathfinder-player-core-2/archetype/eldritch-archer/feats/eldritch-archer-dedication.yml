@@ -24,9 +24,10 @@ description: 'You channel powerful magic with your archery, allowing you to deli
   and spell DC. Your key spellcasting attribute for these spells is Charisma. Regardless
   of whether you can already cast spells or gained the ability from this dedication,
   you gain the [Eldritch Shot](omen://action/eldritch-shot) activity.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/eldritch-archer-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: oyLkqhDGwGGj40ME
+rules:
+- key: eldritch-shot-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.eldritch-shot'

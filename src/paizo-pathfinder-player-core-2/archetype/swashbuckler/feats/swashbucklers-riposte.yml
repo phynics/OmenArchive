@@ -12,9 +12,10 @@ prerequisites:
   diagnostic: true
 description: You've learned to riposte against ill-conceived attacks. You gain the
   [Opportune Riposte](omen://action/opportune-riposte) reaction.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/swashbucklers-riposte?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: lZ0swL9EEUgbAuaZ
+rules:
+- key: opportune-riposte-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.opportune-riposte'

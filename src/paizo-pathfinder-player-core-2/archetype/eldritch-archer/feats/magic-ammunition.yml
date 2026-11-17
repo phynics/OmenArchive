@@ -20,9 +20,10 @@ description: 'You imbue your ammunition with raw and potent magic, transforming 
   action.'
 specialText: You can select this feat multiple times. Each time you do, select three
   additional types of magical ammunition as described above.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/magic-ammunition?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: vUFvcrvszXlHvz2Y
+rules:
+- key: transform-ammunition-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.transform-ammunition'

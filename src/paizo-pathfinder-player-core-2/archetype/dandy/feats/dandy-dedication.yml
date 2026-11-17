@@ -13,9 +13,7 @@ description: You are a consummate student of dignity, etiquette, and fashion. Yo
   become trained in Deception and Society; if you were already trained in either,
   you become an expert in it instead. You gain the [Influence Rumor](omen://action/influence-rumor)
   downtime activity.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Rule elements not applied: GrantItem.'
+mechanicsScope: builder
 foundryID: 4M5zIlJ8EvjQDtg9
 rules:
 - key: deception-expert
@@ -28,3 +26,7 @@ rules:
   inputs:
     skill: society
     rank: expert
+- key: influence-rumor-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.influence-rumor'
