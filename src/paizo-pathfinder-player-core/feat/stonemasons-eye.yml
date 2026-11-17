@@ -12,7 +12,10 @@ description: 'You also gain a +2 circumstance bonus to Perception checks to noti
   If you aren''t using the [Seek](omen://action/seek) action or searching, the GM
   automatically rolls a secret check for you to notice unusual stonework anyway. This
   check doesn''t gain your normal circumstance bonus.'
-mechanicsScope: builder
+mechanicsScope: mixed
+unsupportedCategory: benefit
+unsupportedReason: Grants Specialty Crafting at position 2 only under a condition
+  (gte skill:crafting:rank, 1), which is not applied.
 foundryID: HOUHs5rahwIsQoBf
 rules:
 - key: crafting-trained
@@ -27,7 +30,3 @@ rules:
     amount: 2
     type: circumstance
     when: Seek; terrain unusual stonework
-- key: specialty-crafting-feat
-  effect: core/add-feat@3
-  inputs:
-    feat: '@feat.specialty-crafting'

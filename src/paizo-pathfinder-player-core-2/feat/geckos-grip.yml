@@ -12,17 +12,8 @@ specialText: If you have the cliffscale lizardfolk heritage, you instead gain a 
   Speed of 15 feet.
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: 'Rule elements not applied: BaseSpeed.'
+unsupportedReason: 'Grants Combat Climber at position 1 only under a condition (not
+  heritage:cliffscale-lizardfolk), which is not applied. AdjustDegreeOfSuccess at
+  position 2: this element is not applied. BaseSpeed at position 3: this element is
+  not applied.'
 foundryID: kGed3uQbZ7x5SBB8
-rules:
-- key: athletics-climb-not-heritage-cliffscale-success-note
-  effect: core/add-note
-  inputs:
-    target: athletics
-    text: When you roll a success on an Athletics check, the result is one degree
-      better.
-    when: Climb; not heritage cliffscale lizardfolk
-- key: combat-climber-feat
-  effect: core/add-feat@3
-  inputs:
-    feat: '@feat.combat-climber?source=paizo-pathfinder-player-core'

@@ -56,7 +56,9 @@ description: 'Rogue: Increase your proficiency rank in one of your skills from e
   master and in another of your skills from trained to expert. You gain a skill feat
   associated with one of the skills you chose.'
 specialText: You can select this feat up to five times.
-mechanicsScope: builder
+mechanicsScope: mixed
+unsupportedCategory: choice
+unsupportedReason: 'Rule elements not applied: ChoiceSet, GrantItem.'
 foundryID: c9rhGmKft1BVT4JO
 rules:
 - key: options-skill-master
@@ -775,13 +777,3 @@ rules:
   inputs:
     skill: {choice: $.feats.skill-mastery.skill-expert}
     rank: expert
-- key: choice-feats-skill-mastery-skill-feat
-  choice:
-    name: $.feats.skill-mastery.skill-feat
-    label: Skill Feat
-    type: core/feat-id
-    records: {filter: {all: [{type: feat}, {trait: systemTrait-skill}]}}
-- key: chosen-skill-feat
-  effect: core/add-feat@3
-  inputs:
-    feat: {choice: $.feats.skill-mastery.skill-feat}

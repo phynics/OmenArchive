@@ -11,14 +11,11 @@ description: Your fury fills your foes with fear. While you are raging, your [De
   gain the rage trait, allowing you to use them while raging. As soon as you meet
   the prerequisites for the skill feats [Intimidating Glare](omen://feat/intimidating-glare?source=paizo-pathfinder-player-core)
   and Scare to Death, you gain these feats.
-mechanicsScope: builder
+mechanicsScope: mixed
+unsupportedCategory: benefit
+unsupportedReason: 'Grants Intimidating Glare at position 1 only under a condition
+  (gte skill:intimidation:rank, 1), which is not applied. Grants Scare to Death at
+  position 2 only under a condition (skill:intimidation:rank:4), which is not applied.
+  ItemAlteration at position 3: this element is not applied. ItemAlteration at position
+  4: this element is not applied.'
 foundryID: XseJI9XhKNtZN8pv
-rules:
-- key: intimidating-glare-feat
-  effect: core/add-feat@3
-  inputs:
-    feat: '@feat.intimidating-glare?source=paizo-pathfinder-player-core'
-- key: scare-to-death-feat
-  effect: core/add-feat@3
-  inputs:
-    feat: '@feat.scare-to-death?source=paizo-pathfinder-player-core'

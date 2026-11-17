@@ -8903,9 +8903,11 @@
     {
       "canonicalPath" : "omen:\/\/feat\/geckos-grip?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-
+        "Grants Combat Climber at position 1 only under a condition (not heritage:cliffscale-lizardfolk), which is not applied.",
+        "AdjustDegreeOfSuccess at position 2: this element is not applied.",
+        "BaseSpeed at position 3: this element is not applied."
       ],
-      "conversionOutcome" : "converted",
+      "conversionOutcome" : "unsupported",
       "featCategory" : "ancestry",
       "foundryID" : "kGed3uQbZ7x5SBB8",
       "mechanicsScope" : "mixed",
@@ -8925,7 +8927,7 @@
       ],
       "sourceHash" : "6ddd677255b5cfb41d580d1154a8375fe442757833167232974cb19b125f3ffa",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-5\/geckos-grip.json",
-      "unsupportedReason" : "Rule elements not applied: BaseSpeed."
+      "unsupportedReason" : "Grants Combat Climber at position 1 only under a condition (not heritage:cliffscale-lizardfolk), which is not applied. AdjustDegreeOfSuccess at position 2: this element is not applied. BaseSpeed at position 3: this element is not applied."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/shed-tail?source=paizo-pathfinder-player-core-2",
@@ -19878,12 +19880,15 @@
     {
       "canonicalPath" : "omen:\/\/feat\/raging-intimidation?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-
+        "Grants Intimidating Glare at position 1 only under a condition (gte skill:intimidation:rank, 1), which is not applied.",
+        "Grants Scare to Death at position 2 only under a condition (skill:intimidation:rank:4), which is not applied.",
+        "ItemAlteration at position 3: this element is not applied.",
+        "ItemAlteration at position 4: this element is not applied."
       ],
-      "conversionOutcome" : "converted",
+      "conversionOutcome" : "unsupported",
       "featCategory" : "class",
       "foundryID" : "XseJI9XhKNtZN8pv",
-      "mechanicsScope" : "builder",
+      "mechanicsScope" : "mixed",
       "name" : "Raging Intimidation",
       "prerequisiteShapes" : [
 
@@ -19900,7 +19905,8 @@
         "ItemAlteration"
       ],
       "sourceHash" : "a154ae7f77733b41dab5c1bb9e947b0bb4d5fb56d6b01c5f82e8eab04b317983",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-1\/raging-intimidation.json"
+      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-1\/raging-intimidation.json",
+      "unsupportedReason" : "Grants Intimidating Glare at position 1 only under a condition (gte skill:intimidation:rank, 1), which is not applied. Grants Scare to Death at position 2 only under a condition (skill:intimidation:rank:4), which is not applied. ItemAlteration at position 3: this element is not applied. ItemAlteration at position 4: this element is not applied."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/raging-thrower?source=paizo-pathfinder-player-core-2",
@@ -42801,9 +42807,9 @@
       "skill" : 70
     },
     "byOutcome" : {
-      "converted" : 726,
+      "converted" : 724,
       "encounter-only" : 610,
-      "unsupported" : 403
+      "unsupported" : 405
     },
     "byPrerequisiteShape" : {
       "all-of" : 3,
