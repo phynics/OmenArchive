@@ -14,9 +14,7 @@ description: You are adept at the time-honored kobold art of making traps. You g
   kobold snares. You gain the [Snare Crafting](omen://feat/snare-crafting) feat, though
   when choosing your formulas for that feat, you can also choose from uncommon kobold
   snares, as well as common snares.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Rule elements not applied: GrantItem.'
+mechanicsScope: builder
 foundryID: eMmdBpbMrpIuGowo
 rules:
 - key: crafting-trained
@@ -24,3 +22,7 @@ rules:
   inputs:
     skill: crafting
     rank: trained
+- key: snare-crafting-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.snare-crafting'

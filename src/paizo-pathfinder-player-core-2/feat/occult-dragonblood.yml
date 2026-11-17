@@ -13,9 +13,7 @@ description: Your blood contains a tiny fragment of unusual or inexplicable powe
   trained in Occultism \(from your background or class, for example\), you instead
   become trained in a skill of your choice. You gain the [Oddity Identification](omen://feat/oddity-identification?source=paizo-pathfinder-player-core)
   skill feat. If you choose a draconic exemplar, you must choose an occult dragon.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Rule elements not applied: GrantItem.'
+mechanicsScope: builder
 foundryID: 4xP7rC0gmEb66bAY
 rules:
 - key: occultism-trained
@@ -23,3 +21,7 @@ rules:
   inputs:
     skill: occultism
     rank: trained
+- key: oddity-identification-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.oddity-identification?source=paizo-pathfinder-player-core'

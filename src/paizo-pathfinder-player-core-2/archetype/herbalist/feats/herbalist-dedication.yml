@@ -22,7 +22,7 @@ description: 'You can create natural remedies. You gain the Advanced Alchemy ben
   do so, and you can use healer''s tools instead of alchemist''s tools.'
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: 'Rule elements not applied: CraftingAbility, GrantItem.'
+unsupportedReason: 'Rule elements not applied: CraftingAbility.'
 foundryID: 5CRt5Dy9eLv5LpRF
 rules:
 - key: nature-expert
@@ -30,3 +30,7 @@ rules:
   inputs:
     skill: nature
     rank: expert
+- key: alchemical-crafting-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.alchemical-crafting?source=paizo-pathfinder-player-core'

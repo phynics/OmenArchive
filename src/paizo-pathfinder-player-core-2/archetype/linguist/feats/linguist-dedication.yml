@@ -15,9 +15,7 @@ description: You have studied languages and their development. You become traine
   in Society; if you were already trained in Society, you instead become an expert
   in Society. You gain the [Multilingual](omen://feat/multilingual?source=paizo-pathfinder-player-core)
   skill feat twice.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Rule elements not applied: GrantItem.'
+mechanicsScope: builder
 foundryID: u6SDVWbzHnBBPNMo
 rules:
 - key: society-expert
@@ -25,3 +23,11 @@ rules:
   inputs:
     skill: society
     rank: expert
+- key: multilingual-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.multilingual?source=paizo-pathfinder-player-core'
+- key: multilingual-feat-2
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.multilingual?source=paizo-pathfinder-player-core'

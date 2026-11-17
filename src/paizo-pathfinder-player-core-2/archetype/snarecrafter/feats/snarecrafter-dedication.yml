@@ -31,7 +31,11 @@ specialText: Rangers can adapt snare crafting techniques to create snares from n
   Survival to Craft a snare.\)
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/snarecrafter-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [CraftingAbility, GrantItem, ActiveEffectLike, AdjustModifier].'
+unsupportedReason: 'AdjustModifier at position 4: The selector inline-dc is not a
+  roll the sheet shows. Rule elements not applied: ActiveEffectLike, CraftingAbility.'
 foundryID: 4MUbwilvb9dI0X59
+rules:
+- key: snare-crafting-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.snare-crafting'

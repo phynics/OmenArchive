@@ -34,3 +34,11 @@ rules:
   inputs:
     skill: crafting
     rank: trained
+- key: alchemical-crafting-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.alchemical-crafting?source=paizo-pathfinder-player-core'
+- key: quick-alchemy-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.quick-alchemy'

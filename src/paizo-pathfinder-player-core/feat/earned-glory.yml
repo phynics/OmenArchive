@@ -15,14 +15,24 @@ description: 'Elves often struggle with underestimating aiuvarins, and you are e
   When you attempt a Performance check to [Make an Impression](omen://action/make-an-impression)
   on an elf, if you roll a critical failure, you get a failure instead.'
 mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: 'Note at position 3: The text is a localization key, which the
+  pack doesn''t carry.'
 foundryID: nfERPRCITBp970HO
 rules:
-- key: impressive-performance-feat
-  effect: core/add-feat@3
-  inputs:
-    feat: '@feat.impressive-performance'
 - key: performance-trained
   effect: core/add-skill-increase@2
   inputs:
     skill: performance
     rank: trained
+- key: performance-make-impression-critical-failure-note
+  effect: core/add-note
+  inputs:
+    target: performance
+    text: When you roll a critical failure on a Performance check, the result is one
+      degree better.
+    when: Make An Impression; the target has the elf trait
+- key: impressive-performance-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.impressive-performance'

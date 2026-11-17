@@ -17,7 +17,11 @@ description: 'You can attach a talisman using only a bit of glue and some string
   12th level, regardless of your Crafting proficiency.'
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/quick-fix?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem, GrantItem].'
+unsupportedReason: Grants Affix a Talisman, an action of Pathfinder GM Core, which
+  Player Core 2 does not require.
 foundryID: RlhvppSmQRqL2RUe
+rules:
+- key: rapid-affixture-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.rapid-affixture'

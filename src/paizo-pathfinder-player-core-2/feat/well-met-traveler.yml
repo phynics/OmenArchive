@@ -12,9 +12,7 @@ description: 'You naturally adopt a pleasant and affable demeanor when meeting o
 
   In addition, you gain the [Hobnobber](omen://feat/hobnobber?source=paizo-pathfinder-player-core)
   skill feat.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Rule elements not applied: GrantItem.'
+mechanicsScope: builder
 foundryID: 9t4x8vRmQikEl4vP
 rules:
 - key: diplomacy-trained
@@ -22,3 +20,7 @@ rules:
   inputs:
     skill: diplomacy
     rank: trained
+- key: hobnobber-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.hobnobber?source=paizo-pathfinder-player-core'

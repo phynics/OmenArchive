@@ -9,9 +9,10 @@ description: You have near-supernatural poise that lets you move swiftly across 
   most unsteady surfaces. You gain the [Steady Balance](omen://feat/steady-balance?source=paizo-pathfinder-player-core)
   skill feat. You can Step into difficult terrain caused by uneven ground, such as
   a rocky field, hilly incline, or rocking ship.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/uncanny-agility?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: qpVB9F9DURW4Lti1
+rules:
+- key: steady-balance-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.steady-balance?source=paizo-pathfinder-player-core'

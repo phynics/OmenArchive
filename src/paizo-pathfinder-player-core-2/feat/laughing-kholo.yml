@@ -12,9 +12,10 @@ description: Your sinister giggle is a sound of warning and threat. You gain the
   Cry](omen://feat/battle-cry?source=paizo-pathfinder-player-core) skill feat. You
   don't take a penalty when you attempt to [Demoralize](omen://action/demoralize?source=paizo-pathfinder-player-core)
   a creature that doesn't understand your language.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/laughing-kholo?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: QNgnwkKZmJR5jT7K
+rules:
+- key: battle-cry-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.battle-cry?source=paizo-pathfinder-player-core'

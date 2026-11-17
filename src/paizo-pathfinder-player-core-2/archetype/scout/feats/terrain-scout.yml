@@ -14,9 +14,14 @@ description: You have mastered movement in many different environments. You gain
   exploring and any allies use [Follow the Expert](omen://action/follow-the-expert?source=paizo-pathfinder-player-core)
   to follow you as you do so, you can choose one of those allies to gain the benefit
   of any one Terrain Stalker feat you have.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/terrain-scout?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem, GrantItem].'
+mechanicsScope: builder
 foundryID: KOf6kmwAZaUJSDW9
+rules:
+- key: terrain-stalker-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.terrain-stalker?source=paizo-pathfinder-player-core'
+- key: terrain-stalker-feat-2
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.terrain-stalker?source=paizo-pathfinder-player-core'

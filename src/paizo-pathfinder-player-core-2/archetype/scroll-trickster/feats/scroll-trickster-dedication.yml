@@ -21,9 +21,24 @@ description: 'You''ve studied scrolls in depth. This might have been a comprehen
   feat, and you gain a +2 circumstance bonus to skill checks to Trick scrolls. If
   you roll a critical failure to Trick a Magic Item that''s a scroll, you get a failure
   instead.'
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/scroll-trickster-dedication?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem, FlatModifier, AdjustDegreeOfSuccess].'
+mechanicsScope: builder
 foundryID: uxHWqFbYD0ZvkeF8
+rules:
+- key: skills-circumstance-bonus-trick-magic-scroll
+  effect: core/add-modifier@2
+  inputs:
+    target: skills
+    amount: 2
+    type: circumstance
+    when: Trick Magic Item; the effect has the scroll trait
+- key: skills-trick-magic-scroll-critical-failure-note
+  effect: core/add-note
+  inputs:
+    target: skills
+    text: When you roll a critical failure on a skill check, the result is one degree
+      better.
+    when: Trick Magic Item; the effect has the scroll trait
+- key: trick-magic-item-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.trick-magic-item?source=paizo-pathfinder-player-core'

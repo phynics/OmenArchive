@@ -11,9 +11,10 @@ description: You gain the [Alchemical Crafting](omen://feat/alchemical-crafting?
   Add an additional common 1st-level alchemical formula to your formula book when
   you take this feat. Each time you gain a level beyond 1st, add one common alchemical
   formula of that level to your formula book.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/alchemical-scholar?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem].'
+mechanicsScope: builder
 foundryID: nyNsIePvpovlDAws
+rules:
+- key: alchemical-crafting-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.alchemical-crafting?source=paizo-pathfinder-player-core'

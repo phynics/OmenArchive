@@ -12,7 +12,17 @@ specialText: If you have the cliffscale lizardfolk heritage, you instead gain a 
   Speed of 15 feet.
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: 'Foundry feat rule elements are preserved for external review.
-  External review required. Resource: omen://feat/geckos-grip?source=paizo-pathfinder-player-core-2.
-  Foundry keys: [GrantItem, AdjustDegreeOfSuccess, BaseSpeed].'
+unsupportedReason: 'Rule elements not applied: BaseSpeed.'
 foundryID: kGed3uQbZ7x5SBB8
+rules:
+- key: athletics-climb-not-heritage-cliffscale-success-note
+  effect: core/add-note
+  inputs:
+    target: athletics
+    text: When you roll a success on an Athletics check, the result is one degree
+      better.
+    when: Climb; not heritage cliffscale lizardfolk
+- key: combat-climber-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.combat-climber?source=paizo-pathfinder-player-core'

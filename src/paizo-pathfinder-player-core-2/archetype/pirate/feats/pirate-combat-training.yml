@@ -24,8 +24,7 @@ description: 'You''re particularly skilled at wielding the weapons used traditio
 mechanicsScope: mixed
 unsupportedCategory: numbers
 unsupportedReason: 'Critical specialization is not applied: the archive''s effect
-  unlocks it for a whole weapon group, not for the weapons or trait this record names.
-  Rule elements not applied: ChoiceSet, GrantItem.'
+  unlocks it for a whole weapon group, not for the weapons or trait this record names.'
 foundryID: i86JRWsFRpfEJnZP
 rules:
 - key: trained
@@ -52,3 +51,17 @@ rules:
     weapons: {type: core/weapon-designation, literal: {kind: specific, name: whip}}
     rank: trained
     selfScaling: true
+- key: choice-feats-pirate-combat-training-feat
+  choice:
+    name: $.feats.pirate-combat-training.feat
+    label: Skill Feat
+    type: core/feat-id
+    records:
+      filter:
+        any:
+        - {id: '@feat.combat-climber?source=paizo-pathfinder-player-core'}
+        - {id: '@feat.underwater-marauder?source=paizo-pathfinder-player-core'}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.pirate-combat-training.feat}

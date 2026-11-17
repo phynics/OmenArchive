@@ -17,8 +17,9 @@ description: You gain a skill feat and the rogue's [Surprise Attack](omen://clas
   choice. You become trained in rogue class DC.
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: What the dedication trains (class DC, spell attack and DC) is modeled.
-  The rest of it is not yet.
+unsupportedReason: 'What the dedication trains (class DC, spell attack and DC) is
+  modeled. The rest of it is not yet. The skill feat pick is not capped by the character''s
+  level: it offers skill feats of every level.'
 foundryID: bCWieNDC1CD35tin
 rules:
 - key: dedication-class-dc
@@ -27,3 +28,13 @@ rules:
     rank: trained
     className: rogue
     keyAttribute: dexterity
+- key: choice-feats-rogue-dedication-skill-feat
+  choice:
+    name: $.feats.rogue-dedication.skill-feat
+    label: Skill Feat
+    type: core/feat-id
+    records: {filter: {all: [{type: feat}, {trait: systemTrait-skill}]}}
+- key: chosen-skill-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.rogue-dedication.skill-feat}

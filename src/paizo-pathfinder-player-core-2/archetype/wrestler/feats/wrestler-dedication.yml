@@ -19,7 +19,7 @@ description: Your training in the wrestling arts has made you particularly adept
 mechanicsScope: mixed
 unsupportedCategory: numbers
 unsupportedReason: 'FlatModifier at position 3: The selector fortitude-dc is not a
-  roll the sheet shows. Rule elements not applied: GrantItem.'
+  roll the sheet shows.'
 foundryID: 5npovgLMUlvtot2J
 rules:
 - key: athletics-expert
@@ -27,3 +27,7 @@ rules:
   inputs:
     skill: athletics
     rank: expert
+- key: titan-wrestler-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.titan-wrestler?source=paizo-pathfinder-player-core'

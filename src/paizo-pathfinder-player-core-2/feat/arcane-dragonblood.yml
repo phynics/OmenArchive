@@ -13,9 +13,7 @@ description: You descend from a dragon that wields mastery of their magical abil
   example\), you instead become trained in a skill of your choice. You gain the [Arcane
   Sense](omen://feat/arcane-sense?source=paizo-pathfinder-player-core) skill feat.
   If you choose a draconic exemplar, you must choose an arcane dragon.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'Rule elements not applied: GrantItem.'
+mechanicsScope: builder
 foundryID: oqWclVuvEOh7R5og
 rules:
 - key: arcana-trained
@@ -23,3 +21,7 @@ rules:
   inputs:
     skill: arcana
     rank: trained
+- key: arcane-sense-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.arcane-sense?source=paizo-pathfinder-player-core'

@@ -18,7 +18,8 @@ description: 'Your blood bears the mark of a demon, a living embodiment of sin f
   in Athletics, as reflects the manifestation of your fiendish blood.'
 mechanicsScope: mixed
 unsupportedCategory: choice
-unsupportedReason: 'Rule elements not applied: ChoiceSet, GrantItem.'
+unsupportedReason: The skill feat pick leaves out Armor Assist, a feat of Pathfinder
+  Player Core 2, which Player Core does not require.
 foundryID: gxQheZ4xuDWwyzy4
 rules:
 - key: athletics-trained
@@ -26,3 +27,20 @@ rules:
   inputs:
     skill: athletics
     rank: trained
+- key: choice-feats-pitborn-feat
+  choice:
+    name: $.feats.pitborn.feat
+    label: Skill Feat
+    type: core/feat-id
+    records:
+      filter:
+        any:
+        - {id: '@feat.combat-climber'}
+        - {id: '@feat.hefty-hauler'}
+        - {id: '@feat.quick-jump'}
+        - {id: '@feat.titan-wrestler'}
+        - {id: '@feat.underwater-marauder'}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.pitborn.feat}
