@@ -1,0 +1,51 @@
+---
+name: humbug pocket
+level: 9
+rarity: common
+type: equipment
+traits:
+- invested
+- occult
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 650 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'Fine silk lines this fashionable pocket, which is typically cinched
+  to a belt or tailored into a piece of formal clothing. The pocket can hold no more
+  than one item of light Bulk, plus incidental items of negligible Bulk. The pocket
+  grants you a +2 item bonus to Society and to Stealth checks to [Conceal an Object](omen://action/conceal-an-object?source=paizo-pathfinder-player-core)
+  in the pocket.
+
+  The pocket can produce stationery and writing implements of high quality. When you
+  [Create a Forgery](omen://action/create-forgery?source=paizo-pathfinder-player-core),
+  you can use the pocket to produce ideal materials to make the forgery. Any materials
+  must be able to fit through the opening of the pocket, such as a roll of parchment,
+  an inkwell, or a loupe. Though they''re excellent tools, they don''t have any value
+  if sold and disappear once their function in making a forgery is fulfilled.
+
+  Activate—Papers Please 1 \(concentrate, manipulate\)
+
+  Effect You create a temporary forgery by imagining the document you need and pulling
+  it from the pocket. Attempt to Create a Forgery of the document you desire, with
+  the GM rolling the secret check as normal. Its quality is based on your check, but
+  the document disintegrates after 1 hour.'
+mechanicsScope: builder
+foundryID: FXdESP5mmP01tL2v
+rules:
+- key: society-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: society
+    amount: 2
+    type: item
+- key: stealth-item-bonus-conceal-object
+  effect: core/add-modifier@2
+  inputs:
+    target: stealth
+    amount: 2
+    type: item
+    when: Conceal an Object

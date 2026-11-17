@@ -1,0 +1,33 @@
+---
+name: ring of lies
+level: 10
+rarity: uncommon
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 850 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This plain silver ring has an almost oily sheen. While wearing the ring,
+  you gain a +2 item bonus to Deception checks.
+
+  Activate—Sweeten Lies 2 \(manipulate\)
+
+  Effect Snapping your fingers on the hand that wears the ring causes the ring to
+  cast [Honeyed Words](omen://spell/honeyed-words?source=paizo-pathfinder-player-core)
+  on you with no visual manifestations of a spell being cast.'
+mechanicsScope: builder
+foundryID: OTeONq4r10Xm6gSy
+rules:
+- key: deception-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: deception
+    amount: 2
+    type: item

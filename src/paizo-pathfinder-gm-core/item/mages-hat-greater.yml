@@ -1,0 +1,41 @@
+---
+name: mage's hat (greater)
+level: 9
+rarity: common
+type: equipment
+traits:
+- arcane
+- invested
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 650 gp
+  quantity: 1
+  size: med
+  usage: wornheadwear
+description: 'This hat comes in many forms, such as a colorful turban or a pointy
+  hat with a brim, and is adorned with symbols or runes. It grants you a +2 item bonus
+  to Arcana checks and allows you to cast the [Prestidigitation](omen://spell/prestidigitation?source=paizo-pathfinder-player-core)
+  cantrip as an arcane innate cantrip.
+
+  This larger, fancier hat can be activated. Each greater mage''s hat has a specific
+  4th-rank summon spell from the arcane list woven into its fabric, typically [Summon
+  Animal](omen://spell/summon-animal?source=paizo-pathfinder-player-core) or [Summon
+  Elemental](omen://spell/summon-elemental?source=paizo-pathfinder-player-core). If
+  you prepare arcane spells, you can change the spell to a different 4th-rank arcane
+  summon spell you know when you invest it.
+
+  Activate—Hat Spell Cast a Spell
+
+  Effect You doff the hat, causing magical energy to pour from it. You cast the spell
+  stored in the hat.'
+mechanicsScope: builder
+foundryID: Hd1AfC08ytBg67Ey
+rules:
+- key: arcana-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: arcana
+    amount: 2
+    type: item

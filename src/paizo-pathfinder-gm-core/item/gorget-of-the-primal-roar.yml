@@ -1,0 +1,32 @@
+---
+name: gorget of the primal roar
+level: 11
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 1250 gp
+  quantity: 1
+  size: med
+  usage: worncollar
+description: 'This engraved duskwood gorget seems to vibrate with ferocity, granting
+  you a +2 item bonus to Intimidation checks.
+
+  Activate—Primal Roar A \(auditory, concentrate, emotion, fear, mental\)
+
+  Effect You unleash a bestial roar, attempting a single Intimidation check compared
+  to the Will DCs of all enemies within 30 feet to impose the effects below.'
+mechanicsScope: builder
+foundryID: WYg2dZ8UK1N3rpgs
+rules:
+- key: intimidation-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: intimidation
+    amount: 2
+    type: item

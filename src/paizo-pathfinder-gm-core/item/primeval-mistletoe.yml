@@ -1,0 +1,40 @@
+---
+name: primeval mistletoe
+level: 6
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 230 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This sprig of berry-festooned holly and mistletoe doesn''t wilt or rot.
+  It can be used as a primal locus, and it grants a +1 item bonus to Nature checks
+  while you wear it.
+
+  Activate—Anoint 2 \(manipulate\)
+
+  Effect You squeeze juice from one of the berries and smear it onto a weapon made
+  primarily of wood to cast [Runic Weapon](omen://spell/runic-weapon?source=paizo-pathfinder-player-core)
+  on it, or onto a creature to cast [Runic Body](omen://spell/runic-body?source=paizo-pathfinder-player-core)
+  on it.
+
+  Activate—Bind 2 \(manipulate\)
+
+  Effect You touch the sprig, then a tree to cast [One with Plants](omen://spell/one-with-plants?source=paizo-pathfinder-player-core)
+  upon yourself, turning into a vine on the touched tree.'
+mechanicsScope: builder
+foundryID: J5MqY1P3JWrezcQX
+rules:
+- key: nature-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: nature
+    amount: 1
+    type: item

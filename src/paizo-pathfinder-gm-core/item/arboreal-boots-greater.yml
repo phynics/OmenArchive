@@ -1,0 +1,31 @@
+---
+name: arboreal boots (greater)
+level: 9
+rarity: common
+type: equipment
+traits:
+- invested
+- primal
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 700 gp
+  quantity: 1
+  size: med
+  usage: wornshoes
+description: 'These soft leather boots are embossed with simple woodland scenes. The
+  boots grant a +2 item bonus to Acrobatics and allow you to ignore difficult terrain
+  from plants and fungi.
+
+  You also gain a 10-foot climb Speed while climbing plants or fungi and don''t need
+  to use your hands to Climb them.'
+mechanicsScope: builder
+foundryID: rRAx62TLPTZSiaLD
+rules:
+- key: acrobatics-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: acrobatics
+    amount: 2
+    type: item

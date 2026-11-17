@@ -1,0 +1,33 @@
+---
+name: maestro's instrument (greater)
+level: 18
+rarity: common
+type: equipment
+traits:
+- magical
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 19000 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+description: 'A maestro''s instrument can be crafted in the form of any variety of
+  handheld musical instruments. A maestro''s instrument grants you a +3 item bonus
+  to Performance checks while playing music with the instrument.
+
+  Activate—Charming Performance 2 \(manipulate\)
+
+  Effect You play the instrument, causing it to cast a 8th-rank [Charm](omen://spell/charm?source=paizo-pathfinder-player-core)
+  spell with DC 38.'
+mechanicsScope: mixed
+foundryID: rlDIbl6EQYXQpWVs
+rules:
+- key: performance-item-bonus-playing
+  effect: core/add-modifier@2
+  inputs:
+    target: performance
+    amount: 3
+    type: item
+    when: playing

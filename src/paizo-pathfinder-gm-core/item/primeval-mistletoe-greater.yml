@@ -1,0 +1,49 @@
+---
+name: primeval mistletoe (greater)
+level: 14
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 3900 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This sprig of berry-festooned holly and mistletoe doesn''t wilt or rot.
+  It can be used as a primal locus, and it grants a +2 item bonus to Nature checks
+  while you wear it.
+
+  Activate—Anoint 2 \(manipulate\)
+
+  Effect You squeeze juice from one of the berries and smear it onto a weapon made
+  primarily of wood to cast a 6th-rank [Runic Weapon](omen://spell/runic-weapon?source=paizo-pathfinder-player-core)
+  on it, or onto a creature to cast a 6th-rank [Runic Body](omen://spell/runic-body?source=paizo-pathfinder-player-core)
+  on it.
+
+  Activate—Bind 2 \(manipulate\)
+
+  Effect You touch the sprig, then a tree to cast [One with Plants](omen://spell/one-with-plants?source=paizo-pathfinder-player-core)
+  upon yourself, turning into a vine on the touched tree.
+
+  Activate—Cultivate 2 \(manipulate\)
+
+  Effect You plant the greater primeval mistletoe into an area of natural earth or
+  stone. Once planted, the plant immediately sprouts into an area of holly bushes
+  that don''t impede movement and that pulse with vitality energy, replicating the
+  effects of a [Field of Life](omen://spell/field-of-life?source=paizo-pathfinder-player-core)
+  spell. You can Sustain the activation up to 1 minute. When this magic ends, the
+  holly bushes revert back into the original greater primeval mistletoe.'
+mechanicsScope: builder
+foundryID: HZDkF6MlNQ6yYobD
+rules:
+- key: nature-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: nature
+    amount: 2
+    type: item

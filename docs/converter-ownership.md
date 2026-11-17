@@ -58,4 +58,5 @@ Before submitting a pull request, determine whether the change belongs in OmenAr
 The `docs/` directory contains critical metadata artifacts that track upstream provenance and historic path migrations:
 - **`docs/player-core-corpus-manifest.json`**: An accounting manifest tracking every record in *Pathfinder Player Core* against the pinned upstream revision.
 - **`docs/player-core-2-corpus-manifest.json`**: An accounting manifest for *Pathfinder Player Core 2*.
+- **`docs/gm-core-corpus-manifest.json`**: An accounting manifest for the equipment, actions and one spell of *Pathfinder GM Core*. The book's two `rule` records are hand-authored and are not in it.
 - **`docs/migrations/`**: Historical path maps (e.g. `docs/migrations/player-core-0055-v1.0.0.json`) used by consumers to preserve stable identity when records are moved or restructured between archive versions. These historical migration maps are frozen and must not be altered.

@@ -1,0 +1,40 @@
+---
+name: staff of elemental power
+level: 6
+rarity: common
+type: weapon
+traits:
+- magical
+- staff
+- two-hand-d8
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 230 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+details:
+  weapon:
+    category: simple
+    damage: 1d4 bludgeoning
+    group: club
+description: "This staff is tapered at the base and carved into a gem-studded twist
+  at the top. While wielding the staff, you gain a +2 circumstance bonus to checks
+  to identify elemental creatures.\nActivate Cast a Spell\nEffect You expend a number
+  of charges from the staff to cast a spell from its list.\n\t•\tCantrip [Frostbite](omen://spell/frostbite?source=paizo-pathfinder-player-core)\n\t•\t1st
+  [Breathe Fire](omen://spell/breathe-fire?source=paizo-pathfinder-player-core), [Pummeling
+  Rubble](omen://spell/pummeling-rubble?source=paizo-pathfinder-player-core), [Thunderstrike](omen://spell/thunderstrike?source=paizo-pathfinder-player-core)\n\t•\t2nd
+  [Blazing Bolt](omen://spell/blazing-bolt?source=paizo-pathfinder-player-core), [Resist
+  Energy](omen://spell/resist-energy?source=paizo-pathfinder-player-core)"
+mechanicsScope: builder
+foundryID: 0Vw44XmzVS4knsa8
+rules:
+- key: skills-circumstance-bonus-recall-knowledge
+  effect: core/add-modifier@2
+  inputs:
+    target: skills
+    amount: 2
+    type: circumstance
+    when: Recall Knowledge or Identify

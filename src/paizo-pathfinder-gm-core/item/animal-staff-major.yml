@@ -1,0 +1,46 @@
+---
+name: animal staff (major)
+level: 12
+rarity: common
+type: weapon
+traits:
+- magical
+- staff
+- two-hand-d8
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 1900 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+details:
+  weapon:
+    category: simple
+    damage: 1d4 bludgeoning
+    group: club
+description: "This staff is topped with carved animal and monster heads. While wielding
+  the staff, you gain a +2 circumstance bonus to Nature checks to identify animals.\nActivate
+  Cast a Spell\nEffect You expend a number of charges from the staff to cast a spell
+  from its list.\n\t•\tCantrip [Know the Way](omen://spell/know-the-way?source=paizo-pathfinder-player-core)\n\t•\t1st
+  [Runic Body](omen://spell/runic-body?source=paizo-pathfinder-player-core) [Summon
+  Animal](omen://spell/summon-animal?source=paizo-pathfinder-player-core)\n\t•\t2nd
+  [Animal Messenger](omen://spell/animal-messenger?source=paizo-pathfinder-player-core)
+  [Speak with Animals](omen://spell/speak-with-animals?source=paizo-pathfinder-player-core)
+  [Summon Animal](omen://spell/summon-animal?source=paizo-pathfinder-player-core)\n\t•\t3rd
+  [Animal Form](omen://spell/animal-form?source=paizo-pathfinder-player-core) [Summon
+  Animal](omen://spell/summon-animal?source=paizo-pathfinder-player-core)\n\t•\t4th
+  [Summon Animal](omen://spell/summon-animal?source=paizo-pathfinder-player-core)\n\t•\t5th
+  [Animal Form](omen://spell/animal-form?source=paizo-pathfinder-player-core) [Moon
+  Frenzy](omen://spell/moon-frenzy?source=paizo-pathfinder-player-core) [Summon Animal](omen://spell/summon-animal?source=paizo-pathfinder-player-core)"
+mechanicsScope: builder
+foundryID: Oo7IpJQDSTmzUyzG
+rules:
+- key: nature-circumstance-bonus-identify-animals
+  effect: core/add-modifier@2
+  inputs:
+    target: nature
+    amount: 2
+    type: circumstance
+    when: identify animals

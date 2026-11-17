@@ -1,0 +1,39 @@
+---
+name: reflecting shield
+level: 18
+rarity: uncommon
+type: shield
+traits:
+- magical
+physical:
+  bulk: L
+  hardness: 6
+  hitPoints: 24
+  price: 18000 gp
+  quantity: 1
+  size: med
+details:
+  shield:
+    acBonus: 1
+    hardness: 6
+    hitPoints: 24
+    speedPenalty: 0
+description: 'This high-grade silver buckler \(Hardness 6, HP 24, BT 12\) is polished
+  to a mirrorlike sheen. The shield functions as a [Spellguard Shield](omen://item/spellguard-shield)
+  that can also reflect spells.
+
+  Activate—Reflect Spell R \(concentrate\)
+
+  Effect You attempt to reflect the spell on its caster. The shield attempts to counteract
+  the spell, with a counteract rank of 9th and a counteract modifier of +30. If the
+  spell is successfully counteracted, it''s turned back on its caster'
+mechanicsScope: mixed
+foundryID: La9qYc5NHsg423Jb
+rules:
+- key: saving-throws-circumstance-bonus-reflecting-shield
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 2
+    type: circumstance
+    when: reflecting shield

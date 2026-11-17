@@ -1,0 +1,36 @@
+---
+name: devoted vestments
+level: 11
+rarity: common
+type: equipment
+traits:
+- divine
+- focused
+- invested
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 1250 gp
+  quantity: 1
+  size: med
+  usage: worngarment
+description: 'These vestments are made of panels showing various scenes from the legends
+  of a particular deity. It serves as a religious symbol of that deity, and you gain
+  a +2 item bonus to Religion checks. When you cast harm or heal, healing granted
+  to followers of that deity is increased by the rank of the spell.
+
+  Activate—Domain Devotion F \(concentrate\)
+
+  Effect Gain 1 Focus Point, which you can spend only to cast a cleric domain spell
+  for a domain belonging to the deity the vestments are dedicated to. If you don''t
+  spend this point by the end of this turn, it is lost.'
+mechanicsScope: builder
+foundryID: as84dZ5Hliru148n
+rules:
+- key: religion-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: religion
+    amount: 2
+    type: item

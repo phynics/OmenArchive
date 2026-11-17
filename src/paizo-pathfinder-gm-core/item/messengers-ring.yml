@@ -1,0 +1,36 @@
+---
+name: messenger's ring
+level: 9
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 700 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This silver signet ring changes to match the insignia of a lord or organization
+  you serve \(or your own face, if you serve no one else\). It grants you a +2 item
+  bonus to Diplomacy checks and lets you cast [Message](omen://spell/message?source=paizo-pathfinder-player-core)
+  as an arcane innate spell at will.
+
+  Activate—Dispatch Messenger 1 minute \(concentrate\)
+
+  Effect The ring casts [Animal Messenger](omen://spell/animal-messenger?source=paizo-pathfinder-player-core)
+  to your specification. The animal is a magical creature that springs from the ring,
+  and its appearance suits the iconography or heraldry of the lord or organization
+  represented by the ring.'
+mechanicsScope: builder
+foundryID: HAtj6AGCIZHpD7Nl
+rules:
+- key: diplomacy-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: diplomacy
+    amount: 2
+    type: item

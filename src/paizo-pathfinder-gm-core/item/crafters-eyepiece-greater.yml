@@ -1,0 +1,37 @@
+---
+name: crafter's eyepiece (greater)
+level: 11
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 1200 gp
+  quantity: 1
+  size: med
+  usage: worneyepiece
+description: 'This rugged metal eyepiece etched with square patterns is designed to
+  be worn over a single eye. Twisting the lens reveals a faint three-dimensional outline
+  of an item you plan to build or repair, with helpful labels on the component parts.
+
+  You gain a +2 item bonus to Crafting checks. When you Repair an item, increase the
+  Hit Points restored to 10 + 10 per proficiency rank on a success or 15 + 15 per
+  proficiency rank on a critical success.
+
+  Activate—Prototype 1 minute \(manipulate\)
+
+  Effect You calibrate the eyepiece to have it cast a 5th-rank [Creation](omen://spell/creation?source=paizo-pathfinder-player-core)
+  spell over the course of 1 minute to construct a temporary item.'
+mechanicsScope: builder
+foundryID: JSYtBZ7XblyAEFoV
+rules:
+- key: crafting-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: crafting
+    amount: 2
+    type: item

@@ -1,0 +1,32 @@
+---
+name: demon mask
+level: 4
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 85 gp
+  quantity: 1
+  size: med
+  usage: wornmask
+description: 'This terrifying mask is crafted in the visage of a leering demon and
+  grants a +1 item bonus to Intimidation checks.
+
+  Activate—Leering Mask 2 \(manipulate\)
+
+  Effect The mask casts a [Fear](omen://spell/fear?source=paizo-pathfinder-player-core)
+  spell with a DC of 20.'
+mechanicsScope: builder
+foundryID: 2gYZiUw9yjtb0yJY
+rules:
+- key: intimidation-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: intimidation
+    amount: 1
+    type: item

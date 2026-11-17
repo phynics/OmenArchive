@@ -1,0 +1,28 @@
+---
+name: arboreal boots
+level: 5
+rarity: common
+type: equipment
+traits:
+- invested
+- primal
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 160 gp
+  quantity: 1
+  size: med
+  usage: wornshoes
+description: These soft leather boots are embossed with simple woodland scenes. The
+  boots grant a +1 item bonus to Acrobatics and allow you to ignore difficult terrain
+  from plants and fungi.
+mechanicsScope: builder
+foundryID: amJW9azNUSJLmWGP
+rules:
+- key: acrobatics-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: acrobatics
+    amount: 1
+    type: item

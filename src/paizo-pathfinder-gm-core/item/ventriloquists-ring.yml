@@ -1,0 +1,33 @@
+---
+name: ventriloquist's ring
+level: 3
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 60 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This elegant copper ring has miniature images of songbirds engraved
+  around its circumference. You gain a +1 item bonus to Deception checks.
+
+  Activate—Throw Voice 2 \(manipulate\)
+
+  Effect Twisting the ring around your finger allows you to magically throw your voice,
+  with the effects of a [Ventriloquism](omen://spell/ventriloquism?source=paizo-pathfinder-player-core)
+  spell \(DC 19 Perception check\).'
+mechanicsScope: builder
+foundryID: 1r6StS0irdvi5JHY
+rules:
+- key: deception-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: deception
+    amount: 1
+    type: item

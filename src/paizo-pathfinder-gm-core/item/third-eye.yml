@@ -1,0 +1,41 @@
+---
+name: third eye
+level: 19
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 40000 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'When invested, this ornate crown and its incandescent gemstone meld
+  into your head and take the form of a tattoo. This grants you otherworldly sight
+  and allows you to read auras. No one but you can manipulate the third eye while
+  it''s invested by you. Your heightened senses and ability to sense emotional auras
+  grant you a +3 item bonus to Perception checks.
+
+  You continuously see magic auras, as a 9th-rank [Detect Magic](omen://spell/detect-magic?source=paizo-pathfinder-player-core)
+  spell, except you see the location of all auras within 30 feet, not just the strongest.
+  If you use a Seek action to study a creature you can see, you can perceive an aura
+  that conveys knowledge of that creature''s health, including all conditions and
+  afflictions it has and an approximate percentage of its remaining Hit Points.
+
+  Activate—Truesight 2 \(concentrate\)
+
+  Effect You gain the effects of an 8th-rank [Truesight](omen://spell/truesight?source=paizo-pathfinder-player-core)
+  spell.'
+mechanicsScope: builder
+foundryID: 7MTjAlCVVLsNFo7w
+rules:
+- key: perception-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: perception
+    amount: 3
+    type: item

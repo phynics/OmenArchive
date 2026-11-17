@@ -1,0 +1,40 @@
+---
+name: cloak of swiftness
+level: 17
+rarity: common
+type: equipment
+traits:
+- apex
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 15000 gp
+  quantity: 1
+  size: med
+  usage: worncloak
+description: 'This thin cloak is surprisingly light, as if clouds or the very wind
+  were woven together to make the garment. The cloak grants you a +3 item bonus to
+  Acrobatics checks. When you invest the cloak, you either increase your Dexterity
+  modifier by 1 or increase it to +4, whichever would give you a higher value.
+
+  Activate—Ride the Wind 1 \(manipulate\)
+
+  Effect You tug on the cloak, wrapping yourself in the power of wind. You gain a
+  fly Speed of 30 feet for 1 hour. While wrapped in the cloak, you become translucent,
+  causing you to become [Concealed](omen://condition/concealed?source=paizo-pathfinder-player-core)
+  for the duration.'
+mechanicsScope: mixed
+unsupportedCategory: numbers
+unsupportedReason: The item's built-in runes, item bonus, splash damage or apex attribute
+  increase are not modeled.
+foundryID: C3SwBSW8XzzBPDVT
+rules:
+- key: acrobatics-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: acrobatics
+    amount: 3
+    type: item

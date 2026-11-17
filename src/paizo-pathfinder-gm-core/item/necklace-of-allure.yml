@@ -1,0 +1,39 @@
+---
+name: necklace of allure
+level: 17
+rarity: common
+type: equipment
+traits:
+- apex
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 15000 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'Several sapphires are set along the length of this brilliant silver
+  necklace. The necklace features an intricately carved pendant in the shape of a
+  wolf''s head. You gain a +2 item bonus to Deception and Diplomacy checks. When you
+  invest the necklace, you either increase your Charisma modifier by 1 or increase
+  it to +4, whichever would give you a higher value.
+
+  Activate—Win Them Over 2 \(concentrate\)
+
+  Effect You cast a 4th-rank [Charm](omen://spell/charm?source=paizo-pathfinder-player-core)
+  spell with a DC 38 Will save.'
+mechanicsScope: mixed
+unsupportedCategory: numbers
+unsupportedReason: The item's built-in runes, item bonus, splash damage or apex attribute
+  increase are not modeled.
+foundryID: AMOs47C4WiVY5IW3
+rules:
+- key: diplomacy-and-deception-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: [diplomacy, deception]
+    amount: 2
+    type: item

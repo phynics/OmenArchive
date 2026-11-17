@@ -1,0 +1,39 @@
+---
+name: staff of the unblinking eye
+level: 6
+rarity: uncommon
+type: weapon
+traits:
+- magical
+- staff
+- two-hand-d8
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 230 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+details:
+  weapon:
+    category: simple
+    damage: 1d4 bludgeoning
+    group: club
+description: "The stone head piece of this smooth wooden staff is carved to look like
+  a lidless eye. While wielding it, you gain a +1 status bonus to Perception checks
+  made for initiative.\nActivate Cast a Spell\nEffect You expend a number of charges
+  from the staff to cast a spell from its list.\n\t•\tCantrip [Detect Magic](omen://spell/detect-magic?source=paizo-pathfinder-player-core)\n\t•\t1st
+  [Sure Strike](omen://spell/sure-strike?source=paizo-pathfinder-player-core)\n\t•\t2nd
+  [Darkvision](omen://spell/darkvision?source=paizo-pathfinder-player-core), [See
+  the Unseen](omen://spell/see-the-unseen?source=paizo-pathfinder-player-core), [Translate](omen://spell/translate?source=paizo-pathfinder-player-core)"
+mechanicsScope: builder
+foundryID: uhsVSBF4f3D5oym0
+rules:
+- key: perception-status-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: perception
+    amount: 1
+    type: status
+    when: in some situations

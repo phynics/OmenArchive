@@ -1,0 +1,33 @@
+---
+name: obsidian goggles
+level: 5
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 150 gp
+  quantity: 1
+  size: med
+  usage: worneyepiece
+description: 'The sleek, black lenses of these goggles somehow make everything seem
+  more brightly lit. While wearing the goggles, you gain a +1 item bonus to Perception
+  checks involving sight.
+
+  Activate—Darkvision 1 \(manipulate\)
+
+  Effect Adjusting your goggles, you gain darkvision for 1 hour.'
+mechanicsScope: builder
+foundryID: K7VHhUamFz3kTnm5
+rules:
+- key: perception-item-bonus-visual
+  effect: core/add-modifier@2
+  inputs:
+    target: perception
+    amount: 1
+    type: item
+    when: visual

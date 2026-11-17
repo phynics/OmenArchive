@@ -1,0 +1,29 @@
+---
+name: mage's hat
+level: 3
+rarity: common
+type: equipment
+traits:
+- arcane
+- invested
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 50 gp
+  quantity: 1
+  size: med
+  usage: wornheadwear
+description: This hat comes in many forms, such as a colorful turban or a pointy hat
+  with a brim, and is adorned with symbols or runes. It grants you a +1 item bonus
+  to Arcana checks and allows you to cast the [Prestidigitation](omen://spell/prestidigitation?source=paizo-pathfinder-player-core)
+  cantrip as an arcane innate cantrip.
+mechanicsScope: builder
+foundryID: SswqJqeAWGtX3tTF
+rules:
+- key: arcana-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: arcana
+    amount: 1
+    type: item

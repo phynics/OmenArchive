@@ -1,0 +1,36 @@
+---
+name: dancing scarf (greater)
+level: 9
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+- visual
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 650 gp
+  quantity: 1
+  size: med
+  usage: wornbelt
+description: 'This long and billowing scarf is typically woven of silk or sheer fabric
+  and adorned with bells or other jangling bits of shiny metal. It grants a +2 item
+  bonus to Performance checks to dance.
+
+  Activate—Swirling Scarf A \(manipulate\)
+
+  Effect You become [Concealed](omen://condition/concealed?source=paizo-pathfinder-player-core)
+  until the beginning of your next turn. You can also Stride up to half your Speed
+  or Step.'
+mechanicsScope: builder
+foundryID: QJ1PhbtbLzwhRlY0
+rules:
+- key: performance-item-bonus-perform-dance
+  effect: core/add-modifier@2
+  inputs:
+    target: performance
+    amount: 2
+    type: item
+    when: Perform:Dance

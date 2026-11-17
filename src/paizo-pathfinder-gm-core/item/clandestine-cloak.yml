@@ -1,0 +1,50 @@
+---
+name: clandestine cloak
+level: 6
+rarity: uncommon
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 230 gp
+  quantity: 1
+  size: med
+  usage: worncloak
+description: 'When you pull up the hood of this nondescript gray cloak \(an Interact
+  action\), you become drab and uninteresting, gaining a +1 item bonus to Stealth
+  checks and to Deception checks to [Impersonate](omen://action/impersonate?source=paizo-pathfinder-player-core)
+  a forgettable background character, such as a servant, but also taking a -1 item
+  penalty to Diplomacy and Intimidation checks.
+
+  Activate—Cloak Identity 2 \(concentrate, manipulate\)
+
+  Effect You pull the cloak''s hood up and gain the benefits of [Veil of Privacy](omen://spell/veil-of-privacy?source=paizo-pathfinder-player-core)
+  for 1 hour or until you pull the hood back down, whichever comes first.'
+mechanicsScope: mixed
+foundryID: hmmDa6LCS22dZT7P
+rules:
+- key: stealth-item-bonus-clandestine-cloak
+  effect: core/add-modifier@2
+  inputs:
+    target: stealth
+    amount: 1
+    type: item
+    when: clandestine cloak
+- key: deception-item-bonus-impersonate
+  effect: core/add-modifier@2
+  inputs:
+    target: deception
+    amount: 1
+    type: item
+    when: Impersonate
+- key: diplomacy-and-intimidation-item-penalty-clandestine
+  effect: core/add-modifier@2
+  inputs:
+    target: [diplomacy, intimidation]
+    amount: -1
+    type: item
+    when: clandestine cloak

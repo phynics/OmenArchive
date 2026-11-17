@@ -1,0 +1,35 @@
+---
+name: marvelous medicines
+level: 12
+rarity: common
+type: equipment
+traits:
+- magical
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 1800 gp
+  quantity: 1
+  size: med
+  usage: held-in-two-hands
+description: 'This healer''s toolkit contains a seemingly endless supply of bandages,
+  herbs, and healing items of impeccable quality, granting you a +2 item bonus to
+  Medicine checks.
+
+  If you use the marvelous medicines when you [Treat Poison](omen://action/treat-poison?source=paizo-pathfinder-player-core)
+  or [Treat Disease](omen://action/treat-disease?source=paizo-pathfinder-player-core),
+  before you roll your check, the medicines attempt to counteract the poison or disease
+  you''re treating, with a counteract rank of 5 and a counteract modifier of +21.
+  This is a healing effect.
+
+  The medicines can''t be used to treat the same affliction for that patient again'
+mechanicsScope: builder
+foundryID: aZ8HzjZCOJCV7ZWh
+rules:
+- key: medicine-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: medicine
+    amount: 2
+    type: item

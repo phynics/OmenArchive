@@ -1,0 +1,35 @@
+---
+name: living mantle (greater)
+level: 18
+rarity: common
+type: equipment
+traits:
+- focused
+- invested
+- plant
+- primal
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 21000 gp
+  quantity: 1
+  size: med
+  usage: worncloak
+description: 'The base of this cloak is a thick layer of moss, but it slowly picks
+  up native plants from each area it spends time in. You gain a +3 item bonus to Nature
+  checks. You also suffer no effects from extreme cold and severe heat.
+
+  Activate—Druidic Secrets F \(concentrate\)
+
+  Effect You gain 1 Focus Point, which you can spend only to cast an order spell.
+  If you don''t spend this Focus Point by the end of this turn, it is lost.'
+mechanicsScope: builder
+foundryID: IdI7rfCk7WjGbJHN
+rules:
+- key: nature-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: nature
+    amount: 3
+    type: item

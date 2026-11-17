@@ -1,0 +1,31 @@
+---
+name: bracelet of dashing
+level: 3
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 58 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This jangling, silvery bracelet makes you lighter on your feet, giving
+  you a +1 item bonus to Acrobatics checks.
+
+  Activate—Jangling Dash A \(concentrate\)
+
+  Effect You gain a +10-foot status bonus to Speed for 1 minute.'
+mechanicsScope: builder
+foundryID: BKdzb8hu3kZtKH3Z
+rules:
+- key: acrobatics-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: acrobatics
+    amount: 1
+    type: item

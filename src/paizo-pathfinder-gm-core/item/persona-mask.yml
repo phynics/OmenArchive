@@ -1,0 +1,35 @@
+---
+name: persona mask
+level: 3
+rarity: common
+type: equipment
+traits:
+- fortune
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 50 gp
+  quantity: 1
+  size: med
+  usage: wornmask
+description: 'Despite covering the entire face, this alabaster mask does not hinder
+  vision or other senses. Wearing the mask grants a +1 item bonus to Performance checks
+  while acting, orating, performing comedy, or singing.
+
+  Activate—Assume Role A \(concentrate\)
+
+  Effect You change the mask''s appearance into an artistic rendition of a dramatic
+  character of your choice.'
+mechanicsScope: builder
+foundryID: MKupH1T018JubYJW
+rules:
+- key: performance-item-bonus-acting-orating-comedy-singing
+  effect: core/add-modifier@2
+  inputs:
+    target: performance
+    amount: 1
+    type: item
+    when: acting, orating, comedy, singing

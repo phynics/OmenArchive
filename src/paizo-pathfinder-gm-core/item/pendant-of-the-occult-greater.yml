@@ -1,0 +1,36 @@
+---
+name: pendant of the occult (greater)
+level: 9
+rarity: common
+type: equipment
+traits:
+- invested
+- occult
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 650 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This amulet is hollow and shaped in the form of an unblinking eye. Its
+  cavity typically holds some fragment of occult text. While wearing the pendant,
+  you gain a +2 item bonus to Occultism checks, and you can cast the [Guidance](omen://spell/guidance?source=paizo-pathfinder-player-core)
+  cantrip as an occult innate spell.
+
+  The pendant can be activated.
+
+  Activate—Dream Message 10 minutes \(concentrate, manipulate\)
+
+  Effect You cast a 4th-rank [Dream Message](omen://spell/dream-message?source=paizo-pathfinder-player-core)
+  spell.'
+mechanicsScope: builder
+foundryID: 1bvH8zFQvDYky9tr
+rules:
+- key: occultism-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: occultism
+    amount: 2
+    type: item

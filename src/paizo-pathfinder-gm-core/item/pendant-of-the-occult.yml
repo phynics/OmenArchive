@@ -1,0 +1,29 @@
+---
+name: pendant of the occult
+level: 3
+rarity: common
+type: equipment
+traits:
+- invested
+- occult
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 60 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: This amulet is hollow and shaped in the form of an unblinking eye. Its
+  cavity typically holds some fragment of occult text. While wearing the pendant,
+  you gain a +1 item bonus to Occultism checks, and you can cast the [Guidance](omen://spell/guidance?source=paizo-pathfinder-player-core)
+  cantrip as an occult innate spell.
+mechanicsScope: builder
+foundryID: zPhqmCvWyHO8i9ws
+rules:
+- key: occultism-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: occultism
+    amount: 1
+    type: item

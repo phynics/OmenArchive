@@ -13,14 +13,16 @@ description: 'You can attach a talisman using only a bit of glue and some string
   you don''t meet the prerequisites. When you use it, you can affix or remove up to
   four talismans in 1 minute instead of just one.
 
-  You gain the ability to Affix a Talisman as a 3-action activity from that feat at
-  12th level, regardless of your Crafting proficiency.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Grants Affix a Talisman, an action of Pathfinder GM Core, which
-  Player Core 2 does not require.
+  You gain the ability to [Affix a Talisman](omen://action/affix-a-talisman?source=paizo-pathfinder-gm-core)
+  as a 3-action activity from that feat at 12th level, regardless of your Crafting
+  proficiency.'
+mechanicsScope: builder
 foundryID: RlhvppSmQRqL2RUe
 rules:
+- key: affix-a-talisman-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.affix-a-talisman?source=paizo-pathfinder-gm-core'
 - key: rapid-affixture-feat
   effect: core/add-feat@3
   inputs:

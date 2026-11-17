@@ -1,0 +1,33 @@
+---
+name: charlatan's gloves (greater)
+level: 9
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 600 gp
+  quantity: 1
+  size: med
+  usage: worngloves
+description: 'Tiny silver hooks decorate these fine silk gloves. They grant a +2 item
+  bonus to Thievery and allow you to cast [Telekinetic Hand](omen://spell/telekinetic-hand?source=paizo-pathfinder-player-core)
+  as an innate occult spell.
+
+  If you are also wearing a charlatan''s cape, whenever you would move an object using
+  telekinetic hand, you may instead have it disappear in a puff of smoke and reappear
+  hovering in a space adjacent to yours. This is a teleportation effect. The item
+  hovers until the end of your turn or until retrieved with an Interact action.'
+mechanicsScope: builder
+foundryID: t8RXms7xq8atF9W7
+rules:
+- key: thievery-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: thievery
+    amount: 2
+    type: item

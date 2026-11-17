@@ -1,0 +1,28 @@
+---
+name: charlatan's gloves
+level: 3
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 50 gp
+  quantity: 1
+  size: med
+  usage: worngloves
+description: Tiny silver hooks decorate these fine silk gloves. They grant a +1 item
+  bonus to Thievery and allow you to cast [Telekinetic Hand](omen://spell/telekinetic-hand?source=paizo-pathfinder-player-core)
+  as an innate occult spell.
+mechanicsScope: builder
+foundryID: LKdgj4UVmOvUwkZu
+rules:
+- key: thievery-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: thievery
+    amount: 1
+    type: item

@@ -1,0 +1,53 @@
+---
+name: tideplate
+level: 10
+rarity: common
+type: armor
+physical:
+  bulk: '4'
+  hardness: 0
+  hitPoints: 0
+  price: 1000 gp
+  quantity: 1
+  size: med
+details:
+  armor:
+    acBonus: 6
+    category: heavy
+    checkPenalty: -3
+    dexterityCap: 0
+    speedPenalty: -10
+    strength: 4
+description: 'Rippling water motifs decorate this simple suit of +1 resilient full
+  plate. The plate has been altered for underwater use, so it''s check penalty doesn''t
+  apply to Acrobatics or Athletics checks in water or similar liquids. While wearing
+  the armor, you gain a +2 item bonus to Athletics checks to Swim, and you can breathe
+  underwater.
+
+  Activate—Ride the Waves 2 \(concentrate, manipulate\)
+
+  Effect The ripples on the armor begin to undulate, matching the movement of any
+  nearby water. The armor casts [Water Walk](omen://spell/water-walk?source=paizo-pathfinder-player-core)
+  on you.
+
+  Activate—Submerge 2 \(concentrate, manipulate, polymorph\)
+
+  Effect You merge with the water for 10 minutes. While merged, you can''t move, you
+  can see through the water if it''s clear enough, and you can hear what''s going
+  on outside of the water. Water typically can''t take damage, but if the water you''re
+  merged in is subject to electricity damage or an ability or effect that destroys
+  or dries water, you''re expelled from the water and take 10d6 damage. Control water
+  expels you without dealing damage.'
+mechanicsScope: mixed
+unsupportedCategory: numbers
+unsupportedReason: The item's built-in runes, item bonus, splash damage or apex attribute
+  increase are not modeled.
+foundryID: 7jGnVnqFt2gFtU1g
+rules:
+- key: athletics-item-bonus-swim
+  effect: core/add-modifier@2
+  inputs:
+    target: athletics
+    amount: 2
+    type: item
+    when: Swim

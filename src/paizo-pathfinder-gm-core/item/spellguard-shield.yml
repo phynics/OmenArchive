@@ -1,0 +1,34 @@
+---
+name: spellguard shield
+level: 6
+rarity: common
+type: shield
+traits:
+- magical
+physical:
+  bulk: '1'
+  hardness: 6
+  hitPoints: 24
+  price: 250 gp
+  quantity: 1
+  size: med
+details:
+  shield:
+    acBonus: 2
+    hardness: 6
+    hitPoints: 24
+    speedPenalty: 0
+description: This shield bears eldritch glyphs to guard against magic. While you have
+  this steel shield \(Hardness 6, HP 24, BT 12\) raised, you gain its circumstance
+  bonus to saving throws against spells that target you \(as well as to AC\), and
+  you can Shield Block spells that target you if you have that action.
+mechanicsScope: mixed
+foundryID: OqDAx4HJ39ojVtvg
+rules:
+- key: saving-throws-circumstance-bonus-spellguard-shield
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 2
+    type: circumstance
+    when: spellguard shield

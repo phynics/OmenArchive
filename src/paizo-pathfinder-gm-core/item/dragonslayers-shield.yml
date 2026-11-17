@@ -1,0 +1,43 @@
+---
+name: dragonslayer's shield
+level: 9
+rarity: uncommon
+type: shield
+traits:
+- magical
+physical:
+  bulk: '1'
+  hardness: 8
+  hitPoints: 32
+  price: 670 gp
+  quantity: 1
+  size: med
+details:
+  shield:
+    acBonus: 2
+    hardness: 8
+    hitPoints: 32
+    speedPenalty: 0
+description: 'A dragonslayer''s shield is a steel shield covered with dragonhide from
+  a specific dragon, which visually distinguishes each shield from the others. While
+  raised, this steel shield \(Hardness 8, HP 32, BT 16\) grants its circumstance bonus
+  to Reflex saves against area effects \(as well as to AC, as normal\).
+
+  While you hold the shield, it also grants you a +2 circumstance bonus to Will saves
+  against a dragon''s frightful presence ability. The shield has resistance 10 against
+  the damage type corresponding to the dragon breath of the dragon whose hide was
+  used in its creation \(for example, a dragonslayer''s shield made with the hide
+  of a diabolic dragon would grant resistance to fire\); this applies after reducing
+  the damage for Hardness, so when you use Shield Block, the dragonslayer''s shield
+  takes 18 less damage from attacks of that damage type. You can use Shield Block
+  against effects that deal damage of that type.'
+mechanicsScope: builder
+foundryID: Q8BscHUFiM1a86PO
+rules:
+- key: will-circumstance-bonus-frightful-presence
+  effect: core/add-modifier@2
+  inputs:
+    target: will
+    amount: 2
+    type: circumstance
+    when: Frightful Presence

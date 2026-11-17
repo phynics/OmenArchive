@@ -1,0 +1,36 @@
+---
+name: charlatan's cape
+level: 10
+rarity: uncommon
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 980 gp
+  quantity: 1
+  size: med
+  usage: worncloak
+description: 'This bright red-and-gold cape is often interlaced with glittery threads
+  and serves as a distraction. While wearing the cape, you gain a +2 item bonus to
+  Deception checks.
+
+  Activate—Puff of Smoke 2 \(manipulate\)
+
+  Effect You cast [Translocate](omen://spell/translocate?source=paizo-pathfinder-player-core).
+  The space you leave and the one you appear in are filled with puffs of smoke that
+  make anyone within [Concealed](omen://condition/concealed?source=paizo-pathfinder-player-core)
+  until they leave the smoke or the end of your next turn, at which point the smoke
+  dissipates. Strong winds immediately disperse the smoke.'
+mechanicsScope: builder
+foundryID: uiJAR3jQbQHhiP3Q
+rules:
+- key: deception-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: deception
+    amount: 2
+    type: item

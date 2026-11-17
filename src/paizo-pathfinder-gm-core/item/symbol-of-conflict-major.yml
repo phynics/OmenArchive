@@ -1,0 +1,47 @@
+---
+name: symbol of conflict (major)
+level: 18
+rarity: uncommon
+type: equipment
+traits:
+- divine
+- invested
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 19000 gp
+  quantity: 1
+  size: med
+  usage: worn
+description: 'This tarnished necklace can be attuned only by someone who is holy or
+  unholy. When you attune it, it transforms into your deity''s religious symbol or
+  a personal symbol if you don''t have a deity. You receive a +3 item bonus to Religion
+  and a +1 circumstance bonus to saves against holy and unholy effects.
+
+  Activate—Presence 2 \(concentrate, manipulate\)
+
+  Effect The symbol casts 6th-rank [Bane](omen://spell/bane?source=paizo-pathfinder-player-core),
+  [Bless](omen://spell/bless?source=paizo-pathfinder-player-core), [Divine Wrath](omen://spell/divine-wrath?source=paizo-pathfinder-player-core),
+  or [Cleanse Affliction](omen://spell/cleanse-affliction?source=paizo-pathfinder-player-core).
+  Add 6th-rank [Summon Celestial](omen://spell/summon-celestial?source=paizo-pathfinder-player-core)
+  to this list if you are holy and 6th-rank [Summon Fiend](omen://spell/summon-fiend?source=paizo-pathfinder-player-core)
+  if you are unholy.
+
+  The counteract DC of these effects is 38, and the counteract modifier is +28.'
+mechanicsScope: builder
+foundryID: C7FeT7eVuwRnLhJy
+rules:
+- key: religion-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: religion
+    amount: 2
+    type: item
+- key: saving-throws-circumstance-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: in some situations

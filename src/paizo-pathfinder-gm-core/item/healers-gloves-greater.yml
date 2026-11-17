@@ -1,0 +1,34 @@
+---
+name: healer's gloves (greater)
+level: 9
+rarity: common
+type: equipment
+traits:
+- invested
+- magical
+physical:
+  bulk: L
+  hardness: 0
+  hitPoints: 0
+  price: 700 gp
+  quantity: 1
+  size: med
+  usage: worngloves
+description: 'These clean, white gloves never show signs of blood, even when used
+  to stitch up wounds or treat other ailments. They give you a +2 item bonus to Medicine
+  checks.
+
+  Activate—Healer''s Touch A \(manipulate\)
+
+  Effect You can soothe the wounds of a willing, living, adjacent creature, restoring
+  4d6 + 15 vitality healing Hit Points to that creature. This is a healing vitality
+  effect. You can''t harm undead with this healing.'
+mechanicsScope: builder
+foundryID: 0GOHTXBxs6H6ARBz
+rules:
+- key: medicine-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: medicine
+    amount: 2
+    type: item

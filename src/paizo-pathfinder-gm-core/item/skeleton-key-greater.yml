@@ -1,0 +1,36 @@
+---
+name: skeleton key (greater)
+level: 11
+rarity: common
+type: equipment
+traits:
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 1250 gp
+  quantity: 1
+  size: med
+  usage: held-in-one-hand
+description: 'A grinning skull tops the bow of this macabre key. This key can be used
+  in place of thieves'' toolkit when attempting to Pick a Lock, and it grants a +2
+  item bonus to the Thievery check.
+
+  If the skeleton key becomes broken due to a critical failure on the check, it works
+  as normal thieves'' toolkit and loses its benefits until repaired.
+
+  Activate—Loosen Lock F \(manipulate\)
+
+  Effect The key casts [Knock](omen://spell/knock?source=paizo-pathfinder-player-core)
+  on the lock you''re trying to pick.'
+mechanicsScope: builder
+foundryID: AFE073UYI0mkWuUs
+rules:
+- key: thievery-item-bonus-pick-lock
+  effect: core/add-modifier@2
+  inputs:
+    target: thievery
+    amount: 2
+    type: item
+    when: Pick a Lock

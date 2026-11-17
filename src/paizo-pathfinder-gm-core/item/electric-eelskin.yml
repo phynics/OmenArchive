@@ -1,0 +1,52 @@
+---
+name: electric eelskin
+level: 10
+rarity: common
+type: armor
+traits:
+- invested
+- magical
+physical:
+  bulk: '1'
+  hardness: 0
+  hitPoints: 0
+  price: 950 gp
+  quantity: 1
+  size: med
+details:
+  armor:
+    acBonus: 1
+    category: light
+    checkPenalty: 0
+    dexterityCap: 4
+    speedPenalty: 0
+    strength: 0
+description: 'Shining, slippery eelskin covers the plates of this +1 resilient greater
+  slick leather armor. The armor gives you the ability to breathe water and grants
+  you a +2 item bonus to Athletics checks to Swim and Stealth checks you attempt in
+  the water.
+
+  Activate—Unleash Charge 2 \(manipulate\)
+
+  Effect You cast a 2nd-rank [Thunderstrike](omen://spell/thunderstrike?source=paizo-pathfinder-player-core)
+  with a DC 29 basic Reflex save.'
+mechanicsScope: mixed
+unsupportedCategory: numbers
+unsupportedReason: The item's built-in runes, item bonus, splash damage or apex attribute
+  increase are not modeled.
+foundryID: 8HxM35X8DDt2gw9d
+rules:
+- key: athletics-item-bonus-swim
+  effect: core/add-modifier@2
+  inputs:
+    target: athletics
+    amount: 2
+    type: item
+    when: Swim
+- key: stealth-item-bonus-water
+  effect: core/add-modifier@2
+  inputs:
+    target: stealth
+    amount: 2
+    type: item
+    when: Water

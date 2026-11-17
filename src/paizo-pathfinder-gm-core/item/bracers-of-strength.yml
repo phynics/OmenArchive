@@ -1,0 +1,52 @@
+---
+name: bracers of strength
+level: 17
+rarity: common
+type: equipment
+traits:
+- apex
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 15000 gp
+  quantity: 1
+  size: med
+  usage: wornbracers
+description: 'Etchings of powerful bears decorate these brass bracers. You gain a
+  +3 item bonus to Athletics checks and a +2 circumstance bonus to Athletics checks
+  to lift a heavy object, [Escape](omen://action/escape?source=paizo-pathfinder-player-core),
+  and [Force Open](omen://action/force-open?source=paizo-pathfinder-player-core).
+  When you invest the bracers, you either increase your Strength modifier by 1 or
+  increase it to +4, whichever would give you a higher value.
+
+  Activate—Bear Hug 1 \(manipulate\)
+
+  Attempt to [Grapple](omen://action/grapple?source=paizo-pathfinder-player-core)
+  a creature. If you succeed, you crush the creature in your grasp, dealing bludgeoning
+  damage to it equal to your Strength modifier. If you critically succeeded, the damage
+  is equal to double your Strength modifier, and the creature suffocates as long as
+  it remains [Grabbed](omen://condition/grabbed?source=paizo-pathfinder-player-core)
+  or [Restrained](omen://condition/restrained?source=paizo-pathfinder-player-core)
+  by you.'
+mechanicsScope: mixed
+unsupportedCategory: numbers
+unsupportedReason: The item's built-in runes, item bonus, splash damage or apex attribute
+  increase are not modeled.
+foundryID: WOiCJSS2MicKCMVs
+rules:
+- key: athletics-item-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: athletics
+    amount: 3
+    type: item
+- key: athletics-circumstance-bonus-lift-heavy-object
+  effect: core/add-modifier@2
+  inputs:
+    target: athletics
+    amount: 2
+    type: circumstance
+    when: Lift Heavy Object or Escape or Force Open

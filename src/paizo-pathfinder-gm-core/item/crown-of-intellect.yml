@@ -1,0 +1,42 @@
+---
+name: crown of intellect
+level: 17
+rarity: common
+type: equipment
+traits:
+- apex
+- invested
+- magical
+physical:
+  bulk: '0'
+  hardness: 0
+  hitPoints: 0
+  price: 15000 gp
+  quantity: 1
+  size: med
+  usage: worncirclet
+description: 'A trio of brilliant gems have been set into this elegant golden crown.
+  You gain a +3 item bonus to checks to Recall Knowledge, regardless of the skill.
+  When you invest the cloak, you either increase your Intelligence modifier by 1 or
+  increase it to +4, whichever would give you a higher value. This gives you additional
+  trained skills and languages, as normal for increasing your Intelligence modifier.
+  You must select skills and languages the first time you invest the crown, and whenever
+  you invest the same crown of intellect, you get the same skills and languages you
+  chose the first time.
+
+  Activate—Search Your Mind 1 \(concentrate\)
+
+  Effect You gain the effects of [Hypercognition](omen://spell/hypercognition?source=paizo-pathfinder-player-core).'
+mechanicsScope: mixed
+unsupportedCategory: numbers
+unsupportedReason: The item's built-in runes, item bonus, splash damage or apex attribute
+  increase are not modeled.
+foundryID: 1FKDq4Gfev5GObDT
+rules:
+- key: skills-item-bonus-recall-knowledge
+  effect: core/add-modifier@2
+  inputs:
+    target: skills
+    amount: 3
+    type: item
+    when: Recall Knowledge
