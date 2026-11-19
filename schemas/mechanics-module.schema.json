@@ -66,6 +66,13 @@
       "items": {
         "$ref": "#/$defs/fact"
       }
+    },
+    "reads": {
+      "type": "array",
+      "description": "The $ reads the engine provides for the module's rules, which no rule defines, such as $.level and $.armor.<kind>.rank. A content release that uses a read changes nothing here; an app build that adds one changes the contract. Omitted when empty.",
+      "items": {
+        "$ref": "#/$defs/read"
+      }
     }
   },
   "required": [
@@ -413,6 +420,84 @@
       "required": [
         "name",
         "terms"
+      ],
+      "additionalProperties": false
+    },
+    "read": {
+      "type": "object",
+      "properties": {
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "description": "The read's path after $: a fixed word, {oneOf: [words]} for any one of a few, or {any: <label>} for a name the character's own data supplies (a skill's).",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "oneOf": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                    },
+                    "uniqueItems": true
+                  }
+                },
+                "required": [
+                  "oneOf"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "any": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "any"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "valueTypeID": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+        },
+        "list": {
+          "type": "boolean",
+          "description": "The read gives a list of values. Omitted when false."
+        },
+        "stage": {
+          "enum": ["builder", "sheet"],
+          "description": "Builder state (a choice made, a rank, an attribute), which a prerequisite may read, or sheet state worked out after the build."
+        },
+        "vocabulary": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "For a read that holds a term of an ordered vocabulary (rank): an expression compares it with a word of that vocabulary."
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What a read gives, in a sentence."
+        }
+      },
+      "required": [
+        "steps",
+        "valueTypeID",
+        "stage",
+        "summary"
       ],
       "additionalProperties": false
     },

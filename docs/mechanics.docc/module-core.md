@@ -19,6 +19,27 @@ Character lists the module declares for the engine. Rules add to and read them l
 | `$.skills.substitutions` | entries of `skill` (`skill`), `substitute` (`skill`) | Skill substitutions |
 | `$.crafting.formulas` | any record under `omen://item` | Formulas |
 
+## Reads
+
+The `$` reads the engine provides. A rule reads them without a rule that defines them.
+
+| Read | Gives | Stage | Value |
+|---|---|---|---|
+| `$.level` | `int` | builder | The character's level, 1 to 20 |
+| `$.attributes.<str, dex, con, int, wis or cha>` | `int` | builder | The attribute modifier |
+| `$.<ancestry, heritage, background or class>.<name or path>` | `string` | builder | The name or the path of the record in an identity slot |
+| `$.ancestry.feat-ancestries` | a list of `string` | builder | The ancestries whose feats the character can take |
+| `$.class.dc` | `int` | sheet | The class DC of the character's class |
+| `$.class.<class>.dc` | `int` | sheet | The class DC of a class the character has |
+| `$.feats.<feat>.class-dc` | `int` | sheet | The class DC a feat uses |
+| `$.skills.<skill>.rank` | `int`, compared with a `rank` word | builder | The skill's proficiency rank, compared with a rank word |
+| `$.armor.<unarmored, light, medium or heavy>.rank` | `int`, compared with a `rank` word | builder | The proficiency rank in that kind of armor, compared the same way |
+| `$.archetype.<archetype>.feat-count` | `int` | builder | How many feats the character has from that archetype, dedication included |
+| `$.spellcasting.proficiency` | `int`, compared with a `rank` word | builder | The character's spell attack and spell DC rank, compared the same way |
+| `$.class.hit-points` | `int` | builder | The hit points the class record states |
+| `$.ancestry.hit-points` | `int` | builder | The hit points the ancestry record states |
+| `$.heritage.hit-points` | `int` | builder | The hit points the heritage record states |
+
 ## Value types
 
 | Type | Rev | Shape |
