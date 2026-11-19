@@ -67,7 +67,8 @@ argument of `contains`; it has no other use.
 
 ## Reads
 
-A read is a `$` path that gives a whole number. The engine provides these:
+A read is a `$` path that gives a whole number. The engine provides these, and the core module's
+descriptor lists every read it provides under `reads` (`mechanics/me.atkn.omen.pf2e.playercore.json`):
 
 | Read | Value |
 |---|---|
@@ -80,6 +81,9 @@ A read is a `$` path that gives a whole number. The engine provides these:
 | `$.class.<class>.dc` | The class DC of a class the character has |
 | `$.feats.<feat>.class-dc` | The class DC a feat uses |
 | `$.archetype.<archetype>.feat-count` | How many feats the character has from that archetype, dedication included |
+| `$.class.hit-points` | The hit points the class record states |
+| `$.ancestry.hit-points` | The hit points the ancestry record states |
+| `$.heritage.hit-points` | The hit points the heritage record states |
 
 A read can also name a question the record's rules declare, when its answer is a whole number. Reads
 that give text or lists, such as `$.ancestry.name`, can't be used as a value in an expression. A list
