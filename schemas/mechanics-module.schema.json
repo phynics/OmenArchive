@@ -346,7 +346,7 @@
         },
         "alsoAccepts": {
           "type": "array",
-          "description": "Other value types the input accepts, beside valueTypeID: a heritage where a feature is expected.",
+          "description": "Other value types the input accepts, beside valueTypeID: a heritage where a feature is expected. For a list-item input, which takes any type, the only types it takes.",
           "items": {
             "type": "string",
             "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
@@ -357,12 +357,78 @@
           "type": "string",
           "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
           "description": "For a text input: the module vocabulary its terms come from (damage-type). The archive check reads the text against it."
+        },
+        "shorthand": {
+          "$ref": "#/$defs/inputShorthand"
         }
       },
       "required": [
         "name",
         "valueTypeID"
       ],
+      "additionalProperties": false
+    },
+    "inputShorthand": {
+      "type": "object",
+      "description": "The short spellings an author may write for the input, each read as a value of a type the input takes.",
+      "properties": {
+        "reference": {
+          "type": "string",
+          "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$",
+          "description": "The type a record reference (@item.club) is read as; its payload is the record's ID."
+        },
+        "mapping": {
+          "type": "object",
+          "description": "A mapping of words ({category: martial}) read as a value of an object type.",
+          "properties": {
+            "valueTypeID": {
+              "type": "string",
+              "pattern": "^[a-z0-9.-]+/value/[a-z0-9-]+$"
+            },
+            "constants": {
+              "type": "object",
+              "description": "Members every value of the mapping holds, whatever the author wrote.",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "keys": {
+              "type": "array",
+              "minItems": 1,
+              "description": "The words an author writes, in the order the writer writes them. A key's terms are its member's in the type's schema.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "member": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "The member of the value the word fills."
+                  },
+                  "whenOmitted": {
+                    "type": "string",
+                    "description": "The term the member holds when the author leaves the key out. A key without one is required."
+                  }
+                },
+                "required": [
+                  "name",
+                  "member"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "valueTypeID",
+            "constants",
+            "keys"
+          ],
+          "additionalProperties": false
+        }
+      },
       "additionalProperties": false
     },
     "stateKey": {
