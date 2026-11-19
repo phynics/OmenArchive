@@ -28,7 +28,6 @@ The `$` reads the engine provides. A rule reads them without a rule that defines
 | `$.level` | `int` | builder | The character's level, 1 to 20 |
 | `$.attributes.<str, dex, con, int, wis or cha>` | `int` | builder | The attribute modifier |
 | `$.<ancestry, heritage, background or class>.<name or path>` | `string` | builder | The name or the path of the record in an identity slot |
-| `$.ancestry.feat-ancestries` | a list of `string` | builder | The ancestries whose feats the character can take |
 | `$.class.dc` | `int` | sheet | The class DC of the character's class |
 | `$.class.<class>.dc` | `int` | sheet | The class DC of a class the character has |
 | `$.feats.<feat>.class-dc` | `int` | sheet | The class DC a feat uses |
