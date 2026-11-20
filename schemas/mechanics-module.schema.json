@@ -545,8 +545,8 @@
           "description": "The read gives a list of values. Omitted when false."
         },
         "stage": {
-          "enum": ["builder", "sheet"],
-          "description": "Builder state (a choice made, a rank, an attribute), which a prerequisite may read, or sheet state worked out after the build."
+          "enum": ["builder", "sheet", "strike"],
+          "description": "Builder state (a choice made, a rank, an attribute), which a prerequisite may read; sheet state worked out after the build; or the Strike whose damage the sheet works out, which only a modifier of Strike damage may read."
         },
         "vocabulary": {
           "type": "string",

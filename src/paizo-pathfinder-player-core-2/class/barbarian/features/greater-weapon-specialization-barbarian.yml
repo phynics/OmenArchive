@@ -9,7 +9,14 @@ description: 'The weapons you''ve mastered become truly fearsome in your hands. 
 
   You gain a greater benefit from your instinct''s specialization ability. See specific
   instincts for more information.'
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to another modifier is not applied yet.
+mechanicsScope: builder
 foundryID: 7JjhxMFo8DMwpGx0
+rules:
+- key: strike-damage-untyped-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: strike-damage
+    amount: (max 2 (multiply 3 (eq $.strike.rank master)) (multiply 4 (eq $.strike.rank
+      legendary)))
+    type: untyped
+    requires: (gte $.strike.rank expert)

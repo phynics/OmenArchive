@@ -26,7 +26,15 @@ description: You've learned how to inflict greater injuries with the weapons you
   best. You deal an additional 2 damage with weapons and unarmed attacks in which
   you are an expert. This damage increases to 3 if you're a master, and 4 if you're
   legendary.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'The damage bonus is not added: the engine has no damage target.'
+mechanicsScope: builder
 foundryID: 9EqIasqfI8YIM3Pt
+rules:
+- key: strike-damage-untyped-bonus
+  effect: core/add-modifier@2
+  level: 7
+  inputs:
+    target: strike-damage
+    amount: (max 2 (multiply 3 (eq $.strike.rank master)) (multiply 4 (eq $.strike.rank
+      legendary)))
+    type: untyped
+    requires: (gte $.strike.rank expert)

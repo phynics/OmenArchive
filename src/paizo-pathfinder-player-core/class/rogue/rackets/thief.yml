@@ -13,10 +13,7 @@ description: 'Nothing beats the thrill of taking something that belongs to someo
   modifier.
 
   You are trained in Thievery.'
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'FlatModifier at position 1: The selector melee-strike-damage is
-  not a roll the sheet shows.'
+mechanicsScope: builder
 foundryID: wAh2riuFRzz0edPl
 rules:
 - key: thievery-trained
@@ -24,3 +21,10 @@ rules:
   inputs:
     skill: thievery
     rank: trained
+- key: melee-strike-damage-untyped-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: melee-strike-damage
+    amount: (max 0 (subtract $.attributes.dex $.attributes.str))
+    type: untyped
+    requires: (contains $.strike.traits finesse)

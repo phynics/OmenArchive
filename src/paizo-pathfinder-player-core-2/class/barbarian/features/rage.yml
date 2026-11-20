@@ -12,3 +12,10 @@ rules:
   effect: core/add-action@2
   inputs:
     action: '@action.rage'
+- key: action-damage
+  effect: core/add-modifier@2
+  inputs:
+    target: melee-strike-damage
+    amount: (subtract 2 (contains $.strike.traits agile))
+    type: untyped
+    when: raging

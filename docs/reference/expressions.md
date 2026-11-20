@@ -84,10 +84,27 @@ descriptor lists every read it provides under `reads` (`mechanics/me.atkn.omen.p
 | `$.class.hit-points` | The hit points the class record states |
 | `$.ancestry.hit-points` | The hit points the ancestry record states |
 | `$.heritage.hit-points` | The hit points the heritage record states |
+| `$.strike.rank` | The proficiency rank of the Strike whose damage is worked out, compared with a rank word |
+| `$.strike.melee` | 1 when the Strike whose damage is worked out is melee, 0 when it is ranged |
 
 A read can also name a question the record's rules declare, when its answer is a whole number. Reads
 that give text or lists, such as `$.ancestry.name`, can't be used as a value in an expression. A list
 can be the first argument of `count` and `contains`.
+
+**Reads of a Strike.** `$.strike.rank`, `$.strike.melee` and the list `$.strike.traits` (the traits of
+the Strike's weapon or unarmed attack, as lowercase words) read the Strike whose damage is worked out.
+Only the `amount` and `requires` of a `core/add-modifier` whose every target is Strike damage
+(`strike-damage`, `melee-strike-damage`) can read them; the sheet works such a modifier out once for each
+Strike. A thrown weapon's ranged Strike is not melee. Anywhere else a Strike read is an error.
+
+```yaml
+effect: core/add-modifier@2
+inputs:
+  target: melee-strike-damage
+  amount: (max 0 (subtract $.attributes.dex $.attributes.str))
+  type: untyped
+  requires: (contains $.strike.traits finesse)
+```
 
 ## Ranks
 
