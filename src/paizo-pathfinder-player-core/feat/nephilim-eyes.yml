@@ -10,5 +10,10 @@ prerequisites:
   hasSense: low-light-vision
 description: Your eyes can see through darkness with visual acuity akin to that possessed
   by most extraplanar beings. You gain darkvision.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: akCO62yBCJLjjCZJ
+rules:
+- key: darkvision
+  effect: core/add-sense@2
+  inputs:
+    sense: darkvision

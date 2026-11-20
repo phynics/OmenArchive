@@ -11,5 +11,10 @@ prerequisites:
 description: You can see in the darkness as easily as a true vampire. You gain darkvision.
 specialText: You can select this feat only at 1st level, and you can't retrain into
   or out of this feat.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: 5EpkOj9CFOjt8vsK
+rules:
+- key: darkvision
+  effect: core/add-sense@2
+  inputs:
+    sense: darkvision
