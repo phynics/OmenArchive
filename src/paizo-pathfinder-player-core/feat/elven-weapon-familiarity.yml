@@ -17,10 +17,9 @@ description: 'You favor bows and other elegant weapons. You gain access to all u
   its critical specialization effect.'
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: 'Proficiency in weapons with the elf trait is not applied: a weapon
-  filter selects by category, group or name only. Critical specialization is not applied:
-  the archive''s effect unlocks it for a whole weapon group, not for the weapons or
-  trait this record names.'
+unsupportedReason: 'Proficiency in weapons with the elf trait is not applied yet.
+  Critical specialization is not applied yet: it can''t be limited to the weapons
+  the record names.'
 foundryID: 4NKyZVkmWjDyyIYZ
 rules:
 - key: trained
@@ -39,5 +38,19 @@ rules:
   effect: core/add-weapon-proficiency@3
   inputs:
     weapons: {type: core/weapon-designation, literal: {kind: specific, name: shortbow}}
+    rank: trained
+    selfScaling: true
+- key: composite-longbow-1
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: composite
+          longbow}}
+    rank: trained
+    selfScaling: true
+- key: composite-shortbow-1
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {type: core/weapon-designation, literal: {kind: specific, name: composite
+          shortbow}}
     rank: trained
     selfScaling: true
