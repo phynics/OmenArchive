@@ -9,5 +9,11 @@ description: You know the Wildsong, a secret language known only within druid or
   alphabet involves fractals and spirals, like the arrangement of a seashell's chambers,
   a snowflake's crystals, or a fern's fronds. Teaching the Wildsong to non-druids
   is anathema.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: RiAGlnnp4S21BAG3
+rules:
+- key: language-wildsong
+  effect: core/add-to-list
+  inputs:
+    list: $.languages.granted
+    value: {type: core/language, literal: wildsong}

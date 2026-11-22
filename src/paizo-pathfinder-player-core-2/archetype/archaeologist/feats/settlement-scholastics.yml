@@ -25,3 +25,8 @@ rules:
   effect: core/add-feat@3
   inputs:
     feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+- key: language-picks
+  effect: core/add-to-list
+  inputs:
+    list: $.languages.picks
+    value: {type: core/int, literal: 1}

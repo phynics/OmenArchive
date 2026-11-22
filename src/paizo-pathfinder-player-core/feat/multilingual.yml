@@ -16,7 +16,25 @@ description: You easily pick up new languages. You learn two new languages, chos
   if you are or become legendary.
 specialText: You can select this feat multiple times. Each time, you learn additional
   languages.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its extra languages are not offered yet.
+mechanicsScope: builder
 foundryID: P9HCz0uR6xPHuw72
+rules:
+- key: language-picks
+  effect: core/add-to-list
+  inputs:
+    list: $.languages.picks
+    value: {type: core/int, literal: 2}
+- key: language-pick-society-master
+  effect: core/add-to-list
+  prerequisites:
+  - hasSkillProficiency: {skill: society, rank: master}
+  inputs:
+    list: $.languages.picks
+    value: {type: core/int, literal: 1}
+- key: language-pick-society-legendary
+  effect: core/add-to-list
+  prerequisites:
+  - hasSkillProficiency: {skill: society, rank: legendary}
+  inputs:
+    list: $.languages.picks
+    value: {type: core/int, literal: 1}

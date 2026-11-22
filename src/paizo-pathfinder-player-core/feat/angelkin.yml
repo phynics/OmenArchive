@@ -24,3 +24,8 @@ rules:
   effect: core/add-feat@3
   inputs:
     feat: '@feat.multilingual'
+- key: language-empyrean
+  effect: core/add-to-list
+  inputs:
+    list: $.languages.granted
+    value: {type: core/language, literal: empyrean}

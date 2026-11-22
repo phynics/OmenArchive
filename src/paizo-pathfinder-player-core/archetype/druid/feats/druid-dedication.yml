@@ -30,3 +30,8 @@ rules:
   inputs:
     skill: nature
     rank: trained
+- key: language-wildsong
+  effect: core/add-to-list
+  inputs:
+    list: $.languages.granted
+    value: {type: core/language, literal: wildsong}
