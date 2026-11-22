@@ -77,6 +77,26 @@ description: |
 - `rank` is `0` for cantrips and `1`–`10` for ranked spells.
 - `category` is one of `spell`, `cantrip`, `focus`, or `ritual`.
 - Traditions (`arcane`, `divine`, `occult`, `primal`) stay in `traditions`.
+- `defense` is an object, never a bare word: `defense: reflex` is refused. A basic Reflex save is written as below; the schema lists the other keys (`attack`, `passive`, `counteraction`).
+
+```yaml
+name: acid grip
+rank: 2
+rarity: common
+category: spell
+traits:
+- acid
+- concentrate
+- manipulate
+traditions:
+- arcane
+- primal
+defense:
+  basic: true
+  save: reflex
+description: |
+  Your hand drips acid...
+```
 
 ---
 

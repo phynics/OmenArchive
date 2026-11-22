@@ -61,21 +61,25 @@ Each publication folder in `src/{publication}/` must contain a `publication.yml`
 id: paizo-pathfinder-player-core
 publisher: Paizo
 title: Pathfinder Player Core
-code: "21-01"
-isbn: "978-1-64078-564-9"
-releaseDate: "2023-11-15"
-license: ORC
+published: "2023-11-15"
 mechanicsModules:
-  core: me.atkn.omen.pf2e.playercore
-  spellcasting: me.atkn.omen.pf2e.playercore-spellcasting
+- moduleID: me.atkn.omen.pf2e.playercore
+  alias: core
+  revision: 1
+- moduleID: me.atkn.omen.pf2e.playercore-spellcasting
+  alias: spellcasting
+  revision: 1
 externalRecords:
-  - omen://action/escape?source=paizo-pathfinder-player-core
+- omen://feat/fire-lung?source=paizo-pathfinder-player-core
 spellcastingSources:
-  ranger-focus-spells: ad075a6c-56ec-5561-ae46-5a8565022188
+  bard-focus-spells: 82cec964-0fa9-5155-b45a-790771953c07
 ```
 
+[`schemas/publication.schema.json`](../../schemas/publication.schema.json) holds the full list of keys and what each accepts; the example shows the common ones. `id`, `publisher`, `title`, `published` and `mechanicsModules` are required.
+
 - **`id`**: Must match the publication directory name and the canonical publisher/title slug.
-- **`mechanicsModules`**: Maps short module aliases (`core`, `spellcasting`) used in `rules:` blocks to registered mechanics module IDs.
+- **`published`**: The release date, `YYYY-MM-DD`.
+- **`mechanicsModules`**: A list of `{moduleID, alias, revision}`. The alias (`core`, `spellcasting`) is the short name that `rules:` blocks use for the module (`core/add-feat`); `moduleID` is the module's ID, and `revision` is the module revision the publication is written against; the validator refuses a revision that differs from the module's own.
 - **`spellcastingSources`**: Optional. Maps each spellcasting source a publication's rules name to its ID. The key is kebab-case after the source's name (`ranger-focus-spells`, `hag-magic`); a rule writes the key as its `source`. A key is declared once, its ID appears nowhere else in the publication's records, and two source names that give one key are refused. See [Spellcasting Tables and Sources](spellcasting.md#source-keys).
 - **`externalRecords`**: Declares fully qualified references (`omen://...`) to records from publications not yet imported into the archive that are referenced by this publication.
 - **`requires`**: Optional, from format 6. A list of the publication ids this publication needs. A reference, prerequisite or grant that names a record of another publication with `?source=` fails without that publication, so the validator expects the publication's id here and, when it is missing, names the publication and the first use. Two uses are exempt: a record listed in `externalRecords`, and a link in a description, which only loses its target without the publication. A publication does not list itself or list another twice.
@@ -128,14 +132,17 @@ publications:
 
 ## Equipment Taxonomy
 
-Items are categorized into one of five top-level groups declared in the item schema:
+An item's `type` is one of eight values, declared in the item schema:
+- `equipment` (adventuring gear, alchemical items, tools)
 - `weapon`
 - `armor`
 - `shield`
-- `gear` (adventuring gear, alchemical items, tools, consumables)
+- `consumable`
+- `container`
 - `treasure`
+- `kit`
 
-Each group has structured attributes defined in [`schemas/character-item.schema.json`](../../schemas/character-item.schema.json).
+Each type has structured attributes defined in [`schemas/character-item.schema.json`](../../schemas/character-item.schema.json).
 
 ## General Authoring Conventions
 

@@ -34,7 +34,17 @@ that type ([the full rules](docs/reference/rules-and-inputs.md)):
   [Sheet expressions](docs/reference/expressions.md) has the operators, the reads and the rounding.
 - Authored files carry no comments: the canonical writer (`omen-archive canonicalize`) drops them.
   Put a note in the record's `description`, or in the pull request.
-- A prerequisite on a record is `has: '@feat.power-attack'`, never its name.
+- A prerequisite on a record is `has: '@feat.power-attack'`, never its name. A feat's `prerequisites:` entry also
+  carries the printed words in `text:`:
+
+  <!-- docs-check: not a whole example — one field of a feat -->
+  ```yaml
+  prerequisites:
+  - text: Domain Initiate
+    has: '@feat.domain-initiate'
+  ```
+
+  A `prerequisites:` entry on a rule takes the bare condition (`- has: '@feat.domain-initiate'`), with no `text:`.
 - An attribute is spelled out (`wisdom`), never abbreviated; the decoded wire form keeps `wis`.
 - A proficiency rank is a word under the input name `rank` (`rank: expert`); a number is not a rank. In a sheet expression a rank is a word too: `(gte $.skills.diplomacy.rank master)`.
 - A kind is a word (`skill: arcana`, `rankPolicy: cantrip`), or a one-key map when it carries a datum
