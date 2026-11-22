@@ -98,6 +98,7 @@ Only the `amount` and `requires` of a `core/add-modifier` whose every target is 
 Strike. A thrown weapon's ranged Strike is not melee. Anywhere else a Strike read is an error.
 
 ```yaml
+key: finesse-damage
 effect: core/add-modifier@2
 inputs:
   target: melee-strike-damage
