@@ -89,6 +89,13 @@ Beyond the schemas, `omen-archive validate` checks, naming the record and the au
 | `hasChoice` tests | A value the question can never hold, and a value of another type than the answer |
 | Record references | A record-id input naming a record of another family (a feat input given a spell), and a list entry's record outside the list's declared collection |
 | List items | A wrong item type and a missing entry field, also in the single-file check an editor runs on save |
+| The mechanics contract | A file under `mechanics/` that differs from the descriptor `omen-archive` ships with, one named for another module than its `moduleID`, and a module it doesn't ship; other files under `mechanics/` get a warning |
+
+The descriptors under `mechanics/` don't define the contract: `omen-archive` checks every module, revision and effect a rule names against the descriptors it was built with. Copy `mechanics/` from this repository unchanged, and use a build of `omen-archive` from the same release.
+
+### Checking a book from outside
+
+A book that isn't part of this archive is checked with `omen-archive validate --third-party <archive>`. On top of the checks above, it refuses a `publication.yml` whose `id` is one of this archive's books, whose `id` starts with `paizo-`, or whose `publisher` is Paizo. Give the book its own publisher and title, the `id` they make, and a folder of that name. Name records of this archive's books under `externalRecords` instead of copying them into `src/`.
 
 Whole-archive analyses (dependency cycles, reachability, rule ordering, termination) run in the maintainers' tooling, not in `omen-archive`.
 
