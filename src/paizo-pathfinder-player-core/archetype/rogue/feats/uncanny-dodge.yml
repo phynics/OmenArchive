@@ -10,7 +10,10 @@ prerequisites:
   has: '@archetype.rogue.feats.rogue-dedication'
 description: You gain the [Deny Advantage](omen://class/rogue/features/deny-advantage)
   class feature.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: 4Cc0gQauzUqcYdLw
+rules:
+- key: grant-features-deny-advantage
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.rogue.features.deny-advantage'

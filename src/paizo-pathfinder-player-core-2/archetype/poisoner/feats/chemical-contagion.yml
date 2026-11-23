@@ -10,7 +10,10 @@ prerequisites:
   has: '@archetype.poisoner.feats.poisoner-dedication'
 description: Your injury poisons can spray onto creatures. You gain the toxicologist
   alchemist's [Greater Field Discovery](omen://class/alchemist/field-benefits/greater-field-discovery-toxicologist).
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: IA8p9oYmsCbipmhw
+rules:
+- key: grant-field-benefits-greater-field-discovery-toxicologist
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.alchemist.field-benefits.greater-field-discovery-toxicologist'

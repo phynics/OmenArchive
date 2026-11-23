@@ -25,8 +25,8 @@ description: 'Your methodology emphasizes chemical and alchemical analysis, coll
   vials for any ability you have that requires them.'
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet. Its familiar abilities,
-  crafting or pool sizes are not applied yet.
+unsupportedReason: The formulas its formula book starts with and gains at each level
+  are not applied yet.
 foundryID: ln2Y1a4SxlU9sizX
 rules:
 - key: crafting-trained
@@ -34,3 +34,23 @@ rules:
   inputs:
     skill: crafting
     rank: trained
+- key: alchemical-crafting-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.alchemical-crafting?source=paizo-pathfinder-player-core'
+- key: quick-tincture-action
+  effect: core/add-action@2
+  inputs:
+    action: '@action.quick-tincture'
+- key: free-formula-book
+  effect: core/add-item@3
+  inputs:
+    entryId: 16a165bd-7b93-5aac-8540-d4dcaee6f9de
+    item: '@item.formula-book-blank?source=paizo-pathfinder-player-core'
+    quantity: 1
+- key: versatile-vials-pool
+  effect: core/add-resource-pool
+  inputs:
+    name: versatile-vials
+    maximum: $.attributes.int
+    itemLevel: $.level

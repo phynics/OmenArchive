@@ -7,9 +7,9 @@ description: You aren't afraid to use underhanded tactics to get the edge over y
   opponents. You are trained in Thievery and gain the [Dirty Trick](omen://feat/dirty-trick)
   general feat. When you use Dirty Trick, the action gains the bravado trait.
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet. Its notes on rolls
-  are in its text.
+unsupportedCategory: text
+unsupportedReason: The bravado trait it gives the style's action is not applied yet.
+  Its notes on rolls are in its text.
 foundryID: XKhg55V7WmpLrvqL
 rules:
 - key: thievery-trained
@@ -17,6 +17,12 @@ rules:
   inputs:
     skill: thievery
     rank: trained
+- key: dirty-trick-feat
+  effect: core/add-feat@3
+  prerequisites:
+  - hasClassWithName: swashbuckler
+  inputs:
+    feat: '@feat.dirty-trick'
 - key: skill-feat-skill
   effect: core/add-to-list
   inputs:

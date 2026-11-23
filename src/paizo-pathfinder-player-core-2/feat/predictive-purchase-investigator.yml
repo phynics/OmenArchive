@@ -12,7 +12,14 @@ description: 'You have just the thing for the situation. You gain the [Prescient
   When using Prescient Planner, you can pull out the item as a 2-action activity to
   remove your backpack \(or a similar container\) and draw the item, rather than taking
   1 minute.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: QSuwyX84U26OLzZI
+rules:
+- key: prescient-planner-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.prescient-planner?source=paizo-pathfinder-player-core'
+- key: prescient-consumable-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.prescient-consumable?source=paizo-pathfinder-player-core'

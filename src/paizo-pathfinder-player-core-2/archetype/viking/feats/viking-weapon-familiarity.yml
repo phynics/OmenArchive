@@ -22,8 +22,7 @@ description: 'From childhood, you have been exposed to traditional viking combat
 mechanicsScope: mixed
 unsupportedCategory: numbers
 unsupportedReason: 'Critical specialization is not applied yet: it can''t be limited
-  to the weapons the record names. Its change to the character''s Strikes is not applied
-  yet. The features it grants are not applied yet.'
+  to the weapons the record names.'
 foundryID: j9Rp4fOZIxizyvYy
 rules:
 - key: trained
@@ -65,3 +64,7 @@ rules:
     weapons: {type: core/weapon-designation, literal: {kind: specific, name: shortsword}}
     rank: trained
     selfScaling: true
+- key: shield-block-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.shield-block?source=paizo-pathfinder-player-core'

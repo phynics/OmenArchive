@@ -16,12 +16,13 @@ description: 'You''ve learned how to land daring blows when you have Panache.
   class feature but you deal 1 addition damage on a hit and 1d6 damage on a finisher.
   This damage doesn''t increase as you gain levels. In addition, you gain the [Basic
   Finisher](omen://action/basic-finisher) action.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet. It holds only bookkeeping
-  the builder does not need.
+mechanicsScope: builder
 foundryID: X5gNhaYNx1xu6NoH
 rules:
+- key: grant-features-precise-strike
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.swashbuckler.features.precise-strike'
 - key: basic-finisher-action
   effect: core/add-action@2
   inputs:

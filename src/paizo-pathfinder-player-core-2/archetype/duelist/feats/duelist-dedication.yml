@@ -14,7 +14,10 @@ prerequisites:
 description: You are always ready to draw your weapon and begin a duel, no matter
   the circumstances. You gain the [Quick Draw](omen://feat/quick-draw?source=paizo-pathfinder-player-core)
   feat, enabling you to both draw and attack with a weapon as 1 action.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: r72qcTupGzyRDiGe
+rules:
+- key: quick-draw-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.quick-draw?source=paizo-pathfinder-player-core'

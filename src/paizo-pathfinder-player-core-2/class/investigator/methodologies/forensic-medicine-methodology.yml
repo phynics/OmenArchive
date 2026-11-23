@@ -14,8 +14,9 @@ description: 'You''ve learned that in most cases, especially murders, criminals 
   Hit Points equal to your level, and the target becomes temporarily immune for only
   1 hour, not 1 day'
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+unsupportedCategory: text
+unsupportedReason: The extra Hit Points and the shorter immunity it gives Battle Medicine
+  are in its text.
 foundryID: O3IX7rTxXWWvDVM3
 rules:
 - key: medicine-trained
@@ -23,3 +24,11 @@ rules:
   inputs:
     skill: medicine
     rank: trained
+- key: forensic-acumen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.forensic-acumen'
+- key: battle-medicine-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.battle-medicine?source=paizo-pathfinder-player-core'

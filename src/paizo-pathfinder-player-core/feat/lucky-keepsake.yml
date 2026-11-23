@@ -13,7 +13,13 @@ description: You have a Keepsake that grants you luck. You gain a +1 circumstanc
   use [Leshy Superstition](omen://feat/leshy-superstition). If you lose the keepsake,
   you lose the bonus until you designate a new keepsake, typically over the course
   of a week.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: zsubK6PaY58fOYCb
+rules:
+- key: saving-throws-circumstance-bonus-magic
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: against spells and magical effects

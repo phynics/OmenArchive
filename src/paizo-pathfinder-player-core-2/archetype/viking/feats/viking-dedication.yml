@@ -16,5 +16,21 @@ description: 'Vikings spend long periods of time at sea, only to leap from their
   When using your land Speed, you ignore difficult terrain from shallow water, such
   as in bogs or on beaches. In addition, if you roll a success on an Athletics check
   to Swim, you get a critical success instead.'
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Ignoring difficult terrain from shallow water and the Swim critical
+  success are in its text.
 foundryID: JuEUNrvsxOYdXeYL
+rules:
+- key: additional-lore-sailing-1
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.additional-lore.lore: {lore: sailing}
+- key: additional-lore-warfare-1
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.additional-lore.lore: {lore: warfare}

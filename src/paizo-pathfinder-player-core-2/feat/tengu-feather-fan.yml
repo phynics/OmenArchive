@@ -26,8 +26,12 @@ description: 'You''ve learned to bind some of your feathers together into a fan 
   doesn''t use up one of the fan''s daily activations. This activation takes the spell''s
   normal number of actions. The spell''s DC is your class DC or spell DC, whichever
   is higher.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet. Its change to another
-  item's text is not applied.
+mechanicsScope: builder
 foundryID: GAh4CwCMS3Gsl8WH
+rules:
+- key: grant-item-tengu-feather-fan
+  effect: core/add-item@3
+  inputs:
+    entryId: 6504d100-5b61-5bd2-a58f-827a1ec6b9c0
+    item: '@item.tengu-feather-fan'
+    quantity: 1

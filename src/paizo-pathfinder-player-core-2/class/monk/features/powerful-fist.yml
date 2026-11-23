@@ -6,8 +6,10 @@ traits:
 description: Your fists are deadly weapons. The damage die for your fist increases
   to 1d6 instead of 1d4. You don't take the normal –2 circumstance penalty when making
   a lethal attack with your fist or any other unarmed attacks.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its unarmed
-  attack is not added yet.
+mechanicsScope: builder
 foundryID: SB8UJ8rZmvbcBweJ
+rules:
+- key: fist-die-step
+  effect: core/add-weapon-die-step
+  inputs:
+    weapon: fist

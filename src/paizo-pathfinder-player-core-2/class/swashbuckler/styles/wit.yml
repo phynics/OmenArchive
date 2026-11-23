@@ -8,9 +8,9 @@ description: You are friendly, clever, and full of humor, always knowing just wh
   You are trained in Diplomacy and gain the [Bon Mot](omen://feat/bon-mot) skill feat.
   When you use Bon Mot, the action gains the bravado trait
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet. Its notes on rolls
-  are in its text.
+unsupportedCategory: text
+unsupportedReason: The bravado trait it gives the style's action is not applied yet.
+  Its notes on rolls are in its text.
 foundryID: 4lGhbEjlEoGP4scl
 rules:
 - key: diplomacy-trained
@@ -18,6 +18,12 @@ rules:
   inputs:
     skill: diplomacy
     rank: trained
+- key: bon-mot-feat
+  effect: core/add-feat@3
+  prerequisites:
+  - hasClassWithName: swashbuckler
+  inputs:
+    feat: '@feat.bon-mot'
 - key: skill-feat-skill
   effect: core/add-to-list
   inputs:

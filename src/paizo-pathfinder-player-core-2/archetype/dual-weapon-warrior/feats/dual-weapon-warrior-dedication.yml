@@ -8,7 +8,10 @@ traits:
 - dedication
 description: You're exceptional in your use of two weapons. You gain the [Double Slice](omen://feat/double-slice?source=paizo-pathfinder-player-core)
   fighter feat.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: YhnCjiHNlS3nCeoC
+rules:
+- key: double-slice-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.double-slice?source=paizo-pathfinder-player-core'

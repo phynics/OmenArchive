@@ -11,9 +11,10 @@ prerequisites:
 description: You gain the Flurry of Blows action. Your fists' power, however, exceeds
   your conditioning; once you use Flurry of Blows, you can't use it again for 1d4
   rounds as your muscles recover.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Grants Flurry of Blows, an action of Pathfinder Core Rulebook,
-  which Player Core 2 does not require. The features it grants are not applied yet.
-  It holds only bookkeeping the builder does not need.
+mechanicsScope: builder
 foundryID: bBORql3kKsSyXllk
+rules:
+- key: grant-features-flurry-of-blows
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.monk.features.flurry-of-blows'

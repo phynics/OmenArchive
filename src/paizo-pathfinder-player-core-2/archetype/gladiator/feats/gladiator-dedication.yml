@@ -19,5 +19,15 @@ description: 'You know how to turn combat into a form of entertainment. You gain
   and these onlookers are neither engaged in the combat themselves nor directly assisting
   any participants, the combatants have spectators. The GM is the final arbiter of
   whether or not a combat has spectators.'
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Its temporary Hit Points and Performance initiative when a fight
+  has spectators are in its text.
 foundryID: Dm0YMEvSY0qg0jA0
+rules:
+- key: additional-lore-gladiatorial-1
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.additional-lore?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.additional-lore.lore: {lore: gladiatorial}

@@ -11,7 +11,14 @@ description: You gain the [Prescient Consumable](omen://feat/prescient-consumabl
   means the object you retrieve must fit in your cheek pouches; this is generally
   an item of negligible Bulk unless you also have the [Cheek Pouches](omen://feat/cheek-pouches)
   feat.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: yYIyAbwpdkySiCMU
+rules:
+- key: prescient-consumable-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.prescient-consumable?source=paizo-pathfinder-player-core'
+- key: prescient-planner-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.prescient-planner?source=paizo-pathfinder-player-core'

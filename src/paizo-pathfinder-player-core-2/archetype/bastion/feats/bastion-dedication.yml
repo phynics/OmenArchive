@@ -12,7 +12,10 @@ prerequisites:
 description: You are particularly skilled at using a shield to protect yourself in
   combat. You gain the [Reactive Shield](omen://feat/reactive-shield?source=paizo-pathfinder-player-core)
   fighter feat.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: s6wXcQYmHbew14gC
+rules:
+- key: reactive-shield-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.reactive-shield?source=paizo-pathfinder-player-core'

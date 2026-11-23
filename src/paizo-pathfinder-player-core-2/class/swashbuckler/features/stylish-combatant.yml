@@ -4,8 +4,20 @@ level: 1
 description: You gain a +1 circumstance bonus to skill checks with the bravado trait
   while in a combat encounter. While you have panache, you gain a +5-foot status bonus
   to your Speeds.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: TALz3cU06Hb14Key
+rules:
+- key: bravado-skill-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: skills
+    amount: 1
+    type: circumstance
+    when: a check with the bravado trait, in an encounter or with Continuous Flair
+- key: panache-speed-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: speed
+    amount: 5
+    type: status
+    when: you have panache

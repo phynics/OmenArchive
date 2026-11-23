@@ -21,8 +21,15 @@ description: 'You have been blessed by a divinity. For an unknown reason, and ir
   choice if you don''t. Either you can cast [Guidance](omen://spell/guidance?source=paizo-pathfinder-player-core)
   as a divine innate spell at will, or you gain a similar blessing determined by the
   GM.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The source allows either an at-will divine innate Guidance spell
-  or a similar GM-determined boon; neither is represented as a rule. Part of what
-  it does is not applied yet.
+mechanicsScope: builder
+rules:
+- key: grant-innate-guidance
+  effect: spellcasting/grant-innate-spell@2
+  inputs:
+    source: blessed
+    sourceName: Blessed
+    spell: '@spell.guidance?source=paizo-pathfinder-player-core'
+    tradition: divine
+    attribute: charisma
+    rankPolicy: cantrip
+    castFrequency: atWill

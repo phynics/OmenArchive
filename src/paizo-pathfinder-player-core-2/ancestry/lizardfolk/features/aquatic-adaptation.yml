@@ -5,7 +5,10 @@ traits:
 description: Your reptilian biology allows you to hold your breath for a long time.
   You gain the [Breath Control](omen://feat/breath-control?source=paizo-pathfinder-player-core)
   general feat as a bonus feat.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet.
+mechanicsScope: builder
 foundryID: AzGJN1wwLFaLJIeo
+rules:
+- key: breath-control-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.breath-control?source=paizo-pathfinder-player-core'

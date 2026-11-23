@@ -9,9 +9,9 @@ description: To you, a fight is a kind of performance art, and you command your 
   skill feat. When you [Perform](omen://action/perform?source=paizo-pathfinder-player-core),
   the action gains the bravado trait.
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The features it grants are not applied yet. Its notes on rolls
-  are in its text.
+unsupportedCategory: text
+unsupportedReason: The bravado trait it gives the style's action is not applied yet.
+  Its notes on rolls are in its text.
 foundryID: 5HoEwzLDJGTCZtFa
 rules:
 - key: performance-trained
@@ -19,6 +19,12 @@ rules:
   inputs:
     skill: performance
     rank: trained
+- key: fascinating-performance-feat
+  effect: core/add-feat@3
+  prerequisites:
+  - hasClassWithName: swashbuckler
+  inputs:
+    feat: '@feat.fascinating-performance?source=paizo-pathfinder-player-core'
 - key: skill-feat-skill
   effect: core/add-to-list
   inputs:

@@ -8,7 +8,19 @@ description: When you've made an impression, you move even faster than normal, d
   from stylish combatant to a +10-foot status bonus; this bonus increases by 5 feet
   at 7th, 11th, 15th, and 19th levels. When you don't have panache, you still get
   half this status bonus to your Speed, rounded down to the nearest 5-foot increment.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to another modifier is not applied yet.
+mechanicsScope: builder
 foundryID: 8BOFeRE7ZfJ02N0O
+rules:
+- key: panache-speed-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: speed
+    amount: (multiply 5 (floor (divide (add $.level 5) 4)))
+    type: status
+    when: you have panache
+- key: speed-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: speed
+    amount: (multiply 5 (floor (divide (add $.level 5) 8)))
+    type: status

@@ -13,9 +13,16 @@ description: 'You are especially good at riding traditional goblin mounts. You g
   If you gain a wolf as an animal companion, it gains the mount special ability \(and
   if you gain an ability that grants you an animal companion with the mount special
   ability, you can choose a wolf\).'
-mechanicsScope: mixed
+mechanicsScope: builder
 foundryID: GF9kkULUYowgjEWM
 rules:
+- key: nature-circumstance-bonus-command-animal-goblin-dog
+  effect: core/add-modifier@2
+  inputs:
+    target: nature
+    amount: 1
+    type: circumstance
+    when: Command An Animal; the target is goblin dog or the target is wolf
 - key: ride-feat
   effect: core/add-feat@3
   inputs:
