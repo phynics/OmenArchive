@@ -8,7 +8,17 @@ traits:
 description: 'Your incisors have grown into true fangs: long, sharp, and well-suited
   to drawing blood. You gain a fangs unarmed attack that deals 1d6 piercing damage.
   Your fangs are in the brawling group and have the grapple and unarmed traits.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
 foundryID: Y8sKn8NH1wC7Mrui
+rules:
+- key: unarmed-attack-fangs
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d6}
+        damageType: {type: core/damage-type, value: piercing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: fangs}
+        traits: {type: core/trait-list, value: [grapple, unarmed]}

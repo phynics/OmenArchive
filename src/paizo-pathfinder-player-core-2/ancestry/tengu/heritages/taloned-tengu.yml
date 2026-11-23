@@ -5,6 +5,16 @@ rarity: common
 description: Your talons are every bit as sharp and strong as your beak. You gain
   a talons unarmed attack that deals 1d4 slashing damage. Your talons are in the brawling
   group and have the agile, finesse, unarmed, and versatile P traits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
+rules:
+- key: unarmed-attack-talon
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d4}
+        damageType: {type: core/damage-type, value: slashing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: talon}
+        traits: {type: core/trait-list, value: [agile, finesse, unarmed, versatile-p]}

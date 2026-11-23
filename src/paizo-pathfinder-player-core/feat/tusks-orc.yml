@@ -11,7 +11,17 @@ description: You have particularly long, jagged tusks perfect for tearing meat f
 specialText: You can take this feat only at 1st level, and you can't retrain into
   this feat. You can retrain out of this feat only through drastic measures, such
   as breaking, filing, or extracting your tusks.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
 foundryID: M5195FvfCN3X7gi9
+rules:
+- key: unarmed-attack-tusk
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d6}
+        damageType: {type: core/damage-type, value: piercing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: tusk}
+        traits: {type: core/trait-list, value: [unarmed, finesse]}

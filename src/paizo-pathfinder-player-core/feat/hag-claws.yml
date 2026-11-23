@@ -11,7 +11,17 @@ description: When you came of age, your fingernails grew long and sharp. You gai
 specialText: Hag claws can develop at any point in a changeling's life. You can select
   this feat anytime you would gain an ancestry feat, but you can't retrain out of
   it.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
 foundryID: Qb25uu1gT5CDMSWb
+rules:
+- key: unarmed-attack-claw
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d4}
+        damageType: {type: core/damage-type, value: slashing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: claw}
+        traits: {type: core/trait-list, value: [agile, finesse, unarmed]}

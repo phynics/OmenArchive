@@ -6,6 +6,16 @@ description: Your family has particularly long, sharp claws capable of deliverin
   bleeding wounds with a wicked swipe. You gain a claw unarmed attack that deals 1d6
   slashing damage. Your claws are in the brawling group and have the agile, finesse
   and unarmed traits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
+rules:
+- key: unarmed-attack-claw
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d6}
+        damageType: {type: core/damage-type, value: slashing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: claw}
+        traits: {type: core/trait-list, value: [finesse, unarmed, agile]}

@@ -3,7 +3,17 @@ name: sharp beak
 description: With your sharp beak, you are never without a weapon. You have a beak
   unarmed attack that deals 1d6 piercing damage. Your beak is in the brawling weapon
   group and has the finesse and unarmed traits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
 foundryID: qJD3PJdoSXFrZEwr
+rules:
+- key: unarmed-attack-beak
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d6}
+        damageType: {type: core/damage-type, value: piercing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: beak}
+        traits: {type: core/trait-list, value: [finesse, unarmed]}

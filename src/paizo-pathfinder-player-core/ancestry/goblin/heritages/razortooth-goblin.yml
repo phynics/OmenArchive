@@ -5,6 +5,16 @@ rarity: common
 description: Your family's teeth are formidable weapons. You gain a jaws unarmed attack
   that deals 1d6 piercing damage. Your jaws are in the brawling group and have the
   finesse and unarmed traits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
+rules:
+- key: unarmed-attack-jaws
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d6}
+        damageType: {type: core/damage-type, value: piercing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: jaws}
+        traits: {type: core/trait-list, value: [finesse, unarmed]}

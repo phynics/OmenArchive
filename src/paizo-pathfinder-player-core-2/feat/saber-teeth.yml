@@ -8,7 +8,17 @@ traits:
 description: You have long fangs, natural or augmented. You gain a jaws unarmed attack
   that deals 1d6 piercing damage. Your jaws are in the brawling group and have the
   unarmed trait.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its unarmed attack is not added yet.
+mechanicsScope: builder
 foundryID: AL2KD88ddEl5AetZ
+rules:
+- key: unarmed-attack-jaws
+  effect: core/add-to-list
+  inputs:
+    list: $.strikes.unarmed
+    value:
+      entry:
+        damageDice: {type: core/string, value: 1d6}
+        damageType: {type: core/damage-type, value: piercing}
+        group: {type: core/weapon-group, value: brawling}
+        name: {type: core/string, value: jaws}
+        traits: {type: core/trait-list, value: [unarmed]}
