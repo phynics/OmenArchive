@@ -21,9 +21,9 @@ description: Choose a swashbuckler's style. You gain the [Panache](omen://class/
   choice. You also become trained in swashbuckler class DC. You don't gain any other
   effects of your chosen style.
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: What the dedication trains (class DC) is modeled. The rest of it
-  is not yet.
+unsupportedCategory: text
+unsupportedReason: The bravado trait it gives Tumble Through and the style's actions
+  is not applied yet.
 foundryID: eAlrvPVb8qt8Lruw
 rules:
 - key: dedication-class-dc
@@ -32,6 +32,14 @@ rules:
     rank: trained
     className: swashbuckler
     keyAttribute: dexterity
+- key: grant-features-panache
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.swashbuckler.features.panache'
+- key: grant-features-stylish-combatant
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.swashbuckler.features.stylish-combatant'
 - key: choice-swashbucklers-style
   level: 2
   choice:

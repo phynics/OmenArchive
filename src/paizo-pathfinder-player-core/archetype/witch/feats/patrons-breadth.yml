@@ -11,7 +11,58 @@ prerequisites:
 description: You can cast more spells each day. Increase the spell slots you gain
   from witch archetype feats by 1 for each spell rank other than your two highest
   spell ranks.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: Wz0LLKjEi8GfKloV
+rules:
+- key: breadth-slot-8-1
+  effect: spellcasting/grant-slot
+  level: 8
+  inputs:
+    source: witch-archetype-spells
+    spellRank: 1
+    count: 1
+- key: breadth-slot-12-2
+  effect: spellcasting/grant-slot
+  level: 12
+  prerequisites:
+  - has: '@archetype.witch.feats.expert-witch-spellcasting'
+  inputs:
+    source: witch-archetype-spells
+    spellRank: 2
+    count: 1
+- key: breadth-slot-14-3
+  effect: spellcasting/grant-slot
+  level: 14
+  prerequisites:
+  - has: '@archetype.witch.feats.expert-witch-spellcasting'
+  inputs:
+    source: witch-archetype-spells
+    spellRank: 3
+    count: 1
+- key: breadth-slot-16-4
+  effect: spellcasting/grant-slot
+  level: 16
+  prerequisites:
+  - has: '@archetype.witch.feats.expert-witch-spellcasting'
+  inputs:
+    source: witch-archetype-spells
+    spellRank: 4
+    count: 1
+- key: breadth-slot-18-5
+  effect: spellcasting/grant-slot
+  level: 18
+  prerequisites:
+  - has: '@archetype.witch.feats.master-witch-spellcasting'
+  inputs:
+    source: witch-archetype-spells
+    spellRank: 5
+    count: 1
+- key: breadth-slot-20-6
+  effect: spellcasting/grant-slot
+  level: 20
+  prerequisites:
+  - has: '@archetype.witch.feats.master-witch-spellcasting'
+  inputs:
+    source: witch-archetype-spells
+    spellRank: 6
+    count: 1

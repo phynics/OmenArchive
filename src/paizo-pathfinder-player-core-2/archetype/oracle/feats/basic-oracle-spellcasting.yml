@@ -12,7 +12,63 @@ description: You gain the Basic Spellcasting Feat benefits. When you gain a spel
   slot of a new rank from the oracle archetype, add a common divine spell or another
   divine spell you have learned or discovered \(including the granted spells associated
   with your mystery\) to your repertoire, of that spell rank.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: 7ycF0fgSw1ovUPit
+rules:
+- key: slot-4-1
+  effect: spellcasting/grant-slot
+  level: 4
+  inputs:
+    source: oracle-archetype-spells
+    spellRank: 1
+    count: 1
+- key: known-4-spell-1
+  effect: spellcasting/allow-known-spells
+  level: 4
+  inputs:
+    source: oracle-archetype-spells
+    count: 1
+    pick: {rank: 1}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: divine}
+      - {rarity: common}
+- key: slot-6-2
+  effect: spellcasting/grant-slot
+  level: 6
+  inputs:
+    source: oracle-archetype-spells
+    spellRank: 2
+    count: 1
+- key: known-6-spell-2
+  effect: spellcasting/allow-known-spells
+  level: 6
+  inputs:
+    source: oracle-archetype-spells
+    count: 1
+    pick: {rank: 2}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: divine}
+      - {rarity: common}
+- key: slot-8-3
+  effect: spellcasting/grant-slot
+  level: 8
+  inputs:
+    source: oracle-archetype-spells
+    spellRank: 3
+    count: 1
+- key: known-8-spell-3
+  effect: spellcasting/allow-known-spells
+  level: 8
+  inputs:
+    source: oracle-archetype-spells
+    count: 1
+    pick: {rank: 3}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: divine}
+      - {rarity: common}

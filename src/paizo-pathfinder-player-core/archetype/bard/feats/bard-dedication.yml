@@ -19,11 +19,51 @@ description: You cast spells like a bard and gain the Cast a Spell activity. You
   instead become trained in a skill of your choice. Choose a muse as you would if
   you were a bard. You can take that muse's feats, but you don't gain the starting
   feat, spell or any other abilities the choice of muse grants.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: dIH771mt4PcVTyAs
 rules:
+- key: archetype-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: bard-archetype-spells
+    sourceName: Bard Archetype Spells
+    castingKind: spontaneous
+    tradition: occult
+    attribute: charisma
+- key: archetype-spellcasting-trained
+  effect: spellcasting/increase-spell-proficiency@2
+  inputs:
+    rank: trained
+- key: archetype-cantrip-slots
+  effect: spellcasting/grant-slot
+  inputs:
+    source: bard-archetype-spells
+    spellRank: 0
+    count: 2
+- key: archetype-cantrips
+  effect: spellcasting/allow-known-spells
+  inputs:
+    source: bard-archetype-spells
+    count: 2
+    pick: cantrip
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: occult}
+      - {rarity: common}
+- key: muse-list
+  effect: core/declare-list
+  inputs:
+    list: $.bard.muses
+    valueType: {records: '@class.bard.muses'}
+    label: Bard muses
+- key: choice-bard-muse
+  choice:
+    name: $.bard.muse
+    label: Muse
+    addTo: $.bard.muses
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.bard.muses'}}
 - key: performance-trained
   effect: core/add-skill-increase@2
   inputs:

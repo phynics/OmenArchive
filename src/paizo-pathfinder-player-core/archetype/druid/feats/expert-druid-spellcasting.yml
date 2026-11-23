@@ -11,7 +11,32 @@ prerequisites:
 - text: master in Nature
   hasSkillProficiency: {skill: nature, rank: master}
 description: You gain the Expert Spellcasting Feat benefits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: saEwTvJuiemEIfLm
+rules:
+- key: archetype-spellcasting-expert
+  effect: spellcasting/increase-spell-proficiency@2
+  level: 12
+  inputs:
+    rank: expert
+- key: slot-12-4
+  effect: spellcasting/grant-slot
+  level: 12
+  inputs:
+    source: druid-archetype-spells
+    spellRank: 4
+    count: 1
+- key: slot-14-5
+  effect: spellcasting/grant-slot
+  level: 14
+  inputs:
+    source: druid-archetype-spells
+    spellRank: 5
+    count: 1
+- key: slot-16-6
+  effect: spellcasting/grant-slot
+  level: 16
+  inputs:
+    source: druid-archetype-spells
+    spellRank: 6
+    count: 1

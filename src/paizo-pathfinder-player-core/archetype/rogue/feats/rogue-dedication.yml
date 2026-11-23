@@ -16,10 +16,9 @@ description: You gain a skill feat and the rogue's [Surprise Attack](omen://clas
   in both Stealth and Thievery, you become trained in an additional skill of your
   choice. You become trained in rogue class DC.
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: 'What the dedication trains (class DC) is modeled. The rest of
-  it is not yet. The skill feat pick is not capped by the character''s level: it offers
-  skill feats of every level.'
+unsupportedCategory: choice
+unsupportedReason: 'The skill feat pick is not capped by the character''s level: it
+  offers skill feats of every level.'
 foundryID: bCWieNDC1CD35tin
 rules:
 - key: dedication-class-dc
@@ -28,6 +27,55 @@ rules:
     rank: trained
     className: rogue
     keyAttribute: dexterity
+- key: light-armor-trained
+  effect: core/add-armor-proficiency@3
+  inputs:
+    armor: {category: light}
+    rank: trained
+- key: choice-feats-rogue-dedication-skill
+  choice:
+    name: $.feats.rogue-dedication.skill
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: stealth, value: stealth}
+    - {key: thievery, value: thievery}
+- key: chosen-skill-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.rogue-dedication.skill}
+    rank: trained
+- key: choice-feats-rogue-dedication-additional-skill
+  choice:
+    name: $.feats.rogue-dedication.additional-skill
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
+- key: additional-skill-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.rogue-dedication.additional-skill}
+    rank: trained
+- key: grant-features-surprise-attack
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.rogue.features.surprise-attack'
 - key: choice-feats-rogue-dedication-skill-feat
   choice:
     name: $.feats.rogue-dedication.skill-feat

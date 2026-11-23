@@ -10,5 +10,13 @@ prerequisites:
   has: '@class.cleric.features.miraculous-spell'
 description: You are a conduit for truly deific power. You gain an additional 10th-rank
   spell slot.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: QDjpZKOrWIV1G8XJ
+rules:
+- key: rank-10-slot
+  effect: spellcasting/grant-slot
+  level: 20
+  inputs:
+    source: cleric-spellcasting
+    spellRank: 10
+    count: 1

@@ -20,11 +20,76 @@ description: You cast spells like a druid. You gain the Cast a Spell activity. Y
   the order's feats. You become trained in Nature and your order's associated skill;
   for each of these skills in which you were already trained, you become trained in
   a skill of your choice. You don't gain any other abilities from your choice of order.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: vhw3n86TEs6laopA
 rules:
+- key: archetype-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: druid-archetype-spells
+    sourceName: Druid Archetype Spells
+    castingKind: prepared
+    tradition: primal
+    attribute: wisdom
+- key: archetype-spellcasting-trained
+  effect: spellcasting/increase-spell-proficiency@2
+  inputs:
+    rank: trained
+- key: archetype-cantrip-slots
+  effect: spellcasting/grant-slot
+  inputs:
+    source: druid-archetype-spells
+    spellRank: 0
+    count: 2
+- key: order-list
+  effect: core/declare-list
+  inputs:
+    list: $.druid.orders
+    valueType: {records: '@class.druid.orders'}
+    label: Druidic orders
+- key: choice-druid-order
+  choice:
+    name: $.druid.order
+    label: Order
+    addTo: $.druid.orders
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.druid.orders'}}
+- key: order-skill-acrobatics
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.druid.order
+      equals: {type: core/feature-id, value: '@class.druid.orders.storm'}
+  inputs:
+    skill: acrobatics
+    rank: trained
+- key: order-skill-athletics
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.druid.order
+      equals: {type: core/feature-id, value: '@class.druid.orders.animal'}
+  inputs:
+    skill: athletics
+    rank: trained
+- key: order-skill-diplomacy
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.druid.order
+      equals: {type: core/feature-id, value: '@class.druid.orders.leaf'}
+  inputs:
+    skill: diplomacy
+    rank: trained
+- key: order-skill-intimidation
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.druid.order
+      equals: {type: core/feature-id, value: '@class.druid.orders.untamed'}
+  inputs:
+    skill: intimidation
+    rank: trained
 - key: nature-trained
   effect: core/add-skill-increase@2
   inputs:

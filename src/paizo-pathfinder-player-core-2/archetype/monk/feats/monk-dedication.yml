@@ -16,10 +16,7 @@ description: You become trained in unarmed attacks and gain the [Powerful Fist](
   class feature. You become trained in your choice of Acrobatics or Athletics; if
   you are already trained in both of these skills, you become trained in a skill of
   your choice. You become trained in monk class DC.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: What the dedication trains (class DC) is modeled. The rest of it
-  is not yet.
+mechanicsScope: builder
 foundryID: renUpSO6MJXPSXow
 rules:
 - key: choice-monk-class-dc-attribute
@@ -34,6 +31,15 @@ rules:
     rank: trained
     className: monk
     keyAttribute: {choice: $.monk.class-dc-attribute}
+- key: unarmed-attacks-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: unarmed}
+    rank: trained
+- key: grant-features-powerful-fist
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.monk.features.powerful-fist'
 - key: choice-skill
   level: 2
   choice:

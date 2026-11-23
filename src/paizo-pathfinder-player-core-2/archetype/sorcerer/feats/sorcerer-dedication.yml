@@ -21,7 +21,251 @@ description: 'Choose a [Bloodline](omen://class/sorcerer/features/bloodline). Yo
   and spell DC statistics. Your key spellcasting attribute for sorcerer archetype
   spells is Charisma, and they are sorcerer spells of your bloodline''s tradition.
   You don''t gain any other abilities from your choice of bloodline.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: 5UQagWB13Z8xR5Z6
+rules:
+- key: choice-sorcerer-bloodline
+  choice:
+    name: $.sorcerer.bloodline
+    label: Bloodline
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.sorcerer.bloodlines'}}
+- key: choice-sorcerer-bloodline-draconic
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+  choice:
+    name: $.sorcerer.bloodline.draconic
+    label: Draconic tradition
+    type: core/string
+    cases: [arcane, divine, occult, primal]
+- key: archetype-source-arcane
+  effect: spellcasting/configure-source
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: arcane}
+  inputs:
+    source: sorcerer-archetype-spells
+    sourceName: Sorcerer Archetype Spells
+    castingKind: spontaneous
+    tradition: arcane
+    attribute: charisma
+- key: archetype-source-divine
+  effect: spellcasting/configure-source
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        oneOf:
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: divine}
+  inputs:
+    source: sorcerer-archetype-spells
+    sourceName: Sorcerer Archetype Spells
+    castingKind: spontaneous
+    tradition: divine
+    attribute: charisma
+- key: archetype-source-occult
+  effect: spellcasting/configure-source
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        oneOf:
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: occult}
+  inputs:
+    source: sorcerer-archetype-spells
+    sourceName: Sorcerer Archetype Spells
+    castingKind: spontaneous
+    tradition: occult
+    attribute: charisma
+- key: archetype-source-primal
+  effect: spellcasting/configure-source
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        oneOf:
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: primal}
+  inputs:
+    source: sorcerer-archetype-spells
+    sourceName: Sorcerer Archetype Spells
+    castingKind: spontaneous
+    tradition: primal
+    attribute: charisma
+- key: bloodline-skill-arcana
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: arcane}
+  inputs:
+    skill: arcana
+    rank: trained
+- key: bloodline-skill-deception
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      oneOf:
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
+  inputs:
+    skill: deception
+    rank: trained
+- key: bloodline-skill-diplomacy
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
+  inputs:
+    skill: diplomacy
+    rank: trained
+- key: bloodline-skill-intimidation
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      oneOf:
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+      - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}
+  inputs:
+    skill: intimidation
+    rank: trained
+- key: bloodline-skill-nature
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        oneOf:
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-elemental'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-fey'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: primal}
+  inputs:
+    skill: nature
+    rank: trained
+- key: bloodline-skill-occultism
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        oneOf:
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-aberrant'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-hag'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: occult}
+  inputs:
+    skill: occultism
+    rank: trained
+- key: bloodline-skill-religion
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - anyOf:
+    - hasChoice:
+        name: $.sorcerer.bloodline
+        oneOf:
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-angelic'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-demonic'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-diabolic'}
+        - {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-undead'}
+    - allOf:
+      - hasChoice:
+          name: $.sorcerer.bloodline
+          equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-draconic'}
+      - hasChoice:
+          name: $.sorcerer.bloodline.draconic
+          equals: {type: core/string, value: divine}
+  inputs:
+    skill: religion
+    rank: trained
+- key: bloodline-skill-society
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.sorcerer.bloodline
+      equals: {type: core/feature-id, value: '@class.sorcerer.bloodlines.bloodline-imperial'}
+  inputs:
+    skill: society
+    rank: trained
+- key: archetype-spellcasting-trained
+  effect: spellcasting/increase-spell-proficiency@2
+  inputs:
+    rank: trained
+- key: archetype-cantrip-slots
+  effect: spellcasting/grant-slot
+  inputs:
+    source: sorcerer-archetype-spells
+    spellRank: 0
+    count: 2
+- key: archetype-cantrips
+  effect: spellcasting/allow-known-spells
+  inputs:
+    source: sorcerer-archetype-spells
+    count: 2
+    pick: cantrip
+    filter:
+      all:
+      - {type: spell}
+      - {hasSourceTradition: sorcerer-archetype-spells}
+      - {rarity: common}

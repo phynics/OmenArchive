@@ -18,11 +18,44 @@ description: You cast spells like a wizard, gaining a spellbook with four common
   You become trained in Arcana; if you were already trained in Arcana, you instead
   become trained in a skill of your choice. Select a school; you don't gain any abilities
   from your choice of school, but qualify for feats as a member.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: oQ6EZRFXbHWCx08C
 rules:
+- key: archetype-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: wizard-archetype-spells
+    sourceName: Wizard Archetype Spells
+    castingKind: prepared
+    tradition: arcane
+    attribute: intelligence
+- key: archetype-spellcasting-trained
+  effect: spellcasting/increase-spell-proficiency@2
+  inputs:
+    rank: trained
+- key: archetype-cantrip-slots
+  effect: spellcasting/grant-slot
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 0
+    count: 2
+- key: archetype-cantrips
+  effect: spellcasting/allow-known-spells
+  inputs:
+    source: wizard-archetype-spells
+    count: 4
+    pick: cantrip
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: arcane}
+      - {rarity: common}
+- key: choice-wizard-school
+  choice:
+    name: $.wizard.school
+    label: School
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.wizard.schools'}}
 - key: arcana-trained
   effect: core/add-skill-increase@2
   inputs:

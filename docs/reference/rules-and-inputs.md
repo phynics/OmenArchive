@@ -175,10 +175,12 @@ absent when the rule doesn't use it (`add-sense`'s `acuity` and `range`, `add-sp
   is answered; a record without that field applies nothing and reports it. On the wire the source is
   `{kind: choiceField, name: $.cleric.domains, field: domainSpell}`. `field` is allowed only with `choice`.
 - `$.cleric.domains.domainSpell`: the short form of that field read, for a choice that holds one answer. A
-  bare `$` path on an input that isn't a sheet value is a field read exactly when its last segment is one of
-  the readable field names (`domainSpell`, `advancedDomainSpell`); the path before it names the choice
-  (`$.cleric.advanced-domains.advancedDomainSpell` reads the field of `$.cleric.advanced-domains`). Any other
-  bare `$` path on such an input is an error, and a choice is never named after a readable field. The writer
+  bare `$` path on an input that isn't a sheet value is a field read exactly when its last segment is the name
+  of a fact a publication or module declares under `facts:` (`domainSpell`, `advancedDomainSpell`,
+  `advanced-bloodline-spell` and the others); the path before it names the choice
+  (`$.cleric.advanced-domains.advancedDomainSpell` reads the field of `$.cleric.advanced-domains`, and
+  `$.sorcerer.bloodline.advanced-bloodline-spell` the field of `$.sorcerer.bloodline`). Any other bare `$` path
+  on such an input is an error, and a choice is never named after a declared fact. The writer
   uses the short form where it reads back to the same source, and the long form is always accepted.
 - `{ literal: ... }`: only an escape, for a payload that is itself a map whose keys are all `type` or a
   source key. A map that merely has a `type` key (`numeric: {amount: 1, type: item}`) is written bare.

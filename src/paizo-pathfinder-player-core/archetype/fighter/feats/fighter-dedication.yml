@@ -16,10 +16,7 @@ description: You become trained in martial weapons. You become trained in your c
   of Acrobatics or Athletics; if you are already trained in both of these skills,
   you instead become trained in a skill of your choice. You become trained in fighter
   class DC.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: What the dedication trains (class DC) is modeled. Its martial weapon
-  training is not applied yet.
+mechanicsScope: builder
 foundryID: mvNa9KfQooHYEXoA
 rules:
 - key: choice-fighter-class-dc-attribute
@@ -34,6 +31,11 @@ rules:
     rank: trained
     className: fighter
     keyAttribute: {choice: $.fighter.class-dc-attribute}
+- key: martial-weapons-trained
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {category: martial}
+    rank: trained
 - key: choice-skill
   level: 2
   choice:

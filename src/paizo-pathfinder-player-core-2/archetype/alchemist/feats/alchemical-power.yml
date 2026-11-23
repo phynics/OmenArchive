@@ -13,5 +13,15 @@ prerequisites:
 description: You become an expert in the alchemist class DC. When you create an infused
   alchemical item that allows a saving throw, you can change its DC to your class
   DC.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Using the class DC as the save DC of an infused alchemical item
+  is in its text.
 foundryID: f6k9lIrIS4SfnCnG
+rules:
+- key: alchemical-power-class-dc
+  effect: core/add-class-dc@2
+  inputs:
+    rank: expert
+    className: alchemist
+    keyAttribute: intelligence

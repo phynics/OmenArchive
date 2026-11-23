@@ -21,10 +21,7 @@ description: 'You become trained in Athletics; if you were already trained in At
   Choose an instinct as you would if you were a barbarian. You have that instinct
   for all purposes, but you don''t gain any of the other abilities it grants. If that
   instinct has anathema, you''re bound by them.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: What the dedication trains (class DC) is modeled. The rest of it
-  is not yet.
+mechanicsScope: builder
 foundryID: WVU0c8rgcpGSRqSi
 rules:
 - key: dedication-class-dc
@@ -33,6 +30,23 @@ rules:
     rank: trained
     className: barbarian
     keyAttribute: strength
+- key: choice-barbarian-instinct
+  choice:
+    name: $.barbarian.instinct
+    label: Instinct
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.barbarian.instincts'}}
+- key: raging-armor-class-penalty
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: -1
+    type: untyped
+    when: raging
+- key: grant-features-rage
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.barbarian.features.rage'
 - key: athletics-trained
   effect: core/add-skill-increase@2
   inputs:

@@ -11,7 +11,58 @@ prerequisites:
 description: Your thorough studies allow you to cast more arcane spells each day.
   Increase the spell slots you gain from wizard archetype feats by 1 for each spell
   rank other than your two highest wizard spell slots.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: DwU6CmK4KsH8A3hu
+rules:
+- key: breadth-slot-8-1
+  effect: spellcasting/grant-slot
+  level: 8
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 1
+    count: 1
+- key: breadth-slot-12-2
+  effect: spellcasting/grant-slot
+  level: 12
+  prerequisites:
+  - has: '@archetype.wizard.feats.expert-wizard-spellcasting'
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 2
+    count: 1
+- key: breadth-slot-14-3
+  effect: spellcasting/grant-slot
+  level: 14
+  prerequisites:
+  - has: '@archetype.wizard.feats.expert-wizard-spellcasting'
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 3
+    count: 1
+- key: breadth-slot-16-4
+  effect: spellcasting/grant-slot
+  level: 16
+  prerequisites:
+  - has: '@archetype.wizard.feats.expert-wizard-spellcasting'
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 4
+    count: 1
+- key: breadth-slot-18-5
+  effect: spellcasting/grant-slot
+  level: 18
+  prerequisites:
+  - has: '@archetype.wizard.feats.master-wizard-spellcasting'
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 5
+    count: 1
+- key: breadth-slot-20-6
+  effect: spellcasting/grant-slot
+  level: 20
+  prerequisites:
+  - has: '@archetype.wizard.feats.master-wizard-spellcasting'
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 6
+    count: 1

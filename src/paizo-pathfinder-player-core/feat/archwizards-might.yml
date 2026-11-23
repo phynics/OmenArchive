@@ -10,5 +10,13 @@ prerequisites:
   has: '@class.wizard.features.archwizards-spellcraft'
 description: You have mastered the greatest secrets of arcane magic. You gain an additional
   10th-rank spell slot.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: tP26mgaFPpr6df1i
+rules:
+- key: rank-10-slot
+  effect: spellcasting/grant-slot
+  level: 20
+  inputs:
+    source: wizard-spellcasting
+    spellRank: 10
+    count: 1

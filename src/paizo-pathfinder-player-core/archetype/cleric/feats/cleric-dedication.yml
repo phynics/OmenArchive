@@ -20,9 +20,7 @@ description: You cast spells like a cleric. You gain the Cast a Spell activity. 
   skill; for each of these skills in which you were already trained, you instead become
   trained in a skill of your choice. You don't gain any other abilities from your
   choice of deity.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: smCDaPlpRDA47xjK
 rules:
 - key: choice-deity-name
@@ -98,3 +96,21 @@ rules:
   inputs:
     skill: religion
     rank: trained
+- key: archetype-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: cleric-archetype-spells
+    sourceName: Cleric Archetype Spells
+    castingKind: prepared
+    tradition: divine
+    attribute: wisdom
+- key: archetype-spellcasting-trained
+  effect: spellcasting/increase-spell-proficiency@2
+  inputs:
+    rank: trained
+- key: archetype-cantrip-slots
+  effect: spellcasting/grant-slot
+  inputs:
+    source: cleric-archetype-spells
+    spellRank: 0
+    count: 2

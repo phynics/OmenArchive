@@ -9,7 +9,27 @@ prerequisites:
 - text: Druid Dedication
   has: '@archetype.druid.feats.druid-dedication'
 description: You gain the Basic Spellcasting Feat benefits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: PNG7e39mEhq1MorG
+rules:
+- key: slot-4-1
+  effect: spellcasting/grant-slot
+  level: 4
+  inputs:
+    source: druid-archetype-spells
+    spellRank: 1
+    count: 1
+- key: slot-6-2
+  effect: spellcasting/grant-slot
+  level: 6
+  inputs:
+    source: druid-archetype-spells
+    spellRank: 2
+    count: 1
+- key: slot-8-3
+  effect: spellcasting/grant-slot
+  level: 8
+  inputs:
+    source: druid-archetype-spells
+    spellRank: 3
+    count: 1

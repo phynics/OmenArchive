@@ -16,10 +16,7 @@ description: You gain the [On the Case](omen://class/investigator/features/on-th
   and another skill of your choice. If you were already trained in Society, you instead
   become trained in an additional skill of your choice. You also become trained in
   investigator class DC.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: What the dedication trains (class DC) is modeled. The rest of it
-  is not yet.
+mechanicsScope: builder
 foundryID: CZXhJS55rG5H6PpB
 rules:
 - key: dedication-class-dc
@@ -28,6 +25,37 @@ rules:
     rank: trained
     className: investigator
     keyAttribute: intelligence
+- key: choice-feats-investigator-dedication-additional-skill
+  choice:
+    name: $.feats.investigator-dedication.additional-skill
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
+- key: additional-skill-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.investigator-dedication.additional-skill}
+    rank: trained
+- key: grant-features-on-the-case
+  effect: core/add-feature@2
+  inputs:
+    feature: '@class.investigator.features.on-the-case'
 - key: society-trained
   effect: core/add-skill-increase@2
   inputs:

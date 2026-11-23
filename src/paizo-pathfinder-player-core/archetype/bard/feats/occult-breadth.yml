@@ -12,7 +12,140 @@ description: Your repertoire expands, and you can cast more occult spells each d
   Increase the number of spells in your repertoire and the number of spell slots you
   gain from bard archetype feats by 1 for each spell rank other than your two highest
   spell slots.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: Yvxr1Q2TslWiKqqi
+rules:
+- key: breadth-slot-8-1
+  effect: spellcasting/grant-slot
+  level: 8
+  inputs:
+    source: bard-archetype-spells
+    spellRank: 1
+    count: 1
+- key: breadth-known-8-spell-1
+  effect: spellcasting/allow-known-spells
+  level: 8
+  inputs:
+    source: bard-archetype-spells
+    count: 1
+    pick: {rank: 1}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: occult}
+      - {rarity: common}
+- key: breadth-slot-12-2
+  effect: spellcasting/grant-slot
+  level: 12
+  prerequisites:
+  - has: '@archetype.bard.feats.expert-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    spellRank: 2
+    count: 1
+- key: breadth-known-12-spell-2
+  effect: spellcasting/allow-known-spells
+  level: 12
+  prerequisites:
+  - has: '@archetype.bard.feats.expert-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    count: 1
+    pick: {rank: 2}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: occult}
+      - {rarity: common}
+- key: breadth-slot-14-3
+  effect: spellcasting/grant-slot
+  level: 14
+  prerequisites:
+  - has: '@archetype.bard.feats.expert-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    spellRank: 3
+    count: 1
+- key: breadth-known-14-spell-3
+  effect: spellcasting/allow-known-spells
+  level: 14
+  prerequisites:
+  - has: '@archetype.bard.feats.expert-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    count: 1
+    pick: {rank: 3}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: occult}
+      - {rarity: common}
+- key: breadth-slot-16-4
+  effect: spellcasting/grant-slot
+  level: 16
+  prerequisites:
+  - has: '@archetype.bard.feats.expert-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    spellRank: 4
+    count: 1
+- key: breadth-known-16-spell-4
+  effect: spellcasting/allow-known-spells
+  level: 16
+  prerequisites:
+  - has: '@archetype.bard.feats.expert-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    count: 1
+    pick: {rank: 4}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: occult}
+      - {rarity: common}
+- key: breadth-slot-18-5
+  effect: spellcasting/grant-slot
+  level: 18
+  prerequisites:
+  - has: '@archetype.bard.feats.master-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    spellRank: 5
+    count: 1
+- key: breadth-known-18-spell-5
+  effect: spellcasting/allow-known-spells
+  level: 18
+  prerequisites:
+  - has: '@archetype.bard.feats.master-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    count: 1
+    pick: {rank: 5}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: occult}
+      - {rarity: common}
+- key: breadth-slot-20-6
+  effect: spellcasting/grant-slot
+  level: 20
+  prerequisites:
+  - has: '@archetype.bard.feats.master-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    spellRank: 6
+    count: 1
+- key: breadth-known-20-spell-6
+  effect: spellcasting/allow-known-spells
+  level: 20
+  prerequisites:
+  - has: '@archetype.bard.feats.master-bard-spellcasting'
+  inputs:
+    source: bard-archetype-spells
+    count: 1
+    pick: {rank: 6}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: occult}
+      - {rarity: common}

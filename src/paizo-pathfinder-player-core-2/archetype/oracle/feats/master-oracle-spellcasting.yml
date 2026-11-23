@@ -11,7 +11,49 @@ prerequisites:
 - text: legendary in Religion
   hasSkillProficiency: {skill: religion, rank: legendary}
 description: You gain the Master Spellcasting Feat benefits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: ZkGhDEpqe7fzJuSr
+rules:
+- key: archetype-spellcasting-master
+  effect: spellcasting/increase-spell-proficiency@2
+  level: 18
+  inputs:
+    rank: master
+- key: slot-18-7
+  effect: spellcasting/grant-slot
+  level: 18
+  inputs:
+    source: oracle-archetype-spells
+    spellRank: 7
+    count: 1
+- key: known-18-spell-7
+  effect: spellcasting/allow-known-spells
+  level: 18
+  inputs:
+    source: oracle-archetype-spells
+    count: 1
+    pick: {rank: 7}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: divine}
+      - {rarity: common}
+- key: slot-20-8
+  effect: spellcasting/grant-slot
+  level: 20
+  inputs:
+    source: oracle-archetype-spells
+    spellRank: 8
+    count: 1
+- key: known-20-spell-8
+  effect: spellcasting/allow-known-spells
+  level: 20
+  inputs:
+    source: oracle-archetype-spells
+    count: 1
+    pick: {rank: 8}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: divine}
+      - {rarity: common}

@@ -20,11 +20,166 @@ description: 'Choose a [Mystery](omen://class/oracle/features/mystery).You becom
   you learn or discover. You''re trained in the spell attack modifier and spell DC
   statistics. Your key spellcasting attribute for oracle archetype spells is Charisma,
   and they are divine oracle spells.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: OUNj8nXTHwGcEdlh
 rules:
+- key: archetype-source
+  effect: spellcasting/configure-source
+  inputs:
+    source: oracle-archetype-spells
+    sourceName: Oracle Archetype Spells
+    castingKind: spontaneous
+    tradition: divine
+    attribute: charisma
+- key: archetype-spellcasting-trained
+  effect: spellcasting/increase-spell-proficiency@2
+  inputs:
+    rank: trained
+- key: archetype-cantrip-slots
+  effect: spellcasting/grant-slot
+  inputs:
+    source: oracle-archetype-spells
+    spellRank: 0
+    count: 2
+- key: archetype-cantrips
+  effect: spellcasting/allow-known-spells
+  inputs:
+    source: oracle-archetype-spells
+    count: 2
+    pick: cantrip
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: divine}
+      - {rarity: common}
+- key: choice-oracle-mystery
+  choice:
+    name: $.oracle.mystery
+    label: Mystery
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.oracle.mysteries'}}
+- key: mystery-skill-acrobatics
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
+  inputs:
+    skill: acrobatics
+    rank: trained
+- key: mystery-skill-athletics
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
+  inputs:
+    skill: athletics
+    rank: trained
+- key: mystery-skill-medicine
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      oneOf:
+      - {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
+      - {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+  inputs:
+    skill: medicine
+    rank: trained
+- key: mystery-skill-nature
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      oneOf:
+      - {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
+      - {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
+  inputs:
+    skill: nature
+    rank: trained
+- key: mystery-skill-occultism
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
+  inputs:
+    skill: occultism
+    rank: trained
+- key: mystery-skill-society
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
+  inputs:
+    skill: society
+    rank: trained
+- key: grant-curses-curse-of-ancestral-meddling
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.ancestors'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-ancestral-meddling'
+- key: grant-curses-curse-of-the-mortal-warrior
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.battle'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-the-mortal-warrior'
+- key: grant-curses-curse-of-the-living-death
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.bones'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-the-living-death'
+- key: grant-curses-curse-of-the-skys-call
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.cosmos'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-the-skys-call'
+- key: grant-curses-curse-of-engulfing-flames
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.flames'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-engulfing-flames'
+- key: grant-curses-curse-of-outpouring-life
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.life'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-outpouring-life'
+- key: grant-curses-curse-of-torrential-knowledge
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.lore'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-torrential-knowledge'
+- key: grant-curses-curse-of-inclement-headwinds
+  effect: core/add-feature@2
+  prerequisites:
+  - hasChoice:
+      name: $.oracle.mystery
+      equals: {type: core/feature-id, value: '@class.oracle.mysteries.tempest'}
+  inputs:
+    feature: '@class.oracle.curses.curse-of-inclement-headwinds'
 - key: religion-trained
   effect: core/add-skill-increase@2
   inputs:

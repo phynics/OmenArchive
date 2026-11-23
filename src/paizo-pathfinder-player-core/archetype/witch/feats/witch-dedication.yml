@@ -25,5 +25,127 @@ description: 'You cast spells like a witch. Choose a [Patron](omen://class/witch
   were already trained in it, you instead become trained in a skill of your choice.'
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+unsupportedReason: The familiar it grants is not applied yet.
 foundryID: y0vdu6DGhKKElmE6
+rules:
+- key: choice-witch-patron
+  choice:
+    name: $.witch.patron
+    label: Patron
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.witch.patrons'}}
+- key: archetype-source-arcane
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      equals: {type: core/feature-id, value: '@class.witch.patrons.inscribed-one'}
+  inputs:
+    source: witch-archetype-spells
+    sourceName: Witch Archetype Spells
+    castingKind: prepared
+    tradition: arcane
+    attribute: intelligence
+- key: archetype-source-divine
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      equals: {type: core/feature-id, value: '@class.witch.patrons.faiths-flamekeeper'}
+  inputs:
+    source: witch-archetype-spells
+    sourceName: Witch Archetype Spells
+    castingKind: prepared
+    tradition: divine
+    attribute: intelligence
+- key: archetype-source-occult
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      oneOf:
+      - {type: core/feature-id, value: '@class.witch.patrons.spinner-of-threads'}
+      - {type: core/feature-id, value: '@class.witch.patrons.starless-shadow'}
+      - {type: core/feature-id, value: '@class.witch.patrons.resentment'}
+  inputs:
+    source: witch-archetype-spells
+    sourceName: Witch Archetype Spells
+    castingKind: prepared
+    tradition: occult
+    attribute: intelligence
+- key: archetype-source-primal
+  effect: spellcasting/configure-source
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      oneOf:
+      - {type: core/feature-id, value: '@class.witch.patrons.silence-in-snow'}
+      - {type: core/feature-id, value: '@class.witch.patrons.wilding-steward'}
+  inputs:
+    source: witch-archetype-spells
+    sourceName: Witch Archetype Spells
+    castingKind: prepared
+    tradition: primal
+    attribute: intelligence
+- key: patron-skill-arcana
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      equals: {type: core/feature-id, value: '@class.witch.patrons.inscribed-one'}
+  inputs:
+    skill: arcana
+    rank: trained
+- key: patron-skill-nature
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      oneOf:
+      - {type: core/feature-id, value: '@class.witch.patrons.silence-in-snow'}
+      - {type: core/feature-id, value: '@class.witch.patrons.wilding-steward'}
+  inputs:
+    skill: nature
+    rank: trained
+- key: patron-skill-occultism
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      oneOf:
+      - {type: core/feature-id, value: '@class.witch.patrons.spinner-of-threads'}
+      - {type: core/feature-id, value: '@class.witch.patrons.starless-shadow'}
+      - {type: core/feature-id, value: '@class.witch.patrons.resentment'}
+  inputs:
+    skill: occultism
+    rank: trained
+- key: patron-skill-religion
+  effect: core/add-skill-increase@2
+  prerequisites:
+  - hasChoice:
+      name: $.witch.patron
+      equals: {type: core/feature-id, value: '@class.witch.patrons.faiths-flamekeeper'}
+  inputs:
+    skill: religion
+    rank: trained
+- key: archetype-spellcasting-trained
+  effect: spellcasting/increase-spell-proficiency@2
+  inputs:
+    rank: trained
+- key: archetype-cantrip-slots
+  effect: spellcasting/grant-slot
+  inputs:
+    source: witch-archetype-spells
+    spellRank: 0
+    count: 1
+- key: archetype-cantrips
+  effect: spellcasting/allow-known-spells
+  inputs:
+    source: witch-archetype-spells
+    count: 2
+    pick: cantrip
+    filter:
+      all:
+      - {type: spell}
+      - {hasSourceTradition: witch-archetype-spells}
+      - {rarity: common}

@@ -11,7 +11,68 @@ prerequisites:
 - text: master in Arcana
   hasSkillProficiency: {skill: arcana, rank: master}
 description: You gain the Expert Spellcasting Feat benefits.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: The spellcasting it grants is not applied yet.
+mechanicsScope: builder
 foundryID: hpCBELEKGA4ynYv4
+rules:
+- key: archetype-spellcasting-expert
+  effect: spellcasting/increase-spell-proficiency@2
+  level: 12
+  inputs:
+    rank: expert
+- key: slot-12-4
+  effect: spellcasting/grant-slot
+  level: 12
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 4
+    count: 1
+- key: known-12-spell-4
+  effect: spellcasting/allow-known-spells
+  level: 12
+  inputs:
+    source: wizard-archetype-spells
+    count: 2
+    pick: {rank: 4}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: arcane}
+      - {rarity: common}
+- key: slot-14-5
+  effect: spellcasting/grant-slot
+  level: 14
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 5
+    count: 1
+- key: known-14-spell-5
+  effect: spellcasting/allow-known-spells
+  level: 14
+  inputs:
+    source: wizard-archetype-spells
+    count: 2
+    pick: {rank: 5}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: arcane}
+      - {rarity: common}
+- key: slot-16-6
+  effect: spellcasting/grant-slot
+  level: 16
+  inputs:
+    source: wizard-archetype-spells
+    spellRank: 6
+    count: 1
+- key: known-16-spell-6
+  effect: spellcasting/allow-known-spells
+  level: 16
+  inputs:
+    source: wizard-archetype-spells
+    count: 2
+    pick: {rank: 6}
+    filter:
+      all:
+      - {type: spell}
+      - {spell.tradition: arcane}
+      - {rarity: common}
