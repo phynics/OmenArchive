@@ -6,12 +6,16 @@ description: Your ancestors have traveled from place to place for generations, n
   content to settle down. You gain two additional languages of your choice, chosen
   from among the common and uncommon languages available to you, and every time you
   take the [Multilingual](omen://feat/multilingual) feat, you gain another new language.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: The language it gives for each Multilingual feat is not offered.
+mechanicsScope: builder
 rules:
 - key: language-picks-1
   effect: core/add-to-list
   inputs:
     list: $.languages.picks
     value: {type: core/int, literal: 2}
+- key: language-pick-each-multilingual
+  forEach: $.feats.multilingual.copies
+  effect: core/add-to-list
+  inputs:
+    list: $.languages.picks
+    value: {type: core/int, literal: 1}

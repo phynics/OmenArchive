@@ -91,6 +91,11 @@ A read can also name a question the record's rules declare, when its answer is a
 that give text or lists, such as `$.ancestry.name`, can't be used as a value in an expression. A list
 can be the first argument of `count` and `contains`.
 
+**Copies of a feat.** The list `$.feats.<feat>.copies` holds one item for each copy of that feat the
+character has, granted copies included, numbered 1, 2, 3. `(count $.feats.multilingual.copies)` is how
+many copies the character has. A rule with `forEach: $.feats.<feat>.copies` runs once for each copy, at
+the level the copy is taken (see [Rules for each item](character-lists.md#rules-for-each-item)).
+
 **Reads of a Strike.** `$.strike.rank`, `$.strike.melee` and the list `$.strike.traits` (the traits of
 the Strike's weapon or unarmed attack, as lowercase words) read the Strike whose damage is worked out.
 Only the `amount` and `requires` of a `core/add-modifier` whose every target is Strike damage

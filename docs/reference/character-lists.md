@@ -142,3 +142,14 @@ The rank read is the rank the character holds as the level begins, plus the skil
 ## Rules for each item
 
 `forEach: <list>` on a rule runs the rule once for each item of a list, after the character's other rules. The list is a plain `$` path of a declared list, and a rule that writes it is refused. An input reads the item as `{item: true}`, or one field of an entry as `{item: true, field: name}`. A text input may hold `{item}` or `{item.field}` for the item and `{$.path}` for the answer to a question; the whole text is the string a translation replaces, `{{` and `}}` write braces. The output of each run depends on the rule and the item, so an item that leaves the list takes only its own output with it.
+
+A rule can also run once for each copy of a feat the character has, with `forEach: $.feats.<feat>.copies` (an engine read, so no record declares it). A copy taken at a later level runs the rule at that level:
+
+```yaml
+key: language-pick-each-multilingual
+forEach: $.feats.multilingual.copies
+effect: core/add-to-list
+inputs:
+  list: $.languages.picks
+  value: {type: core/int, literal: 1}
+```
