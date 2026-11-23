@@ -100,8 +100,9 @@ The operators, reads and rounding of sheet expressions are in [Sheet Expressions
   character, such as +1 and +2 for a master, is `(add 1 (gte $.skills.crafting.rank master))`. A roll target is a word
   (`athletics`, `saving-throws`), a list of words (`[fortitude, reflex]`), or a `{description: […]}` of the targets the
   descriptor lists; an element outside them is an error that names the field and the accepted ones. The words are
-  `saving-throws`, `skills`, `attack-rolls`, `perception`, `fortitude`, `reflex`, `will`, `speed`, a skill, and the two
-  damage targets: `strike-damage` (every Strike's damage) and `melee-strike-damage` (a melee Strike's; a thrown weapon's
+  `saving-throws`, `skills`, `attack-rolls`, `perception`, `fortitude`, `reflex`, `will`, `speed`, `armor-class`,
+  `initiative` (initiative is a Perception check, so a `perception` modifier reaches it too; an `initiative` one reaches
+  only initiative), a skill, and the two damage targets: `strike-damage` (every Strike's damage) and `melee-strike-damage` (a melee Strike's; a thrown weapon's
   ranged Strike is not melee). A modifier whose every target is Strike damage is worked out for each Strike, and its
   `amount` and `requires` may read that Strike (`$.strike.rank`, `$.strike.melee`, `$.strike.traits`; see
   [Sheet Expressions](expressions.md#reads)). Damage is not a check: no other target reaches it. The two
