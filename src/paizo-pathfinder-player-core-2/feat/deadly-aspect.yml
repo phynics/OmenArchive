@@ -12,6 +12,13 @@ description: You have honed the unarmed attack your draconic heritage has grante
   you to a lethal degree. The unarmed attack you gained from Draconic Aspect gains
   the deadly d8 trait.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 7EbfPEq1Hd2s2wAh
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: The unarmed attack you gained from Draconic Aspect gains the deadly d8 trait.

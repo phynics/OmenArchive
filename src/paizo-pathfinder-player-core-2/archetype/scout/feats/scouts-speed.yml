@@ -14,6 +14,12 @@ description: You move faster, especially when traveling, allowing you to scout a
   bonus.
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: Its change to another modifier is not applied yet. Its change to
-  movement is not applied yet.
+unsupportedReason: Its change to another modifier is not applied yet.
 foundryID: elbj75qsUerbM725
+rules:
+- key: speed-status-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: speed
+    amount: 10
+    type: status

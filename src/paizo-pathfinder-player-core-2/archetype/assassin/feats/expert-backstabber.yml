@@ -13,6 +13,16 @@ description: You excel at quickly dispatching your foes. When you Strike an [Off
   damage instead of 1. If the weapon is a +3 weapon, you deal 4 extra precision damage
   instead of 2.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: OQAo3Us0ODGYdNNn
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: When you Strike an off-guard foe with a weapon that has the backstabber
+      trait, you deal 2 extra precision damage instead of 1, or 4 instead of 2 if
+      the weapon is a +3 weapon.
+    when: the target is off-guard

@@ -125,7 +125,7 @@ The `rules` array contains structured, machine-executable declarations for rules
 ```yaml
 rules:
   - key: speed-bonus
-    effect: core/add-speed
+    effect: core/add-speed@2
     inputs:
       movement: land
       bonus: 5

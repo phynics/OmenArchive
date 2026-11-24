@@ -12,7 +12,14 @@ description: You swagger readily into any fight. You gain a +2 circumstance bonu
   to your initiative roll and can Interact to draw a weapon. If you are the first
   to act in combat, you gain Panache.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Drawing a weapon with Interact, and gaining panache when you are
+  the first to act, are in its text.
 foundryID: NHheDmNB7L4REmlr
+rules:
+- key: initiative-circumstance-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: initiative
+    amount: 2
+    type: circumstance

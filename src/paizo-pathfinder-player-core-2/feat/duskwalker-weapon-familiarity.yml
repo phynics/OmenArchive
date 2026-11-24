@@ -12,9 +12,9 @@ description: 'You have familiarity with the bo staff, longbow, composite longbow
   At 5th level, whenever you get a critical hit with one of these weapons, you get
   its critical specialization effect.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Critical specialization is not applied yet: it can''t be limited
-  to the weapons the record names.'
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 8rKlptZ7ArtJ6cI8
 rules:
 - key: trained
@@ -48,3 +48,10 @@ rules:
     weapons: {type: core/weapon-designation, literal: {kind: specific, name: staff}}
     rank: trained
     selfScaling: true
+- key: strike-note-1
+  effect: core/add-note
+  level: 5
+  inputs:
+    target: strike-damage
+    text: Whenever you get a critical hit with a bo staff, longbow, composite longbow,
+      scythe or staff, you get its critical specialization effect.

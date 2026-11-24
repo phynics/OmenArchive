@@ -13,7 +13,15 @@ description: Even in the face of failure you press the attack, determined to suc
   Make a Strike with the same weapon, adding the backswing and forceful weapon traits
   to that Strike.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 9Q0tPGtOawPTU2TU
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: Make a Strike with the same weapon, adding the backswing and forceful weapon
+      traits to that Strike.
+    when: Follow-up Assault

@@ -31,7 +31,16 @@ description: You call upon divine power and make a weapon or unarmed Strike agai
   damage die. If this Strike hits, until the start of your next turn, the target gains
   weakness equal to half your level to all Strikes made by you and your allies.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: nSDXAFQKjMROlc2l
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: The Strike deals one extra weapon damage die. If it hits, until the start
+      of your next turn, the target gains weakness equal to half your level to all
+      Strikes made by you and your allies.
+    when: Blessed Counterstrike

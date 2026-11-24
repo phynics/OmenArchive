@@ -16,6 +16,14 @@ description: 'You are the child of a cuckoo hag, making one of your eyes violet 
   drained and doomed conditions you have by 2 instead of by 1.'
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet.
+unsupportedReason: Its change to the Hit Points regained by resting is not applied
+  yet.
 foundryID: kqnFdIhToKTnOpMl
+rules:
+- key: saving-throws-circumstance-bonus-sleep-or-dream
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 2
+    type: circumstance
+    when: sleep or dream

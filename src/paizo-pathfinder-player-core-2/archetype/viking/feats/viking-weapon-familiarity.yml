@@ -20,9 +20,9 @@ description: 'From childhood, you have been exposed to traditional viking combat
   At 5th level, whenever you get a critical hit with one of these weapons, you get
   its critical specialization effect.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Critical specialization is not applied yet: it can''t be limited
-  to the weapons the record names.'
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: j9Rp4fOZIxizyvYy
 rules:
 - key: trained
@@ -68,3 +68,10 @@ rules:
   effect: core/add-feat@3
   inputs:
     feat: '@feat.shield-block?source=paizo-pathfinder-player-core'
+- key: strike-note-1
+  effect: core/add-note
+  level: 5
+  inputs:
+    target: strike-damage
+    text: Whenever you get a critical hit with a battle axe, hatchet, longsword, shield
+      boss, shield spikes or shortsword, you get its critical specialization effect.

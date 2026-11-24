@@ -18,8 +18,12 @@ action:
 description: When you are struck with the mightiest of blows, you can flex your muscles
   to turn aside some of the damage. You gain resistance to the triggering attack equal
   to your Constitution modifier plus half your level.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet. Its notes
-  on rolls are in its text.
+mechanicsScope: builder
 foundryID: j8ycCi7ghTtpRjEW
+rules:
+- key: resistance-all-damage
+  effect: core/add-resistance@3
+  inputs:
+    type: all-damage
+    value: (add (floor (divide $.level 2)) $.attributes.con)
+    when: Scars of Steel

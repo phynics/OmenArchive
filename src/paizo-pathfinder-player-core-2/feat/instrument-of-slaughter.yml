@@ -17,6 +17,15 @@ description: Your blessed armament thirsts for the blood of your foes. Whenever 
   reaction, the target also takes persistent bleed damage equal to two of the weapon's
   damage dice.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: i98NcWSAbWmNmBik
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Whenever you critically hit an enemy with a Strike that has the extra damage
+      from your champion's reaction, the target also takes persistent bleed damage
+      equal to two of the weapon's damage dice.

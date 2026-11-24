@@ -14,6 +14,14 @@ description: You emulate your vampiric parent's techniques for drawing blood fro
   a victim. Your fangs Strikes deal an additional 1d4 persistent bleed damage on a
   critical hit.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: YDHr12qVA3XRjkLP
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Your fangs Strikes deal an additional 1d4 persistent bleed damage on a critical
+      hit.

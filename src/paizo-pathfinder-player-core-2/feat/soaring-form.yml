@@ -9,7 +9,11 @@ prerequisites:
 - text: Soaring Flight
   has: '@feat.soaring-flight'
 description: You have a fly Speed of 20 feet at all times.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: WZC2XXQo6Pu2GQeo
+rules:
+- key: fly-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: fly
+    speed: 20

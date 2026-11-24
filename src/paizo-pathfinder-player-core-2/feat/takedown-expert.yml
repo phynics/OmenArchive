@@ -12,6 +12,16 @@ description: You've mastered combat practices that let you get up close and brin
   your strategic strike. Additionally, you can make any of your Strikes nonlethal
   without taking the normal –2 penalty.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: yPWNbTqOIKdkwaVq
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: You can use your Intelligence modifier on attack rolls for an attack stratagem
+      with a weapon of the club group in one hand, and those Strikes qualify for your
+      strategic strike.
+    when: Devise a Stratagem

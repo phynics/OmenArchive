@@ -10,7 +10,8 @@ description: You move carefully, feinting and creating false openings to lead yo
   gains the bravado trait.
 mechanicsScope: mixed
 unsupportedCategory: text
-unsupportedReason: Its notes on rolls are in its text.
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: Jgid6Ja6Y879COlN
 rules:
 - key: deception-trained
@@ -23,3 +24,12 @@ rules:
   inputs:
     list: $.swashbuckler.skill-feat-skills
     value: {type: core/skill, literal: deception}
+- key: strike-note-1
+  effect: core/add-note
+  prerequisites:
+  - has: '@class.swashbuckler.features.exemplary-finisher'
+  inputs:
+    target: attack-rolls
+    text: If the finisher's Strike hits a foe, the foe is off-guard until your next
+      turn.
+    when: finisher

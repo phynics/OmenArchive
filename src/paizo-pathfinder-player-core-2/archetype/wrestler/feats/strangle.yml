@@ -24,7 +24,16 @@ description: You squeeze the breath out of your foe. Make an unarmed melee Strik
   with the concentrate and manipulate trait, the target just rolls a single DC 10
   flat check, rather than an additional DC 5 flat check for being grabbed.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: lMA3F9SGzGV79P5C
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: On a success, you gain a circumstance bonus to damage equal to the number
+      of weapon damage dice, and the target can barely speak until the start of your
+      next turn or until it Escapes.
+    when: Strangle

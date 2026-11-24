@@ -22,8 +22,21 @@ description: 'You spent your youth in the wilderness, living close to or perhaps
   if you already had low-light vision\), imprecise scent with a range of 30 feet,
   and the [Forager](omen://feat/forager?source=paizo-pathfinder-player-core) skill
   feat.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Conditional darkvision, low-light vision, and 30-foot imprecise
-  scent are not represented by the background sense converter. Its sense, resistance
-  or immunity is not applied yet.
+mechanicsScope: builder
+rules:
+- key: darkvision
+  effect: core/add-sense@3
+  prerequisites:
+  - hasAncestryVision: low-light-vision
+  inputs:
+    sense: darkvision
+- key: low-light-vision
+  effect: core/add-sense@3
+  inputs:
+    sense: low-light-vision
+- key: scent
+  effect: core/add-sense@3
+  inputs:
+    sense: scent
+    acuity: imprecise
+    range: 30

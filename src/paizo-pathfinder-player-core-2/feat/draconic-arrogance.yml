@@ -16,10 +16,10 @@ description: Few can sway you from your goals while the fury of combat fills you
 mechanicsScope: mixed
 foundryID: EOmTf95t03y4IGdp
 rules:
-- key: saving-throws-status-bonus-rage-emotion
+- key: saving-throws-status-bonus-raging-emotion
   effect: core/add-modifier@2
   inputs:
     target: saving-throws
     amount: 2
     type: status
-    when: you effect rage; the effect has the emotion trait
+    when: raging; the effect has the emotion trait

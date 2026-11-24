@@ -21,7 +21,16 @@ description: 'With a single whisper carried on the wind, you enchant your ammuni
   The mental damage increases to 3d6 if your weapon has a greater striking rune, or
   to 4d6 if your weapon has a major striking rune.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: m8iP2OCzit9WUrMD
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: On a hit, the target takes an additional 2d6 mental damage (3d6 if your
+      weapon has a greater striking rune, 4d6 with a major striking rune). On a critical
+      hit, the target also becomes stunned 1.
+    when: Enchanting Shot

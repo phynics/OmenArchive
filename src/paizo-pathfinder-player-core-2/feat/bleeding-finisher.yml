@@ -12,7 +12,15 @@ description: Your blow inflicts profuse bleeding. Make a slashing or piercing St
   If you hit, the target also takes persistent bleed damage equal to your precise
   strike finisher damage.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: dxujgA0NgiEvA0H8
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: If you hit with the slashing or piercing Strike, the target also takes persistent
+      bleed damage equal to your precise strike finisher damage.
+    when: Bleeding Finisher

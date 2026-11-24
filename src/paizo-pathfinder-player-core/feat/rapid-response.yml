@@ -11,5 +11,13 @@ action:
 description: You work quickly and efficiently in times of danger to deliver needed
   assistance. You Stride towards the triggering ally. You gain a +10-foot circumstance
   bonus to your Speed during this movement.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: OcBaEnGdDm6CuSnr
+rules:
+- key: speed-circumstance-bonus-rapid-response
+  effect: core/add-modifier@2
+  inputs:
+    target: speed
+    amount: 10
+    type: circumstance
+    when: Rapid Response

@@ -10,7 +10,11 @@ description: Your large black nose isn't just for show. You can pick up on the f
   feet.
 specialText: You can take this feat only at 1st level, and you can't retrain out of
   this feat or into this feat.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet.
+mechanicsScope: builder
 foundryID: jOwZMv5jtwdKSfLS
+rules:
+- key: scent
+  effect: core/add-sense@3
+  inputs:
+    sense: scent
+    range: 30

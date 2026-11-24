@@ -12,5 +12,15 @@ description: You've mastered the shape of dinosaurs. Add the shapes listed in [D
   Form](omen://spell/dinosaur-form) to your untamed form list. Whenever you use [Untamed
   Form](omen://spell/untamed-form) to take a shape that grants you a specific Athletics
   modifier, you gain a +1 status bonus to your Athletics checks.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: scope
+unsupportedReason: Its battle forms are not applied yet.
 foundryID: Le30algCdKIsxmeK
+rules:
+- key: athletics-status-bonus-untamed-form-battle
+  effect: core/add-modifier@2
+  inputs:
+    target: athletics
+    amount: 1
+    type: status
+    when: untamed form is in effect; battle form athletics

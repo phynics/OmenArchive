@@ -35,6 +35,7 @@ Generated from the manifests in `mechanics/`. Describes the shape of each rule, 
 - <doc:core-add-action-2>
 - <doc:core-add-armor-proficiency-3>
 - <doc:core-add-class-dc-2>
+- <doc:core-add-defense>
 - <doc:core-add-feat-3>
 - <doc:core-add-feature-2>
 - <doc:core-add-formulas>

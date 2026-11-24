@@ -18,7 +18,16 @@ description: You modify an arrow or bolt to bring death to your target in a sing
   saving throw against the higher of your class DC or spell DC or be immediately slain;
   this save has the death and incapacitation traits.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 6iOLxitjqHujH1Tj
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: On a hit, you deal an additional 10d10 precision damage. On a critical hit,
+      the target must also succeed at a Fortitude save against the higher of your
+      class DC or spell DC or be immediately slain (death, incapacitation).
+    when: Fatal Shot

@@ -11,7 +11,8 @@ description: To you, a fight is a kind of performance art, and you command your 
 mechanicsScope: mixed
 unsupportedCategory: text
 unsupportedReason: The bravado trait it gives the style's action is not applied yet.
-  Its notes on rolls are in its text.
+  Its change to the character's Strikes is a note on their attack or damage rolls;
+  the sheet's numbers don't include it.
 foundryID: 5HoEwzLDJGTCZtFa
 rules:
 - key: performance-trained
@@ -30,3 +31,12 @@ rules:
   inputs:
     list: $.swashbuckler.skill-feat-skills
     value: {type: core/skill, literal: performance}
+- key: strike-note-1
+  effect: core/add-note
+  prerequisites:
+  - has: '@class.swashbuckler.features.exemplary-finisher'
+  inputs:
+    target: attack-rolls
+    text: If the finisher's Strike hits a foe, you can Step as a free action immediately
+      after the finisher.
+    when: finisher

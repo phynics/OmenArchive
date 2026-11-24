@@ -28,7 +28,15 @@ description: 'You bellow, instilling fear in your enemies. Enemies within a eman
   immediately if you leave Dragon Stance. Creatures in the area are then temporarily
   immune for 1 minute.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: SELSj1vvVLx5cP72
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Your first attack that hits a frightened creature after you roar and before
+      the end of your next turn gains a +4 circumstance bonus to damage.
+    when: Dragon Roar

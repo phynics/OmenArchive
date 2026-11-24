@@ -9,6 +9,14 @@ description: Your iruxi unarmed attacks channel the spiritual energy of your anc
   Any unarmed attacks you acquire from the lizardfolk ancestry, lizardfolk heritages,
   or lizardfolk ancestry feats gain the effects of a ghost touch property rune.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: pivX2SxPQjKDyvHU
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Unarmed attacks you acquire from the lizardfolk ancestry, lizardfolk heritages
+      or lizardfolk ancestry feats gain the effects of a ghost touch property rune.

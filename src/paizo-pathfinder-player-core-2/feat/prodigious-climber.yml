@@ -9,7 +9,18 @@ description: Your natural climbing ability and technique has made you a potent c
   You gain a climb Speed of 10 feet.
 specialText: If you have the [Stickytoe Tripkee](omen://ancestry/tripkee/heritages/stickytoe-tripkee)
   heritage, you instead gain a climb Speed of 20 feet.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: 7Te7XHgRjesDKwZn
+rules:
+- key: climb-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: climb
+    speed: 10
+- key: climb-speed-stickytoe-tripkee
+  effect: core/add-speed@2
+  prerequisites:
+  - has: '@ancestry.tripkee.heritages.stickytoe-tripkee'
+  inputs:
+    movement: climb
+    speed: 20

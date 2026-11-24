@@ -23,7 +23,16 @@ description: 'You put all your force into a single mighty, carefully controlled 
   feat triples, for a total of 3 additional dice if you spend 2 actions or 6 additional
   dice if you spend 3 actions.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: jaAnxfXVmUQy0IKU
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: If you spend 2 actions and the unarmed Strike hits, you deal an extra die
+      of weapon damage; with 3 actions, a second additional die. From 10th level the
+      additional dice double (2 or 4), and from 18th level they triple (3 or 6).
+    when: One-Inch Punch

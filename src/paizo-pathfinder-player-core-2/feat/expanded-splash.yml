@@ -15,7 +15,17 @@ description: You can throw bombs at just the right trajectory to create especial
   amount, allowing your bombs to deal splash damage equal to double your Intelligence
   modifier.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: gyVcJfZTmBytLsXq
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: When you throw an alchemical bomb with the splash trait, you can have the
+      splash damage affect all creatures within 10 feet of the target instead of 5
+      feet. If you do, you gain a status bonus to the bomb's splash damage equal to
+      your Intelligence modifier.
+    when: Expanded Splash

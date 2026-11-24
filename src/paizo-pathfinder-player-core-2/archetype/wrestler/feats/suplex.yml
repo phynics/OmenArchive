@@ -19,7 +19,16 @@ description: Flexing your entire body, you heave your opponent over your head an
   damage. Regardless of whether the Strike is successful, you immediately release
   your hold on the target.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 9yko78REsaw7i2gr
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: On a success, the target lands prone, and on a critical success, it lands
+      prone and takes an additional 2d6 bludgeoning damage. Either way, you release
+      your hold on the target.
+    when: Suplex

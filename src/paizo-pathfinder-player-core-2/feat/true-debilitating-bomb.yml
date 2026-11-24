@@ -14,7 +14,15 @@ description: 'You have discovered increasingly devastating ways for your bombs t
   [Stupefied 2](omen://condition/stupefied?source=paizo-pathfinder-player-core), or
   a –15-foot status penalty to Speeds.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 2HMvAB6mIVwvwtjT
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: When you use Debilitating Bomb, you can also choose enfeebled 2, stupefied
+      2 or a –15-foot status penalty to Speeds.
+    when: Debilitating Bomb

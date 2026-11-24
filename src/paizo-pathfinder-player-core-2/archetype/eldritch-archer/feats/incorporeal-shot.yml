@@ -28,7 +28,17 @@ description: 'You can concentrate an immense amount of magic to create a piece o
   The Strike''s damage can''t be reduced with a Shield Block reaction using a non-magical
   shield.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: LRSTjjBNNlD0XZX8
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: The shot ignores all cover, the concealed and hidden conditions and circumstance
+      bonuses to AC from shields, and it has a +4 status bonus to hit creatures wearing
+      any type of armor. Its damage can't be reduced with a Shield Block using a non-magical
+      shield.
+    when: Incorporeal Shot

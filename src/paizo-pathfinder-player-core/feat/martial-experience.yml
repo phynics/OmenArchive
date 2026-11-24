@@ -12,8 +12,9 @@ description: 'You''ve crossed blades with a wide variety of foes wielding a wide
 
   At 11th level, you become trained in all weapons.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: qXl2cOh3wL3QszCy
 rules:
 - key: unarmed-attacks-trained
@@ -36,3 +37,10 @@ rules:
   inputs:
     weapons: {category: advanced}
     rank: trained
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: When wielding a weapon you aren't proficient with, treat your level as your
+      proficiency bonus.
+    requires: (lt $.level 11)

@@ -13,5 +13,14 @@ action:
 description: You can knock aside ranged attacks. You gain a +4 circumstance bonus
   to AC against the triggering attack. If the attack misses, you knocked or cut it
   out of the air.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: 6xBu4BewIkOIt9M0
+rules:
+- key: armor-class-circumstance-bonus-cut-from-air-against
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: 4
+    type: circumstance
+    when: Cut From the Air; against physical damage; with a ranged weapon; not you
+      are off-guard

@@ -41,7 +41,16 @@ description: Divine energy fills your weapon. Whenever you critically hit an ene
   damage die, and the target is [Slowed 1](omen://condition/slowed?source=paizo-pathfinder-player-core)
   on its next turn
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: h08Vfel5iIAARWdy
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Whenever you critically hit an enemy with Blessed Counterstrike or Retributive
+      Strike, your attack deals an extra weapon damage die, and the target is slowed
+      1 on its next turn.
+    when: Blessed Counterstrike or Retributive Strike

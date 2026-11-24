@@ -8,6 +8,14 @@ traits:
 description: Your jaws can crush bone and bite through armor. Your jaws unarmed attack
   deals 1d8 piercing damage instead of 1d6 and gains the grapple trait
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: aOhZUMCn0o2ZMkdW
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Your jaws unarmed attack deals 1d8 piercing damage instead of 1d6 and gains
+      the grapple trait.

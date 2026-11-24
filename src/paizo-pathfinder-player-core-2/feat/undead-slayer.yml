@@ -11,7 +11,16 @@ description: Your knowledge of your own not-quite-living anatomy, combined with 
   equal to the number of weapon damage dice for the Strike. This bonus increases to
   double the number of weapon damage dice if your target has the vampire trait.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: ZOJsLNziWQ7Ri3x9
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Against undead creatures, you gain a circumstance bonus to damage with weapon
+      and unarmed Strikes equal to the number of weapon damage dice for the Strike,
+      or double that number if the target has the vampire trait.
+    when: against undead

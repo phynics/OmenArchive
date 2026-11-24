@@ -8,7 +8,12 @@ traits:
 description: You have a fraction of the senses of your draconic forebear. You gain
   low-light vision, or you gain darkvision if your ancestry already grants you low-light
   vision.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet.
+mechanicsScope: builder
 foundryID: 8JyyB66LK0pOpnYv
+rules:
+- key: darkvision
+  effect: core/add-sense@3
+  prerequisites:
+  - hasAncestryVision: low-light-vision
+  inputs:
+    sense: darkvision

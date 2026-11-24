@@ -12,5 +12,13 @@ action:
 description: You notice spirits that inhabit objects, learning which bring good fortune
   and which are unlucky. You focus on the power of a lucky object, granting you a
   +1 circumstance bonus to your saving throw against the triggering effect.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: fYVFBnv9aVHv1UNg
+rules:
+- key: saving-throws-circumstance-bonus-leshy-superstition
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: Leshy Superstition; arcane or divine or primal or occult

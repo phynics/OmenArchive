@@ -21,7 +21,12 @@ description: You reach for an opponent's item as you move past a foe. If you cri
   a belt, but not anything inside a container or anything the enemy is holding. The
   GM has final say on what you can Steal.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
 foundryID: 80AC6Q1m0eQiE7Et
+rules:
+- key: thievery-circumstance-bonus-tumbling-theft
+  effect: core/add-modifier@2
+  inputs:
+    target: thievery
+    amount: 1
+    type: circumstance
+    when: Tumbling Theft

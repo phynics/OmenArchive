@@ -13,6 +13,13 @@ description: You can add a tarry additive to an alchemical bomb to make it emit 
   condition, and all other creatures are concealed to them. The smoke lasts for 1
   minute or until dissipated by a strong wind.
 mechanicsScope: mixed
-unsupportedCategory: text
-unsupportedReason: Its notes on rolls are in its text.
 foundryID: ODnXQHvFoK7tIVpu
+rules:
+- key: attack-rolls-alchemical-bomb-smoke-note
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: Your bomb creates a cloud of smoke in a 10-foot radius burst, centered on
+      a corner of the target's space of your choice. The smoke conceals creatures
+      in the area, and lasts for 1 minute.
+    when: alchemical; bomb; Smoke Bomb

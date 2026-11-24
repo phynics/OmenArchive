@@ -13,5 +13,13 @@ action:
 description: You defend yourself against magic by relying on techniques derived from
   orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw
   against the triggering spell or magical effect.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: EFhh3AenX7wtAmrs
+rules:
+- key: saving-throws-circumstance-bonus-orc-superstition
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: Orc Superstition; arcane or divine or primal or occult or magical

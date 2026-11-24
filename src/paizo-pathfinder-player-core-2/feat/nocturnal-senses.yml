@@ -14,5 +14,14 @@ description: Your senses gain even greater clarity. While raging, if you have lo
   increases to 60 feet.
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet.
+unsupportedReason: Its scent is for a character who already has it, which a rule that
+  gives it can't test, so it is not applied yet.
 foundryID: k0NNa5Ko4XhDdBYB
+rules:
+- key: darkvision
+  effect: core/add-sense@3
+  prerequisites:
+  - hasSense: low-light-vision
+  inputs:
+    sense: darkvision
+    when: raging

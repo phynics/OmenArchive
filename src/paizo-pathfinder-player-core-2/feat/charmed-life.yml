@@ -15,7 +15,14 @@ description: When danger calls, you have a strange knack for coming out on top. 
   gain a +2 circumstance bonus to the triggering save. If you succeed on the triggering
   saving throw, you gain panache until the end of your next turn.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its notes on rolls are in its text.
 foundryID: DkoxNw9tsFFXrfJY
+rules:
+- key: saving-throws-circumstance-bonus-charmed-life
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 2
+    type: circumstance
+    when: Charmed Life

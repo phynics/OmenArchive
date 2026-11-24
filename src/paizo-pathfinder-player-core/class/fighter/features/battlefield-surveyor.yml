@@ -8,12 +8,15 @@ description: Whether taking stock of an enemy army or simply standing guard, you
   In addition, you gain a +2 circumstance bonus to Perception checks for initiative,
   making you faster to react during combat.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet.
 foundryID: TIvzBALymvb56L79
 rules:
 - key: perception-master
   effect: core/add-perception
   inputs:
     rank: master
+- key: initiative-circumstance-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: initiative
+    amount: 2
+    type: circumstance

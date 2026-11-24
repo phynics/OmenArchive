@@ -15,7 +15,17 @@ description: 'Alchemist Repeated exposure to toxic reagents has fortified your b
   You gain poison resistance equal to half your level, and you gain a +1 status bonus
   to saving throws against poisons.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its sense, resistance or immunity is not applied yet.
 foundryID: 0lieFKdwgNVXep7u
+rules:
+- key: saving-throws-status-bonus-poison
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: status
+    when: poison
+- key: resistance-poison
+  effect: core/add-resistance@3
+  inputs:
+    type: poison
+    value: (floor (divide $.level 2))

@@ -13,10 +13,10 @@ description: You bully foes across the battlefield. While raging, you gain a +2 
 mechanicsScope: mixed
 foundryID: cA1IIy6UEsgETXiX
 rules:
-- key: athletics-circumstance-bonus-rage-attack
+- key: athletics-circumstance-bonus-raging-attack
   effect: core/add-modifier@2
   inputs:
     target: athletics
     amount: 2
     type: circumstance
-    when: you effect rage; attack
+    when: raging; attack

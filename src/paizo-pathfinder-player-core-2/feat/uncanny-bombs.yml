@@ -14,7 +14,16 @@ description: You lob bombs unerringly, despite obstructions or distance. When yo
   you automatically succeed at the flat check when targeting a [Concealed](omen://condition/concealed?source=paizo-pathfinder-player-core)
   creature.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 9Ht1eyBHsB1swpeE
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: When you throw an alchemical item with the bomb trait, its range increment
+      increases to 60 feet, you reduce any circumstance bonus to the target's AC from
+      cover by 1, and you automatically succeed at the flat check when targeting a
+      concealed creature.

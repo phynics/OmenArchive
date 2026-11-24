@@ -15,7 +15,16 @@ description: 'You split your attacks. Make two melee [Strikes](omen://action/str
 
   Increase your multiple attack penalty only after attempting both Strikes.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: PP1gfRCc1YwnQGxp
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: Make two melee Strikes, one with each required weapon, each against a different
+      foe. If the second Strike is made with a non-agile weapon, it takes a –2 penalty.
+      Increase your multiple attack penalty only after both Strikes.
+    when: Dual Finisher

@@ -10,7 +10,20 @@ description: You can breathe even in hazardous or sparse air. You can hold your 
   to saving throws against inhaled threats, such as inhaled poisons, and if you roll
   a success on such a saving throw, you get a critical success instead.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet.
+unsupportedCategory: text
+unsupportedReason: It holds only bookkeeping the builder does not need.
 foundryID: aJUXbe9HJVvv0Mxa
+rules:
+- key: saving-throws-circumstance-bonus-inhaled
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: the effect has the inhaled trait
+- key: saving-throws-inhaled-success-note
+  effect: core/add-note
+  inputs:
+    target: saving-throws
+    text: When you roll a success on a saving throw, the result is one degree better.
+    when: the effect has the inhaled trait

@@ -15,5 +15,12 @@ description: 'You have become a brutal, unstoppable force of nature, able to shr
   \(or increase your wounded condition by 2 if you are already wounded\).'
 mechanicsScope: mixed
 unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet.
+unsupportedReason: Its resistance from raging, 8 + your Constitution modifier, is
+  not applied yet.
 foundryID: YCqHaqn0TxdiGxiW
+rules:
+- key: resistance-all-damage
+  effect: core/add-resistance@3
+  inputs:
+    type: all-damage
+    value: (add $.attributes.con 3)

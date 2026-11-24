@@ -11,5 +11,13 @@ action:
   trigger: A creature targets you with an attack and you can see the attacker.
 description: You deftly dodge out of the way, gaining a +2 circumstance bonus to AC
   against the triggering attack.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: dNH8OHEvx3vI9NBQ
+rules:
+- key: armor-class-circumstance-bonus-nimble-dodge
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: 2
+    type: circumstance
+    when: Nimble Dodge

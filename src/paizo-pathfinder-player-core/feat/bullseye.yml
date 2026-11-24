@@ -12,5 +12,13 @@ description: You carefully take aim to avoid your foe's concealment and cover. O
   circumstance bonus to your attack roll and ignore your target's [Concealed](omen://condition/concealed)
   condition, as well as the target's lesser cover or standard cover; if the target
   had greater cover, they instead have only standard cover against the Strike.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: 0XGLdVbEIISOOuuO
+rules:
+- key: attack-rolls-circumstance-bonus-bullseye
+  effect: core/add-modifier@2
+  inputs:
+    target: attack-rolls
+    amount: 1
+    type: circumstance
+    when: Bullseye

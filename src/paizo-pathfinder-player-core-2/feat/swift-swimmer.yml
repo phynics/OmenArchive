@@ -8,7 +8,18 @@ traits:
 description: You gain a swim Speed of 15 feet.
 specialText: If you have the wetlander lizardfolk heritage, your swim Speed instead
   increases to 25 feet.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: iliy0ONIb8Hw6muA
+rules:
+- key: swim-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: swim
+    speed: 15
+- key: swim-speed-wetlander-lizardfolk
+  effect: core/add-speed@2
+  prerequisites:
+  - has: '@ancestry.lizardfolk.heritages.wetlander-lizardfolk'
+  inputs:
+    movement: swim
+    speed: 25

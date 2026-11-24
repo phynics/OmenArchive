@@ -9,8 +9,9 @@ description: You reposition, maneuver, and bewilder your foes with daring feats 
   or [Trip](omen://action/trip?source=paizo-pathfinder-player-core), the action gains
   the bravado trait.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: B7RMnrHwQHlezlJT
 rules:
 - key: athletics-trained
@@ -23,3 +24,13 @@ rules:
   inputs:
     list: $.swashbuckler.skill-feat-skills
     value: {type: core/skill, literal: athletics}
+- key: strike-note-1
+  effect: core/add-note
+  prerequisites:
+  - has: '@class.swashbuckler.features.exemplary-finisher'
+  inputs:
+    target: strike-damage
+    text: If the finisher's Strike hits a foe that is grabbed, restrained or prone,
+      you gain a circumstance bonus to the damage roll equal to double the number
+      of weapon damage dice.
+    when: finisher

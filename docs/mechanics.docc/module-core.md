@@ -80,6 +80,7 @@ The `$` reads the engine provides. A rule reads them without a rule that defines
 - <doc:core-add-action-2>
 - <doc:core-add-armor-proficiency-3>
 - <doc:core-add-class-dc-2>
+- <doc:core-add-defense>
 - <doc:core-add-feat-3>
 - <doc:core-add-feature-2>
 - <doc:core-add-formulas>

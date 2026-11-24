@@ -13,7 +13,27 @@ description: 'You are a great warrior that can stand strong against the fiercest
 
   In addition, creatures and effects that roll a natural 20 on an attack roll against
   you don''t improve their result by one degree of success.'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet.
+mechanicsScope: builder
 foundryID: JaBDNtNYYDfTGYad
+rules:
+- key: resistance-physical
+  effect: core/add-resistance@3
+  inputs:
+    type: physical
+    value: 5
+- key: resistance-physical-2
+  effect: core/add-resistance@3
+  prerequisites:
+  - hasTrait: holy
+  inputs:
+    type: physical
+    value: 10
+    when: against unholy creatures
+- key: resistance-physical-3
+  effect: core/add-resistance@3
+  prerequisites:
+  - hasTrait: unholy
+  inputs:
+    type: physical
+    value: 10
+    when: against holy creatures

@@ -22,11 +22,22 @@ description: 'When focused on finding your quarry, you''re relentless. You gain 
   other benefits of this feat.'
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: Its skill training is not applied yet. A bonus or other change
-  to a statistic that always applies is not applied yet. The features it grants are
-  not applied yet. Its notes on rolls are in its text.
+unsupportedReason: Its skill training is not applied yet.
 foundryID: tKaesXO5nlZ2sspx
 rules:
+- key: diplomacy-circumstance-bonus-gather-information
+  effect: core/add-modifier@2
+  inputs:
+    target: diplomacy
+    amount: 2
+    type: circumstance
+    when: Gather Information; the target is your hunted prey
+- key: monster-hunter-feat
+  effect: core/add-feat@3
+  prerequisites:
+  - has: '@class.ranger.features.hunt-prey?source=paizo-pathfinder-player-core'
+  inputs:
+    feat: '@feat.monster-hunter?source=paizo-pathfinder-player-core'
 - key: hunt-prey-action
   effect: core/add-action@2
   inputs:

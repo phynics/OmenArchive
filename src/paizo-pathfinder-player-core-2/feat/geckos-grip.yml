@@ -11,7 +11,21 @@ description: You cling to walls with a preternatural grip. You gain the [Combat 
 specialText: If you have the cliffscale lizardfolk heritage, you instead gain a climb
   Speed of 15 feet.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet. The features it grants
-  are not applied yet. Its notes on rolls are in its text.
+unsupportedCategory: benefit
+unsupportedReason: The features it grants are not applied yet.
 foundryID: kGed3uQbZ7x5SBB8
+rules:
+- key: athletics-climb-not-heritage-cliffscale-success-note
+  effect: core/add-note
+  inputs:
+    target: athletics
+    text: When you roll a success on an Athletics check, the result is one degree
+      better.
+    when: Climb; not heritage cliffscale lizardfolk
+- key: climb-speed-cliffscale-lizardfolk
+  effect: core/add-speed@2
+  prerequisites:
+  - has: '@ancestry.lizardfolk.heritages.cliffscale-lizardfolk'
+  inputs:
+    movement: climb
+    speed: 15

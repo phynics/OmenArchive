@@ -7,7 +7,11 @@ traits:
 - ratfolk
 description: You've learned to put your sturdy claws to work digging through the earth.
   You gain a burrow Speed of 15 feet.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: 8H72RC7QI1i8wjJ1
+rules:
+- key: burrow-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: burrow
+    speed: 15

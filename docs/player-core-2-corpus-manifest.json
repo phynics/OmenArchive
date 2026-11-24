@@ -25,7 +25,7 @@
       ],
       "sourceHash" : "194d7fc78736438f8af872eca5498e2e9bc91dd84e6bc58777e5d65b19408c5a",
       "sourcePath" : "packs\/pf2e\/actions\/ancestry\/hobgoblin\/resist-elf-magic.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another modifier is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to another modifier is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/action\/tail-toxin?source=paizo-pathfinder-player-core-2",
@@ -122,7 +122,7 @@
       ],
       "sourceHash" : "2c0f734bba26acad78f54014f04625e3660aa1cdfa556fed7de55a5239c20d14",
       "sourcePath" : "packs\/pf2e\/actions\/archetype\/assassin\/mark-for-death.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/action\/call-companion?source=paizo-pathfinder-player-core-2",
@@ -614,7 +614,7 @@
       ],
       "sourceHash" : "da5e82677c23dd0dc11a1c9c2ab68bb4f0d518bef2347b416d649a591140c5fb",
       "sourcePath" : "packs\/pf2e\/actions\/class\/inventor\/pursue-a-lead.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/action\/clue-in?source=paizo-pathfinder-player-core-2",
@@ -642,7 +642,7 @@
     {
       "canonicalPath" : "omen:\/\/action\/devise-a-stratagem?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry action rule elements are preserved for external review at omen:\/\/action\/devise-a-stratagem?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+        "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it. The Devise a Stratagem feature that grants it holds the note."
       ],
       "conversionOutcome" : "unsupported",
       "foundryID" : "m0f2B7G9eaaTmhFL",
@@ -662,7 +662,7 @@
       ],
       "sourceHash" : "976a531ef7bccabbc839a0943e87a9fad51117fecf9d4bfdddcf6ab6460208be",
       "sourcePath" : "packs\/pf2e\/actions\/class\/investigator\/devise-a-stratagem.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it. The Devise a Stratagem feature that grants it holds the note."
     },
     {
       "canonicalPath" : "omen:\/\/action\/expeditious-inspection?source=paizo-pathfinder-player-core-2",
@@ -762,7 +762,7 @@
     {
       "canonicalPath" : "omen:\/\/action\/opportune-riposte?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry action rule elements are preserved for external review at omen:\/\/action\/opportune-riposte?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, RollOption, AdjustStrike]."
+        "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it. The Opportune Riposte feature that grants it holds the note."
       ],
       "conversionOutcome" : "unsupported",
       "foundryID" : "EfjoIuDmtUn4yiow",
@@ -783,7 +783,7 @@
       ],
       "sourceHash" : "4a56e3f11cfc56215bb7ebd67d4e6b1b38c0708e5edda084c8aef276178bcd1b",
       "sourcePath" : "packs\/pf2e\/actions\/class\/swashbuckler\/opportune-riposte.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it. The Opportune Riposte feature that grants it holds the note."
     },
     {
       "canonicalPath" : "omen:\/\/action\/final-surge?source=paizo-pathfinder-player-core-2",
@@ -1370,11 +1370,11 @@
     {
       "canonicalPath" : "omen:\/\/background\/feral-child?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Conditional darkvision, low-light vision, and 30-foot imprecise scent are not represented by the background sense converter. Its sense, resistance or immunity is not applied yet."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "Q2brdDtEoI3cmpuD",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Feral Child",
       "prerequisiteShapes" : [
 
@@ -1390,8 +1390,7 @@
         "Sense"
       ],
       "sourceHash" : "a2061790873f4a235520145fb0a9ed9743671acd35edf1543df0daabcdd61f93",
-      "sourcePath" : "packs\/pf2e\/backgrounds\/feral-child.json",
-      "unsupportedReason" : "Conditional darkvision, low-light vision, and 30-foot imprecise scent are not represented by the background sense converter. Its sense, resistance or immunity is not applied yet."
+      "sourcePath" : "packs\/pf2e\/backgrounds\/feral-child.json"
     },
     {
       "canonicalPath" : "omen:\/\/background\/feybound?source=paizo-pathfinder-player-core-2",
@@ -1950,9 +1949,9 @@
     {
       "canonicalPath" : "omen:\/\/class\/monk\/features\/adamantine-strikes?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry class-feature rule elements are preserved for external review. External review required. Resource: omen:\/\/class\/monk\/features\/adamantine-strikes?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustStrike, AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "5cthRUkRqRtduVvN",
       "mechanicsScope" : "mixed",
       "name" : "Adamantine Strikes",
@@ -1970,7 +1969,7 @@
       ],
       "sourceHash" : "59ecad5bc266e341dbc9694d828c431a00bdbdd8c6eb549c9ffdb6dbb828d3ad",
       "sourcePath" : "packs\/pf2e\/class-features\/adamantine-strikes.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/alchemist\/alchemy-benefits\/advanced-alchemy?source=paizo-pathfinder-player-core-2",
@@ -2445,7 +2444,7 @@
       ],
       "sourceHash" : "008d7083d7e888ca7af39a5248462b2d0f3e1cade3946ec697bbe9d19b4d633b",
       "sourcePath" : "packs\/pf2e\/class-features\/battledancer.json",
-      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/champion\/blessings\/blessed-armament?source=paizo-pathfinder-player-core-2",
@@ -2995,7 +2994,7 @@
       ],
       "sourceHash" : "1be3de33b750d4639c419809756f082f2ada50c6f1595b4d93cb53a20cc0a46d",
       "sourcePath" : "packs\/pf2e\/class-features\/braggart.json",
-      "unsupportedReason" : "Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/barbarian\/features\/brutality?source=paizo-pathfinder-player-core-2",
@@ -3581,7 +3580,7 @@
       ],
       "conversionOutcome" : "converted",
       "foundryID" : "lgo65ldX7WkXC8Ir",
-      "mechanicsScope" : "builder",
+      "mechanicsScope" : "mixed",
       "name" : "Devise a Stratagem",
       "prerequisiteShapes" : [
 
@@ -3595,7 +3594,8 @@
         "GrantItem"
       ],
       "sourceHash" : "95b199fde6ce0737992b4ab1e463307324777c7db23422e863326bd12f50a9a0",
-      "sourcePath" : "packs\/pf2e\/class-features\/devise-a-stratagem.json"
+      "sourcePath" : "packs\/pf2e\/class-features\/devise-a-stratagem.json",
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/champion\/features\/devotion-spells?source=paizo-pathfinder-player-core-2",
@@ -3942,7 +3942,7 @@
       ],
       "sourceHash" : "8e74519154211a98cf5e225e32d5a24c896517293be06b8c12d9dd7cec07c1e4",
       "sourcePath" : "packs\/pf2e\/class-features\/fencer.json",
-      "unsupportedReason" : "Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/alchemist\/field-benefits\/field-discovery-bomber?source=paizo-pathfinder-player-core-2",
@@ -4552,7 +4552,7 @@
       ],
       "sourceHash" : "497bc012fd1c973cbfb2c25a0b906edd7635c106d2413d8f8ef61de780a7bf27",
       "sourcePath" : "packs\/pf2e\/class-features\/gymnast.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/champion\/features\/heros-defiance?source=paizo-pathfinder-player-core-2",
@@ -4815,7 +4815,7 @@
       ],
       "sourceHash" : "5e8b03f5efbde029027797df2ebba435ca8c1c0ede76c8241b48d72f03688328",
       "sourcePath" : "packs\/pf2e\/class-features\/keen-recollection.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/class\/champion\/features\/legendary-armor?source=paizo-pathfinder-player-core-2",
@@ -5008,9 +5008,9 @@
     {
       "canonicalPath" : "omen:\/\/class\/monk\/features\/metal-strikes?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry class-feature rule elements are preserved for external review. External review required. Resource: omen:\/\/class\/monk\/features\/metal-strikes?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustStrike, AdjustStrike, AdjustStrike, AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "CoRfFkisEsHE1e43",
       "mechanicsScope" : "mixed",
       "name" : "Metal Strikes",
@@ -5030,7 +5030,7 @@
       ],
       "sourceHash" : "2a79df4bf0ed832236b138c15498ef9a0ff73688b5e06d60ecc7093ccd02877e",
       "sourcePath" : "packs\/pf2e\/class-features\/metal-strikes.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/investigator\/features\/methodology?source=paizo-pathfinder-player-core-2",
@@ -5059,9 +5059,9 @@
     {
       "canonicalPath" : "omen:\/\/class\/barbarian\/features\/mighty-rage?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry class-feature rule elements are preserved for external review. External review required. Resource: omen:\/\/class\/barbarian\/features\/mighty-rage?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, AdjustModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "88Q33X2a0iYPkbzd",
       "mechanicsScope" : "mixed",
       "name" : "Mighty Rage",
@@ -5079,7 +5079,7 @@
       ],
       "sourceHash" : "86943519194fd91ee002aaa4548c9fd97cace0d8251709a6ed13107f90796130",
       "sourcePath" : "packs\/pf2e\/class-features\/mighty-rage.json",
-      "unsupportedReason" : "Foundry class-feature rule elements are preserved for external review. External review required. Resource: omen:\/\/class\/barbarian\/features\/mighty-rage?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, AdjustModifier]."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/monk\/features\/monk-expertise?source=paizo-pathfinder-player-core-2",
@@ -5179,9 +5179,9 @@
     {
       "canonicalPath" : "omen:\/\/class\/monk\/features\/mystic-strikes?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry class-feature rule elements are preserved for external review. External review required. Resource: omen:\/\/class\/monk\/features\/mystic-strikes?source=paizo-pathfinder-player-core-2. Foundry keys: [ItemAlteration, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "D2AE8RfMlZ3D1FuV",
       "mechanicsScope" : "mixed",
       "name" : "Mystic Strikes",
@@ -5199,7 +5199,7 @@
       ],
       "sourceHash" : "80730f447528d8a3efc8dd02a9081f35e552acfd3395abd7931cdd99daea7da7",
       "sourcePath" : "packs\/pf2e\/class-features\/mystic-strikes.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/champion\/causes\/obedience?source=paizo-pathfinder-player-core-2",
@@ -5255,7 +5255,7 @@
       ],
       "conversionOutcome" : "converted",
       "foundryID" : "Jtn7IugykXDlIoZq",
-      "mechanicsScope" : "builder",
+      "mechanicsScope" : "mixed",
       "name" : "Opportune Riposte",
       "prerequisiteShapes" : [
 
@@ -5269,7 +5269,8 @@
         "GrantItem"
       ],
       "sourceHash" : "94078db3c4869cfbd6578ab3770011163da73cd745f615fd9b93dbc1fe92baee",
-      "sourcePath" : "packs\/pf2e\/class-features\/opportune-riposte.json"
+      "sourcePath" : "packs\/pf2e\/class-features\/opportune-riposte.json",
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/oracle\/features\/oracle-spellcasting?source=paizo-pathfinder-player-core-2",
@@ -5490,9 +5491,9 @@
     {
       "canonicalPath" : "omen:\/\/class\/swashbuckler\/features\/precise-strike?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry class-feature rule elements are preserved for external review. External review required. Resource: omen:\/\/class\/swashbuckler\/features\/precise-strike?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, FlatModifier, DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "RQH6vigvhmiYKKjg",
       "mechanicsScope" : "mixed",
       "name" : "Precise Strike",
@@ -5511,7 +5512,7 @@
       ],
       "sourceHash" : "2ddb134f96c721146e1cc79bd2883d9cb31417dc6a7bc22fdd877d8b450ae533",
       "sourcePath" : "packs\/pf2e\/class-features\/precise-strike.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "It holds only bookkeeping the builder does not need. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/oracle\/features\/premonition-reflexes?source=paizo-pathfinder-player-core-2",
@@ -5655,7 +5656,7 @@
       ],
       "sourceHash" : "2c3037089ec2a2a665e3c1a3a91d7cd0030ab8e573dc21e0c0c6d062526a6ffa",
       "sourcePath" : "packs\/pf2e\/class-features\/rascal.json",
-      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/champion\/causes\/redemption?source=paizo-pathfinder-player-core-2",
@@ -5999,9 +6000,9 @@
     {
       "canonicalPath" : "omen:\/\/class\/investigator\/features\/strategic-strike?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry class-feature rule elements are preserved for external review. External review required. Resource: omen:\/\/class\/investigator\/features\/strategic-strike?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "2Fe4YZCvAr9Yf6w7",
       "mechanicsScope" : "mixed",
       "name" : "Strategic Strike",
@@ -6018,7 +6019,7 @@
       ],
       "sourceHash" : "2768703db6983384b50b0758a3da0435e2819930d4ad6ca84f09124c9a8e4428",
       "sourcePath" : "packs\/pf2e\/class-features\/strategic-strike.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/swashbuckler\/features\/stylish-combatant?source=paizo-pathfinder-player-core-2",
@@ -6099,7 +6100,7 @@
       ],
       "sourceHash" : "355133f0a52e35ad0468bb229f29bfac2c6a844a9fe677cf4efec341b485e80b",
       "sourcePath" : "packs\/pf2e\/class-features\/superstition-instinct.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another modifier is not applied yet. Its choice is not offered yet. Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to another modifier is not applied yet. Its choice is not offered yet. Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/class\/swashbuckler\/features\/swashbuckler-expertise?source=paizo-pathfinder-player-core-2",
@@ -6328,7 +6329,7 @@
       ],
       "sourceHash" : "ac9ad54db8a915944ba20b61715e4050e7b8eee0b045e485a56b3a173c905c2e",
       "sourcePath" : "packs\/pf2e\/class-features\/wit.json",
-      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/condition\/cursebound?source=paizo-pathfinder-player-core-2",
@@ -6652,12 +6653,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/climbing-claws?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/climbing-claws?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "TlMSleKR8Bh0EuSW",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Climbing Claws",
       "prerequisiteShapes" : [
 
@@ -6671,8 +6672,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "076e37b40c256843ed1b4a7210dac801d1f29680fc683a52ffaa292ccfda1387",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/catfolk\/level-5\/climbing-claws.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/catfolk\/level-5\/climbing-claws.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/graceful-guidance?source=paizo-pathfinder-player-core-2",
@@ -6822,9 +6822,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/aggravating-scratch?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/aggravating-scratch?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "G6rCbMrHacYWNu1K",
       "mechanicsScope" : "mixed",
@@ -6842,7 +6842,7 @@
       ],
       "sourceHash" : "2e9fc4213b777b5c121f827980a60d79e085aa361083f794af670ce5f19547e3",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/catfolk\/level-9\/aggravating-scratch.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/evade-doom?source=paizo-pathfinder-player-core-2",
@@ -7162,7 +7162,7 @@
       ],
       "sourceHash" : "410a54cfb9651884d99acfb30d287a4f384c6cdc2e8d1d11428179c58e4ecfa0",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/hobgoblin\/level-1\/stone-face.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/vigorous-health?source=paizo-pathfinder-player-core-2",
@@ -7215,7 +7215,8 @@
     {
       "canonicalPath" : "omen:\/\/feat\/war-conditioning?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/war-conditioning?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, BaseSpeed]."
+        "Its Speed is in a movement the player chooses, which no rule asks.",
+        "Foundry rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/war-conditioning?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, BaseSpeed]."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "ancestry",
@@ -7236,7 +7237,7 @@
       ],
       "sourceHash" : "dd517bce05a50d0f243faffada9fb9750dfb5953cf27bcd15406ef7998ffcc32",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/hobgoblin\/level-13\/war-conditioning.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. Its choice is not offered yet."
+      "unsupportedReason" : "Its Speed is in a movement the player chooses, which no rule asks. Its change to movement is not applied yet. Its choice is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/cantorian-restoration?source=paizo-pathfinder-player-core-2",
@@ -7338,9 +7339,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/recognize-ambush?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/recognize-ambush?source=paizo-pathfinder-player-core-2. Foundry keys: [Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "OOBSMpdAfYuiiQqo",
       "mechanicsScope" : "mixed",
@@ -7357,8 +7358,7 @@
         "Note"
       ],
       "sourceHash" : "4f9ed1743305499091a320133ba8516fa263390d08359b03787a4d47a2ed09e8",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/hobgoblin\/level-5\/recognize-ambush.json",
-      "unsupportedReason" : "Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/hobgoblin\/level-5\/recognize-ambush.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/runtsage?source=paizo-pathfinder-player-core-2",
@@ -7511,9 +7511,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/crunch?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/crunch?source=paizo-pathfinder-player-core-2. Foundry keys: [ItemAlteration, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "aOhZUMCn0o2ZMkdW",
       "mechanicsScope" : "mixed",
@@ -7532,7 +7532,7 @@
       ],
       "sourceHash" : "84840c50df8da315c80153677ca1397722fc51286347df5f518ee9283420ad96",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kholo\/level-1\/crunch.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/hyena-familiar?source=paizo-pathfinder-player-core-2",
@@ -7640,12 +7640,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/sensitive-nose?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/sensitive-nose?source=paizo-pathfinder-player-core-2. Foundry keys: [Sense]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "jOwZMv5jtwdKSfLS",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Sensitive Nose",
       "prerequisiteShapes" : [
 
@@ -7659,8 +7659,7 @@
         "Sense"
       ],
       "sourceHash" : "dea2c5443be026411d89467ae45347a4ca326f0495f3bbe00c195eacda72a03d",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kholo\/level-1\/sensitive-nose.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kholo\/level-1\/sensitive-nose.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/ancestors-rage?source=paizo-pathfinder-player-core-2",
@@ -8107,8 +8106,7 @@
         "AdjustDegreeOfSuccess"
       ],
       "sourceHash" : "bc902122bc07fa64715ca3ef8afa9e0b2e940a657d47ebee388ebe1ab2cddea0",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kobold\/level-1\/dragons-presence.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kobold\/level-1\/dragons-presence.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/kobold-lore?source=paizo-pathfinder-player-core-2",
@@ -8167,9 +8165,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/scamper?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/scamper?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "xzpMQ2ZRn9zC23XG",
       "mechanicsScope" : "mixed",
@@ -8188,8 +8186,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "b2bbe27b85ac945dde52026127b2cfb8ef365c1b9a62b4f9e3ff5fd7023f4e48",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kobold\/level-1\/scamper.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to movement is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kobold\/level-1\/scamper.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/snare-setter?source=paizo-pathfinder-player-core-2",
@@ -8416,9 +8413,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/between-the-scales?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/between-the-scales?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "zL6zUrt44tZYyuh4",
       "mechanicsScope" : "mixed",
@@ -8436,7 +8433,7 @@
       ],
       "sourceHash" : "bf621f8e82acd7e43f358355c7a591b84a0ff47fccc9ca521572f689428484a8",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kobold\/level-9\/between-the-scales.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/briar-battler?source=paizo-pathfinder-player-core-2",
@@ -8537,12 +8534,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/winglet-flight?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/winglet-flight?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "kBnsLuh3eBLjwGpN",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Winglet Flight",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -8557,8 +8554,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "d764f4cc04a784e6030fd3532e2a6364c73f31f94b57abe72619fc687df8d11e",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kobold\/level-9\/winglet-flight.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/kobold\/level-9\/winglet-flight.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/bone-magic?source=paizo-pathfinder-player-core-2",
@@ -8587,9 +8583,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/iruxi-armaments?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/iruxi-armaments?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, ItemAlteration, ItemAlteration, Strike, Strike, CriticalSpecialization]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "VatkAzfBYjA6z6OP",
       "mechanicsScope" : "mixed",
@@ -8612,7 +8608,7 @@
       ],
       "sourceHash" : "b8147ae81afb5edeb9d60f80f15cc334383acfc183152051fc7b334a3834e54c",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-1\/iruxi-armaments.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its choice is not offered yet. Its unarmed attack is not added yet."
+      "unsupportedReason" : "Its choice is not offered yet. Its unarmed attack is not added yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/lizardfolk-lore?source=paizo-pathfinder-player-core-2",
@@ -8744,9 +8740,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/iruxi-spirit-strike?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/iruxi-spirit-strike?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "pivX2SxPQjKDyvHU",
       "mechanicsScope" : "mixed",
@@ -8764,7 +8760,7 @@
       ],
       "sourceHash" : "3ff35150a20ae9a5a954ee49862ef98728de1671f19ebf6528ada265b16f6408",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-13\/iruxi-spirit-strike.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/primal-rampage?source=paizo-pathfinder-player-core-2",
@@ -8844,7 +8840,7 @@
       ],
       "sourceHash" : "35427f805a14395d5736279bd1ba89585930e33807163f8b716f9cd3f39a47e4",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-17\/scion-transformation.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to the character's Strikes is not applied yet. Its change to the character's defenses is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to the character's Strikes is not applied yet. Its change to the character's size is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/envenom-fangs?source=paizo-pathfinder-player-core-2",
@@ -8897,11 +8893,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/geckos-grip?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Grants Combat Climber at position 1 only under a condition (not heritage:cliffscale-lizardfolk), which is not applied.",
-        "AdjustDegreeOfSuccess at position 2: this element is not applied.",
-        "BaseSpeed at position 3: this element is not applied."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "kGed3uQbZ7x5SBB8",
       "mechanicsScope" : "mixed",
@@ -8921,7 +8915,7 @@
       ],
       "sourceHash" : "6ddd677255b5cfb41d580d1154a8375fe442757833167232974cb19b125f3ffa",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-5\/geckos-grip.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. The features it grants are not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "The features it grants are not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/shed-tail?source=paizo-pathfinder-player-core-2",
@@ -8950,12 +8944,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/swift-swimmer?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/swift-swimmer?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed, BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "iliy0ONIb8Hw6muA",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Swift Swimmer",
       "prerequisiteShapes" : [
 
@@ -8970,8 +8964,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "6cba48166c8216111b7f144714ac36038d8952aaa90c91086fb189a4ee58a7e4",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-5\/swift-swimmer.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-5\/swift-swimmer.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/dangle?source=paizo-pathfinder-player-core-2",
@@ -9196,9 +9189,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/vicious-incisors?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/vicious-incisors?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "QHwajD5n8P3oS9Wb",
       "mechanicsScope" : "mixed",
@@ -9217,7 +9210,7 @@
       ],
       "sourceHash" : "c2082fa0aa0f764d496245d6a02a2c6a9d4fd6c5c958f9583e06572da36bd14a",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/ratfolk\/level-1\/vicious-incisors.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/warren-navigator?source=paizo-pathfinder-player-core-2",
@@ -9297,12 +9290,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/warren-digger?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/warren-digger?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "8H72RC7QI1i8wjJ1",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Warren Digger",
       "prerequisiteShapes" : [
 
@@ -9316,8 +9309,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "d605488ae41e336f7f27e2c257e8d2de9c052d79550893e6894bab6abbef3573",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/ratfolk\/level-13\/warren-digger.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/ratfolk\/level-13\/warren-digger.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/call-the-swarm?source=paizo-pathfinder-player-core-2",
@@ -9994,12 +9986,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/soaring-flight?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/soaring-flight?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "Tl8yckXeTCHnwrlM",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Soaring Flight",
       "prerequisiteShapes" : [
         "feature-reference"
@@ -10014,8 +10006,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "7be13f5175074e6b8924348dbdb0bcccb76c4620a76426c8da6d42365a0fd207",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/tengu\/level-5\/soaring-flight.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/tengu\/level-5\/soaring-flight.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/tengu-feather-fan?source=paizo-pathfinder-player-core-2",
@@ -10047,12 +10038,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/soaring-form?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/soaring-form?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "WZC2XXQo6Pu2GQeo",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Soaring Form",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -10066,8 +10057,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "663fc7a84d9ffb06e23fb29f13f5484b3027ee4c470fb41c078af974580b0975",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/tengu\/level-9\/soaring-form.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/tengu\/level-9\/soaring-form.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/wind-gods-fan?source=paizo-pathfinder-player-core-2",
@@ -10273,9 +10263,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/envenomed-edge?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/envenomed-edge?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "oaqkhZ6c0Dbk78wi",
       "mechanicsScope" : "mixed",
@@ -10293,7 +10283,7 @@
       ],
       "sourceHash" : "3d41ef346b1c4b704014436f65e90835d9091b9b4ed5c8dd370ad284ffc16616",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/tripkee\/level-13\/envenomed-edge.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/hop-up?source=paizo-pathfinder-player-core-2",
@@ -10394,12 +10384,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/prodigious-climber?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/prodigious-climber?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed, BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "7Te7XHgRjesDKwZn",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Prodigious Climber",
       "prerequisiteShapes" : [
 
@@ -10414,8 +10404,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "aa963950cf612acb4dfd21fb4ba1a85b0a5a1f065959eb2acdd3d2e452f97725",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/tripkee\/level-5\/prodigious-climber.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/tripkee\/level-5\/prodigious-climber.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/tenacious-net?source=paizo-pathfinder-player-core-2",
@@ -10588,9 +10577,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/bloodletting-fangs?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/bloodletting-fangs?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "YDHr12qVA3XRjkLP",
       "mechanicsScope" : "mixed",
@@ -10608,7 +10597,7 @@
       ],
       "sourceHash" : "b46dee58d19a7385ca742cb45da93b3ad278a2337c52b7b8ae043f833c0de50c",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dhampir\/bloodletting-fangs.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/enthralling-allure?source=paizo-pathfinder-player-core-2",
@@ -10808,7 +10797,7 @@
       ],
       "sourceHash" : "b3a19ac483d3074ef97a65b5c6f3a40c042fc9ef23411d139872c08512eccccc",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dhampir\/svetocher.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another modifier is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to another modifier is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/symphony-of-blood?source=paizo-pathfinder-player-core-2",
@@ -10839,9 +10828,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/undead-slayer?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/undead-slayer?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, AdjustModifier, RollOption, RollOption]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "ZOJsLNziWQ7Ri3x9",
       "mechanicsScope" : "mixed",
@@ -10862,7 +10851,7 @@
       ],
       "sourceHash" : "f1507b2f8eb786c7c86ae015f0ae61d310efe22d2dc05db9b014ca9ff7cf9aa2",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dhampir\/undead-slayer.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/vampire-lore?source=paizo-pathfinder-player-core-2",
@@ -10971,9 +10960,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/deadly-aspect?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/deadly-aspect?source=paizo-pathfinder-player-core-2. Foundry keys: [ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "7EbfPEq1Hd2s2wAh",
       "mechanicsScope" : "mixed",
@@ -10991,7 +10980,7 @@
       ],
       "sourceHash" : "509dd08deb2d2e90e92f59e0b6684d6d2c452e71b9824c1a93373aa8f1874f6b",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/deadly-aspect.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/divine-dragonblood?source=paizo-pathfinder-player-core-2",
@@ -11001,7 +10990,7 @@
       "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "axDwTLGN32Qfv0SD",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Divine Dragonblood",
       "prerequisiteShapes" : [
 
@@ -11016,8 +11005,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "863df672e597e20adfa919a985df8fd30aec972ff3f3a0daf3442c7645735b6f",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/divine-dragonblood.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/divine-dragonblood.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-aspect?source=paizo-pathfinder-player-core-2",
@@ -11051,7 +11039,8 @@
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-resistance?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/draconic-resistance?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, ChoiceSet, Resistance, Resistance]."
+        "Its resistance is to a type the player chooses, which is not offered yet.",
+        "Foundry rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/draconic-resistance?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, ChoiceSet, Resistance, Resistance]."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "ancestry",
@@ -11074,17 +11063,17 @@
       ],
       "sourceHash" : "2854a1d1b6be5010ddca7d821906c0159bf057d6a2c15963f934a6f11f87c8bd",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-resistance.json",
-      "unsupportedReason" : "Its choice is not offered yet. Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its resistance is to a type the player chooses, which is not offered yet. Its choice is not offered yet. Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-scent?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/draconic-scent?source=paizo-pathfinder-player-core-2. Foundry keys: [Sense]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "2UKf5IiUbpUbOC9a",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Draconic Scent",
       "prerequisiteShapes" : [
 
@@ -11098,18 +11087,17 @@
         "Sense"
       ],
       "sourceHash" : "64a4e7f47c82109c973a77e76b7202529d714afd94423b2b6577134e2e176224",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-scent.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-scent.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-sight?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/draconic-sight?source=paizo-pathfinder-player-core-2. Foundry keys: [Sense]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "8JyyB66LK0pOpnYv",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Draconic Sight",
       "prerequisiteShapes" : [
 
@@ -11123,8 +11111,7 @@
         "Sense"
       ],
       "sourceHash" : "3d3a09dc11d30ec6a28ad07064bdb6b0a45f90b6df1e176efa4d2a6a44b7902e",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-sight.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-sight.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-veil?source=paizo-pathfinder-player-core-2",
@@ -11182,12 +11169,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/dragons-flight?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/dragons-flight?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "zQgdTW7CPYw8km5F",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Dragon's Flight",
       "prerequisiteShapes" : [
 
@@ -11202,8 +11189,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "d45914594bd184e385bd3dbd415355817bf962b2fbf107e7b0d024e5d79a0aff",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/dragons-flight.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/dragons-flight.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/form-of-the-dragon?source=paizo-pathfinder-player-core-2",
@@ -11382,7 +11368,7 @@
       ],
       "sourceHash" : "912b4fff095a70c1fb26989b6f1eb82a686f3f513ff7a4de003e711ede25d923",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/scaly-hide.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another modifier is not applied yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to another modifier is not applied yet. It holds only bookkeeping the builder does not need."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/traditional-resistances?source=paizo-pathfinder-player-core-2",
@@ -11408,17 +11394,17 @@
       ],
       "sourceHash" : "8bbe6e47b836da59d7e40f5bcebb4078037623c98ddc9f18e486e5f1d2a59f6b",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/traditional-resistances.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another modifier is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to another modifier is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/true-dragons-flight?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/true-dragons-flight?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "jXi4pZiYVakeqEXF",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "True Dragon's Flight",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -11432,8 +11418,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "c0a0e5181b86b91dd38fc0d6ed35b8b9e90efa59139dc7653c04c5d92f172179",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/true-dragons-flight.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/true-dragons-flight.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/wing-buffet?source=paizo-pathfinder-player-core-2",
@@ -11610,14 +11595,14 @@
       ],
       "sourceHash" : "0e832fa37ac80bd8b77b161232f15982eeaa5f0bbd3192bc211bf1de4da5dbcb",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/duskwalker\/duskwalker-weapon-familiarity.json",
-      "unsupportedReason" : "Critical specialization is not applied yet: it can't be limited to the weapons the record names."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/ghost-hunter?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/ghost-hunter?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, AdjustStrike, AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "DGtUIMliflzGXc6E",
       "mechanicsScope" : "mixed",
@@ -11637,7 +11622,7 @@
       ],
       "sourceHash" : "5460258b3c9313e4e964c6aed1c358b11bcf9d113530fe4c2888454505a1be38",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/duskwalker\/ghost-hunter.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/gravesight?source=paizo-pathfinder-player-core-2",
@@ -11690,9 +11675,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/quietus-strikes?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/quietus-strikes?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, FlatModifier, AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "S7z1LbnSRlBep8rO",
       "mechanicsScope" : "mixed",
@@ -11712,14 +11697,14 @@
       ],
       "sourceHash" : "3eed9e3722deca90afcd9ab5e321dd2e6ffe77492f6a543a83e78cd04bce1331",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/duskwalker\/quietus-strikes.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/resist-ruin?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/resist-ruin?source=paizo-pathfinder-player-core-2. Foundry keys: [Resistance, ItemAlteration, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "FqZKSSBU7M4zhsXM",
       "mechanicsScope" : "mixed",
@@ -11739,7 +11724,7 @@
       ],
       "sourceHash" : "f8a7ebf54293b2a499192ab027bd6c0d86139d0ac26a8933abe8f27ebe1e6073",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/duskwalker\/resist-ruin.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet. Its change to another item's text is not applied."
+      "unsupportedReason" : "Its change to another item's text is not applied."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/spirit-soother?source=paizo-pathfinder-player-core-2",
@@ -11870,9 +11855,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/dodge-away?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/dodge-away?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "0qGLCpggCcOVkbtT",
       "mechanicsScope" : "mixed",
@@ -11890,8 +11875,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "71c651147599bc39754e2c294a7063ca4dce06cee904eedfe00ce19499874461",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/acrobat\/level-6\/dodge-away.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/acrobat\/level-6\/dodge-away.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/graceful-leaper?source=paizo-pathfinder-player-core-2",
@@ -12276,7 +12260,7 @@
       ],
       "sourceHash" : "8c04bc44c58e4287dcdc8f0a01d7aee8ddc235506a9df2e003ee3dfe91f6c4f8",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/archer\/level-2\/archer-dedication.json",
-      "unsupportedReason" : "Critical specialization is not applied yet: it can't be limited to the weapons the record names."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/quick-shot?source=paizo-pathfinder-player-core-2",
@@ -12331,9 +12315,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/crossbow-terror?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/crossbow-terror?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, RollOption]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "Xhphe5Lsa4kuU4RG",
       "mechanicsScope" : "mixed",
@@ -12351,15 +12335,14 @@
         "RollOption"
       ],
       "sourceHash" : "14d6058f5597ebdbe900560c18979df345db814ad72d055bd9ed9e22b928cc1c",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/archer\/level-6\/crossbow-terror.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/archer\/level-6\/crossbow-terror.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/archers-aim?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/archers-aim?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier, Note, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "egmb8p3ZIYtx5aQN",
       "mechanicsScope" : "mixed",
@@ -12380,14 +12363,14 @@
       ],
       "sourceHash" : "73af888e4c977ac635275620b58afb5291e51df896687e2882d32ee590a0e1fa",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/archer\/level-8\/archers-aim.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/angel-of-death?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/angel-of-death?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "3poGYUYCBTmbeCUs",
       "mechanicsScope" : "mixed",
@@ -12405,7 +12388,7 @@
       ],
       "sourceHash" : "37d860ff947d78bff04e8fbd085432e2967cc60e3caa92b77ce8174c4b637d20",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/assassin\/level-10\/angel-of-death.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/assassinate?source=paizo-pathfinder-player-core-2",
@@ -12462,9 +12445,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/expert-backstabber?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/expert-backstabber?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "OQAo3Us0ODGYdNNn",
       "mechanicsScope" : "mixed",
@@ -12482,7 +12465,7 @@
       ],
       "sourceHash" : "dda389e3e466f54b338f3a3b331025cf3153752aadd9304bd650b33f7b6eef0b",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/assassin\/level-4\/expert-backstabber.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/surprise-attack?source=paizo-pathfinder-player-core-2",
@@ -12570,12 +12553,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/barbarian-resiliency?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/barbarian-resiliency?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "HpT1GlcnkCBnDnVF",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Barbarian Resiliency",
       "prerequisiteShapes" : [
         "resource-reference",
@@ -12592,8 +12575,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "a9c4fda9736579a2c0106203549bdedc422b5295c55b81cb87ac0ce29b821ba7",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/barbarian\/level-4\/barbarian-resiliency.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. It holds only bookkeeping the builder does not need."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/barbarian\/level-4\/barbarian-resiliency.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-fury?source=paizo-pathfinder-player-core-2",
@@ -13123,9 +13105,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/bounty-hunter-dedication?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/bounty-hunter-dedication?source=paizo-pathfinder-player-core-2. Foundry keys: [GrantItem, GrantItem, RollOption, FlatModifier, ActiveEffectLike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "tKaesXO5nlZ2sspx",
       "mechanicsScope" : "mixed",
@@ -13147,7 +13129,7 @@
       ],
       "sourceHash" : "491f1141e7226b6982cad4587610c5deca45d781e10614fdd91b7f99ae2c57ab",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/bounty-hunter\/bounty-hunter-dedication.json",
-      "unsupportedReason" : "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/bounty-hunter-dedication?source=paizo-pathfinder-player-core-2. Foundry keys: [GrantItem, GrantItem, RollOption, FlatModifier, ActiveEffectLike]."
+      "unsupportedReason" : "Its skill training is not applied yet. The features it grants are not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/opportunistic-grapple?source=paizo-pathfinder-player-core-2",
@@ -13221,7 +13203,7 @@
       ],
       "sourceHash" : "a620d09922784567b089417b2e30846d2a4463d315b8005615aa1e686274509f",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/bounty-hunter\/tools-of-the-trade.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/trampling-charge?source=paizo-pathfinder-player-core-2",
@@ -13704,12 +13686,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/champion-resiliency?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/champion-resiliency?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "qWb5IxkBUpJWKSLf",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Champion Resiliency",
       "prerequisiteShapes" : [
         "resource-reference",
@@ -13726,8 +13708,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "bc43d70100264ce51adce14dd0800a4ac865b22a835200891276df6b686a2b1d",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/champion\/champion-resiliency.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. It holds only bookkeeping the builder does not need."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/champion\/champion-resiliency.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/champions-reaction?source=paizo-pathfinder-player-core-2",
@@ -14233,9 +14214,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/enchanting-shot?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/enchanting-shot?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "m8iP2OCzit9WUrMD",
       "mechanicsScope" : "mixed",
@@ -14255,7 +14236,7 @@
       ],
       "sourceHash" : "7a9e9101bc2b99662941c5a45bcfff9fb85e9560c989dccb3a5b8378604dd1a7",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/eldritch-archer\/enchanting-shot.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/expert-eldritch-archer-spellcasting?source=paizo-pathfinder-player-core-2",
@@ -14285,9 +14266,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/fatal-shot?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/fatal-shot?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "6iOLxitjqHujH1Tj",
       "mechanicsScope" : "mixed",
@@ -14307,7 +14288,7 @@
       ],
       "sourceHash" : "e9691071a3a221b8bcc278a5d069a53b37aebb082910c80ac50f02277f6d77b0",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/eldritch-archer\/fatal-shot.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/homing-shot?source=paizo-pathfinder-player-core-2",
@@ -14336,9 +14317,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/incorporeal-shot?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/incorporeal-shot?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "LRSTjjBNNlD0XZX8",
       "mechanicsScope" : "mixed",
@@ -14357,7 +14338,7 @@
       ],
       "sourceHash" : "d28fb0603a827269fa299a00cf00f789c4d30ff8ed5ec8783bad288343a785fb",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/eldritch-archer\/incorporeal-shot.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/magic-ammunition?source=paizo-pathfinder-player-core-2",
@@ -14708,7 +14689,7 @@
       ],
       "sourceHash" : "bc2af81e91b6b4b8d7e23c99cc448e49927750379b7c37a26410571d0178e778",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/gladiator\/performative-weapons-training.json",
-      "unsupportedReason" : "Critical specialization is not applied yet: it can't be limited to the weapons the record names."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/play-to-the-crowd?source=paizo-pathfinder-player-core-2",
@@ -15042,9 +15023,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/analyze-idiolect?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/analyze-idiolect?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, RollOption]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "skill",
       "foundryID" : "TZASOwBqVveGjw77",
       "mechanicsScope" : "mixed",
@@ -15066,8 +15047,7 @@
         "RollOption"
       ],
       "sourceHash" : "0e3f060c6782b4500a08d99e1c98e16ed5642311ea46bce60d221b1492cddc5f",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/linguist\/analyze-idiolect.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/linguist\/analyze-idiolect.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/crude-communication?source=paizo-pathfinder-player-core-2",
@@ -15573,9 +15553,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/grievous-blow?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/grievous-blow?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "C3zKTQecexSbezhT",
       "mechanicsScope" : "mixed",
@@ -15595,14 +15575,14 @@
       ],
       "sourceHash" : "000b8c5406cc5474104872fe16c280e2d8c221d9366b38ad8afb874fbceedb0a",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/martial-artist\/grievous-blow.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/martial-artist-dedication?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/martial-artist-dedication?source=paizo-pathfinder-player-core-2. Foundry keys: [Strike, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "zn7arorE3VJLNYsb",
       "mechanicsScope" : "mixed",
@@ -15621,7 +15601,7 @@
       ],
       "sourceHash" : "c83ba4f89e2ed071a28d3ec013d2ef8c1635861bae855561e709bb525e45084c",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/martial-artist\/martial-artist-dedication.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its unarmed attack is not added yet."
+      "unsupportedReason" : "Its unarmed attack is not added yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/path-of-iron?source=paizo-pathfinder-player-core-2",
@@ -15985,12 +15965,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/monk-moves?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/monk-moves?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "TGFbFyv0AUi5gAGO",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Monk Moves",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -16005,18 +15985,17 @@
         "FlatModifier"
       ],
       "sourceHash" : "d989ce510bda0d877d26aa690c63a25edf07c688be677e26538004d79f9d1ed4",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/monk\/monk-moves.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. It holds only bookkeeping the builder does not need."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/monk\/monk-moves.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/monk-resiliency?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/monk-resiliency?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "nc5G99d20PI9JKCK",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Monk Resiliency",
       "prerequisiteShapes" : [
         "resource-reference",
@@ -16033,8 +16012,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "c463994f36a31da40d93c70459488fb0f54925c8f2117fe5b2ec7170c77ab447",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/monk\/monk-resiliency.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. It holds only bookkeeping the builder does not need."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/monk\/monk-resiliency.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/monks-flurry?source=paizo-pathfinder-player-core-2",
@@ -16342,14 +16320,14 @@
       ],
       "sourceHash" : "8bc1fd4dd6562ff9b1627e51e578c3955c2d7c98502a08e4e062978bb9687d26",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/pirate\/level-4\/pirate-combat-training.json",
-      "unsupportedReason" : "Critical specialization is not applied yet: it can't be limited to the weapons the record names."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/rope-runner?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/rope-runner?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, BaseSpeed, AdjustDegreeOfSuccess]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "skill",
       "foundryID" : "wpqKltAoJjRQgWow",
       "mechanicsScope" : "mixed",
@@ -16373,7 +16351,7 @@
       ],
       "sourceHash" : "3453b93df75ee120b70c80901707e86e2291c88a3ba74547857436c8383fb94d",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/pirate\/level-4\/rope-runner.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/walk-the-plank?source=paizo-pathfinder-player-core-2",
@@ -16793,9 +16771,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/scouts-speed?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/scouts-speed?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, AdjustModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "elbj75qsUerbM725",
       "mechanicsScope" : "mixed",
@@ -16814,7 +16792,7 @@
       ],
       "sourceHash" : "a984603bfbd50bb01b19e32d79b5b69b61fcc33c496d0ff630dd5bfbd290ebf0",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/scout\/scouts-speed.json",
-      "unsupportedReason" : "Its change to another modifier is not applied yet. Its change to movement is not applied yet."
+      "unsupportedReason" : "Its change to another modifier is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/terrain-scout?source=paizo-pathfinder-player-core-2",
@@ -17068,7 +17046,8 @@
     {
       "canonicalPath" : "omen:\/\/feat\/armor-specialist?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/armor-specialist?source=paizo-pathfinder-player-core-2. Foundry keys: [Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance]."
+        "Its resistance depends on the armor worn, which is not applied yet.",
+        "Foundry rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/armor-specialist?source=paizo-pathfinder-player-core-2. Foundry keys: [Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance, Resistance]."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -17097,7 +17076,7 @@
       ],
       "sourceHash" : "e5eeeeb37bf568b02dba029550f1634cc567f8c64d198c7301a39cc6c082169d",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/sentinel\/armor-specialist.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "unsupportedReason" : "Its resistance depends on the armor worn, which is not applied yet. Its sense, resistance or immunity is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/armored-rebuff?source=paizo-pathfinder-player-core-2",
@@ -17664,9 +17643,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/swashbucklers-speed?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/swashbucklers-speed?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "RU86cGTryRAdaEqx",
       "mechanicsScope" : "mixed",
@@ -17684,8 +17663,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "9dc1d30121efb68571cdc8efa32f2b61d25a9b60c76ce42e9f244110226fcc92",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/swashbuckler\/swashbucklers-speed.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/swashbuckler\/swashbucklers-speed.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/deeper-dabbler?source=paizo-pathfinder-player-core-2",
@@ -18164,14 +18142,14 @@
       ],
       "sourceHash" : "8644a7a6223c40969ecd7ff3d9168934fd3f591c4d826f14fe87aacea17669eb",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/viking\/viking-weapon-familiarity.json",
-      "unsupportedReason" : "Critical specialization is not applied yet: it can't be limited to the weapons the record names."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/improvised-critical?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/improvised-critical?source=paizo-pathfinder-player-core-2. Foundry keys: [CriticalSpecialization]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "YDpSnLmnSLsItP45",
       "mechanicsScope" : "mixed",
@@ -18189,7 +18167,7 @@
       ],
       "sourceHash" : "71b5dafaab17162c64279cefec9a232cf126073a17865a9d7837d8f6c3a23adb",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/weapon-improviser\/improvised-critical.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/improvised-pummel?source=paizo-pathfinder-player-core-2",
@@ -18315,9 +18293,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/aerial-piledriver?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/aerial-piledriver?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice, Note, Note, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "UEqntGzFrFA7ncUO",
       "mechanicsScope" : "mixed",
@@ -18339,7 +18317,7 @@
       ],
       "sourceHash" : "2a7768e391e981981ac34f63120301d299341fe9d115e8f3f5f89a2f04b40046",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/wrestler\/aerial-piledriver.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/clinch-strike?source=paizo-pathfinder-player-core-2",
@@ -18515,9 +18493,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/strangle?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/strangle?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "lMA3F9SGzGV79P5C",
       "mechanicsScope" : "mixed",
@@ -18536,7 +18514,7 @@
       ],
       "sourceHash" : "715b3397636d1afc115706508dc8164a9d855ff652c7f7b32ac06d88b0e3c404",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/wrestler\/strangle.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/submission-hold?source=paizo-pathfinder-player-core-2",
@@ -18568,9 +18546,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/suplex?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/suplex?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, Note, DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "9yko78REsaw7i2gr",
       "mechanicsScope" : "mixed",
@@ -18590,7 +18568,7 @@
       ],
       "sourceHash" : "81a931e4145b137f3813c851ed51c5019ee3879d00c4ac8f1ed870b8869399bd",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/wrestler\/suplex.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/wrestler-dedication?source=paizo-pathfinder-player-core-2",
@@ -18617,7 +18595,7 @@
       ],
       "sourceHash" : "77791a64bd73f076ef105d05780fa01b41f1d6f7c04a6828d3cd3a319f04c039",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/wrestler\/wrestler-dedication.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/alchemical-assessment?source=paizo-pathfinder-player-core-2",
@@ -18698,9 +18676,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/far-lobber?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/far-lobber?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "BJHsCiBLdjgJo6zM",
       "mechanicsScope" : "mixed",
@@ -18718,7 +18696,7 @@
       ],
       "sourceHash" : "845b1d493f85d0c0b112ac96d2218aaa55958d3486dfa1ed477b9485bbcbd165",
       "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-1\/far-lobber.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/quick-bomber?source=paizo-pathfinder-player-core-2",
@@ -18796,9 +18774,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/expanded-splash?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/expanded-splash?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "gyVcJfZTmBytLsXq",
       "mechanicsScope" : "mixed",
@@ -18818,14 +18796,14 @@
       ],
       "sourceHash" : "d3e5d59c9945194a84e262798144e14465ac7eb2028c8debf06bcda930f88cd2",
       "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-10\/expanded-splash.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/greater-debilitating-bomb?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/greater-debilitating-bomb?source=paizo-pathfinder-player-core-2. Foundry keys: [Note, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "Cn4w9U7uk5m1bb2S",
       "mechanicsScope" : "mixed",
@@ -18844,7 +18822,7 @@
       ],
       "sourceHash" : "4fe9b17e519b88eeb0dc5482d07787d5e693180ff22b92f8932e75e94a6a3035",
       "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-10\/greater-debilitating-bomb.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/unstable-concoction?source=paizo-pathfinder-player-core-2",
@@ -18922,9 +18900,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/uncanny-bombs?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/uncanny-bombs?source=paizo-pathfinder-player-core-2. Foundry keys: [AdjustStrike, Note, EphemeralEffect]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "9Ht1eyBHsB1swpeE",
       "mechanicsScope" : "mixed",
@@ -18944,7 +18922,7 @@
       ],
       "sourceHash" : "f66780e7a14966b81d453022eb7bffa262ee7e938e11ae1b0894f295267b265b",
       "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-12\/uncanny-bombs.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/double-poison?source=paizo-pathfinder-player-core-2",
@@ -18997,9 +18975,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/true-debilitating-bomb?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/true-debilitating-bomb?source=paizo-pathfinder-player-core-2. Foundry keys: [Note, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "2HMvAB6mIVwvwtjT",
       "mechanicsScope" : "mixed",
@@ -19018,7 +18996,7 @@
       ],
       "sourceHash" : "d5e7bc283eefa72d8aa41311f00dbd4f1fc419ad9239de86d0735a577508e90d",
       "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-14\/true-debilitating-bomb.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/eternal-elixir?source=paizo-pathfinder-player-core-2",
@@ -19047,9 +19025,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/exploitive-bomb?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/exploitive-bomb?source=paizo-pathfinder-player-core-2. Foundry keys: [Note, RollOption]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "hr9maYUbtrNxpBPw",
       "mechanicsScope" : "mixed",
@@ -19265,9 +19243,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/smoke-bomb?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/smoke-bomb?source=paizo-pathfinder-player-core-2. Foundry keys: [Note, RollOption]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "ODnXQHvFoK7tIVpu",
       "mechanicsScope" : "mixed",
@@ -19285,8 +19263,7 @@
         "RollOption"
       ],
       "sourceHash" : "a8dbef014b9bcab08cf51f0aa35ec6e8413eb10cbe06ff7850a7c5e394452a70",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-2\/smoke-bomb.json",
-      "unsupportedReason" : "Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-2\/smoke-bomb.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/alchemical-revivification?source=paizo-pathfinder-player-core-2",
@@ -19682,9 +19659,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/mutant-physique?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/mutant-physique?source=paizo-pathfinder-player-core-2. Foundry keys: [ItemAlteration, ItemAlteration, FlatModifier, AdjustModifier, AdjustModifier, AdjustModifier, Resistance]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "gQ2EvesPqLbISLQV",
       "mechanicsScope" : "mixed",
@@ -19708,7 +19685,7 @@
       ],
       "sourceHash" : "0fbd3d3c534208fd31949c04f3a2cffd9c842d5c5b4940936d53720fc9e8b66f",
       "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-8\/mutant-physique.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another modifier is not applied yet. Its change to the character's Strikes is not applied yet. Its sense, resistance or immunity is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to another modifier is not applied yet. Its change to the character's Strikes is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/pinpoint-poisoner?source=paizo-pathfinder-player-core-2",
@@ -19737,9 +19714,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/sticky-bomb?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/sticky-bomb?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "zXKfKKOxht0b0XNL",
       "mechanicsScope" : "mixed",
@@ -19758,17 +19735,17 @@
       ],
       "sourceHash" : "a5dbaa6dc492a8528dccfae45a3b1bc1d5c874aa691b8617abe17ed913d97c6f",
       "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-8\/sticky-bomb.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/acute-vision?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/acute-vision?source=paizo-pathfinder-player-core-2. Foundry keys: [Sense]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "YdpGPLN0QFTZIhbk",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Acute Vision",
       "prerequisiteShapes" : [
 
@@ -19782,15 +19759,14 @@
         "Sense"
       ],
       "sourceHash" : "03ff422d54b71b14b5af7b73718cc698a7cce880e0891575929effa2b6451f0e",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-1\/acute-vision.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-1\/acute-vision.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/adrenaline-rush?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/adrenaline-rush?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, ActiveEffectLike, ActiveEffectLike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "BBj6jrdyff7QOgjH",
       "mechanicsScope" : "mixed",
@@ -19810,7 +19786,7 @@
       ],
       "sourceHash" : "53a8fa07e553befecf52497f99d20caefc36ac9769ba54a71b3f2d369f064006",
       "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-1\/adrenaline-rush.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its change to Bulk limits is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-arrogance?source=paizo-pathfinder-player-core-2",
@@ -20587,9 +20563,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/brutal-critical?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/brutal-critical?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice, DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "oNHmfpe8ezZ3eKDD",
       "mechanicsScope" : "mixed",
@@ -20608,14 +20584,14 @@
       ],
       "sourceHash" : "cfcf2e3da83d52af80cba85eb3733025849a5a59964288fe1dda7620c0d9d8c4",
       "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-18\/brutal-critical.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/perfect-clarity?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/perfect-clarity?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "JkQjKyzfhMWLr9Gs",
       "mechanicsScope" : "mixed",
@@ -20633,8 +20609,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "8bb03bbbbb1b984a7aa7b3e74592944879aa66a13e36fa43dfd3c8bb851e9647",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-18\/perfect-clarity.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-18\/perfect-clarity.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/vicious-evisceration?source=paizo-pathfinder-player-core-2",
@@ -20687,12 +20662,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/acute-scent?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/acute-scent?source=paizo-pathfinder-player-core-2. Foundry keys: [Sense]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "dgmjiToPHC3Yf5I3",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Acute Scent",
       "prerequisiteShapes" : [
 
@@ -20706,15 +20681,14 @@
         "Sense"
       ],
       "sourceHash" : "76f76acfcb6bd855ad7c98ce95b017929db10bde0815c325d7d50e18d69a5c6f",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-2\/acute-scent.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-2\/acute-scent.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/bashing-charge?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/bashing-charge?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, RollOption]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "A4sV0cRU9I8ztbHY",
       "mechanicsScope" : "mixed",
@@ -20732,8 +20706,7 @@
         "RollOption"
       ],
       "sourceHash" : "eb99ae0faa4a96f8e5db5dfb0ebd20d5ed16396359a001c7376b2b407e2ad9a7",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-2\/bashing-charge.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-2\/bashing-charge.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/furious-finish?source=paizo-pathfinder-player-core-2",
@@ -20906,9 +20879,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/unstoppable-juggernaut?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/unstoppable-juggernaut?source=paizo-pathfinder-player-core-2. Foundry keys: [Resistance]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "YCqHaqn0TxdiGxiW",
       "mechanicsScope" : "mixed",
@@ -20926,7 +20899,7 @@
       ],
       "sourceHash" : "eb4ea65fe7fbd7ec47319ecad17cae0950535fc8658fead7b5ac4503367c9231",
       "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-20\/unstoppable-juggernaut.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "unsupportedReason" : "Its resistance from raging, 8 + your Constitution modifier, is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/oversized-throw?source=paizo-pathfinder-player-core-2",
@@ -20955,12 +20928,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/raging-athlete?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/raging-athlete?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed, BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "sEWYOllJ6rYoXK4K",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Raging Athlete",
       "prerequisiteShapes" : [
         "skill-proficiency"
@@ -20975,18 +20948,17 @@
         "BaseSpeed"
       ],
       "sourceHash" : "e1d525580da1b6517bfb6298d025e6b057e72bc381045c7a8bcfa1b16bd24e95",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-4\/raging-athlete.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-4\/raging-athlete.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/scars-of-steel?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/scars-of-steel?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, Resistance]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "j8ycCi7ghTtpRjEW",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Scars of Steel",
       "prerequisiteShapes" : [
         "choice"
@@ -21001,8 +20973,7 @@
         "Resistance"
       ],
       "sourceHash" : "bb3f175787d925934db827f0201d374ae2d4b9229dd43ff8bd46edd9b3c96420",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-4\/scars-of-steel.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-4\/scars-of-steel.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/spiritual-guides?source=paizo-pathfinder-player-core-2",
@@ -21105,7 +21076,7 @@
       ],
       "sourceHash" : "8e4f7ca7f0119ffb0c23fc0a7a3963eda12c8b9cd7233536ba96f8ea7ab2cb0e",
       "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-6\/animal-skin.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another modifier is not applied yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to another modifier is not applied yet. It holds only bookkeeping the builder does not need."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/brutal-bully?source=paizo-pathfinder-player-core-2",
@@ -21256,9 +21227,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/nocturnal-senses?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/nocturnal-senses?source=paizo-pathfinder-player-core-2. Foundry keys: [Sense, Sense]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "k0NNa5Ko4XhDdBYB",
       "mechanicsScope" : "mixed",
@@ -21277,7 +21248,7 @@
       ],
       "sourceHash" : "743ff72afd5784d17afee15a29ec7b6595da549e928a07e88dd7240e6b878edb",
       "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-6\/nocturnal-senses.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "unsupportedReason" : "Its scent is for a character who already has it, which a rule that gives it can't test, so it is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/scouring-rage?source=paizo-pathfinder-player-core-2",
@@ -21380,9 +21351,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/follow-up-assault?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/follow-up-assault?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, ItemAlteration, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "9Q0tPGtOawPTU2TU",
       "mechanicsScope" : "mixed",
@@ -21402,7 +21373,7 @@
       ],
       "sourceHash" : "8252d82a790af1b86791e19120c14c12b3cc932e6748da9f59c7b7245eaa3e23",
       "sourcePath" : "packs\/pf2e\/feats\/class\/barbarian\/level-8\/follow-up-assault.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/friendly-toss?source=paizo-pathfinder-player-core-2",
@@ -21997,9 +21968,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/blessed-counterstrike?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/blessed-counterstrike?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "nSDXAFQKjMROlc2l",
       "mechanicsScope" : "mixed",
@@ -22018,7 +21989,7 @@
       ],
       "sourceHash" : "1bb7840d868252234d613d70ae973796eca3f772c9d67c760f2a038e8cbc5135",
       "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-12\/blessed-counterstrike.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/champions-sacrifice?source=paizo-pathfinder-player-core-2",
@@ -22071,9 +22042,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/gruesome-strike?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/gruesome-strike?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, Note, AdjustModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "PEszRpnrcB7VPS9G",
       "mechanicsScope" : "mixed",
@@ -22093,7 +22064,7 @@
       ],
       "sourceHash" : "60b904b5c76834cd2c1e16d6ea0c64388d76c2f9b80091c4889a676c2f63c10b",
       "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-12\/gruesome-strike.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/aura-of-determination?source=paizo-pathfinder-player-core-2",
@@ -22223,9 +22194,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/instrument-of-slaughter?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/instrument-of-slaughter?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "i98NcWSAbWmNmBik",
       "mechanicsScope" : "mixed",
@@ -22243,14 +22214,14 @@
       ],
       "sourceHash" : "04c2a4580d2d52ca55650cb0dbf09057e5950f84513b101bf1b8b3355eca4e1a",
       "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-16\/instrument-of-slaughter.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/instrument-of-zeal?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/instrument-of-zeal?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "h08Vfel5iIAARWdy",
       "mechanicsScope" : "mixed",
@@ -22269,7 +22240,7 @@
       ],
       "sourceHash" : "ebe2b7bc150efb49f870abbd78cf9bdf76a3a68938030ba48950d93a4a75ef9a",
       "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-16\/instrument-of-zeal.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/shield-of-grace?source=paizo-pathfinder-player-core-2",
@@ -22395,9 +22366,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/divine-health?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/divine-health?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, AdjustDegreeOfSuccess, AdjustDegreeOfSuccess, Aura]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "GNMy7NYfF3AQwHpN",
       "mechanicsScope" : "mixed",
@@ -22418,7 +22389,7 @@
       ],
       "sourceHash" : "49cf067eb974e3aace002ee58ab834b89365db66dcd4b92e61e446cc04129ebb",
       "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-2\/divine-health.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text. Its effect is used at the table."
+      "unsupportedReason" : "The +1 bonus allies in your champion's aura get is used at the table. Its +2 status bonus to flat checks to recover from persistent poison damage is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/armament-paragon?source=paizo-pathfinder-player-core-2",
@@ -22447,12 +22418,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/sacred-defender?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/sacred-defender?source=paizo-pathfinder-player-core-2. Foundry keys: [Resistance, Resistance, Resistance]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "JaBDNtNYYDfTGYad",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Sacred Defender",
       "prerequisiteShapes" : [
 
@@ -22468,8 +22439,7 @@
         "Resistance"
       ],
       "sourceHash" : "68afa5ea297636a333bf1f1848c3a3aac1793fed0116c8eb8e510f5f321d4ab8",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-20\/sacred-defender.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-20\/sacred-defender.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/shield-paragon?source=paizo-pathfinder-player-core-2",
@@ -22955,9 +22925,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/takedown-expert?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/takedown-expert?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "yPWNbTqOIKdkwaVq",
       "mechanicsScope" : "mixed",
@@ -22975,7 +22945,7 @@
       ],
       "sourceHash" : "07666444bb9fac1f00b080369174b7c7f0c6c0878550917bd64267198ea772f7",
       "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-1\/takedown-expert.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/thats-odd?source=paizo-pathfinder-player-core-2",
@@ -23054,9 +23024,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/ongoing-strategy?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/ongoing-strategy?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "CAk1NNG4aO0VuHnZ",
       "mechanicsScope" : "mixed",
@@ -23074,7 +23044,7 @@
       ],
       "sourceHash" : "00df8db7e8d1d10ba28219fba20a5c4b1a986693b550fdc5a210c707d44bbff2",
       "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-10\/ongoing-strategy.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/suspect-of-opportunity?source=paizo-pathfinder-player-core-2",
@@ -23414,7 +23384,7 @@
       ],
       "sourceHash" : "21025bd2598d2d789a2ba5516837498e0b597e5f9074bd182c8be76e07cd83c2",
       "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-2\/athletic-strategist.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/certain-stratagem?source=paizo-pathfinder-player-core-2",
@@ -23565,9 +23535,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/just-the-facts?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/just-the-facts?source=paizo-pathfinder-player-core-2. Foundry keys: [GrantItem, ItemAlteration, AdjustDegreeOfSuccess]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "ZfycfbXlPXZlSqw5",
       "mechanicsScope" : "mixed",
@@ -23587,7 +23557,7 @@
       ],
       "sourceHash" : "b08635feb1f76cc9c5c496187f47328936fa5e9613a511fbafb1620b704c86e1",
       "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-20\/just-the-facts.json",
-      "unsupportedReason" : "Its notes on rolls are in its text. Its change to another item's text is not applied."
+      "unsupportedReason" : "Its change to another item's text is not applied."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/alchemical-discoveries?source=paizo-pathfinder-player-core-2",
@@ -23617,9 +23587,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/detectives-readiness?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/detectives-readiness?source=paizo-pathfinder-player-core-2. Foundry keys: [ItemAlteration, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "5cYFHKQK6OZCwavI",
       "mechanicsScope" : "mixed",
@@ -23638,7 +23608,7 @@
       ],
       "sourceHash" : "c1f2e38ce652b114df2d5b8d5eea52f8ac0286c90f11bb68999c82ac710b4d87",
       "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-4\/detectives-readiness.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to another item's text is not applied."
+      "unsupportedReason" : "Its change to another item's text is not applied."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/lie-detector?source=paizo-pathfinder-player-core-2",
@@ -23692,9 +23662,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/scalpels-point?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/scalpels-point?source=paizo-pathfinder-player-core-2. Foundry keys: [DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "hYu6XxARNJYdf8Qe",
       "mechanicsScope" : "mixed",
@@ -23712,7 +23682,7 @@
       ],
       "sourceHash" : "ad2f69584d99f7516a822e71fa1c099cb24dfd15d116e6a97adae64ef36cf14c",
       "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-4\/scalpels-point.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/strategic-assessment?source=paizo-pathfinder-player-core-2",
@@ -24280,12 +24250,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/dodging-roll?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/dodging-roll?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, Resistance, Resistance]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "nBWoZ311FXFJC8Zl",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Dodging Roll",
       "prerequisiteShapes" : [
         "skill-proficiency"
@@ -24301,8 +24271,7 @@
         "Resistance"
       ],
       "sourceHash" : "9315397060375c137d1cb5ded9ade8ef30bc252fa21ff08f431272153c27ec71",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-12\/dodging-roll.json",
-      "unsupportedReason" : "Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-12\/dodging-roll.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/focused-shot?source=paizo-pathfinder-player-core-2",
@@ -24430,9 +24399,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/ironblood-surge?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/ironblood-surge?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier, Resistance]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "IqDbNiwHQH1xApo9",
       "mechanicsScope" : "mixed",
@@ -24451,8 +24420,7 @@
         "Resistance"
       ],
       "sourceHash" : "83907029f3e11319c52cbb4e66c24852ae5647077133dc73cb700556de798c2d",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-14\/ironblood-surge.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-14\/ironblood-surge.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/mountain-quake?source=paizo-pathfinder-player-core-2",
@@ -24477,7 +24445,7 @@
       ],
       "sourceHash" : "7d13fcea9cd2f7eedd1d09e5da26d085f326983eca3e606b83cbb127d6943272",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-14\/mountain-quake.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/peerless-form?source=paizo-pathfinder-player-core-2",
@@ -24699,9 +24667,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/diamond-fists?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/diamond-fists?source=paizo-pathfinder-player-core-2. Foundry keys: [ItemAlteration, ItemAlteration, ItemAlteration, DamageAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "zTulA4sVXwLRm28Z",
       "mechanicsScope" : "mixed",
@@ -24722,7 +24690,7 @@
       ],
       "sourceHash" : "437c0dddbad6ee00c6b1c72f9d857e1fff142d82435e807de4915c79acdbcc97",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-18\/diamond-fists.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/grandmaster-qi-spells?source=paizo-pathfinder-player-core-2",
@@ -24801,9 +24769,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/triangle-shot?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/triangle-shot?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "62glnJI2o0KnHULB",
       "mechanicsScope" : "mixed",
@@ -24824,7 +24792,7 @@
       ],
       "sourceHash" : "8b8c8b6998fb062f28720f6ba6b362f2fd67f1e37bb2ebbd0038dfcd3b443600",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-18\/triangle-shot.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/crushing-grab?source=paizo-pathfinder-player-core-2",
@@ -25101,9 +25069,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/deflect-projectile?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/deflect-projectile?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "sgaqlDFTVC7Ryurt",
       "mechanicsScope" : "mixed",
@@ -25121,8 +25089,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "b1aba329a2aa5af45f09532abb76ffdca047196a23458870f10aecce5fe746d0",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-4\/deflect-projectile.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-4\/deflect-projectile.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/flurry-of-maneuvers?source=paizo-pathfinder-player-core-2",
@@ -25175,9 +25142,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/guarded-movement?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/guarded-movement?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, RollOption]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "fO1vRDEfl9pysfLU",
       "mechanicsScope" : "mixed",
@@ -25195,8 +25162,7 @@
         "RollOption"
       ],
       "sourceHash" : "d5ebf14aa346d7a5b3eabb78a25c2606c5783677afa5fc8a5479a6aa3ea90692",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-4\/guarded-movement.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-4\/guarded-movement.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/harmonize-self?source=paizo-pathfinder-player-core-2",
@@ -25319,14 +25285,14 @@
       ],
       "sourceHash" : "f35c333f91b0fdd1e8104718fc63e59ac79571fc32ce1ccd6f296b31b59771f7",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-6\/crane-flutter.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/dragon-roar?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/dragon-roar?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "SELSj1vvVLx5cP72",
       "mechanicsScope" : "mixed",
@@ -25345,7 +25311,7 @@
       ],
       "sourceHash" : "aa3321a2fa4c80909274a2c001bae513874ffaba008c185ada2cab7a2e391585",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-6\/dragon-roar.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/mountain-stronghold?source=paizo-pathfinder-player-core-2",
@@ -25370,14 +25336,14 @@
       ],
       "sourceHash" : "c6ee816a0349a8a662b921131657c68b013eb2d10da9bd534fecf3e25f48085b",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-6\/mountain-stronghold.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/one-inch-punch?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/one-inch-punch?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice, DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "jaAnxfXVmUQy0IKU",
       "mechanicsScope" : "mixed",
@@ -25397,7 +25363,7 @@
       ],
       "sourceHash" : "624468a962991551c769975fddab6cb1ab89d8420ffbe5ea98a48dc1d6037a5a",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-6\/one-inch-punch.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/return-fire?source=paizo-pathfinder-player-core-2",
@@ -25454,9 +25420,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/tiger-slash?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/tiger-slash?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "6J2ZSGNsXPKPcJGV",
       "mechanicsScope" : "mixed",
@@ -25476,7 +25442,7 @@
       ],
       "sourceHash" : "86c94da17704cec07299d8ed1ad29e7de268139cbb94b9ce47c76a1a04051c05",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-6\/tiger-slash.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/water-step?source=paizo-pathfinder-player-core-2",
@@ -25529,9 +25495,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/wolf-drag?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/wolf-drag?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, ItemAlteration, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "uJpghjJtNbqKUxRd",
       "mechanicsScope" : "mixed",
@@ -25551,7 +25517,7 @@
       ],
       "sourceHash" : "cae0b4e3fe2c6e9a1a38d3548f3314328743d2db3612bc8d377e0a628558050b",
       "sourcePath" : "packs\/pf2e\/feats\/class\/monk\/level-6\/wolf-drag.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/clinging-shadows-initiate?source=paizo-pathfinder-player-core-2",
@@ -25796,12 +25762,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/nudge-the-scales?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/nudge-the-scales?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, ActiveEffectLike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "acJkVtpX2GUvl90E",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Nudge the Scales",
       "prerequisiteShapes" : [
 
@@ -25816,8 +25782,7 @@
         "ActiveEffectLike"
       ],
       "sourceHash" : "1c5991b3a44c531b660ee38844b0fe94a4ec8816673cb64959f3aa432b69d8f7",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/oracle\/level-1\/nudge-the-scales.json",
-      "unsupportedReason" : "Its change to the character's defenses is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/oracle\/level-1\/nudge-the-scales.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/oracular-warning?source=paizo-pathfinder-player-core-2",
@@ -26062,9 +26027,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/lighter-than-air?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/lighter-than-air?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "Vcn3fPJU8HMEkON5",
       "mechanicsScope" : "mixed",
@@ -26083,7 +26048,7 @@
       ],
       "sourceHash" : "ff21471686fb27c371ef04be49691750c3b5a483c4ebe4687e5237cda84b7430",
       "sourcePath" : "packs\/pf2e\/feats\/class\/oracle\/level-14\/lighter-than-air.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "unsupportedReason" : "Its +10-foot status bonus to its fly Speed while cursebound 3 or greater is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/mysterious-repertoire?source=paizo-pathfinder-player-core-2",
@@ -26162,7 +26127,8 @@
     {
       "canonicalPath" : "omen:\/\/feat\/diverse-mystery?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/diverse-mystery?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, RollOption, ItemAlteration, ItemAlteration, GrantItem, Weakness, Weakness, GrantItem, FlatModifier, GrantItem, FlatModifier, FlatModifier, Weakness]."
+        "Its weakness comes with a choice it offers, which is not offered yet.",
+        "Foundry rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/diverse-mystery?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, RollOption, ItemAlteration, ItemAlteration, GrantItem, Weakness, Weakness, GrantItem, FlatModifier, GrantItem, FlatModifier, FlatModifier, Weakness]."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -26194,7 +26160,7 @@
       ],
       "sourceHash" : "33d062bf14020ad321a2e79a6bc1efdac86501123befab4aee83b2bcdeeced41",
       "sourcePath" : "packs\/pf2e\/feats\/class\/oracle\/level-16\/diverse-mystery.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its choice is not offered yet. Its change to the character's defenses is not applied yet. Its notes on rolls are in its text. Its change to another item's text is not applied."
+      "unsupportedReason" : "Its weakness comes with a choice it offers, which is not offered yet. Its bonus or penalty in some situations is not applied yet. Its choice is not offered yet. Its change to the character's defenses is not applied yet. Its notes on rolls are in its text. Its change to another item's text is not applied."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/portentous-spell?source=paizo-pathfinder-player-core-2",
@@ -27345,7 +27311,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/bloodline-mutation?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/bloodline-mutation?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, ChoiceSet, ChoiceSet, ChoiceSet, ChoiceSet, ChoiceSet, Sense, Sense, BaseSpeed, BaseSpeed, ActorTraits, Resistance, ActorTraits, ActorTraits]."
+        "Its fly Speed, swim Speed, low-light vision, darkvision, traits and resistance come with a choice it offers, which is not offered yet.",
+        "The traits it gives are a choice or depend on a situation, which is not applied yet.",
+        "Foundry rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/bloodline-mutation?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, ChoiceSet, ChoiceSet, ChoiceSet, ChoiceSet, ChoiceSet, Sense, Sense, BaseSpeed, BaseSpeed, ActorTraits, Resistance, ActorTraits, ActorTraits]."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -27378,7 +27346,7 @@
       ],
       "sourceHash" : "a5d697bca50b92a177f785b9a9c46f804fbaf2a81080daf1bcb52f72c48879e9",
       "sourcePath" : "packs\/pf2e\/feats\/class\/sorcerer\/level-20\/bloodline-mutation.json",
-      "unsupportedReason" : "Its change to movement is not applied yet. Its choice is not offered yet. Its sense, resistance or immunity is not applied yet. Its change to the character's defenses is not applied yet."
+      "unsupportedReason" : "Its fly Speed, swim Speed, low-light vision, darkvision, traits and resistance come with a choice it offers, which is not offered yet. The traits it gives are a choice or depend on a situation, which is not applied yet. Its change to movement is not applied yet. Its choice is not offered yet. Its sense, resistance or immunity is not applied yet. Its change to the character's defenses is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/bloodline-perfection?source=paizo-pathfinder-player-core-2",
@@ -27812,9 +27780,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/flashy-dodge?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/flashy-dodge?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier, EphemeralEffect]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "TnYHtN9gQASqOnii",
       "mechanicsScope" : "mixed",
@@ -27834,7 +27802,7 @@
       ],
       "sourceHash" : "b39793add55025fa93bda9da18536a066684959a95c5d58a2d096ec802bd2c77",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-1\/flashy-dodge.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/flying-blade?source=paizo-pathfinder-player-core-2",
@@ -28237,9 +28205,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/impossible-riposte?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/impossible-riposte?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, ItemAlteration, DamageAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "HquaVwjOLSPzcJgB",
       "mechanicsScope" : "mixed",
@@ -28259,7 +28227,7 @@
       ],
       "sourceHash" : "67e870d796236113be1bf6eabc0748e0aeb8fc2ec211486a8fce33ab9f7c6627",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-14\/impossible-riposte.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/perfect-finisher?source=paizo-pathfinder-player-core-2",
@@ -28290,9 +28258,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/deadly-grace?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/deadly-grace?source=paizo-pathfinder-player-core-2. Foundry keys: [ItemAlteration, ItemAlteration, DamageAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "e8ChYAaQ9Aa8aZES",
       "mechanicsScope" : "mixed",
@@ -28312,7 +28280,7 @@
       ],
       "sourceHash" : "f2f4ae8f04ee4aaa8c0f41d0132344be272e8836164e9e27a5b58e026e17f73c",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-16\/deadly-grace.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/felicitous-riposte?source=paizo-pathfinder-player-core-2",
@@ -28516,9 +28484,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/charmed-life?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/charmed-life?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier, Note]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "DkoxNw9tsFFXrfJY",
       "mechanicsScope" : "mixed",
@@ -28538,7 +28506,7 @@
       ],
       "sourceHash" : "485532bef763a95f25e72c1732a0e1fae2f732d8affe7b8525de8193634f0e87",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-2\/charmed-life.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/enjoy-the-show?source=paizo-pathfinder-player-core-2",
@@ -28670,9 +28638,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/illimitable-finisher?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/illimitable-finisher?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, AdjustStrike]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "a5jZJPZO8RPQjqE7",
       "mechanicsScope" : "mixed",
@@ -28691,7 +28659,7 @@
       ],
       "sourceHash" : "94bd750e14019cf04efda4e1ea91c4ed357b0738e5f8dbb3a409cefdf5f91175",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-20\/illimitable-finisher.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/inexhaustible-countermoves?source=paizo-pathfinder-player-core-2",
@@ -28794,12 +28762,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/flamboyant-athlete?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/flamboyant-athlete?source=paizo-pathfinder-player-core-2. Foundry keys: [BaseSpeed, BaseSpeed]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "tmGsnUkPv8SIhBgn",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Flamboyant Athlete",
       "prerequisiteShapes" : [
         "skill-proficiency"
@@ -28814,8 +28782,7 @@
         "BaseSpeed"
       ],
       "sourceHash" : "54a0886f98e3b57ab13611e311ca44fdaccd911ac2b77c2093c8e3b6cdc49d66",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-4\/flamboyant-athlete.json",
-      "unsupportedReason" : "Its change to movement is not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-4\/flamboyant-athlete.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/guardians-deflection-swashbuckler?source=paizo-pathfinder-player-core-2",
@@ -28893,9 +28860,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/swaggering-initiative?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/swaggering-initiative?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "NHheDmNB7L4REmlr",
       "mechanicsScope" : "mixed",
@@ -28914,7 +28881,7 @@
       ],
       "sourceHash" : "0e3f0c1e96896dcd848ae425ae9ed0c9b87f47a711bfb4b9db8e0081d5477307",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-4\/swaggering-initiative.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Drawing a weapon with Interact, and gaining panache when you are the first to act, are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/twirling-throw?source=paizo-pathfinder-player-core-2",
@@ -28970,9 +28937,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/combination-finisher?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/combination-finisher?source=paizo-pathfinder-player-core-2. Foundry keys: [MultipleAttackPenalty, MultipleAttackPenalty]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "7KT4huf0iPaBGD7R",
       "mechanicsScope" : "mixed",
@@ -28991,7 +28958,7 @@
       ],
       "sourceHash" : "b338125b9e37ecf865fb94b5e38b3d30402ad8013c1c154027cdf14b151a6244",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-6\/combination-finisher.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/precise-finisher?source=paizo-pathfinder-player-core-2",
@@ -29045,9 +29012,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/bleeding-finisher?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/bleeding-finisher?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, DamageDice]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "dxujgA0NgiEvA0H8",
       "mechanicsScope" : "mixed",
@@ -29066,7 +29033,7 @@
       ],
       "sourceHash" : "4071d2d54df4c1c23c96e86f6ea57b724e10cbd9190ff5773ff4c5646096728e",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-8\/bleeding-finisher.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/distracting-toss?source=paizo-pathfinder-player-core-2",
@@ -29095,9 +29062,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/dual-finisher?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/dual-finisher?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "PP1gfRCc1YwnQGxp",
       "mechanicsScope" : "mixed",
@@ -29117,7 +29084,7 @@
       ],
       "sourceHash" : "a3fe11665ea5a5691ff7c205fbc388e05f4f1acb5c092630929906d61fe796dc",
       "sourcePath" : "packs\/pf2e\/feats\/class\/swashbuckler\/level-8\/dual-finisher.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/flashy-roll?source=paizo-pathfinder-player-core-2",
@@ -29385,7 +29352,7 @@
       ],
       "sourceHash" : "af6e96305e76b5c4d908dcfc103ad24738f9d325cea040b67a1d6d81bcb84fed",
       "sourcePath" : "packs\/pf2e\/feats\/general\/level-3\/robust-health.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/thorough-search?source=paizo-pathfinder-player-core-2",
@@ -29775,7 +29742,7 @@
       ],
       "sourceHash" : "5dbb7065a4e441d2409eaa2b6fd50758fa40b603b77ccf09e263e3fce0030e7e",
       "sourcePath" : "packs\/pf2e\/feats\/skill\/level-1\/pilgrims-token.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. The features it grants are not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. The features it grants are not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/risky-surgery?source=paizo-pathfinder-player-core-2",
@@ -30578,9 +30545,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/tumbling-theft?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/tumbling-theft?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, FlatModifier]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "skill",
       "foundryID" : "80AC6Q1m0eQiE7Et",
       "mechanicsScope" : "mixed",
@@ -30598,8 +30565,7 @@
         "FlatModifier"
       ],
       "sourceHash" : "9b22f0299b9de401c5d0942ebec584c368fd14fae2407dafa59d8ccb10cf681d",
-      "sourcePath" : "packs\/pf2e\/feats\/skill\/level-7\/tumbling-theft.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "sourcePath" : "packs\/pf2e\/feats\/skill\/level-7\/tumbling-theft.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/water-sprint?source=paizo-pathfinder-player-core-2",
@@ -31596,9 +31562,9 @@
       "conversionDiagnostics" : [
 
       ],
-      "conversionOutcome" : "encounter-only",
+      "conversionOutcome" : "converted",
       "foundryID" : "2hLDilS6qbjHxgVS",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Dogtooth Tengu",
       "prerequisiteShapes" : [
 
@@ -31612,7 +31578,8 @@
         "ItemAlteration"
       ],
       "sourceHash" : "0bb0e1eba2b2b31fcc8f723fa0824d9ed97831c930fef7bea3322fcb2bf01780",
-      "sourcePath" : "packs\/pf2e\/heritages\/tengu\/dogtooth-tengu.json"
+      "sourcePath" : "packs\/pf2e\/heritages\/tengu\/dogtooth-tengu.json",
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/ancestry\/tengu\/heritages\/jinxed-tengu?source=paizo-pathfinder-player-core-2",
@@ -31846,7 +31813,7 @@
       ],
       "sourceHash" : "b20c9abd181325ff2a158e7067ee5fffdd7190f13f4407ad54bb6dc6b0f88ffc",
       "sourcePath" : "packs\/pf2e\/heritages\/tripkee\/stickytoe-tripkee.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet."
     },
     {
       "canonicalPath" : "omen:\/\/ancestry\/tripkee\/heritages\/thickskin-tripkee?source=paizo-pathfinder-player-core-2",
@@ -31898,13 +31865,11 @@
     {
       "canonicalPath" : "omen:\/\/versatile-heritage\/dhampir?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "ActiveEffectLike on system.attributes.hp.negativeHealing has no translation.",
-        "A conditional sense isn't translated.",
-        "Resource: omen:\/\/versatile-heritage\/dhampir?source=paizo-pathfinder-player-core-2."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "foundryID" : "UaD5VDoFlILEmbyz",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Dhampir",
       "prerequisiteShapes" : [
 
@@ -31920,8 +31885,7 @@
         "Sense"
       ],
       "sourceHash" : "6ad430479e303f516d8c85e7e82ccc09b7c924cfcbcd213ed562f62fa7beb106",
-      "sourcePath" : "packs\/pf2e\/heritages\/versatile-heritages\/dhampir.json",
-      "unsupportedReason" : "ActiveEffectLike on system.attributes.hp.negativeHealing has no translation. A conditional sense isn't translated. Resource: omen:\/\/versatile-heritage\/dhampir?source=paizo-pathfinder-player-core-2."
+      "sourcePath" : "packs\/pf2e\/heritages\/versatile-heritages\/dhampir.json"
     },
     {
       "canonicalPath" : "omen:\/\/versatile-heritage\/dragonblood?source=paizo-pathfinder-player-core-2",
@@ -32117,7 +32081,7 @@
       ],
       "sourceHash" : "fa91561ad5a2109834830c139ce9f2853833c00b48bb1ea40542cdde99f14848",
       "sourcePath" : "packs\/pf2e\/equipment\/alchemist-goggles-greater.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/item\/alchemist-goggles-major?source=paizo-pathfinder-player-core-2",
@@ -32145,7 +32109,7 @@
       ],
       "sourceHash" : "f4bddbdc97d77801c9f26589fab21c6bc4b612644abf6e597f7c42c10c1e38e6",
       "sourcePath" : "packs\/pf2e\/equipment\/alchemist-goggles-major.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/item\/alchemist-goggles?source=paizo-pathfinder-player-core-2",
@@ -32173,7 +32137,7 @@
       ],
       "sourceHash" : "be7ff1385568452fd362323d47f76ace820843ca9e53b2dc94839f1a61300d3f",
       "sourcePath" : "packs\/pf2e\/equipment\/alchemist-goggles.json",
-      "unsupportedReason" : "A bonus or other change to a statistic that always applies is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its bonus or penalty in some situations is not applied yet. Its change to the character's Strikes is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/item\/antler-arrow?source=paizo-pathfinder-player-core-2",
@@ -34966,7 +34930,7 @@
     {
       "canonicalPath" : "omen:\/\/item\/holy-chain?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry item rule element FlatModifier has no translation. External review required. Resource: omen:\/\/item\/holy-chain?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, FlatModifier, GrantItem].",
+        "Foundry item rule element GrantItem has no translation. External review required. Resource: omen:\/\/item\/holy-chain?source=paizo-pathfinder-player-core-2. Foundry keys: [FlatModifier, FlatModifier, GrantItem].",
         "The item's built-in runes, item bonus, splash damage or apex attribute increase are not modeled."
       ],
       "conversionOutcome" : "unsupported",
@@ -34989,7 +34953,7 @@
       ],
       "sourceHash" : "3b1f48d59bde69027ebd082c22997dd72487288ed34b56b4005bf139ee4be0c0",
       "sourcePath" : "packs\/pf2e\/equipment\/holy-chain.json",
-      "unsupportedReason" : "The item's built-in runes, item bonus, splash damage or apex attribute increase are not modeled. A bonus or other change to a statistic that always applies is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "The item's built-in runes, item bonus, splash damage or apex attribute increase are not modeled. Its bonus or penalty in some situations is not applied yet. Its notes on rolls are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/item\/hunters-bane?source=paizo-pathfinder-player-core-2",
@@ -42815,9 +42779,9 @@
       "skill" : 70
     },
     "byOutcome" : {
-      "converted" : 754,
-      "encounter-only" : 589,
-      "unsupported" : 396
+      "converted" : 868,
+      "encounter-only" : 588,
+      "unsupported" : 283
     },
     "byPrerequisiteShape" : {
       "all-of" : 3,

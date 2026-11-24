@@ -17,11 +17,15 @@ description: 'As kin to dragonkind, you project unflappable confidence \(that co
   a foe of your level or lower, you gain a +1 circumstance bonus to the Intimidation
   check.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet.
 foundryID: SPyvwsiSghySIEw2
 rules:
+- key: intimidation-circumstance-bonus-demoralize-s-level
+  effect: core/add-modifier@2
+  inputs:
+    target: intimidation
+    amount: 1
+    type: circumstance
+    when: Demoralize; the target's level at most your level
 - key: saving-throws-fear-success-note
   effect: core/add-note
   inputs:

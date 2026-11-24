@@ -13,5 +13,13 @@ description: If you trigger a device or set off a trap while disarming it, you g
   a +2 circumstance bonus to your AC or saving throw against the device or trap. This
   applies only to attacks or effects triggered by your failed attempt, not to any
   later ones, such as additional attacks from a complex trap.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: RLBYJiGMVkaGL5w9
+rules:
+- key: armor-class-and-saving-throws-circumstance-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: [armor-class, saving-throws]
+    amount: 2
+    type: circumstance
+    when: trap

@@ -10,7 +10,11 @@ prerequisites:
   has: '@feat.dragons-flight'
 description: Your wings have grown more powerful, capable of keeping you aloft longer.
   You have a fly Speed of 20 feet at all times.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: jXi4pZiYVakeqEXF
+rules:
+- key: fly-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: fly
+    speed: 20

@@ -33,5 +33,13 @@ description: If you are trained in the appropriate skill for the spell's traditi
   a secret Arcana, Nature, Occultism, or Religion check, whichever corresponds to
   the tradition of the spell being cast. If you're not trained in the skill, you can't
   get a result better than failure.
-mechanicsScope: encounter
+mechanicsScope: mixed
 foundryID: MjQyTcV8Jiv1Jtln
+rules:
+- key: armor-class-and-saving-throws-circumstance-bonus
+  effect: core/add-modifier@2
+  inputs:
+    target: [armor-class, saving-throws]
+    amount: 1
+    type: circumstance
+    when: Recognize Spell

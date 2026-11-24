@@ -21,8 +21,12 @@ description: 'You lay a finger on the scales of life and death to heal a creatur
   creatures; if you align yourself with death, you gain the void healing ability,
   and can instead be targeted and healed by void effects and other effects that restore
   Hit Points to undead creatures..'
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its change to the character's defenses is not applied yet. Its
-  notes on rolls are in its text.
+mechanicsScope: builder
 foundryID: acJkVtpX2GUvl90E
+rules:
+- key: void-healing
+  effect: core/add-defense
+  inputs:
+    defense: healing
+    type: void
+    when: 'Nudge the Scales: death'

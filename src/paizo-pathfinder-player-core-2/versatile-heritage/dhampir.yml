@@ -9,21 +9,24 @@ description: You are the scion of a vampire, half living and half undead, gifted
   as if you were undead. You also gain low-light vision, or you gain darkvision if
   your ancestry already has low-light vision. You can select from dhampir feats and
   feats from your ancestry whenever you gain an ancestry feat.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its change to the character's defenses is not applied yet.
+mechanicsScope: builder
 rules:
 - key: grant-heritage-trait
   effect: core/add-trait
   inputs:
     trait: dhampir
     as: ancestry
+- key: void-healing
+  effect: core/add-defense
+  inputs:
+    defense: healing
+    type: void
 - key: low-light-vision
-  effect: core/add-sense@2
+  effect: core/add-sense@3
   inputs:
     sense: low-light-vision
 - key: darkvision
-  effect: core/add-sense@2
+  effect: core/add-sense@3
   prerequisites:
   - hasAncestryVision: low-light-vision
   inputs:

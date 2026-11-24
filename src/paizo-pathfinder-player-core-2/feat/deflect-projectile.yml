@@ -14,7 +14,13 @@ description: You gain a +4 circumstance bonus to AC against the triggering attac
   If the attack misses, you have deflected it. You cannot use this feat to deflect
   unusually massive ranged projectiles \(such as boulders or ballista bolts\).
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
 foundryID: sgaqlDFTVC7Ryurt
+rules:
+- key: armor-class-circumstance-bonus-deflect-projectile
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: 4
+    type: circumstance
+    when: Deflect Projectile; against physical damage; with a ranged weapon; hands
+      free at least 1; not you are off-guard

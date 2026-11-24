@@ -9,6 +9,15 @@ description: Your graceful moves with agile weapons are beyond compare. Your mul
   attack penalty with agile weapons and agile unarmed attacks becomes –3 for your
   second attack and –6 for subsequent attacks \(rather than –4 and –8\).
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: BJKTUGplI9nwhJxg
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: Your multiple attack penalty with agile weapons and agile unarmed attacks
+      becomes –3 for your second attack and –6 for subsequent attacks (rather than
+      –4 and –8).

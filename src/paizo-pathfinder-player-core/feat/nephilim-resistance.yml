@@ -22,7 +22,7 @@ rules:
     type: core/string
     cases: [fire, acid, cold, sonic, electricity]
 - key: chosen-damage-type-resistance
-  effect: core/add-resistance@2
+  effect: core/add-resistance@3
   inputs:
     type: {choice: $.feats.nephilim-resistance.damage-type}
     value: 5

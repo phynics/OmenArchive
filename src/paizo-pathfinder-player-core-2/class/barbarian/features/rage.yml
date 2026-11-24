@@ -19,3 +19,10 @@ rules:
     amount: (subtract 2 (contains $.strike.traits agile))
     type: untyped
     when: raging
+- key: raging-armor-class-penalty
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: -1
+    type: untyped
+    when: raging

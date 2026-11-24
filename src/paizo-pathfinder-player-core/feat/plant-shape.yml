@@ -21,7 +21,13 @@ description: 'You can take the shape of a plant creature. If you don''t have unt
   list, and whenever you''re polymorphed into another shape using untamed form, you
   gain resistance 5 to poison.'
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet. Its battle
-  forms are not applied yet.
+unsupportedCategory: scope
+unsupportedReason: Its battle forms are not applied yet.
 foundryID: I9rSWQyueWHQyNxe
+rules:
+- key: resistance-poison
+  effect: core/add-resistance@3
+  inputs:
+    type: poison
+    value: 5
+    when: untamed form is in effect; plant form is not in effect

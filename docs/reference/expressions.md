@@ -81,6 +81,7 @@ descriptor lists every read it provides under `reads` (`mechanics/me.atkn.omen.p
 | `$.class.<class>.dc` | The class DC of a class the character has |
 | `$.feats.<feat>.class-dc` | The class DC a feat uses |
 | `$.archetype.<archetype>.feat-count` | How many feats the character has from that archetype, dedication included |
+| `$.speed.land` | The character's land Speed in feet |
 | `$.class.hit-points` | The hit points the class record states |
 | `$.ancestry.hit-points` | The hit points the ancestry record states |
 | `$.heritage.hit-points` | The hit points the heritage record states |

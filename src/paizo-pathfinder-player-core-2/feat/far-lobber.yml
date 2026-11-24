@@ -8,6 +8,14 @@ traits:
 description: You've learned how to throw a longer distance. When you throw an alchemical
   bomb, it has a range increment of 30 feet instead of the usual 20 feet.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: BJHsCiBLdjgJo6zM
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: When you throw an alchemical bomb, it has a range increment of 30 feet instead
+      of the usual 20 feet.

@@ -24,7 +24,15 @@ description: Heaving both yourself and your opponent into the air, you bring the
   die, and it has the following additional effects on a success, failure, and critical
   failure.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: UEqntGzFrFA7ncUO
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: This Strike deals 1d6 additional damage per weapon damage die, with the
+      further effects in its text on a success, failure and critical failure.
+    when: Aerial Piledriver

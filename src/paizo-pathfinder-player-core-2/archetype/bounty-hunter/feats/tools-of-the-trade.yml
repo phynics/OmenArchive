@@ -18,8 +18,9 @@ description: 'You''re well-versed in weapons that allow you to bring bounties ba
   In addition, you take no penalty when making a nonlethal attack with a weapon without
   the nonlethal trait.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: mRHkGMLecd5aaj2R
 rules:
 - key: trained
@@ -40,3 +41,10 @@ rules:
     weapons: {type: core/weapon-designation, literal: {kind: specific, name: whip}}
     rank: trained
     selfScaling: true
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: You deal an additional 1d4 precision damage with the bola, sap and whip
+      when you use them to make nonlethal Strikes against your prey while it's off-guard
+      to you.

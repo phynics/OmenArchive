@@ -27,10 +27,10 @@ rules:
     target: medicine
     amount: 2
     type: circumstance
-    when: Treat Wounds; risky surgery
+    when: Treat Wounds; Risky Surgery
 - key: medicine-risky-surgery-treat-wounds-success-note
   effect: core/add-note
   inputs:
     target: medicine
     text: When you roll a success on a Medicine check, the result is one degree better.
-    when: risky surgery; Treat Wounds
+    when: Risky Surgery; Treat Wounds

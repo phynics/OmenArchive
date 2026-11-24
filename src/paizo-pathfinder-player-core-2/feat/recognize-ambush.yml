@@ -11,6 +11,10 @@ action:
 description: Your combat training has honed you to be ready for an attack at all times.
   You Interact to draw a weapon.
 mechanicsScope: mixed
-unsupportedCategory: text
-unsupportedReason: Its notes on rolls are in its text.
 foundryID: OOBSMpdAfYuiiQqo
+rules:
+- key: initiative-note
+  effect: core/add-note
+  inputs:
+    target: initiative
+    text: You Interact to draw a weapon.

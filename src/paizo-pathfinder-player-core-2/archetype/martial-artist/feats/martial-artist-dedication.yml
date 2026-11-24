@@ -11,7 +11,14 @@ description: You have trained to use your fists as deadly weapons and can delive
   becomes 1d6 instead of 1d4. You don't take the –2 circumstance penalty for making
   a lethal attack with your nonlethal unarmed attacks.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its unarmed
-  attack is not added yet.
+unsupportedCategory: benefit
+unsupportedReason: Its unarmed attack is not added yet. Its change to the character's
+  Strikes is a note on their attack or damage rolls; the sheet's numbers don't include
+  it.
 foundryID: zn7arorE3VJLNYsb
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: The damage die for your fist unarmed attacks becomes 1d6 instead of 1d4.

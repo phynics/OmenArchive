@@ -21,9 +21,9 @@ description: 'You''re skilled with flashy weapons and can use them to great effe
   Whenever you get a critical hit with one of these weapons, you get its critical
   specialization effect.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Critical specialization is not applied yet: it can''t be limited
-  to the weapons the record names.'
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: SOG0yVNtiDsaNbIO
 rules:
 - key: trained
@@ -71,3 +71,10 @@ rules:
     weapons: {type: core/weapon-designation, literal: {kind: specific, name: whip}}
     rank: trained
     selfScaling: true
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Whenever you get a critical hit with a bo staff, dueling cape, spiked chain,
+      sword cane, trident, war flail or whip, you get its critical specialization
+      effect.

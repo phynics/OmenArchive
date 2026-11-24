@@ -8,7 +8,12 @@ traits:
 description: Your guard is up, even while moving. You gain a +4 circumstance bonus
   to AC against reactions triggered by your movement.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
 foundryID: fO1vRDEfl9pysfLU
+rules:
+- key: armor-class-circumstance-bonus-movement-triggers
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: 4
+    type: circumstance
+    when: your movement triggers a reaction

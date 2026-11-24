@@ -10,6 +10,16 @@ description: 'You combine a series of attacks with a powerful finishing blow. Yo
   weapon\) if it''s the second attack on your turn, or -8 \(or -6 with an agile weapon\)
   if it''s the third or subsequent attack on your turn, instead of -5 and -10, respectively.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 7KT4huf0iPaBGD7R
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: 'Your finishers'' Strikes have a lower multiple attack penalty: –4 (or –3
+      with an agile weapon) if it''s the second attack on your turn, or –8 (or –6
+      with an agile weapon) if it''s the third or subsequent attack.'
+    when: finisher

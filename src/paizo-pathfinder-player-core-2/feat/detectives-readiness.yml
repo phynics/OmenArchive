@@ -12,7 +12,14 @@ description: When you're on a case, you stay watchful and resolute to avoid tric
   [Clue In](omen://action/clue-in) to assist an ally's saving throw against that creature
   or effect.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its change to another item's text is not applied.
+unsupportedCategory: text
+unsupportedReason: Its change to another item's text is not applied.
 foundryID: 5cYFHKQK6OZCwavI
+rules:
+- key: saving-throws-circumstance-bonus-pursue-lead
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 1
+    type: circumstance
+    when: pursue a lead

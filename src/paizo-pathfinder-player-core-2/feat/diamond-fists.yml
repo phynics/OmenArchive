@@ -10,6 +10,14 @@ description: Your body hardens as you combine your attacks, making your finishin
   Any that already had one or both of these traits increase their weapon damage dice
   by one step.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: zTulA4sVXwLRm28Z
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Your unarmed attacks gain the forceful and deadly d10 traits. Any that already
+      had one or both of these traits increase their weapon damage dice by one step.

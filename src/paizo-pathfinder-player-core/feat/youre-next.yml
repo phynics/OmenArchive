@@ -23,5 +23,15 @@ description: 'Rogue After downing a foe, you menace another. Attempt to [Demoral
   them next. Attempt an Intimidation check with a +2 circumstance bonus to [Demoralize](omen://action/demoralize)
   a single creature that you can see and that can see you. If you''re legendary in
   Intimidation, you can use this as a free action with the same trigger.'
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Its change to another item's text is not applied.
 foundryID: gjec0ts3wkFbjvHN
+rules:
+- key: intimidation-circumstance-bonus-demoralize-re-next
+  effect: core/add-modifier@2
+  inputs:
+    target: intimidation
+    amount: 2
+    type: circumstance
+    when: Demoralize; You're Next

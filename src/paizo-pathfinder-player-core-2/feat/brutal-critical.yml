@@ -10,6 +10,15 @@ description: Your critical hits are particularly devastating. On a critical hit 
   you gain if the weapon is deadly or fatal. The target also takes persistent bleed
   damage equal to two damage dice.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: oNHmfpe8ezZ3eKDD
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: melee-strike-damage
+    text: On a critical hit with a melee Strike, add one extra damage die, in addition
+      to any extra dice from the deadly or fatal trait. The target also takes persistent
+      bleed damage equal to two damage dice.

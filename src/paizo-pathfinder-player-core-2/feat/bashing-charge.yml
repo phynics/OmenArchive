@@ -19,7 +19,12 @@ description: 'You smash, bust, and charge through solid obstacles without hesita
   the obstacle with a +1 circumstance bonus to the roll; on a failure, your movement
   ends at that obstacle.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
 foundryID: A4sV0cRU9I8ztbHY
+rules:
+- key: athletics-circumstance-bonus-bashing-charge
+  effect: core/add-modifier@2
+  inputs:
+    target: athletics
+    amount: 1
+    type: circumstance
+    when: Bashing Charge

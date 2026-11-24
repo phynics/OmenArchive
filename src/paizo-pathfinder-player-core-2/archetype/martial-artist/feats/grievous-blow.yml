@@ -20,7 +20,17 @@ description: 'You know how to deliver focused, powerful blows that bypass your e
   If you are at least 18th level, increase the additional damage to three weapon damage
   dice.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: C3zKTQecexSbezhT
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: If this unarmed melee Strike hits, it deals two additional weapon damage
+      dice (three if you're at least 18th level) and ignores an amount of resistance
+      to physical damage equal to your level. It counts as two attacks for your multiple
+      attack penalty.
+    when: Grievous Blow

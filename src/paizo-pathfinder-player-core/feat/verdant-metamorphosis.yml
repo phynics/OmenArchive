@@ -12,10 +12,14 @@ description: You have turned into a plant version of yourself, gaining the plant
   and losing traits inappropriate for your new form \(typically humanoid\). You also
   gain the [Verdant Rest](omen://action/verdant-rest) action.
 mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its change to the character's defenses is not applied yet.
+unsupportedCategory: text
+unsupportedReason: The traits it takes away are in its text.
 foundryID: orjVLLoziFTmf1mz
 rules:
+- key: trait-plant
+  effect: core/add-trait
+  inputs:
+    trait: plant
 - key: verdant-rest-action
   effect: core/add-action@2
   inputs:

@@ -13,9 +13,9 @@ description: 'You have familiarity with all weapons in the bow and crossbow weap
   If you are at least an expert in the bow or crossbow you are using, you get the
   critical specialization effect of that weapon when you get a critical hit with it.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: 'Critical specialization is not applied yet: it can''t be limited
-  to the weapons the record names.'
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 4QFElZoWjg1X0vsg
 rules:
 - key: martial-weapons-trained
@@ -42,3 +42,9 @@ rules:
     weapons: {category: advanced, group: crossbow}
     rank: trained
     selfScaling: true
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: If you are at least an expert in the bow or crossbow you are using, you
+      get its critical specialization effect when you get a critical hit with it.

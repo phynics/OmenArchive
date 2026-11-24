@@ -2,7 +2,12 @@
 name: natural climber
 description: You gain a +2 circumstance bonus to Athletics checks to Climb.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet.
 foundryID: gZvgt5n5OYO3av2V
+rules:
+- key: athletics-circumstance-bonus-climb
+  effect: core/add-modifier@2
+  inputs:
+    target: athletics
+    amount: 2
+    type: circumstance
+    when: Climb

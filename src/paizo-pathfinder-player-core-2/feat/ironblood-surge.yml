@@ -18,8 +18,18 @@ description: 'You steel yourself, preparing to resist oncoming attacks and using
   to AC until the start of your next turn\) and your resistance from Ironblood Stance
   increases to your Strength modifier \(if it''s higher\) for the same duration.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its sense, resistance or immunity is not applied yet. Its notes on
-  rolls are in its text.
 foundryID: IqDbNiwHQH1xApo9
+rules:
+- key: armor-class-circumstance-bonus-ironblood-surge
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: 1
+    type: circumstance
+    when: Ironblood Surge
+- key: resistance-all-damage
+  effect: core/add-resistance@3
+  inputs:
+    type: all-damage
+    value: $.attributes.str
+    when: Ironblood Surge

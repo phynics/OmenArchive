@@ -18,6 +18,15 @@ description: 'All your Strikes against a creature you have [Marked for Death](om
   or originates from an artifact or a deity. Use the level you were when you killed
   the creature, even if your level is higher at the time the attempt was made.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 3poGYUYCBTmbeCUs
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: All your Strikes against a creature you have Marked for Death have the death
+      trait, causing it to be instantly killed when reduced to 0 Hit Points.
+    when: against your mark

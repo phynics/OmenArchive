@@ -16,5 +16,13 @@ description: Your mysterious steps become even lighter, transcending the mortal 
   Speed.
 mechanicsScope: mixed
 unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+unsupportedReason: Its +10-foot status bonus to its fly Speed while cursebound 3 or
+  greater is not applied yet.
 foundryID: Vcn3fPJU8HMEkON5
+rules:
+- key: fly-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: fly
+    speed: (max 20 $.speed.land)
+    when: you are cursebound at least 1

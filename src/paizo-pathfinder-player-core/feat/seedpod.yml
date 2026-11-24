@@ -11,6 +11,17 @@ description: Your body produces a nearly endless supply of hard seedpods. You ga
   of vegetation that imposes a –10-foot circumstance penalty on the target's Speed
   until the start of your next turn. Seedpods do not add critical specialization effects.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: benefit
+unsupportedReason: Its unarmed attack is not added yet. Its change to the character's
+  Strikes is a note on their attack or damage rolls; the sheet's numbers don't include
+  it.
 foundryID: dWGa6cFSVrASTEfd
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Your seedpod ranged unarmed attack has the manipulate trait. On a critical
+      hit, the seedpod imposes a –10-foot circumstance penalty on the target's Speed
+      until the start of your next turn. Seedpods do not add critical specialization
+      effects.

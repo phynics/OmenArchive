@@ -10,7 +10,8 @@ description: You are friendly, clever, and full of humor, always knowing just wh
 mechanicsScope: mixed
 unsupportedCategory: text
 unsupportedReason: The bravado trait it gives the style's action is not applied yet.
-  Its notes on rolls are in its text.
+  Its change to the character's Strikes is a note on their attack or damage rolls;
+  the sheet's numbers don't include it.
 foundryID: 4lGhbEjlEoGP4scl
 rules:
 - key: diplomacy-trained
@@ -29,3 +30,12 @@ rules:
   inputs:
     list: $.swashbuckler.skill-feat-skills
     value: {type: core/skill, literal: diplomacy}
+- key: strike-note-1
+  effect: core/add-note
+  prerequisites:
+  - has: '@class.swashbuckler.features.exemplary-finisher'
+  inputs:
+    target: attack-rolls
+    text: If the finisher's Strike hits a foe, the foe takes a –2 circumstance penalty
+      to attack rolls against you until the start of your next turn.
+    when: finisher

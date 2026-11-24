@@ -18,5 +18,15 @@ description: 'You work at a pace born from longevity that enhances your thorough
   The GM might determine a situation doesn''t grant you a benefit if a delay would
   be directly counterproductive to your success, such as a tense negotiation with
   an impatient creature.'
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Its notes on rolls are in its text.
 foundryID: k8nWKHLYvAKMuwLd
+rules:
+- key: perception-and-skills-circumstance-bonus-ageless
+  effect: core/add-modifier@2
+  inputs:
+    target: [perception, skills]
+    amount: 2
+    type: circumstance
+    when: Ageless Patience

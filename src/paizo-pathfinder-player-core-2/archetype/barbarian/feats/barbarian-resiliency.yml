@@ -15,8 +15,10 @@ prerequisites:
 description: You gain 3 additional Hit Points for each barbarian archetype class feat
   you have. As you continue selecting barbarian archetype class feats, you continue
   to gain additional Hit Points in this way.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. It holds only bookkeeping the builder does not need.
+mechanicsScope: builder
 foundryID: HpT1GlcnkCBnDnVF
+rules:
+- key: hit-points-per-feat
+  effect: core/add-hit-points@2
+  inputs:
+    amount: (multiply 3 $.archetype.barbarian.feat-count)

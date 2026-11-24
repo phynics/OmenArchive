@@ -16,7 +16,30 @@ description: 'Your faith makes you resistant to disease, protecting you as you o
   you roll a critical failure on a save against a disease or poison, you get a failure
   instead.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text. Its effect is used at the table.
+unsupportedCategory: scope
+unsupportedReason: The +1 bonus allies in your champion's aura get is used at the
+  table. Its +2 status bonus to flat checks to recover from persistent poison damage
+  is not applied yet.
 foundryID: GNMy7NYfF3AQwHpN
+rules:
+- key: saving-throws-status-bonus-disease-or-poison
+  effect: core/add-modifier@2
+  inputs:
+    target: saving-throws
+    amount: 2
+    type: status
+    when: the effect has the disease trait or the effect has the poison trait
+- key: saving-throws-disease-or-poison-success-note
+  effect: core/add-note
+  inputs:
+    target: saving-throws
+    text: When you roll a success on a saving throw, the result is one degree better.
+    when: the effect has the disease trait or the effect has the poison trait
+- key: saving-throws-sacred-body-critical-failure-note
+  effect: core/add-note
+  inputs:
+    target: saving-throws
+    text: When you roll a critical failure on a saving throw, the result is one degree
+      better.
+    when: you have the Sacred Body feature; the effect has the disease trait or the
+      effect has the poison trait

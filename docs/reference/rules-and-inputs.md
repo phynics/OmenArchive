@@ -84,9 +84,14 @@ The operators, reads and rounding of sheet expressions are in [Sheet Expressions
   bare expression, which starts with `(` and ends with `)`, or a bare `$` path. Numbers are written
   as numbers.
 - **One effect per concept.** `add-feature {feature}` grants a feature or a heritage by reference (or
-  by a choice); `add-trait {trait, as?: ancestry}` grants a trait; `add-speed {movement, speed | bonus}` sets a
-  movement type (`land`, `climb`, `swim`, `fly`, `burrow`) or adds a bonus to land Speed; `add-sense {sense, acuity?,
-  range?}` grants a sense.
+  by a choice); `add-trait {trait, as?: ancestry}` grants a trait; `add-speed@2 {movement, speed | bonus, when?}` sets a
+  movement type (`land`, `climb`, `swim`, `fly`, `burrow`) or adds a bonus to land Speed, and its `speed` is a sheet
+  value, so a Speed equal to your land Speed is `speed: $.speed.land`; `add-sense@3 {sense, acuity?, range?, when?}`
+  grants a sense; `add-resistance@3 {type, value, exceptions, when?}` grants a resistance (`type` is a `damage-type`
+  term, `all-damage` included); `add-defense {defense, type, value?, when?}` grants a weakness (with its `value`), an
+  immunity, or `healing` by an energy other than vitality (`type: void`, void healing).
+- **Situations.** `when` on a sense, a resistance, a defense or a Speed other than land is the situation as the
+  player reads it (`when: raging`). The sheet shows the entry with it and toggles nothing.
 - **Weapons and armor.** `add-weapon-proficiency {weapons, rank}` and `add-armor-proficiency {armor, rank}` take a
   filter, a record or a choice, and no other kind of value. A filter names what it narrows to and leaves out what it
   doesn't: `weapons: {category: martial}`, `{group: sword}`, `{category: advanced, group: sword}`,

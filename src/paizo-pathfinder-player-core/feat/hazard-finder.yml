@@ -10,15 +10,19 @@ description: You have an intuitive ability to sense hazards. You gain a +1 circu
   and to saves against their effects. You can find hazards that would normally require
   you to [Search](omen://action/search) even if you aren't Searching.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet.
 foundryID: 16MOW7deoOoDwE9z
 rules:
 - key: perception-circumstance-bonus-trap-or-hazard
   effect: core/add-modifier@2
   inputs:
     target: perception
+    amount: 1
+    type: circumstance
+    when: trap or hazard
+- key: armor-class-circumstance-bonus-trap-or-hazard
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
     amount: 1
     type: circumstance
     when: trap or hazard

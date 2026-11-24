@@ -23,7 +23,12 @@ description: 'You break down a specific individual''s idiolect, memorizing their
   to the intense character study required, you can''t remember more than one idiolect
   at a time.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
 foundryID: TZASOwBqVveGjw77
+rules:
+- key: deception-circumstance-bonus-analyze-idiolect
+  effect: core/add-modifier@2
+  inputs:
+    target: deception
+    amount: 4
+    type: circumstance
+    when: Analyze Idiolect

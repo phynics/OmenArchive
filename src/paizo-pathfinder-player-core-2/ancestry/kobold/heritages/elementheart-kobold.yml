@@ -19,7 +19,7 @@ rules:
       label: Air (cold)
       effects:
       - key: resist-air
-        effect: core/add-resistance@2
+        effect: core/add-resistance@3
         inputs:
           type: cold
           value: (max 1 (divide $.level 2))
@@ -27,7 +27,7 @@ rules:
       label: Earth (electricity)
       effects:
       - key: resist-earth
-        effect: core/add-resistance@2
+        effect: core/add-resistance@3
         inputs:
           type: electricity
           value: (max 1 (divide $.level 2))
@@ -35,7 +35,7 @@ rules:
       label: Fire (fire)
       effects:
       - key: resist-fire
-        effect: core/add-resistance@2
+        effect: core/add-resistance@3
         inputs:
           type: fire
           value: (max 1 (divide $.level 2))
@@ -43,7 +43,7 @@ rules:
       label: Metal (sonic)
       effects:
       - key: resist-metal
-        effect: core/add-resistance@2
+        effect: core/add-resistance@3
         inputs:
           type: sonic
           value: (max 1 (divide $.level 2))
@@ -51,7 +51,7 @@ rules:
       label: Water (acid)
       effects:
       - key: resist-water
-        effect: core/add-resistance@2
+        effect: core/add-resistance@3
         inputs:
           type: acid
           value: (max 1 (divide $.level 2))
@@ -59,7 +59,7 @@ rules:
       label: Wood (poison)
       effects:
       - key: resist-wood
-        effect: core/add-resistance@2
+        effect: core/add-resistance@3
         inputs:
           type: poison
           value: (max 1 (divide $.level 2))

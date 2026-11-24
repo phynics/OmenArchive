@@ -9,7 +9,12 @@ description: Your sense of smell has heightened to be as keen as that of a drago
   You gain imprecise scent with a range of 30 feet. At their discretion, the GM might
   double this range if you're downwind from the creature or halve this range if you're
   upwind.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet.
+mechanicsScope: builder
 foundryID: 2UKf5IiUbpUbOC9a
+rules:
+- key: scent
+  effect: core/add-sense@3
+  inputs:
+    sense: scent
+    acuity: imprecise
+    range: 30

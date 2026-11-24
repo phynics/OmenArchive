@@ -13,7 +13,14 @@ description: You deftly dodge out of the way, gaining a +2 circumstance bonus to
   against the triggering attack. If the Strike misses, you gain panache until the
   end of your next turn.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its notes on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its notes on rolls are in its text.
 foundryID: TnYHtN9gQASqOnii
+rules:
+- key: armor-class-circumstance-bonus-flashy-dodge
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: 2
+    type: circumstance
+    when: Flashy Dodge

@@ -6,6 +6,13 @@ traits:
 description: When you focus your will into your limbs, your blows are as unyielding
   as the hardest of metals. Your unarmed attacks are treated as adamantine.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 5cthRUkRqRtduVvN
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Your unarmed attacks are treated as adamantine.

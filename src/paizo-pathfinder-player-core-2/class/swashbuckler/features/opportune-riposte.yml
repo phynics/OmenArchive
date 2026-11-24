@@ -5,10 +5,19 @@ traits:
 - swashbuckler
 description: You turn the tables on foes who fumble, capitalizing immediately on their
   mistake. You gain the [Opportune Riposte](omen://action/opportune-riposte) reaction.
-mechanicsScope: builder
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: Jtn7IugykXDlIoZq
 rules:
 - key: opportune-riposte-action
   effect: core/add-action@2
   inputs:
     action: '@action.opportune-riposte'
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: attack-rolls
+    text: The Strike you make with Opportune Riposte has its bravado trait.
+    when: Opportune Riposte

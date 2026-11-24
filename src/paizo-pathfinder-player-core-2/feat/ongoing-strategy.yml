@@ -17,6 +17,16 @@ description: 'You''re constantly studying small aspects of everyone''s movements
   dice so long as the weapon or unarmed attack you used is one that would have let
   you use your Intelligence modifier had you Devised a Stratagem.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: CAk1NNG4aO0VuHnZ
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: On any Strike for which you didn't Devise a Stratagem, you still deal precision
+      damage equal to your number of strategic strike damage dice, so long as the
+      weapon or unarmed attack is one that would have let you use your Intelligence
+      modifier had you Devised a Stratagem.

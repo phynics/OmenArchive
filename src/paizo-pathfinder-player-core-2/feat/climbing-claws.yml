@@ -7,7 +7,11 @@ traits:
 - catfolk
 description: You can extend your claws to aid you in climbing. You gain a climb Speed
   of 10 feet.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: TlMSleKR8Bh0EuSW
+rules:
+- key: climb-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: climb
+    speed: 10

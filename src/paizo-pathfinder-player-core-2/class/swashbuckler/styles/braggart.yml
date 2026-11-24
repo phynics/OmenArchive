@@ -8,7 +8,8 @@ description: You boast, taunt, and psychologically needle your foes. You are tra
   the action gains the bravado trait.
 mechanicsScope: mixed
 unsupportedCategory: text
-unsupportedReason: Its notes on rolls are in its text.
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: KBhwFjdptrKyN5EM
 rules:
 - key: intimidation-trained
@@ -21,3 +22,12 @@ rules:
   inputs:
     list: $.swashbuckler.skill-feat-skills
     value: {type: core/skill, literal: intimidation}
+- key: strike-note-1
+  effect: core/add-note
+  prerequisites:
+  - has: '@class.swashbuckler.features.exemplary-finisher'
+  inputs:
+    target: attack-rolls
+    text: If the finisher's Strike hits a foe that was temporarily immune to your
+      Demoralize, their temporary immunity ends.
+    when: finisher

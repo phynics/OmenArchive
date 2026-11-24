@@ -19,7 +19,17 @@ description: 'You make a fierce swipe with both hands. Make a tiger claw Strike.
   If the attack is a critical success and deals damage, add your Strength modifier
   to the persistent bleed damage from your tiger claw.'
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 6J2ZSGNsXPKPcJGV
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: The tiger claw Strike deals two extra weapon damage dice (three if you're
+      14th level or higher), and you can push the target 5 feet away as if you had
+      Shoved them. On a critical success that deals damage, add your Strength modifier
+      to the persistent bleed damage from your tiger claw.
+    when: Tiger Slash

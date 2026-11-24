@@ -12,8 +12,19 @@ description: You Stride up to your Speed, with a +5-foot status bonus to your Sp
   and you gain a +2 circumstance bonus to AC against reactions triggered by this movement.
   You must end this movement in a space that's not adjacent to any enemy.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: A bonus or other change to a statistic that always applies is not
-  applied yet. Its change to movement is not applied yet. Its notes on rolls are in
-  its text.
 foundryID: xzpMQ2ZRn9zC23XG
+rules:
+- key: speed-status-bonus-scamper
+  effect: core/add-modifier@2
+  inputs:
+    target: speed
+    amount: 5
+    type: status
+    when: Scamper
+- key: armor-class-circumstance-bonus-scamper
+  effect: core/add-modifier@2
+  inputs:
+    target: armor-class
+    amount: 2
+    type: circumstance
+    when: Scamper

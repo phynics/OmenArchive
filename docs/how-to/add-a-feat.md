@@ -23,7 +23,7 @@ description: |
   You move more quickly on foot. You gain a +5-foot status bonus to your Speed.
 rules:
   - key: fleet-speed
-    effect: core/add-speed
+    effect: core/add-speed@2
     inputs:
       movement: land
       bonus: 5

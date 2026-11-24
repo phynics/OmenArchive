@@ -8,6 +8,13 @@ description: You can adjust your body to make unarmed attacks infused with the m
   This allows you to deal more damage to a variety of supernatural creatures, such
   as demons, devils, and fey.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: CoRfFkisEsHE1e43
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: Your unarmed attacks are treated as cold iron and silver.

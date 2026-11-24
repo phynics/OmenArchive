@@ -10,6 +10,15 @@ description: You've learned to take advantage of slips in your foes' defenses. W
   creature using a melee weapon or unarmed attack that has the agile and finesse traits,
   it gains the backstabber trait.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: zL6zUrt44tZYyuh4
+rules:
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: When you Strike an off-guard creature using a melee weapon or unarmed attack
+      that has the agile and finesse traits, it gains the backstabber trait.
+    when: the target is off-guard

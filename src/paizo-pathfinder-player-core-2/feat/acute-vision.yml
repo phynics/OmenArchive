@@ -6,7 +6,11 @@ type: class
 traits:
 - barbarian
 description: When you are raging, your visual senses improve, granting you darkvision.
-mechanicsScope: mixed
-unsupportedCategory: benefit
-unsupportedReason: Its sense, resistance or immunity is not applied yet.
+mechanicsScope: builder
 foundryID: YdpGPLN0QFTZIhbk
+rules:
+- key: darkvision
+  effect: core/add-sense@3
+  inputs:
+    sense: darkvision
+    when: raging

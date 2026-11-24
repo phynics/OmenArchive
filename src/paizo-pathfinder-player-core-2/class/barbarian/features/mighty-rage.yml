@@ -8,12 +8,19 @@ description: Your rage intensifies and lets you hit harder at the start of a fig
   when you use Quick-Tempered, the first Strike you make during your first turn deals
   additional damage equal to your [Rage](omen://action/rage) damage.
 mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its notes
-  on rolls are in its text.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: 88Q33X2a0iYPkbzd
 rules:
 - key: class-dc-expert
   effect: core/add-class-dc@2
   inputs:
     rank: expert
+- key: strike-note-1
+  effect: core/add-note
+  inputs:
+    target: strike-damage
+    text: When you use Quick-Tempered, the first Strike you make during your first
+      turn deals additional damage equal to your Rage damage.
+    when: Mighty Rage

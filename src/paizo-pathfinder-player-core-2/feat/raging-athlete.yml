@@ -16,7 +16,18 @@ description: Physical obstacles can't hold back your fury. While you are raging,
   increases to 5 feet vertically, and your distance for a horizontal Leap increases
   to 15 feet if your Speed is at least 15 feet, and to 20 feet if your Speed is at
   least 30 feet.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to movement is not applied yet.
+mechanicsScope: builder
 foundryID: sEWYOllJ6rYoXK4K
+rules:
+- key: climb-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: climb
+    speed: $.speed.land
+    when: raging
+- key: swim-speed
+  effect: core/add-speed@2
+  inputs:
+    movement: swim
+    speed: $.speed.land
+    when: raging
