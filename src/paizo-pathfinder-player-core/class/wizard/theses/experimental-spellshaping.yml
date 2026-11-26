@@ -13,6 +13,24 @@ description: 'Your thesis posits that the magical practice of spellshaping can b
   that has a level requirement of no more than half your level, which you can use
   until your next daily preparations.'
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+unsupportedCategory: text
+unsupportedReason: Gaining a spellshape wizard feat during your daily preparations
+  from 4th level is in its text.
 foundryID: 89zWKD2CN7nRu2xp
+rules:
+- key: choice-wizard-experimental-spellshaping-feat
+  choice:
+    name: $.wizard.experimental-spellshaping.feat
+    label: Level 1 Spellshape Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {level: 1}
+        - {trait: spellshape}
+        - {trait: classTrait-wizard}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.wizard.experimental-spellshaping.feat}

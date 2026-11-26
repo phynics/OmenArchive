@@ -16,5 +16,12 @@ description: 'Your muse has opened your senses to the world beyond. You gain spi
   projected by spells such as [Project Image](omen://spell/project-image) or possessing
   otherwise soulless objects. It can''t detect soulless bodies, constructs, or objects,
   and like most senses, it doesn''t penetrate through solid objects.'
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: DYc108IqRBP9N9W6
+rules:
+- key: spiritsense
+  effect: core/add-sense@3
+  inputs:
+    sense: spiritsense
+    acuity: imprecise
+    range: 60

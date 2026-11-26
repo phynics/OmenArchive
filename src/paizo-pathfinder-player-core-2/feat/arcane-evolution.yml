@@ -30,5 +30,36 @@ description: 'Your arcane legacy allows you to perceive how magic affects everyt
   activity to add more arcane spells to the list you choose from, but if you prepare
   a spell that isn''t in your repertoire, you temporarily add it to your repertoire
   at the spell rank of your choice instead of making it a signature spell.'
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Its daily signature spell, and the arcane spells Learn a Spell
+  adds to the list you choose it from, are in its text.
 foundryID: qxh4evekG28Gt1vj
+rules:
+- key: choice-feats-arcane-evolution-skill
+  choice:
+    name: $.feats.arcane-evolution.skill
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
+- key: skill-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.arcane-evolution.skill}
+    rank: trained

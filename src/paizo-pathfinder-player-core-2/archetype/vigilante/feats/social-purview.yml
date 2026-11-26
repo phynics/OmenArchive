@@ -7,8 +7,7 @@ traits:
 - archetype
 prerequisites:
 - text: Vigilante Dedication
-  unsupported: Unsupported prerequisite for source rNPeOwFZE5Ma18JJ "Vigilante Dedication".
-  diagnostic: true
+  has: '@archetype.vigilante.feats.vigilante-dedication'
 description: 'You have built a reputation for yourself in your social identity. Choose
   one archetype that you meet the prerequisites for. You gain that archetype''s dedication
   feat and can select feats from that archetype, even if you haven''t yet gained enough
@@ -20,6 +19,19 @@ description: 'You have built a reputation for yourself in your social identity. 
   doesn''t risk exposing your vigilante identity, but using them in your vigilante
   identity could put you at risk for exposure.'
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+unsupportedCategory: text
+unsupportedReason: 'The social trait the chosen archetype''s feats gain, and the exposure
+  they risk in your vigilante identity, are in its text. Its pick also lists Vigilante
+  Dedication, which you already have: choose another archetype''s dedication.'
 foundryID: rNPeOwFZE5Ma18JJ
+rules:
+- key: choice-feats-social-purview-feat
+  choice:
+    name: $.feats.social-purview.feat
+    label: Dedication Feat
+    type: core/feat-id
+    records: {filter: {all: [{type: feat}, {trait: dedication}]}}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.social-purview.feat}

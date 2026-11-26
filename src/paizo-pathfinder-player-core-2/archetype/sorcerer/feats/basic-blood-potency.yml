@@ -9,7 +9,22 @@ prerequisites:
 - text: Sorcerer Dedication
   has: '@archetype.sorcerer.feats.sorcerer-dedication'
 description: You gain a 1st- or 2nd-level sorcerer feat.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: nT9Z4OPDTOg2AGYc
+rules:
+- key: choice-feats-basic-blood-potency-feat
+  choice:
+    name: $.feats.basic-blood-potency.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-sorcerer}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-blood-potency.feat}

@@ -7,9 +7,7 @@ traits:
 - lizardfolk
 prerequisites:
 - text: Iruxi Armaments (Tail)
-  unsupported: Unsupported prerequisite for source t3IzY8uSyFj3aGmh "Iruxi Armaments
-    (Tail)".
-  diagnostic: true
+  hasChoice: {name: $.feats.iruxi-armaments.unarmed-attacks, contains: tail}
 action:
   count: reaction
   requirements: You have a fully grown tail.

@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Intelligence +2
   hasAttributeModifier: {attribute: intelligence, modifier: 2}
+- text: not a member of the alchemist class
+  anyOf:
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: 'You put your alchemical interest into practice. You become trained in
   alchemical bombs, the alchemist class DC, and Crafting; if you were already trained
   in Crafting, you instead become trained in a skill of your choice.

@@ -8,9 +8,7 @@ traits:
 description: You have an impressive innate ability to tame and command ferocious beasts.
   You become trained in the Nature skill and gain your choice of the [Pet](omen://feat/pet)
   general feat or the [Train Animal](omen://feat/train-animal) skill feat.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: wtTye8OrC9cuK7YP
 rules:
 - key: nature-trained
@@ -18,3 +16,13 @@ rules:
   inputs:
     skill: nature
     rank: trained
+- key: choice-feats-beast-trainer-feat
+  choice:
+    name: $.feats.beast-trainer.feat
+    label: Feat
+    type: core/feat-id
+    records: {filter: {any: [{id: '@feat.pet'}, {id: '@feat.train-animal'}]}}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.beast-trainer.feat}

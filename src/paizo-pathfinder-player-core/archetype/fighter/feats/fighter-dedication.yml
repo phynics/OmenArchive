@@ -12,6 +12,23 @@ prerequisites:
   hasAttributeModifier: {attribute: strength, modifier: 2}
 - text: Dexterity +2
   hasAttributeModifier: {attribute: dexterity, modifier: 2}
+- text: not a member of the fighter class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: You become trained in martial weapons. You become trained in your choice
   of Acrobatics or Athletics; if you are already trained in both of these skills,
   you instead become trained in a skill of your choice. You become trained in fighter

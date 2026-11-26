@@ -13,8 +13,54 @@ description: "You have an obvious draconic feature, such as sharp claws, a snout
   bludgeoning \\(sweep, trip, unarmed\\)"
 specialText: You can select this feat only at 1st level, and you can't retrain into
   or out of this feat, nor can you change the type of attack you gained.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its choice
-  is not offered yet. Its unarmed attack is not added yet.
+mechanicsScope: builder
 foundryID: U38YThMudfDihnj1
+rules:
+- key: choice-feats-draconic-aspect-unarmed-attack
+  choice:
+    name: $.feats.draconic-aspect.unarmed-attack
+    label: Unarmed Attack
+    type: core/string
+    cases:
+    - key: claw
+      value: claw
+      effects:
+      - key: unarmed-attack-claw
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d4}
+              damageType: {type: core/damage-type, value: slashing}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: claw}
+              traits: {type: core/trait-list, value: [agile, finesse, unarmed]}
+    - key: jaws
+      value: jaws
+      effects:
+      - key: unarmed-attack-jaws
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d6}
+              damageType: {type: core/damage-type, value: piercing}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: jaws}
+              traits: {type: core/trait-list, value: [forceful, unarmed]}
+    - key: tail
+      value: tail
+      effects:
+      - key: unarmed-attack-tail
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d6}
+              damageType: {type: core/damage-type, value: bludgeoning}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: tail}
+              traits: {type: core/trait-list, value: [sweep, trip, unarmed]}

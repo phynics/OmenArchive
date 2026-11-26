@@ -25,6 +25,19 @@ specialText: You can select this feat up to three times. Each time, choose a dif
   type of mercy and add its options to those you can choose when you cast a 2-action
   lay on hands.
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
 foundryID: zilwynzk8lIujgZo
+rules:
+- key: option-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.mercy.options
+    valueType: core/string
+    label: Mercy
+- key: choice-feats-mercy-option
+  level: 4
+  choice:
+    name: $.feats.mercy.option
+    label: Mercy
+    addTo: $.feats.mercy.options
+    type: core/string
+    cases: [body, grace, mind]

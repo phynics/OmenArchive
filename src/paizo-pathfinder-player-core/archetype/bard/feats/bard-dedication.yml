@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Charisma +2
   hasAttributeModifier: {attribute: charisma, modifier: 2}
+- text: not a member of the bard class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: You cast spells like a bard and gain the Cast a Spell activity. You gain
   a spell repertoire with two common cantrips from the occult spell list or any other
   occult cantrips you've learned or discovered. You're trained in the spell attack

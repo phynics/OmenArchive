@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Charisma +2
   hasAttributeModifier: {attribute: charisma, modifier: 2}
+- text: not a member of the sorcerer class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: 'Choose a [Bloodline](omen://class/sorcerer/features/bloodline). You
   become trained in the bloodline''s two skills; for each of these skills in which
   you were already trained, you become trained in a skill of your choice.

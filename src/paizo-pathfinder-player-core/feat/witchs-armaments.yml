@@ -20,8 +20,62 @@ description: "Your patron's power changes your body to ensure you are never defe
   has the agile, disarm, finesse, trip, and unarmed traits."
 specialText: You can take this feat more than once, gaining a different unarmed attack
   each time.
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet. Its choice
-  is not offered yet. Its unarmed attack is not added yet.
+mechanicsScope: builder
 foundryID: XHaxSBOaFMnBbBKt
+rules:
+- key: unarmed-attack-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.witchs-armaments.unarmed-attacks
+    valueType: core/string
+    label: Unarmed Attack
+- key: choice-feats-witchs-armaments-unarmed-attack
+  choice:
+    name: $.feats.witchs-armaments.unarmed-attack
+    label: Unarmed Attack
+    addTo: $.feats.witchs-armaments.unarmed-attacks
+    type: core/string
+    cases:
+    - key: nails
+      value: nails
+      effects:
+      - key: unarmed-attack-nails
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d6}
+              damageType: {type: core/damage-type, value: slashing}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: nails}
+              traits: {type: core/trait-list, value: [agile, unarmed]}
+    - key: teeth
+      value: teeth
+      effects:
+      - key: unarmed-attack-jaws
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d8}
+              damageType: {type: core/damage-type, value: piercing}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: jaws}
+              traits: {type: core/trait-list, value: [unarmed]}
+    - key: hair
+      value: hair
+      effects:
+      - key: unarmed-attack-hair
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d4}
+              damageType: {type: core/damage-type, value: bludgeoning}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: hair}
+              traits: {type: core/trait-list, value: [agile, disarm, finesse, trip,
+                  unarmed]}

@@ -7,8 +7,9 @@ traits:
 - cleric
 prerequisites:
 - text: deity with a simple or unarmed attack favored weapon
-  unsupported: Unsupported prerequisite for source DfLkIIg2reyYW3a8 "deity with a
-    simple or unarmed attack favored weapon".
+  unsupported: 'Not checked: "deity with a simple or unarmed attack favored weapon
+    (a warpriest has this feat whatever the deity; it changes nothing unless the favored
+    weapon is a simple weapon or a d4 unarmed attack)".'
   diagnostic: true
 - text: trained with your deity's favored weapon
   unsupported: Unsupported prerequisite for source DfLkIIg2reyYW3a8 "trained with
@@ -20,7 +21,10 @@ description: 'When you are wielding your deity''s favored weapon, increase the d
   If your deity''s favored weapon is an unarmed attack \(such as a fist, if you worship
   Irori\) and its damage die is smaller than d6, instead increase its damage die size
   to d6.'
-mechanicsScope: mixed
-unsupportedCategory: numbers
-unsupportedReason: Its change to the character's Strikes is not applied yet.
+mechanicsScope: builder
 foundryID: DfLkIIg2reyYW3a8
+rules:
+- key: deity-favored-weapon-die
+  effect: core/add-weapon-die-step
+  inputs:
+    weapon: {choice: $.deity.favored-weapon}

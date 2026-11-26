@@ -14,7 +14,85 @@ description: 'Draconic magic safeguards you against harm. You gain resistance eq
   electricity, or sonic.'
 mechanicsScope: mixed
 unsupportedCategory: choice
-unsupportedReason: Its resistance is to a type the player chooses, which is not offered
-  yet. Its choice is not offered yet. Its sense, resistance or immunity is not applied
-  yet. Its notes on rolls are in its text.
+unsupportedReason: 'Its resistance to your draconic exemplar''s own damage type needs
+  Dragonblood''s exemplar, which is not offered yet: answer its choice only for an
+  exemplar of bludgeoning, piercing or slashing damage.'
 foundryID: mI6dFvu28r66SfY0
+rules:
+- key: choice-feats-draconic-resistance-damage-type
+  choice:
+    name: $.feats.draconic-resistance.damage-type
+    label: Damage Type (for an exemplar of bludgeoning, piercing or slashing damage)
+    optional: true
+    type: core/string
+    cases:
+    - key: acid
+      value: acid
+      effects:
+      - key: acid-resistance
+        effect: core/add-resistance@3
+        inputs:
+          type: acid
+          value: (max 1 (floor (divide $.level 2)))
+      - key: acid-resistance-against-dragons
+        effect: core/add-resistance@3
+        inputs:
+          type: acid
+          value: (multiply 2 (max 1 (floor (divide $.level 2))))
+          when: against damage dealt by dragons
+    - key: cold
+      value: cold
+      effects:
+      - key: cold-resistance
+        effect: core/add-resistance@3
+        inputs:
+          type: cold
+          value: (max 1 (floor (divide $.level 2)))
+      - key: cold-resistance-against-dragons
+        effect: core/add-resistance@3
+        inputs:
+          type: cold
+          value: (multiply 2 (max 1 (floor (divide $.level 2))))
+          when: against damage dealt by dragons
+    - key: electricity
+      value: electricity
+      effects:
+      - key: electricity-resistance
+        effect: core/add-resistance@3
+        inputs:
+          type: electricity
+          value: (max 1 (floor (divide $.level 2)))
+      - key: electricity-resistance-against-dragons
+        effect: core/add-resistance@3
+        inputs:
+          type: electricity
+          value: (multiply 2 (max 1 (floor (divide $.level 2))))
+          when: against damage dealt by dragons
+    - key: fire
+      value: fire
+      effects:
+      - key: fire-resistance
+        effect: core/add-resistance@3
+        inputs:
+          type: fire
+          value: (max 1 (floor (divide $.level 2)))
+      - key: fire-resistance-against-dragons
+        effect: core/add-resistance@3
+        inputs:
+          type: fire
+          value: (multiply 2 (max 1 (floor (divide $.level 2))))
+          when: against damage dealt by dragons
+    - key: sonic
+      value: sonic
+      effects:
+      - key: sonic-resistance
+        effect: core/add-resistance@3
+        inputs:
+          type: sonic
+          value: (max 1 (floor (divide $.level 2)))
+      - key: sonic-resistance-against-dragons
+        effect: core/add-resistance@3
+        inputs:
+          type: sonic
+          value: (multiply 2 (max 1 (floor (divide $.level 2))))
+          when: against damage dealt by dragons

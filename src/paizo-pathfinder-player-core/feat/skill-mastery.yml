@@ -7,9 +7,7 @@ traits:
 - archetype
 prerequisites:
 - text: Rogue Dedication or Investigator Dedication
-  unsupported: Unsupported prerequisite for source c9rhGmKft1BVT4JO "Rogue Dedication
-    or Investigator Dedication".
-  diagnostic: true
+  has: '@archetype.rogue.feats.rogue-dedication'
 - text: trained in at least one skill and expert in at least one skill
   allOf:
   - anyOf:
@@ -58,7 +56,8 @@ description: 'Rogue: Increase your proficiency rank in one of your skills from e
 specialText: You can select this feat up to five times.
 mechanicsScope: mixed
 unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+unsupportedReason: 'The skill feat it grants, one associated with a skill you chose,
+  is not offered yet: a feat pick can''t be limited to the skills a question chose.'
 foundryID: c9rhGmKft1BVT4JO
 rules:
 - key: options-skill-master

@@ -24,6 +24,19 @@ description: 'Choose physical invigoration or mental invigoration, and add the l
 specialText: You can select this feat a second time to choose a different type of
   invigoration and add its options to those you can choose.
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
 foundryID: J9LjIYPyUmOim5r7
+rules:
+- key: option-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.improved-invigorating-elixir.options
+    valueType: core/string
+    label: Improved Invigorating Elixir
+- key: choice-feats-improved-invigorating-elixir-option
+  level: 8
+  choice:
+    name: $.feats.improved-invigorating-elixir.option
+    label: Improved Invigorating Elixir
+    addTo: $.feats.improved-invigorating-elixir.options
+    type: core/string
+    cases: [mental, physical]

@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Dexterity +2
   hasAttributeModifier: {attribute: dexterity, modifier: 2}
+- text: not a member of the ranger class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: You become trained in Survival; if you were already trained in Survival,
   you instead become trained in another skill of your choice. You become trained in
   ranger class DC. If you gain a warden spell through this archetype, you become trained

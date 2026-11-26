@@ -9,7 +9,22 @@ prerequisites:
 - text: Alchemist Dedication
   has: '@archetype.alchemist.feats.alchemist-dedication'
 description: You gain a 1st- or 2nd-level alchemist feat.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: h5ZT9i79BFVJ0VfE
+rules:
+- key: choice-feats-basic-concoction-feat
+  choice:
+    name: $.feats.basic-concoction.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-alchemist}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-concoction.feat}

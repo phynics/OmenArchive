@@ -11,7 +11,24 @@ prerequisites:
 description: You gain a 1st- or 2nd-level witch feat of your choice. You can select
   three familiar abilities for your familiar each day, instead of two.
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet. Its familiar abilities, crafting
-  or pool sizes are not applied yet.
+unsupportedCategory: benefit
+unsupportedReason: Its familiar abilities, crafting or pool sizes are not applied
+  yet.
 foundryID: geESDWQVvwScyPph
+rules:
+- key: choice-feats-basic-witchcraft-feat
+  choice:
+    name: $.feats.basic-witchcraft.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-witch}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-witchcraft.feat}

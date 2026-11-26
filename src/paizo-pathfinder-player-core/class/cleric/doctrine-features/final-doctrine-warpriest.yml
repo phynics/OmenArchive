@@ -8,6 +8,11 @@ description: You gain master proficiency with your deity's favored weapon, spell
 mechanicsScope: builder
 foundryID: N1ugDqZlslxbp3Uy
 rules:
+- key: chosen-favored-weapon-master
+  effect: core/add-weapon-proficiency@3
+  inputs:
+    weapons: {choice: $.deity.favored-weapon}
+    rank: master
 - key: spell-proficiency-master
   effect: spellcasting/increase-spell-proficiency@2
   inputs:

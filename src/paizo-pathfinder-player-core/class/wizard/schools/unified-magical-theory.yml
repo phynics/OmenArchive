@@ -45,3 +45,19 @@ rules:
   inputs:
     source: wizard-focus-spells
     spell: '@spell.hand-of-the-apprentice'
+- key: choice-wizard-unified-magical-theory-feat
+  choice:
+    name: $.wizard.unified-magical-theory.feat
+    label: Level 1 Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {level: 1}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-wizard}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.wizard.unified-magical-theory.feat}

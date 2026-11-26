@@ -10,8 +10,28 @@ description: Unlike most of your kind, who dismiss goblins as embarrassments or 
   actions. You gain the [Adopted Ancestry](omen://feat/adopted-ancestry?source=paizo-pathfinder-player-core)
   general feat and must select goblin as the feat's chosen ancestry. You also gain
   one 1st-level goblin ancestry feat.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet. The features it grants are not applied
-  yet.
+mechanicsScope: builder
 foundryID: qUZnrueC2a0zf95N
+rules:
+- key: adopted-ancestry-goblin-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: '@feat.adopted-ancestry?source=paizo-pathfinder-player-core'
+    with:
+      $.feats.adopted-ancestry.ancestry: {type: core/string, value: goblin}
+- key: choice-feats-runtsage-feat
+  choice:
+    name: $.feats.runtsage.feat
+    label: Ancestry Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {level: 1}
+        - {trait: systemTrait-ancestry}
+        - {trait: ancestryTrait-goblin}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.runtsage.feat}

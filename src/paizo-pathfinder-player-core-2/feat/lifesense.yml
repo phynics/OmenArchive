@@ -11,5 +11,12 @@ description: You have a limited ability to sense life force, like your psychopom
   allows you to sense the life force of living and undead creatures within the listed
   range. The sense can distinguish between the vitality energy animating living creatures
   and the void energy animating undead creatures, much as sight distinguishes colors.
-mechanicsScope: encounter
+mechanicsScope: builder
 foundryID: iNrR4WOB1UO9iiNE
+rules:
+- key: lifesense
+  effect: core/add-sense@3
+  inputs:
+    sense: lifesense
+    acuity: imprecise
+    range: 10

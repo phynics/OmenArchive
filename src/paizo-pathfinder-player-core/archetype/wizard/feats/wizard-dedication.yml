@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Intelligence +2
   hasAttributeModifier: {attribute: intelligence, modifier: 2}
+- text: not a member of the wizard class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
 description: You cast spells like a wizard, gaining a spellbook with four common arcane
   cantrips of your choice. You gain the [Cast a Spell](omen://action/cast-a-spell)
   activity. You can prepare two cantrips each day from your spellbook. You're trained

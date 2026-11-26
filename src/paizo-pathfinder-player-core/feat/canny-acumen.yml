@@ -8,7 +8,82 @@ traits:
 description: Your avoidance or observation is beyond the ken of most in your profession.
   Choose Fortitude saves, Reflex saves, Will saves, or Perception. You become an expert
   in your choice. At 17th level, you become a master in your choice.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: i4yRvVwvXbGZDsD1
+rules:
+- key: choice-feats-canny-acumen-statistic
+  choice:
+    name: $.feats.canny-acumen.statistic
+    label: Saving Throw or Perception
+    type: core/string
+    cases:
+    - key: fortitude
+      value: fortitude
+      effects:
+      - key: fortitude-expert
+        effect: core/add-saving-throw@2
+        inputs:
+          savingThrow: fortitude
+          rank: expert
+    - key: reflex
+      value: reflex
+      effects:
+      - key: reflex-expert
+        effect: core/add-saving-throw@2
+        inputs:
+          savingThrow: reflex
+          rank: expert
+    - key: will
+      value: will
+      effects:
+      - key: will-expert
+        effect: core/add-saving-throw@2
+        inputs:
+          savingThrow: will
+          rank: expert
+    - key: perception
+      value: perception
+      effects:
+      - key: perception-expert
+        effect: core/add-perception
+        inputs:
+          rank: expert
+- key: fortitude-master
+  effect: core/add-saving-throw@2
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.feats.canny-acumen.statistic
+      equals: {type: core/string, value: fortitude}
+  inputs:
+    savingThrow: fortitude
+    rank: master
+- key: reflex-master
+  effect: core/add-saving-throw@2
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.feats.canny-acumen.statistic
+      equals: {type: core/string, value: reflex}
+  inputs:
+    savingThrow: reflex
+    rank: master
+- key: will-master
+  effect: core/add-saving-throw@2
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.feats.canny-acumen.statistic
+      equals: {type: core/string, value: will}
+  inputs:
+    savingThrow: will
+    rank: master
+- key: perception-master
+  effect: core/add-perception
+  level: 17
+  prerequisites:
+  - hasChoice:
+      name: $.feats.canny-acumen.statistic
+      equals: {type: core/string, value: perception}
+  inputs:
+    rank: master

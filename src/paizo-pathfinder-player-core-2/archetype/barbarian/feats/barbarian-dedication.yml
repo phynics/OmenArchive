@@ -12,6 +12,23 @@ prerequisites:
   hasAttributeModifier: {attribute: strength, modifier: 2}
 - text: Constitution +2
   hasAttributeModifier: {attribute: constitution, modifier: 2}
+- text: not a member of the barbarian class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: 'You become trained in Athletics; if you were already trained in Athletics,
   you instead become trained in a skill of your choice. You become trained in barbarian
   class DC.

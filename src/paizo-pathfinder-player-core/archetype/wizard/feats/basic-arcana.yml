@@ -9,7 +9,22 @@ prerequisites:
 - text: Wizard Dedication
   has: '@archetype.wizard.feats.wizard-dedication'
 description: You gain a 1st- or 2nd-level wizard feat of your choice.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: DBsqWivnSaEo8jz5
+rules:
+- key: choice-feats-basic-arcana-feat
+  choice:
+    name: $.feats.basic-arcana.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-wizard}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-arcana.feat}

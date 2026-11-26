@@ -18,12 +18,53 @@ description: "Your weapons are those you were born with. Choose one of the follo
 specialText: You can take this feat multiple times, choosing a different unarmed attack
   option each time.
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet. Its unarmed attack is not added
-  yet. Its change to the character's Strikes is a note on their attack or damage rolls;
-  the sheet's numbers don't include it.
+unsupportedCategory: text
+unsupportedReason: Its change to the character's Strikes is a note on their attack
+  or damage rolls; the sheet's numbers don't include it.
 foundryID: VatkAzfBYjA6z6OP
 rules:
+- key: unarmed-attack-list
+  effect: core/declare-list
+  inputs:
+    list: $.feats.iruxi-armaments.unarmed-attacks
+    valueType: core/string
+    label: Unarmed Attack
+- key: choice-feats-iruxi-armaments-unarmed-attack
+  choice:
+    name: $.feats.iruxi-armaments.unarmed-attack
+    label: Unarmed Attack
+    addTo: $.feats.iruxi-armaments.unarmed-attacks
+    type: core/string
+    cases:
+    - {value: claw}
+    - key: fangs
+      value: fangs
+      effects:
+      - key: unarmed-attack-fangs
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d8}
+              damageType: {type: core/damage-type, value: piercing}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: fangs}
+              traits: {type: core/trait-list, value: [unarmed]}
+    - key: tail
+      value: tail
+      effects:
+      - key: unarmed-attack-tail
+        effect: core/add-to-list
+        inputs:
+          list: $.strikes.unarmed
+          value:
+            entry:
+              damageDice: {type: core/string, value: 1d6}
+              damageType: {type: core/damage-type, value: bludgeoning}
+              group: {type: core/weapon-group, value: brawling}
+              name: {type: core/string, value: tail}
+              traits: {type: core/trait-list, value: [sweep, unarmed]}
 - key: strike-note-1
   effect: core/add-note
   inputs:

@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Intelligence +2
   hasAttributeModifier: {attribute: intelligence, modifier: 2}
+- text: not a member of the witch class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: wizard
 description: 'You cast spells like a witch. Choose a [Patron](omen://class/witch/features/patron);
   you gain a familiar with two common cantrips of your choice from your chosen patron''s
   tradition, but aside from the tradition, you don''t gain any other effects the patron

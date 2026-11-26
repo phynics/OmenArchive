@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Wisdom +2
   hasAttributeModifier: {attribute: wisdom, modifier: 2}
+- text: not a member of the druid class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: You cast spells like a druid. You gain the Cast a Spell activity. You
   can prepare two common cantrips each day from the primal spell list or any other
   primal cantrips you learn or discover. You're trained in the spell attack modifier

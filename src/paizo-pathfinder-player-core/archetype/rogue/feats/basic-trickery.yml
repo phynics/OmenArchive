@@ -9,7 +9,22 @@ prerequisites:
 - text: Rogue Dedication
   has: '@archetype.rogue.feats.rogue-dedication'
 description: You gain a 1st- or 2nd-level rogue feat.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: xMTC8UOerwGyCtaN
+rules:
+- key: choice-feats-basic-trickery-feat
+  choice:
+    name: $.feats.basic-trickery.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-rogue}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-trickery.feat}

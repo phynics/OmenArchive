@@ -7,11 +7,24 @@ traits:
 - archetype
 prerequisites:
 - text: Swashbuckler Dedication
-  unsupported: Unsupported prerequisite for source sE7x3QAel4VGdkgn "Swashbuckler
-    Dedication".
-  diagnostic: true
+  has: '@archetype.swashbuckler.feats.swashbuckler-dedication'
 description: You gain a 1st- or 2nd-level swashbuckler feat of your choice.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: sE7x3QAel4VGdkgn
+rules:
+- key: choice-feats-basic-flair-feat
+  choice:
+    name: $.feats.basic-flair.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-swashbuckler}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-flair.feat}

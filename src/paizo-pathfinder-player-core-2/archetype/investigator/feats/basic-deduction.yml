@@ -7,11 +7,24 @@ traits:
 - archetype
 prerequisites:
 - text: Investigator Dedication
-  unsupported: Unsupported prerequisite for source X0NFLIn1bqj6bnd0 "Investigator
-    Dedication".
-  diagnostic: true
+  has: '@archetype.investigator.feats.investigator-dedication'
 description: You gain a 1st- or 2nd-level investigator feat of your choice.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: X0NFLIn1bqj6bnd0
+rules:
+- key: choice-feats-basic-deduction-feat
+  choice:
+    name: $.feats.basic-deduction.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-investigator}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-deduction.feat}

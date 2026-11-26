@@ -11,6 +11,15 @@ description: Odd interactions in your bloodline provide you with unexpected effe
   based on a choice you would have made at 1st level \(such as the elemental bloodline's
   elemental influence\), you make that decision when you take this feat.
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+unsupportedCategory: text
+unsupportedReason: The chosen bloodline's blood magic effect, and any choice it needs
+  at 1st level, are in its text.
 foundryID: CN7tu5H6wTe9ENmO
+rules:
+- key: choice-feats-crossblooded-evolution-bloodline
+  choice:
+    name: $.feats.crossblooded-evolution.bloodline
+    label: Bloodline
+    distinct: $.sorcerer.bloodline
+    type: core/feature-id
+    records: {filter: {pathPrefix: '@class.sorcerer.bloodlines'}}

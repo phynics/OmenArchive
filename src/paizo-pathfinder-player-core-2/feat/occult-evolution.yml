@@ -27,5 +27,36 @@ description: Glimpses of the obscure secrets of the universe loan you power. You
   minute to choose one mental occult spell you don't know and add it to your spell
   repertoire. You lose this temporary spell the next time you make your daily preparations
   \(though you can use this ability to add it again later\).
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: The mental occult spell it adds to your repertoire once a day is
+  in its text.
 foundryID: lL2fQJ2oRyBgga8Q
+rules:
+- key: choice-feats-occult-evolution-skill
+  choice:
+    name: $.feats.occult-evolution.skill
+    label: Skill
+    type: core/skill
+    cases:
+    - {key: acrobatics, value: acrobatics}
+    - {key: arcana, value: arcana}
+    - {key: athletics, value: athletics}
+    - {key: crafting, value: crafting}
+    - {key: deception, value: deception}
+    - {key: diplomacy, value: diplomacy}
+    - {key: intimidation, value: intimidation}
+    - {key: medicine, value: medicine}
+    - {key: nature, value: nature}
+    - {key: occultism, value: occultism}
+    - {key: performance, value: performance}
+    - {key: religion, value: religion}
+    - {key: society, value: society}
+    - {key: stealth, value: stealth}
+    - {key: survival, value: survival}
+    - {key: thievery, value: thievery}
+- key: skill-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {choice: $.feats.occult-evolution.skill}
+    rank: trained

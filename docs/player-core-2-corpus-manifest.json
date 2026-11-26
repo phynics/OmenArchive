@@ -1301,11 +1301,11 @@
     {
       "canonicalPath" : "omen:\/\/background\/bookkeeper?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-
+        "Eye for Numbers, the skill feat it grants, is from a book the archive doesn't hold, so it is not granted."
       ],
-      "conversionOutcome" : "converted",
+      "conversionOutcome" : "unsupported",
       "foundryID" : "o1lhSKOpKPamTITI",
-      "mechanicsScope" : "builder",
+      "mechanicsScope" : "mixed",
       "name" : "Bookkeeper",
       "prerequisiteShapes" : [
 
@@ -1319,7 +1319,8 @@
 
       ],
       "sourceHash" : "2af803cdc72babefd2daa6569ab65852f9b2542ffc6c47284b095e4286909467",
-      "sourcePath" : "packs\/pf2e\/backgrounds\/bookkeeper.json"
+      "sourcePath" : "packs\/pf2e\/backgrounds\/bookkeeper.json",
+      "unsupportedReason" : "Eye for Numbers, the skill feat it grants, is from a book the archive doesn't hold, so it is not granted."
     },
     {
       "canonicalPath" : "omen:\/\/background\/courier?source=paizo-pathfinder-player-core-2",
@@ -2994,7 +2995,7 @@
       ],
       "sourceHash" : "1be3de33b750d4639c419809756f082f2ada50c6f1595b4d93cb53a20cc0a46d",
       "sourcePath" : "packs\/pf2e\/class-features\/braggart.json",
-      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
+      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/barbarian\/features\/brutality?source=paizo-pathfinder-player-core-2",
@@ -3942,7 +3943,7 @@
       ],
       "sourceHash" : "8e74519154211a98cf5e225e32d5a24c896517293be06b8c12d9dd7cec07c1e4",
       "sourcePath" : "packs\/pf2e\/class-features\/fencer.json",
-      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
+      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/alchemist\/field-benefits\/field-discovery-bomber?source=paizo-pathfinder-player-core-2",
@@ -4552,7 +4553,7 @@
       ],
       "sourceHash" : "497bc012fd1c973cbfb2c25a0b906edd7635c106d2413d8f8ef61de780a7bf27",
       "sourcePath" : "packs\/pf2e\/class-features\/gymnast.json",
-      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
+      "unsupportedReason" : "The bravado trait it gives the style's action is not applied yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/class\/champion\/features\/heros-defiance?source=paizo-pathfinder-player-core-2",
@@ -7363,12 +7364,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/runtsage?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/runtsage?source=paizo-pathfinder-player-core-2. Foundry keys: [GrantItem, ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "qUZnrueC2a0zf95N",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Runtsage",
       "prerequisiteShapes" : [
 
@@ -7384,8 +7385,7 @@
         "GrantItem"
       ],
       "sourceHash" : "fc52cf5f18de07600831a5b046e49593c6ff59d632d17d3376398fa5208ebe48",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/hobgoblin\/level-5\/runtsage.json",
-      "unsupportedReason" : "Its choice is not offered yet. The features it grants are not applied yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/hobgoblin\/level-5\/runtsage.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/cantorian-rejuvenation?source=paizo-pathfinder-player-core-2",
@@ -8608,7 +8608,7 @@
       ],
       "sourceHash" : "b8147ae81afb5edeb9d60f80f15cc334383acfc183152051fc7b334a3834e54c",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/lizardfolk\/level-1\/iruxi-armaments.json",
-      "unsupportedReason" : "Its choice is not offered yet. Its unarmed attack is not added yet. Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
+      "unsupportedReason" : "Its change to the character's Strikes is a note on their attack or damage rolls; the sheet's numbers don't include it."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/lizardfolk-lore?source=paizo-pathfinder-player-core-2",
@@ -8853,7 +8853,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Envenom Fangs",
       "prerequisiteShapes" : [
-        "unsupported"
+        "choice"
       ],
       "prerequisiteText" : [
         "Iruxi Armaments (Fangs)"
@@ -8928,7 +8928,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Shed Tail",
       "prerequisiteShapes" : [
-        "unsupported"
+        "choice"
       ],
       "prerequisiteText" : [
         "Iruxi Armaments (Tail)"
@@ -9001,7 +9001,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Hone Claws",
       "prerequisiteShapes" : [
-        "unsupported"
+        "choice"
       ],
       "prerequisiteText" : [
         "Iruxi Armaments (Claws)"
@@ -11010,12 +11010,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-aspect?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/draconic-aspect?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, Strike, Strike, Strike, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "U38YThMudfDihnj1",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Draconic Aspect",
       "prerequisiteShapes" : [
 
@@ -11033,16 +11033,14 @@
         "ItemAlteration"
       ],
       "sourceHash" : "8027e763e1682766f404b9cd324f242aadeb2f6a20a2da1398afd96a6269cae1",
-      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-aspect.json",
-      "unsupportedReason" : "Its change to the character's Strikes is not applied yet. Its choice is not offered yet. Its unarmed attack is not added yet."
+      "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-aspect.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-resistance?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Its resistance is to a type the player chooses, which is not offered yet.",
-        "Foundry rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/draconic-resistance?source=paizo-pathfinder-player-core-2. Foundry keys: [RollOption, ChoiceSet, Resistance, Resistance]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "mI6dFvu28r66SfY0",
       "mechanicsScope" : "mixed",
@@ -11063,7 +11061,7 @@
       ],
       "sourceHash" : "2854a1d1b6be5010ddca7d821906c0159bf057d6a2c15963f934a6f11f87c8bd",
       "sourcePath" : "packs\/pf2e\/feats\/ancestry\/versatile-heritages\/dragonblood\/draconic-resistance.json",
-      "unsupportedReason" : "Its resistance is to a type the player chooses, which is not offered yet. Its choice is not offered yet. Its sense, resistance or immunity is not applied yet. Its notes on rolls are in its text."
+      "unsupportedReason" : "Its resistance to your draconic exemplar's own damage type needs Dragonblood's exemplar, which is not offered yet: answer its choice only for an exemplar of bludgeoning, piercing or slashing damage."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/draconic-scent?source=paizo-pathfinder-player-core-2",
@@ -11653,10 +11651,10 @@
       "conversionDiagnostics" : [
 
       ],
-      "conversionOutcome" : "encounter-only",
+      "conversionOutcome" : "converted",
       "featCategory" : "ancestry",
       "foundryID" : "iNrR4WOB1UO9iiNE",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "builder",
       "name" : "Lifesense",
       "prerequisiteShapes" : [
 
@@ -11787,7 +11785,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Tumbling Opportunist",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Acrobat Dedication"
@@ -11837,7 +11835,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Contortionist",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Acrobat Dedication"
@@ -11863,7 +11861,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Dodge Away",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Acrobat Dedication"
@@ -11888,7 +11886,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Graceful Leaper",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -11914,7 +11912,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Tumbling Strike",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Acrobat Dedication"
@@ -12010,12 +12008,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/basic-concoction?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-concoction?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "h5ZT9i79BFVJ0VfE",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Basic Concoction",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -12030,8 +12028,7 @@
         "GrantItem"
       ],
       "sourceHash" : "43d2fa84fab6e3ab26bc909e92b0412ece83184971b9c1f39a6f9ba8f0de08e7",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/alchemist\/level-4\/basic-concoction.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/alchemist\/level-4\/basic-concoction.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/advanced-concoction?source=paizo-pathfinder-player-core-2",
@@ -12041,7 +12038,7 @@
       "conversionOutcome" : "encounter-only",
       "featCategory" : "class",
       "foundryID" : "HtH8MONAzx4eYuJY",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Advanced Concoction",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -12055,7 +12052,8 @@
 
       ],
       "sourceHash" : "166055a4cc1d7e522017a7bfec99b9e13e60bb8838c60a30984b0695eb8f612b",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/alchemist\/level-6\/advanced-concoction.json"
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/alchemist\/level-6\/advanced-concoction.json",
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/voluminous-vials?source=paizo-pathfinder-player-core-2",
@@ -12095,7 +12093,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Greater Magical Scholastics",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "resource-reference"
       ],
       "prerequisiteText" : [
@@ -12147,7 +12145,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Magical Scholastics",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Archaeologist Dedication"
@@ -12171,7 +12169,7 @@
       "mechanicsScope" : "builder",
       "name" : "Settlement Scholastics",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Archaeologist Dedication"
@@ -12195,7 +12193,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Scholastic Identification",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -12221,7 +12219,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Archaeologist's Luck",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Archaeologist Dedication"
@@ -12580,9 +12578,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/basic-fury?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-fury?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "Sr6CcCXceV8ALAmB",
       "mechanicsScope" : "mixed",
@@ -12602,12 +12600,12 @@
       ],
       "sourceHash" : "756fa509cd9fcbcd34ec9ec462ad814e97ee40e50023ba28e241a4da149b753a",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/barbarian\/level-4\/basic-fury.json",
-      "unsupportedReason" : "Its choice is not offered yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "It holds only bookkeeping the builder does not need."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/advanced-fury?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/advanced-fury?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike]."
+        "The class feat it grants, of up to half your level, is not offered yet."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -12627,12 +12625,12 @@
       ],
       "sourceHash" : "b4ea192bfafecccc22d5330328529992604a43efb94d5ad071600d89f771847d",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/barbarian\/level-6\/advanced-fury.json",
-      "unsupportedReason" : "It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/instinct-ability?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/instinct-ability?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, ChoiceSet, GrantItem]."
+        "The instinct ability of the instinct you chose for Barbarian Dedication is not applied yet; with the fury instinct, it is a 1st-level barbarian feat, which is not offered yet."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -12654,7 +12652,7 @@
       ],
       "sourceHash" : "e4dae1903818c667cc434a910d2128186f73c9af87c5a6d633264bcf4e045e46",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/barbarian\/level-6\/instinct-ability.json",
-      "unsupportedReason" : "Its choice is not offered yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "The instinct ability of the instinct you chose for Barbarian Dedication is not applied yet; with the fury instinct, it is a 1st-level barbarian feat, which is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/destructive-block?source=paizo-pathfinder-player-core-2",
@@ -13216,7 +13214,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Trampling Charge",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13240,7 +13238,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Unseat",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13312,7 +13310,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Legendary Rider",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13336,7 +13334,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Cavalier's Banner",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13360,7 +13358,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Cavalier's Charge",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13384,7 +13382,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Impressive Mount",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13408,7 +13406,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Quick Mount",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -13434,7 +13432,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Defend Mount",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13458,7 +13456,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Mounted Shield",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Cavalier Dedication"
@@ -13547,9 +13545,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/mesmerizing-gaze?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/mesmerizing-gaze?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, ItemAlteration]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "gOHBzx5Rqa6TZcrm",
       "mechanicsScope" : "mixed",
@@ -13568,7 +13566,7 @@
       ],
       "sourceHash" : "0394f66ac0d6d42dd700dcb10a053cd71c5e958021adb955fe48a9fc7b07963b",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/celebrity\/mesmerizing-gaze.json",
-      "unsupportedReason" : "Its choice is not offered yet. Its change to another item's text is not applied."
+      "unsupportedReason" : "Its change to another item's text is not applied."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/never-tire?source=paizo-pathfinder-player-core-2",
@@ -13597,7 +13595,7 @@
     {
       "canonicalPath" : "omen:\/\/feat\/advanced-devotion?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/advanced-devotion?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike]."
+        "The class feat it grants, of up to half your level, is not offered yet."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -13617,14 +13615,14 @@
       ],
       "sourceHash" : "683ecfe301c1b0520d9fb91747896094f0ecbfe3807b64701b909a0de4b09f49",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/champion\/advanced-devotion.json",
-      "unsupportedReason" : "It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-devotion?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-devotion?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "uKBT0D9gxdwMcwNl",
       "mechanicsScope" : "mixed",
@@ -13644,7 +13642,7 @@
       ],
       "sourceHash" : "68236b15315bef5aad1b1c0ab8e83cfafdb8ba9e3a025418a6bae1de72c3599e",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/champion\/basic-devotion.json",
-      "unsupportedReason" : "Its choice is not offered yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "It holds only bookkeeping the builder does not need."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/champion-dedication?source=paizo-pathfinder-player-core-2",
@@ -13738,12 +13736,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/devout-blessing?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/devout-blessing?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "lix0Utu4g8mQ0ZtI",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Devout Blessing",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -13759,8 +13757,7 @@
         "GrantItem"
       ],
       "sourceHash" : "0e05e4613fadad402c363648b3f61f41e88f170089f01cc8cdfd268480f38a7b",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/champion\/devout-blessing.json",
-      "unsupportedReason" : "Its choice is not offered yet. It holds only bookkeeping the builder does not need."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/champion\/devout-blessing.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/devout-magic?source=paizo-pathfinder-player-core-2",
@@ -13826,7 +13823,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Distracting Flattery",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -13852,7 +13849,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Gossip Lore",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Dandy Dedication"
@@ -13878,7 +13875,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Fabricated Connections",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -13904,7 +13901,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Party Crasher",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -14576,7 +14573,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Keep Pace",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Bounty Hunter Dedication or Game Hunter Dedication"
@@ -14625,7 +14622,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Fancy Moves",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -14676,7 +14673,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Performative Weapons Training",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Gladiator Dedication"
@@ -14702,7 +14699,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Play to the Crowd",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Gladiator Dedication"
@@ -14726,7 +14723,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Stage Fighting",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Gladiator Dedication"
@@ -14750,7 +14747,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Advanced Herbalism",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -14777,7 +14774,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Endemic Herbs",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -14803,7 +14800,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Fresh Ingredients",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Herbalist Dedication"
@@ -14857,7 +14854,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Poultice Preparation",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Herbalist Dedication"
@@ -14878,7 +14875,7 @@
       "conversionOutcome" : "encounter-only",
       "featCategory" : "class",
       "foundryID" : "L1rCuwsCKWd9zlS3",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Advanced Deduction",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -14892,20 +14889,21 @@
 
       ],
       "sourceHash" : "e4466aaf4ff7947d2f5c8bcf4ecb0d436ac021a8528d2a4ae69981d09c0a24f9",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/investigator\/advanced-deduction.json"
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/investigator\/advanced-deduction.json",
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-deduction?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-deduction?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "X0NFLIn1bqj6bnd0",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Basic Deduction",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Investigator Dedication"
@@ -14917,8 +14915,7 @@
         "GrantItem"
       ],
       "sourceHash" : "a647bfc7d50febd7acb4d988c713bb74d6aec14d224f550256affb58e8bd9e40",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/investigator\/basic-deduction.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/investigator\/basic-deduction.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/investigator-dedication?source=paizo-pathfinder-player-core-2",
@@ -14956,7 +14953,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Investigator's Stratagem",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Investigator Dedication"
@@ -14981,7 +14978,7 @@
       "mechanicsScope" : "builder",
       "name" : "Keen Recollection",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Investigator Dedication"
@@ -15005,7 +15002,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Master Spotter (Investigator)",
       "prerequisiteShapes" : [
-        "unsupported",
+        "feat-reference",
         "perception-proficiency"
       ],
       "prerequisiteText" : [
@@ -15031,7 +15028,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Analyze Idiolect",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency",
         "skill-proficiency"
       ],
@@ -15060,7 +15057,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Crude Communication",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Linguist Dedication"
@@ -15111,7 +15108,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Multilingual Cipher",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -15137,7 +15134,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Phonetic Training",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -15163,7 +15160,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Read Shibboleths",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -15189,7 +15186,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Spot Translate",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Linguist Dedication"
@@ -15763,7 +15760,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Doctor's Visitation",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Medic Dedication"
@@ -15840,7 +15837,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Resuscitate",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "skill-proficiency"
       ],
       "prerequisiteText" : [
@@ -15866,7 +15863,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Treat Condition",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Medic Dedication"
@@ -15882,7 +15879,7 @@
     {
       "canonicalPath" : "omen:\/\/feat\/advanced-kata?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/advanced-kata?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike]."
+        "The class feat it grants, of up to half your level, is not offered yet."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -15902,14 +15899,14 @@
       ],
       "sourceHash" : "f8438ebabd96f442192ed47e4856f58e1807717921de7ee404fdec99949a6699",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/monk\/advanced-kata.json",
-      "unsupportedReason" : "It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-kata?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-kata?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "BridkNEysTuSOOLM",
       "mechanicsScope" : "mixed",
@@ -15929,7 +15926,7 @@
       ],
       "sourceHash" : "9411dcfd1f375e482a258ba617d4894a08026dc352061a9527587023d5cc6bf5",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/monk\/basic-kata.json",
-      "unsupportedReason" : "Its choice is not offered yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "It holds only bookkeeping the builder does not need."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/monk-dedication?source=paizo-pathfinder-player-core-2",
@@ -16042,7 +16039,7 @@
     {
       "canonicalPath" : "omen:\/\/feat\/perfections-path?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/perfections-path?source=paizo-pathfinder-player-core-2. Foundry keys: [ActiveEffectLike, ChoiceSet, ActiveEffectLike]."
+        "Its choice of a saving throw you're an expert in, which becomes master, is not offered yet: no rule reads a saving throw's rank."
       ],
       "conversionOutcome" : "unsupported",
       "featCategory" : "class",
@@ -16066,7 +16063,7 @@
       ],
       "sourceHash" : "82d826709e973898138d4f008aabd8e226ae5fcde73ae9848e355367adbce6c9",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/monk\/perfections-path.json",
-      "unsupportedReason" : "Its choice is not offered yet. It holds only bookkeeping the builder does not need."
+      "unsupportedReason" : "Its choice of a saving throw you're an expert in, which becomes master, is not offered yet: no rule reads a saving throw's rank."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/advanced-mysteries?source=paizo-pathfinder-player-core-2",
@@ -16076,7 +16073,7 @@
       "conversionOutcome" : "encounter-only",
       "featCategory" : "class",
       "foundryID" : "PxTRE0mFEO3tyt8h",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Advanced Mysteries",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -16090,17 +16087,18 @@
 
       ],
       "sourceHash" : "60f716da512345bdd5fe0774fb8ef8ff7af7ea847c9507ab6e241a55f2103035",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/oracle\/advanced-mysteries.json"
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/oracle\/advanced-mysteries.json",
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-mysteries?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-mysteries?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "NdgMxlz5I1ddT0Zi",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Basic Mysteries",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -16115,8 +16113,7 @@
         "GrantItem"
       ],
       "sourceHash" : "d301662f11f56a5ba616c4224422b47fa98cceaaee8c9b8483c70f5ee089a91e",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/oracle\/basic-mysteries.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/oracle\/basic-mysteries.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-oracle-spellcasting?source=paizo-pathfinder-player-core-2",
@@ -16305,7 +16302,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Pirate Combat Training",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Pirate Dedication"
@@ -16335,7 +16332,7 @@
       "prerequisiteShapes" : [
         "skill-proficiency",
         "skill-proficiency",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "trained in Acrobatics",
@@ -16364,7 +16361,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Walk the Plank",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Pirate Dedication"
@@ -16562,7 +16559,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Efficient Rituals",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Ritualist Dedication"
@@ -16586,7 +16583,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Enterprising Ritualist",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Ritualist Dedication"
@@ -16610,7 +16607,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Flexible Ritualist",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Ritualist Dedication"
@@ -16634,7 +16631,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Resourceful Ritualist",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Ritualist Dedication"
@@ -16953,7 +16950,7 @@
       "name" : "Expert Disassembly",
       "prerequisiteShapes" : [
         "skill-proficiency",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "master in Crafting",
@@ -16978,7 +16975,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Magical Scrounger",
       "prerequisiteShapes" : [
-        "unsupported",
+        "resource-reference",
         "resource-reference"
       ],
       "prerequisiteText" : [
@@ -17005,7 +17002,7 @@
       "name" : "Reverse Engineering",
       "prerequisiteShapes" : [
         "skill-proficiency",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "expert in Crafting",
@@ -17055,7 +17052,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Armor Specialist",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Sentinel Dedication"
@@ -17089,7 +17086,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Armored Rebuff",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Sentinel Dedication"
@@ -17142,7 +17139,7 @@
       "name" : "Steel Skin",
       "prerequisiteShapes" : [
         "skill-proficiency",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "trained in Survival",
@@ -17317,7 +17314,7 @@
       "conversionOutcome" : "encounter-only",
       "featCategory" : "class",
       "foundryID" : "S25iRw2X9hmGRMyO",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Advanced Blood Potency",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -17331,17 +17328,18 @@
 
       ],
       "sourceHash" : "90041cd09d8e5361c44ca1bdd812f469543df35f163933f0fc2b5a60b2d6e1db",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/sorcerer\/advanced-blood-potency.json"
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/sorcerer\/advanced-blood-potency.json",
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-blood-potency?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-blood-potency?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "nT9Z4OPDTOg2AGYc",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Basic Blood Potency",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -17356,8 +17354,7 @@
         "GrantItem"
       ],
       "sourceHash" : "11a5d2d0f0bc44bb42001044a8e57333b0fb7f8d78293f24d38aaadd8faf747d",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/sorcerer\/basic-blood-potency.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/sorcerer\/basic-blood-potency.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-bloodline-spell?source=paizo-pathfinder-player-core-2",
@@ -17516,7 +17513,7 @@
       "conversionOutcome" : "encounter-only",
       "featCategory" : "class",
       "foundryID" : "SHhiLn0OSILEXNOj",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Advanced Flair",
       "prerequisiteShapes" : [
         "resource-reference"
@@ -17530,20 +17527,21 @@
 
       ],
       "sourceHash" : "2ce1b31459f3647e8097987593c64ff72663b55db94ee020b8fc507eb9dedc90",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/swashbuckler\/advanced-flair.json"
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/swashbuckler\/advanced-flair.json",
+      "unsupportedReason" : "The class feat it grants, of up to half your level, is not offered yet."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/basic-flair?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/basic-flair?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "sE7x3QAel4VGdkgn",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Basic Flair",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Swashbuckler Dedication"
@@ -17555,8 +17553,7 @@
         "GrantItem"
       ],
       "sourceHash" : "e315f63dd19cb24ce06700d921de4a6a6416700cfda58023174d29c2365e8d5e",
-      "sourcePath" : "packs\/pf2e\/feats\/archetype\/swashbuckler\/basic-flair.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/archetype\/swashbuckler\/basic-flair.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/finishing-precision?source=paizo-pathfinder-player-core-2",
@@ -17569,7 +17566,7 @@
       "mechanicsScope" : "builder",
       "name" : "Finishing Precision",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Swashbuckler Dedication"
@@ -17627,7 +17624,7 @@
       "mechanicsScope" : "builder",
       "name" : "Swashbuckler's Riposte",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Swashbuckler Dedication"
@@ -17651,7 +17648,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Swashbuckler's Speed",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Swashbuckler Dedication"
@@ -17777,7 +17774,7 @@
       "name" : "Frightening Appearance",
       "prerequisiteShapes" : [
         "skill-proficiency",
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "expert in Intimidation",
@@ -17803,7 +17800,7 @@
       "name" : "Hidden Magic",
       "prerequisiteShapes" : [
         "any-of",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "expert in Arcana, Nature, Occultism, or Religion",
@@ -17829,7 +17826,7 @@
       "name" : "Many Guises (Vigilante)",
       "prerequisiteShapes" : [
         "skill-proficiency",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "master in Deception",
@@ -17856,7 +17853,7 @@
       "prerequisiteShapes" : [
         "any-of",
         "skill-proficiency",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "animal companion or familiar",
@@ -17882,7 +17879,7 @@
       "mechanicsScope" : "encounter",
       "name" : "Safe House",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Vigilante Dedication"
@@ -17898,15 +17895,15 @@
     {
       "canonicalPath" : "omen:\/\/feat\/social-purview?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/social-purview?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "rNPeOwFZE5Ma18JJ",
       "mechanicsScope" : "mixed",
       "name" : "Social Purview",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Vigilante Dedication"
@@ -17919,7 +17916,7 @@
       ],
       "sourceHash" : "4e0b12db55c8e9d8be0f853ab56b0d83792f8b61c7c865be33ce7a4d944c1368",
       "sourcePath" : "packs\/pf2e\/feats\/archetype\/vigilante\/social-purview.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "unsupportedReason" : "The social trait the chosen archetype's feats gain, and the exposure they risk in your vigilante identity, are in its text. Its pick also lists Vigilante Dedication, which you already have: choose another archetype's dedication."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/startling-appearance-vigilante?source=paizo-pathfinder-player-core-2",
@@ -17932,7 +17929,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Startling Appearance (Vigilante)",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "Vigilante Dedication"
@@ -17956,7 +17953,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Stunning Appearance",
       "prerequisiteShapes" : [
-        "unsupported"
+        "feat-reference"
       ],
       "prerequisiteText" : [
         "Startling Appearance"
@@ -17982,7 +17979,7 @@
       "name" : "Subjective Truth",
       "prerequisiteShapes" : [
         "skill-proficiency",
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "master in Deception",
@@ -19634,9 +19631,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/improved-invigorating-elixir?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/improved-invigorating-elixir?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "J9LjIYPyUmOim5r7",
       "mechanicsScope" : "mixed",
@@ -19653,8 +19650,7 @@
         "ChoiceSet"
       ],
       "sourceHash" : "ad37ea88e8356035beefe8981819d27c0497b7172fe051639aff2b170a3f7f82",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-8\/improved-invigorating-elixir.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/alchemist\/level-8\/improved-invigorating-elixir.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/mutant-physique?source=paizo-pathfinder-player-core-2",
@@ -22572,9 +22568,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/mercy?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/mercy?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "zilwynzk8lIujgZo",
       "mechanicsScope" : "mixed",
@@ -22591,8 +22587,7 @@
         "ChoiceSet"
       ],
       "sourceHash" : "4b8e557f796f954c7e3c68701b564640dbfe73040c444949615d975afb4872ee",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-4\/mercy.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-4\/mercy.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/security?source=paizo-pathfinder-player-core-2",
@@ -22824,12 +22819,12 @@
     {
       "canonicalPath" : "omen:\/\/feat\/second-blessing?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/second-blessing?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "VZczZNj3ozCj1Lzk",
-      "mechanicsScope" : "mixed",
+      "mechanicsScope" : "builder",
       "name" : "Second Blessing",
       "prerequisiteShapes" : [
         "feature-reference"
@@ -22844,8 +22839,7 @@
         "GrantItem"
       ],
       "sourceHash" : "090f98f6a0f7c4c596a8544a586145f3093637dcef3b3a7a6d569183cb124f90",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-8\/second-blessing.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "sourcePath" : "packs\/pf2e\/feats\/class\/champion\/level-8\/second-blessing.json"
     },
     {
       "canonicalPath" : "omen:\/\/feat\/eliminate-red-herrings?source=paizo-pathfinder-player-core-2",
@@ -22976,10 +22970,10 @@
       "conversionDiagnostics" : [
 
       ],
-      "conversionOutcome" : "encounter-only",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "pgIrr8xrlCXbRAeo",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Underworld Investigator",
       "prerequisiteShapes" : [
 
@@ -22993,7 +22987,8 @@
 
       ],
       "sourceHash" : "961c9b61ae20dd23e7c623d4f69c51a76204587052732e4dd20a66aef64103ce",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-1\/underworld-investigator.json"
+      "sourcePath" : "packs\/pf2e\/feats\/class\/investigator\/level-1\/underworld-investigator.json",
+      "unsupportedReason" : "Its Pursue a Lead investigation bonus to Thievery checks to investigate a case is in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/just-one-more-thing?source=paizo-pathfinder-player-core-2",
@@ -23032,7 +23027,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Ongoing Strategy",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "strategic strike"
@@ -27377,10 +27372,10 @@
       "conversionDiagnostics" : [
 
       ],
-      "conversionOutcome" : "encounter-only",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "qxh4evekG28Gt1vj",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Arcane Evolution",
       "prerequisiteShapes" : [
         "any-of"
@@ -27394,7 +27389,8 @@
 
       ],
       "sourceHash" : "9716428089e2e69a16ee8ad1c5a455a46fb0b205177ba9299a604c7de5270264",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/sorcerer\/level-4\/arcane-evolution.json"
+      "sourcePath" : "packs\/pf2e\/feats\/class\/sorcerer\/level-4\/arcane-evolution.json",
+      "unsupportedReason" : "Its daily signature spell, and the arcane spells Learn a Spell adds to the list you choose it from, are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/divine-evolution?source=paizo-pathfinder-player-core-2",
@@ -27426,10 +27422,10 @@
       "conversionDiagnostics" : [
 
       ],
-      "conversionOutcome" : "encounter-only",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "lL2fQJ2oRyBgga8Q",
-      "mechanicsScope" : "encounter",
+      "mechanicsScope" : "mixed",
       "name" : "Occult Evolution",
       "prerequisiteShapes" : [
         "any-of"
@@ -27443,7 +27439,8 @@
 
       ],
       "sourceHash" : "8b6a555ab676406ca89f53550ddb54c6238c707ee0e7d7a038a21928b2ab84b5",
-      "sourcePath" : "packs\/pf2e\/feats\/class\/sorcerer\/level-4\/occult-evolution.json"
+      "sourcePath" : "packs\/pf2e\/feats\/class\/sorcerer\/level-4\/occult-evolution.json",
+      "unsupportedReason" : "The mental occult spell it adds to your repertoire once a day is in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/primal-evolution?source=paizo-pathfinder-player-core-2",
@@ -27645,9 +27642,9 @@
     {
       "canonicalPath" : "omen:\/\/feat\/crossblooded-evolution?source=paizo-pathfinder-player-core-2",
       "conversionDiagnostics" : [
-        "Foundry feat rule elements are preserved for external review. External review required. Resource: omen:\/\/feat\/crossblooded-evolution?source=paizo-pathfinder-player-core-2. Foundry keys: [ChoiceSet, GrantItem]."
+
       ],
-      "conversionOutcome" : "unsupported",
+      "conversionOutcome" : "converted",
       "featCategory" : "class",
       "foundryID" : "CN7tu5H6wTe9ENmO",
       "mechanicsScope" : "mixed",
@@ -27666,7 +27663,7 @@
       ],
       "sourceHash" : "4423a2940244a631b470c8aba5a5d9df1f09a857330e3d501c0c1fed21c52d0c",
       "sourcePath" : "packs\/pf2e\/feats\/class\/sorcerer\/level-8\/crossblooded-evolution.json",
-      "unsupportedReason" : "Its choice is not offered yet."
+      "unsupportedReason" : "The chosen bloodline's blood magic effect, and any choice it needs at 1st level, are in its text."
     },
     {
       "canonicalPath" : "omen:\/\/feat\/explosion-of-power?source=paizo-pathfinder-player-core-2",
@@ -27815,7 +27812,7 @@
       "mechanicsScope" : "mixed",
       "name" : "Flying Blade",
       "prerequisiteShapes" : [
-        "unsupported"
+        "resource-reference"
       ],
       "prerequisiteText" : [
         "precise strike"
@@ -42779,24 +42776,24 @@
       "skill" : 70
     },
     "byOutcome" : {
-      "converted" : 868,
-      "encounter-only" : 588,
-      "unsupported" : 283
+      "converted" : 889,
+      "encounter-only" : 584,
+      "unsupported" : 266
     },
     "byPrerequisiteShape" : {
       "all-of" : 3,
       "any-of" : 36,
       "attribute-modifier" : 16,
-      "choice" : 29,
-      "feat-reference" : 6,
+      "choice" : 32,
+      "feat-reference" : 17,
       "feature-reference" : 27,
       "perception-proficiency" : 5,
-      "resource-reference" : 290,
+      "resource-reference" : 352,
       "saving-throw-proficiency" : 1,
       "sense" : 2,
       "skill-proficiency" : 122,
       "trait" : 3,
-      "unsupported" : 110
+      "unsupported" : 34
     },
     "byResourceType" : {
       "action" : 36,

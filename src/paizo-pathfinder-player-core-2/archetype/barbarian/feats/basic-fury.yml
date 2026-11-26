@@ -10,7 +10,23 @@ prerequisites:
   has: '@archetype.barbarian.feats.barbarian-dedication'
 description: You gain a 1st- or 2nd-level barbarian feat.
 mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet. It holds only bookkeeping the builder
-  does not need.
+unsupportedCategory: text
+unsupportedReason: It holds only bookkeeping the builder does not need.
 foundryID: Sr6CcCXceV8ALAmB
+rules:
+- key: choice-feats-basic-fury-feat
+  choice:
+    name: $.feats.basic-fury.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-barbarian}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-fury.feat}

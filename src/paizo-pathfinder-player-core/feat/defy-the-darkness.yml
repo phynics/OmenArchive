@@ -14,5 +14,13 @@ description: Using ancient dwarven methods developed to fight enemies wielding m
   it normally hampers darkvision \(such as the darkness created by a 4th-rank [Darkness](omen://spell/darkness)
   spell\). You can't cast spells with the darkness trait, use item activations with
   the darkness trait, or use any other ability with the darkness trait.
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Its ban on casting spells, using item activations and using other
+  abilities with the darkness trait is in its text.
 foundryID: G1BPXzTzrUE4IndV
+rules:
+- key: greater-darkvision
+  effect: core/add-sense@3
+  inputs:
+    sense: greater-darkvision

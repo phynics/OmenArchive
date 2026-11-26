@@ -12,6 +12,23 @@ prerequisites:
   hasAttributeModifier: {attribute: strength, modifier: 2}
 - text: Charisma +2
   hasAttributeModifier: {attribute: charisma, modifier: 2}
+- text: not a member of the champion class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: investigator
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: 'Choose a deity. You are bound by your deity''s anathema and gain the
   champion''s aura and sanctification as described in the champion class. Choose a
   cause as you would if you were a champion, with the same options a champion must

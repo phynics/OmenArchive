@@ -12,5 +12,14 @@ description: Your work as an investigator makes you familiar with the criminal e
   checks to investigate a case \(such as checks to [Steal](omen://action/steal?source=paizo-pathfinder-player-core)
   a clue from a suspect or [Pick a Lock](omen://action/pick-a-lock?source=paizo-pathfinder-player-core)
   to open a safe with damning documents\).
-mechanicsScope: encounter
+mechanicsScope: mixed
+unsupportedCategory: text
+unsupportedReason: Its Pursue a Lead investigation bonus to Thievery checks to investigate
+  a case is in its text.
 foundryID: pgIrr8xrlCXbRAeo
+rules:
+- key: underworld-lore-trained
+  effect: core/add-skill-increase@2
+  inputs:
+    skill: {lore: underworld}
+    rank: trained

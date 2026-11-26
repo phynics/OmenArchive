@@ -7,9 +7,7 @@ traits:
 - lizardfolk
 prerequisites:
 - text: Iruxi Armaments (Fangs)
-  unsupported: Unsupported prerequisite for source IY86Kvopp4ACuQsw "Iruxi Armaments
-    (Fangs)".
-  diagnostic: true
+  hasChoice: {name: $.feats.iruxi-armaments.unarmed-attacks, contains: fangs}
 action:
   count: one_action
   frequency: once per hour

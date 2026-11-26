@@ -9,7 +9,22 @@ prerequisites:
 - text: Druid Dedication
   has: '@archetype.druid.feats.druid-dedication'
 description: You gain a 1st- or 2nd-level druid feat.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: kUa8PBjKmBk04zmc
+rules:
+- key: choice-feats-basic-wilding-feat
+  choice:
+    name: $.feats.basic-wilding.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-druid}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-wilding.feat}

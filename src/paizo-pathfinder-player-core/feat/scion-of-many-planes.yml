@@ -9,7 +9,21 @@ description: The long and complicated history of your bloodline manifests in you
   ability to draw power from more planar sources than most other nephilim. Choose
   one nephilim lineage feat that you do not already possess; you gain that feat and
   all of its benefits, even if you already took a lineage feat at 1st level.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: oM5TORDkpchJF0R2
+rules:
+- key: choice-feats-scion-of-many-planes-lineage
+  choice:
+    name: $.feats.scion-of-many-planes.lineage
+    label: Lineage Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: lineage}
+        - {trait: ancestryTrait-nephilim}
+- key: chosen-lineage-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.scion-of-many-planes.lineage}

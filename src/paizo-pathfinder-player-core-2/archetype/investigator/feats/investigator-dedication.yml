@@ -10,6 +10,23 @@ traits:
 prerequisites:
 - text: Intelligence +2
   hasAttributeModifier: {attribute: intelligence, modifier: 2}
+- text: not a member of the investigator class
+  anyOf:
+  - hasClassWithName: alchemist
+  - hasClassWithName: barbarian
+  - hasClassWithName: bard
+  - hasClassWithName: champion
+  - hasClassWithName: cleric
+  - hasClassWithName: druid
+  - hasClassWithName: fighter
+  - hasClassWithName: monk
+  - hasClassWithName: oracle
+  - hasClassWithName: ranger
+  - hasClassWithName: rogue
+  - hasClassWithName: sorcerer
+  - hasClassWithName: swashbuckler
+  - hasClassWithName: witch
+  - hasClassWithName: wizard
 description: You gain the [On the Case](omen://class/investigator/features/on-the-case)
   class feature, which grants you both the [Pursue a Lead](omen://action/pursue-a-lead)
   activity and [Clue In](omen://action/clue-in) reaction. You become trained in Society
@@ -43,7 +60,6 @@ rules:
     - {key: occultism, value: occultism}
     - {key: performance, value: performance}
     - {key: religion, value: religion}
-    - {key: society, value: society}
     - {key: stealth, value: stealth}
     - {key: survival, value: survival}
     - {key: thievery, value: thievery}

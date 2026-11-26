@@ -9,7 +9,22 @@ prerequisites:
 - text: Bard Dedication
   has: '@archetype.bard.feats.bard-dedication'
 description: You gain a 1st- or 2nd-level bard feat.
-mechanicsScope: mixed
-unsupportedCategory: choice
-unsupportedReason: Its choice is not offered yet.
+mechanicsScope: builder
 foundryID: JM0umAUx30mAkuTz
+rules:
+- key: choice-feats-basic-muses-whispers-feat
+  choice:
+    name: $.feats.basic-muses-whispers.feat
+    label: Class Feat
+    type: core/feat-id
+    records:
+      filter:
+        all:
+        - {type: feat}
+        - {trait: systemTrait-class}
+        - {trait: classTrait-bard}
+        - {maxLevel: 2}
+- key: chosen-feat
+  effect: core/add-feat@3
+  inputs:
+    feat: {choice: $.feats.basic-muses-whispers.feat}
